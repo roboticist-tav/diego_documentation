@@ -19,7 +19,7 @@ An index of all objects (at `thing` / `thingy` / `thingette` levels) used by **d
 ## <a name="d"></a>D: [door](#door)
 | D | Description | API |
 |--|:--|--|
-| `door` | A `thing` representation of a physical doorway / gate, designed for a human.<br>See also: [portal]`*, *`gate`* |
+| `door` | A `thing` representation of a physical doorway / gate, designed for a human.<br>See also: [portal](#portal); [gate](#gate) | [door](#door)
 ## <a name="e"></a>E: [equip](#equip)
 | E | Description | API |
 |--|:--|--|
@@ -77,6 +77,6 @@ _stringer(open, closed, mono
 > Author: Tavis PItt
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTk5MzM1MjAwLDQ0NDM5MzA3OCwxODg4Nj
-c3MjIxLC05MjUwNDE3OTYsMTQ5MTQ1NDM1MF19
+eyJoaXN0b3J5IjpbMTI5MTYwMzA5Niw0NDQzOTMwNzgsMTg4OD
+Y3NzIyMSwtOTI1MDQxNzk2LDE0OTE0NTQzNTBdfQ==
 -->

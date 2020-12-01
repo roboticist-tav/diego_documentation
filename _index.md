@@ -1,4 +1,4 @@
-# Objects Index
+# A to Z Objects Index
 An index of all objects (at `thing` / `thingy` / `thingette` levels) used by **diego** instruction programming language.
 ## <a name="a"></a> A: [actuat](#actuat); [apparat](#apparat); [appliance](#appliance); [arena](#arena)
 | A | Description | API |
@@ -59,8 +59,6 @@ An index of all objects (at `thing` / `thingy` / `thingette` levels) used by **d
 | `prog`*[ramme]* | |
 | `robot` | <br>See also: `human`; `thing` |
 | `room` | A representation of a physical enclosed space. The humnan / physical version of a `room`.  
-Example: inside a pit  
-See also: [room](https://stackedit.io/app#room)The human version of a `box`.<br>See also: |
 | `route` | |
 | `sensor` | The thing version of an `apparatus`.<br>See also: [apparat](#apparat) |
 | `side` | | |
@@ -82,7 +80,7 @@ _stringer(open, closed, mono
 > Author: Tavis PItt
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDEzNTkyMzA5LDEyNzgwMDkwOTMsMTI5MT
-YwMzA5Niw0NDQzOTMwNzgsMTg4ODY3NzIyMSwtOTI1MDQxNzk2
-LDE0OTE0NTQzNTBdfQ==
+eyJoaXN0b3J5IjpbLTE2MjgyNTQ4OTUsNDEzNTkyMzA5LDEyNz
+gwMDkwOTMsMTI5MTYwMzA5Niw0NDQzOTMwNzgsMTg4ODY3NzIy
+MSwtOTI1MDQxNzk2LDE0OTE0NTQzNTBdfQ==
 -->

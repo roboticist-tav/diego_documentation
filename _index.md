@@ -3,8 +3,8 @@ Index
 | A | Description | API |
 |--|--|--|
 | `actuat` / `actuator` / `jigger`  <a  name="actuator"></a> | A child *device*  `thing` that causes its parent `thing` and/or sibiling `thing` to operate, ususally providing motion. The thing version of a `jagger`.<br>Example: motor controller; gearbox; motor<br>See also: [jigger](#jigger), [jagger](#jagger) | [acutuator](/actuator.md) |
-| `apparat` / `apparatus` | A technical *device*, carried/worm by a human, for use for a particular activity or purpose. As a `thing` is can or cannot have access to the _puff_. The human version of a `sensor`.<br>Example: geiger counter, multi-meter<br>See also: [sensor](#sensor)| [apparatus](
-| `appliance` | The human version of a `mach` |
+| `apparat` / `apparatus` | A technical *device* `thing`, carried/worm by a human, for use for a particular activity or purpose. As a `thing` is can or cannot have access to the _puff_. The human version of a `sensor`.<br>Example: geiger counter, multi-meter<br>See also: [sensor](#sensor)| [apparatus](/apparatus.md)
+| `appliance` | A device or piece of equipment designed to perform a specific task. The human version of a `mach` |
 | `arena` | A representation of physically (real) defined 3d space for a thing(s) to move freely around inside. There should be an attempt for physical (real-world) borders. The human version of a `zone`. For a 3d Space for a thing(s) to move freely around inside without any attempts for physical (real-world) borders should use a `zone`.<br>See also: `arena`; `fence`; `zone` |
   
 | B | Description | API |
@@ -65,5 +65,5 @@ _stringer(open, closed, mono
 > Author: Tavis PItt
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkwNDAyMDEyNSwxNDkxNDU0MzUwXX0=
+eyJoaXN0b3J5IjpbLTQyNDE1NzIxLDE0OTE0NTQzNTBdfQ==
 -->

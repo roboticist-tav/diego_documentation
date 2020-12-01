@@ -9,7 +9,7 @@ Index
   
 | B | Description | API |
 |--|--|--|
-| `box` | A representation of a The thing version of a `room` |
+| `box` | A representation of a meta-physical enclosed space. The thing version of a `room`.<br>Example: inside a pit<br>See also: [room](#room) |
 | `ceiling` | *`plafond`* |
 | `corridor` | A representation of physically (real) defined 3d space for a thing(s) to move forward/backward inside. There should be an attempt for physical (real-world) borders. The human version of a `pipe`.<br>See also: `arena`; `fence`; `pipe`; `zone` |
 | `door` | *`portal`*, *`gate`* |
@@ -65,5 +65,5 @@ _stringer(open, closed, mono
 > Author: Tavis PItt
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU4ODgwODg2NiwxNDkxNDU0MzUwXX0=
+eyJoaXN0b3J5IjpbMjA0MzUzMDc4MiwxNDkxNDU0MzUwXX0=
 -->

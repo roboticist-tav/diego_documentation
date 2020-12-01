@@ -1,5 +1,6 @@
 Index
 
+A: [actuat](#actuat); [apparat](#apparat); [appliance](#appliance); [arena](#arena)
 | A | Description | API |
 |--|--|--|
 | `actuat`*[or]* / `jigger` <a  name="actuat"></a> | A child *device*  `thing` that causes its parent `thing` and/or sibling `thing` to operate, usually providing motion. The thing version of a `jagger`.<br>Example: motor controller; gearbox; motor<br>See also: [jigger](#jigger), [jagger](#jagger) | [actuat[or]](/actuat.md) |
@@ -7,7 +8,7 @@ Index
 | `appliance` <a name="appliance"></a>| A *device* or *piece of equipment* `thing` designed to perform a specific task, that is **not** attached / carried / worm by a human. An `apparatus` can or cannot have access to the _puff_. The human version of a `mach`*[ine].*<br>Example: refrigerator, washing machine<br>See also: [mach](#mach) | [appliance](/applicance.md)
 | `arena` <a name="arena"></a> | A representation of physically (real) defined 3d space for a thing(s) to move freely around inside. There should be an attempt for physical (real-world) borders. The human version of a `zone`. For a 3d Space for a thing(s) to move freely around inside without any attempts for physical (real-world) borders should use a `zone`.<br>Example: atrium, open plan office floor<br>See also: `arena`; `fence`; `zone` | [arena](#arena) |
 
-B:   
+B: [box](#box);   
 | B | Description | API |
 |--|--|--|
 | `box` <a name="box"></a> | A representation of a meta-physical enclosed space. The thing version of a `room`.<br>Example: inside a pit<br>See also: [room](#room) | [box](/box.md) |
@@ -70,6 +71,6 @@ _stringer(open, closed, mono
 > Author: Tavis PItt
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NjA4MjQzNzQsLTkyNTA0MTc5NiwxND
-kxNDU0MzUwXX0=
+eyJoaXN0b3J5IjpbOTE5MzU1ODY5LC05MjUwNDE3OTYsMTQ5MT
+Q1NDM1MF19
 -->

@@ -6,10 +6,15 @@ Index
 | `apparat` / `apparatus` <a name="apparat"></a>| A technical *device* `thing`, carried/worm by a human, for use for a particular activity or purpose. An `apparatus` can or cannot have access to the _puff_. The human version of a `sensor`.<br>Example: geiger counter, multi-meter<br>See also: [sensor](#sensor)| [apparatus](/apparatus.md)
 | `appliance` <a name="appliance"></a>| A *device* or *piece of equipment* `thing` designed to perform a specific task, that is **not** attached / carried / worm by a human. An `apparatus` can or cannot have access to the _puff_. The human version of a `mach`*[ine].*<br>Example: refrigerator, washing machine<br>See also: [mach](#mach) | [appliance](/applicance.md)
 | `arena` <a name="arena"></a> | A representation of physically (real) defined 3d space for a thing(s) to move freely around inside. There should be an attempt for physical (real-world) borders. The human version of a `zone`. For a 3d Space for a thing(s) to move freely around inside without any attempts for physical (real-world) borders should use a `zone`.<br>Example: atrium, open plan office floor<br>See also: `arena`; `fence`; `zone` | [arena](#arena) |
-  
+
+B:   
 | B | Description | API |
 |--|--|--|
-| `box` <a name="box"></a> | A representation of a meta-physical enclosed space. The thing version of a `room`.<br>Example: inside a pit<br>See also: [room](#room) |
+| `box` <a name="box"></a> | A representation of a meta-physical enclosed space. The thing version of a `room`.<br>Example: inside a pit<br>See also: [room](#room) | [box](/box.md) |
+
+<a name="c"></a>
+| C | Description | API |
+|--|--|--|
 | `ceiling` | *`plafond`* |
 | `corridor` | A representation of physically (real) defined 3d space for a thing(s) to move forward/backward inside. There should be an attempt for physical (real-world) borders. The human version of a `pipe`.<br>See also: `arena`; `fence`; `pipe`; `zone` |
 | `door` | *`portal`*, *`gate`* |
@@ -65,6 +70,6 @@ _stringer(open, closed, mono
 > Author: Tavis PItt
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUyOTA5MDkwNCwtOTI1MDQxNzk2LDE0OT
-E0NTQzNTBdfQ==
+eyJoaXN0b3J5IjpbLTE2NjA4MjQzNzQsLTkyNTA0MTc5NiwxND
+kxNDU0MzUwXX0=
 -->

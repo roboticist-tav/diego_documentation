@@ -25,10 +25,7 @@ An index of all objects (at `thing` / `thingy` / `thingette` levels) used by **d
 |--|:--|--|
 | `equip`*[ment]* | <br>See also: `apparatus`; `instru`*[ment]*; `peripheral`;  `sensor` |
 | *[geo-]*`fence` | |
-| `firma` | An identified down _side_ of a representation space in the physical world. An undetermined human version of a `marack`.<br>See also: [side](#side); [marack](#marack); [ceiliga](#firma); [wall]
-
- *`ground`*, *`track`* |
- (#wall); [border](#border) | [ceiling](/ceiling.md) |
+| `firma` | An identified down _side_ of a representation space in the physical world. An undetermined human version of a `marack`.<br>See also: [side](#side); [marack](#marack); [ceiling](#ceiling); [wall](#wall); [border](#border); [ground](#ground); [track](#track) | [firma](/firma.md) |
 | `floor` / `level` | |
 | `foreign`*[er]* | |
 | `form`*[ation]* | |
@@ -81,7 +78,7 @@ _stringer(open, closed, mono
 > Author: Tavis PItt
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI5NTEwNjg4OSwxMjc4MDA5MDkzLDEyOT
-E2MDMwOTYsNDQ0MzkzMDc4LDE4ODg2NzcyMjEsLTkyNTA0MTc5
-NiwxNDkxNDU0MzUwXX0=
+eyJoaXN0b3J5IjpbLTExMjg4MTU4NDYsMTI3ODAwOTA5MywxMj
+kxNjAzMDk2LDQ0NDM5MzA3OCwxODg4Njc3MjIxLC05MjUwNDE3
+OTYsMTQ5MTQ1NDM1MF19
 -->

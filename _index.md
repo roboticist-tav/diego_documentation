@@ -25,7 +25,7 @@ An index of all objects (at `thing` / `thingy` / `thingette` levels) used by **d
 |--|:--|--|
 | `equip`*[ment]* | <br>See also: `apparatus`; `instru`*[ment]*; `peripheral`;  `sensor` |
 | *[geo-]*`fence` | |
-| `firma` | An identified down _side_ of a representation space in the physical world. An undetermined human version of a `plafond`.<br>See also: [side](#side); [plafond](#plafond); [firma](#firma); [wall]
+| `firma` | An identified down _side_ of a representation space in the physical world. An undetermined human version of a `marack`.<br>See also: [side](#side); [marack](#marack); [ceiliga](#firma); [wall]
 
  *`ground`*, *`track`* |
  (#wall); [border](#border) | [ceiling](/ceiling.md) |
@@ -81,7 +81,7 @@ _stringer(open, closed, mono
 > Author: Tavis PItt
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI3ODAwOTA5MywxMjkxNjAzMDk2LDQ0ND
-M5MzA3OCwxODg4Njc3MjIxLC05MjUwNDE3OTYsMTQ5MTQ1NDM1
-MF19
+eyJoaXN0b3J5IjpbLTI5NTEwNjg4OSwxMjc4MDA5MDkzLDEyOT
+E2MDMwOTYsNDQ0MzkzMDc4LDE4ODg2NzcyMjEsLTkyNTA0MTc5
+NiwxNDkxNDU0MzUwXX0=
 -->

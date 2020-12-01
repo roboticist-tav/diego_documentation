@@ -63,3 +63,6 @@ _stringer(open, closed, mono
 
 
 > Written with [StackEdit](https://stackedit.io/).
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMjA0MDM4MDY3XX0=
+-->

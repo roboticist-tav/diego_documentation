@@ -4,7 +4,7 @@ Index
 |--|--|--|
 | `actuat`*[or]* / `jigger`  <a  name="actuat"></a> | A child *device*  `thing` that causes its parent `thing` and/or sibling `thing` to operate, usually providing motion. The thing version of a `jagger`.<br>Example: motor controller; gearbox; motor<br>See also: [jigger](#jigger), [jagger](#jagger) | [actuat[or]](/actuat.md) |
 | `apparat` / `apparatus` | A technical *device* `thing`, carried/worm by a human, for use for a particular activity or purpose. An `apparatus` can or cannot have access to the _puff_. The human version of a `sensor`.<br>Example: geiger counter, multi-meter<br>See also: [sensor](#sensor)| [apparatus](/apparatus.md)
-| `appliance` | A *device* or *piece of equipment* `thing` designed to perform a specific task, that is **not** attached / carried / worm by a human. An `apparatus` can or cannot have access to the _puff_. The human version of a `mach`*[ine]* |
+| `appliance` | A *device* or *piece of equipment* `thing` designed to perform a specific task, that is **not** attached / carried / worm by a human. An `apparatus` can or cannot have access to the _puff_. The human version of a `mach`*[ine].*<br>Example: refrigerator, washing machine,  |
 | `arena` | A representation of physically (real) defined 3d space for a thing(s) to move freely around inside. There should be an attempt for physical (real-world) borders. The human version of a `zone`. For a 3d Space for a thing(s) to move freely around inside without any attempts for physical (real-world) borders should use a `zone`.<br>See also: `arena`; `fence`; `zone` |
   
 | B | Description | API |
@@ -65,5 +65,5 @@ _stringer(open, closed, mono
 > Author: Tavis PItt
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MTA1MDczOSwxNDkxNDU0MzUwXX0=
+eyJoaXN0b3J5IjpbMjA3MjIzNzQ3LDE0OTE0NTQzNTBdfQ==
 -->

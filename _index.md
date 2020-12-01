@@ -26,7 +26,7 @@ An index of all objects (at `thing` / `thingy` / `thingette` levels) used by **d
 ## <a name="e"></a>E: [equip](#equip)
 | E | Description | API |
 |--|:--|--|
-| `equip`*[ment]* | <br>See also: `apparatus`; `instru`*[ment]*; `peripheral`;  `sensor` |
+| `equip`*[ment]* | <br>See also: `apparatus`; `instru`*[ment]*; `peripheral`;  `sensor` | [equip](equip.md)
 | *[geo-]*`fence` | |
 | `firma` | An identified down _side_ of a representation space in the physical world. An undetermined human version of a `marack`.<br>See also: [side](#side); [marack](#marack); [ceiling](#ceiling); [wall](#wall); [border](#border); [ground](#ground); [track](#track) | [firma](/firma.md) |
 | `floor` / `level` | |
@@ -41,7 +41,7 @@ An index of all objects (at `thing` / `thingy` / `thingette` levels) used by **d
 | `jigger`<br>`actuat`<br>`actuator`<br>`mover` <a  name="actuat"></a> | A child *device*  `thingette` that causes its parent `thingy` and/or sibling `thingette` to operate, usually providing motion. A public interface with the _puff_ should be avoided or at least strictly limited. The thing version of a `jagger`.<br>Example: motor controller; gearbox; motor<br>See also: [jigger](#jigger), [jagger](#jagger) | [jigger](/jigger.md) |
 | `label` | |
 | `mach`*[ine]* | The stationary version of a `mech` |
-| ~~`manip`*[ulator]*~~ | ~~Depreciated from version 1.1, use `ewuip|
+| ~~`manip`*[ulator]*~~ | ~~Depreciated from version 1.1, use `equip` with type `manip`~~|
 | `map` | |
 | `me` | |
 | `mech`*[anical thing]* | The motion version of a `mach` |
@@ -80,7 +80,7 @@ _stringer(open, closed, mono
 > Author: Tavis PItt
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2ODY3Nzc5MTYsNDEzNTkyMzA5LDEyNz
-gwMDkwOTMsMTI5MTYwMzA5Niw0NDQzOTMwNzgsMTg4ODY3NzIy
-MSwtOTI1MDQxNzk2LDE0OTE0NTQzNTBdfQ==
+eyJoaXN0b3J5IjpbMjE0MTcxMDA2MSw0MTM1OTIzMDksMTI3OD
+AwOTA5MywxMjkxNjAzMDk2LDQ0NDM5MzA3OCwxODg4Njc3MjIx
+LC05MjUwNDE3OTYsMTQ5MTQ1NDM1MF19
 -->

@@ -15,11 +15,11 @@ An index of all objects (at `thing` / `thingy` / `thingette` levels) used by **d
 | C | Description | API |
 |--|:--|--|
 | `ceiling` | An identified top _side_ of a representation space in the physical world. An undetermined human version of a `plafond`.<br>See also: [side](#side); [plafond](#plafond); [firma](#firma); [wall](#wall); [border](#border) | [ceiling](/ceiling.md) |
-| `corridor` | A representation of physically defined 3d space, designed for a human, to manoeuvre inside, predominately along a single plane. There should be an attempt for physical (real-world) borders. The human version of a `pipe`.<br>See also: `arena`; `fence`; `pipe`; `zone` | [corridor](/corridor.md) |
+| `corridor` | A `thing` representation of physically defined 3d space, designed for a human, to manoeuvre inside, predominately along a single plane. There should be an attempt for physical (real-world) borders. The human version of a `pipe`.<br>See also: `arena`; `fence`; `pipe`; `zone` | [corridor](/corridor.md) |
 ## <a name="d"></a>D: [door](#door)
 | D | Description | API |
 |--|:--|--|
-| `door` | *`portal`*, *`gate`* |
+| `door` | A `thing` representation of a physical doorway / gate, designed for a human.<br>See also: [portal]`*, *`gate`* |
 ## <a name="e"></a>E: [equip](#equip)
 | E | Description | API |
 |--|:--|--|
@@ -77,6 +77,6 @@ _stringer(open, closed, mono
 > Author: Tavis PItt
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDQ0MzkzMDc4LDE4ODg2NzcyMjEsLTkyNT
-A0MTc5NiwxNDkxNDU0MzUwXX0=
+eyJoaXN0b3J5IjpbOTk5MzM1MjAwLDQ0NDM5MzA3OCwxODg4Nj
+c3MjIxLC05MjUwNDE3OTYsMTQ5MTQ1NDM1MF19
 -->

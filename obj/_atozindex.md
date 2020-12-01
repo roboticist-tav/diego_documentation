@@ -27,8 +27,8 @@ An A to Z index of all objects (at `thing` / `thingy` / `thingette` levels) used
 | E | Description | API |
 |--|:--|--|
 | `equip`*[ment]* | <br>See also: `apparatus`; `instru`*[ment]*; `peripheral`;  `sensor` | [equip](equip.md) |
-## <a name="f"></a>F: [fence](#fence); [firma](#firma)
-| D | Description | API |
+## <a name="f"></a>F: [fence](#fence); [firma](#firmaequip)
+| DE | Description | API |
 |--|:--|--|
 | *[geo-]*`fence` <a name="fence"></a> | |
 | `firma` <a name="firma"></a> | An identified down _side_ of a representation space in the physical world. An undetermined human version of a `marack`.<br>See also: [side](#side); [marack](#marack); [ceiling](#ceiling); [wall](#wall); [border](#border); [ground](#ground); [track](#track) | [firma](/firma.md) |
@@ -83,5 +83,5 @@ _stringer(open, closed, mono
 > Author: Tavis PItt
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjE0MTcxMDA2MV19
+eyJoaXN0b3J5IjpbMTczMTM0MzE4NiwyMTQxNzEwMDYxXX0=
 -->

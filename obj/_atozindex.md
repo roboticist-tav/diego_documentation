@@ -46,8 +46,8 @@ An A to Z index of all objects (at `thing` / `thingy` / `thingette` levels) used
 | H | Description | API |
 |--|:--|--|
 | `human` | The human version of a `thing` / `robot`.  The non-human version of an `organic`.<br>See also: |
-## <a name="g"></a>G: [gait](#gait); [gate](#gate)
-| G | Description | API |
+## <a name="i"></a>I: [instruct](#instruct); [label](#label)
+| I | Description | API |
 |--|:--|--|
 | `instruct` | |
 | `jigger`<br>`actuat`<br>`actuator`<br>`mover` <a  name="actuat"></a> | A child *device*  `thingette` that causes its parent `thingy` and/or sibling `thingette` to operate, usually providing motion. A public interface with the _puff_ should be avoided or at least strictly limited. The thing version of a `jagger`.<br>Example: motor controller; gearbox; motor<br>See also: [jigger](#jigger), [jagger](#jagger) | [jigger](/jigger.md) |
@@ -92,5 +92,5 @@ _stringer(open, closed, mono
 > Author: Tavis PItt
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzODg0MDQ2MjUsMjE0MTcxMDA2MV19
+eyJoaXN0b3J5IjpbMTY5MjExMjk5NywyMTQxNzEwMDYxXX0=
 -->

@@ -14,7 +14,7 @@ An index of all objects (at `thing` / `thingy` / `thingette` levels) used by **d
 ## <a name="c"></a> C: [ceiling](#ceiling); [corridor](#corridor)
 | C | Description | API |
 |--|:--|--|
-| `ceiling` | A top  *`plafond`* |
+| `ceiling` | An identified top _side_ of a representation space in the physical world. A `spatial `corridor` /  *`plafond`* |
 | `corridor` | A representation of physically (real) defined 3d space for a thing(s) to move forward/backward inside. There should be an attempt for physical (real-world) borders. The human version of a `pipe`.<br>See also: `arena`; `fence`; `pipe`; `zone` |
 ## <a name="d"></a>D: [door](#door)
 | D | Description | API |
@@ -77,6 +77,6 @@ _stringer(open, closed, mono
 > Author: Tavis PItt
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQzNDg5NTY1NiwxODg4Njc3MjIxLC05Mj
-UwNDE3OTYsMTQ5MTQ1NDM1MF19
+eyJoaXN0b3J5IjpbLTExNDMwMjU2OTgsMTg4ODY3NzIyMSwtOT
+I1MDQxNzk2LDE0OTE0NTQzNTBdfQ==
 -->

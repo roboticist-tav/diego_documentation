@@ -15,11 +15,11 @@ An index of all objects (at `thing` / `thingy` / `thingette` levels) used by **d
 | C | Description | API |
 |--|:--|--|
 | `ceiling` <a name="ceiling"></a>| An identified top _side_ of a representation space in the physical world. An undetermined human version of a `plafond`.<br>See also: [side](#side); [plafond](#plafond); [firma](#firma); [wall](#wall); [border](#border) | [ceiling](/ceiling.md) |
-| `corridor` <a name="corrido| A `thing` representation of physically defined 3d space, designed for a human, to manoeuvre inside, predominately along a single plane. There should be an attempt for physical (real-world) borders. The human version of a `pipe`.<br>See also: `arena`; `fence`; `pipe`; `zone` | [corridor](/corridor.md) |
+| `corridor` <a name="corridor"></a> | A `thing` representation of physically defined 3d space, designed for a human, to manoeuvre inside, predominately along a single plane. There should be an attempt for physical (real-world) borders. The human version of a `pipe`.<br>See also: `arena`; `fence`; `pipe`; `zone` | [corridor](/corridor.md) |
 ## <a name="d"></a>D: [door](#door)
 | D | Description | API |
 |--|:--|--|
-| `door` | A `thing` representation of a physical doorway / gate, designed for a human.<br>See also: [portal](#portal); [gate](#gate) | [door](#door)
+| `door` <a name="door"></a> | A `thing` representation of a physical doorway / gate, designed for a human.<br>See also: [portal](#portal); [gate](#gate) | [door](#door)
 ## <a name="e"></a>E: [equip](#equip)
 | E | Description | API |
 |--|:--|--|
@@ -77,7 +77,7 @@ _stringer(open, closed, mono
 > Author: Tavis PItt
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMwNzAzNTU3MSwxMjkxNjAzMDk2LDQ0ND
-M5MzA3OCwxODg4Njc3MjIxLC05MjUwNDE3OTYsMTQ5MTQ1NDM1
-MF19
+eyJoaXN0b3J5IjpbLTE5NDM2NjI0NTYsMTI5MTYwMzA5Niw0ND
+QzOTMwNzgsMTg4ODY3NzIyMSwtOTI1MDQxNzk2LDE0OTE0NTQz
+NTBdfQ==
 -->

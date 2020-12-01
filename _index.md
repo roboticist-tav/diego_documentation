@@ -10,6 +10,7 @@ An index of all objects (at `thing` / `thingy` / `thingette` levels) used by **d
 ## <a name="b"></a> B: [box](#box)
 | B | Description | API |
 |--|:--|--|
+| `border` <a name="border"></a> | .<br>Example: <br>See also: [wall](#wall) | [border](/border.md) |
 | `box` <a name="box"></a> | A representation of a meta-physical enclosed space. The thing / meta-physical version of a `room`.<br>Example: inside a pit<br>See also: [room](#room) | [box](/box.md) |
 ## <a name="c"></a> C: [ceiling](#ceiling); [corridor](#corridor)
 | C | Description | API |
@@ -78,7 +79,7 @@ _stringer(open, closed, mono
 > Author: Tavis PItt
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMjg4MTU4NDYsMTI3ODAwOTA5MywxMj
-kxNjAzMDk2LDQ0NDM5MzA3OCwxODg4Njc3MjIxLC05MjUwNDE3
-OTYsMTQ5MTQ1NDM1MF19
+eyJoaXN0b3J5IjpbMTk2MjA2NTA2NCwxMjc4MDA5MDkzLDEyOT
+E2MDMwOTYsNDQ0MzkzMDc4LDE4ODg2NzcyMjEsLTkyNTA0MTc5
+NiwxNDkxNDU0MzUwXX0=
 -->

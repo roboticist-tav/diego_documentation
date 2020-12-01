@@ -62,6 +62,7 @@ Example: inside a pit
 See also: [room](https://stackedit.io/app#room)The human version of a `box`.<br>See also: |
 | `route` | |
 | `sensor` | The thing version of an `apparatus`.<br>See also: [apparat](#apparat) |
+| `side` | | |
 | `spec`*[ification]* | <br>See also: `attribute` |
 | `stance` |  |
 | `stride` | The human version of `gait` |
@@ -80,7 +81,7 @@ _stringer(open, closed, mono
 > Author: Tavis PItt
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDQ0MjY5ODc0LDEyOTE2MDMwOTYsNDQ0Mz
-kzMDc4LDE4ODg2NzcyMjEsLTkyNTA0MTc5NiwxNDkxNDU0MzUw
-XX0=
+eyJoaXN0b3J5IjpbMTI3ODAwOTA5MywxMjkxNjAzMDk2LDQ0ND
+M5MzA3OCwxODg4Njc3MjIxLC05MjUwNDE3OTYsMTQ5MTQ1NDM1
+MF19
 -->

@@ -3,6 +3,7 @@ Index
 
 | object | Description |
 |--|--|
+| `jigger` / `actuator` | The thing version of a `jagger`. |
 | `appara` / `apparatus` | The human version of a `sensor`.<br>See also: |
 | `appliance` | The human version of a `mach` |
 | `arena`  | A representation of physically (real) defined 3d space for a thing(s) to move freely around inside. There should be an attempt for physical (real-world) borders.  The human version of a `zone`.  For a 3d Space for a thing(s) to move freely around inside without any attempts for physical (real-world) borders should use a `zone`.<br>See also: `arena`; `fence`; `zone` |
@@ -22,7 +23,7 @@ Index
 | `guide` | |
 | `human` | The human version of a `thing` / `robot`.  The non-human version of an `organic`.<br>See also: |
 | `instruct` | |
-| `jigger` | |
+| `jigger` / `actuator` | The thing version of a `jagger`. |
 | `label` | |
 | `mach`*[ine]* | The stationary version of a `mech` |
 | `manip`*[ulator]* | |
@@ -64,5 +65,5 @@ _stringer(open, closed, mono
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA0MDM4MDY3XX0=
+eyJoaXN0b3J5IjpbMzQ5NDY0ODU5XX0=
 -->

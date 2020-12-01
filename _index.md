@@ -14,8 +14,8 @@ An index of all objects (at `thing` / `thingy` / `thingette` levels) used by **d
 ## <a name="c"></a> C: [ceiling](#ceiling); [corridor](#corridor)
 | C | Description | API |
 |--|:--|--|
-| `ceiling` | An identified top _side_ of a representation space in the physical world. An undetermined human version of a `plafond`.<br>See also: [side](#side); [plafond](#plafond); [firma](#firma); [wall](#wall); [border](#border) | [ceiling](/ceiling.md) |
-| `corridor` | A `thing` representation of physically defined 3d space, designed for a human, to manoeuvre inside, predominately along a single plane. There should be an attempt for physical (real-world) borders. The human version of a `pipe`.<br>See also: `arena`; `fence`; `pipe`; `zone` | [corridor](/corridor.md) |
+| `ceiling` <a name="ceiling"></a>| An identified top _side_ of a representation space in the physical world. An undetermined human version of a `plafond`.<br>See also: [side](#side); [plafond](#plafond); [firma](#firma); [wall](#wall); [border](#border) | [ceiling](/ceiling.md) |
+| `corridor` <a name="corrido| A `thing` representation of physically defined 3d space, designed for a human, to manoeuvre inside, predominately along a single plane. There should be an attempt for physical (real-world) borders. The human version of a `pipe`.<br>See also: `arena`; `fence`; `pipe`; `zone` | [corridor](/corridor.md) |
 ## <a name="d"></a>D: [door](#door)
 | D | Description | API |
 |--|:--|--|
@@ -77,7 +77,7 @@ _stringer(open, closed, mono
 > Author: Tavis PItt
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxNDM5NTEyOTIsMTI5MTYwMzA5Niw0ND
-QzOTMwNzgsMTg4ODY3NzIyMSwtOTI1MDQxNzk2LDE0OTE0NTQz
-NTBdfQ==
+eyJoaXN0b3J5IjpbMTMwNzAzNTU3MSwxMjkxNjAzMDk2LDQ0ND
+M5MzA3OCwxODg4Njc3MjIxLC05MjUwNDE3OTYsMTQ5MTQ1NDM1
+MF19
 -->

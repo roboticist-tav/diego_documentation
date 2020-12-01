@@ -3,7 +3,8 @@ An index of all objects (at `thing` / `thingy` / `thingette` levels) used by **d
 ## <a name="a"></a> A: [actuat](#actuat); [apparat](#apparat); [appliance](#appliance); [arena](#arena)
 | A | Description | API |
 |--|:--|--|
-| `actuat` / `actuator` / `jigger` / `mover` <a  name="actuat"></a> | A child *device*  `thingette` that causes its parent `thingy` and/or sibling `thingette` to operate, usually providing motion. A public interface with the _puff_ should be avoided or at least strictly limited. The thing version of a `jagger`.<br>Example: motor controller; gearbox; motor<br>See also: [jigger](#jigger), [jagger](#jagger) | [actuat](/actuat.md) |
+| `actuat`<br>`actuator`<br>`jigger`<br>`mover` <a  name="actuat"></a> | A child *device*  `thingette` that causes its parent `thingy` and/or sibling `thingette` to operate, usually providing motion. A public interface with the _puff_ should be avoided or at least strictly limited. The thing version of a `jagger`.<br>Example: motor controller; gearbox; motor<br>See also: [jigger](#jigger), [jagger](#jagger) | [actuat](/actuat.md) |
+| `actuator` <a  name="actuator"></a> | See: [actuat](#actuat) | |
 | `apparat` / `apparatus` <a name="apparat"></a>| A technical *device* `thingy`, carried/worm by a human, for use for a particular activity or purpose. An `apparatus` should have access to the _puff_. The human version of a `sensor`.<br>Example: geiger counter, multi-meter; *a handheld device*<br>See also: [sensor](#sensor)| [apparatus](/apparatus.md)
 | `appliance` <a name="appliance"></a>| A *device* or *piece of equipment* `thingy` designed to perform a specific task, that is **not** attached / carried / worm by a human. An `apparatus` can or cannot have access to the _puff_. The human version of a `mach`*[ine].*<br>Example: refrigerator, washing machine<br>See also: [mach](#mach) | [appliance](/applicance.md)
 | `arena` <a name="arena"></a> | A representation of physically defined 3d space for a `thing`(s) to move freely around inside. There should be an attempt to represent physical (real-world) borders. The human version of a `zone`.<br>Example: atrium, open plan office floor<br>See also: [zone](#zone); [fence](#fence) | [arena](/arena.md) |
@@ -80,7 +81,7 @@ _stringer(open, closed, mono
 > Author: Tavis PItt
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI5MzA1NTM4OCwxMjc4MDA5MDkzLDEyOT
-E2MDMwOTYsNDQ0MzkzMDc4LDE4ODg2NzcyMjEsLTkyNTA0MTc5
-NiwxNDkxNDU0MzUwXX0=
+eyJoaXN0b3J5IjpbMzA5NzczOTQ3LDEyNzgwMDkwOTMsMTI5MT
+YwMzA5Niw0NDQzOTMwNzgsMTg4ODY3NzIyMSwtOTI1MDQxNzk2
+LDE0OTE0NTQzNTBdfQ==
 -->

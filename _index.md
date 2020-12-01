@@ -1,6 +1,6 @@
-Index
-
-<a name="a"></a> A: [actuat](#actuat); [apparat](#apparat); [appliance](#appliance); [arena](#arena)
+# Index
+An index of all objects (at `thing` / `thingy` / `thingette` levels) used by 
+## <a name="a"></a> A: [actuat](#actuat); [apparat](#apparat); [appliance](#appliance); [arena](#arena)
 | A | Description | API |
 |--|:--|--|
 | `actuat`*[or]* / `jigger` <a  name="actuat"></a> | A child *device*  `thing` that causes its parent `thing` and/or sibling `thing` to operate, usually providing motion. The thing version of a `jagger`.<br>Example: motor controller; gearbox; motor<br>See also: [jigger](#jigger), [jagger](#jagger) | [actuat[or]](/actuat.md) |
@@ -81,6 +81,6 @@ _stringer(open, closed, mono
 > Author: Tavis PItt
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg4ODY3NzIyMSwtOTI1MDQxNzk2LDE0OT
-E0NTQzNTBdfQ==
+eyJoaXN0b3J5IjpbMTc3ODY3MjU4MSwxODg4Njc3MjIxLC05Mj
+UwNDE3OTYsMTQ5MTQ1NDM1MF19
 -->

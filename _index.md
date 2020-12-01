@@ -1,4 +1,4 @@
-# Index
+# Objects Index
 An index of all objects (at `thing` / `thingy` / `thingette` levels) used by **diego** instruction programming language.
 ## <a name="a"></a> A: [actuat](#actuat); [apparat](#apparat); [appliance](#appliance); [arena](#arena)
 | A | Description | API |
@@ -77,6 +77,7 @@ _stringer(open, closed, mono
 > Author: Tavis PItt
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI5MTYwMzA5Niw0NDQzOTMwNzgsMTg4OD
-Y3NzIyMSwtOTI1MDQxNzk2LDE0OTE0NTQzNTBdfQ==
+eyJoaXN0b3J5IjpbLTIxNDM5NTEyOTIsMTI5MTYwMzA5Niw0ND
+QzOTMwNzgsMTg4ODY3NzIyMSwtOTI1MDQxNzk2LDE0OTE0NTQz
+NTBdfQ==
 -->

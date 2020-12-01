@@ -14,8 +14,8 @@ An index of all objects (at `thing` / `thingy` / `thingette` levels) used by **d
 ## <a name="c"></a> C: [ceiling](#ceiling); [corridor](#corridor)
 | C | Description | API |
 |--|:--|--|
-| `ceiling` | An identified top _side_ of a representation space in the physical world. An undetermined human version of a `plafond`<br>See also: [side](#side); [plafond](#plafond); [g |
-| `corridor` | A representation of physically (real) defined 3d space for a thing(s) to move forward/backward inside. There should be an attempt for physical (real-world) borders. The undetermined  version of a `pipe`.<br>See also: `arena`; `fence`; `pipe`; `zone` |
+| `ceiling` | An identified top _side_ of a representation space in the physical world. An undetermined human version of a `plafond`.<br>See also: [side](#side); [plafond](#plafond); [firma](#firma); [wall](#wall); [border](#border) || [ceiling](/ceiling.md) |
+| `corridor` | A representation of physically (real) defined 3d space for a thing(s) to move forward/backward inside. There should be an attempt for physical (real-world) borders. The undetermined  version of a `pipe`.<br>See also: `arena`; `fence`; `pipe`; `zone` | [ceiling](/ceiling.md) |
 ## <a name="d"></a>D: [door](#door)
 | D | Description | API |
 |--|:--|--|
@@ -77,6 +77,6 @@ _stringer(open, closed, mono
 > Author: Tavis PItt
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NzE3NDkzLDE4ODg2NzcyMjEsLTkyNT
-A0MTc5NiwxNDkxNDU0MzUwXX0=
+eyJoaXN0b3J5IjpbLTE3MjI4NjE0NzEsMTg4ODY3NzIyMSwtOT
+I1MDQxNzk2LDE0OTE0NTQzNTBdfQ==
 -->

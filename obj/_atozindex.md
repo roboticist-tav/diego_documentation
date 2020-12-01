@@ -1,11 +1,11 @@
 # A to Z Objects Index
-An index of all objects (at `thing` / `thingy` / `thingette` levels) used by **diego** instruction programming language.
+An A to Z index of all objects (at `thing` / `thingy` / `thingette` levels) used by **diego** instruction programming language.
 ## <a name="a"></a> A: [actuat](#actuat); [apparat](#apparat); [appliance](#appliance); [arena](#arena)
 | A | Description | API |
 |--|:--|--|
 | `actuat` <a  name="actuat"></a> | See: [jigger](#jigger) | [actuat](/jigger.md) |
 | `actuator` <a  name="actuator"></a> | See: [jigger](#jigger) | [actuator](/jigger.md) |
-| `apparat` / `apparatus` <a name="apparat"></a>| A technical *device* `thingy`, carried/worm by a human, for use for a particular activity or purpose. An `apparatus` should have access to the _puff_. The human version of a `sensor`.<br>Example: geiger counter, multi-meter; *a handheld device*<br>See also: [sensor](#sensor)| [apparatus](/apparatus.md)
+| `apparat` / `apparatus` <a name="apparat"></a>| A technical *device* `thingy`, carried/worm by a human, for use for a particular purpose or activity. An `apparatus` should have access to the _puff_. The human version of a `sensor`.<br>Example: geiger counter, multi-meter; *a handheld device*<br>See also: [sensor](#sensor)| [apparatus](/apparatus.md)
 | `appliance` <a name="appliance"></a>| A *device* or *piece of equipment* `thingy` designed to perform a specific task, that is **not** attached / carried / worm by a human. An `apparatus` can or cannot have access to the _puff_. The human version of a `mach`*[ine].*<br>Example: refrigerator, washing machine<br>See also: [mach](#mach) | [appliance](/applicance.md)
 | `arena` <a name="arena"></a> | A representation of physically defined 3d space for a `thing`(s) to move freely around inside. There should be an attempt to represent physical (real-world) borders. The human version of a `zone`.<br>Example: atrium, open plan office floor<br>See also: [zone](#zone); [fence](#fence) | [arena](/arena.md) |
 | `attr`*[ibute]* <a name="arena"></a> | Lorem ipsum, lorem ipsum, lorem ipsum.<br>Example: <br>See also: [spec](#spec) | [attr](/attr.md) |
@@ -26,9 +26,12 @@ An index of all objects (at `thing` / `thingy` / `thingette` levels) used by **d
 ## <a name="e"></a>E: [equip](#equip)
 | E | Description | API |
 |--|:--|--|
-| `equip`*[ment]* | <br>See also: `apparatus`; `instru`*[ment]*; `peripheral`;  `sensor` | [equip](equip.md)
-| *[geo-]*`fence` | |
-| `firma` | An identified down _side_ of a representation space in the physical world. An undetermined human version of a `marack`.<br>See also: [side](#side); [marack](#marack); [ceiling](#ceiling); [wall](#wall); [border](#border); [ground](#ground); [track](#track) | [firma](/firma.md) |
+| `equip`*[ment]* | <br>See also: `apparatus`; `instru`*[ment]*; `peripheral`;  `sensor` | [equip](equip.md) |
+## <a name="f"></a>F: [fence](#fence); [firma](#firma)
+| D | Description | API |
+|--|:--|--|
+| *[geo-]*`fence` <a name="fence"></a> | |
+| `firma` <a name="firma"></a> | An identified down _side_ of a representation space in the physical world. An undetermined human version of a `marack`.<br>See also: [side](#side); [marack](#marack); [ceiling](#ceiling); [wall](#wall); [border](#border); [ground](#ground); [track](#track) | [firma](/firma.md) |
 | `floor` / `level` | |
 | `foreign`*[er]* | |
 | `form`*[ation]* | |

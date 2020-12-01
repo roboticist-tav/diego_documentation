@@ -1,4 +1,4 @@
-# A to Z Objects Index
+# Topological Objects Index
 An index of all objects (at `thing` / `thingy` / `thingette` levels) used by **diego** instruction programming language.
 ## <a name="a"></a> A: [actuat](#actuat); [apparat](#apparat); [appliance](#appliance); [arena](#arena)
 | A | Description | API |

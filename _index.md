@@ -3,7 +3,7 @@ Index
 
 | object | Description |
 |--|--|
-| `jigger` / `actuator` | The thing version of a `jagger`. |
+| `actuator` / `actuator` | The thing version of a `jagger`. |
 | `appara` / `apparatus` | The human version of a `sensor`.<br>See also: |
 | `appliance` | The human version of a `mach` |
 | `arena`  | A representation of physically (real) defined 3d space for a thing(s) to move freely around inside. There should be an attempt for physical (real-world) borders.  The human version of a `zone`.  For a 3d Space for a thing(s) to move freely around inside without any attempts for physical (real-world) borders should use a `zone`.<br>See also: `arena`; `fence`; `zone` |
@@ -54,16 +54,14 @@ Index
 | `wall` | |
 | `zone` | The thing version of an `arena` |
 
-
-> Written with [StackEdit](https://stackedit.io/).
-
 human - thing (mech, robot, obstacle, organic)
 
 https://specializedstairs.com/anatomy-of-a-staircase/
 _stringer(open, closed, mono
 
 
+> Author: Tavis PItt
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzQ5NDY0ODU5XX0=
+eyJoaXN0b3J5IjpbMjA0Mzg3NTk2M119
 -->

@@ -4,8 +4,8 @@ An index of all objects (at `thing` / `thingy` / `thingette` levels) used by **d
 | A | Description | API |
 |--|:--|--|
 | `actuat`*[or]* / `jigger` <a  name="actuat"></a> | A child *device*  `thingette` that causes its parent `thingy` and/or sibling `thingette` to operate, usually providing motion. A public interface with the _puff_ should be avoided or at least strictly limited. The thing version of a `jagger`.<br>Example: motor controller; gearbox; motor<br>See also: [jigger](#jigger), [jagger](#jagger) | [actuat[or]](/actuat.md) |
-| `apparat` / `apparatus` <a name="apparat"></a>| A technical *device* `thingy`, carried/worm by a human, for use for a particular activity or purpose. An `apparatus` should have access to the _puff_. The human version of a `sensor`.<br>Example: geiger counter, multi-meter<br>See also: [sensor](#sensor)| [apparatus](/apparatus.md)
-| `appliance` <a name="appliance"></a>| A *device* or *piece of equipment* `thing` designed to perform a specific task, that is **not** attached / carried / worm by a human. An `apparatus` can or cannot have access to the _puff_. The human version of a `mach`*[ine].*<br>Example: refrigerator, washing machine<br>See also: [mach](#mach) | [appliance](/applicance.md)
+| `apparat` / `apparatus` <a name="apparat"></a>| A technical *device* `thingy`, carried/worm by a human, for use for a particular activity or purpose. An `apparatus` should have access to the _puff_. The human version of a `sensor`.<br>Example: geiger counter, multi-meter; *a handheld device*<br>See also: [sensor](#sensor)| [apparatus](/apparatus.md)
+| `appliance` <a name="appliance"></a>| A *device* or *piece of equipment* `thingy` designed to perform a specific task, that is **not** attached / carried / worm by a human. An `apparatus` can or cannot have access to the _puff_. The human version of a `mach`*[ine].*<br>Example: refrigerator, washing machine<br>See also: [mach](#mach) | [appliance](/applicance.md)
 | `arena` <a name="arena"></a> | A representation of physically (real) defined 3d space for a thing(s) to move freely around inside. There should be an attempt for physical (real-world) borders. The human version of a `zone`. For a 3d Space for a thing(s) to move freely around inside without any attempts for physical (real-world) borders should use a `zone`.<br>Example: atrium, open plan office floor<br>See also: `arena`; `fence`; `zone` | [arena](#arena) |
 ## <a name="b"></a> B: [box](#box)
 | B | Description | API |
@@ -77,6 +77,6 @@ _stringer(open, closed, mono
 > Author: Tavis PItt
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAyNTM5MjAzMiwxODg4Njc3MjIxLC05Mj
+eyJoaXN0b3J5IjpbMTU0MDQ3MzM0OSwxODg4Njc3MjIxLC05Mj
 UwNDE3OTYsMTQ5MTQ1NDM1MF19
 -->

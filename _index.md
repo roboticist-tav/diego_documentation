@@ -41,7 +41,7 @@ An index of all objects (at `thing` / `thingy` / `thingette` levels) used by **d
 | `jigger`<br>`actuat`<br>`actuator`<br>`mover` <a  name="actuat"></a> | A child *device*  `thingette` that causes its parent `thingy` and/or sibling `thingette` to operate, usually providing motion. A public interface with the _puff_ should be avoided or at least strictly limited. The thing version of a `jagger`.<br>Example: motor controller; gearbox; motor<br>See also: [jigger](#jigger), [jagger](#jagger) | [jigger](/jigger.md) |
 | `label` | |
 | `mach`*[ine]* | The stationary version of a `mech` |
-| `manip`*[ulator]* | |
+| ~~`manip`*[ulator]*~~ | ~~Depreciated from version 1.1, use `ewuip|
 | `map` | |
 | `me` | |
 | `mech`*[anical thing]* | The motion version of a `mach` |
@@ -80,7 +80,7 @@ _stringer(open, closed, mono
 > Author: Tavis PItt
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MjgyNTQ4OTUsNDEzNTkyMzA5LDEyNz
+eyJoaXN0b3J5IjpbLTE2ODY3Nzc5MTYsNDEzNTkyMzA5LDEyNz
 gwMDkwOTMsMTI5MTYwMzA5Niw0NDQzOTMwNzgsMTg4ODY3NzIy
 MSwtOTI1MDQxNzk2LDE0OTE0NTQzNTBdfQ==
 -->

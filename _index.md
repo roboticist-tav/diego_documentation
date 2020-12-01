@@ -11,7 +11,7 @@ Index
 <a name="b"></a> B: [box](#box);   
 | B | Description | API |
 |--|--|--|
-| `box` <a name="box"></a> | A representation of a meta-physical enclosed space. The thing version of a `room`.<br>Example: inside a pit<br>See also: [room](#room) | [box](/box.md) |
+| `box` <a name="box"></a> | A representation of a meta-physical enclosed space. The thing/meta-physical version of a `room`.<br>Example: inside a pit<br>See also: [room](#room) | [box](/box.md) |
 
 <a name="c"></a> C: [ceiling](#ceiling); [corridor](#corridor)
 | C | Description | API |
@@ -19,10 +19,14 @@ Index
 | `ceiling` | *`plafond`* |
 | `corridor` | A representation of physically (real) defined 3d space for a thing(s) to move forward/backward inside. There should be an attempt for physical (real-world) borders. The human version of a `pipe`.<br>See also: `arena`; `fence`; `pipe`; `zone` |
 
-<a name="d"></a>DC: [ceiling](#ceiling); [corridor](#corridor)
+<a name="d"></a>D: [door](#door)
 | C | Description | API |
 |--|--|--|
 | `door` | *`portal`*, *`gate`* |
+
+<a name="d"></a>D: [door](#door)
+| C | Description | API |
+|--|--|--|
 | `equip`*[ment]* | <br>See also: `apparatus`; `instru`*[ment]*; `peripheral`;  `sensor` |
 | *[geo-]*`fence` | |
 | `firma` | *`ground`*, *`track`* |
@@ -54,7 +58,9 @@ Index
 | `proc`*[edure]* | |
 | `prog`*[ramme]* | |
 | `robot` | <br>See also: `human`; `thing` |
-| `room` | The human version of a `box`.<br>See also: |
+| `room` | A representation of a physical enclosed space. The thing/physical version of a `room`.  
+Example: inside a pit  
+See also: [room](https://stackedit.io/app#room)The human version of a `box`.<br>See also: |
 | `route` | |
 | `sensor` | The thing version of an `apparatus`.<br>See also: [apparat](#apparat) |
 | `spec`*[ification]* | <br>See also: `attribute` |
@@ -75,6 +81,6 @@ _stringer(open, closed, mono
 > Author: Tavis PItt
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDE5MzM5MTkwLC05MjUwNDE3OTYsMTQ5MT
+eyJoaXN0b3J5IjpbMTQzMTA1OTE1LC05MjUwNDE3OTYsMTQ5MT
 Q1NDM1MF19
 -->

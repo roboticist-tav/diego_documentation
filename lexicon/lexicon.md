@@ -1,50 +1,108 @@
 # Lexicon
 
-## Genera
+## Objects
 
-| Genus     | Notes |
-| --------- | ----- |
-| `human`   |       |
-| `ai`      |       |
-| `robot`   |       |
-| `mobot`   |       |
-| `organic` |       |
-| `thing`   |       |
-| `console` |       |
-| `object`  |       |
-| `subject` |       |
+| Verb         | Notes |
+| ------------ | ----- |
+| `actuat`*`(or)`*| |
+| `blob`| |
+| `calendar`| |
+| `instruct`| |
+| `label`| |
+| `litsan`| |
+| `marker`| |
+| `me` | *self*, Thingy from its own perspective |
+| `metric`| |
+| `neigh` | Neighbour | 
+| `point`| |
+| `poll`| |
+| `pulse`| |
+| `pulsepoint`| |
+| `route` | |
+| `sensor`| |
+| `snapshot`| |
+| `stat`| |
+| `tempus`| |
+| `tracker`| |
+| `trackpoint`| |
+| `trigger`| |
+| `vidshot`| |
+| `waypoint`| |
+| `winner`| |
+| | |
+| | |
+| | |
+| | |
+| | |
+| | |
+| | |
+| | |
+| | |
+| | |
+| | |
+
+### Unknown Thingies
+
+| unknown thingy     | notes | examples |
+| --------- | ----- | ----- |
+| `object`  | A civilian[^1] immobile *thingy* in the  physical *'real'* world       | lampost, bush, chair |
+| `subject` | A civilian[^1] movable *thingy* in the  physical *'real'* world       | *unidentified moving animal*, *unidentified flying object*  |
+[^1]: A civilian is a *thingy* with (or presumed to be with) no Diego interface
+
+### Thingy Objects (Genera of Thingies)
+
+| thingy genus     | notes | examples |
+| --------- | ----- | ----- |
+| `human`   | Representation of a human being, present and alive in the physical *'real'* world      | *Fred Jones* |
+| `ai`      | Artificial Intelligence, present in the metaphysical world only   | *cal* |
+| `robot`   | A self-propelled *thingy* in the physical *'real'* world       | Boston Dynamics Spot, robot arm, drone |
+| `vehicle` | A guided *thingy* transporting `human`/`organic` thingies and/or controlled by a `human` | car, airplane, ugv, radio-controlled toy car |
+| `mobot`   | A conveyed *thingy* in the physical *'real'* world       | Samasung Galaxy watch, cellphone |
+| `organic` | Representation of a non-human being, present and alive in the physical *'real'* world       | cat, dog |
+| `thing`   | An immobile *thingy* in the physical *'real'* world       |  fridge, television      |
+| `console` | A metaphysical presence used to only provide an interface to all other *thingies*      |       |
+
+
+
+
 
 ## Verbs
 
-| Verb         | Inverse        | Notes |
+| verb         | inverse        | notes |
 | ------------ | -------------- | ----- |
-| `add_`    | `minus_` |       |
-| `ask_`    | `tell_` |       |
+| `add_`    | `dispose_`, `dump_`,  `minus_` | Construction of an object      |
+| `ask_`    | `tell_` | Request for information      |
 | `back_` | `fetch_` | |
-| `call_`    | `here_` or `pong_` |       |
+| `call_`    | `here_` or `pong_` | [roll]call request of existence      |
+| `dispose_`, `dump_`,  `minus_` | `add_` | |
+| `dump_`, `dispose_`, `minus_` | `add_` | |
 | `fetch_`    | `back_` |       |
-| `get_` | `set_` | |
-| `go_` | `stop_` and `pause_` |       |
+| `get_` | `set_` | Retrieve setting value |
+| `go_`, `start_` | `stop_`, (`halt_`, `pause_`) |       |
+| `halt_`, `pause_` | (`go_`, `start_`), (`stop_`) | |
 | `hear_` | `listen_` | |
 | `here_`    | `call_` |       |
+| `hook_` | `unhook_` | |
+| `kill_` | | |
 | `listen_`    | `hear_` |       |
 | `look_` | `see_` | |
-| `minus_`    | `add_` |       |
-| `pause_` | see `go_` and `stop_` | |
+| `minus_`, `dispose_`, `dump_` | `add_`| |
+| `murder_` | | |
+| `neigh_` | | |
+| `pause_`, `halt_` | (`go_`, `start_`), (`stop_`) | |
 | `pong_`    | `ping_` |       |
 | `rem_`    | `recall_` |       |
 | `see_`    | `look_` |       |
 | `set_`    | `get_` |       |
-| `stop_` | `go_` and `pause_` | |
+| `start_`, `go_` | `stop_`, (`halt_`, `pause_`) |       |
+| `stop_` | `go_`, `start_`, (`halt_`, `pause_`) | |
 | `tell_`    | `ask_` |       |
 | `with_`    |                |       |
-| `kill_` | | |
-| `murder_` | | |
-| `neigh_` | | |
-| `hook_` | `unhook_` | |
-|  | | |
-|  | | |
-|  | | |
+|  `exec_`, `run_`| | |
+|  `begin_`| `end_` | |
+|  `end_`| `begin_` | |
+
+
 
 ## Nouns
 
@@ -97,19 +155,33 @@
 |  | |
 |  | |
 
-## Positions
+## Spatial / Geo-spatial Conditions
 
-| Position                                                 | Notes                                                 |
-| -------------------------------------------------------- | ----------------------------------------------------- |
-| `_at({date|datetime|time})`                              |                                                       |
+There are sevaral spatial/geo-spatal postposits available.
+
+| Sytnax | Notes<br />`example` |
+| ---- | ---- |
+| 
+
+
+# Temporal Conditions
+
+| Sytnax | Notes<br />`example` |
+| ---- | ---- |
+| `_at(`*`date|datetime|time`*`)` | Condition that preceeding object(s) have a date|datetime|time matching the given *`date|datetime|time`* |
+| `_from(`*`date|datetime|time`*`)_to(`*`date|datetime|time`*`)` | |
+| `_after(`*`date|datetime|time`*`)` | |
+| `_before(`*`date|datetime|time`*`)` | |
+| `_ago(`*`value`*`, `*`unit`*`)` &nbsp; or...<br />`_ago(`*`value`*`)_unit(`*`unit`*`)` | |
+
+
+
 | `_au({x},{y},{z})`                                       |                                                       |
 | `_between({parameter_1})_and({parameter_2})_exclusive()` |                                                       |
 | `_between({parameter_1})_and({parameter_2})`             |                                                       |
 | `_blob({blob_uuid})`                                     |                                                       |
 | `_for({parameter_1}[,... {parameter_n}])`                | Provides focus on `{parameter_1}` ... `{parameter_n)` |
 | `_fps({fps})`                                            |                                                       |
-| `_from({date|datetime|time})_to({date|datetime|time})`   |                                                       |
-| `_from({date|datetime|time})`                            |                                                       |
 | `_in({duration})`                                        |                                                       |
 | `_latency({latency})`                                    |                                                       |
 | `_locus({x},{y},{name/uuid})`                            |                                                       |
@@ -212,6 +284,53 @@ TAE40116_DEL_AT1_TP_v1_.pdf
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 , where {paramter_1} is expected to respond or 
 
 ask();			ask({uuid});					ask()_for({human_uuid});
@@ -253,4 +372,19 @@ call()_as({label})
 ```
 
 ## Navigation & Positioning
+
+```Deigo
+add_stat({moniker/uuid})
+with_stat({moniker/uuid})
+	
+begin_stat({moniker/uuid}) - end_stat()
+end_stat({moniker/uuid}) - begin_stat()
+exec_stat({moniker/uuid}) - bump
+call_stat({moniker/uuid})	- here_stat
+start_stat({moniker/uuid}) - stop_stat
+stop_stat({moniker/uuid})	- go_stat
+pause_stat({moniker/uuid})
+
+
+```
 

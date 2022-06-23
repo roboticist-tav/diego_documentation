@@ -1,4 +1,131 @@
-*[GNSS]: Global Navigation Satellite System
+# Tracker
+
+NOTE: tracking a parcel!
+
+The tracker object is used to track a moving position of a thingy in space using location and /or time.  There are four similar *tracking* objects for tracking thingies:
+
+| object                 | notes                                                        |
+| ---------------------- | ------------------------------------------------------------ |
+| `tracker`              | Tracks the moving position of a thingy in space using location and/or time. |
+| `locator`              | Tracks the moving position of a thingy in space using only location. |
+| `pulse`                | Tracks a thingy (or any yielding object) using only regular time. |
+| `calendar` or `tempus` | Tracks a thingy (or any yielding object) using irregular time. |
+
+## Construct
+
+```Diego
+add_tracker({moniker|uuid});
+with_tracker({moniker|uuid});
+begin_tracker({moniker|uuid}); ... end_tracker...
+```
+
+To create and develop the tracker object use `add_`, however, using `with_` the first time will initiate construction.  Similarly using `begin_ ..._end_` for the first time will also initiate construction, but this approach is not recommended.
+
+The `tracker` does not automatically run/start upon construction, you need to explicitly start the `tracker` with `run_`, `start_`, or, `exec_`.
+
+## Disposal
+
+```Diego
+dispose_tracker({moniker|uuid});
+dump_tracker({moniker|uuid});
+forget_tracker({moniker|uuid});
+```
+
+To dispose of a tracker from primal memory use `dispose_`, `dump_` or `forget_`.
+
+## Development
+
+```Diego
+with_tracker({moniker|uuid})
+	
+```
+
+
+
+## Control
+
+```
+run_tracker({name/uuid});		pause_tracker({name/uuid});		stop_tracker({name/uuid});
+start_tracker({name/uuid});		halt_tracker({name/uuid});
+go_tracker({name/uuid});		hold_tracker({name/uuid});
+```
+
+Various verbs are available to control a `tracker` as seen above.  When a `tracker` is paused or stopped no `trackpoint`s will yield
+
+The `tracker` object can be controlled (started, paused and stopped)
+
+Disposal
+
+## Event Trapping
+
+The `tracker` object can be event trapped with `begin_` and `end_`.
+
+```Diego
+begin_tracker({moniker|uuid});
+	...
+end_tracker({moniker|uuid});
+```
+## Options
+
+### Discriminatory Options
+
+The `tracker` object has the standard discrimnatory options: `_for`; `_between ... _to`; `_not`.
+
+### Tracker Specific
+
+There are various option available for the `tracker` object:
+
+| option                                            | notes                                                        |
+| ------------------------------------------------- | ------------------------------------------------------------ |
+| `_freq({frequency}[, {unit}])`                    | Reporting frequency of `trackpoint`s.  The `{unit}` can only be of distance.<br />The frequency and unit can be made default with `set_tracker()_freq({default_freuency});` and  `set_tracker()_unit({default_unit)});` respectively. |
+| `_lapat()` <br /> `_lapat({lap_value}[, {unit}])` |                                                              |
+| `_clepe({clepe_convention})`                      | The clepe (naming) convention used for children (`trackpoint`s).   Clepe conventions available: `cognomen` e.g. `{tracker_moniker}_1`, `{tracker_moniker}_2`...; `dtstamp` datetime stamp e.g. 2021-07-30T12:22:32Z (ISO 8601); `utstamp` unix time stamp; `latin`; `greek`; `roman`; `hex`.<br />Can be set with `set_tracker()_clepe({default_clepe_convention});` |
+| `_trackwidth({width})`                            | Width of track used to depict track on human display. Using css syntax:<br /> `medium` I `thin` I *`length`* I `initial` I `inherit` |
+| `_trackstyle({style})`                            | Style of track used to depict track on human display. Uses css cyntax, with an additions `breadcrumb` value:<br /> `none` I `hidden` I `dotted` I `dashed` I `solid` I `double` I `groove` I `ridge` I `breadcrumb` I `inset` I `outset` I `initial` I `inherit` |
+| `_trackcolour({colour})`                          | *`color`* I `transparent` I `initial` I `inherit`            |
+| `_trackcss({css})`                                | Uses *border-* css to style track.                           |
+|                                                   |                                                              |
+|                                                   |                                                              |
+| breadcrumbs !!!                                   |                                                              |
+|                                                   |                                                              |
+|                                                   |                                                              |
+|                                                   |                                                              |
+|                                                   |                                                              |
+
+### Funnels & Channels
+
+The 'tracker` object can be funnelled and channelled.  Commonly used funnels and channels are:
+
+| funnel/channel example     | notes                                                        |
+| -------------------------- | ------------------------------------------------------------ |
+| `_channel(ros2,NavSatFix)` | Channels `yield`s into ros2 messages using the `NatSatFix.msg` format.  Note blockchaining is not supported. |
+| `_channel(file,gpx)`       | Channels `yield`s into blob file(s) in gpx format.  Note blockchaining is provided. |
+| `_funnel(ros2,NavSatFix)`  | Funnels ros2 messages using the `NatSatFix.msg` format into  `ump`s.  Statistical (aggregate) collation is supported. |
+| `_funnel(file,gpx)`        | Funnels file(s) and/or blobc in gpx format into `yield`s.  Note blockchaining is provided. |
+|                            |                                                              |
+|                            |                                                              |
+|                            |                                                              |
+|                            |                                                              |
+|                            |                                                              |
+
+
+
+## Events
+
+| event                                                        | notes                                                    |
+| ------------------------------------------------------------ | -------------------------------------------------------- |
+| `yield_tracker({moniker|uuid})_trackpoint({moniker|uuid})_value({value}[, {unit{])` | The yield from the `tracker` to report the `trackpoint`. |
+| `begin_tracker({moniker|uuid})   ...   end_tracker({moniker|uuid})` | A `tracker` has a definable event trap                   |
+|                                                              |                                                          |
+
+
+
+| object    | dimension            |
+| --------- | -------------------- |
+| `tracker` | spatial              |
+| `pulse`   |                      |
+| `tempus`  | temporal and spatial |
+
 
 
 # tracker/pulse
@@ -148,18 +275,10 @@ subject
 
 
 
-### Creation:
-
-```Diego
-add_tracker({name/uuid});
-with_tracker({name/uuid});
-```
-
 ### Options:
 
 ```Diego
-	_freq({frequency}[, {unit}])
-	_lapat()		_lapat({lap_value}[, {unit}])
+	
 ```
 
 ### Setup:
@@ -205,9 +324,7 @@ add_metric({name/uuid}[, {unit}])
 ### Run:
 
 ```Diego
-run_tracker({name/uuid});		pause_tracker({name/uuid});		end_tracker({name/uuid});
-start_tracker({name/uuid});		halt_tracker({name/uuid});		stop_tracker({name/uuid});
-go_tracker({name/uuid});		hold_tracker({name/uuid});		stop_tracker({name/uuid});
+
 ```
 
 

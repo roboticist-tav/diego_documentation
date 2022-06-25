@@ -1,45 +1,67 @@
-# Lexicon
+# Lexicon (main)
 
-## Objects
+## Objects (nouns)
 
-| Verb         | Notes |
+| object         | notes |
 | ------------ | ----- |
 | `actuat`*`(or)`*| |
-| `blob`| |
+| `ai`      | 'Artificial Intelligence' is one of ten genera. |
+| `badge` | |
+| `birth` | |
+| `blob` | |
 | `calendar`| |
+| `cloud` | |
+| `comm` | |
+| `consensus` | |
+| `console` |       |
+| `coord`, `coordinates` | |
+| `decisiveness` | |
+| `fog` | |
+| `gate` |       |
+| `geometric` | |
+| `gnps` | **G**obal **N**avigation and **P**ositioning **S**ystem |
+| `human`   |       |
+| `id` | |
 | `instruct`| |
-| `label`| |
+| `label` | A human-readable string appened for one/many genera. |
+| `litsan` | '**L**ine **i**n **t**he **San**d' |
 | `litsan`| |
-| `marker`| |
+| `lnps` | **L**ocal **N**avigation and **P**ositioning **S**ystem |
+| `make` | |
+| `manufact` | |
+| `marker` |       |
 | `me` | *self*, Thingy from its own perspective |
-| `metric`| |
+| `metric` |       |
+| `mist` | |
+| `mobot`   |       |
+| `model` | |
+| `modelnum` | |
+| `name` | |
 | `neigh` | Neighbour | 
-| `point`| |
-| `poll`| |
-| `pulse`| |
-| `pulsepoint`| |
+| `object`  |       |
+| `organic` |       |
+| `path` |       |
+| `point` |       |
+| `poll`    |       |
+| `pulse`          |       |
+| `pulsepoint` |       |
+| `punkt` |       |
+| `ranking` | |
+| `robot`   |       |
 | `route` | |
 | `sensor`| |
+| `serialnum` | |
 | `snapshot`| |
-| `stat`| |
+| `stat` | |
+| `subject` |       |
 | `tempus`| |
+| `thing`   |       |
 | `tracker`| |
-| `trackpoint`| |
+| `trackpoint` |       |
 | `trigger`| |
 | `vidshot`| |
 | `waypoint`| |
 | `winner`| |
-| | |
-| | |
-| | |
-| | |
-| | |
-| | |
-| | |
-| | |
-| | |
-| | |
-| | |
 
 ### Unknown Thingies
 
@@ -62,10 +84,6 @@
 | `thing`   | An immobile *thingy* in the physical *'real'* world       |  fridge, television      |
 | `console` | A metaphysical presence used to only provide an interface to all other *thingies*      |       |
 
-
-
-
-
 ## Verbs
 
 | verb         | inverse        | notes |
@@ -73,9 +91,13 @@
 | `add_`    | `dispose_`, `dump_`,  `minus_` | Construction of an object      |
 | `ask_`    | `tell_` | Request for information      |
 | `back_` | `fetch_` | |
+| `begin_`| `end_` | |
 | `call_`    | `here_` or `pong_` | [roll]call request of existence      |
+| `declare_` |
 | `dispose_`, `dump_`,  `minus_` | `add_` | |
 | `dump_`, `dispose_`, `minus_` | `add_` | |
+| `end_`| `begin_` | |
+| `exec_`, `run_`| | |
 | `fetch_`    | `back_` |       |
 | `get_` | `set_` | Retrieve setting value |
 | `go_`, `start_` | `stop_`, (`halt_`, `pause_`) |       |
@@ -83,6 +105,7 @@
 | `hear_` | `listen_` | |
 | `here_`    | `call_` |       |
 | `hook_` | `unhook_` | |
+| `inform_` |
 | `kill_` | | |
 | `listen_`    | `hear_` |       |
 | `look_` | `see_` | |
@@ -91,6 +114,8 @@
 | `neigh_` | | |
 | `pause_`, `halt_` | (`go_`, `start_`), (`stop_`) | |
 | `pong_`    | `ping_` |       |
+| `inform_` |
+| `proclaim__` |
 | `rem_`    | `recall_` |       |
 | `see_`    | `look_` |       |
 | `set_`    | `get_` |       |
@@ -101,6 +126,20 @@
 |  `exec_`, `run_`| | |
 |  `begin_`| `end_` | |
 |  `end_`| `begin_` | |
+| `loop_`    |                |       |
+| `detect_`    |                |       |
+| `learn_` | | |
+| `study_` | | |
+| `label_`| | |
+| `keep_`| | |
+| `join_`| | |
+| `form_`  | | |
+| `request_`| | |
+| `deafon_`| | |
+| `discover_` | | |
+| `ident_`, `identify_` | | |
+| `tail_`| | |
+| `shell`| |
 
 
 
@@ -176,12 +215,19 @@ There are sevaral spatial/geo-spatal postposits available.
 
 
 
+## Positions
+
+| Position                                                 | Notes                                                 |
+| -------------------------------------------------------- | ----------------------------------------------------- |
+| `_at({date|datetime|time})`                              |                                                       |
 | `_au({x},{y},{z})`                                       |                                                       |
 | `_between({parameter_1})_and({parameter_2})_exclusive()` |                                                       |
 | `_between({parameter_1})_and({parameter_2})`             |                                                       |
 | `_blob({blob_uuid})`                                     |                                                       |
 | `_for({parameter_1}[,... {parameter_n}])`                | Provides focus on `{parameter_1}` ... `{parameter_n)` |
 | `_fps({fps})`                                            |                                                       |
+| `_from({date|datetime|time})_to({date|datetime|time})`   |                                                       |
+| `_from({date|datetime|time})`                            |                                                       |
 | `_in({duration})`                                        |                                                       |
 | `_latency({latency})`                                    |                                                       |
 | `_locus({x},{y},{name/uuid})`                            |                                                       |
@@ -278,60 +324,7 @@ ask()
 
 
 TAE40116_DEL_AT1_TP_v1_.pdf
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-, where {paramter_1} is expected to respond or 
+ where {paramter_1} is expected to respond or 
 
 ask();			ask({uuid});					ask()_for({human_uuid});
 ask_human();	call_human({human_uuid});		call_human()_for({human_uuid});
@@ -388,3 +381,17 @@ pause_stat({moniker/uuid})
 
 ```
 
+## System Commands
+
+|  system command | Notes  |
+|---|---|
+| `help()`  | Provides the online help utility menu on system command line |
+| 'modules"
+
+```Diego
+
+## Informant, Informing, Proclaiming
+
+`proclaim_`		By default a `proclaim_` will send out a proclamation without any delivery or receive receipt.
+`declare_`		By default a `declare_` will send out a declaration expecting a delivery receipt.
+`inform_`		By default a `inform_` will inform and except a delivery and receive receipt.

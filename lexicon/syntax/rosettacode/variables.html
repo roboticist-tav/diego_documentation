@@ -1,0 +1,173 @@
+<!-- https://rosettacode.org/wiki/Variables -->
+=={{header|Diego}}==
+===Declaration===
+Declaration of variables is required by the caller with the original source of the variable.  If a callee hears of a variable after a declaration, it can ask around or ask the caller for the declaration; ignore the variable and any instructions associated with it; or try to determine the context and/or the callers intentions. I suppose this depends upon the mood of the callee.
+
+<b>syntax:</b>
+
+Use <code>add_var</code> verb-action (short for 'add variable') or the <code>dim</code> action (short for 'dimension of'):
+
+<code>add_var(<i>variablename</i>);</code> or <code>dim(<i>variablename</i>);</code>
+
+...multiple variables can de declared in a comma separated list.
+<!-- <code>add_var(<i>variablename1</i>, <i>variablename2</i>, <i>variablename3</i>, <i>...</i>);</code> or <code>dim(<i>variablename1</i>, <i>variablename2</i>, <i>variablename3</i>, <i>...</i>);</code> -->
+
+With no datatype specified, the variables are of variant type (as in basic'esque languages).  Datatypes are specfied using the <code>_datatype_</code> posit (can be shortened to <code>_dt</code>):
+
+<code>add_var(<i>variablename</i>)_datatype(<i>datatype</i>);</code> or <code>dim(<i>variablename</i>)_dt(<i>datatype</i>);</code>
+<!-- <code>add_var(<i>variablename</i>)_dt(<i>datatype</i>);</code> or <code>dim(<i>variablename</i>)_datatype(<i>datatype</i>);</code> -->
+
+...or using the <code>{}</code> braces:
+
+<code>add_var({<i>datatype</i>}, <i>variablename</i>);</code> or <code>dim({<i>datatype</i>}, <i>variablename</i>);</code>
+<!-- <code>add_var({<i>datatype</i>}, <i>variablename1</i>, <i>variablename2</i>, <i>variablename3</i>, ...);</code> or <code>dim({<i>datatype</i>}, <i>variablename1</i>, <i>variablename2</i>, <i>variablename3</i>, <i>...</i>);</code>
+<code>add_var({<i>datatype</i>}, <i>variablename1</i>, {<i>datatype</i>}, <i>variablename2</i>, {<i>datatype</i>}, <i>variablename3</i>, <i>...</i>);</code> or <code>dim({<i>datatype</i>}, <i>variablename1</i>, {<i>datatype</i>}, <i>variablename2</i>, {<i>datatype</i>}, <i>variablename3</i>, ...);</code> -->
+
+<b>examples:</b>
+
+<lang diego>add_var(v1);
+dim(v1);
+add_var(v1, v2, v3, v4);
+dim(v1, v2, v3, v4);
+add_var(isRaining)_datatype(boolean);
+dim(isRaining)_datatype(boolean);
+add_var(greeting)_dt(string);
+dim(greeting)_dt(string);
+add_var({date}, birthdate);
+dim({date}, birthdate);</lang>
+
+===Initialisation===
+Variables that are not initialised are determined to be <code>null</code>. Initialisation of variables can exist at declaration (using <code>add_var</code> or <code>dim</code>) or after declaration (using <code>with_var</code>).  After declaration variables can be also referenced using <code>[]</code> brackets.  Then the <code>_value</code> (or shortened <code>_v</code>) posit is appended in syntax.  The first time the <code>_value</code> posit is used is the initialisation.
+
+<b>syntax:</b>
+
+<code>add_var<i>...</i>_value(<i>value</i>);</code>
+
+<code>dim<i>...</i>_v(<i>value</i>);</code>
+
+<code>[<i>variablename</i>]_value(<i>value</i>);</code>
+
+<b>examples:</b>
+
+Initialisation at declaration:
+<lang diego>add_var({integer}, wholeNumber1, wholeNumber2)_value(3);
+dim({double}, realNumber)_v(3.0);
+add_var({boolean}, isRaining)_v(false);
+add_var(greeting)_datatype(string)_value(Hello, this is World speaking.);</lang>
+
+Initialisation after declaration:
+<lang diego>with_var(birthdate)_value(24-Jun-1963);
+[myinteger]_value(33);</lang>
+
+Dynamic initialisation after declaration:
+<lang diego>with_var[datename]_value(24-Jun-1963);
+[[datename]]_v(24-Jun-1963);
+[[datename]]_v(24-Jun-[myYearVar]);</lang>
+
+===Assignment===
+Direct assignment of variables is achieved, as with the initialisation, using <code>_value</code> (or shortened <code>_v</code>) posit after the <code>with_var</code> verb-action or <code>[]</code> variable referencing brackets, as shown above.  Assignment of with other variables and operators can be achieved using the <code>_calc</code> (short for 'calculation')  or <code>_exp</code> (short for 'expression') posits.  Within the brackets of <code>_calc</code> and <code>_exp</code> the square brackets <code>[]</code> can be used to reference variables.
+
+<b>syntax:</b>
+
+<code>with_var(<i>variablename</i>)_calc(<i>expression/calculation</i>);</code>
+
+<code>[<i>variablename</i>]_exp(<i>expression/calculation</i>);</code>
+<!-- <code>[<i>variablename</i>]_calc(<i>expression/calculation</i>);
+<code>with_var(<i>variablename</i>)_exp(<i>expression/calculation</i>); -->
+
+<b>examples:</b>
+
+<lang diego>with_var(d)_calc([b]^2 - 4*[a]*[c]);
+[E]_calc([m] * [c]^2);
+with_var(d)_exp([b]^2 - 4*[a]*[c]);
+[E]_exp([m] * [c]^2);
+[fullname]_exp([firstname] & " " & [lastname]);
+[c]_calc(++);
+[c]_exp(+=[a]);</lang>
+
+Note, instead of using the <code>_calc</code> and <code>_exp</code> posits, all operators can be posits, for example:
+
+<lang diego>[E]_equals(m)_multipl(c)_sq();  // E=mc²
+[c]_inc();  // increment by one
+[c]_inc(a);  // same as [c]_exp(+=[a]);</lang>
+
+===Datatypes===
+Datatypes in Diego are only implied by name following the general-purpose datatypes proposed in ISO/IEC 11404.  The datatype given in Diego code is presumed to be the datatype of the caller.  The callee will have to presume the datatype name from the caller is the same datatype of the same name by the callee.
+
+<b>syntax:</b>
+
+The syntax of declaring datatypes is achieved using the <code>_datatype</code> (or shortened <code>_dt</code>) posit.
+
+<code>add_var<i>...</i>_datatype(<i>datatype</i>)<i>...</i></code>
+<!-- <code>add_var<i>...</i>_dt(<i>datatype</i>)<i>...</i></code> -->
+
+<!-- <code>dim<i>...</i>_datatype(<i>datatype</i>)<i>...</i></code> -->
+<code>dim<i>...</i>_dt(<i>datatype</i>)<i>...</i></code>
+    
+A further shortened use of the <code>{}</code> brackets can be used inside declarations<!-- and assignments-->. 
+
+<code>add_var({<i>datatype</i>}, <i>variablename</i>)<!-- _value(<i>value</i>) -->;</code>
+
+<code>dim({<i>datatype</i>}, <i>variablename</i>)<!-- _value(<i>value</i>) -->;</code>
+<!-- <code>add_var(<i>variablename</i>)_value({<i>datatype</i>}, <i>value</i>);</code>
+<code>dim(<i>variablename</i>)_value({<i>datatype</i>}, <i>value</i>);</code> -->
+
+<b>examples:</b>
+
+<lang diego>add_var(wholeNumber)_datatype(integer);
+dim({double}, myNumber)_v(3.0);
+with_var(wholenumber)_datatype(integer);
+[{boolean}, isRaining]_value(false);</lang>
+
+===Scope===
+Variable scope is generally described a "public and interpreted" in Diego, as all variables are shared amongst thingys (humans, robots, and mobots). Every variable is 'public access', so scope is only achieved through <b>discernment</b>, <b>swarmation</b>, and <b>discrimination</b>.  The keyword <code>me</code> (used as an verb-action, action, or, posit) is used to keep discernment of other thingys for use of the variable.  The use of objects or criteria is used to discriminate against/for humans/robots/mobots.  Then excluding objects (or using other criteria) is used to swarmate humans/robots/mobots.
+
+<b>For example:</b>
+
+<lang diego>add_var(greeting)_value(Hello World)_me();</lang>
+
+or
+
+<lang diego>with_me()_var(greeting)_value(Hello World);</lang>
+
+This command will share the variable <code>greeting</code> and its value with computers, but, the other computers that received this command will not act upon it because they know this variable is for the exclusive use of the caller (<code>me</code>).  This is <b>discernment</b>.
+
+However, the command...
+
+<lang diego>add_var(greeting)_value(Hello World);</lang>
+
+...will share <b>and use</b> the variable <code>greeting</code> and its value with all computers that received this command. This is swarmation.
+
+However, the command...
+
+<lang diego>add_var(greeting)_value(Hello World)_for()_computer(cmp1);</lang>
+
+...will share the variable <code>greeting</code> and its value with all computers that received this command, but only the computer named <code>cmp1</code> will use/act upon this variable. This is discrimination.
+<!--
+<lang diego>with_robot(alif)_msg(Hello World);</lang>
+
+...this command will display, via a media on <code>alif</code>'s choosing, the message "Hello World".  However,...
+
+<lang diego>with_robot()_msg(Hello World);</lang>
+
+...this command will display the message "Hello World" on every robot that receives the command.  However,...
+
+<lang diego>with_computer()_msg(Hello World);</lang>
+
+...this command will display the message "Hello World" on every computer that receives the command (but not any robots).  However,...
+
+<lang diego>with_computer()_os(windows)_msg(Hello World);</lang>
+
+...this command will display the message "Hello World" on every computer that is running Microsoft&reg; Windows&tm; that receives the command (but not any robots), and so on... -->
+
+Scope occurs within functions (<code>_funct</code> object in Diego) and instructions (<code>_instruct</code> object in Diego) using the same approach with scope with variables in the mist and cloud.
+
+===Referencing===
+Referencing variables is achieved using the verb-action <code>with_var</code>, or the shortened <code>[]</code> brackets. 
+
+<b>For example:</b>
+
+<lang diego>with_var(MyVar)_inc(2);
+[Myvar]_value(3);</lang>
+
+Inside <code>_calc</code> or <code>_exp</code> brackets the <code>[]</code> brackets are still used, and <code>""</code> are used to escape literals.

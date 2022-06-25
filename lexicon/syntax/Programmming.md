@@ -15,8 +15,36 @@ case_Robot(alif)_metric(airtemp) ?????;
 https://rosettacode.org/wiki/Variables
 
 
-// globally-scoped variable
-add_var(a)_value(0);
+
+
+
+
+Scope
+
+For globally-scoped variable (known as cloud scope)
+
+add_var(_variablename_)_toglobal();    // variant datatype
+add_var(_variablename_)_datatype(_datatype_)_toglobal();
+add_var({_datatype_}, _variablename_)_toglobal();
+
+// mist-scoped variable
+    // variant datatype
+add_var(_variablename_)_datatype(_datatype_);
+add_var({_datatype_}, _variablename_);
+
+// local-scoped variable (known as thingy scope)
+add_var(_variablename_)_me();    // variant datatype
+add_var(_variablename_)_datatype(_datatype_)_me();
+add_var({_datatype_}, _variablename_)_me();
+
+// Note variable names can be reused, the thingy will have to workout from context which variablename to use, or ask for clarification
+
+
+// Initialisation
+
+add_var(_variablename_)_value(_value_)
+
+add_var(a)_value(0)_datatype(_datatype_);
 
 // local-scoped variable
 add_var(b)_values(0)_me();

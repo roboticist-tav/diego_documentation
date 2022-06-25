@@ -1,6 +1,6 @@
 # The Persian Chain
 
-The persian chain is a baton movement of three agents on an infinite repeating loop.  To demonstrate this movement we are going to use three drones, a charging table, and, 10 waypoints.
+The persian chain is a baton movement of three agents on an infinite repeating loop.  Each   To demonstrate this movement we are going to use three drones, a charging table, and, 10 waypoints.
 
 ## Namespace
 
@@ -104,8 +104,8 @@ In the Persian Chain Movement the active agent scouts around the route from a st
 begin_instruct(activate_agent)_for(active_agent);
 
     with_robot(active_agent)_gorosary(perimeter_cc)_startat(active_startpoint)_endat(active_endpoint)
-            | with_robot(active_agent)_atrosary(active_endpoint)_change(--)
-                ? exec_instruct(start_persian_chain)_for(loiterer) : wtf()
+        | with_robot(active_agent)_atrosary(active_endpoint)_change(--)
+            ? exec_instruct(start_persian_chain)_for(loiterer) : wtf()
         ? exec_instruct(loiterise_agent)_for(active_agent) ? : wtf()
         : wtf();
 

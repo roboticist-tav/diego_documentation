@@ -98,7 +98,7 @@
 | `cmd` | description<hr>`examples` | API |
 |--|:--|---|
 | `with_funct()`<a name="with_funct"></a><br>`[]`<br>`with_function()` | Assignment of a `funct`.<br>See also: [`begin_funct`](#begin_funct)<hr>`with_funct({{int},add)_arg(a,b)`<br>&nbsp;&nbsp;&nbsp;&nbsp;`[]_ret()_calc([a]+[b]);`<br>`;` | [`funct`](/function.md) |
-| `with_instruct` <a name="with_instruct"></a><br>`with_instruction`<br>`witn_instructor` | Assignment of an `instruct`.<br>See also: [`begin_instruct`](#begin_instruct)<hr>`with_instruct(move robot forward)`<br>&nbsp;&nbsp;&nbsp;&nbsp;`...`<br>`;` | [`instruct`](/instruction.md) |
+| `with_instruct` <a name="with_instruct"></a><br>`with_instruction`<br>`witn_instructor` | Assignment of an instruction.<br>See also: [`begin_instruct`](#begin_instruct)<hr>`with_instruct(move robot forward)`<br>&nbsp;&nbsp;&nbsp;&nbsp;`...`<br>`;` | [`instruct`](/instruction.md) |
 
 
 

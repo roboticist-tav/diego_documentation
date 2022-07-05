@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html class="writer-html4" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ident &mdash; diego-docs 1.0 documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+        <script type="text/javascript">mermaid.initialize({startOnLoad:true});</script>
+        <script type="text/javascript" src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+        <script type="text/javascript">mermaid.initialize({startOnLoad:true});</script>
+        <script type="text/javascript" src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+        <script type="text/javascript">mermaid.initialize({startOnLoad:true});</script>
+        <script type="text/javascript" src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+        <script type="text/javascript">mermaid.initialize({startOnLoad:true});</script>
+        <script type="text/javascript" src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+        <script type="text/javascript">mermaid.initialize({startOnLoad:true});</script>
+        <script type="text/javascript" src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+        <script type="text/javascript">mermaid.initialize({startOnLoad:true});</script>
+        <script type="text/javascript" src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+        <script type="text/javascript">mermaid.initialize({startOnLoad:true});</script>
+        <script type="text/javascript" src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+        <script type="text/javascript">mermaid.initialize({startOnLoad:true});</script>
+        <script type="text/javascript" src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+        <script type="text/javascript">mermaid.initialize({startOnLoad:true});</script>
+        <script type="text/javascript" src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+        <script type="text/javascript">mermaid.initialize({startOnLoad:true});</script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> diego-docs
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">Diego Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../syntax.html">Language Syntax</a></li>
+<li class="toctree-l1"><a class="reference internal" href="_topicindex.html">Topological Physic Object Index</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">diego-docs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Ident</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/physic/ident.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="ident">
+<h1>Ident<a class="headerlink" href="#ident" title="Permalink to this headline">¶</a></h1>
+<p>The <code class="docutils literal notranslate"><span class="pre">Ident</span></code> object exposes the identity interface for most all objects, giving identity information in response to any requests such as <code class="docutils literal notranslate"><span class="pre">_ask</span></code>. All it’s posits are automatically promoted, so the <code class="docutils literal notranslate"><span class="pre">_ident</span></code> (and shortened <code class="docutils literal notranslate"><span class="pre">_id</span></code>) posit can be ignored.</p>
+<div class="section" id="syntax">
+<h2>Syntax<a class="headerlink" href="#syntax" title="Permalink to this headline">¶</a></h2>
+<p>Declaration only requires <em><code class="docutils literal notranslate"><span class="pre">moniker</span></code></em> as the minimum, all the other arguments are optional by ordered:</p>
+<p>Get:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="docutils literal notranslate"><span class="pre">_ident();</span></code><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="docutils literal notranslate"><span class="pre">_id();</span></code><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="docutils literal notranslate"><span class="pre">_id()_value();</span></code><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="docutils literal notranslate"><span class="pre">_id()_tovar(</span></code><em><code class="docutils literal notranslate"><span class="pre">variablename</span></code></em><code class="docutils literal notranslate"><span class="pre">);</span></code><br>
+Set:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="docutils literal notranslate"><span class="pre">_ident(</span></code><em><code class="docutils literal notranslate"><span class="pre">manufacturer</span></code></em><code class="docutils literal notranslate"><span class="pre">);</span></code><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="docutils literal notranslate"><span class="pre">_id(</span></code><em><code class="docutils literal notranslate"><span class="pre">manufacturer</span></code></em><code class="docutils literal notranslate"><span class="pre">);</span></code><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="docutils literal notranslate"><span class="pre">_id(</span></code><em><code class="docutils literal notranslate"><span class="pre">manufacturer</span></code></em><code class="docutils literal notranslate"><span class="pre">,</span></code><em><code class="docutils literal notranslate"><span class="pre">model</span></code></em><code class="docutils literal notranslate"><span class="pre">);</span></code><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="docutils literal notranslate"><span class="pre">_id(</span></code><em><code class="docutils literal notranslate"><span class="pre">manufacturer</span></code></em><code class="docutils literal notranslate"><span class="pre">,</span></code><em><code class="docutils literal notranslate"><span class="pre">model</span></code></em><code class="docutils literal notranslate"><span class="pre">,</span></code><em><code class="docutils literal notranslate"><span class="pre">badge</span></code></em><code class="docutils literal notranslate"><span class="pre">);</span></code><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="docutils literal notranslate"><span class="pre">_id(</span></code><em><code class="docutils literal notranslate"><span class="pre">manufacturer</span></code></em><code class="docutils literal notranslate"><span class="pre">,</span></code><em><code class="docutils literal notranslate"><span class="pre">model</span></code></em><code class="docutils literal notranslate"><span class="pre">,</span></code><em><code class="docutils literal notranslate"><span class="pre">badge</span></code></em><code class="docutils literal notranslate"><span class="pre">,</span></code><em><code class="docutils literal notranslate"><span class="pre">serialnumber</span></code></em><code class="docutils literal notranslate"><span class="pre">);</span></code><br></p>
+<p>Common <code class="docutils literal notranslate"><span class="pre">_dent</span></code>s posits are automatically promoted, so the <code class="docutils literal notranslate"><span class="pre">_ident</span></code> (and shortened <code class="docutils literal notranslate"><span class="pre">_id</span></code>) posit can be ignored.</p>
+<p>Get:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="docutils literal notranslate"><span class="pre">_manufacturer();</span></code><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="docutils literal notranslate"><span class="pre">_manufact()_value();</span></code><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="docutils literal notranslate"><span class="pre">_manufact()_tovar(</span></code><em><code class="docutils literal notranslate"><span class="pre">variablename</span></code></em><code class="docutils literal notranslate"><span class="pre">);</span></code><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="docutils literal notranslate"><span class="pre">_model();</span></code><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="docutils literal notranslate"><span class="pre">_model()_value();</span></code><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="docutils literal notranslate"><span class="pre">_model()_tovar(</span></code><em><code class="docutils literal notranslate"><span class="pre">variablename</span></code></em><code class="docutils literal notranslate"><span class="pre">);</span></code><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="docutils literal notranslate"><span class="pre">_badge();</span></code><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="docutils literal notranslate"><span class="pre">_badge()_value();</span></code><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="docutils literal notranslate"><span class="pre">_badge()_tovar(</span></code><em><code class="docutils literal notranslate"><span class="pre">variablename</span></code></em><code class="docutils literal notranslate"><span class="pre">);</span></code><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="docutils literal notranslate"><span class="pre">_serialnumber();</span></code><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="docutils literal notranslate"><span class="pre">_sernum()_value();</span></code><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="docutils literal notranslate"><span class="pre">_sernum()_tovar(</span></code><em><code class="docutils literal notranslate"><span class="pre">variablename</span></code></em><code class="docutils literal notranslate"><span class="pre">);</span></code><br>
+Set:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="docutils literal notranslate"><span class="pre">_manufacturer(</span></code><em><code class="docutils literal notranslate"><span class="pre">manufacturer</span></code></em><code class="docutils literal notranslate"><span class="pre">);</span></code><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="docutils literal notranslate"><span class="pre">_manufact()_value(</span></code><em><code class="docutils literal notranslate"><span class="pre">manufacturer</span></code></em><code class="docutils literal notranslate"><span class="pre">);</span></code><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="docutils literal notranslate"><span class="pre">_model(</span></code><em><code class="docutils literal notranslate"><span class="pre">model</span></code></em><code class="docutils literal notranslate"><span class="pre">);</span></code><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="docutils literal notranslate"><span class="pre">_model()_value(</span></code><em><code class="docutils literal notranslate"><span class="pre">model</span></code></em><code class="docutils literal notranslate"><span class="pre">);</span></code><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="docutils literal notranslate"><span class="pre">_badge(</span></code><em><code class="docutils literal notranslate"><span class="pre">badge</span></code></em><code class="docutils literal notranslate"><span class="pre">);</span></code><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="docutils literal notranslate"><span class="pre">_badge()_value(</span></code><em><code class="docutils literal notranslate"><span class="pre">badge</span></code></em><code class="docutils literal notranslate"><span class="pre">);</span></code><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="docutils literal notranslate"><span class="pre">_serialnumber(</span></code><em><code class="docutils literal notranslate"><span class="pre">serialnumber</span></code></em><code class="docutils literal notranslate"><span class="pre">);</span></code><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="docutils literal notranslate"><span class="pre">_sernum()_value(</span></code><em><code class="docutils literal notranslate"><span class="pre">serialnumber</span></code></em><code class="docutils literal notranslate"><span class="pre">);</span></code><br></p>
+<p>Uncommon posits require the <code class="docutils literal notranslate"><span class="pre">_ident</span></code> (or <code class="docutils literal notranslate"><span class="pre">_id</span></code>) posits. The <code class="docutils literal notranslate"><span class="pre">moniker</span></code>, and, <code class="docutils literal notranslate"><span class="pre">nickname</span></code> are all the <code class="docutils literal notranslate"><span class="pre">moniker</span></code> of the thingy passed through, as read-only. All uncommon posits for <code class="docutils literal notranslate"><span class="pre">_ident</span></code> (or <code class="docutils literal notranslate"><span class="pre">_id</span></code>) are read-write-by-me:</p>
+<p>Get:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="docutils literal notranslate"><span class="pre">_ident()_moniker();</span></code><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="docutils literal notranslate"><span class="pre">_id()_name();</span></code><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="docutils literal notranslate"><span class="pre">_id()_nickname();</span></code><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="docutils literal notranslate"><span class="pre">_id()_species();</span></code><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="docutils literal notranslate"><span class="pre">_id()_species()_value();</span></code><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="docutils literal notranslate"><span class="pre">_id()_species()_tovar(</span></code><em><code class="docutils literal notranslate"><span class="pre">variablename</span></code></em><code class="docutils literal notranslate"><span class="pre">);</span></code><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="docutils literal notranslate"><span class="pre">_id()_version();</span></code><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="docutils literal notranslate"><span class="pre">_id()_version()_value();</span></code><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="docutils literal notranslate"><span class="pre">_id()_version()_tovar(</span></code><em><code class="docutils literal notranslate"><span class="pre">variablename</span></code></em><code class="docutils literal notranslate"><span class="pre">);</span></code><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="docutils literal notranslate"><span class="pre">_id()_softwarerelease();</span></code><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="docutils literal notranslate"><span class="pre">_id()_softrel()_value();</span></code><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="docutils literal notranslate"><span class="pre">_id()_softrel()_tovar(</span></code><em><code class="docutils literal notranslate"><span class="pre">variablename</span></code></em><code class="docutils literal notranslate"><span class="pre">);</span></code><br>
+Set:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="docutils literal notranslate"><span class="pre">_id()_name(</span></code><em><code class="docutils literal notranslate"><span class="pre">name</span></code></em><code class="docutils literal notranslate"><span class="pre">);</span></code><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="docutils literal notranslate"><span class="pre">_id()_name()_value(</span></code><em><code class="docutils literal notranslate"><span class="pre">name</span></code></em><code class="docutils literal notranslate"><span class="pre">);</span></code><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="docutils literal notranslate"><span class="pre">_id()_name([</span></code><em><code class="docutils literal notranslate"><span class="pre">variablename</span></code></em><code class="docutils literal notranslate"><span class="pre">]);</span></code><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="docutils literal notranslate"><span class="pre">_id()_species(</span></code><em><code class="docutils literal notranslate"><span class="pre">species</span></code></em><code class="docutils literal notranslate"><span class="pre">);</span></code><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="docutils literal notranslate"><span class="pre">_id()_species()_value(</span></code><em><code class="docutils literal notranslate"><span class="pre">species</span></code></em><code class="docutils literal notranslate"><span class="pre">);</span></code><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="docutils literal notranslate"><span class="pre">_id()_species([</span></code><em><code class="docutils literal notranslate"><span class="pre">variablename</span></code></em><code class="docutils literal notranslate"><span class="pre">]);</span></code><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="docutils literal notranslate"><span class="pre">_id()_version(</span></code><em><code class="docutils literal notranslate"><span class="pre">version</span></code></em><code class="docutils literal notranslate"><span class="pre">);</span></code><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="docutils literal notranslate"><span class="pre">_id()_version()_value(</span></code><em><code class="docutils literal notranslate"><span class="pre">version</span></code></em><code class="docutils literal notranslate"><span class="pre">);</span></code><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="docutils literal notranslate"><span class="pre">_id()_version([</span></code><em><code class="docutils literal notranslate"><span class="pre">variablename</span></code></em><code class="docutils literal notranslate"><span class="pre">]);</span></code><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="docutils literal notranslate"><span class="pre">_id()_softwarerelease(</span></code><em><code class="docutils literal notranslate"><span class="pre">_softwarerelease</span></code></em><code class="docutils literal notranslate"><span class="pre">);</span></code><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="docutils literal notranslate"><span class="pre">_id()_softrel()_value(</span></code><em><code class="docutils literal notranslate"><span class="pre">_softwarerelease</span></code></em><code class="docutils literal notranslate"><span class="pre">);</span></code><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="docutils literal notranslate"><span class="pre">_id()_softrel([</span></code><em><code class="docutils literal notranslate"><span class="pre">variablename</span></code></em><code class="docutils literal notranslate"><span class="pre">]);</span></code><br></p>
+</div>
+<div class="section" id="example">
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
+<!-- https://dev.bostondynamics.com/protos/bosdyn/api/proto_reference#robot-id-proto --><p>In this example, in the mist is robot <code class="docutils literal notranslate"><span class="pre">rex</span></code>, a Boston Dynamics spot robot.  We will ask <code class="docutils literal notranslate"><span class="pre">rex</span></code> to identify itself:</p>
+<div class="highlight-diego notranslate"><div class="highlight"><pre><span></span>ask_robot(rex)_ident();
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">rex</span></code> responds as such:</p>
+<div class="highlight-diego notranslate"><div class="highlight"><pre><span></span>tell_human(diego)_moniker(rex)_ident(Boston Dynamics,spot,spot,d349-7273-32e2)_name(20190601)_nickname(rex)_species(spot)_version(2.0.1)_softrel(2.0.1);
+</pre></div>
+</div>
+<p>To see a human-friendly version:</p>
+<div class="highlight-diego notranslate"><div class="highlight"><pre><span></span>me_msg()_robot(rex)_ident();
+</pre></div>
+</div>
+<p>The output:</p>
+<pre>manufact=Boston Dynamics
+make=spot
+model=spot
+serialnumber=d349-7273-32e2
+badge=spot
+name=20190601
+nickname=rex
+sofrel=2.0.1
+species=spot
+version=2.0.1</pre></div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Diego.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -26,41 +26,11 @@ An topological index of all objects (at `thing` / `thingy` / `thingette` levels)
 | 'you' ||
 
 
-## Unknown/Unidentified Thingies
+## Scope
 
-| unknown thingy     | notes<brexamples | API |
+| scope     | notes<brexamples | API |
 | --------- | ----- | ----- |
-| `ob`  | A civilian^1^ immobile *thingy* in the  physical *'real'* world       | lampost, bush, chair |
-| `sub` | A civilian^1^ mobile *thingy* in the  physical *'real'* world       | *unidentified moving animal*, *unidentified flying object*  |
-^1^: A civilian is a *thingy* with (or presumed to be with) no Diego interface
-
-## Grouping & Missions
-
-| grouping/missions     | notes<brexamples | API |
-| --------- | ----- | ----- |
-| `namespace` |
-| `mission` |
-
-
-## Naming & Labeling
-
-| name/label    | notes<brexamples | API |
-| --------- | ----- | ----- |
-| `sobriquet` one each thingy can have one `sobriquet` with verb `_sobri()`
-| `label` any thingy can have any number of labels
-| `moniker` unique one moniker to one thingy
-| `cognomen`
-| `clepe`
-
-## <a name="puff"></a> Puffs
-
-| puffs     | notes<brexamples | API |
-| --------- | ----- | ----- |
-| `channel` | | An exclusive sub-section of a `workspace`, sometimes referred to as a _conversation_ |
-| `cloud`   | A zone (`puff`) used for diego communication that utilises a cloud based platform like twitter, discord, slack, _etc._ |
-| `fog`     | A zone (`puff`) used for diego communication that relies on UDP | |
-| `mist`    | A zone (`puff`) used for diego communication that relies on TCP | |
-| `workspace` | An exclusive section of a `puff`, sometimes called a _room_ |
+ `mission` |
 
 ## <a name="geospatial"></a> Geospatial
 
@@ -90,26 +60,6 @@ An topological index of all objects (at `thing` / `thingy` / `thingette` levels)
 | `wall` | | [wall](/wall.md) |
 | `zone` | The thing version of an `arena` |
 | `rosary` |
-
-## <a name="datamgt"></a> Data Management
-
-| data management | notes<br>examples | API |
-|--|:--|--|
-| `attr`, `attribute` <a name="arena"></a> | Each `attr` is a immutable name-value pair (`{monniker|uuid}` as the name, `_value({value})` as the value). All data held in an `attr` should be immutable and have a one-to-one relationship (one name for one value).<br>Example: `add_attr(last_name)_value(Jones);` <br>See also: [spec](#spec) | [attr](/attr.md) |
-| `blob` <a name="blob"></a> | **B**inary **L**arge **OB**ject |
-| `var`, `variable` | | [var](/var.md) |
-| `dict`, `dictionary` | | |
-| `metric` | | [metric](/metric.md) |
-| `scalar`
-| `array`
-| 
-
-https://arxiv.org/pdf/1906.10641.pdf mavlink
-https://docs.wpilib.org/en/stable/docs/romi-robot/index.html
-https://www.bigocheatsheet.com/
-
-
-
 
 ## <a name="organs"></a> Thing Composition (Organ / Components / Devices)
 
@@ -198,35 +148,7 @@ https://www.bigocheatsheet.com/
 | `link` |||
 | `transmiss`, `transmission` |||
 
-## <a name="datacomm"></a> Data Communication Management
 
-| time management | notes<br>examples | API |
-|--|:--|--|
-| `funnel` | | |
-| `lennuf` | | |
-
-
-## <a name="timemgt"></a> Time Management
-
-| time management | notes<br>examples | API |
-|--|:--|--|
-| `calendar` <a name="calendar"></a> | | [cal](/cal.md) |
-
-## <a name="move"></a> Movement & Formation
-
-| movement | notes<br>examples | API |
-|--|:--|--|
-| `form`, `formation` | | [form](/form.md) |
-| `gait` | The thing version of `stride` | [gait](/gait.md) |
-| `ghost` |  | [ghost](/ghost.md) |
-| `stride` | The human version of `gait` | [stride](/stride.md) |
-| `stance` | | [stance](/stance.md) |
-| `swarm` | | [swarm](/swarm.md) |
-
-## <a name="id"></a> Identification
-
-| identification | notes<br>examples | API |
-|--|:--|--|
 
 ## <a name="comm"></a> Commuincation
 

@@ -2,7 +2,7 @@
 
 ## Simple Command
 
-Diego is a very structured instructional language and follows a strict syntax.  It is also executes commands synchronously by the terminator `;` keysymbol.  The common and most simplified command syntax is:
+  It is also executes commands synchronously by the terminator `;` keysymbol.  The common and most simplified command syntax is:
 ```Diego
 {verb}_{object}({moniker|uuid});
 ```
@@ -77,17 +77,18 @@ Commands can be nested to the *n*th level, however, for ease-of-reading it is re
                                 : {nested oh_diego-oh_diego-oh_diego command};
 
 {go_diego command} ? {hey_diego command}
-                            ? {nested hey_diego-hey_diego command}
-                            : {nested hey_diego-oh_diego command}
-                   : {oh_diego command}
-                            ? {nested oh_diego-hey_diego command}
-                            : {nested oh_diego-oh_diego command}
-                   | {sibling hey_diego command}
-                            ? {nested sibling hey_diego-hey_diego command}
-                            : {nested sibling hey_diego-oh_diego command}
-                   : {sibling oh_diego command}
-                            ? {nested sibling oh_diego-hey_diego command}
-                            : {nested sibling oh_diego-oh_diego command};
+                    ? {nested hey_diego-hey_diego command}
+                    : {nested hey_diego-oh_diego command}
+            : {oh_diego command}
+                    ? {nested oh_diego-hey_diego command}
+                    : {nested oh_diego-oh_diego command}
+            | {sibling hey_diego command}
+                    ? {nested sibling hey_diego-hey_diego command}
+                    : {nested sibling hey_diego-oh_diego command}
+            : {sibling oh_diego command}
+                    ? {nested sibling oh_diego-hey_diego command}
+                    : {nested sibling oh_diego-oh_diego command};
+;
 
 {go_diego command} ? {instruct} : {instruct};
 ```

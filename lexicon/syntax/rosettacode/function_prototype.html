@@ -14,33 +14,33 @@ with_funct(foo);                            // function as a 'method' with no ar
 begin_funct(goo)_arg({string}, str1, str2); // two arguments, no return type
 end_funct[];                                // derived name of function using [], like 'this'
 
-with_funct(goo)_arg({str}, str1, str2);     // two arguments, no return type
+with_funct(goo)_arg({str}, {}, str1, str2);     // two arguments, no return type
 with_funct(hoo)_param({integer}, i, j);     // 'param' posit can be used instead of 'arg'
 
 // A prototype declaration for a function that utilizes varargs
 
-begin_funct(voo)_arg({int}, [vararg], v);   // variable number of arguments, no return type, 'int' can be used instead of 'integer'
+begin_funct(voo)_arg({int}[vararg], v);   // variable number of arguments, no return type, 'int' can be used instead of 'integer'
 end_funct[];
 
-begin_funct({int}, voo)_arg({int}, ..., v);   // variable number of arguments, with return type
-    add_var({int}, sum)_v(0);
+begin_funct({int}voo)_arg({int}..., v);   // variable number of arguments, with return type
+    add_var({int}sum)_v(0);
     forall_var(v)_calc([sum]+=[v]);
     [voo]_ret([sum]);
 end_funct[];
 
 // A prototype declaration for a function that utilizes optional arguments
         
-begin_funct({int}, ooo)_arg(o)_value(1);   // optional argument with default value and return type integer
+begin_funct({int}ooo)_arg(o)_value(1);   // optional argument with default value and return type integer
     with_funct(ooo)_return([o]);           // Can be shortened to [ooo]_ret([0]);
 end_funct[];
 
-begin_funct({int}, oxo)_arg(o,u,v)_opt(u)_value(1); // optional argument of second argument with default value and return type integer
+begin_funct({int}oxo)_arg(o,u,v)_opt(u)_value(1); // optional argument of second argument with default value and return type integer
     [ooo]_ret(1);                               // the execution has to name arguments or missing in comma-separated list of arguments
 end_funct[];   
 
 // A prototype declaration for a function that utilizes named parameters
 
-begin_funct({int}, poo)_param({int}, a, b, c); // to enforce named parameters '_param' posit can be used.
+begin_funct({int}poo)_param({int}a, b, c); // to enforce named parameters '_param' posit can be used.
     [poo]_ret([a]+[b]+[c]);                    
 end_funct[];
 

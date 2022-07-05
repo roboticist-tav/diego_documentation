@@ -1,0 +1,59 @@
+<!-- https://rosettacode.org/wiki/Collections -->
+=={{header|Diego}}==
+Diego operates in the real and abstract world.  In the real world, collections exist as scalars, vectors, abilities, specifications, inventories, and, non-fungible tokens:
+<lang diego>use_namespace(rosettacode)_me();
+
+// Real world collections
+with_route(wp1-wp2)_scalar(wp1wp2Distance)_distan({m},32);      // simple distance scalar
+
+// Three dimensional vector (displacement - orientation (via quaternion) - energy consumption)
+with_route(from-wp1-to-wp2)_vector(wp1Towp2Displacement)_distan({m},32)_orientatout(0.98,0.174i,0.044j,0.087k)_ergconsump({kJ},35.483);
+
+with_robot(alif)_sensor(frontCamera)_type(camera_3d);     
+with_robot(alif)_abilit(frontalVision)_of[frontCamera];  // ability (1-dimensional)
+with_robot(alif)_sensor(rearCamera)_type(camera_3d);
+with_robot(alif)_spec(vision)_of([frontCamera],[rearCamera]);  // specification (2-dimensional)
+
+// Inventory of wheels of robot 'alif'
+with_robot(alif)_invent(wheels)_compon(frontLeftWheel, frontRightWheel, rearLeftWheel, rearRightWheel)_type(wheel);
+
+// Non-fungible token (blockchained) of robot photo (default ledger)
+with_robot(beh)_camera(frontCamera)_snap(74827222-32232-22)
+    add_nft()_[]_chain(block);
+;
+
+// Non-fungible token (crosschained) of robot photo (default ledger)
+with_robot(beh)_camera(frontCamera)_snap(74827222-32232-42)
+    add_nft()_[]_chain(cross);
+;
+
+reset_ns[];</lang>
+
+In the abstract world, collections exist as variables, stacks, queues, arrays, matricies, clumps, lists, dictionaries, and, hashes:
+<lang diego>use_namespace(rosettacode)_me();
+
+// Abstract world collections
+add_var({int}wp1wp2Distance)_value(32);     // variable
+add_stack({int}intStack)_values(1,2,3,6,7,9);  // stack
+add_queue({double}intStack)_values(0.03,0.04,0.05,0.06,0.07,0.08);  // queue
+add_ary({str}citrusFruit)_values(lime,orange,lemon);   // array
+add_matrix()_subs(4,4)_identity();    // simple identity matrix
+
+// rotation matrix
+add_matrix(wp1Towp2DisplacementRotationMatrix)_row(0.981,-0.155,0.116)_row(0.186,0.924,-0.333)_row(-0.055,0.349,0.936);
+
+add_clump()_subs(5,3,2,1);  // simple clump (zero'ed)
+
+// list (of robots) from abstract robot objects
+add_list({robot},robots)_values([alif],[bah],[tah],[thah],[jim]);   
+
+// list (of robots) from SQL query
+add_list({robot},robots)_sql(SELECT id, name, type FROM tbl_robot)_as(dba_admin);
+
+// dictionary
+add_dict(tanzanianBanknoteWidths)_keys(500,1000,2000,5000,10000)_values(120,125,130,135,140);
+
+// hash of two images loaded from URIs
+add_hash()_ary()_values()_img()_load(/img_027454322.jpg)_img()_load(/img_027454323.jpg);
+
+reset_ns[];</lang>

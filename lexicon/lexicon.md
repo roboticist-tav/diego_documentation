@@ -221,13 +221,15 @@ There are sevaral spatial/geo-spatal postposits available.
 | -------------------------------------------------------- | ----------------------------------------------------- |
 | `_at({date|datetime|time})`                              |                                                       |
 | `_au({x},{y},{z})`                                       |                                                       |
-| `_between({parameter_1})_and({parameter_2})_exclusive()` |                                                       |
+| `_between({parameter_1})_and({parameter_2})_inclusive_()`
+or _range({parameter_1})_and({parameter_2}) |                                                       |
 | `_between({parameter_1})_and({parameter_2})`             |                                                       |
 | `_blob({blob_uuid})`                                     |                                                       |
 | `_for({parameter_1}[,... {parameter_n}])`                | Provides focus on `{parameter_1}` ... `{parameter_n)` |
 | `_fps({fps})`                                            |                                                       |
 | `_from({date|datetime|time})_to({date|datetime|time})`   |                                                       |
-| `_from({date|datetime|time})`                            |                                                       |
+| `_from({date|datetime|time})`
+`_upto({date|datetime|time})`                         |                                                       |
 | `_in({duration})`                                        |                                                       |
 | `_latency({latency})`                                    |                                                       |
 | `_locus({x},{y},{name/uuid})`                            |                                                       |

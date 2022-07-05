@@ -7,7 +7,7 @@ set_base(0);
 add_array(myEmptyArray);
 
 // Create a new dynamic array with length zero, of integers with no mixed datatypes
-add_array({int}, myIntegerArray);
+add_array({int}myIntegerArray);
  
 // Create a new fixed-length array with length 5
 add_array(myFiveArray)_len(5)_base(0);   // The value base '_base(0)' is usually defaulted to zero, depends upon thing. 
@@ -67,7 +67,7 @@ set_handrule(right);           // set hand-rule, most things will use right hand
 add_matrix(myMatrix)_dim(2);
 
 // Create a new dynamic three-dimensional array with length zero, of integers with no mixed datatypes
-add_matrix({int}, my3DEmptyMatrix)_dim(3);
+add_matrix({int}my3DEmptyMatrix)_dim(3);
  
 // Convert an array to a matrix by adding a new dimension with length zero, variant and/or mixed datatypes
 with_array(MyConvertedArray)_dim();    // Should now use '_matrix' object rather than '_array'
@@ -82,7 +82,7 @@ add_matrix(myMatrix)_rows(5)_columns(4)_subs(6)_subs(8);
 add_mat(myMatrix)_subs(5, 4, 6, 8);  // check or set major order first, '_matrix' can be shortened to 'mat'
 
 // Create a 4 x 4 identiy matrix:
-add_mat(myIdentityMatrix)_subs(4, 4)_identity;    // ...or...
+add_mat(myIdentityMatrix)_subs(4, 4)_identity();    // ...or...
 
 add_mat(myMorphedMatrix)_subs(4, 4)
 with_mat(myMorphedMatrix)_trans(morph)_identity();   // More transformations available

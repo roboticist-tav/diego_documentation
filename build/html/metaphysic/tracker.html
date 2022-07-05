@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html class="writer-html4" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tracker &mdash; diego-docs 1.0 documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+        <script type="text/javascript">mermaid.initialize({startOnLoad:true});</script>
+        <script type="text/javascript" src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+        <script type="text/javascript">mermaid.initialize({startOnLoad:true});</script>
+        <script type="text/javascript" src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+        <script type="text/javascript">mermaid.initialize({startOnLoad:true});</script>
+        <script type="text/javascript" src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+        <script type="text/javascript">mermaid.initialize({startOnLoad:true});</script>
+        <script type="text/javascript" src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+        <script type="text/javascript">mermaid.initialize({startOnLoad:true});</script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> diego-docs
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">Diego Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../syntax.html">Language Syntax</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physic/_topicindex.html">Topological Physic Object Index</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">diego-docs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Tracker</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/metaphysic/tracker.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="tracker">
+<h1>Tracker<a class="headerlink" href="#tracker" title="Permalink to this headline">¶</a></h1>
+<p>NOTE: tracking a parcel!</p>
+<p>The tracker object is used to track a moving position of a thingy in space using location and /or time.  There are four similar <em>tracking</em> objects for tracking thingies:</p>
+<p>| object                 | notes                                                        |
+| ———————- | ———————————————————— |
+| <code class="docutils literal notranslate"><span class="pre">tracker</span></code>              | Tracks the moving position of a thingy in space using location and/or time. |
+| <code class="docutils literal notranslate"><span class="pre">locator</span></code>              | Tracks the moving position of a thingy in space using only location. |
+| <code class="docutils literal notranslate"><span class="pre">pulse</span></code>                | Tracks a thingy (or any yielding object) using only regular time. |
+| <code class="docutils literal notranslate"><span class="pre">calendar</span></code> or <code class="docutils literal notranslate"><span class="pre">tempus</span></code> | Tracks a thingy (or any yielding object) using irregular time. |</p>
+<div class="section" id="construct">
+<h2>Construct<a class="headerlink" href="#construct" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-Diego notranslate"><div class="highlight"><pre><span></span>add_tracker({moniker|uuid});
+with_tracker({moniker|uuid});
+begin_tracker({moniker|uuid}); ... end_tracker...
+</pre></div>
+</div>
+<p>To create and develop the tracker object use <code class="docutils literal notranslate"><span class="pre">add_</span></code>, however, using <code class="docutils literal notranslate"><span class="pre">with_</span></code> the first time will initiate construction.  Similarly using <code class="docutils literal notranslate"><span class="pre">begin_</span> <span class="pre">..._end_</span></code> for the first time will also initiate construction, but this approach is not recommended.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">tracker</span></code> does not automatically run/start upon construction, you need to explicitly start the <code class="docutils literal notranslate"><span class="pre">tracker</span></code> with <code class="docutils literal notranslate"><span class="pre">run_</span></code>, <code class="docutils literal notranslate"><span class="pre">start_</span></code>, or, <code class="docutils literal notranslate"><span class="pre">exec_</span></code>.</p>
+</div>
+<div class="section" id="disposal">
+<h2>Disposal<a class="headerlink" href="#disposal" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-Diego notranslate"><div class="highlight"><pre><span></span>dispose_tracker({moniker|uuid});
+dump_tracker({moniker|uuid});
+forget_tracker({moniker|uuid});
+</pre></div>
+</div>
+<p>To dispose of a tracker from primal memory use <code class="docutils literal notranslate"><span class="pre">dispose_</span></code>, <code class="docutils literal notranslate"><span class="pre">dump_</span></code> or <code class="docutils literal notranslate"><span class="pre">forget_</span></code>.</p>
+</div>
+<div class="section" id="development">
+<h2>Development<a class="headerlink" href="#development" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-Diego notranslate"><div class="highlight"><pre><span></span>with_tracker({moniker|uuid})
+	
+</pre></div>
+</div>
+</div>
+<div class="section" id="control">
+<h2>Control<a class="headerlink" href="#control" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">run_tracker</span><span class="p">({</span><span class="n">name</span><span class="o">/</span><span class="n">uuid</span><span class="p">});</span>		<span class="n">pause_tracker</span><span class="p">({</span><span class="n">name</span><span class="o">/</span><span class="n">uuid</span><span class="p">});</span>		<span class="n">stop_tracker</span><span class="p">({</span><span class="n">name</span><span class="o">/</span><span class="n">uuid</span><span class="p">});</span>
+<span class="n">start_tracker</span><span class="p">({</span><span class="n">name</span><span class="o">/</span><span class="n">uuid</span><span class="p">});</span>		<span class="n">halt_tracker</span><span class="p">({</span><span class="n">name</span><span class="o">/</span><span class="n">uuid</span><span class="p">});</span>
+<span class="n">go_tracker</span><span class="p">({</span><span class="n">name</span><span class="o">/</span><span class="n">uuid</span><span class="p">});</span>		<span class="n">hold_tracker</span><span class="p">({</span><span class="n">name</span><span class="o">/</span><span class="n">uuid</span><span class="p">});</span>
+</pre></div>
+</div>
+<p>Various verbs are available to control a <code class="docutils literal notranslate"><span class="pre">tracker</span></code> as seen above.  When a <code class="docutils literal notranslate"><span class="pre">tracker</span></code> is paused or stopped no <code class="docutils literal notranslate"><span class="pre">trackpoint</span></code>s will yield</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">tracker</span></code> object can be controlled (started, paused and stopped)</p>
+<p>Disposal</p>
+</div>
+<div class="section" id="event-trapping">
+<h2>Event Trapping<a class="headerlink" href="#event-trapping" title="Permalink to this headline">¶</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">tracker</span></code> object can be event trapped with <code class="docutils literal notranslate"><span class="pre">begin_</span></code> and <code class="docutils literal notranslate"><span class="pre">end_</span></code>.</p>
+<div class="highlight-Diego notranslate"><div class="highlight"><pre><span></span>begin_tracker({moniker|uuid});
+	...
+end_tracker({moniker|uuid});
+</pre></div>
+</div>
+</div>
+<div class="section" id="options">
+<h2>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="discriminatory-options">
+<h3>Discriminatory Options<a class="headerlink" href="#discriminatory-options" title="Permalink to this headline">¶</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">tracker</span></code> object has the standard discrimnatory options: <code class="docutils literal notranslate"><span class="pre">_for</span></code>; <code class="docutils literal notranslate"><span class="pre">_between</span> <span class="pre">...</span> <span class="pre">_to</span></code>; <code class="docutils literal notranslate"><span class="pre">_not</span></code>.</p>
+</div>
+<div class="section" id="tracker-specific">
+<h3>Tracker Specific<a class="headerlink" href="#tracker-specific" title="Permalink to this headline">¶</a></h3>
+<p>There are various option available for the <code class="docutils literal notranslate"><span class="pre">tracker</span></code> object:</p>
+<p>| option                                            | notes                                                        |
+| ————————————————- | ———————————————————— |
+| <code class="docutils literal notranslate"><span class="pre">_freq({frequency}[,</span> <span class="pre">{unit}])</span></code>                    | Reporting frequency of <code class="docutils literal notranslate"><span class="pre">trackpoint</span></code>s.  The <code class="docutils literal notranslate"><span class="pre">{unit}</span></code> can only be of distance.<br />The frequency and unit can be made default with <code class="docutils literal notranslate"><span class="pre">set_tracker()_freq({default_freuency});</span></code> and  <code class="docutils literal notranslate"><span class="pre">set_tracker()_unit({default_unit)});</span></code> respectively. |
+| <code class="docutils literal notranslate"><span class="pre">_lapat()</span></code> <br /> <code class="docutils literal notranslate"><span class="pre">_lapat({lap_value}[,</span> <span class="pre">{unit}])</span></code> |                                                              |
+| <code class="docutils literal notranslate"><span class="pre">_clepe({clepe_convention})</span></code>                      | The clepe (naming) convention used for children (<code class="docutils literal notranslate"><span class="pre">trackpoint</span></code>s).   Clepe conventions available: <code class="docutils literal notranslate"><span class="pre">cognomen</span></code> e.g. <code class="docutils literal notranslate"><span class="pre">{tracker_moniker}_1</span></code>, <code class="docutils literal notranslate"><span class="pre">{tracker_moniker}_2</span></code>…; <code class="docutils literal notranslate"><span class="pre">dtstamp</span></code> datetime stamp e.g. 2021-07-30T12:22:32Z (ISO 8601); <code class="docutils literal notranslate"><span class="pre">utstamp</span></code> unix time stamp; <code class="docutils literal notranslate"><span class="pre">latin</span></code>; <code class="docutils literal notranslate"><span class="pre">greek</span></code>; <code class="docutils literal notranslate"><span class="pre">roman</span></code>; <code class="docutils literal notranslate"><span class="pre">hex</span></code>.<br />Can be set with <code class="docutils literal notranslate"><span class="pre">set_tracker()_clepe({default_clepe_convention});</span></code> |
+| <code class="docutils literal notranslate"><span class="pre">_trackwidth({width})</span></code>                            | Width of track used to depict track on human display. Using css syntax:<br /> <code class="docutils literal notranslate"><span class="pre">medium</span></code> I <code class="docutils literal notranslate"><span class="pre">thin</span></code> I <em><code class="docutils literal notranslate"><span class="pre">length</span></code></em> I <code class="docutils literal notranslate"><span class="pre">initial</span></code> I <code class="docutils literal notranslate"><span class="pre">inherit</span></code> |
+| <code class="docutils literal notranslate"><span class="pre">_trackstyle({style})</span></code>                            | Style of track used to depict track on human display. Uses css cyntax, with an additions <code class="docutils literal notranslate"><span class="pre">breadcrumb</span></code> value:<br /> <code class="docutils literal notranslate"><span class="pre">none</span></code> I <code class="docutils literal notranslate"><span class="pre">hidden</span></code> I <code class="docutils literal notranslate"><span class="pre">dotted</span></code> I <code class="docutils literal notranslate"><span class="pre">dashed</span></code> I <code class="docutils literal notranslate"><span class="pre">solid</span></code> I <code class="docutils literal notranslate"><span class="pre">double</span></code> I <code class="docutils literal notranslate"><span class="pre">groove</span></code> I <code class="docutils literal notranslate"><span class="pre">ridge</span></code> I <code class="docutils literal notranslate"><span class="pre">breadcrumb</span></code> I <code class="docutils literal notranslate"><span class="pre">inset</span></code> I <code class="docutils literal notranslate"><span class="pre">outset</span></code> I <code class="docutils literal notranslate"><span class="pre">initial</span></code> I <code class="docutils literal notranslate"><span class="pre">inherit</span></code> |
+| <code class="docutils literal notranslate"><span class="pre">_trackcolour({colour})</span></code>                          | <em><code class="docutils literal notranslate"><span class="pre">color</span></code></em> I <code class="docutils literal notranslate"><span class="pre">transparent</span></code> I <code class="docutils literal notranslate"><span class="pre">initial</span></code> I <code class="docutils literal notranslate"><span class="pre">inherit</span></code>            |
+| <code class="docutils literal notranslate"><span class="pre">_trackcss({css})</span></code>                                | Uses <em>border-</em> css to style track.                           |
+|                                                   |                                                              |
+|                                                   |                                                              |
+| breadcrumbs !!!                                   |                                                              |
+|                                                   |                                                              |
+|                                                   |                                                              |
+|                                                   |                                                              |
+|                                                   |                                                              |</p>
+</div>
+<div class="section" id="funnels-channels">
+<h3>Funnels &amp; Channels<a class="headerlink" href="#funnels-channels" title="Permalink to this headline">¶</a></h3>
+<p>The ‘tracker` object can be funnelled and channelled.  Commonly used funnels and channels are:</p>
+<p>| funnel/channel example     | notes                                                        |
+| ————————– | ———————————————————— |
+| <code class="docutils literal notranslate"><span class="pre">_channel(ros2,NavSatFix)</span></code> | Channels <code class="docutils literal notranslate"><span class="pre">yield</span></code>s into ros2 messages using the <code class="docutils literal notranslate"><span class="pre">NatSatFix.msg</span></code> format.  Note blockchaining is not supported. |
+| <code class="docutils literal notranslate"><span class="pre">_channel(file,gpx)</span></code>       | Channels <code class="docutils literal notranslate"><span class="pre">yield</span></code>s into blob file(s) in gpx format.  Note blockchaining is provided. |
+| <code class="docutils literal notranslate"><span class="pre">_funnel(ros2,NavSatFix)</span></code>  | Funnels ros2 messages using the <code class="docutils literal notranslate"><span class="pre">NatSatFix.msg</span></code> format into  <code class="docutils literal notranslate"><span class="pre">ump</span></code>s.  Statistical (aggregate) collation is supported. |
+| <code class="docutils literal notranslate"><span class="pre">_funnel(file,gpx)</span></code>        | Funnels file(s) and/or blobc in gpx format into <code class="docutils literal notranslate"><span class="pre">yield</span></code>s.  Note blockchaining is provided. |
+|                            |                                                              |
+|                            |                                                              |
+|                            |                                                              |
+|                            |                                                              |
+|                            |                                                              |</p>
+</div>
+</div>
+<div class="section" id="events">
+<h2>Events<a class="headerlink" href="#events" title="Permalink to this headline">¶</a></h2>
+<p>| event                                                        | notes                                                    |
+| ———————————————————— | ——————————————————– |
+| <code class="docutils literal notranslate"><span class="pre">yield_tracker({moniker|uuid})_trackpoint({moniker|uuid})_value({value}[,</span> <span class="pre">{unit{])</span></code> | The yield from the <code class="docutils literal notranslate"><span class="pre">tracker</span></code> to report the <code class="docutils literal notranslate"><span class="pre">trackpoint</span></code>. |
+| <code class="docutils literal notranslate"><span class="pre">begin_tracker({moniker|uuid})</span>&#160;&#160; <span class="pre">...</span>&#160;&#160; <span class="pre">end_tracker({moniker|uuid})</span></code> | A <code class="docutils literal notranslate"><span class="pre">tracker</span></code> has a definable event trap                   |
+|                                                              |                                                          |</p>
+<p>| object    | dimension            |
+| ——— | ——————– |
+| <code class="docutils literal notranslate"><span class="pre">tracker</span></code> | spatial              |
+| <code class="docutils literal notranslate"><span class="pre">pulse</span></code>   |                      |
+| <code class="docutils literal notranslate"><span class="pre">tempus</span></code>  | temporal and spatial |</p>
+</div>
+</div>
+<div class="section" id="tracker-pulse">
+<h1>tracker/pulse<a class="headerlink" href="#tracker-pulse" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-Diego notranslate"><div class="highlight"><pre><span></span>3e86d0be-08bd-493d-9ecb-ecfcef3c91c8 Beatrice (Luke&#39;s old phone)
+
+189510f2-6050-49db-9f5b-82d121d245c2 Rapunzel (Tav&#39;s new phone)
+
+2f92326d-1294-4529-afcd-2ce0676a8dd0 Nicola (Tav&#39;s old phone)
+
+52793991-8a85-46ee-967d-99d4e5660117 EAFE02127 (E-Bike)
+
+fe92f2cc-ec36-47a2-865f-8afc176f5341 Galaxy Watch (Tav&#39;s)
+
+10bb3e28-be00-48e5-97ce-55d920f266ac Raspberyy Pi
+
+
+
+tracker
+	trackpoint
+	
+pulse	
+	pulsepoint
+	
+
+
+
+
+
+
+27db61e5-2ab4-4d45-ada2-d9d800c31748
+
+
+
+marker
+https://www.qrcode-monkey.com/?ut_source=google_c&amp;ut_medium=cpc&amp;ut_campaign=&amp;ut_content=&amp;ut_term=create%20qr%20code%20free_p&amp;gclid=CjwKCAjwi9-HBhACEiwAPzUhHA7HC_ZnhP0I9dAtfigt2NMOfESFpJCHNGeWsldoTajODV0aDDsi4hoCkqYQAvD_BwE#text
+Foreground Colour:#000000
+Background Colour: #FCF414
+
+</pre></div>
+</div>
+<div class="highlight-Diego notranslate"><div class="highlight"><pre><span></span>add_pulse({name/uuid})
+	_freq({frequency})
+	_
+	
+add_stat({name/uuid})
+	_scalar({scalar}[, {unit}])
+	_vector({vector}[, {unit}])
+	_array({array}[, {unit}])
+	_type({type}[, {unit}])
+	_unit({unit})
+	_for({name/uuid_1}[, ...{name/uuid_n}])
+	_pulse()
+	_tracker()
+	
+add_metric({name/uuid})
+	_scalar({scalar}[, {unit}])
+	_unit({unit})
+	_for({name/uuid_1}[, ...{name/uuid_n}])
+	_pulse()
+	_tracker()
+</pre></div>
+</div>
+<div class="section" id="prepositions">
+<h2>Prepositions<a class="headerlink" href="#prepositions" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-Diego notranslate"><div class="highlight"><pre><span></span>with
+</pre></div>
+</div>
+<div class="highlight-Diego notranslate"><div class="highlight"><pre><span></span>(roll)call ↔ here, pong
+ping ↔ pong
+ask ↔ tell
+rem(meber) ↔ recall
+fetch ↔ back
+set ↔ get
+where ↔ here
+poll ↔ result
+req(uest) ↔ resp(onse)
+go ↔ stop
+add ↔ minus
+look ↔ see
+listen ↔ h
+</pre></div>
+</div>
+</div>
+<div class="section" id="nouns">
+<h2>Nouns<a class="headerlink" href="#nouns" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-Diego notranslate"><div class="highlight"><pre><span></span>tracker
+pulse
+point
+snapshot
+vidshot
+gnss
+battery
+sensor
+actuat(or)
+trackpoint
+pulsepoint
+metric
+stat
+route
+path
+marker
+
+
+</pre></div>
+</div>
+</div>
+<div class="section" id="postpositions">
+<h2>Postpositions<a class="headerlink" href="#postpositions" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-Diego notranslate"><div class="highlight"><pre><span></span>_for({name/uuid_1}[, ...{name/uuid_n}])
+_on({map}, {coordinates}[, unit}])
+_at({datetime})
+_au({point_coordinates})
+_between({scalar_1})_and({scalar_n})
+_greaterthan({scalar})
+_lessthan({scalar})
+_equalto({scalar}))
+_like({like_string})
+_regexp({regexpression})
+</pre></div>
+</div>
+</div>
+<div class="section" id="genera">
+<h2>Genera<a class="headerlink" href="#genera" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-Diego notranslate"><div class="highlight"><pre><span></span>human
+ai
+robot
+mobot
+organic
+thing
+console
+object
+subject
+</pre></div>
+</div>
+</div>
+<div class="section" id="id1">
+<h2>Options:<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-Diego notranslate"><div class="highlight"><pre><span></span>	
+</pre></div>
+</div>
+</div>
+<div class="section" id="setup">
+<h2>Setup:<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-Diego notranslate"><div class="highlight"><pre><span></span>add_metric({name/uuid});
+with_metric({name/uuid});
+
+add_metric({name/uuid}[, {unit}])
+	_scalar({name/uuid}[, {unit}])
+	_tracker({name/uuid});
+	_to({name/uuid})
+	_for({name/uuid_1}[, ...{name/uuid_n}])
+	_between({name/uuid_1})_and({name/uuid})
+</pre></div>
+</div>
+<div class="section" id="metric-scalar">
+<h3>Metric Scalar<a class="headerlink" href="#metric-scalar" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-Diego notranslate"><div class="highlight"><pre><span></span>{metric}_scalar({name/uuid}[, {unit}])
+</pre></div>
+</div>
+<p>| Scalar            | Units                                                        |
+| —————– | ———————————————————— |
+| <code class="docutils literal notranslate"><span class="pre">Area</span></code>            | <code class="docutils literal notranslate"><span class="pre">square</span> <span class="pre">metre</span></code> | <code class="docutils literal notranslate"><span class="pre">square</span> <span class="pre">decametre</span></code> | <code class="docutils literal notranslate"><span class="pre">square</span> <span class="pre">hectometre</span></code> | <code class="docutils literal notranslate"><span class="pre">square</span> <span class="pre">kilometre</span></code> |<code class="docutils literal notranslate"><span class="pre">square</span> <span class="pre">megametre</span></code> | <code class="docutils literal notranslate"><span class="pre">square</span> <span class="pre">gigametre</span> <span class="pre">|</span> <span class="pre">|</span> </code>Data Transfer <code class="docutils literal notranslate"> <span class="pre">|</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">|</span> <span class="pre">|</span></code>Digital Storage<code class="docutils literal notranslate"><span class="pre">|</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">|</span> <span class="pre">|</span></code>Energy<code class="docutils literal notranslate">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">|</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">|</span> <span class="pre">|</span></code>Frequency<code class="docutils literal notranslate">&#160;&#160;&#160;&#160;&#160; <span class="pre">|</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">|</span> <span class="pre">|</span></code>Fuel Economy<code class="docutils literal notranslate">&#160;&#160; <span class="pre">|</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">|</span> <span class="pre">|</span></code>Length<code class="docutils literal notranslate">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">|</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">|</span> <span class="pre">|</span></code>Mass<code class="docutils literal notranslate">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">|</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">|</span> <span class="pre">|</span></code>Plane Angle<code class="docutils literal notranslate">&#160;&#160;&#160; <span class="pre">|</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">|</span> <span class="pre">|</span></code>Pressure<code class="docutils literal notranslate">&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">|</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">|</span> <span class="pre">|</span></code>Speed<code class="docutils literal notranslate">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">|</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">|</span> <span class="pre">|</span></code>Temperature<code class="docutils literal notranslate">&#160;&#160;&#160; <span class="pre">|</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">|</span> <span class="pre">|</span></code>Time<code class="docutils literal notranslate">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">|</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">|</span> <span class="pre">|</span></code>Volume`          |                                                              |</p>
+</div>
+</div>
+<div class="section" id="run">
+<h2>Run:<a class="headerlink" href="#run" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-Diego notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="pause">
+<h2>Pause:<a class="headerlink" href="#pause" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="end">
+<h2>End:<a class="headerlink" href="#end" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="example">
+<h2>Example:<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
+<p>In this example two things (<code class="docutils literal notranslate"><span class="pre">df88accd-dd43-4ff1-820e-82f75be13013</span></code>, shortened 64-bit: <code class="docutils literal notranslate"><span class="pre">df88accd</span></code>; and, <code class="docutils literal notranslate"><span class="pre">344d4c22-546c-4940-bdc4-c2a4371a29ac</span></code>, <code class="docutils literal notranslate"><span class="pre">344d4c22</span></code>) are in the same universe, both things know each other, and are up-to-date with each other. Thing <code class="docutils literal notranslate"><span class="pre">df88accd</span></code> has a GPS sensor called <code class="docutils literal notranslate"><span class="pre">df_gps</span></code>, thing <code class="docutils literal notranslate"><span class="pre">344d4c22</span></code> has a heartbeat monitor attached to a human called <code class="docutils literal notranslate"><span class="pre">bert</span></code> (<code class="docutils literal notranslate"><span class="pre">73e4f567-952c-463a-a3d7-bc26c8053e54</span></code>). <code class="docutils literal notranslate"><span class="pre">Bert</span></code> is accessing the <code class="docutils literal notranslate"><span class="pre">mist</span></code> using a console (not shown in this example)…</p>
+<p>In this example <code class="docutils literal notranslate"><span class="pre">bert</span></code> is going to set up a tracker to be shared by <code class="docutils literal notranslate"><span class="pre">df88accd</span></code> and <code class="docutils literal notranslate"><span class="pre">344d4c22</span></code>, <code class="docutils literal notranslate"><span class="pre">df88accd</span></code> will provide GPS coordinates &amp; elevation and <code class="docutils literal notranslate"><span class="pre">344d4c22</span></code> will provide <code class="docutils literal notranslate"><span class="pre">bert</span></code>s heartbeat.</p>
+<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>sequenceDiagram
+
+	autonumber
+	participant bert
+	participant df88accd
+	participant 344d4c22
+	Note over bert,344d4c22: ...create tracker...
+	bert-&gt;344d4c22: add_tracker(walk to park)_for(df88accd,344d4c22)#59;
+	bert-&gt;344d4c22: with_tracker(walk to park)_freq(2,sec)_lapat()#59;
+	Note over bert,df88accd: ...add metrics, append to tracker, append to provider (df88accd)... 
+	bert-&gt;&gt;bert: add_gps(gps)_scalar(DD);
+	bert-&gt;&gt;df88accd: with_gps(gps)_tracker(walk to park)_for(df88accd)#59;
+	bert-&gt;&gt;bert: add_metric(elev)_scalar(elevation,m)#59;
+	bert-&gt;&gt;df88accd: with_metric(elev)_tracker(walk to park)_for(df88accd)#59;
+	Note over bert,344d4c22: ...add metric, append to tracker, append to provider (344d4c22)... 
+	bert-&gt;&gt;344d4c22: add_metric(heartbeat)_scalar(heartbeat,bpm)_for(344d4c22)#59;
+	bert-&gt;&gt;344d4c22: with_metric(heartbeat)_tracker(walk to park)#59;
+	Note over bert,344d4c22: ...initiate tracker (now)...
+	bert-&gt;344d4c22: run_tracker(walk to park)#59;
+	Note over bert,df88accd: ...df88accd provides trackpoint and appends metrics... 
+	df88accd-&gt;&gt;df88accd: add_trackpoint(d244)_tracker(walk to park)_datetime(2021-07-15T07:06:30Z)_hash(094f)#59;
+	df88accd-&gt;&gt;bert: with_trackpoint(d244)_gps(gps)_value(-26.8025640,153.1338770)#59;
+	df88accd-&gt;&gt;bert: with_trackpoint(d244)_metric(elev)_value(14.6)#59;
+	Note over bert,344d4c22: ...344d4c22 appends metric to trackpoint... 
+	344d4c22-&gt;&gt;bert: with_trackpoint(d244)_metric(heartbeat)_value(90)#59;
+	Note over bert,344d4c22: ...344d4c22 provides trackpoint and appends metric... 
+	344d4c22-&gt;&gt;344d4c22: add_trackpoint(4b2b)_tracker(walk to park)_datetime(2021-07-15T07:06:32Z)_hash(93f0)#59;
+	344d4c22-&gt;&gt;bert: with_trackpoint(4b2b)_gps(gps)_metric(heartbeat)_value(92)#59;
+	Note over bert,df88accd: ...df88accd appends metrics to trackpoint... 
+	df88accd-&gt;&gt;bert: with_trackpoint(4b2b)_gps(gps)_value(-26.8025640,153.1338770)#59;
+	df88accd-&gt;&gt;bert: with_trackpoint(4b2b)_metric(elev)_value(14.6)#59;
+</pre></div>
+</div>
+<p>①&nbsp;<code class="docutils literal notranslate"><span class="pre">bert</span></code> creates the tracker, called <code class="docutils literal notranslate"><span class="pre">walk</span> <span class="pre">to</span> <span class="pre">park</span></code> with command: <code class="docutils literal notranslate"><span class="pre">add_tracker(walk</span> <span class="pre">to</span> <span class="pre">park)_for(df88accd,344d4c22);</span></code>.  As default everyone in the <code class="docutils literal notranslate"><span class="pre">mist</span></code> will pick up and remember, however, things <code class="docutils literal notranslate"><span class="pre">df88accd</span></code> and <code class="docutils literal notranslate"><span class="pre">344d4c22</span></code> are targeted, so they will be the only things to act upon tracker,</p>
+<p>②&nbsp;<code class="docutils literal notranslate"><span class="pre">Bert</span></code> now sets up the tracker with a frequency of track-points set to every <code class="docutils literal notranslate"><span class="pre">2</span></code> <code class="docutils literal notranslate"><span class="pre">sec</span></code>’onds to publish and no laps, with command: <code class="docutils literal notranslate"><span class="pre">with_tracker(walk</span> <span class="pre">to</span> <span class="pre">park)_freq(2,sec)_lapat();</span></code>.</p>
+<p>Now the tracker has been created, <code class="docutils literal notranslate"><span class="pre">bert</span></code> now sets up the metrics for the tracker to use③. With the command, <code class="docutils literal notranslate"><span class="pre">add_gps(gps)_scalar(DD);</span></code>, the GPS metric (called <code class="docutils literal notranslate"><span class="pre">gps</span></code>) is created.  The GPS metric is a predefined metric.  The scalar (measurement system) is specified as decimal degrees (<code class="docutils literal notranslate"><span class="pre">DD</span></code>).  Everyone in the <code class="docutils literal notranslate"><span class="pre">mist</span></code> will pick up the command, including <code class="docutils literal notranslate"><span class="pre">df88accd</span></code> and <code class="docutils literal notranslate"><span class="pre">344d4c22</span></code>.</p>
+<p>Since <code class="docutils literal notranslate"><span class="pre">df88accd</span></code> has a GPS sensor it will be responsible for tracking its coordinates, so <code class="docutils literal notranslate"><span class="pre">bert</span></code> assigns the GPS metric (<code class="docutils literal notranslate"><span class="pre">gps</span></code>) to the <code class="docutils literal notranslate"><span class="pre">walk</span> <span class="pre">to</span> <span class="pre">park</span></code> tracker and <code class="docutils literal notranslate"><span class="pre">df88accd</span></code> in the same command: <code class="docutils literal notranslate"><span class="pre">add_tracker(walk</span> <span class="pre">to</span> <span class="pre">park)_for(df88accd,344d4c22);</span></code>④.</p>
+<p>Another metric, elevation, is created ⑤, measured in metres (<code class="docutils literal notranslate"><span class="pre">m</span></code>).  The elevation metric is then assigned to the <code class="docutils literal notranslate"><span class="pre">walk</span> <span class="pre">to</span> <span class="pre">park</span></code> tracker and thing <code class="docutils literal notranslate"><span class="pre">df88accd</span></code>⑥,</p>
+<p>.
+bert-&gt;&gt;344d4c22: add_metric(heartbeat)_scalar(heartbeat,bpm)_for(344d4c22)#59;
+bert-&gt;&gt;344d4c22: with_metric(heartbeat)_tracker(walk to park)#59;
+Note over bert,344d4c22: …add metric, append to tracker, append to provider (344d4c22)…
+bert-&gt;344d4c22: run_tracker(walk to park)#59;
+Note over bert,df88accd: …df88accd provides trackpoint and appends metrics…
+df88accd-&gt;&gt;df88accd: add_trackpoint(d244)_tracker(walk to park)_hash(094f)#59;
+df88accd-&gt;&gt;bert: with_trackpoint(d244)_gps(gps)_value(-26.7937,153.0848)#59;
+df88accd-&gt;&gt;bert: with_trackpoint(d244)_metric(elev)_value(10.1)#59;
+Note over bert,344d4c22: …344d4c22 appends metric to trackpoint…
+344d4c22-&gt;&gt;bert: with_trackpoint(d244)_metric(heartbeat)_value(90)#59;
+Note over bert,344d4c22: …344d4c22 provides trackpoint and appends metric…
+344d4c22-&gt;&gt;344d4c22: add_trackpoint(4b2b)_tracker(walk to park)_hash(93f0)#59;
+344d4c22-&gt;&gt;bert: with_trackpoint(4b2b)_gps(gps)_metric(heartbeat)_value(92)#59;
+Note over bert,df88accd: …df88accd appends metrics to trackpoint…
+df88accd-&gt;&gt;bert: with_trackpoint(4b2b)_gps(gps)_value(-26.7937,153.0848)#59;
+df88accd-&gt;&gt;bert: with_trackpoint(4b2b)_metric(elev)_value(10.1)#59;</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;gpx</span> <span class="na">creator=</span><span class="s">&quot;StravaGPX Android&quot;</span> <span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span> <span class="na">xsi:schemaLocation=</span><span class="s">&quot;http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd&quot;</span> <span class="na">version=</span><span class="s">&quot;1.1&quot;</span> <span class="na">xmlns=</span><span class="s">&quot;http://www.topografix.com/GPX/1/1&quot;</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;metadata&gt;</span>
+  <span class="nt">&lt;time&gt;</span>2021-07-15T07:05:44Z<span class="nt">&lt;/time&gt;</span>
+ <span class="nt">&lt;/metadata&gt;</span>
+ <span class="nt">&lt;trk&gt;</span>
+  <span class="nt">&lt;name&gt;</span>Afternoon Activity<span class="nt">&lt;/name&gt;</span>
+  <span class="nt">&lt;type&gt;</span>18<span class="nt">&lt;/type&gt;</span>
+  <span class="nt">&lt;trkseg&gt;</span>
+   <span class="nt">&lt;trkpt</span> <span class="na">lat=</span><span class="s">&quot;-26.8025640&quot;</span> <span class="na">lon=</span><span class="s">&quot;153.1338770&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;ele&gt;</span>14.6<span class="nt">&lt;/ele&gt;</span>
+    <span class="nt">&lt;time&gt;</span>2021-07-15T07:06:30Z<span class="nt">&lt;/time&gt;</span>
+   <span class="nt">&lt;/trkpt&gt;</span>
+   <span class="nt">&lt;trkpt</span> <span class="na">lat=</span><span class="s">&quot;-26.8025640&quot;</span> <span class="na">lon=</span><span class="s">&quot;153.1338770&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;ele&gt;</span>14.6<span class="nt">&lt;/ele&gt;</span>
+    <span class="nt">&lt;time&gt;</span>2021-07-15T07:06:32Z<span class="nt">&lt;/time&gt;</span>
+   <span class="nt">&lt;/trkpt&gt;</span>
+   <span class="nt">&lt;trkpt</span> <span class="na">lat=</span><span class="s">&quot;-26.8025640&quot;</span> <span class="na">lon=</span><span class="s">&quot;153.1338770&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;ele&gt;</span>14.6<span class="nt">&lt;/ele&gt;</span>
+    <span class="nt">&lt;time&gt;</span>2021-07-15T07:06:34Z<span class="nt">&lt;/time&gt;</span>
+   <span class="nt">&lt;/trkpt&gt;</span>
+   <span class="nt">&lt;trkpt</span> <span class="na">lat=</span><span class="s">&quot;-26.8025640&quot;</span> <span class="na">lon=</span><span class="s">&quot;153.1338770&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;ele&gt;</span>14.6<span class="nt">&lt;/ele&gt;</span>
+    <span class="nt">&lt;time&gt;</span>2021-07-15T07:06:36Z<span class="nt">&lt;/time&gt;</span>
+   <span class="nt">&lt;/trkpt&gt;</span>
+  <span class="nt">&lt;/trkseg&gt;</span>
+ <span class="nt">&lt;/trk&gt;</span>
+<span class="nt">&lt;/gpx&gt;</span>
+</pre></div>
+</div>
+<div class="highlight-Diego notranslate"><div class="highlight"><pre><span></span>add_tracker(Afternoon Activity)_dict(type,18)_datetime(2021-07-15T07:05:44Z);
+add_gps(trkpt)_unt(DD)_tracker(Afternoon Activity);
+add_metric(ele)_scalar(elevat)_unit(m)_tracker(Afternoon Activity);
+with_tracker(Afternoon Activity)_freq(2,sec);
+run_tracker(Afternoon Activity);
+add_lap(4693)_tracker(Afternoon Activity);
+add_trackpoint(9b4a)_hash(4693);
+with_trackpoint(9b4a)_gps(trkpt)_value(-26.8025640,153.1338770);
+with_trackpoint(9b4a)_metric(ele)_value(14.6);
+with_trackpoint(9b4a)_datetime(2021-07-15T07:06:30Z);
+add_trackpoint(a059)_hash(9b4a);
+with_trackpoint(a059)_gps(trkpt)_value(-26.8025640,153.1338770);
+with_trackpoint(a059)_metric(ele)_value(14.6);
+with_trackpoint(a059)_datetime(2021-07-15T07:06:32Z);
+add_trackpoint(1c8b)_hash(a059);
+with_trackpoint()_gps(trkpt)_value(-26.8025640,153.1338770);
+with_trackpoint()_metric(ele)_value(14.6);
+with_trackpoint()_datetime(2021-07-15T07:06:34Z);
+add_trackpoint(eb64)_hash(1c8b);
+with_trackpoint()_gps(trkpt)_value(-26.8025640,153.1338770);
+with_trackpoint()_metric(ele)_value(14.6);
+with_trackpoint()_datetime(2021-07-15T07:06:36Z);
+end_tracker(Afternoon Activity);
+</pre></div>
+</div>
+</div>
+<div class="section" id="implicit-call">
+<h2>Implicit Call<a class="headerlink" href="#implicit-call" title="Permalink to this headline">¶</a></h2>
+<p>The implicit [roll]call is a request for existence of other types in its known universe,</p>
+<div class="section" id="syntax">
+<h3>Syntax:<a class="headerlink" href="#syntax" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-Diego notranslate"><div class="highlight"><pre><span></span>call_human();
+call_ai();
+call_robot();
+call_organic();
+call_thing();
+call_console();
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="explicit-call">
+<h2>Explicit Call<a class="headerlink" href="#explicit-call" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id2">
+<h3>Syntax:<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-Diego notranslate"><div class="highlight"><pre><span></span>call({uuid});
+call_human({human_uuid});		call_human()_for({human_uuid});
+call_ai({ai_uuid});				call_ai()_for({ai_uuid});
+call_robot({robot_uuid});		call_robot()_for({robot_uuid});
+call_thing({thing_uuid});		call_thing()_for({thing_uuid});
+call_console({console_uuid});	call_console()_for({console_uuid});
+
+call({moniker});
+call_human({human_moniker});		call_human()_for({human_moniker});
+call_ai({ai_moniker});				call_ai()_for({ai_moniker});
+call_robot({robot_moniker});		call_robot()_for({robot_moniker});
+call_thing({thing_moniker});		call_thing()_for({thing_moniker});
+call_console({console_moniker});	call_console()_for({console_moniker});
+
+call()_as({label})
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="collection-call">
+<h2>Collection Call<a class="headerlink" href="#collection-call" title="Permalink to this headline">¶</a></h2>
+<p>Syntax:</p>
+<div class="highlight-Diego notranslate"><div class="highlight"><pre><span></span>call()_in({uuid1/moniker1},{uuid2/moniker2},...);
+call_human()_in({human_uuid1/human_moniker1},{human_uuid2/human_moniker2},...);
+call_ai()_in({ai_uuid1/ai_moniker1},{ai_uuid2/ai_moniker2},...);
+call_robot()_in({robot_uuid1/robot_moniker1},{robot_uuid2/robot_moniker2},...);
+call_thing()_in({thing_uuid1/thing_moniker1},{thing_uuid2/thing_moniker2},...);
+call_console()_in({console_uuid1/console_moniker1},{console_uuid2/console_moniker2},...);
+
+call()_asin({label1},{label2});
+</pre></div>
+</div>
+<p>—b8da-59c35467963b</p>
+<p>57e7-3869–a16f-97cad6b4e14c</p>
+<p>68937890—-63dc25646e30</p>
+<p>35dccb9d</p>
+<p>9543ebae</p>
+<p>call()_what();
+call()_only();</p>
+<p>(rolll)call ↔ pong, here
+ping ↔ pong
+ask ↔ tell
+rem(meber) ↔ recall
+fetch ↔ back
+set ↔ get</p>
+<p>df88: call();
+344d: here();
+df88: ask(344d);
+344d: tell_name();</p>
+<p>df88: prog_name(344d)_name(Hoshiko Kawasaki)_withtest();
+344d: tell_name(Hoshiko Kawasaki);</p>
+<p>344d: tell_name(Hoshiko Kawasaki);
+344d: tell_what(Thing);
+344d: tell_comm(Bluetooth 5.2)_device(anko BT Speaker)_address(86:14:B8:ED:BB:34);
+344d: tell_why(BT Speaker);
+344d: tell_why(Desk Lamp);
+344d: tell_why(Ambient Light);
+344d: tell_why(Wireless Charger);</p>
+<p>prog_name()</p>
+<p>call_human();
+call_ai();
+call_robot();
+call_thing();
+call_console();
+call_human({human_uuid);
+call_robot({robot_uuid});
+call_thing({thing_uuid});</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+
+​```Diego
+{from_uuid}|{command}|{to_uuid}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="gnss">
+<h1>GNSS<a class="headerlink" href="#gnss" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="global-positioning-system-united-states">
+<h2><strong>Global Positioning System (United States)</strong><a class="headerlink" href="#global-positioning-system-united-states" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="glonass-russia">
+<h2><strong>GLONASS (Russia)</strong><a class="headerlink" href="#glonass-russia" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="galileo-eu">
+<h2><strong>Galileo (EU)</strong><a class="headerlink" href="#galileo-eu" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="beidou-china">
+<h2><strong>BeiDou (China)</strong><a class="headerlink" href="#beidou-china" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="qzss-japan">
+<h2><strong>QZSS (Japan)</strong><a class="headerlink" href="#qzss-japan" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="irnss-navic-india">
+<h2><strong>IRNSS ― NAVIC (India)</strong><a class="headerlink" href="#irnss-navic-india" title="Permalink to this headline">¶</a></h2>
+<p>A <strong>spatial reference system</strong> (<strong>SRS</strong>) or <strong>coordinate reference system</strong> (<strong>CRS</strong>) is a <a class="reference external" href="https://en.wikipedia.org/wiki/Coordinate_system">coordinate-based</a> local, regional or global system used to locate geographical entities.</p>
+<ul class="simple">
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/Universal_Transverse_Mercator_coordinate_system">Universal Transverse Mercator coordinate system</a></li>
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/British_national_grid_reference_system">British national grid reference system</a></li>
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/Global_Navigation_Grid_Code">Chinese Global Navigation Grid Code</a></li>
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/Hellenic_Geodetic_Reference_System_1987">Hellenic Geodetic Reference System 1987</a></li>
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/Irish_grid_reference_system">Irish grid reference system</a></li>
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/Irish_Transverse_Mercator">Irish Transverse Mercator</a></li>
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/Israeli_Transverse_Mercator">Israeli Transverse Mercator</a></li>
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/Israeli_Cassini_Soldner">Israeli Cassini Soldner</a></li>
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/Jordan_Transverse_Mercator">Jordan Transverse Mercator</a></li>
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/Lambert_conformal_conic_projection">Lambert conformal conic projection</a></li>
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/MapCode">International mapcode system</a></li>
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/Military_Grid_Reference_System">Military Grid Reference System</a></li>
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/United_States_National_Grid">United States National Grid</a></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Diego.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

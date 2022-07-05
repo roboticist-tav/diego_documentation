@@ -149,3 +149,6 @@ _yawto({yaw}[, {unit}])
 
 _me()
 _for({moniker_1|uuid_1}[, ... {moniker_n|uuid_n}])
+
+
+<!-- http://wiki.ros.org/mavros#mavcmd -->

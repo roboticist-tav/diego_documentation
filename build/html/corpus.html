@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html class="writer-html4" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Diego Commands &mdash; diego-docs 1.0 documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript" src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+        <script type="text/javascript">mermaid.initialize({startOnLoad:true});</script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> diego-docs
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Diego Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="syntax.html">Language Syntax</a></li>
+<li class="toctree-l1"><a class="reference internal" href="physic/_topicindex.html">Topological Physic Object Index</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">diego-docs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Diego Commands</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/corpus.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="diego-commands">
+<h1>Diego Commands<a class="headerlink" href="#diego-commands" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="a-name-go-diego-a-go-diego">
+<h2><a name="go_diego"></a>go_diego<a class="headerlink" href="#a-name-go-diego-a-go-diego" title="Permalink to this headline">¶</a></h2>
+<p>Sets up ‘<em>deigo</em>’ program with global defaults.</p>
+<p>Every  diego program must start with the <code class="docutils literal notranslate"><span class="pre">go_diego</span></code> command.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">go_diego</span></code> command accepts no sub commands.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">go_diego</span></code> command can be parameter-less, but it is recommended, for easily identification (especially under  development), to provide a ‘<em>diego_moniker</em>’.</p>
+<div class="section" id="go-diego">
+<h3>go_diego()<a class="headerlink" href="#go-diego" title="Permalink to this headline">¶</a></h3>
+<p>Sets up ‘<em>deigo</em>’ program with global defaults.</p>
+</div>
+<div class="section" id="go-diego-diego-moniker">
+<h3>go_diego(<em>diego_moniker</em>)<a class="headerlink" href="#go-diego-diego-moniker" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="linking-events">
+<h3>Linking &amp; Events<a class="headerlink" href="#linking-events" title="Permalink to this headline">¶</a></h3>
+<p>| | do_diego | hey_diego | oh_diego |
+|–|:–:|:–:|:–:|
+| link | <code class="docutils literal notranslate"><span class="pre">go_diego</span></code> | ❌ | ❌ |
+| event | ❌ | ❌ | <em>(bubble up errors from <code class="docutils literal notranslate"><span class="pre">instruct</span></code>s)</em><br><code class="docutils literal notranslate"><span class="pre">err_instruct</span></code> |
+The <code class="docutils literal notranslate"><span class="pre">go_diego</span></code> command accepts no sub commands.</p>
+<p>The <em>do_diego</em> event covers the declaration of global variables.  There are no <em>hey_diego</em> nor  <em>oh_diego</em> events.</p>
+</div>
+</div>
+</div>
+<div class="section" id="instructors">
+<h1>Instructors<a class="headerlink" href="#instructors" title="Permalink to this headline">¶</a></h1>
+<p>Instructor commands package other commands into sets, effectively an <code class="docutils literal notranslate"><span class="pre">instruct</span></code> is a <em>set of instructions</em>.  An <code class="docutils literal notranslate"><span class="pre">instruct</span></code> can be called, looped and ended using instructor commands.</p>
+<div class="section" id="begin-instruct">
+<h2>begin_instruct<a class="headerlink" href="#begin-instruct" title="Permalink to this headline">¶</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">begin_instruct</span></code> command marks the start of an <code class="docutils literal notranslate"><span class="pre">instruct</span></code> and monikers it for reference.  Internally the <code class="docutils literal notranslate"><span class="pre">begin_instruct</span></code> command also sets up all the default declaration for the <code class="docutils literal notranslate"><span class="pre">instruct</span></code>.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">begin_instruct</span></code> command  cannot be parameter-less, it must contain a unique (to the <em>diego</em>) ‘<em>instruct_moniker</em>’.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">begin_instruct</span></code> command has <strong>no</strong> privilege definition ability, however, its associated <code class="docutils literal notranslate"><span class="pre">start_instruct</span></code> command has privilege definition ability.</p>
+<p>An <code class="docutils literal notranslate"><span class="pre">instruct</span></code> is delimited by the <code class="docutils literal notranslate"><span class="pre">loop_instruct</span></code> and<code class="docutils literal notranslate"><span class="pre">end_instruct</span></code> commands, either of which must be present.  The <code class="docutils literal notranslate"><span class="pre">instruct</span></code> is not allowed to bled.</p>
+<div class="section" id="begin-instruct-instruct-moniker">
+<h3>begin_instruct(<em>instruct_moniker</em>)<a class="headerlink" href="#begin-instruct-instruct-moniker" title="Permalink to this headline">¶</a></h3>
+<p>The start of a <code class="docutils literal notranslate"><span class="pre">instruct</span></code> used to package commands under the label of <em><code class="docutils literal notranslate"><span class="pre">instruct_moinker</span></code></em>.    Note <code class="docutils literal notranslate"><span class="pre">begin_instruct</span></code> only declares an <code class="docutils literal notranslate"><span class="pre">instruct</span></code>, to start (initiate) an <code class="docutils literal notranslate"><span class="pre">instruct</span></code> use <code class="docutils literal notranslate"><span class="pre">start_instruct(</span></code><em><code class="docutils literal notranslate"><span class="pre">instruct_moniker</span></code></em><code class="docutils literal notranslate"><span class="pre">)</span></code>.
+An <em><code class="docutils literal notranslate"><span class="pre">instruct_moniker</span></code></em> is required in order for the <code class="docutils literal notranslate"><span class="pre">instruct</span></code>  to start (using <code class="docutils literal notranslate"><span class="pre">start_instruct(</span></code><em><code class="docutils literal notranslate"><span class="pre">instruct_moniker</span></code></em><code class="docutils literal notranslate"><span class="pre">)</span></code>).</p>
+</div>
+<div class="section" id="id1">
+<h3>Linking &amp; Events<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>| | do_diego | hey_diego | oh_diego |
+|–|:–:|:–:|:–:|
+| events: | <code class="docutils literal notranslate"><span class="pre">start_instruct</span></code> |<code class="docutils literal notranslate"><span class="pre">loop_instruct</span></code><br><code class="docutils literal notranslate"><span class="pre">end_instruct</span></code> | <em>errors from oh_diego-less commands</em><br><code class="docutils literal notranslate"><span class="pre">err_instruct</span></code> |
+| cmds: |  | ✅ allowed | ✅ allowed |
+The <em>do_diego</em> event can only be initiated with the <code class="docutils literal notranslate"><span class="pre">start_instruct</span></code> command with matching <em>instruct_moniker</em>.   A <em>hey_diego</em> event is <strong>not</strong> triggered on <code class="docutils literal notranslate"><span class="pre">begin_instruct</span></code>, only through <code class="docutils literal notranslate"><span class="pre">loop_instruct</span></code> or <code class="docutils literal notranslate"><span class="pre">end_instruct</span></code> elsewhere in the <em>diego</em> code.    An <em>oh_diego</em> event is initiated when any <em>error</em> from an <em>oh_diego-less</em> command, inside the <code class="docutils literal notranslate"><span class="pre">instruct</span></code> ‘bubbles up’; or, on <code class="docutils literal notranslate"><span class="pre">err_instruct(</span></code><em><code class="docutils literal notranslate"><span class="pre">instruct_moniker</span></code></em><code class="docutils literal notranslate"><span class="pre">)</span></code> explicit command, whichever comes first.</p>
+<p>Both <em>hey_diego</em> and <em>oh_diego</em> commands are optional, and can be useful for robots to report progress/counters/warnings/errors of the <code class="docutils literal notranslate"><span class="pre">instruct</span></code> to humans or other robots.</p>
+</div>
+<div class="section" id="example">
+<h3>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h3>
+<p>In this example we are going to instruct a robot(s) to go back and forth along a route called ‘<em>border</em>’, until there is an error en-route on route ‘<em>border</em>’.  For every journey along <em>border</em> route and then back again along <em>border</em> route, the robot will announce how many times the ‘<em>patrol complete</em>’.  When a error occurs on the journey on route ‘<em>border</em>’ the robot(s) will alert the human(s) of an ‘<em>issue on border patrol</em>’.</p>
+<p>code:</p>
+<div class="highlight-diego notranslate"><div class="highlight"><pre><span></span>use_namespace(diego_sandbox);
+
+begin_instruct(border patrol);
+  	
+  	add_counter(patrol complete):;
+  	: alert_error(issue on border patrol);
+  	  
+    go_route(border)?:;
+    ? goback_route(border)|?:;
+    	| with_counter(patrol complete)_inc(++);
+    	? loop_instruct(border patrol);
+        : err_instruct(border patrol);
+    : err_instruct(border patrol);
+
+end_instruct(border patrol);
+
+start_instruct(border patrol)_forof(droid1)_you(droid1)?:;
+? msg_human(Jim)_counter(patrol complete)
+: msg_human(Jim)_err();
+</pre></div>
+</div>
+<p>flow:</p>
+<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>graph TD
+    1[&quot;go_diego()&quot;] --&gt; 10[&quot;start_instruct(border patrol)&quot;]
+    10 --&gt; 2[&quot;begin_instruct(border patrol)&quot;]
+    2 --:--&gt; 4[&quot;alert_error(issue on border patrol)&quot;]
+    2 --- 5[&quot;go_route(border)&quot;]
+    5 --?--&gt; 6[&quot;goback_route(border)&quot;]
+    6 --?--&gt; 8[&quot;loop_instruct(border patrol)&quot;]
+    6 --:--&gt; 7[&quot;err_instruct(border patrol)&quot;]
+    8 --&gt; 3[&quot;call_counter(patrol complete)&quot;]
+    7 --&gt; 4
+    4 --&gt; 9[&quot;end_instruct(border patrol)&quot;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="loop-instruct">
+<h2>loop_instruct<a class="headerlink" href="#loop-instruct" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="loop-instruct-instruct-moniker">
+<h3>loop_instruct(<em>instruct_moniker</em>)<a class="headerlink" href="#loop-instruct-instruct-moniker" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="a-name-end-instruct-a-end-instruct">
+<h2><a name="end_instruct"></a>end_instruct<a class="headerlink" href="#a-name-end-instruct-a-end-instruct" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="end-instruct-instruct-moniker">
+<h3>end_instruct(<em>instruct_moniker</em>)<a class="headerlink" href="#end-instruct-instruct-moniker" title="Permalink to this headline">¶</a></h3>
+<p>The finisher of an <code class="docutils literal notranslate"><span class="pre">instruct</span></code> ends with  <code class="docutils literal notranslate"><span class="pre">end_instruct(</span></code><em><code class="docutils literal notranslate"><span class="pre">instruct_moniker</span></code></em><code class="docutils literal notranslate"><span class="pre">)</span></code>, with no sub command the<code class="docutils literal notranslate"><span class="pre">instruct</span></code> will end  for <em>all</em> monikers (robots, swarms, labels of).</p>
+</div>
+<div class="section" id="privileges">
+<h3>Privileges<a class="headerlink" href="#privileges" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="end-instruct-instruct-moniker-for-moniker1-n">
+<h4>end_instruct(<em>instruct_moniker</em>)<em>[…]</em>_for(<em>moniker1</em>, <em>n…</em>)<a class="headerlink" href="#end-instruct-instruct-moniker-for-moniker1-n" title="Permalink to this headline">¶</a></h4>
+<p>A whitelist (<em>moniker1</em>, <em>n…</em>) of monikers (robots, swarms, labels of) that should only be allowed to finish the <em>instruct_moniker</em> <code class="docutils literal notranslate"><span class="pre">instruct</span></code>.</p>
+</div>
+<div class="section" id="end-instruct-instruct-moniker-not-moniker1-n">
+<h4>end_instruct(<em>instruct_moniker</em>)<em>[…]</em>_not((<em>moniker1</em>, <em>n…</em>)<a class="headerlink" href="#end-instruct-instruct-moniker-not-moniker1-n" title="Permalink to this headline">¶</a></h4>
+<p>A blacklist (<em>moniker1</em>, <em>n…</em>) of monikers (robots, swarms, labels of) that are denied to finish the <em>instruct_moniker</em> <code class="docutils literal notranslate"><span class="pre">instruct</span></code>.</p>
+</div>
+<div class="section" id="end-instruct-instruct-moniker-for-moniker1-n-not-moniker1-n">
+<h4>end_instruct(<em>instruct_moniker</em>)<em>[…]</em>_for(<em>moniker1</em>, <em>n…</em>)_not(<em>moniker1</em>, <em>n…</em>)<a class="headerlink" href="#end-instruct-instruct-moniker-for-moniker1-n-not-moniker1-n" title="Permalink to this headline">¶</a></h4>
+<p>A whitelist with blacklist of monikers (robots, swarms, labels of) that allowed/denied to finish the <em>instruct_moniker</em> <code class="docutils literal notranslate"><span class="pre">instruct</span></code>.</p>
+</div>
+</div>
+</div>
+<div class="section" id="a-name-start-instruct-a-start-instruct">
+<h2><a name="start_instruct"></a>start_instruct<a class="headerlink" href="#a-name-start-instruct-a-start-instruct" title="Permalink to this headline">¶</a></h2>
+<p>Where a duplicate <code class="docutils literal notranslate"><span class="pre">start_instruct</span></code> (with the same signature) exists the first <code class="docutils literal notranslate"><span class="pre">start_instruct</span></code> command in the diego flow will be executed and later duplicates will restart the <code class="docutils literal notranslate"><span class="pre">instruct</span></code> at <code class="docutils literal notranslate"><span class="pre">begin_instuct</span></code> with <strong>no</strong> <em>hey_diego</em>_ nor <em>oh_diego</em> events triggered.</p>
+<div class="section" id="start-instruct-instruct-moniker">
+<h3>start_instruct(<em>instruct_moniker</em>)<a class="headerlink" href="#start-instruct-instruct-moniker" title="Permalink to this headline">¶</a></h3>
+<p>The initiation of an <code class="docutils literal notranslate"><span class="pre">instruct</span></code> starts with  <code class="docutils literal notranslate"><span class="pre">start_instruct(</span></code><em><code class="docutils literal notranslate"><span class="pre">instruct_moniker</span></code></em><code class="docutils literal notranslate"><span class="pre">)</span></code>, with no sub command the<code class="docutils literal notranslate"><span class="pre">instruct</span></code> will start for <em>all</em> monikers (robots, swarms, labels of).</p>
+</div>
+<div class="section" id="sub-commands">
+<h3>Sub Commands<a class="headerlink" href="#sub-commands" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="start-instruct-instruct-moniker-for-moniker1-n">
+<h4>start_instruct(<em>instruct_moniker</em>)_for(<em>moniker1</em>, <em>n…</em>)<a class="headerlink" href="#start-instruct-instruct-moniker-for-moniker1-n" title="Permalink to this headline">¶</a></h4>
+<p>An whitelist (<em>moniker1</em>, <em>n…</em>) of monikers (robots, swarms, labels of) that should only be allowed to initiate the <em>instruct_moniker</em> <code class="docutils literal notranslate"><span class="pre">instruct</span></code>.</p>
+</div>
+<div class="section" id="start-instruct-instruct-moniker-not-moniker1-n">
+<h4>start_instruct(<em>instruct_moniker</em>)_not((<em>moniker1</em>, <em>n…</em>)<a class="headerlink" href="#start-instruct-instruct-moniker-not-moniker1-n" title="Permalink to this headline">¶</a></h4>
+<p>A blacklist (<em>moniker1</em>, <em>n…</em>) of monikers (robots, swarms, labels of) that are denied to initiate the <em>instruct_moniker</em> <code class="docutils literal notranslate"><span class="pre">instruct</span></code>.</p>
+</div>
+</div>
+<div class="section" id="events">
+<h3>Events<a class="headerlink" href="#events" title="Permalink to this headline">¶</a></h3>
+<p>The <em>do_diego</em> event covers the declaration of global variables.  There are no <em>hey_diego</em> nor  <em>oh_diego</em> events.</p>
+</div>
+</div>
+</div>
+<div class="section" id="setters">
+<h1>Setters<a class="headerlink" href="#setters" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="set-consensus">
+<h2>set_consensus<a class="headerlink" href="#set-consensus" title="Permalink to this headline">¶</a></h2>
+<p>Sets the consensus to be used in polls and decisions.</p>
+<p>The scope of the <code class="docutils literal notranslate"><span class="pre">set_consensus</span></code>  settings is determined by the <code class="docutils literal notranslate"><span class="pre">set_consensus</span></code> command location in the diego code.  If the <code class="docutils literal notranslate"><span class="pre">set_consensus</span></code> command is placed after the <code class="docutils literal notranslate"><span class="pre">go_diego</span></code> command but before any <code class="docutils literal notranslate"><span class="pre">instruct</span></code> the consensus setting will be applied to the whole diego, unless overridden by the next <code class="docutils literal notranslate"><span class="pre">set_consensus</span></code> command in the diego code flow.</p>
+<p>If the <code class="docutils literal notranslate"><span class="pre">set_consensus</span></code> command is placed after a <code class="docutils literal notranslate"><span class="pre">begin_instruct</span></code> command, the scope of consensus will be applied to the <code class="docutils literal notranslate"><span class="pre">instruct</span></code>, unless overridden by the next <code class="docutils literal notranslate"><span class="pre">set_consensus</span></code> command (in the same <code class="docutils literal notranslate"><span class="pre">instruct</span></code> or a nested <code class="docutils literal notranslate"><span class="pre">instruct</span></code>) in the diego code flow.</p>
+<p>The lowest level of override occurs with the <code class="docutils literal notranslate"><span class="pre">_with_consensus</span></code> sub command, available on most decision commands.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">set_consensus</span></code> command has privilege definition ability using both and each of the <code class="docutils literal notranslate"><span class="pre">_for</span></code> and  <code class="docutils literal notranslate"><span class="pre">_not</span></code> sub commands.</p>
+<p>If the  <code class="docutils literal notranslate"><span class="pre">set_consensus</span></code> command is never used, the consensus is defaulted to <em>unanimous</em>.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">set_consensus</span></code> command does <strong>not</strong> set consensus on elections, only on polls and robot decisions.</p>
+<div class="section" id="set-consensus-consensus-type">
+<h3>set_consensus(<em>consensus_type</em>)<a class="headerlink" href="#set-consensus-consensus-type" title="Permalink to this headline">¶</a></h3>
+<p>Sets the consensus of <em>consensus_type</em>:
+| <code class="docutils literal notranslate"><span class="pre">consensus_type</span></code> | Description |
+|–|–|
+| <code class="docutils literal notranslate"><span class="pre">unanimous_wait_for_the_dead</span></code> | Decisions are made only when there is a unanimous result but only after all dead robots have been resurrected and then resulted. |
+| <code class="docutils literal notranslate"><span class="pre">unanimous</span></code> | Decisions are made on an unanimous result, any dead robots are disregarded. |
+| <code class="docutils literal notranslate"><span class="pre">authority</span></code> | Decisions are based on the result of the highest authority robot(s) (using <code class="docutils literal notranslate"><span class="pre">set_authority</span></code> command). |
+| <code class="docutils literal notranslate"><span class="pre">human_only</span></code> | Decisions can only be made by a human(s).<br>If there are no humans alive, consensus will automatically change to <code class="docutils literal notranslate"><span class="pre">authority</span></code> then back to <code class="docutils literal notranslate"><span class="pre">human_only</span></code> when one or more humans are resurrected. |
+| <code class="docutils literal notranslate"><span class="pre">majority_wait_for_the_dead</span></code> | Decisions are made on a majority (&gt;=50%) basis of the results over the number of robot members but only after enough resurrected robots have resulted to make the majority (if required). |
+| <code class="docutils literal notranslate"><span class="pre">majority</span></code> | Decisions are made on a majority (&gt;=50%) basis of the results over the number of robot members. |
+| <code class="docutils literal notranslate"><span class="pre">decisive</span></code> | Decisions are made on the majority results when the decisiveness limit (defaulted to 5 secs or the value set with the <code class="docutils literal notranslate"><span class="pre">set_decisiveness</span></code> command) has expired. |
+| <code class="docutils literal notranslate"><span class="pre">first</span></code> | Decisions are made on the first result. |</p>
+</div>
+<div class="section" id="set-consensus-consensus-type-for-moniker1-n">
+<h3>set_consensus(<em>consensus_type</em>)_for(<em>moniker1</em>, <em>n…</em>)<a class="headerlink" href="#set-consensus-consensus-type-for-moniker1-n" title="Permalink to this headline">¶</a></h3>
+<p>Consensus of <em>consensus_type</em> will apply only to the whitelist of (<em>moniker1</em>, <em>n…</em>) of monikers (robots, swarms, labels of).</p>
+</div>
+<div class="section" id="set-consensus-consensus-type-not-moniker1-n">
+<h3>set_consensus(<em>consensus_type</em>)_not((<em>moniker1</em>, <em>n…</em>)<a class="headerlink" href="#set-consensus-consensus-type-not-moniker1-n" title="Permalink to this headline">¶</a></h3>
+<p>Consensus of <em>consensus_type</em> will <strong>not</strong> apply to the blacklist of (<em>moniker1</em>, <em>n…</em>) of monikers (robots, swarms, labels of).  The defaulted or last known consensus will apply to those blacklist monikers.</p>
+</div>
+<div class="section" id="set-consensus-consensus-type-for-moniker1-n-not-moniker1-n">
+<h3>set_consensus(<em>consensus_type</em>)_for(<em>moniker1</em>, <em>n…</em>)_not(<em>moniker1</em>, <em>n…</em>)<a class="headerlink" href="#set-consensus-consensus-type-for-moniker1-n-not-moniker1-n" title="Permalink to this headline">¶</a></h3>
+<p>An apply-list with a no-apply-list of monikers (robots, swarms, labels of) for consensus of <em>consensus_type</em>.</p>
+</div>
+</div>
+<div class="section" id="set-decisiveness">
+<h2>set_decisiveness<a class="headerlink" href="#set-decisiveness" title="Permalink to this headline">¶</a></h2>
+<p>Sets the decisiveness in milliseconds to be making decisions, particularly of polls.</p>
+<p>The scope of the <code class="docutils literal notranslate"><span class="pre">set_decisiveness</span></code>  settings is determined by the <code class="docutils literal notranslate"><span class="pre">set_decisiveness</span></code> command location in the diego code.  If the <code class="docutils literal notranslate"><span class="pre">set_decisiveness</span></code> command is placed after the <code class="docutils literal notranslate"><span class="pre">go_diego</span></code> command but before any <code class="docutils literal notranslate"><span class="pre">instruct</span></code> the decisiveness setting will be applied to the whole diego, unless overridden by the next <code class="docutils literal notranslate"><span class="pre">set_decisiveness</span></code> command in the diego code flow.</p>
+<p>If the <code class="docutils literal notranslate"><span class="pre">set_decisiveness</span></code> command is placed after a <code class="docutils literal notranslate"><span class="pre">begin_instruct</span></code> command, the scope of decisiveness will be applied to the <code class="docutils literal notranslate"><span class="pre">instruct</span></code>, unless overridden by the next <code class="docutils literal notranslate"><span class="pre">set_decisiveness</span></code> command (in the same <code class="docutils literal notranslate"><span class="pre">instruct</span></code> or a nested <code class="docutils literal notranslate"><span class="pre">instruct</span></code>) in the diego code flow.</p>
+<p>The lowest level of override occurs with the <code class="docutils literal notranslate"><span class="pre">_with_decisiveness</span></code> sub command, available on most decision commands.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">set_decisiveness</span></code> command has privilege definition ability using both and each of the <code class="docutils literal notranslate"><span class="pre">_for</span></code> and  <code class="docutils literal notranslate"><span class="pre">_not</span></code> sub commands.</p>
+<p>If the  <code class="docutils literal notranslate"><span class="pre">set_decisiveness</span></code> command is never used, the consensus is defaulted to <em>unanimous</em>.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">set_decisiveness</span></code> command does <strong>not</strong> set consensus on elections, only on polls and robot decisions.</p>
+<div class="section" id="set-decisiveness-time-period">
+<h3>set_decisiveness(<em>time_period</em>)<a class="headerlink" href="#set-decisiveness-time-period" title="Permalink to this headline">¶</a></h3>
+<p>Sets the decisiveness is a <em>time_period</em> (<em>in milliseconds</em>) given to robot(s) when making decisions.  When a robot polls other robots the decisiveness timer will start.  While collecting results the decisiveness timer will trigger when the <em>time_period</em> (<em>in milliseconds</em>) has expired.  For decisions with  <code class="docutils literal notranslate"><span class="pre">decisive</span></code>  consensus the majority result will be chosen upon the decisiveness timer triggered.</p>
+</div>
+<div class="section" id="set-decisiveness-time-period-for-moniker1-n">
+<h3>set_decisiveness(<em>time_period</em>)_for(<em>moniker1</em>, <em>n…</em>)<a class="headerlink" href="#set-decisiveness-time-period-for-moniker1-n" title="Permalink to this headline">¶</a></h3>
+<p>Decisiveness of <em>time_period</em> will apply only to the whitelist of (<em>moniker1</em>, <em>n…</em>) of monikers (robots, swarms, labels of).</p>
+</div>
+<div class="section" id="set-decisiveness-time-period-not-moniker1-n">
+<h3>set_decisiveness(<em>time_period</em>)_not((<em>moniker1</em>, <em>n…</em>)<a class="headerlink" href="#set-decisiveness-time-period-not-moniker1-n" title="Permalink to this headline">¶</a></h3>
+<p>Decisiveness of <em>time_period</em> will <strong>not</strong> apply to the blacklist of (<em>moniker1</em>, <em>n…</em>) of monikers (robots, swarms, labels of).  The defaulted or last known consensus will apply to those blacklist monikers.</p>
+</div>
+<div class="section" id="set-decisiveness-time-period-for-moniker1-n-not-moniker1-n">
+<h3>set_decisiveness(<em>time_period</em>)_for(<em>moniker1</em>, <em>n…</em>)_not(<em>moniker1</em>, <em>n…</em>)<a class="headerlink" href="#set-decisiveness-time-period-for-moniker1-n-not-moniker1-n" title="Permalink to this headline">¶</a></h3>
+<p>An apply-list with a no-apply-list of monikers (robots, swarms, labels of) for decisiveness of <em>time_period</em>.</p>
+</div>
+</div>
+<div class="section" id="set-ranking">
+<h2>set_ranking<a class="headerlink" href="#set-ranking" title="Permalink to this headline">¶</a></h2>
+<p>Sets the ranking calculation to use when analysing results of polls and statistics for decisions.</p>
+<div class="section" id="set-ranking-rank-type">
+<h3>set_ranking(<em>rank_type</em>)<a class="headerlink" href="#set-ranking-rank-type" title="Permalink to this headline">¶</a></h3>
+<p>| <code class="docutils literal notranslate"><span class="pre">rank_type</span></code> | Description |
+|:–:|–|
+| <code class="docutils literal notranslate"><span class="pre">std_comp</span></code> | Uses <em>standard competition ranking</em>, also known as “1224” ranking. |
+| <code class="docutils literal notranslate"><span class="pre">mod_comp</span></code> | Uses <em>modified competition ranking</em>, also known as “1334” ranking. |
+| <code class="docutils literal notranslate"><span class="pre">dense</span></code> | Uses <em>dense ranking</em>, also known as “1223” ranking. |
+| <code class="docutils literal notranslate"><span class="pre">ordinal</span></code> | Uses <em>ordinal ranking</em>, also known as “1234” ranking. |
+| <code class="docutils literal notranslate"><span class="pre">fract</span></code> | Uses <em>fractional ranking</em>, also known as “1 2.5 2.5 4” ranking. |
+^See^ ^https://en.wikipedia.org/wiki/Ranking^ ^for^ ^more^ ^information.^</p>
+</div>
+<div class="section" id="set-ranking-rank-type-to-moniker1-n">
+<h3>set_ranking(<em>rank_type</em>)_to(<em>moniker1</em>, <em>n…</em>)<a class="headerlink" href="#set-ranking-rank-type-to-moniker1-n" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="set-distancecalc">
+<h2>set_distancecalc<a class="headerlink" href="#set-distancecalc" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="listen-human">
+<h2>listen_human<a class="headerlink" href="#listen-human" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="detect-human">
+<h2>detect_human<a class="headerlink" href="#detect-human" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id2">
+<h3>detect_human()<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="detect-human-human-moniker">
+<h3>detect_human(<em>human_moniker</em>)<a class="headerlink" href="#detect-human-human-moniker" title="Permalink to this headline">¶</a></h3>
+<p>: definition1</p>
+</div>
+</div>
+<div class="section" id="label-human">
+<h2>label_human<a class="headerlink" href="#label-human" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="learn-human">
+<h2>learn_human<a class="headerlink" href="#learn-human" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="study-human">
+<h2>study_human<a class="headerlink" href="#study-human" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="keep-killcount">
+<h2>keep_killcount<a class="headerlink" href="#keep-killcount" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="kill-human">
+<h2>kill_human<a class="headerlink" href="#kill-human" title="Permalink to this headline">¶</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">kill_human</span></code> is a command for a robot(s) to end the life of an identified human in the physical world using purpose-build tools (i.e. weaponry).  If a robot(s)/swarm has no weaponry the <code class="docutils literal notranslate"><span class="pre">kill_human</span></code> command cannot be executed, and in this case the <code class="docutils literal notranslate"><span class="pre">murder_human</span></code> command should be used.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">kill_human</span></code> command cannot be param-less.</p>
+<div class="section" id="kill-human-human-moniker">
+<h3>kill_human(<em>human_moniker</em>)<a class="headerlink" href="#kill-human-human-moniker" title="Permalink to this headline">¶</a></h3>
+<p>The human identified as <em>human_moniker</em> will be killed using the weaponry of the robot(s)/swarm.</p>
+<p>Note: The <em>human_moniker</em> used in the <code class="docutils literal notranslate"><span class="pre">kill_human</span></code> command is only an identified human in the physical world and <strong>not</strong> a human(s) within the diego.  A human identified in the physical world who is also moniker-ed in the diego, will not killed by the robot, and an ````err(<em>human_moniker</em> is in the diego)``` will be returned in the <em>oh_diego</em> event and ‘<em>bubbled up</em>’.</p>
+</div>
+<div class="section" id="id3">
+<h3>Sub Commands<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="kill-human-human-moniker-count">
+<h3>kill_human(<em>human_moniker</em>)_count()<a class="headerlink" href="#kill-human-human-moniker-count" title="Permalink to this headline">¶</a></h3>
+<p>With the <code class="docutils literal notranslate"><span class="pre">_count</span></code> sub command the robot will keep a kill count of</p>
+</div>
+<div class="section" id="id4">
+<h3>Example<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<p>https://www.globalsecurity.org/wmd/library/policy/army/fm/3-19/Ch7.htm
+In this example a robot(s) will join the ‘<em>patrol main route</em>’ swarm and the swarm will go along route ‘<em>main_route</em>’ in a <em>column</em> formation.  The swarm will continue along ‘<em>main_route</em>’ indefinitely[^kill_human_eg] until a human is detected and subsequently labelled as ‘<em>intruder</em>’.</p>
+<p>Upon detecting the  ‘<em>intruder</em>’ the swarm will transform into a ‘<em>herringbone</em>’ formation, then request for a ‘<em>kill intruder</em>’ order.</p>
+<p>The swarm will continually  <code class="docutils literal notranslate"><span class="pre">learn</span> <span class="pre">-</span> <span class="pre">study</span></code> the ‘<em>intruder</em>’ until a <code class="docutils literal notranslate"><span class="pre">call_order(kill</span> <span class="pre">intruder)</span></code>  is executed from an authority of <em>o4</em> (‘<em>robotenant</em>’) or above.  Upon the <code class="docutils literal notranslate"><span class="pre">call_order</span></code> all robot(s) in the swarm able to kill (i.e. have weaponry) will kill the human (in the physical world) until the human is confirmed dead.</p>
+<p>The killing robots will keep a count of the ‘<em>intruder</em>’s killed.  When the kill is completed all robots will no longer react to a <code class="docutils literal notranslate"><span class="pre">call_order(kill</span> <span class="pre">intruder)</span></code>.  The swarm will re-form into a <em>column</em> formation and  go along route ‘<em>main_route</em>’, entering the first loop.</p>
+<div class="highlight-diego notranslate"><div class="highlight"><pre><span></span>go_diego();
+
+begin_instruct(patrol main route aggressively);
+  
+  detect_human(intruder) ? learn_human(intruder);
+
+  join_swarm(patrol main route);
+
+  form_swarm(patrol main route)_as(column);
+ 
+    go_route(main route)_for(patrol main route) ? go_route(main route);
+
+  learn_human(intruder) : form_swarm(patrol main route)_as(column);	
+
+    pause_swarm(patrol main route) ? form_swarm(patrol main route)_as(herringbone);
+ 
+    form_swarm(patrol main route)_as(herringbone) ? request_order(kill intruder);
+
+    request_order(kill intruder)_fromauthority(o4) ? kill_human(intruder);
+
+  study_human(intruder);
+
+  kill_human(intruder)_count() ? deafon_order(kill intruder);
+
+  deafon_order(kill intruder) ? form_swarm(patrol main route)_as(column);
+  
+end_instruct(patrol main route aggressively);
+
+start_instruct(patrol main route aggressively);
+</pre></div>
+</div>
+<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>graph TD
+    1[&quot;go_diego()&quot;] --&gt; 21[&quot;start_instruct(patrol main route aggressively)&quot;]
+    21 --&gt; 2[&quot;begin_instruct(patrol main route aggressively)&quot;]
+    2 --&gt; 3[&quot;detect_human(intruder)&quot;]
+    3 --?--&gt; 4[&quot;learn_human(intruder)&quot;]
+    3 --&gt; 5[&quot;join_swarm(patrol main route)&quot;]
+    5 --&gt; 6[&quot;form_swarm(patrol main route)_as(column)&quot;]
+    6 --&gt; 7[&quot;go_route(main route)_for(patrol main route)&quot;]
+    7 --?--&gt; 7
+    4 --&gt; 11[&quot;pause_swarm(patrol main route)&quot;]
+    11 --&gt; 12[&quot;form_swarm(patrol main route)_as(herringbone)&quot;]
+    12 --?--&gt; 13[&quot;request_order(kill intruder)&quot;]
+    13 --&gt; 14[&quot;request_order(kill intruder)_fromauthority(o4)&quot;]
+    14 --&gt; 16[&quot;study_human(intruder)&quot;]
+    16 --&gt; 4
+    14 --?--&gt; 15[&quot;kill_human(intruder)&quot;]
+    15 --- 17[&quot;kill_human(intruder)_count()&quot;]
+    17 --?--&gt; 18[&quot;deafon_order(kill intruder)&quot;]
+    18 --?--&gt; 6
+    18 --- 20[&quot;end_instruct(patrol main route aggressively)&quot;]
+</pre></div>
+</div>
+<p>[^kill_human_eg]: In the <code class="docutils literal notranslate"><span class="pre">kill_human</span></code> example, in order for the <code class="docutils literal notranslate"><span class="pre">go_route(main</span> <span class="pre">route)</span></code> to link its own <em>hey_diego</em> event it must be a loop-able route.</p>
+</div>
+</div>
+<div class="section" id="murder-human">
+<h2>murder_human<a class="headerlink" href="#murder-human" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+<div class="section" id="learn-discover-study">
+<h1>Learn, Discover &amp; Study<a class="headerlink" href="#learn-discover-study" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="learn-object">
+<h2>learn_object<a class="headerlink" href="#learn-object" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="learn-animate">
+<h2>learn_animate<a class="headerlink" href="#learn-animate" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="learn-inanimate">
+<h2>learn_inanimate<a class="headerlink" href="#learn-inanimate" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="learn-organic">
+<h2>learn_organic<a class="headerlink" href="#learn-organic" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="id5">
+<h2>learn_human<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="learn-mech">
+<h2>learn_mech<a class="headerlink" href="#learn-mech" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="learn-robot">
+<h2>learn_robot<a class="headerlink" href="#learn-robot" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="discover-human">
+<h2>discover_human()<a class="headerlink" href="#discover-human" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="identify-human">
+<h2>identify_human()<a class="headerlink" href="#identify-human" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="discover-gait">
+<h2>discover_gait()<a class="headerlink" href="#discover-gait" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="discover-behav">
+<h2>discover_behav()<a class="headerlink" href="#discover-behav" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="join-swarm-swarm-moniker">
+<h2>join_swarm(<em>swarm_moniker</em>)<a class="headerlink" href="#join-swarm-swarm-moniker" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="form-swarm-swarm-moniker">
+<h2>form_swarm(<em>swarm_moniker</em>)<a class="headerlink" href="#form-swarm-swarm-moniker" title="Permalink to this headline">¶</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">form_swarm</span></code> command</p>
+<div class="section" id="form-swarm-formation-type-transform-swarm-formation-type">
+<h3>form_swarm(<em>formation_type</em>) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; transform_swarm(<em>formation_type</em>)<a class="headerlink" href="#form-swarm-formation-type-transform-swarm-formation-type" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="form-swarm-formation-type-for-swarm-moniker1-n-transform-swarm-formation-type-for-swarm-moniker1-n">
+<h3>form_swarm(<em>formation_type</em>)_for(<em>swarm_moniker1</em>, <em>n…</em>)&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; transform_swarm(<em>formation_type</em>)_for(<em>swarm_moniker1</em>, <em>n…</em>)<a class="headerlink" href="#form-swarm-formation-type-for-swarm-moniker1-n-transform-swarm-formation-type-for-swarm-moniker1-n" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="form-swarm-formation-type-not-swarm-moniker1-n-transform-swarm-formation-type-not-swarm-moniker1-n">
+<h3>form_swarm(<em>formation_type</em>)_not(<em>swarm_moniker1</em>, <em>n…</em>)&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; transform_swarm(<em>formation_type</em>)_not(<em>swarm_moniker1</em>, <em>n…</em>)<a class="headerlink" href="#form-swarm-formation-type-not-swarm-moniker1-n-transform-swarm-formation-type-not-swarm-moniker1-n" title="Permalink to this headline">¶</a></h3>
+<p>|<code class="docutils literal notranslate"><span class="pre">formation_type</span></code>| Moveable | Description  |
+|–|:–:|–|
+| <code class="docutils literal notranslate"><span class="pre">geometric</span></code> | ✅ |  |
+| <code class="docutils literal notranslate"><span class="pre">shortdiamond</span></code> | ✅ |  |
+| <code class="docutils literal notranslate"><span class="pre">pyramid</span></code> | ✅ |   |
+| <code class="docutils literal notranslate"><span class="pre">typhoon</span></code> | ✅ |   |
+| <code class="docutils literal notranslate"><span class="pre">Lightning</span></code> | ✅ |   |
+| <code class="docutils literal notranslate"><span class="pre">phoenix</span></code> | ✅ |   |
+| <code class="docutils literal notranslate"><span class="pre">tornado</span></code> | ✅ |   |
+| <code class="docutils literal notranslate"><span class="pre">mirror</span></code> | ✅ |   |
+| <code class="docutils literal notranslate"><span class="pre">vee</span></code> | ✅ |   |
+| <code class="docutils literal notranslate"><span class="pre">echelon</span></code> | ✅ |   |
+| <code class="docutils literal notranslate"><span class="pre">column</span></code> | ✅ |   |
+| <code class="docutils literal notranslate"><span class="pre">line</span></code> | ✅ |   |
+| <code class="docutils literal notranslate"><span class="pre">svinfylking</span></code> |  ✅ |  |
+| <code class="docutils literal notranslate"><span class="pre">pacman</span></code> | ✅ |   |
+| <code class="docutils literal notranslate"><span class="pre">wedge</span></code> | ✅ |   |
+| <code class="docutils literal notranslate"><span class="pre">zee</span></code> | ✅ |   |
+| <code class="docutils literal notranslate"><span class="pre">alpha</span></code> | ✅ |   |
+| <code class="docutils literal notranslate"><span class="pre">herringbone</span></code> | ❌ |   |
+| <code class="docutils literal notranslate"><span class="pre">coil</span></code> | ❌ | |
+| <code class="docutils literal notranslate"><span class="pre">cluster</span></code> | ✅ |  |
+| <code class="docutils literal notranslate"><span class="pre">finger</span></code> | ✅ |  |</p>
+<p><strong>Stigmergy</strong></p>
+<p>https://en.wikipedia.org/wiki/Tactical_formation</p>
+</div>
+</div>
+<div class="section" id="pause-swarm-swarm-moniker">
+<h2>pause_swarm(<em>swarm_moniker</em>)<a class="headerlink" href="#pause-swarm-swarm-moniker" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id6">
+<h3>pause_swarm(<em>swarm_moniker</em>)<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="pause-swarm-swarm-moniker-into-stance-type">
+<h3>pause_swarm(<em>swarm_moniker</em>)_into(<em>stance_type</em>)<a class="headerlink" href="#pause-swarm-swarm-moniker-into-stance-type" title="Permalink to this headline">¶</a></h3>
+<p>https://www.globalsecurity.org/wmd/library/policy/army/fm/3-19/Ch7.htm</p>
+<p>https://en.wikipedia.org/wiki/Satellite_formation_flying</p>
+<p><sub>https://www.raf.mod.uk/display-teams/red-arrows/displays/<br>http://thesis.univ-biskra.dz/3859/1/01_thesis_khaldi.pdf</sub></p>
+</div>
+</div>
+<div class="section" id="addto-swarm-swarm-moniker">
+<h2>addto_swarm(<em>swarm_moniker</em>)<a class="headerlink" href="#addto-swarm-swarm-moniker" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="stop-swarm-swarm-moniker">
+<h2>stop_swarm(<em>swarm_moniker</em>)<a class="headerlink" href="#stop-swarm-swarm-moniker" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="removefrom-swarm-swarm-moniker">
+<h2>removefrom_swarm(<em>swarm_moniker</em>)<a class="headerlink" href="#removefrom-swarm-swarm-moniker" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="begin-formation-swarm-moniker">
+<h2>begin_formation(<em>swarm_moniker</em>)<a class="headerlink" href="#begin-formation-swarm-moniker" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="start-formation-formation-moniker">
+<h2>start_formation(<em>formation_moniker</em>)<a class="headerlink" href="#start-formation-formation-moniker" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="start-formation-formation-for-moniker1-n">
+<h3>start_formation(<em>formation</em>)_for(<em>moniker1</em>, <em>n…</em>)<a class="headerlink" href="#start-formation-formation-for-moniker1-n" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="tail-robot-robot-moniker">
+<h2>tail_robot(<em>robot_moniker</em>)<a class="headerlink" href="#tail-robot-robot-moniker" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id7">
+<h3>tail_robot(<em>robot_moniker</em>)<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="tail-robot-robot-moniker-on-route-moniker">
+<h3>tail_robot(<em>robot_moniker</em>)_on(<em>route moniker</em>)<a class="headerlink" href="#tail-robot-robot-moniker-on-route-moniker" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="tail-robot-robot-moniker-by-trail-type">
+<h3>tail_robot(<em>robot_moniker</em>)_by(<em>trail_type</em>)<a class="headerlink" href="#tail-robot-robot-moniker-by-trail-type" title="Permalink to this headline">¶</a></h3>
+<p>|<code class="docutils literal notranslate"><span class="pre">trail_type</span></code>|Description  |
+|–|–|
+| <code class="docutils literal notranslate"><span class="pre">follow</span></code> |  |
+| <code class="docutils literal notranslate"><span class="pre">trail</span></code> | |
+| <code class="docutils literal notranslate"><span class="pre">snake</span></code> | |
+| <code class="docutils literal notranslate"><span class="pre">leapfrog</span></code> | |</p>
+</div>
+</div>
+<div class="section" id="drop-breadcrumbs-route-moniker">
+<h2>drop_breadcrumbs(<em>route_moniker</em>)<a class="headerlink" href="#drop-breadcrumbs-route-moniker" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id8">
+<h3>drop_breadcrumbs(<em>route_moniker</em>)<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="listen-robot-robot-moniker">
+<h2>listen_robot(<em>robot_moniker</em>)<a class="headerlink" href="#listen-robot-robot-moniker" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+<div class="section" id="labelers">
+<h1>Labelers<a class="headerlink" href="#labelers" title="Permalink to this headline">¶</a></h1>
+<p>Labeler commands are used to attach a label to an ‘<em>object(s)</em>’ for a limited scope.  Labelling is useful for robot segregation and compartisation.</p>
+<div class="section" id="label-robot">
+<h2>label_robot<a class="headerlink" href="#label-robot" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="label-robot-label-moniker-for-robot-moniker1-n">
+<h3>label_robot(<em>label_moniker</em>)_for(<em>robot_moniker1</em>, <em>n…</em>)<a class="headerlink" href="#label-robot-label-moniker-for-robot-moniker1-n" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="label-winner">
+<h2>label_winner<a class="headerlink" href="#label-winner" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="label-ranker">
+<h2>label_ranker<a class="headerlink" href="#label-ranker" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="id9">
+<h2>label_human<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="label-inanimate-animate-moniker">
+<h2>label_inanimate(<em>animate_moniker</em>)<a class="headerlink" href="#label-inanimate-animate-moniker" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="id10">
+<h2>label_winner()<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="label-winner-label-moniker">
+<h3>label_winner(<em>label_moniker</em>)<a class="headerlink" href="#label-winner-label-moniker" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="id11">
+<h2>label_ranker()<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="label-ranker-label-moniker-for-rank1-n">
+<h3>label_ranker(<em>label_moniker</em>)_for(rank1, n…)<a class="headerlink" href="#label-ranker-label-moniker-for-rank1-n" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="id12">
+<h3>label_ranker(<em>label_moniker</em>)_for(rank1, n…)<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="label-ranker-rank1-n">
+<h3>label_ranker(rank1, n…)_<a class="headerlink" href="#label-ranker-rank1-n" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="label-authority">
+<h2>label_authority<a class="headerlink" href="#label-authority" title="Permalink to this headline">¶</a></h2>
+<p>Labels list of monikers (or all) with authorization ranks.  Authorization ranks are used in make decisions upon <code class="docutils literal notranslate"><span class="pre">authority</span></code> consensus.</p>
+<div class="section" id="label-authority-rank-label-authority-rank-moniker">
+<h3>label_authority(<em>rank</em>) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; label_authority(<em>rank_moniker</em>)<a class="headerlink" href="#label-authority-rank-label-authority-rank-moniker" title="Permalink to this headline">¶</a></h3>
+<p>Sets all robots (robots, swarms, labels of) under the scope of <code class="docutils literal notranslate"><span class="pre">instruct</span></code> then ``go_diego``` with authorization rank ‘<em>rank</em>’.</p>
+<p>A ‘<em>rank_moniker</em>’ (shown in table below) can be used in place (or interchangably) with ‘<em>rank</em>’.</p>
+<blockquote>
+<div>Warning:
+Using the <code class="docutils literal notranslate"><span class="pre">label_authority</span></code> command with no privilege sub commands will set <strong>all</strong> robots/swarms to the <em>rank</em> which could result in delays/warnings/errors in achieving consensus.</div></blockquote>
+<p>Ranks and rank monikers available are shown below:
+| <code class="docutils literal notranslate"><span class="pre">rank</span></code> | Ensignia | Rank Moniker | Example Human Equivalent[^human_ranks]<br>Army / Navy / Air Force / Police (Feds) |
+|–|:–:|–|–|
+| o11 | | robomiral | Field Marshal / Admiral of the Fleet / Marshal of the air force / Commissioner |
+| o10 | | robommisssioner | General / Admiral / Air Chief Marshal /  Deputy Commissioner / Director |
+| o9 | | roborshal | Lieutenant General / Vice Admiral / Air Marshal /  Assistant Commissioner |
+| o8 | | roboneral | Major General / Rear Admiral / Air Vice-Marshal / Commander / Chief od Staff |
+| o7 | | robomodore | Brigadier / Commodore / Air Commodore / Superintendent |
+| o6 | | robolonel | Colonel / Captain / Group Captain / Deputy Director |
+| o7 | | robommander | Lieutenant Colonel / Commander / Wing Commander |
+| o6 | | robojor| Major / Lieutenant Commander / Squadron Leader |
+| o5 | | roboptain | Captain / Lieutenant / Flight Lieutenant |
+| o4 | | robotenant | Lieutenant / Sub Lieutenant / Flying Officer / Inspector |
+| o3 | | roboilot | 2nd Lieutenant / Midshipman / Pilot / Sergeant |
+| o2 | | roborector | Officer / Officer / Flight Cadet / Leading Senior Constable |
+| o1 | | robofficer | Officer / Officer / Flight Cadet / Leading Senior Constable |
+| e4 | | robonstable | Sergeant Major / Chief Petty Officer / Warrant Officer / Senior Constable |
+| e3 | | robergeant | Sergeant /  Petty Officer / Sergeant / Constable First Class |
+| e2 | | roborporal | Bombardier / Leading Seaman / Corporal / Constable / Special Agent |
+| e1 | | roboagent | Private / Seaman / Airman / Recruit / Trainee |
+[^human_ranks]: Australian military and a mix of state and federal Australian and US FBI police force ranks were used for equivalence.</p>
+</div>
+<div class="section" id="label-authority-rank-to-moniker1-n-label-authority-rank-moniker-to-moniker1-n">
+<h3>label_authority(<em>rank</em>)_to(<em>moniker1</em>, <em>n…</em>) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; label_authority(<em>rank_moniker</em>)_to(<em>moniker1</em>, <em>n…</em>)<a class="headerlink" href="#label-authority-rank-to-moniker1-n-label-authority-rank-moniker-to-moniker1-n" title="Permalink to this headline">¶</a></h3>
+<p>Sets monikers (robots, swarms, labels of) in the whitelist under the scope of <code class="docutils literal notranslate"><span class="pre">instruct</span></code> then ``go_diego``` with authorization rank ‘<em>rank</em>’.</p>
+</div>
+<div class="section" id="id13">
+<h3>label_authority(++)<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="label-authority-rank-to-moniker1-n">
+<h3>label_authority(<em>rank</em>)_to(<em>moniker1</em>, <em>n…</em>)<a class="headerlink" href="#label-authority-rank-to-moniker1-n" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="label-authority-to-moniker1-n-authority-promote-moniker1-n">
+<h3>label_authority(++)_to(<em>moniker1</em>, <em>n…</em>) &nbsp; &nbsp;authority_promote(<em>moniker1</em>, <em>n…</em>)<a class="headerlink" href="#label-authority-to-moniker1-n-authority-promote-moniker1-n" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="set-authority-rank-to-moniker1-n">
+<h3>set_authority(<em>rank</em>)_to(<em>moniker1</em>, <em>n…</em>)<a class="headerlink" href="#set-authority-rank-to-moniker1-n" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="set-authority-rank-not-moniker1-n">
+<h3>set_authority(<em>rank</em>)_not(<em>moniker1</em>, <em>n…</em>)<a class="headerlink" href="#set-authority-rank-not-moniker1-n" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="alert-human-moniker">
+<h2>alert_human(<em>moniker</em>)<a class="headerlink" href="#alert-human-moniker" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="find-human-human-moniker">
+<h2>find_human(<em>human_moniker</em>)<a class="headerlink" href="#find-human-human-moniker" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="listen-find-moniker">
+<h2>listen_find(<em>moniker</em>)<a class="headerlink" href="#listen-find-moniker" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="ask-point-point-moniker">
+<h2>ask_point(<em>point_moniker</em>)<a class="headerlink" href="#ask-point-point-moniker" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="report-energy-route-moniker">
+<h2>report_energy(<em>route_moniker</em>)<a class="headerlink" href="#report-energy-route-moniker" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+<div class="section" id="listeners">
+<h1>Listeners<a class="headerlink" href="#listeners" title="Permalink to this headline">¶</a></h1>
+<p>Listener commands instruct the robot to ‘listen out’ for a type of object that match specific criteria and then trigger the <em>hey_diego</em> event.  Listener commands can have an <em>oh_diego</em> command which is triggered (the <em>oh_diego</em> event) when the cursor (focus) leaves an <code class="docutils literal notranslate"><span class="pre">instruct</span></code> without any <em>hey_diego</em> event triggered.</p>
+<p>All listener commands ‘leak’, meaning that the <em>hey_diego</em> and <em>oh_diego</em> events are disassociated to the listener command.  To prevent the leakage seeping into the rest of your instructions use the listener keep command <code class="docutils literal notranslate"><span class="pre">keep_listening()</span></code>.</p>
+<div class="section" id="listen-point">
+<h2>listen_point<a class="headerlink" href="#listen-point" title="Permalink to this headline">¶</a></h2>
+<p>Listens for a point  from <code class="docutils literal notranslate"><span class="pre">call_point</span></code> with matching <em><code class="docutils literal notranslate"><span class="pre">point_moniker</span></code></em>; <code class="docutils literal notranslate"><span class="pre">call_point</span></code> matching a <em>focal(s)</em> (<code class="docutils literal notranslate"><span class="pre">_around</span></code>, <code class="docutils literal notranslate"><span class="pre">_in</span></code>, <code class="docutils literal notranslate"><span class="pre">_within</span></code>) with/without a matching <em><code class="docutils literal notranslate"><span class="pre">point_moniker</span></code></em>; <code class="docutils literal notranslate"><span class="pre">found_point</span></code> matching a <em>focal(s)</em> (<code class="docutils literal notranslate"><span class="pre">_around</span></code>, <code class="docutils literal notranslate"><span class="pre">_in</span></code>, <code class="docutils literal notranslate"><span class="pre">_within</span></code>) with/without a matching <em><code class="docutils literal notranslate"><span class="pre">point_moniker</span></code></em>; and, <code class="docutils literal notranslate"><span class="pre">at_point</span></code> matching a <em>focal(s)</em> (<code class="docutils literal notranslate"><span class="pre">_around</span></code>, <code class="docutils literal notranslate"><span class="pre">_in</span></code>, <code class="docutils literal notranslate"><span class="pre">_within</span></code>) with/without a matching <em><code class="docutils literal notranslate"><span class="pre">point_moniker</span></code></em></p>
+<div class="section" id="id14">
+<h3>Linking &amp; Events<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h3>
+<p>| | do_diego | hey_diego | oh_diego |
+|–|:–:|:–:|:–:|
+| events: | <code class="docutils literal notranslate"><span class="pre">keep_listening</span></code> |  <code class="docutils literal notranslate"><span class="pre">call_point</span></code><br><code class="docutils literal notranslate"><span class="pre">found_point</span></code><br><code class="docutils literal notranslate"><span class="pre">detect_point</span></code><br><em>matching criteria</em> | <em>non-event leaving the <code class="docutils literal notranslate"><span class="pre">instruct</span></code></em> |
+| cmds: | <code class="docutils literal notranslate"><span class="pre">listen_point</span></code> | ✅ required | ✅ optional |
+The <em>go_diego</em> event of the <code class="docutils literal notranslate"><span class="pre">listen_point</span></code> command begins on a matching <em>call</em> ( <code class="docutils literal notranslate"><span class="pre">call_point(</span></code><em><code class="docutils literal notranslate"><span class="pre">point_moniker</span></code></em><code class="docutils literal notranslate"><span class="pre">)</span></code><em><code class="docutils literal notranslate"><span class="pre">...</span></code></em>); <em>find</em> <code class="docutils literal notranslate"><span class="pre">fall_point(</span></code><em><code class="docutils literal notranslate"><span class="pre">point_moniker</span></code></em><code class="docutils literal notranslate"><span class="pre">)</span></code><em><code class="docutils literal notranslate"><span class="pre">...</span></code></em>).  There is no <em>nogo_diego</em> event.</p>
+</div>
+<div class="section" id="commands">
+<h3>Commands<a class="headerlink" href="#commands" title="Permalink to this headline">¶</a></h3>
+<p>There are only two <code class="docutils literal notranslate"><span class="pre">listen_point</span></code> commands: parameter-less (<code class="docutils literal notranslate"><span class="pre">listen_point()</span></code>) and using the <em><code class="docutils literal notranslate"><span class="pre">point_moniker</span></code></em> parameter ( <code class="docutils literal notranslate"><span class="pre">listen_point(</span></code><em><code class="docutils literal notranslate"><span class="pre">point_moniker</span></code></em><code class="docutils literal notranslate"><span class="pre">)</span></code>).</p>
+<div class="section" id="id15">
+<h4>listen_point()<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h4>
+<p>The robot will remember a <em>listener</em> for any point and update/add the point in its world memory.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">listen_point()</span></code> command with no <em>focal sub commands</em> is redundant, since the default is for a <em>diego</em> to always listen for all points. However using <code class="docutils literal notranslate"><span class="pre">listen_point()</span></code> with a <em>focal sub command</em> may be required in certain scenarios, such as, a ‘<em>discover-then-detect</em>’ scenario.</p>
+<p>When a <code class="docutils literal notranslate"><span class="pre">listen_point()</span></code> command with matching <em>focal sub commands</em> is triggered, the point will be updated/added to the robot’s world memory, even if the <em>point_moniker</em> is unknown.  An unknown point_moniker will be given a temporary moniker by the robot.  A robot can use <code class="docutils literal notranslate"><span class="pre">sync_point</span></code> to collaborate with other robots/humans on the correct <em>point_moniker</em>.</p>
+</div>
+<div class="section" id="listen-point-point-moniker">
+<h4>listen_point(<em>point_moniker</em>)<a class="headerlink" href="#listen-point-point-moniker" title="Permalink to this headline">¶</a></h4>
+<p>The robot will remember a <em>listener</em> for the <em>point_moniker</em>, and add the <em>point_moniker</em> as a <em>point</em> in its world memory.  The robot will listen only for the lifetime of the <code class="docutils literal notranslate"><span class="pre">instruct</span></code> or if the command <code class="docutils literal notranslate"><span class="pre">deafon_point(</span></code><em><code class="docutils literal notranslate"><span class="pre">point_moniker</span></code></em><code class="docutils literal notranslate"><span class="pre">)</span></code>  is instructed.  If the robot, leaves and then returns to the <code class="docutils literal notranslate"><span class="pre">instruct</span></code>, the <em>listener</em> will automatically be re-established.</p>
+</div>
+</div>
+<div class="section" id="id16">
+<h3>Sub Commands<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h3>
+<p>The  <code class="docutils literal notranslate"><span class="pre">listen_point()</span></code> and <code class="docutils literal notranslate"><span class="pre">listen_point(</span></code><em><code class="docutils literal notranslate"><span class="pre">point_moniker</span></code></em><code class="docutils literal notranslate"><span class="pre">)</span></code>commands have two categories of sub commands: <em>zonals</em>, which provide criteria for a match for a zonal as a shape (<code class="docutils literal notranslate"><span class="pre">_around</span></code>, <code class="docutils literal notranslate"><span class="pre">_in</span></code>) or as an ploygon/area (<code class="docutils literal notranslate"><span class="pre">_within</span></code>); and <em>privileges</em> (<code class="docutils literal notranslate"><span class="pre">_for</span></code> and <code class="docutils literal notranslate"><span class="pre">_not</span></code>).</p>
+<div class="section" id="around-circle-moniker">
+<h4>_around(<em>circle_moniker</em>)<a class="headerlink" href="#around-circle-moniker" title="Permalink to this headline">¶</a></h4>
+<p>A <em>zonal sub command</em> using a known circle of <em>circle_moniker</em> (<em>zone</em> of <em>circle</em> type) as criteria for matching the <em>point_moniker</em> or any point’s position ( <em>x_lat</em>, <em>y_lat</em>) on the x-y plane only (2D) against the encompassing ( <em>x_lat</em>, <em>y_lat</em>) of the  <em>circle_moniker</em> circle.  The circle can be: pre-defined in <em>zones</em> of <em>circle</em> type in <em>diego declarations</em>; or in executed in code using <code class="docutils literal notranslate"><span class="pre">call_zone(</span></code><em><code class="docutils literal notranslate"><span class="pre">zone_moniker</span></code></em><code class="docutils literal notranslate"><span class="pre">,</span> <span class="pre">circle)_at</span></code><em><code class="docutils literal notranslate"><span class="pre">...</span></code></em>.</p>
+</div>
+<div class="section" id="around-map-x-lat-y-lat-radius">
+<h4>_around(<em>map</em>, <em>x_lat</em>, <em>y_lat</em>, <em>radius</em>)<a class="headerlink" href="#around-map-x-lat-y-lat-radius" title="Permalink to this headline">¶</a></h4>
+<p>A <em>zonal sub command</em> using a defined circle on map <em><code class="docutils literal notranslate"><span class="pre">map</span></code></em> at position <em><code class="docutils literal notranslate"><span class="pre">x_lat</span></code></em>, <em><code class="docutils literal notranslate"><span class="pre">y_lat</span></code></em> with radius <em><code class="docutils literal notranslate"><span class="pre">radius</span></code></em> as criteria for matching the <em>point_moniker</em> or any point’s position ( <em>x_lat</em>, <em>y_lat</em>) on the x-y plane only (2D) against the positions ( <em>x_lat</em>, <em>y_lat</em>) of the  <em>circle_moniker</em> circle.</p>
+</div>
+<div class="section" id="around-ring-moniker">
+<h4>_around(<em>ring_moniker</em>)<a class="headerlink" href="#around-ring-moniker" title="Permalink to this headline">¶</a></h4>
+<p>A <em>zonal sub command</em> using a known ring of <em>ring_moniker</em> (<em>zone</em> of <em>ring</em> type) as criteria for matching the <em>point_moniker</em> or any point’s position ( <em>x_lat</em>, <em>y_lat</em>) on the x-y plane only (2D) against the encompassing ( <em>x_lat</em>, <em>y_lat</em>) of the  <em>ring_moniker</em> ring.  The ring can be: pre-defined in <em>zones</em> of <em>ring</em> type in <em>diego declarations</em>; or in executed in code using <code class="docutils literal notranslate"><span class="pre">call_zone(</span></code><em><code class="docutils literal notranslate"><span class="pre">zone_moniker</span></code></em><code class="docutils literal notranslate"><span class="pre">,</span> <span class="pre">ring)_at</span></code><em><code class="docutils literal notranslate"><span class="pre">...</span></code></em>.</p>
+</div>
+<div class="section" id="around-map-x-lat-y-lat-z-alt-minor-radius-major-radius">
+<h4>_around(<em>map</em>, <em>x_lat</em>, <em>y_lat</em>, <em>z_alt</em>, <em>minor_radius</em>, <em>major_radius</em>)<a class="headerlink" href="#around-map-x-lat-y-lat-z-alt-minor-radius-major-radius" title="Permalink to this headline">¶</a></h4>
+<p>A <em>zonal sub command</em> using a defined ring on map <em><code class="docutils literal notranslate"><span class="pre">map</span></code></em> at position <em><code class="docutils literal notranslate"><span class="pre">x_lat</span></code></em>, <em><code class="docutils literal notranslate"><span class="pre">y_lat</span></code></em> with minor radius <em><code class="docutils literal notranslate"><span class="pre">minor_radius</span></code></em> and major radius <em><code class="docutils literal notranslate"><span class="pre">major_radius</span></code></em> as criteria for matching the <em>point_moniker</em> or any point’s position ( <em>x_lat</em>, <em>y_lat</em>) on the x-y plane only (2D) against the positions ( <em>x_lat</em>, <em>y_lat</em>) of the  <em>ring_moniker</em> ring.</p>
+</div>
+<div class="section" id="around-sphere-moniker">
+<h4>_around(<em>sphere_moniker</em>)<a class="headerlink" href="#around-sphere-moniker" title="Permalink to this headline">¶</a></h4>
+<p>A <em>zonal sub command</em> using a known sphere of <em>sphere_moniker</em> (<em>zone</em> of <em>sphere</em> type) as criteria for matching the <em>point_moniker</em> or any point’s position ( <em>x_lat</em>, <em>y_lat</em>, <em>z_alt</em>) in 3D against the encompassing ( <em>x_lat</em>, <em>y_lat</em>, <em>z_lat</em>) of the  <em>sphere_moniker</em> sphere.  The sphere can be: pre-defined in <em>zones</em> of <em>sphere</em> type in <em>diego declarations</em>; or in executed in code using <code class="docutils literal notranslate"><span class="pre">call_zone(</span></code><em><code class="docutils literal notranslate"><span class="pre">zone_moniker</span></code></em><code class="docutils literal notranslate"><span class="pre">,</span> <span class="pre">sphere)_at</span></code><em><code class="docutils literal notranslate"><span class="pre">...</span></code></em>.</p>
+</div>
+<div class="section" id="around-map-x-lat1-y-lat1-z-alt1-x-lat2-y-lat2-z-alt2-radius">
+<h4>_around(<em>map</em>, <em>x_lat1</em>, <em>y_lat1</em>, <em>z_alt1</em>, <em>x_lat2</em>, <em>y_lat2</em>, <em>z_alt2</em>, <em>radius</em>)<a class="headerlink" href="#around-map-x-lat1-y-lat1-z-alt1-x-lat2-y-lat2-z-alt2-radius" title="Permalink to this headline">¶</a></h4>
+<p>A <em>zonal sub command</em> using a defined circle on map <em><code class="docutils literal notranslate"><span class="pre">map</span></code></em> at position <em><code class="docutils literal notranslate"><span class="pre">x_lat</span></code></em>, <em><code class="docutils literal notranslate"><span class="pre">y_lat</span></code></em> with radius <em><code class="docutils literal notranslate"><span class="pre">radius</span></code></em> as criteria for matching the <em>point_moniker</em> or any point’s position ( <em>x_lat</em>, <em>y_lat</em>) on the x-y plane only (2D) against the positions ( <em>x_lat</em>, <em>y_lat</em>) of the  <em>circle_moniker</em> circle.</p>
+</div>
+<div class="section" id="around-torus-moniker">
+<h4>_around(<em>torus_moniker</em>)<a class="headerlink" href="#around-torus-moniker" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="around-map-x-lat1-y-lat1-z-alt1-x-lat2-y-lat2-z-alt2-minor-radius-major-radius-roll-pitch-yaw">
+<h4>_around(<em>map</em>, <em>x_lat1</em>, <em>y_lat1</em>, <em>z_alt1</em>, <em>x_lat2</em>, <em>y_lat2</em>, <em>z_alt2</em>, <em>minor_radius</em>, <em>major_radius</em>, <em>roll</em>, <em>pitch</em>, <em>yaw</em>)<a class="headerlink" href="#around-map-x-lat1-y-lat1-z-alt1-x-lat2-y-lat2-z-alt2-minor-radius-major-radius-roll-pitch-yaw" title="Permalink to this headline">¶</a></h4>
+</div>
+</div>
+<div class="section" id="zonal-in">
+<h3>Zonal (_in)<a class="headerlink" href="#zonal-in" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="listen-point-point-moniker-in-rect-moniker">
+<h4>listen_point(<em>point_moniker</em>)_in(<em>rect_moniker</em>)<a class="headerlink" href="#listen-point-point-moniker-in-rect-moniker" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="listen-point-point-moniker-in-map-x-lat1-y-lat1-z-alt1-x-lat2-y-lat2-z-alt2-x-lat3-y-lat3-z-alt3">
+<h4>listen_point(<em>point_moniker</em>)_in(<em>map</em>, <em>x_lat1</em>, <em>y_lat1</em>, <em>z_alt1</em>, <em>x_lat2</em>, <em>y_lat2</em>, <em>z_alt2</em>, <em>x_lat3</em>, <em>y_lat3</em>, <em>z_alt3</em>)<a class="headerlink" href="#listen-point-point-moniker-in-map-x-lat1-y-lat1-z-alt1-x-lat2-y-lat2-z-alt2-x-lat3-y-lat3-z-alt3" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="listen-point-point-moniker-in-cubeoid-moniker">
+<h4>listen_point(<em>point_moniker</em>)_in(<em>cubeoid_moniker</em>)<a class="headerlink" href="#listen-point-point-moniker-in-cubeoid-moniker" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id17">
+<h4>listen_point(<em>point_moniker</em>)_in(<em>map</em>, <em>x_lat1</em>, <em>y_lat1</em>, <em>z_alt1</em>, <em>x_lat2</em>, <em>y_lat2</em>, <em>z_alt2</em>, <em>x_lat3</em>, <em>y_lat3</em>, <em>z_alt3</em>)<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h4>
+</div>
+</div>
+<div class="section" id="zonal-within">
+<h3>Zonal (_within)<a class="headerlink" href="#zonal-within" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="listen-point-point-moniker-within-zone-moniker">
+<h4>listen_point(<em>point_moniker</em>)_within(<em>zone_moniker</em>)<a class="headerlink" href="#listen-point-point-moniker-within-zone-moniker" title="Permalink to this headline">¶</a></h4>
+</div>
+</div>
+<div class="section" id="id18">
+<h3>Privileges<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="listen-point-point-moniker-for-moniker1-n">
+<h4>listen_point(<em>point_moniker</em>)<em>[…]</em>_for(<em>moniker1</em>, <em>n…</em>)<a class="headerlink" href="#listen-point-point-moniker-for-moniker1-n" title="Permalink to this headline">¶</a></h4>
+<p>A whitelist (<em>moniker1</em>, <em>n…</em>) of robots (and/or robots with labels) that should listen for the <em>point_moniker</em>.</p>
+</div>
+<div class="section" id="listen-point-point-moniker-not-moniker1-n">
+<h4>listen_point(<em>point_moniker</em>)<em>[…]</em>_not((<em>moniker1</em>, <em>n…</em>)<a class="headerlink" href="#listen-point-point-moniker-not-moniker1-n" title="Permalink to this headline">¶</a></h4>
+<p>A blacklist (<em>moniker1</em>, <em>n…</em>) of robots (and/or robots with labels) that are denied to listen for the <em>point_moniker</em>.</p>
+</div>
+</div>
+</div>
+<div class="section" id="listen-geofence">
+<h2>listen_geofence<a class="headerlink" href="#listen-geofence" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="listen-formation-formation-moniker">
+<h2>listen_formation(<em>formation_moniker</em>)<a class="headerlink" href="#listen-formation-formation-moniker" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="listen-robot">
+<h2>listen_robot<a class="headerlink" href="#listen-robot" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="id19">
+<h2>listen_human<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="listen-route">
+<h2>listen_route<a class="headerlink" href="#listen-route" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="listen-swarm-swarm-moniker">
+<h2>listen_swarm(<em>swarm_moniker</em>)<a class="headerlink" href="#listen-swarm-swarm-moniker" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="call-point-point-moniker">
+<h2>call_point(<em>point_moniker</em>)<a class="headerlink" href="#call-point-point-moniker" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id20">
+<h3>call_point(<em>point_moniker</em>)<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="call-point-point-moniker-at-map-x-lat-y-long-z-alt">
+<h3>call_point(<em>point_moniker</em>)_at(<em>map</em>, <em>x_lat</em>, <em>y_long</em>, <em>z_alt</em>)<a class="headerlink" href="#call-point-point-moniker-at-map-x-lat-y-long-z-alt" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="call-point-point-moniker-at-map-type-x-lat-y-long-z-alt">
+<h3>call_point(<em>point_moniker</em>)_at(<em>map_type</em>, <em>x_lat</em>, <em>y_long</em>, <em>z_alt</em>)<a class="headerlink" href="#call-point-point-moniker-at-map-type-x-lat-y-long-z-alt" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="call-point-point-moniker-for-moniker1-n">
+<h3>call_point(<em>point_moniker</em>)<em>[…]</em>_for(<em>moniker1</em>, <em>n…</em>)<a class="headerlink" href="#call-point-point-moniker-for-moniker1-n" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="call-point-point-moniker-not-moniker1-n">
+<h3>call_point(<em>point_moniker</em>)<em>[…]</em>_not(<em>moniker1</em>, <em>n…</em>)<a class="headerlink" href="#call-point-point-moniker-not-moniker1-n" title="Permalink to this headline">¶</a></h3>
+<p>rallying point)_at(<code class="docutils literal notranslate"><span class="pre">*</span></code>map<code class="docutils literal notranslate"><span class="pre">*</span></code>, <code class="docutils literal notranslate"><span class="pre">*</span></code>x<code class="docutils literal notranslate"><span class="pre">*</span></code>, <code class="docutils literal notranslate"><span class="pre">*</span></code>y<code class="docutils literal notranslate"><span class="pre">*</span></code>, <code class="docutils literal notranslate"><span class="pre">*</span></code>z<code class="docutils literal notranslate"><span class="pre">*</span></code>)<code class="docutils literal notranslate"><span class="pre">.</span> <span class="pre">When</span> <span class="pre">matched</span> <span class="pre">save</span> <span class="pre">point</span> <span class="pre">coordinates</span> <span class="pre">in</span> <span class="pre">memory,</span> <span class="pre">then</span> <span class="pre">run</span> </code>poll_distance(rallying point, unanimous__by(direct);```.</p>
+<div class="highlight-diego notranslate"><div class="highlight"><pre><span></span>
+  poll_distance(intruder)_getrank(1) ? add_label(2nd);
+  poll_distance(intruder)_getrank(2) ? add_label(2nd);
+  
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="listen-point-sentry-point">
+<h2>listen_point(sentry point)<a class="headerlink" href="#listen-point-sentry-point" title="Permalink to this headline">¶</a></h2>
+<p>Each robot will check all ‘calls’ for <code class="docutils literal notranslate"><span class="pre">call_point(sentry</span> <span class="pre">point)_at(</span></code><em><code class="docutils literal notranslate"><span class="pre">map</span></code></em><code class="docutils literal notranslate"><span class="pre">,</span> </code><em><code class="docutils literal notranslate"><span class="pre">x</span></code></em><code class="docutils literal notranslate"><span class="pre">,</span> </code><em><code class="docutils literal notranslate"><span class="pre">y</span></code></em><code class="docutils literal notranslate"><span class="pre">,</span> </code><em><code class="docutils literal notranslate"><span class="pre">z</span></code></em><code class="docutils literal notranslate"><span class="pre">)</span></code>. When matched each robot will save the point coordinates, and then run <code class="docutils literal notranslate"><span class="pre">go_point(sentry</span> <span class="pre">point)</span></code>.</p>
+</div>
+<div class="section" id="keep-listening">
+<h2>keep_listening()<a class="headerlink" href="#keep-listening" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id21">
+<h3>keep_listening()<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h3>
+<p>All robots will not move pass this command until a <code class="docutils literal notranslate"><span class="pre">listen</span></code> command is run and matched.</p>
+</div>
+</div>
+</div>
+<div class="section" id="goes">
+<h1>Goes<a class="headerlink" href="#goes" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="go-point">
+<h2>go_point<a class="headerlink" href="#go-point" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="go-route">
+<h2>go_route<a class="headerlink" href="#go-route" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="go-route-route-moniker">
+<h3>go_route(<em>route_moniker</em>)<a class="headerlink" href="#go-route-route-moniker" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="go-route-route-moniker-until">
+<h3>go_route(<em>route_moniker</em>)_until(<a class="headerlink" href="#go-route-route-moniker-until" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="goback-route-route-moniker">
+<h3>goback_route(<em>route_moniker</em>)<a class="headerlink" href="#goback-route-route-moniker" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="go-route-route-moniker-goback">
+<h3>go_route(<em>route_moniker</em>)_goback()<a class="headerlink" href="#go-route-route-moniker-goback" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="go-detect">
+<h2>go_detect<a class="headerlink" href="#go-detect" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="goto-charge">
+<h2>goto_charge<a class="headerlink" href="#goto-charge" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="gointo-hiding">
+<h2>gointo_hiding<a class="headerlink" href="#gointo-hiding" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+<div class="section" id="elections">
+<h1>Elections<a class="headerlink" href="#elections" title="Permalink to this headline">¶</a></h1>
+</div>
+<div class="section" id="pollsters">
+<h1>Pollsters<a class="headerlink" href="#pollsters" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="poll-distance-moniker">
+<h2>poll_distance(<em>moniker</em>)<a class="headerlink" href="#poll-distance-moniker" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="poll-distance-point-moniker">
+<h3>poll_distance(<em>point_moniker</em>)<a class="headerlink" href="#poll-distance-point-moniker" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="poll-distance-point-moniker-by-distance-metric">
+<h3>poll_distance(<em>point_moniker</em>)<em>[…]</em>_by(<em>distance_metric</em>)<a class="headerlink" href="#poll-distance-point-moniker-by-distance-metric" title="Permalink to this headline">¶</a></h3>
+<p>A robot will poll all robots for their distance to <em>point_moniker</em> from their current position.  The additional <em>distance_metric</em> sub command determines the calculation used in the return poll. <em>distance_metric</em> is a enumerator:
+|<code class="docutils literal notranslate"><span class="pre">distance_metric</span></code>| Description |
+|–|–|
+| <code class="docutils literal notranslate"><span class="pre">direct</span></code> | Calculates the distance based on ‘euclidean distance’ calculation on the <code class="docutils literal notranslate"><span class="pre">local</span></code> map and <code class="docutils literal notranslate"><span class="pre">local</span></code> map types.  For the <code class="docutils literal notranslate"><span class="pre">global</span></code> map and <code class="docutils literal notranslate"><span class="pre">global</span></code> map types the ‘haversine’ formula is used to calculate the great-circle distance.<br> Distance is returned in metres.   |
+| <code class="docutils literal notranslate"><span class="pre">cityblock</span></code> | Calculates the distance based on ‘manhattan distance’ calculation on a  <code class="docutils literal notranslate"><span class="pre">local</span></code> map and <code class="docutils literal notranslate"><span class="pre">local</span></code> map types.  For the <code class="docutils literal notranslate"><span class="pre">global</span></code> map and <code class="docutils literal notranslate"><span class="pre">global</span></code> map types the ‘haversine’ formula is used to calculate the great-circle distance between each <em>nth</em> axis..<br>Distance is returned in metres.<br />| <code class="docutils literal notranslate"><span class="pre">learned</span></code> | Calculates the distance using averaged odometric past knowledge (if any).  Where the robot has no past knowledge, direct distance is used.<br>Distance in returned in metres with an additional percentage of <em>calculated</em> distances (against direct distances) used.<br><strong>Note: By using the <code class="docutils literal notranslate"><span class="pre">_under(</span></code><em><code class="docutils literal notranslate"><span class="pre">condition_moniker</span></code></em><code class="docutils literal notranslate"><span class="pre">)</span></code> sub command the <code class="docutils literal notranslate"><span class="pre">calc</span></code> distance calculation will only use past knowledge matching the <em><code class="docutils literal notranslate"><span class="pre">condition</span> <span class="pre">moniker</span></code></em>.</strong> |
+<sub>For a simplified explanation of ‘euclidean’ and ‘manhattan’ distance calculations see:  https://www.analyticsvidhya.com/blog/2020/02/4-types-of-distance-metrics-in-machine-learning/</sub></p>
+</div>
+<div class="section" id="poll-distance-route-moniker">
+<h3>poll_distance(<em>route_moniker</em>)<a class="headerlink" href="#poll-distance-route-moniker" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="poll-distance-route-moniker-at-start-point-end-point">
+<h3>poll_distance(<em>route_moniker</em>)_at(<em>start_point</em>, <em>end_point</em>)<a class="headerlink" href="#poll-distance-route-moniker-at-start-point-end-point" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="poll-distance-start-point-end-point">
+<h3>poll_distance(<em>start_point</em>, <em>end_point</em>)<a class="headerlink" href="#poll-distance-start-point-end-point" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="poll-distance-point-moniker-in-distance">
+<h3>poll_distance(<em>point_moniker</em>)_in(<em>distance</em>)<a class="headerlink" href="#poll-distance-point-moniker-in-distance" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="poll-energy-moniker">
+<h2>poll_energy(<em>moniker</em>)<a class="headerlink" href="#poll-energy-moniker" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="poll-energy-point-moniker">
+<h3>poll_energy(<em>point_moniker</em>)<a class="headerlink" href="#poll-energy-point-moniker" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="poll-energy-route-moniker">
+<h3>poll_energy(<em>route_moniker</em>)<a class="headerlink" href="#poll-energy-route-moniker" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="poll-energy-route-moniker-at-start-point-end-point">
+<h3>poll_energy(<em>route_moniker</em>)_at(<em>start_point</em>, <em>end_point</em>)<a class="headerlink" href="#poll-energy-route-moniker-at-start-point-end-point" title="Permalink to this headline">¶</a></h3>
+<p>, unanimous__by(direct)
+Each robot will send a ‘poll’ as: <code class="docutils literal notranslate"><span class="pre">poll_distance(rallying</span> <span class="pre">point,</span> <span class="pre">unanimous__by(direct)</span></code>, and, in turn, each robot will return their results as <code class="docutils literal notranslate"><span class="pre">poll_distance(rallying</span> <span class="pre">point)_in(</span></code><em><code class="docutils literal notranslate"><span class="pre">metres</span></code></em><code class="docutils literal notranslate"><span class="pre">)</span></code>.</p>
+<p>Each will robot will wait for a unanimous consensus and the winner will run <code class="docutils literal notranslate"><span class="pre">call_point(sentry</span> <span class="pre">point)</span></code> with it’s current position.  The loser(s) will run <code class="docutils literal notranslate"><span class="pre">listen_point(sentry</span> <span class="pre">point)</span></code>.</p>
+</div>
+</div>
+</div>
+<div class="section" id="messengers">
+<h1>Messengers<a class="headerlink" href="#messengers" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="msg-robot-msg">
+<h2>msg_robot(<em>msg</em>)<a class="headerlink" href="#msg-robot-msg" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="msg-human-msg">
+<h2>msg_human(<em>msg</em>)<a class="headerlink" href="#msg-human-msg" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="alert-human-alert-moniker">
+<h2>alert_human(<em>alert_moniker</em>)<a class="headerlink" href="#alert-human-alert-moniker" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="alert-world">
+<h2>alert_world<a class="headerlink" href="#alert-world" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="alert-world-alert-moniker">
+<h3>alert_world(<em>alert_moniker</em>)<a class="headerlink" href="#alert-world-alert-moniker" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="call-counter-call">
+<h2>call_counter(<em>call</em>)<a class="headerlink" href="#call-counter-call" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="ask-distance-route-moniker">
+<h2>ask_distance(<em>route_moniker</em>)<a class="headerlink" href="#ask-distance-route-moniker" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="study-route-route-moniker">
+<h2>study_route(<em>route_moniker</em>)<a class="headerlink" href="#study-route-route-moniker" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id22">
+<h3>study_route(<em>route_moniker</em>)_<a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="study-point-point-moniker">
+<h2>study_point(<em>point_moniker</em>)<a class="headerlink" href="#study-point-point-moniker" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id23">
+<h3><a class="headerlink" href="#id23" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+</div>
+<div class="section" id="inquirers">
+<h1>Inquirers<a class="headerlink" href="#inquirers" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="error-human-error">
+<h2>error_human(<em>error</em>)<a class="headerlink" href="#error-human-error" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="ask-human-ask">
+<h2>ask_human(<em>ask</em>)<a class="headerlink" href="#ask-human-ask" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id24">
+<h3>ask_human(<em>ask</em>)<a class="headerlink" href="#id24" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+</div>
+<div class="section" id="payloaders">
+<h1>Payloaders<a class="headerlink" href="#payloaders" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="load-payload-payload-moniker">
+<h2>load_payload(<em>payload_moniker</em>)<a class="headerlink" href="#load-payload-payload-moniker" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="unload-payload-payload-moniker">
+<h2>unload_payload(<em>payload_moniker</em>)<a class="headerlink" href="#unload-payload-payload-moniker" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="call-payload-payload-moniker">
+<h2>call_payload(<em>payload_moniker</em>)<a class="headerlink" href="#call-payload-payload-moniker" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="call-sensor-sensor-moniker">
+<h2>call_sensor(<em>sensor_moniker</em>)<a class="headerlink" href="#call-sensor-sensor-moniker" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+<div class="section" id="finders">
+<h1>Finders<a class="headerlink" href="#finders" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="find-route">
+<h2>find_route<a class="headerlink" href="#find-route" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="find-route-route-moniker-startpoint-endpoint">
+<h3>find_route(<em>route_moniker</em>, <em>startpoint</em>, <em>endpoint</em>)<a class="headerlink" href="#find-route-route-moniker-startpoint-endpoint" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="find-route-route-moniker-startpoint-endpoint-using-map-provider">
+<h3>find_route(<em>route_moniker</em>, <em>startpoint</em>, <em>endpoint</em>)_using(<em>map_provider</em>)<a class="headerlink" href="#find-route-route-moniker-startpoint-endpoint-using-map-provider" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="set-mapprovider-map-provider">
+<h3>set_mapprovider(<em>map_provider</em>)<a class="headerlink" href="#set-mapprovider-map-provider" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="id25">
+<h3><a class="headerlink" href="#id25" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Written with <a class="reference external" href="https://stackedit.io/">StackEdit</a>.</div></blockquote>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Diego.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

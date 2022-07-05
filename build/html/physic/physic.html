@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html class="writer-html4" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Physic &mdash; diego-docs 1.0 documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+        <script type="text/javascript">mermaid.initialize({startOnLoad:true});</script>
+        <script type="text/javascript" src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+        <script type="text/javascript">mermaid.initialize({startOnLoad:true});</script>
+        <script type="text/javascript" src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+        <script type="text/javascript">mermaid.initialize({startOnLoad:true});</script>
+        <script type="text/javascript" src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+        <script type="text/javascript">mermaid.initialize({startOnLoad:true});</script>
+        <script type="text/javascript" src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+        <script type="text/javascript">mermaid.initialize({startOnLoad:true});</script>
+        <script type="text/javascript" src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+        <script type="text/javascript">mermaid.initialize({startOnLoad:true});</script>
+        <script type="text/javascript" src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+        <script type="text/javascript">mermaid.initialize({startOnLoad:true});</script>
+        <script type="text/javascript" src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+        <script type="text/javascript">mermaid.initialize({startOnLoad:true});</script>
+        <script type="text/javascript" src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+        <script type="text/javascript">mermaid.initialize({startOnLoad:true});</script>
+        <script type="text/javascript" src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+        <script type="text/javascript">mermaid.initialize({startOnLoad:true});</script>
+        <script type="text/javascript" src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+        <script type="text/javascript">mermaid.initialize({startOnLoad:true});</script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> diego-docs
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">Diego Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../syntax.html">Language Syntax</a></li>
+<li class="toctree-l1"><a class="reference internal" href="_topicindex.html">Topological Physic Object Index</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">diego-docs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Physic</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/physic/physic.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <style>div.mermaid { text-align: center; }</style><div class="section" id="physic">
+<h1>Physic<a class="headerlink" href="#physic" title="Permalink to this headline">¶</a></h1>
+<p>The term <strong>physic</strong> is used to define statements in <em><strong>diego</strong></em> that represent physical, tangible objects, such as robot wheels, actuators in a frige, power supply switches in televisions, etc.</p>
+<div class="section" id="physic-type-hierarchy">
+<h2>Physic Type Hierarchy<a class="headerlink" href="#physic-type-hierarchy" title="Permalink to this headline">¶</a></h2>
+<p>All physic reprentations in <em><strong>diego</strong></em> follow a structured hierarchy as can be dipicted as such:</p>
+<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>flowchart TD
+    thingy --&gt; human
+    thingy --&gt; organic
+    thingy --&gt; robot
+    robot --&gt; sobot
+    thingy --&gt; thing
+    thing --&gt; mobot
+    thing --&gt; ject
+</pre></div>
+</div>
+<div style="text-align: right"><sub>Physic Hierarchy (by thingy type)</sub></div><br><p>All <em>physic</em>al objects in <em><strong>diego</strong></em> are detrived from the <code class="docutils literal notranslate"><span class="pre">thingy</span></code> object, which represents all <em>physic</em>al objects.  There are only four[^morethingies] types of <code class="docutils literal notranslate"><span class="pre">thingies</span></code>: <code class="docutils literal notranslate"><span class="pre">human</span></code>, human beings interacting with <em><strong>diego</strong></em> through a <code class="docutils literal notranslate"><span class="pre">console</span></code>; <code class="docutils literal notranslate"><span class="pre">organic</span></code>, organic non-human beings, such as a dog, a cat, a flower, a bush, etc.; <code class="docutils literal notranslate"><span class="pre">robot</span></code>, a self-propelled thingy in the physical world; and a, <code class="docutils literal notranslate"><span class="pre">thing</span></code>, an object in the physical world represented in <strong>diego</strong>.</p>
+<p>There are other sub-types of thingies. A <code class="docutils literal notranslate"><span class="pre">sobot</span></code> is a stationary <code class="docutils literal notranslate"><span class="pre">robot</span></code>, that although can be self-propelled, does not neccesarily interact physically in the physical world outside its own environment, such as a <em>robot arm</em>. A <code class="docutils literal notranslate"><span class="pre">thing</span></code> can be sub-typed as: <code class="docutils literal notranslate"><span class="pre">mobot</span></code>, a conveyed smart device, such as a smart watch, smart doorbel, etc.; and a, <code class="docutils literal notranslate"><span class="pre">ject</span></code>, a traditional physical object that is not smart enough to think.  There are two variants of a <code class="docutils literal notranslate"><span class="pre">ject</span></code>: an <code class="docutils literal notranslate"><span class="pre">object</span></code> (ob ject), an immoveable ject such as a rock, a chair; and, a <code class="docutils literal notranslate"><span class="pre">subject</span></code> (sub ject), a self-propelled or moveable ject such as a trolley, wheeled tool cabinet, etc.</p>
+</div>
+<div class="section" id="physic-composition-hierarchy-organs-components-devices">
+<h2>Physic Composition Hierarchy (Organs / Components / Devices)<a class="headerlink" href="#physic-composition-hierarchy-organs-components-devices" title="Permalink to this headline">¶</a></h2>
+<p>Each of the four <code class="docutils literal notranslate"><span class="pre">thingies</span></code> has associated <em>components</em> that are further categorised, as such:</p>
+<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>flowchart TD
+    thingy --&gt; human
+    thingy --&gt; organic
+    thingy --&gt; robot
+    thingy --&gt; thing
+    human --&gt; apparat_human(apparat)
+    human --&gt; device_human(device)
+    organic --&gt; apparat_organic(apparat)
+    organic --&gt; device_organic(device)
+    robot --&gt; equip_robot(equip)
+    robot --&gt; compon_robot(compon)
+    robot --&gt; peripher_robot(peripher)
+    thing --&gt; equip_thing(equip)
+    thing --&gt; compon_thing(compon)
+    thing --&gt; peripher_thing(peripher)
+</pre></div>
+</div>
+<div style="text-align: right"><sub>Physic Hierarchy (by component)</sub></div><br><p>There are effectively three <em>components</em> that come with each <code class="docutils literal notranslate"><span class="pre">thingy</span></code>.  The <code class="docutils literal notranslate"><span class="pre">apparat</span></code>us/<code class="docutils literal notranslate"><span class="pre">equip</span></code>ment are non-smart <em>components</em> that are carried or attached to the thingy, so, for <code class="docutils literal notranslate"><span class="pre">human</span></code>s this could be a traditional watch or a jacket. For <code class="docutils literal notranslate"><span class="pre">organic</span></code>s this could be a collar on a dog or cat.  For <code class="docutils literal notranslate"><span class="pre">robot</span></code>s this is a <em>component</em> like wheels, or the chassis.  For a <code class="docutils literal notranslate"><span class="pre">thing</span></code> this could be the door of a fridge, or a cushion on a chair.</p>
+<p>Each of the four <code class="docutils literal notranslate"><span class="pre">thingies</span></code> also have a <code class="docutils literal notranslate"><span class="pre">compon</span></code>ent. A <code class="docutils literal notranslate"><span class="pre">compon</span></code> is a <em>component</em> that moves in the physical world, so for <code class="docutils literal notranslate"><span class="pre">human</span></code>s and <code class="docutils literal notranslate"><span class="pre">organic</span></code>s this would be a limb or an organ.  Since <strong>diego</strong> is not, yet, concerned with controlling human and organic anotomy, they are not represented here.  However, <code class="docutils literal notranslate"><span class="pre">compon</span></code>s for <code class="docutils literal notranslate"><span class="pre">robots</span></code> and <code class="docutils literal notranslate"><span class="pre">things</span></code> include actuators, projectile launchers, encoders, motors, switches, etc.</p>
+<p>Then there are <code class="docutils literal notranslate"><span class="pre">device</span></code>s and <code class="docutils literal notranslate"><span class="pre">peripher</span></code>als, which are smart components that are carried or attached to the thingy, so for <code class="docutils literal notranslate"><span class="pre">human</span></code>s this could be a smart watch or a cellphone[^devicesobot].  For <code class="docutils literal notranslate"><span class="pre">organic</span></code>s this could be a microchip implanted in a dog.  For <code class="docutils literal notranslate"><span class="pre">robot</span></code>s and <code class="docutils literal notranslate"><span class="pre">thing</span></code>s this is termed a <code class="docutils literal notranslate"><span class="pre">peripher</span></code> and includes hygrometers, proximity sensors, sensors, cameras, etc.</p>
+</div>
+<div class="section" id="see-also">
+<h2>See Also<a class="headerlink" href="#see-also" title="Permalink to this headline">¶</a></h2>
+<hr class="docutils" />
+<p><a class="reference internal" href="_topicindex.html"><span class="doc">Topological Index of Physic Objects</span></a></p>
+<p><a class="reference external" href="_atozindex">A to Z Index of Phyic Objects</a></p>
+<div class="section" id="thingies">
+<h3>Thingies<a class="headerlink" href="#thingies" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="thingy">thingy</a><br>
+<a class="reference external" href="human">human</a><br>
+<a class="reference external" href="organic">organic</a><br>
+<a class="reference external" href="robot">robot</a> (<a class="reference external" href="sobot">sobot</a>)<br>
+<a class="reference external" href="thing">thing</a>  (<a class="reference external" href="mobot">mobot</a>; <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.10)"><a class="reference external" href="object">object</a></a>; <a class="reference external" href="iot">IoT</a>)</p>
+</div>
+<div class="section" id="components">
+<h3>Components<a class="headerlink" href="#components" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="apparat">apparat</a>; <a class="reference external" href="equip">equip</a><br>
+<a class="reference external" href="jigger">jigger</a><br>
+<a class="reference external" href="jagger">jagger</a> (<a class="reference external" href="device">device</a>; <a class="reference internal" href="sensor.html"><span class="doc">sensor</span></a>)</p>
+</div>
+</div>
+<div class="section" id="notes">
+<h2>Notes<a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h2>
+<p>[^morethingies]: There are some <em>fringe</em> <code class="docutils literal notranslate"><span class="pre">thingy</span></code> types such as <code class="docutils literal notranslate"><span class="pre">mech</span></code>, <code class="docutils literal notranslate"><span class="pre">applian</span></code>, <code class="docutils literal notranslate"><span class="pre">mach</span></code>, and, <code class="docutils literal notranslate"><span class="pre">vehicle</span></code>.
+[^devicesobot]: Smart devices are can also be treated a <code class="docutils literal notranslate"><span class="pre">sobot</span></code>s.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Diego.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

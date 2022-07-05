@@ -1,6 +1,6 @@
 # A to Z Objects Index
 
-An A to Z index of all objects (at `thing` / `thingy` / `thingette` levels) used by **diego** instruction programming language.
+An A to Z index of all objects used by **diego** instruction programming language.
 
 ## <a name="a"></a> A: [actuat](#actuat); [apparat](#apparat); [appliance](#appliance); [arena](#arena)
 

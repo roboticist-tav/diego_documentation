@@ -1,0 +1,34 @@
+<!-- https://rosettacode.org/wiki/Priority_queue -->
+=={{header|Diego}}==
+<lang diego>set_namespace(rosettacode)_me();
+
+// Assignment at declaration
+add_chorium(householdChore)
+    ()_chore(Clear drains)_priority(3);
+    ()_chore(Feed cat)_priority(4);
+    ()_chore(Make tea)_priority(lowest);
+    ()_chore(Solve RC tasks)_priority(highest);
+;
+
+// Insertion after declaration 
+with_chorium(householdChore)_chore(Tax return)_priority(2);
+
+// Removal of top item
+with_chorium(householdChore)
+    ()_remove()_chore()_priority(top)_tovar(removedTopChore)
+;
+
+// Return top item again
+with_chorium(householdChore)_chore(removedTopChore);
+
+// Peek
+me_msg()_chorium(householdChore)_chore()_priority(top);
+// "Solve RC tasks,1"
+
+// Merge
+
+
+// Mark a chore
+with_chorium(householdChore)_chore(Clear drains)_done();
+
+

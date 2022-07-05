@@ -1,0 +1,22 @@
+== D ==
+{{columns-list|colwidth=22em|
+* [[D (programming language)|D]]
+* [[Dart (programming language)|Dart]]
+* [[Darwin (programming language)|Darwin]]
+* [[DataFlex]]
+* [[Datalog]]
+* [[DATATRIEVE]]
+* [[dBase]]
+* [[dc (computer program)|dc]]
+* [[DIGITAL Command Language|DCL (DIGITAL Command Language)]]
+* [[Delphi (software)|Delphi]]
+* [[Diego (programming language)|Diego]]
+* [[Dink Smallwood#Modification|DinkC]]
+* [[DIBOL]]
+* [[Dog (programming language)|Dog]]
+* [[Draco (programming language)|Draco]]
+* [[DRAKON]]
+* [[Dylan (programming language)|Dylan]]
+* [[DYNAMO (programming language)|DYNAMO]]
+* [[Data analysis expressions|DAX (Data Analysis Expressions)]]
+}}

@@ -14,8 +14,8 @@ reset_namespace[];</lang>
 Function composition of two calculated functions:
 <lang diego>set_namespace(rosettacode);
 
-with_funct(f)_arg({int}, x)_ret()_calc([x] * [x]);
-with_funct(g)_arg({int}, x)_ret()_calc([x] + 2);
+with_funct(f)_arg({int}x)_ret()_calc([x] * [x]);
+with_funct(g)_arg({int}x)_ret()_calc([x] + 2);
 
 begin_funct(compose)_arg(f, g);
     []_ret(x)_calc([f]([g]([x])));

@@ -1,39 +1,104 @@
-# battery
+# Battery
 
-The `battery` object represents any controllable battery contained within or manage by a thingy. Posits of a `battery` are inherited to the `powersupply` object, most usually when a `battery` becomes a/the power supply (temporary ot otherwise) of a thingy.
+The `battery` object represents any controllable battery contained within and/or managed by a thingy. Posits of a `battery` are inherited to the `powersupply` object, most usually when a `battery` becomes a/the power supply (temporary ot otherwise) of a thingy.
 
-## Creation/Serialisation
+## Syntax
 
-Creation of `battery` objects is predominately used in the serialisation of a thingy.  There are several approaches to creation/serialisation of `battery` objects:
+The default declaration syntax is to provide at least the battery name. The shortened version is `batt`. The `_type` can be added at declaration or after declaration:
 
-| syntax | notes |
-| --- | --- |
-| `add_battery(`*`moniker|uuid`*`);` | The simplest syntax for adding one `battery`.<br/>
-| `add_battery(`*`moniker1|uuid1`*`, `*`[moniker2|uuid2, ,,,])`*`);` | Creation/serialisation of multiple `battery`s, not related _(other then their parent, if any)_. |
-| `add_bank(`*`moniker1|uuid1`*`)_battery(`*`moniker1|uuid1`*`, `*`[moniker2|uuid2, ,,,])`*`);`<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;... `_index(`*`index-form`*`, `*`base`*`);` | Creation/serialisation of multiple `battery`s belonging to a bank (farm or array).  Battery banks can be indexed.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `add_battery(`*`moniker`*`);`<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `add_batt(`*`moniker`*`);`<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `add_batt(`*`moniker`*`)_type(`*`type`*`);`<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `add_batt({`*`type`*`},`*`moniker`*`);`
 
-Any creation/serialisation on `battery`(s) can be undertaken by thingies themselves (_i.e._ using `me()`), by another authority on to the target thingy, or, as depiction of another thingy.
+Multiple batteries can be added as batteries or as part of a `bank` of batteries (treated like a farm or array). Battery banks can be indexed:
 
-## Criterion
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `add_battery(`*`moniker1`*`, `*`moniker2,...`*`);`<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `add_bank(`*`moniker`*`)_battery(`*`moniker1`*`, `*`moniker2,...`*`)_index(`*`index-form`*`, `*`base`*`);`<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `add_bank(`*`moniker`*`)_batt_({`*`type`*`},`*`moniker1`*`,`*`moniker2,...`*`)`
 
-| criterion | notes |
-| --- | --- |
-| `_tech(`*`technology`*`)`, `_technology(`*`technology`*`)`<br/>`_chem(`*`technology`*`)`, `_chemistry(`*`technology`*`)` | Technology (or chemistry) of the battery. See [technology](#tech)
+Each battery is implied to have one default associated charge (one charger per battery), it is, therefore, not neccessary to declare or named, by can be:
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `add_battery(`*`moniker`*`)_charger();`<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `add_batt(`*`moniker`*`)_charger(`*`moniker`*`);`<br>
+
+Any declaration/creation/serialisation on `battery`(s) can be undertaken by thingies themselves (_i.e._ using `me()`), by another authority on to the target thingy, or, as depiction of another thingy.
+
+## Properties
+
+| property | access | notes |
+| --- | --- | --- |
+| <a name="algor"></a>`_charger()_algorithm(algorithm)`<br>`_charger()_algor(algorithm)`<br>`_charger()_algo(algorithm)` | read (write by me) | **Charging Algorithm**<br>The charging algorithm, if known, that the charger using.  The `charger` postposit is implied with every battery.  The `_algorithm`/`algor`/`algo` postposit is implied to be a child of `charger`.<br>See [Algorithm Values](#algor_) |
+| <a name="fettle"></a>`_fettle()`<br>`_fettle()_enum()` | read (write by human) | **Battery Fettle**<br>A human observation of the state of appearance of the battery.<br>See [Fettle Values](#fettle_) |
+| <a name="health"></a>`_health()`<br>`_health()_enum()` | read only | **Battery Health**<br>The battery health, as defined within the battery logic.  It will display a string as default, unless the `_enum()` postposit is provided then it will provide a integer enumerator.<br>See [Health Values](#health_) |
+| <a name="status"></a>`_stat()`<br>`_status()`<br>`_stat()_enum()`<br>`_status()_enum()` | read only | **Battery Status**<br>The battery status, as defined within the battery logic.  It will display a string as default, unless the `_enum()` postposit is provided then it will provide a integer enumerator.<br>See [Status Values](#stat_) |
+| <a name="tech"></a>`_tech(`*`technology`*`)`<br>`_technology(`*`technology`*`)`<br>`_chem(`*`technology`*`)`<br>`_chemistry(`*`technology`*`)`<br>*`...`*`_enum()` | read (write by me) | **Battery Technology**<br>The technology (or chemistry) composition of the battery.  This is usually defined at declaration. It will display a string as default, unless the `_enum()` postposit is provided then it will provide a integer enumerator. This can only be set/changed by `me`.<br>See [Technology Values](#tech_) |
+
+<a name="algor_"></a>
+### Algorithm Values
+| `algorithm` | `enum` | notes |
+| --- | --- | --- |
+| `unknown`, `error` | `-1` | unknown |
+| *`null`* | `0` | no charge/unknown |
+| `none`, `no-charge` | `1` | no charge |
+| `trickle`, `slow` | `2` | Trickle charge, slow speed |
+| `fast` | `3` | fast charge |
+| `norm`, `normal`, `standard` | `4` | normal speed charge |
+| `adaptive`, `adpt` | `5` | adaptive charge, dynamically adjusted speed |
+| `custom` | `6` | custom charge algorithm |
+| `long`, `longlife`, `long-life` | `7` | slow speed, longer life charge algorithm |
+
+<a name="fettle_"></a>
+### Fettle Values
+| `fettle` | `enum` | notes |
+| --- | --- | --- |
+| `unknown`, `error` | `-1` |  |
+| *`null`*, `not checked` | `0` | |
+| `good` | `1` |  |
+| `ok` | `2` |  |
+| `bad-condition` | `3` |  |
+| `deteriorated` | `4` |  |
+
+<a name="health_"></a>
+### Health Values
+| `health` | `enum` | notes |
+| --- | --- | --- |
+| `unknown`, `error` | `-1` | unknown |
+| *`null`* | `0` | |
+| `good` | `1` | good |
+| `overheat` | `2` | overheat |
+| `dead` | `3` | dead |
+| `overvoltage`, `overvolt` | `4` | unknown |
+| `unspec`, `unspec-failure` | `5` | |
+| `cold` | `6` | |
+| `watchdog`, `watchdog-expire`, `watchdog-timer` | `7` | |
+| `safety`, `safety-expire`, `safety-timer` | `8` | |
+
+<a name="stat_"></a>
+### Status Values
+| `stat`, `status` | `enum` | notes |
+| --- | --- | --- |
+| `unknown`, `error` | `-1` |  unknown |
+| *`null`*, `no`, `none` | `0` |  null state |
+| `charging` | `1` |  charging |
+| `discharging` | `2` |  discharging |
+| `not charging`, `no`, `none` | `0` |  not charging |
+| `full` | `4` |  full |
 
 
-### Technology/Chemistry <a name="tech"></a>
+<a name="tech_"></a>
+### Technology Values 
 
-
-| `technology` | notes |
-| --- | --- |
-| `null`, `-1` | No available criteria for battery technology. Check to see if battery exists (use `_exists()`). |
-| `unknown`, `0` | Unknown or not specified battery technology. Question target thingy with `ask_`. |
-| `NiMH`, `Ni–MH`, `nimh`, `1` | Nickel metal hydride battery. |
-| `Li-ion`, `lion`, `2` | Lithium cobaltate (lithium-ion cobalt) battery. |
-| `LiPo`, `lipo`, `3` | Lithium polymer battery (lithium-ion polymer) battery. |
-| `LiFE`, `LiFEPO`, `life`, `4` | Lithium iron phosphate battery. |
-| `NiCad`, `Ni-Cd`, `nicd`, `5` | Nickel–cadmium battery. |
-| `LMO`, `LiMO`, `6` | Lithium ion manganese oxide battery. |
+| `technology` | `enum` | notes |
+| --- | --- | --- |
+| `unknown` | `-1` | Unknown or not specified battery technology. Question target thingy with `ask_`. |
+| `null` | `0` | No available property for battery technology.  Check to see if battery exists (use `_exists()`). |
+| `NiMH`, `Ni–MH`, `nimh` | `1` | Nickel metal hydride battery. |
+| `Li-ion`, `lion` | `2` | Lithium cobaltate (lithium-ion cobalt) battery. |
+| `LiPo`, `lipo` | `3` | Lithium polymer battery (lithium-ion polymer) battery. |
+| `LiFE`, `LiFEPO`, `life` | `4` | Lithium iron phosphate battery. |
+| `NiCad`, `Ni-Cd`, `nicd` | `5` | Nickel–cadmium battery. |
+| `LMO`, `LiMO`, `limo` | `6` | Lithium ion manganese oxide battery. |
 
 
 
@@ -95,7 +160,6 @@ _
 
 | syntax | |
 | --- | --- |
-| `_volt(`*`voltage`*`)`, `_voltage(`*`voltage`*`)`<br/> `_volt()_value(`*`voltage`*`)`, `_voltage()_value(`*`voltage`*`)` | The averaged/smoothed VBAT voltage of the battery charge in volts (V).  If the thingy is intent on using another measurement then `_unit` must be supplied with intra-thingy communication.<br/>Variable assignment is available, using posits such as `_tovar` etc. |
 | `_volt(`*`voltage-state`*`)`, `_voltage(`*`voltage-state`*`)` | Voltage state request. |
 | `_volt(`*`voltage-state`*`)_value(`*`voltage`*`)`, `_voltage(`*`voltage-state`*`)_value(`*`voltage`*`)`<br/>`_volt(`*`voltage`*`)_limit(`*`voltage-state`*`)`, `_voltage(`*`voltage`*`)_limit(`*`voltage-state`*`)`<br/>`_volt()_limit(max)_value(`*`voltage`*`)`, `_voltage()_limit(max)_value(`*`voltage`*`)` | Voltage state response. |
 
@@ -109,39 +173,6 @@ _
 | `ocv` | The 'Open Circuit Voltage' of the battery. |
 
 
-
-
-// metrics:
-| posit | |
-| --- | --- |
-| `_stat(`*`status`*`)`, `_status(`*`status`*`)` | battery status<br/>See [status](#status)
-| `health(`*`health`*`)` | The battery health metric |
-
-
-_technology();
-
-<a name="status"></a> ### Status
-| `battery`... `_stat()`, `_status()` | battery status |
-| --- | --- |
-| `unknown`, `-1` |  unknown |
-| `null` `no`, `none`, `0` |  null state |
-| `charging`, `1` |  charging |
-| `discharging`, `2` |  discharging |
-| `not charging`, `no`, `none`, `0` |  not charging |
-| `full`, `4` |  full |
-
-| `battery`... `_health()` | |
-| --- | --- |
-| `unknown`, `-1` | unknown |
-| `unknown`, `0` | |
-| `good`, `1` | good |
-| `overheat`, `2` | overheat |
-| `dead`, `3` | dead |
-| `overvoltage`, `overvolt`, `4` | unknown |
-| `unspec`, `unspec-failure` `5` | |
-| `cold`, `6` | |
-| `watchdog`, `watchdog-expire`, `watchdog-timer`, `7` | |
-| `safety`, `safety-expire`, `safety-timer`, `8` | |
 
 
 
@@ -290,26 +321,7 @@ string serial_number     # The best approximation of the battery serial number
  * this class operates.
  */
 
-/*
- * For systems where the charger determines the maximum battery capacity
- * the min and max fields should be used to present these values to user
- * space. Unused/unknown fields will not appear in sysfs.
- */
 
-
-| `_charge()_algorithm(`*`algorithm`*`)`, `_charge()_algo(`*`algorithm`*`)` | Charging algorithm<br/>What algorithm is the charger using? |
-
-| `algorithm` | What algorithm is the charger using? |
-| --- | --- |
-| `unknown`, `-1` | unknown |
-| `null`, `0` | no charge/unknown |
-| `none`, `1` | no charge |
-| `trickle`, `slow`, `2` | Trickle charge, slow speed |
-| `fast`, `3` | fast charge |
-| `norm`, `normal`, `standard`, `4` | normal speed charge |
-| `adaptive`, `adpt`, `5` | adaptive charge, dynamically adjusted speed |
-| `custom`, `6` | custom charge algorithm |
-| `long`, `longlife`, `long-life`, `7` | slow speed, longer life charge algorithm |
 
 
 
@@ -778,3 +790,11 @@ void power_supply_remove_hwmon_sysfs(struct power_supply *psy) {}
 #endif
 
 #endif /* __LINUX_POWER_SUPPLY_H__ */
+
+
+
+/*
+ * For systems where the charger determines the maximum battery capacity
+ * the min and max fields should be used to present these values to user
+ * space. Unused/unknown fields will not appear in sysfs.
+ */

@@ -1,0 +1,41 @@
+<!-- http://www.rosettacode.org/wiki/String_length -->
+=={{header|Diego}}==
+<lang diego>set_namespace(rosettacode)_me();
+
+me_msg(José: [jose])_str(José)_var(jose)_length();
+
+me_msg(José: [jose])_var({str},jose)_value(José)_length();
+
+
+
+me_msg(Jose\u301: [josee])_str(Jose\u301)_var(josee)_length();  // combining diacritical marks
+me_msg(𝔘𝔫𝔦𝔠𝔬𝔡𝔢: [fraktur])_str(𝔘𝔫𝔦𝔠𝔬𝔡𝔢)_var(fraktur)_length();
+me_msg(🔥: [flame])_str(🔥)_var(flame)_length();
+ms_msg(👩‍❤️‍👩: [combinedEmoji])_str(👩‍❤️‍👩)_var(combinedEmoji)_length(); // combining emojis
+
+me_msg(José: [jose])_str(José)_var(jose)_chars();
+me_msg(møøse: [moose])_str(møøse)_var(moose)_chars();
+me_msg(𝔘𝔫𝔦𝔠𝔬𝔡𝔢: [fraktur])_str(𝔘𝔫𝔦𝔠𝔬𝔡𝔢)_var(fraktur)_chars();
+me_msg(🔥: [flame])_str(🔥)_var(flame)_chars();
+
+me_msg(👩‍❤️‍👩: [flame])_str(👩‍❤️‍👩)_var(flame)_chars();
+with_mist()
+    learn_chars(👩‍❤️‍👩)_equals(1);
+;
+me_msg(👩‍❤️‍👩: [flame])_str(👩‍❤️‍👩)_var(flame)_chars();
+
+reset_namespace[];</lang>
+    
+{{out}}
+    
+<pre>José: 4
+José: 5
+𝔘𝔫𝔦𝔠𝔬𝔡𝔢: 14 
+🔥: 2
+👩‍❤️‍👩: 8
+</pre>
+
+
+
+
+

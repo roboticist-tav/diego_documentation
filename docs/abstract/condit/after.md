@@ -1,0 +1,2 @@
+# After (condition)
+A temporal condit used to determine if the preceeding *object* is _after_ the provided [date](/abstract/dt/date.md) \| [datetime](/abstract/dt/datetime.md) \| [time](/abstract/dt/time.md) for proceeding *object* to do proceeding *action*

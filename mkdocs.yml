@@ -1,0 +1,24 @@
+site_name: Diego
+site_url: http://diego.dev
+plugins:
+    - search
+    - mermaid2
+extra_css: [extra.css]
+nav:
+  - Diego: intro.md
+  - Lexicon: lexicon/lexicon.md
+  - Physic: physic/physic.md
+  - Metaphysic: metaphysic/metaphysic.md
+  - Abstract: abstract/abstract.md
+  - Corpus: corpus/corpus.md
+  
+theme: readthedocs
+
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js

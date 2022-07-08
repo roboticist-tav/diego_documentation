@@ -1,0 +1,27 @@
+<!-- https://rosettacode.org/wiki/Function_composition -->
+=={{header|Diego}}==
+Function composition of two simple functions:
+<lang diego>set_namespace(rosettacode);
+
+begin_funct(compose)_arg(f, g);
+    []_ret(x)_calc([f]([g]([x])));
+end_funct[];
+
+me_msg()_funct(compose)_arg(f)_sin()_arg(g)_asin()_var(x)_value(0.5);    // result: 0.5
+
+reset_namespace[];</lang>
+
+Function composition of two calculated functions:
+<lang diego>set_namespace(rosettacode);
+
+with_funct(f)_arg({int}x)_ret()_calc([x] * [x]);
+with_funct(g)_arg({int}x)_ret()_calc([x] + 2);
+
+begin_funct(compose)_arg(f, g);
+    []_ret(x)_calc([f]([g]([x])));
+end_funct[];
+
+me_msg()_funct(compose)_arg(f)_funct(f)_arg(g)_funct(g)_var(x)_v(10);      // result: 144
+// or me_msg()_funct(compose)_arg({f}, f)_arg({g}, g)_var(x)_v(10);
+
+reset_ns[];</lang>

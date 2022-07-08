@@ -1,0 +1,50 @@
+
+(1)     `go_robot(alpha)_waypoint(x1);`
+(2)     `msg_human()_msg(proceeding to x1);`
+(3)     `go_robot(alpha)_waypoint(x2);`
+(4)     `msg_human()_msg(proceeding to x2);`
+(5)     `go_robot(alpha)_waypoint(x3);`
+(6)     `msg_human()_msg(proceeding to x3);`
+
+The above instructions will be queued up by robot (alpha): (1), (2), (3), (4), (5), (6)
+
+(1) Robot `alpha` will start to travel from its current position to waypoint `x1`.
+Queue: (2), (3), (4), (5), (6)
+
+(2) While robot `alpha` is travelling towards waypoint `x1`, it can simultaneously `msg_human()_msg(proceeding to x1);`, so it does. This is the logical intent of the caller (programmer)
+Queue: (3), (4), (5), (6)
+
+(3) While robot `alpha` is still travelling towards waypoint `x1`, it cannot then travel to waypoint `x2` (`go_robot(alpha)_waypoint(x2);`) because both command use the `space` resource, this command will be left in the queue.
+Queue: (3), (4), (5), (6)
+
+(4) Depending upon the intelligence of robot `alpha` or whether `alpha` can figured out what the caller is intending, the same approach as command (2) will be followed, so command (4) (`msg_human()_msg(proceeding to x2);`) will be executed.  After all, it has the resources to do so.
+Queue: (3), (5), (6)
+
+(5) Following the same logic as command (3), `alpha` will not execute this command because the `space` resource is already being used by previous `go_` commands.
+Queue: (3), (5), (6)
+
+(6) Following the resource only criteria/logic command (6) will be executed.
+Queue: (3), (5), (6)
+
+Resolution
+
+A simple way, but with no intelligence is for the caller to use the `_await()` postposition:
+
+(1)     `go_robot(alpha)_waypoint(x1);`
+(2)     `msg_human()_msg(proceeding to x1);`
+(3)     `go_robot(alpha)_waypoint(x2);`
+(4)     `msg_human()_msg(proceeding to x2)_await();`
+(5)     `go_robot(alpha)_waypoint(x3);`
+(6)     `msg_human()_msg(proceeding to x3)_await();`
+
+The `_await()` postposition tells the callee to wait for the previous command to finish.  The `_await()` postposition could have been added to the `go_` commands, but they are defaulted with `_await()` so it would be redundant.
+
+
+
+(1) 
+|---|---|
+|
+
+begin_resources()_appliedto(go)_specificto(robot);
+
+end_resources();

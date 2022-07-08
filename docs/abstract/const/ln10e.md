@@ -1,0 +1,1 @@
+# Base 10 Logarithm of e (constant)

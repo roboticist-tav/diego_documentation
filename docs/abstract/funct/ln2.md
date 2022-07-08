@@ -1,0 +1,1 @@
+# Natural Logarithm of 2 (constant) 

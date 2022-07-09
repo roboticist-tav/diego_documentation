@@ -172,8 +172,8 @@ The lexicon of ***Diego*** is the full syntactical vocabulary of all statement c
 | `route` | |
 | `scalar` | metaphysic<br>obj | | [scalar](../metaphysic/obj/scalar.md) |
 | `scan` | |
+| `type(`*`moniker`*`)`<br>`_type(`*`moniker`*`)`<br>`{`*`moniker`*`}` | |
 | `sensor(`*`moniker`*`)`<br>`_sensor(`*`moniker`*`)` | metaphysic | *object* | *Action* on *[sensor](../metaphysic/obj/sensor.md)* *moniker*<br>Proceed with *[sensor](../metaphysic/obj/sensor.md)* *moniker* |
-| `sensor` | | | The thing version of an `apparatus`.<br>See also: [apparat](../physic/obj/apparat.md) |
 | `set_`*`<setter>`*`(`*`settings`*`)` | abstract<br>metaphysic | *verb* | [Set](../metaphysic/verb/set.md) the *setter* to *settings* settings |
 | `shaft(`*`moniker`*`)` | physic | *object* | [shaft](../physic/obj/shaft.md) |
 | `side` | | |

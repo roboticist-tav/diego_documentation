@@ -1,18 +1,12 @@
-# Topological Abstract Object Index
+# Topological Abstract Index
 
-An topological index of all abstract objects used by **diego** instruction programming language.
+An topological index of all abstract statements used by **diego** instruction programming language.
 
-## <a name="collections"></a> Collections
+## <a name="Value_Properties"></a> Value Properties
 
 | abstract | notes<br>examples | metaphysic | API |
 | --- | --- | :-: | --- | 
-| `var` | variable | [scalar](../metaphysic/scalar.md) | [var](var.md) |
-| `array`<br>`ary` | | [vector](../metaphysic/vector.md) | [ary](ary.md) |
-| `list` | | | [list](list.md) |
-| `matrix` | | | [matrix](matrix.md) |
-| `clump` | | | [clump](clump.md) |
-| `dict` | | | [dict](dict.md) |
-| `hash` | | | [hash](hash.md) |
+| `var` | variable | [scalar](../metaphysic/scalar.md) | [var](./obj/var.md) |
 
 
 ## Self
@@ -24,6 +18,46 @@ An topological index of all abstract objects used by **diego** instruction progr
 | `us`||
 | 'them' ||
 | 'you' ||
+
+## <a name="Function_Properties"></a> Function Properties
+
+
+## <a name="Functional_Objects"></a> Functional Objects
+
+## <a name="Error_Objects"></a> Error Objects
+
+| err | description | API |
+| --- | --- | --- |
+| `err` | | |
+
+## <a name="Numerics"></a> Numerics
+
+## <a name="Dates"></a> Dates
+
+## <a name="Text Processing"></a> Text Processing
+
+## <a name="Collections"></a> Collections
+
+| collection | description | API |
+| --- | --- | --- |
+| `array`<br>`ary` | | [ary](./obj/ary.md) |
+| `list` | | [list](./obj/list.md) |
+| `matrix` | | [matrix](./obj/matrix.md) |
+| `clump` | | [clump](./obj/clump.md) |
+| `dict` | | [dict](./obj/dict.md) |
+| `hash` | | [hash](./obj/hash.md) |
+
+## <a name="Control Flow"></a> Control Flow
+
+## <a name="Declarations"></a> Declarations
+
+## <a name="Functions_Classes"></a> Functions & Classes
+
+## <a name="Iterations"></a> Iterations
+
+## <a name="primary_expressions"></a> Primary Expressions
+
+
 
 
 ## Scope

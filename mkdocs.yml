@@ -11,12 +11,14 @@ nav:
   - Metaphysic: metaphysic/metaphysic.md
   - Abstract: abstract/abstract.md
   - Corpus: corpus/corpus.md
+  - MavLink: corpus/mavlink/mavlink.md
   
 theme: readthedocs
 
 markdown_extensions:
   - pymdownx.arithmatex:
       generic: true
+  - footnotes
 
 extra_javascript:
   - javascripts/mathjax.js

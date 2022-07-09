@@ -1,4 +1,4 @@
-# Actuator
+# Actuator (object)
 
 A `actuat`or, derived from a `compon`ent is of a machine that is responsible for moving and controlling a mechanism or system, for example by opening a valve. In simple terms, it is a "mover". An actuator requires a control device and a source of energy.
 

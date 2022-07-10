@@ -294,7 +294,7 @@ with_robot(myDrone)_waypoint(greenFlag)_loiterat()_hold()
 ```
 >> *"`myDrone`, go and loiter at `greenFlag`, when you get messaged "`move!`", go the the next command"*
 
-See: [loiter](verb/loiter,md); [drone](obj/drone.md); [waypoint](obj/waypoint.md); [loiterat](postpos/loiterat.md)
+See: [loiter](); [drone](../../physic/obj/drone.md); [waypoint](../../metaphysic/obj/waypoint.md); [loiterat]()
 
 ___
 

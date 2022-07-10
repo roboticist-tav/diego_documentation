@@ -77,8 +77,8 @@ Using computer vision most robot can identify an object (`object`) and a moving 
 Using computer vision most robot can observe a ject (`ob`) and a moving ject (`sub`), these unidentified jects are represented in ***diego*** using the `ob` and `sub` *objects*:
 | unknown ject | notes<br>examples<br>`example` | metaphysic version | API |
 |--|:--|:-:|--|
-| `ob`  | A civilian[^civilian] immobile ject in the  physical *'real'* world.<br>Examples: unidentified lampost (or thing pointing out of the ground), etc.<br>`call_robot(alif)_found()_ob()_photo()_blob(d3Mtd2l6EAMyCwguEBDIL`*`...`* | [obstacle](../metaphysic/onstacle.md) | [ob](./obj/ob.md) |
-| `sub` | A civilian[^civilian] mobile ject in the  physical *'real'* world.<br>Exmaples: *unidentified moving animal*, *unidentified flying object*<br>`with_robot(tha)_follow()_sub(e32f0);` | [substacle](../metaphysic/substacle.md) | [sub](./obj/sub.md) |
+| `ob`  | A civilian[^civilian] immobile ject in the  physical *'real'* world.<br>Examples: unidentified lampost (or thing pointing out of the ground), etc.<br>`call_robot(alif)_found()_ob()_photo()_blob(d3Mtd2l6EAMyCwguEBDIL`*`...`* | [obstacle](../metaphysic/obj/obstacle.md) | [ob](../metaphysic/obj/ob.md) |
+| `sub` | A civilian[^civilian] mobile ject in the  physical *'real'* world.<br>Exmaples: *unidentified moving animal*, *unidentified flying object*<br>`with_robot(tha)_follow()_sub(e32f0);` | [substacle](../metaphysic/obj/substacle.md) | [sub](../metaphysic/obj/sub.md) |
 
 ## <a name="organs"></a> Thingy Composition (Organ / Components / Devices)
 ```mermaid
@@ -256,12 +256,12 @@ https://www.bigocheatsheet.com/
 
 | movement | notes<br>examples | API |
 |--|:--|--|
-| `form`, `formation` | | [form](./obj/form.md) |
-| `gait` | The thing version of `stride` | [gait](./obj/gait.md) |
-| `ghost` |  | [ghost](./obj/ghost.md) |
-| `stride` | The human version of `gait` | [stride](./obj/stride.md) |
-| `stance` | | [stance](./obj/stance.md) |
-| `swarm` | | [swarm](./obj/swarm.md) |
+| `form`, `formation` | | [form](../metaphysic/obj/form.md) |
+| `gait` | The thing version of `stride` | [gait](../metaphysic/obj/gait.md) |
+| `ghost` |  | [ghost](../metaphysic/obj/ghost.md) |
+| `stride` | The human version of `gait` | [stride](../metaphysic/obj/stride.md) |
+| `stance` | | [stance](../metaphysic/obj/stance.md) |
+| `swarm` | | [swarm](../metaphysic/obj/swarm.md) |
 
 ## <a name="comm"></a> Commuincation
 
@@ -274,8 +274,8 @@ https://www.bigocheatsheet.com/
 
 | statistics | notes<br>examples | API |
 |--|:--|--|
-| `metric` | | [metric](./obj/metric.md) |
-| `payload` | | [payload](./obj/payload.md) |
+| `metric` | | [metric](../metaphysic/obj/metric.md) |
+| `payload` | | [payload](../physic/obj/payload.md) |
 
 
 

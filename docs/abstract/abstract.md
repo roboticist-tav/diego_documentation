@@ -8,11 +8,11 @@ All four *self* objects are metaphysical, however, `me` is considered to be also
 
 | self | description | API |
 | --- | --- | --- |
-| `me_`*`<object>`*<br>`_me()` | A representation of the self thingy, similar to '*this*' in other programming languages | [me](./special/me.md) |
-| `_we()` | A representation of a group of thingys, through the viewpoint of a `spox` | [we](../metaphysic/special/we.md)<br>[spox](../metaphysic/obj/spox.md) |
-| `_us()` | Declaration of a group of thingys | [us](../metaphysic/special/us.md) |
-| `_them()` | A representation of a group of thingys from the viewpoint of `me` | [them](../metaphysic/special/them.md) |
-| `_you()` | A assignment member of the a group of thingys from the viewpoint of the `spox` of the group | [you](../metaphysic/speical/you.md) |
+| <a name="me"></a> `me_`*`<object>`*<br>`_me()` | A representation of the self thingy, similar to '*this*' in other programming languages | [me](./special/me.md) |
+| <a name="we"></a> `_we()` | A representation of a group of thingys, through the viewpoint of a `spox` | [we](../metaphysic/special/we.md)<br>[spox](../metaphysic/obj/spox.md) |
+| <a name="us"></a> `_us()` | Declaration of a group of thingys | [us](../metaphysic/special/us.md) |
+| <a name="them"></a> `_them()` | A representation of a group of thingys from the viewpoint of `me` | [them](../metaphysic/special/them.md) |
+| <a name="you"></a> `_you()` | A assignment member of the a group of thingys from the viewpoint of the `spox` of the group | [you](../metaphysic/special/you.md) |
 
 ## <a name="declarable_data"></a> Declarable Data
 
@@ -27,7 +27,8 @@ All four *self* objects are metaphysical, however, `me` is considered to be also
 
 | data | description | API |
 | --- | --- | --- |
-| <a name="tempor"></a> `tempor(`*`moniker`*`)`<br>`temporal(`*`moniker`*`)`<br>`_tempor(`*`moniker`*`)`<br>`_temporal(`*`moniker`*`)`<br>`{tempor}`<br>`{temporal}` | A primitive data object representing a date off a calendar monikered *moniker* | [tempor](./obj/tempor.md)
+| <a name="tempor"></a> `tempor(`*`moniker`*`)`<br>`temporal(`*`moniker`*`)`<br>`_tempor(`*`moniker`*`)`<br>`_temporal(`*`moniker`*`)`<br>`{tempor}`<br>`{temporal}` | A primitive data object representing a date off a calendar monikered *moniker* | [tempor](./obj/tempor.md) |
+
 
 
 
@@ -43,14 +44,6 @@ All four *self* objects are metaphysical, however, `me` is considered to be also
 | <a name="dict"></a> `dict(`*`moniker`*`)`<br>`_dict(`*`moniker`*`)`<br>`dictionary(`*`moniker`*`)`<br>`_dictionary(`*`moniker`*`)` | A keyed collection, with key-value pairs, data storage *object* called *moniker* | [dict](./obj/dict.md) |
 | <a name="hash"></a> `hash(`*`moniker`*`)` | A two-dimensional collection data storage *object* called *moniker*, with hashed keys | [hash](./obj/hash.md) | 
 | <a name="lexi"></a> `lexi(`*`moniker`*`)`<br>`lexikon(`*`moniker`*`)` | A two-dimensional collection data storage *object* called *moniker*, with unique keys | [lexi](./obj/lexi.md) |
-
-## <a name="Value_Properties"></a> Value Properties
-
-| abstract | notes<br>examples | metaphysic | API |
-| --- | --- | :-: | --- | 
-| `var` | variable | [scalar](../metaphysic/scalar.md) | [var](./obj/var.md) |
-
-
 
 
 ## <a name="Function_Properties"></a> Function Properties
@@ -131,28 +124,13 @@ Each of the four `thingies` also have a `compon`ent. A `compon` is a *component*
 
 Then there are `device`s and `peripher`als, which are smart components that are carried or attached to the thingy, so for `human`s this could be a smart watch or a cellphone[^devicesobot].  For `organic`s this could be a microchip implanted in a dog.  For `robot`s and `thing`s this is termed a `peripher` and includes hygrometers, proximity sensors, sensors, cameras, etc. 
 
-## See Also
-----
-
-[Topological Index of Physic Objects](_topicindex.md)
-
-[A to Z Index of Phyic Objects](_atozindex.md)
-
-### Thingies
-[thingy](thingy.md)<br>
-[human](human.md)<br>
-[organic](organic.md)<br>
-[robot](robot.md) ([sobot](sobot.md))<br>
-[thing](thing.md)  ([mobot](mobot.md); [object](object.md); [IoT](iot.md))
-
-### Components
-[apparat](apparat.md); [equip](equip.md)<br>
-[jigger](jigger.md)<br>
-[jagger](jagger.md) ([device](device.md); [sensor](sensor.md))
-
 ## Notes
 [^morethingies]: There are some *fringe* `thingy` types such as `mech`, `applian`, `mach`, and, `vehicle`.
 [^devicesobot]: Smart devices are can also be treated a `sobot`s.
+
+---
+
+## References
 
 
 

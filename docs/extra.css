@@ -1,5 +1,7 @@
-.language-diego { color: red !important; }
+/* TODO: highlight.js for Diego */
+.language-diego { color: red !important; } 
 
+/* Make code less in-your-face! */
 code {
     color: darkslategrey !important;
     border: 0 !important;
@@ -8,7 +10,13 @@ code {
     background-color: transparent !important;
 }
 
+/* Don't waste real-estate */
 .wy-nav-content { max-width: 100% !important; }
 
+/* Centre graphs */
 div.mermaid { text-align: center; }
 
+/* Hide the usless headers */
+div[aria-label="breadcrumbs navigation"] {
+    display: none;
+  }

@@ -6,7 +6,7 @@ The common use of the `arity` property is as a posit applied to a preceeding `ar
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<arran>`*`_arity()`
 
-The [`length`](./length.md) property of an `arran` can sometimes be confused with the `arity` property, but, the `length` (or `len`) property for `arran`s only provides the positive range. For example:
+The [`length`](../funct/length.md) property of an `arran` can sometimes be confused with the `arity` property, but, the `length` (or `len`) property for `arran`s only provides the positive range. For example:
 ```diego
 add_arran({int},arran1)_v(1,2,3,4,5,6,7,8);
 

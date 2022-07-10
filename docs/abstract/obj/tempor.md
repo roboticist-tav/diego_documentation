@@ -40,5 +40,5 @@ calendar-presumed (usually Georgian), of the thingy caller | [zdt](../funct/zdt.
 ---
 ## See also
 
-* [`{date}`](../dt/date.md); [`{datetime}`](../dt/datetime.md); [`{time}`](../dt/datetime.md); 
-* [`datetime`](../obj/datetime.md); [`time`](../obj/time.md);
+* [`{empor}`](../dt/tempor.md);
+* [`tempor`](../obj/tempor.md);

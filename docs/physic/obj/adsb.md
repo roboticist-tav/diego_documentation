@@ -5,18 +5,18 @@
 
 ## Properties
 
-| property | datatype / unit | description |
+| `property` | `{datatype}` / `❬unit❭` | description |
 | --- | --- | --- |
-| `id`<br>`hex` | {id} / {id_3}[^3btyehex] | A 3 Byte hexidecimal unique idendifier used in adsb messaging |
-| `squawk` | {int} / {4_int} | A four-digit code assigned to a flight by air traffic control to match the flight to its radar screens |
-| `fir` | {str} / {4_str} | A four charatcher code representing the Flight Information Region (FIR) |
-| `uir` | {str} / {4_str} | A four character code representing the Upper Information Region (UIR), if no UIR then FIR is used |
-| `tailnum`<br>`reg` | {str} / {tailnum}[₁](#tne) | A unique code given to each aircraft |
-| `airspeed` | {double} / {kt} | The true air speed of the aircraft in knots[^avionicmeasurements] |
-| `speed` | {double} / {kt} | The ground speed of the aircraft in knots[^avionicmeasurements] |
-| `alt`<br>`altitude` | {double} / {ft} | The altitude of the aircraft in feet {ft}[^avionicmeasurements] |
-| `course`<br>`heading` | {int} / {deg} | The heading or course (from North) of the aircraft |
-| `vrate` | {double} / {ft/min}
+| `id`<br>`hex` | `{id}` / `❬id_3❭`[^3btyehex] | A 3 Byte hexidecimal unique idendifier used in adsb messaging |
+| `squawk` | `{int}` / `❬4_int❭` | A four-digit code assigned to a flight by air traffic control to match the flight to its radar screens |
+| `fir` | `{str}` / `❬4_str❭` | A four charatcher code representing the Flight Information Region (FIR) |
+| `uir` | `{str}` / `❬4_str❭` | A four character code representing the Upper Information Region (UIR), if no UIR then FIR is used |
+| `tailnum`<br>`reg` | `{str}` / `❬tailnum❭`[₁](#tne) | A unique code given to each aircraft |
+| `airspeed` | `{double}` / `❬kt❭` | The true air speed of the aircraft in knots[^avionicmeasurements] |
+| `speed` | `{double}` / `❬kt❭` | The ground speed of the aircraft in knots[^avionicmeasurements] |
+| `alt`<br>`altitude` | `{double}` / `❬ft❭` | The altitude of the aircraft in feet {ft}[^avionicmeasurements] |
+| `course`<br>`heading` | `{int}` / `❬deg❭` | The heading or course (from North) of the aircraft |
+| `vrate` | `{double}` / `❬ft/min❭`
 
 
 

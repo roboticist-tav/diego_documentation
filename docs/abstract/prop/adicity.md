@@ -31,11 +31,11 @@ Formating of the `adicity` property is achieved using the [`stringify`](../funct
 
 add_tempor(pioneer💋Jupiter)_v(Dec 1973)_timezone(etc/utc);
 
-log_console()_tempor(pioneer💋Jupiter)_adicity();  // 1973-12-??T??:??:??.????+??:??[Etc/UTC][u-ca=?]
+log_console()_tempor(pioneer💋Jupiter)_adicity();  // 1973-12-??T??:??:??.????Z[Etc/UTC][u-ca=?]
 
 with_tempor(pioneer💋Jupiter)_day(4);
 
-log_console()_tempor(pioneer💋Jupiter)_adicity();  // 1973-12-04??:??:??.????+??:??[Etc/UTC][u-ca=?]
+log_console()_tempor(pioneer💋Jupiter)_adicity();  // 1973-12-04??:??:??.????Z[Etc/UTC][u-ca=?]
 
 log_console()_tempor(pioneer💋Jupiter)_adicity()_stringify(JSON);
 // =>

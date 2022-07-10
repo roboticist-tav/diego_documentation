@@ -85,3 +85,14 @@ The initiation of an ```instruct``` starts with  ```start_instruct(```*```instru
 An whitelist (*moniker1*, *n...*) of monikers (robots, swarms, labels of) that should only be allowed to initiate the *instruct_moniker* ```instruct```.
 #### start_instruct(*instruct_moniker*)_not((*moniker1*, *n...*)
 A blacklist (*moniker1*, *n...*) of monikers (robots, swarms, labels of) that are denied to initiate the *instruct_moniker* ```instruct```.
+
+
+
+## <a name="proce"></a> Procedural Structuring
+
+| procedural | notes<br>examples | API |
+|--|:--|--|
+| `instruct`, `instruction` |  | [instruct](/instruct.md) |
+| `proc`, `procedure` | | [proc](/proc.md) |
+| `prog`, `program`, `programme` | | [prog](/prog.md) |
+| `action` | | [action](/action.md) |

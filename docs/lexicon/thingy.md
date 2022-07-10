@@ -4,9 +4,9 @@ The top object in the hierarchy of all objects in Diego are the *`thingies`*. A 
 
 | `thingy` | description | attributes | example | api |
 |---|:--|---|---|---|
-| `human` | Representation of a human being, present (aware of surroundings & context) and alive (animate) in the physical *'real'* world. The human version of a `thing` / `robot`.   | physical, organic, animate | *Fred Jones* | [human](obj/human.md) |
-| `organic` | Representation of a non-human being, present (aware of surroundings & context) and alive in the physical *'real'* world.<br>Example: cat, dog | [organic](/organic.md) |
-| `robot` | An *thingy* able to self-propel itself (animate) in the physical *'real'* world, that is maority inorganic.<br>Examples: Boston Dynamics Spot, robot arm, drone<br>See also: `human`; `thing` | physical inorganic animate | [robot](/robot.md)
+| `human` | Representation of a human being, present (aware of surroundings & context) and alive (animate) in the physical *'real'* world. The human version of a `thing` / `robot`.   | physical, organic, animate | *Fred Jones* | [human](../physic/obj/human.md) |
+| `organic` | Representation of a non-human being, present (aware of surroundings & context) and alive in the physical *'real'* world.<br>Example: cat, dog | [organic](../physic/obj/organic.md) |
+| `robot` | An *thingy* able to self-propel itself (animate) in the physical *'real'* world, that is maority inorganic.<br>Examples: Boston Dynamics Spot, robot arm, drone<br>See also: `human`; `thing` | physical inorganic animate | [robot](../physic/obj/robot.md)
 
  In terms of authority/hierarchy within the genera it is generally agreed that hi
 

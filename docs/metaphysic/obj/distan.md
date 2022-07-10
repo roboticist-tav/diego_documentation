@@ -5,7 +5,7 @@ Distance can be represented as both an object and a [property](/metaphysic/prop/
 
 For a vector quantity for the distance from one *point* to another, refer to [`displacem`](displacem.md).
 
-| ![Distance vs. Displacement](/_svg/Distancedisplacement.svg "Distance vs. Displacement") |
+| ![Distance vs. Displacement](/_img/Distancedisplacement.svg "Distance vs. Displacement") |
 | :---: |
 | *Distance vs. Displacement*<br/><sub>Credits: <a href="https://commons.wikimedia.org/wiki/File:Distancedisplacement.svg">Stannered</a>, <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>, via Wikimedia Commons</sub> |
 

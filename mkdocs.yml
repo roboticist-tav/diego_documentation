@@ -7,18 +7,34 @@ extra_css: [extra.css]
 nav:
   - Diego: intro.md
   - Lexicon: lexicon/lexicon.md
-  - Physic: physic/physic.md
-  - Metaphysic: metaphysic/metaphysic.md
-  - Abstract: abstract/abstract.md
-  - Corpus: corpus/corpus.md
+  - Physic:
+    - Physic: physic/physic.md
+    - Topological Index: physic/_indextopic.md
+    - A to Z Index: physic/_indexatoz.md
+  - Metaphysic: 
+    - Metaphysic: metaphysic/metaphysic.md
+    - Topological Index: metaphysic/_indextopic.md
+    - A to Z Index: metaphysic/_indexatoz.md
+  - Abstract:
+    - Abstract: abstract/abstract.md
+    - Topological Index: abstract/_indextopic.md
+    - A to Z Index: abstract/_indexatoz.md
+  - Corpus:
+    - Corpus: corpus/corpus.md
+    - IoT: corpus/iot/iot.md
+    - MAVLink: corpus/mavlink/mavlink.md
+    - Tasks: corpus/tasks/caterpillar.md
   
 theme: readthedocs
+
+features:
+  - header.hide
 
 markdown_extensions:
   - pymdownx.arithmatex:
       generic: true
+  - footnotes
 
 extra_javascript:
-  - javascripts/mathjax.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js

@@ -136,19 +136,10 @@ An topological index of all objects (at `thing` / `thingy` / `thingette` levels)
 
 | thing descriptor | notes | API |
 |--|:--|--|
-| `joint` | A structure that transforms spatial vectors between two or more `link`s.  Most usually a `joint`'s state is managed through an `actuat`or. |  [joint](joint.md)<br/>_see also:_ [link](link.md)<br/>[actuat](actuat.md) |
+| `hip` | `joint()_ofsort(hip) | 
+| `joint` | A structure that transforms spatial vectors between two or more `link`s.  Most usually a `joint`'s state is managed through an `actuat`or. |  [joint](../physic/obj/joint.md)<br/>_see also:_ [link](../physic/obj/link.md)<br/>[actuat](../metaphysic/obj/actuat.md) |
 | `link` |||
 | `transmiss`, `transmission` |||
-
-## Joints (Universal Robotic Description Format - URDF)
-
-| thing descriptor | notes | API |
-|--|:--|--|
-| `hip` | `joint()_ofsort(hip) |  [joint](joint.md)<br/>_see also:_ [link](link.md)<br/>[actuat](actuat.md) |
-| `link` |||
-| `transmiss`, `transmission` |||
-
-
 
 ## <a name="comm"></a> Commuincation
 
@@ -171,7 +162,6 @@ An topological index of all objects (at `thing` / `thingy` / `thingette` levels)
 | `instruct`, `instruction` |  | [instruct](/instruct.md) |
 | `proc`, `procedure` | | [proc](/proc.md) |
 | `prog`, `program`, `programme` | | [prog](/prog.md) |
-| `action` | | [action](/action.md) |
 
 ## <a name="audit"></a> Auditing & Error Handling
 

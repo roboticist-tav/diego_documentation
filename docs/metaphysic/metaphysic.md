@@ -33,23 +33,23 @@ flowchart TD
 ## See Also
 ----
 
-[Topological Index of Metaphysic Objects](_topicindex.md)
+[Topological Index of Metaphysic Objects](_indextopic.md)
 
-[A to Z Index of Metaphysic Objects](_atozindex.md)
+[A to Z Index of Metaphysic Objects]()
 
 ### Swarming
-[swarm](swarm.md)<br>
-[form](form.md)<br>
-[merge](merge.md)
+[swarm](../metaphysic/verb/swarm.md)<br>
+[form](../metaphysic/verb/form.md)<br>
+[merge](../metaphysic/verb/merge.md)
 
 ### Behaviour
-[behavi](behavi.md)<br>
-[gait](gait.md)
+[behavi](../metaphysic/obj/behavi.md)<br>
+[gait](../metaphysic/obj/gait.md)
 
 ### Commuincation
 [msg](msg.md)<br>
-[alert](alert.md)<br>
-[display](display.md)
+[alert](../metaphysic/verb/alert.md)<br>
+[display](../metaphysic/obj/display.md)
 
 ## Notes
 [^morethingies]: There are some *fringe* `thingy` types such as `mech`, `applian`, `mach`, and, `vehicle`.

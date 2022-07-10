@@ -1,5 +1,4 @@
 # Sensor (object)
-
 A `sensor` is an child object of a thing (and/or a child object of a `module`) that records specific data from its environment.  Data is usually communicated through `stat`s and `metric`s.
 
 ## Syntax
@@ -79,3 +78,6 @@ with_me()
 | <a name="pth"></a>`{pth}`<br>`_type(pth)` | **Pressure / Temperature/ Humidity Module**<br>Motion modules can carry: [pressure sensor](#press); [thermometer](#temp); [hygrometer](#hygro). |
 
 
+
+
+| `sensor` | The thing version of an `apparatus`.<br>See also: [apparat](#apparat) |

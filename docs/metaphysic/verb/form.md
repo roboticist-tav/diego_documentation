@@ -1,6 +1,6 @@
 # Form (verb)
 
-
+| `form`*[ation]* | |
 ## form_swarm(*swarm_moniker*)
 The ```form_swarm``` command 
 #### form_swarm(*formation_type*) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; transform_swarm(*formation_type*)

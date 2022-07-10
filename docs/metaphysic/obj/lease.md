@@ -1,4 +1,4 @@
-# Lease Service
+# Lease (object)
 
 `acquire_lease()`
 `retain_lease()`

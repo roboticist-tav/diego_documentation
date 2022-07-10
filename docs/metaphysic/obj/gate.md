@@ -1,1 +1,3 @@
 # Gate (object)
+
+| `gate` | |

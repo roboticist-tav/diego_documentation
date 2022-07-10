@@ -42,3 +42,8 @@ https://www.creativemotioncontrol.com/types-of-actuators/
 | `jigger` | An actuator that follows a _'to and fro'_ motion. Derived from `acutator` of `_motion(jigger)`. | [jigger](/actuat.md#jigger)<br/>_see also:_ [actuat](#actuat) |
 | `periodicator` | An actuator that follows a periodic motion. Derived from `actuator` of `_motion(periodicator)`. | [periodicator](/actuat.md#preiodicator)<br/>_see also:_ [actuat](#actuat) |
 | `rotator` | An actuator that follows a rotational motion. Derived from `acutator` of `_motion(rotator)`. | [rotator](/actuat.md#rotator)<br/>_see also:_ [actuat](#actuat) |
+
+
+| `jigger`<br>`actuat`<br>`actuator`<br>`mover` <a  name="actuat"></a> | A child *device*  `thingette` that causes its parent `thingy` and/or sibling `thingette` to operate, usually providing motion. A public interface with the _puff_ should be avoided or at least strictly limited. The thing version of a `jagger`.<br>Example: motor controller; gearbox; motor<br>See also: [jigger](#jigger), [jagger](#jagger) | [jigger](/jigger.md) |
+
+| `mover` <a  name="mover"></a> | See: [jigger](#jigger) | |

@@ -1,1 +1,4 @@
 # Foreigner (object)
+
+
+| `foreign`*[er]* | |

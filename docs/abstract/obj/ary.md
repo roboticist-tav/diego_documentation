@@ -91,6 +91,11 @@ with_ary(myChangeArray)_at(2)_v(5);    // '_value' can be shortened to '_v'
 [myExpandedArray]_swapfrom(2)_swapto(6);
 [myExpandedArray]_swap(2, 6);
 
+
+
+
+
+
 // Rectiline a member in an array
 [MyCaterpillarArray]_rectilat(4)_rectilup(2);
 [MyCaterpillarArray]_rectilup(4, 2);

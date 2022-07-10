@@ -1,8 +1,4 @@
-# List (object)
-A database-assigned collection type call *moniker* assigned exclusively from database queries.
-
-
-
+# Structured Query Language (function)
 
 
 ```diego

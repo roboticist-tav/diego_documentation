@@ -1,6 +1,86 @@
 # Abstract
 The term **abstract** is used to define statements in ***diego*** that represent abstract objects, usually used in a programming environment.
 
+## <a name="self"></a> Self
+As with most object-orientated programming langauges, the idea of self is used in **Diego**. However, since there are multiple intelects that are interpreting ***Diego*** code, there needs to be several levels of self. The differing level of self are usful for discernment, discrimination, and, swarming.
+
+All four *self* objects are metaphysical, however, `me` is considered to be also abstract as this is associated with '*this*' in other programming languages.  However, the four *self* objects are:
+
+| self | description | API |
+| --- | --- | --- |
+| `me_`*`<object>`*<br>`_me()` | A representation of the self thingy, similar to '*this*' in other programming languages | [me](./special/me.md) |
+| `_we()` | A representation of a group of thingys, through the viewpoint of a `spox` | [we](../metaphysic/special/we.md)<br>[spox](../metaphysic/obj/spox.md) |
+| `_us()` | Declaration of a group of thingys | [us](../metaphysic/special/us.md) |
+| `_them()` | A representation of a group of thingys from the viewpoint of `me` | [them](../metaphysic/special/them.md) |
+| `_you()` | A assignment member of the a group of thingys from the viewpoint of the `spox` of the group | [you](../metaphysic/speical/you.md) |
+
+## <a name="declarable_data"></a> Declarable Data
+
+| data | description | API |
+| --- | --- | --- |
+| <a name="deed"></a> `_deed(`*`moniker`*`)`  | A basic one-dimensional data storage object called *moniker*, immutable except for *deed owner* |  [deed](./obj/deed.md) |
+| <a name="indent"></a> `_indent(`*`moniker`*`)`<br>`indenture(`*`moniker`*`)`  | A basic one-dimensional data storage object called *moniker*, immutable except for *indenture owners* |  [indent](./obj/indent.md) |
+| <a name="val"></a> `val(`*`moniker`*`)`<br>`valuable(`*`moniker`*`)`  | A basic one-dimensional immutable data storage object called *moniker* |  [val](./obj/val.md) |
+| <a name="var"></a> `var(`*`moniker`*`)`<br>`variable(`*`moniker`*`)`  | A basic one-dimensional mutable data storage object called *moniker* |  [var](./obj/var.md) |
+
+## <a name="primitive_data"></a> Primitive Data
+
+| data | description | API |
+| --- | --- | --- |
+| <a name="tempor"></a> `tempor(`*`moniker`*`)`<br>`temporal(`*`moniker`*`)`<br>`_tempor(`*`moniker`*`)`<br>`_temporal(`*`moniker`*`)`<br>`{tempor}`<br>`{temporal}` | A primitive data object representing a date off a calendar monikered *moniker* | [tempor](./obj/tempor.md)
+
+
+
+## <a name="Collections"></a> Collections
+
+| collection | description | API |
+| --- | --- | --- |
+| <a name="array"></a> `array(`*`moniker`*`)`<br>`ary(`*`moniker`*`)` | A collection of multiple mutable elements under a single *object* called *moniker* | [array](./obj/ary.md) |
+| <a name="list"></a> `list(`*`moniker`*`)` | A database-assigned collection *object* called *moniker* | [list](./obj/list.md) |
+| <a name="arran"></a> `arran(`*`moniker`*`)`<br>`arn(`*`moniker`*`)`<br>`arrangem(`*`moniker`*`)`<br>`arrangement(`*`moniker`*`)` | A collection of multiple mutable elements under a single variable name of *moniker* | [arran](./obj/ary.md) |
+| <a name="matrix"></a> `matrix(`*`moniker`*`)`<br>`_matrix(`*`moniker`*`)`| A two-dimensional collection data storage *object* called *moniker* | [matrix](./obj/matrix.md) |
+| <a name="clump"></a> `clump(`*`moniker`*`)` | A multi-dimensional  collection of data storage *object* called *moniker* | [clump](./obj/clump.md) |
+| <a name="dict"></a> `dict(`*`moniker`*`)`<br>`_dict(`*`moniker`*`)`<br>`dictionary(`*`moniker`*`)`<br>`_dictionary(`*`moniker`*`)` | A keyed collection, with key-value pairs, data storage *object* called *moniker* | [dict](./obj/dict.md) |
+| <a name="hash"></a> `hash(`*`moniker`*`)` | A two-dimensional collection data storage *object* called *moniker*, with hashed keys | [hash](./obj/hash.md) | 
+| <a name="lexi"></a> `lexi(`*`moniker`*`)`<br>`lexikon(`*`moniker`*`)` | A two-dimensional collection data storage *object* called *moniker*, with unique keys | [lexi](./obj/lexi.md) |
+
+## <a name="Value_Properties"></a> Value Properties
+
+| abstract | notes<br>examples | metaphysic | API |
+| --- | --- | :-: | --- | 
+| `var` | variable | [scalar](../metaphysic/scalar.md) | [var](./obj/var.md) |
+
+
+
+
+## <a name="Function_Properties"></a> Function Properties
+
+
+## <a name="Functional_Objects"></a> Functional Objects
+
+## <a name="Error_Objects"></a> Error Objects
+
+| err | description | API |
+| --- | --- | --- |
+| `err` | | |
+
+## <a name="Numerics"></a> Numerics
+
+## <a name="Dates"></a> Dates
+
+## <a name="Text Processing"></a> Text Processing
+
+
+
+## <a name="Control Flow"></a> Control Flow
+
+## <a name="Declarations"></a> Declarations
+
+## <a name="Functions_Classes"></a> Functions & Classes
+
+## <a name="Iterations"></a> Iterations
+
+## <a name="primary_expressions"></a> Primary Expressions
 ## Collection Dimensions
 Data storage can be achieved in ***diego*** 
 ```mermaid

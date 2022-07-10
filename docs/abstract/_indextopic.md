@@ -32,7 +32,7 @@ An topological index of all abstract statements used by **diego** instruction pr
 
 ## <a name="Numerics"></a> Numerics
 
-## <a name="Dates"></a> Dates
+## <a name="Temporal"></a> Temporal
 
 ## <a name="Text Processing"></a> Text Processing
 

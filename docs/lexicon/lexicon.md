@@ -7,11 +7,9 @@ The lexicon of ***Diego*** is the full syntactical vocabulary of all statement c
 | <a name=";"></a> `;` | abstract | *statement-operator* | [Termination](../abstract/special/semicolon.md) of preceeding *statement* |
 | <a name=":"></a> `:` | abstract | *statement-operator* | Termination of preceeding *statement* and the negative outcome [beginning](../abstract/special/elvish.md) of proceeding *statement* |
 | <a name="?"></a> `?` | abstract | *statement-operator* | Termination of preceeding *statement* and the positive outcome [beginning](../abstract/special/elvish.md) of proceeding *statement* |
-| <a name="(())"></a> `(())` | abstract<br>metaphysic<br>physic | *object*<br>*action* | Refer to last referenced oldest generation *object* or refer to oldest generation nested *object*|
-| <a name="()"></a> `()` | abstract<br>metaphysic<br>physic | *object*<br>*action* | Refer to last referenced youngest generation *object* or refer to youngest generation nested *object* |
-| <a name="()"></a> `(`*`moniker`*`)` | abstract<br>metaphysic<br>physic | *object*<br>*action* |  Refer to last referenced eldest generation *object* monikered *moniker* |
-| <a name="()"></a> `(`*`robotmoniker`*`)` | physic | *object* | Refer to [robot](../physic/obj/robot.md) *robotmoniker* |
-| <a name="()"></a> `(`*`waypointmoniker`*`)` | metaphysic | *object* | Refer to [waypoint](../metaphysic/obj/waypoint.md) *waypointmoniker* |
+| <a name="(())"></a> `(())` | abstract<br>metaphysic<br>physic | *object* | Refer to last referenced oldest generation *object* or refer to oldest generation nested *object*|
+| <a name="()"></a> `()` | abstract<br>metaphysic<br>physic | *object* | Refer to last referenced youngest generation *object* or refer to youngest generation nested *object* |
+| <a name="()"></a> `(`*`moniker`*`)` | abstract<br>metaphysic<br>physic | *object* |  Refer to *object* monikered *moniker* |
 | <a name="([])"></a> `([`*`robotvariablename`*`])` | abstract<br>metaphysic<br>physic | *object* |  Refer to *[robot](../physic/obj/robot.md)* of value of *robotvariablename* [variable](../abstract/obj/var.md) of datatype *[robot](../physic/obj/robot.md)* |
 | <a name="([])"></a> `([`*`waypointvariablename`*`])` | physic | *object*<br>*variable* | Refer to *[waypoint](../metaphysic/obj/waypoint.md)* of value of *robotvariablename* [variable](../abstract/obj/var.md) of datatype *[waypoint](../metaphysic/obj/waypoint.md)* |
 | <a name="({}[])"></a> `({robot},[`*`variablename`*`])` | physic | *object*<br>*datatype*<br>*variable* | Refer to [robot-type](../physic/obj/robot.md) [robot](../physic/obj/robot.md) of value *variablename* [variable](../abstract/obj/var.md) |
@@ -19,8 +17,8 @@ The lexicon of ***Diego*** is the full syntactical vocabulary of all statement c
 | <a name="[]"></a> `[]` | abstract<br>metaphysic<br>physic | *object*<br>*variable* | Refer to last referenced *object*/*variable* or 'this' parent scoped *object* |
 | <a name="[]"></a> `[`*`moniker`*`]` | abstract<br>metaphysic<br>physic | *object*<br>*variable* | Refer to last referenced *object* |
 | <a name="[]"></a> `[`*`variablename`*`]` | abstract<br>metaphysic<br>physic | *variable* | Refer to last referenced *[variable](../abstract/obj/var.md)* monikered *moniker* |
-| <a name="{}"></a> `{}` | abstract | *datatype* | Declaration or convert / cast of a [variant](../abstract/dt/variant.md) datatype. |
-| <a name="{}"></a> `{}` | abstract | *datatype* | Declaration or convert / cast of a [variant](../abstract/dt/variant.md) datatype. |
+| <a name="{}"></a> `{}` | abstract | *datatype* | Declaration or convert / cast of a [variant](../abstract/obj/variant.md) datatype. |
+| <a name="{}"></a> `{}` | abstract | *datatype* | Declaration or convert / cast of a [variant](../abstract/obj/variant.md) datatype. |
 | <a name="{}"></a> `{`*`datatype`*`}` | abstract | *statement* | Declaration or convert / cast of a [datatype](../abstract/statem/declar.md) |
 | <a name="{}"></a> `{`*`datatype`*`}` | abstract | *statement* | Declaration or convert / cast of a [datatype](../abstract/statem/declar.md) |
 | <a name="{}"></a> `{`*`objtype`*`}` | abstract | *statement* | Declaration or convert / cast of an [object-type](../abstract/statem/declar.md) |
@@ -33,17 +31,19 @@ The lexicon of ***Diego*** is the full syntactical vocabulary of all statement c
 | <a name="action"></a> `action` | abstract | *action* | [action](/action.md) |
 | <a name="actuat"></a> `actuat(`*`moniker`*`)`<br>`actuator(`*`moniker`*`)` <a  name="actuat"></a> | physic<br>obj | [actuat](/actuat.md) |
 | <a name="add"></a> `add_`*`<object\|action>`* | abstract<br>metaphysic<br>physic | *verb* | Declare *object* |
-| <a name="after"></a> `_after(`*`date\|datetime\|time`*`)` | abstract | *condit* | Preceeding *object* [after](../abstract/condit/after.md) [date](../abstract/dt/date.md) \| [datetime](../abstract/dt/datetime.md) \| [time](../abstract/dt/time.md) for proceeding *object* to do proceeding *action* |
+| <a name="tempor"></a> `tempor(`*`moniker`*`)`<br>`temporal(`*`moniker`*`)`<br>`{tempor}`<br>`{temporal}` | abstract | *object* | A primitive data object representing a [date](../abstract/obj/date.md) off a calendar monikered *moniker* |
+| <a name="after"></a> `_after(`*`temporalexpression`*`)` | abstract | *condit* | Preceeding *object* [after](../abstract/condit/after.md) *temporalexpression* for the proceeding *object*, usually to do the proceeding *action* |
 | <a name="ai"></a> `ai`<br>`bot` | metaphysic<br>obj | | A construct present in the metaphysical world only. (Artificial Intelligence)<br>Example: *cal*, *ChatBot* | [ai](/bot.md) |
 | <a name="alert"></a> `alert_`*`<thingy>`*`(`*`moniker`*`)` | physic | *verb* | [alert](../physic/verb/alert.md) |
 | <a name="applain"></a> `applian`<br>`applicance` |  physic<br>obj | | A smart mobot that can safetly be classified as a *household applicance*.<br>Examples: washing machine, dishwasher.<br>`with_applian(dishWasher)_start(normalWash);` | [applian](applian.md) |
 | <a name="apprat"></a> `apparat(`*`moniker`*`)`<br>`apparatus(`*`moniker`*`)` | physic | *object* | [apparat](../physic/obj/apparat.md) |
 | <a name="arena"></a> `arena(`*`moniker`*`)` | metaphysic | *object* | [arena](../metaphysic/obj/arena.md) |
+| <a name="array"></a> `array(`*`moniker`*`)`<br>`ary(`*`moniker`*`)` | abstract | *object* | A [collection](../abstract/obj/ary.md) of multiple elements under a single *object* called *moniker* |
 | <a name="ask"></a> `ask_` | metaphysic | *verb* | Requests information, to be returned with `tell` *verb*<br/>`ask_drone(drone1)_stat(avg_altitude);`<br/>`tell_drone(drone1)_stat(avg_altitude)_value(22.893);` | [ask](/ask.md)<br />_see also:_ [tell](/end/md) |
 | <a name="ask"></a> `ask_`*`<thingy>`* | physic | *verb* | *[Ask](../metaphysic/verb/ask.md)* proceeding *thingy* |
-| <a name="at"></a> `_at(`*`date\|datetime\|time`*`)` | abstract | *condit* | Preceeding *object* [at](../abstract/condit/at.md) [date](../abstract/dt/date.md) \| [datetime](../abstract/dt/datetime.md) \| [time](../abstract/dt/time.md) for proceeding *object* to do proceeding *action* |
+| <a name="at"></a> `_at(`*`date\|datetime\|time`*`)` | abstract | *condit* | Preceeding *object* [at](../abstract/condit/at.md) [date](../abstract/obj/date.md) \| [datetime](../abstract/obj/datetime.md) \| [time](../abstract/obj/time.md) for proceeding *object* to do proceeding *action* |
 | <a name="attr"></a> `attr`<br>`attribute` | abstract | *object* | Example: <br>See also: [spec](#spec) | [attr](/attr.md) |
-| <a name="before"></a> `_before(`*`date\|datetime\|time`*`)` | abstract | *condit* | Preceeding *object* [before](../abstract/condit/before.md) [date](../abstract/dt/date.md) \| [datetime](../abstract/dt/datetime.md) \| [time](../abstract/dt/time.md) for proceeding *object* to do proceeding *action* |
+| <a name="before"></a> `_before(`*`date\|datetime\|time`*`)` | abstract | *condit* | Preceeding *object* [before](../abstract/condit/before.md) [date](../abstract/obj/date.md) \| [datetime](../abstract/obj/datetime.md) \| [time](../abstract/obj/time.md) for proceeding *object* to do proceeding *action* |
 | <a name="begin"></a> `begin_`*`<object\|action>`* | abstract<br>metaphysic | *verb* | [Begin](../metaphysic/verb/begin.md) *action* on proceeding *object* |
 | <a name="border"></a> `border` | physic<br>obj | | Floor marking showing borders, created using paint, tape, or, decals.<br>Example:<br><img src="/_img/256px-Floor_marking_5S_safety_Scanfil_Sieradz.jpg" alt="wayfind markings" style="width:200px;"/><br><sub>"<a href="https://commons.wikimedia.org/wiki/File:Floor_marking_5S_safety_Scanfil_Sieradz.jpg">Floor marking at the Scanfil Poland factory in Sieradz</a>"<br>by <a href="https://commons.wikimedia.org/wiki/User:Boston9">Adrian Grycuk</a> is licensed under <a href="https://creativecommons.org/licenses/by-sa/3.0/pl/">CC BY 2.0 Poland</a> </sub> | [border](border.md) |
 | <a name="bot"></a> `bot`<br>`ai` | metaphysic<br>obj | | A construct present in the metaphysical world only. (Artificial Intelligence)<br>Example: *cal*, *ChatBot* | [bot](/bot.md) |
@@ -52,12 +52,15 @@ The lexicon of ***Diego*** is the full syntactical vocabulary of all statement c
 | <a name="calc"></a> `calc_`*`<object>`*`(`*`objmoniker`*`)`<br/>`calc_`*`<object>`*`(`*`ofmoniker`*`)` | abstract<br/>metaphysic | *verb* | [calc](../metaphysic/verb/calc.md) |
 | <a name="call"></a> `call_`*`<object>`* | metaphysic | *verb* | [call](../metaphysic/verb/call.md) |
 | <a name="canal"></a> `canal` | physic | *object* | [canal](../physic/obj/canal.md) |
-| <a name="ceiling"></a> `ceiling` | physic | *object* | <a name="ceiling"></a>| An identified top _side_ of a representation space in the physical world. | [ceiling](ceiling.md) |
+| <a name="arity"></a> `_arity()` | abstract | *property* | Provides the [entire count](../abstract/prop/arity.md) *members* of the preceeding *object* |
+| <a name="adicity"></a> `_adicity()` | abstract | *property* | Provides the [information](../abstract/prop/adicity.md) of *elements* or *members* of the preceeding *object* |
+| <a name="ceiling"></a> `ceiling` | physic | *object* | <a name="ceiling"></a>| An identified top _side_ of a representation space in the physical world | [ceiling](ceiling.md) |
 | <a name="channel"></a> `channel(`*`moniker`*`)` | physic | *object* |An exclusive sub-section of a `workspace`, sometimes referred to as a _conversation_ | [channel](../metaphysic/obj/channel.md) |
 | <a name="cloud"></a> `cloud(`*`moniker`*`)`   | physic | *object* | |
+| <a name="clump"></a> `clump(`*`moniker`*`)` | abstract | *object* | A multi-dimesional  collection of [data](.,/abstract/obj/clump.md) storage *object* called *moniker* |
 | <a name="computer"></a> `computer(`*`moniker`*`)`<br>`comput(`*`moniker`*`)` | metaphysic | *object* | *Action* on *[computer](../metaphysic/obj/computer.md)* *moniker* |
 | <a name="comrelay"></a> `commrelay(`*`moniker`*`)` | | | https://www.autonodyne.com/AUTO_behaviors2.html | [comrelay](#comrelay) |
-| <a name="concat"></a> `_concat()`<br>`_concatenate()`<br>`_concat(`*`arymoniker`*`)`<br>`_concatenate(`*`arymoniker`*`)`<br>`_concat(`*`arymoniker1`*`,`*`arymoniker1`*`,`*`...`*`)`<br>`_concatenate(`*`arymoniker1`*`,`*`arymoniker1`*`,`*`...`*`)` | Merges proceeding *objects* (*arrays*) with proceeding *objects*<br>Merges array *arymoniker* with preceeding *objects*<br>Merges arrays *arymonikers* with preceeding *objects* |
+| <a name="concat"></a> `_concat()`<br>`_concatenate()`<br>`_concat(`*`arymoniker`*`)`<br>`_concatenate(`*`arymoniker`*`)`<br>`_concat(`*`arymoniker1`*`,`*`arymoniker1`*`,`*`...`*`)`<br>`_concatenate(`*`arymoniker1`*`,`*`arymoniker1`*`,`*`...`*`)` | abstract | *object* | Concatenates proceeding *objects* (*arrays*) with proceeding *objects*<br>Concatenates array *arymoniker* with preceeding *objects*<br>Concatenates arrays *arymonikers* with preceeding *objects* |
 | <a name="concord"></a> `concord(`*`settings`*`)` | abstract<br>metaphysic | *setter* |  |
 | <a name="consens"></a> `consens(`*`settings`*`)`<br>`consensus(`*`settings`*`)` | abstract<br>metaphysic | *setter* | [consens](../metaphysic/setter/consens.md) |
 | <a name="console"></a> `console` | metaphysic | *object* | A metaphysical presence used to only provide an interface to all other *thingies* | [console](../metaphysic/obj/console.md) |
@@ -66,18 +69,19 @@ The lexicon of ***Diego*** is the full syntactical vocabulary of all statement c
 | <a name="counter"></a> `counter` | | [counter](../abstract/obj/counter.md)
 | <a name="decisiven"></a> `decisiven(`*`settings`*`)`<br>`decisiveness(`*`settings`*`)` | metaphysic | *setter* |  |
 | <a name="decpl"></a> `_decpl(`*`numericvalue`*`)`<br>`_decplaces(`*`numericvalue`*`)` | abstract | *setter* | Set the default number of decimal place to use in calcluations adn on display (as a setter) [decpl](../abstract/setter/decpl.md)<br/>See also [`fix`](../abstract/meth/fix.md) *method* |
-| <a name="dict"></a> `dict(`*`moniker`*`)`<br>`_dict(`*`moniker`*`)`<br>`dictionary(`*`moniker`*`)`<br>`_dictionary(`*`moniker`*`)` | abstract | *object* | An [associative-array](../abstract/obj/dict.md) with key-value pairs called *moniker* |
+| <a name="deed"></a> `deed(`*`moniker`*`)` | abstract | *object* | A basic one-dimensional [data](../abstract/obj/deed.md) data *object* called *moniker*, immutable except for *deed owner* |  [deed](./obj/deed.md) |
+| <a name="dict"></a> `dict(`*`moniker`*`)`<br>`_dict(`*`moniker`*`)`<br>`dictionary(`*`moniker`*`)`<br>`_dictionary(`*`moniker`*`)` | abstract | *object* | A [keyed collection](../abstract/obj/dict.md), with key-value pairs, data storage *object* called *moniker* |
 | <a name="distan"></a> `_distan(`*`distancevalue`*`)`<br>`_distance(`*`distancevalue`*`)`<br>`_distan({unit},`*`distancevalue`*`)`<br>`_distance({unit},`*`distancevalue`*`)`<br> | metaphysic | *posit*<br/>*property* | Preceeding *object* of [distance](../metaphysic/prop/distan.md) of proceeding *object* |
 | <a name="distan"></a> `distan(`*`objectname`*`)`<br/>`distance(`*`objectname`*`)` | metaphysic | *object* | [distan](../metaphysic/obj/distan.md) |
 | <a name="door"></a> `door` | metaphysic | *object* | <a name="door"></a> | A `thing` representation of a physical doorway / gate, designed for a human.<br>See also: [portal](#portal); [gate](#gate) | [door](#door)
 | <a name="durat"></a> `_durat(`*`durationvalue`*`)`<br>`_duration(`*`durationvalue`*`)`<br>`_durat({unit},`*`durationvalue`*`)`<br>`_duration({unit},`*`durationvalue`*`)`<br> | metaphysic | *condit* | Preceeding *object* of [duration](../metaphysic/condit/durat.md) of proceeding *object* |
-| <a name="during"></a> `_during(`*`date`*`)` | abstract | *condit* | Preceeding *object* [during](../abstract/condit/during.md) [date](../abstract/dt/date.md) for proceeding *object* to do proceeding *action* |
+| <a name="during"></a> `_during(`*`date`*`)` | abstract | *condit* | Preceeding *object* [during](../abstract/condit/during.md) [date](../abstract/obj/date.md) for proceeding *object* to do proceeding *action* |
 | <a name="e"></a> `_e()`<br>`_e(`*`decplaces`*`)` |  abstract | *constant* | Use [Euler's number](../abstract/const/e.md) for preceeding *object*, with proceeding *object* |
 | <a name="equip"></a> `equip(`*`moniker`*`)`<br>`equipment(`*`moniker`*`)` | metaphysic | *object* | <br>See also: `apparatus`; `instru`*[ment]*; `peripheral`;  `sensor` | [equip](equip.md) |
 | <a name="ergcon"></a> `_ergcon(`*`ergconvalue`*`)`<br>`_ergcon({unit},`*`ergconvalue`*`)` | metaphysic | *property* | Preceeding *object* of [energy consumption](../metaphysic/prop/ergcon.md) of proceeding *object* |
 | <a name="firma"></a> `firma` | metaphysic | *object* | An identified down _side_ of a representation space in the physical world. | [firma](../physic/obj/firma.md) |
 | <a name="fix"></a> `_fix(`*`decplaces`*`)`<br/>`_tofix(`*`decplaces`*`)` | abstract | *method* | Converts preceeding *object-value* in to *decplaces* number of [fixed decimal places](../abstract/meth/fix.md) |
-| <a name="float"></a> `{float}` | abstract<br>datatype | | Float abstract datatype | [float](../abstract/dt/float.md) |
+| <a name="float"></a> `{float}` | abstract<br>datatype | | Float abstract datatype | [float](../abstract/obj/float.md) |
 | <a name="floor"></a> `floor`<br>`level` | | [floor](#floor.md)<br>[level](#level) |
 | <a name="fog"></a> `fog(`*`moniker`*`)` | metaphysic | *object* | A zone (`puff`) used for diego communication that relies on UDP [fog](../metaphysic/obj/fog.md) |
 | <a name="follow"></a> `follow_`*`<object>`* | metaphysic | *verb* | *[Follow](../metaphysic/verb/follow.md)* proceeding *object* |
@@ -100,13 +104,15 @@ The lexicon of ***Diego*** is the full syntactical vocabulary of all statement c
 | <a name="goto"></a> `goto_`*`<object>`* | physic | *verb* | Manouve Proceeding *object* to [goto](../metaphysic/verb/goto.md) proceeding *object* |
 | <a name="guide"></a> `guide` | |
 | <a name="handler"></a> `handler` | | |
+| <a name="hash"></a> `hash(`*`moniker`*`)` | abstract | *object* | A two-dimensional [collection](../abstract/obj/hash.md) data storage *object* called *moniker*, with hashed keys |
 | <a name="hold"></a> `hold`, `household` |||
 | <a name="human"></a> `human(`*`moniker`*`)` | physic | *object* | Representation of a human being, present and alive in the physical *'real'* world. |
 | <a name="if"></a> `_if_(`*`expression`*`)` | abstract | *operator* |  |
+| <a name="indent"></a> `indent(`*`moniker`*`)`<br>`indenture(`*`moniker`*`)` | abstract | *object* | A basic one-dimensional [data](../abstract/obj/indent.md) storage *object* called *moniker*, immutable except for *indenture owners* |  [indent](./obj/indent.md) |
 | <a name="instruct"></a> `instruct(`*`moniker`*`)`<br>`instruction(`*`moniker`*`)` | abstract<br>metaphysic | *action* | [instruct](../metaphysic/obj/instruct.md) |
-| <a name="int"></a> `{int}` | abstract<br>datatype | | Integer abstract datatype | [int](../abstract/dt/int.md) |
-| <a name="int32"></a> `{int32}` | abstract<br>datatype | | Integer abstract datatype | [int](../abstract/dt/int.md) |
-| <a name="int64"></a> `{int64}` | abstract<br>datatype | | Integer abstract datatype | [int](../abstract/dt/int.md) |
+| <a name="int"></a> `{int}` | abstract<br>datatype | | Integer abstract datatype | [int](../abstract/obj/int.md) |
+| <a name="int32"></a> `{int32}` | abstract<br>datatype | | Integer abstract datatype | [int](../abstract/obj/int.md) |
+| <a name="int64"></a> `{int64}` | abstract<br>datatype | | Integer abstract datatype | [int](../abstract/obj/int.md) |
 | <a name="jagger"></a> `jagger(`*`moniker`*`)` | metaphysic | *object* | jagger](#jagger) | [jigger](/jigger.md) |
 | <a name="ject"></a> `ject(`*`moniker`*`)` | metaphysic | *object* | A non-smart object in the physical *'real'* world.<br>Examples: a rock, a shopping trolley, a chair, etc.<br>`with_search(findTVRemote)_found()_object(TVRemote);` | [object](../physic/obj/object.md) |
 | <a name="jigger"></a> `jigger(`*`moniker`*`)`| metaphysic | *object* | |
@@ -114,8 +120,9 @@ The lexicon of ***Diego*** is the full syntactical vocabulary of all statement c
 | <a name="kill"></a> `kill_`*`<variable>`* | abstract | *verb* | *[Kill](../abstract/verb/kill.md)* proceeding *variable* |
 | <a name="label"></a> `label_`*`<object>`* | |
 | <a name="lead"></a> `lead_`*`<object>`* | metaphysic | *verb* | *[lead](../metaphysic/verb/lead.md) proceeding *object* |
-| <a name="lexikon"></a> `lexikon(`*`moniker`*`)` | | |
+| <a name="lexi"></a> `lexi(`*`moniker`*`)`<br>`lexikon(`*`moniker`*`)` | abstract | *object* | A two-dimensional [collection](../abstract/obj/lexi.md) data storage *object* called *moniker*, with unique keys |
 | <a name="lib"></a> `lib`, `library` | | |
+| <a name="list"></a> `list(`*`moniker`*`)` | abstract | *object* | A database-assigned [collection](../abstract/obj/list.md) *object* called *moniker* |
 | <a name="ln"></a> `_ln(`*`numericvalue`*`)`<br>`_log(`*`numericvalue`*`)`<br>`_ln([`*`numericvariablename`*`])`<br>`_log([`*`numericvariablename`*`])`  |  abstract | *function* | Use [natural logarithm](../abstract/funct/ln.md) (base [e](../abstract/const/e.md)) for preceeding *object*, with proceeding *object*<br>See also: [ln2](../abstract/const/ln2.md); [ln10](../abstract/const/ln10.md) |
 | <a name="ln10"></a> `_ln10()`<br>`_ln10(`*`decplaces`*`)`<br>`_ln(10)`<br>`_ln(10)_decpl(`*`decplaces`*`)` |  abstract | *constant* | Use [natural logarithm of 10](../abstract/const/ln10.md) for preceeding *object*, with proceeding *object*<br>See also: [ln](../abstract/funct/ln.md) |
 | <a name="ln2"></a> `_ln2()`<br>`_ln2(`*`decplaces`*`)`<br>`_ln(2)`<br>`_ln(2)_decpl(`*`decplaces`*`)` |  abstract | *constant* | Use [natural logarithm of 2](../abstract/const/ln2.md) for preceeding *expression*, with proceeding *object*<br>See also: [ln](../abstract/funct/ln.md) |
@@ -124,6 +131,7 @@ The lexicon of ***Diego*** is the full syntactical vocabulary of all statement c
 | <a name="mach"></a> `mech(`*`moniker`*`)`<br> | physic | *object* | |
 | <a name="map"></a> `map(`*`moniker`*`)` | metaphysic | *object* | |
 | <a name="mapprovider"></a> `_mapprovider(`*`mapprovider`*`)` | metaphysic | *setter* | [mapprovider](../metaphysic/setter/mapprovider.md) |
+| <a name="matrix"></a> `matrix(`*`moniker`*`)`` | abstract | *object* | A two-dimensional collection [data](../abstract/obj/matrix.md) storage *object* called *moniker* |
 | <a name="me"></a> `me_`*`<object\|action>`* | abstract | *special* | *[Me](../abstract/special/me/md)* (or this) does *action* or my *object*...<br>Representation of self |
 | <a name="metric"></a> `metric` | |
 | <a name="mist"></a> `mist(`*`moniker`*`)`    | metaphysic | *object* | A connectivity zone (wired or wireless) with the distance range of < 10m.<br>For example: RFID | [mist](/mist.md) |
@@ -133,9 +141,8 @@ The lexicon of ***Diego*** is the full syntactical vocabulary of all statement c
 | <a name="msg"></a> `_msg(`*`message`*`)`<br>`_message(`*`message`*`)` | metaphysic | *??* | Proceed with *[message](../metaphysic/obj/msg.md)* *moniker* |
 | <a name="msg"></a> `msg_`*`<object>`* | metaphysic | *verb* | *[message](../metaphysic/verb/msg.md)* proceeding *object* |
 | <a name="msg"></a> `msg(`*`moniker`*`)`<br>`message(`*`moniker`*`)` | metaphysic | *object* | *Action* on *[message](../metaphysic/obj/msg.md)* *moniker* |
-| <a name="namespace"></a> `namespace(`*`moniker`*`)`<br>`ns(`*`moniker`*`)` | abstract | object | [namespace](../abstract/obj/namespace.md) |
+| <a name="namespace"></a> `namespace(`*`moniker`*`)`<br>`ns(`*`moniker`*`)` | abstract | *object* | [namespace](../abstract/obj/namespace.md) |
 | <a name="neigh"></a> `neigh`, `neighbour` |||
-| <a name="ns"></a> `ns[]` | abstract | object | [namespace](../abstract/obj/namespace.md) |
 | <a name="ob"></a> `ob`  | metaphysic | *object* | A civilian[^civilian] immobile ject in the  physical *'real'* world.<br>Examples: unidentified lampost (or thing pointing out of the ground), etc.<br>`call_robot(alif)_found()_ob()_photo()_blob(d3Mtd2l6EAMyCwguEBDIL`*`...`* | [obstacle](../metaphysic/onstacle.md) | [ob](ob.md) |
 | <a name="object"></a> `object`  | metaphysic | *object* | A non-smart immobile ject in the physical *'real'* world.<br>Examples: a rock, a chair, etc.<br>`call_robot(alif)_found()_object(carKeys);` | [stacle](../metaphysic/obj/stacle.md) | [object](../physic/obj/object.md) |
 | <a name="obstacle"></a> `obstacle` | |
@@ -158,6 +165,7 @@ The lexicon of ***Diego*** is the full syntactical vocabulary of all statement c
 | <a name="process"></a> `process(`*`moniker`*`)`<br>`process(`*`moniker`*`)` | metaphysic | *object* |  |
 | <a name="prog"></a> `prog(`*`moniker`*`)`, `program(`*`moniker`*`)`, `programme(`*`moniker`*`)` | | |
 | <a name="puff"></a> `puff(`*`moniker`*`)` |
+| <a name="sql"></a> `_sql(`*`sqlquery`*`)` | abstract | *function* | Returns *sqlquery* [outcome](../abstract/funct/sql.md) into preceeding *object* | 
 | <a name="rail"></a> `rail(`*`moniker`*`)` | metaphysic | *object* | [rail](../physic/obj/rail.md) |
 | <a name="ret"></a> `_ret()`<br>`_ret({`*`datatype`*`})` | abstract | *function* | [ret](../abstract/funct/ret.md)
 | <a name="robot"></a> `robot(`*`moniker`*`)`<br>`_robot(`*`moniker`*`)` | physic | *object* | *Action* on *[robot](../physic/obj/robot.md)* *moniker* |
@@ -196,7 +204,7 @@ The lexicon of ***Diego*** is the full syntactical vocabulary of all statement c
 | <a name="unit"></a> `_unit(`*`unit`*`)` | metaphysic | *posit-datatype* |  |
 | <a name="unload"></a> `unload_`*`<object>`* | metaphysic | *verb* | *[Unload](../metaphysic/verb/unload.md)* proceeding *object* |
 | <a name="using"></a> `_using(`*`moniker`*`)`<br/>`_using([`*`variablename`*`])` | metaphysic | *condit* | [using](../metaphysic/condit/using.md) |
-| <a name="var"></a> `var`<br>`variable` | abstract | *object* | [var](../abstract/obj/var.md)
+| <a name="var"></a> `var(`*`moniker`*`)`<br>`variable(`*`moniker`*`)`  | abstract | *object* | A basic one-dimensional mutable [data](../abstract/obj/var.md) storage *object* called *moniker*  |
 | <a name="vector"></a> `vector(`*`moniker`*`)`<br>`_vector(`*`moniker`*`)` | metaphysic | *object*<br>*posit-object* | *Action* on *[vector](../abstract/obj/vector.md)* *moniker*<br>Proceed with *[way](../metaphysic/obj/way.md)* *moniker* |
 | <a name="vehicle"></a> `vehicle` | physic<br>obj | | A guided *thingy* transporting `human`/`organic` thingies and/or controlled by a `human`.<br>Examples: car, airplane, <abbr title="uncrewed ground vehicle">ugv</abbr>.<br>`with_vehicle(familyCar)_equip(frontLeftWheel)_metric()_tyrepress();` | [vehicle](vehicle.md) |
 | <a name="verb"></a> `verb(`*`moniker`*`)` | meta-abstract | *object* | *Action* on *[verb](../abstract/meta/verb.md)* *moniker* |

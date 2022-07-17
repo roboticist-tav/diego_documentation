@@ -1,12 +1,4 @@
-## The Evolution of Diego
-
-## The Beginning
-
-It all started with two robots, UGV04 and burger, and two humans, Tavis Pitt and Rafael Goulart.
-
-
-
- RodriguesBeing task in a small team (2 of us) to develop a way for two robots to communicate and get organised.
+# Package (object)
 
 * only one include / import once ever - does a human have to include/import methods of making and eating breakfast every morning?
 * 

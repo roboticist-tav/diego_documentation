@@ -5,20 +5,22 @@
 An topological index of all physic objects used by **diego** instruction programming language.
 
 ## <a name="genera"></a> Thingy Objects (Genera of Thingies)
-The top most physic objects are derived from `thingy`.  There are three main cataegories: 'types'; 'sub-types'; and, '*fringe* types':
+The top most physic objects are derived from `thingy`.  There are three main categories: 'types'; 'sub-types'; and, '*fringe* types':
 ```mermaid
-flowchart TD
-    thingy --> human
-    thingy --> organic
-    thingy --> robot
-    robot --> sobot
-    thingy --> thing
-    thing --> mobot
-    thing --> ject
-    _human(human) --- vehicle
-    _mobot(mobot) --- applian
-    _mobot(mobot) --- mach
-    _object(object) --- mech
+    flowchart TD
+    thingy((thingy)) --> human([human])
+    thingy --> organic([organic])
+    thingy --> robot([robot])
+    thingy --> thing([thing])
+    human --> vehicle(vehicle)
+    robot --> sobot(sobot)
+    thing --> mach(mach)
+    thing --> mobot(mobot)
+    thing --> ject(ject)
+    mach --> applian{{applian}}
+    ject --> object{{object}}
+    ject --> subject{{subject}}
+    ject --> mech{{mech}}
 ```
 <div style="text-align: right"><sub>Genera of Thingies</sub></div><br>
 
@@ -33,16 +35,20 @@ flowchart TD
 &nbsp;
 
 ```mermaid
-flowchart TD
-    robot --> sobot
-    thing --> mobot
-    thing --> ject
+    flowchart TD
+    human([human]) --> vehicle(vehicle)
+    robot([robot]) --> sobot(sobot)
+    thing([thing]) --> mach(mach)
+    thing--> mobot(mobot)
+    thing --> ject(ject)
 ```
 <div style="text-align: right"><sub>Thingy Sub-Types</sub></div><br>
 
 | thingy genera<br>*sub-types* | notes<br>examples<br>`example` | API |
 | --------- | ----- | ----- |
-| `sobot` | A stationary `robot`, that although can be self-propelled, does not neccesarily interact physically in the physical world outside its own environment.<br>Exmaple: robot arm<br>`with_sobot(robotarm1)_exec(weld_door_prog_3725255_v2);` | [sobot](./obj/sobot.md) |
+| `vehicle` | A guided *thingy* transporting `human`/`organic` thingies and/or controlled by a `human`.<br>Examples: car, airplane, <abbr title="uncrewed ground vehicle">ugv</abbr>.<br>`with_vehicle(familyCar)_equip(frontLeftWheel)_metric()_tyrepress();` | [vehicle](./obj/vehicle.md) |
+| `sobot` | A stationary `robot`, that although can be self-propelled, does not necessarily interact physically in the physical world outside its own environment.<br>Example: robot arm<br>`with_sobot(robotarm1)_exec(weld_door_prog_3725255_v2);` | [sobot](./obj/sobot.md) |
+| `mach`<br>`machine` | A smart mobot using mechanical power and having several parts, each with a definite function and together performing a particular task.<br>Examples: CNC machine, 3D printer, metal laser cutter, etc.<br>`with_mach(metalCutter)_exec()_file(./2d-flower.dxf);` | [mach](./obj/mach.md) |
 | `mobot` | A conveyed *thingy* in the physical *'real'* world.<br>Examples: Samsung Galaxy watch, cellphone<br>`with_mobot(Jill's I-Phone)_call()_human(Bob);` | [mobot](./obj/mobot.md) |
 | `ject` | A non-smart object in the physical *'real'* world.<br>Examples: a rock, a shopping trolley, a chair, etc.<br>`with_search(findTVRemote)_found()_object(TVRemote);` | [object](./obj/object.md) |
 
@@ -50,31 +56,45 @@ flowchart TD
 
 
 ```mermaid
-flowchart TD
-    _human(human) --- vehicle
-    _mobot(mobot) --- applian
-    _mobot(mobot) --- mach
-    _ject(ject) --- mech
+    flowchart TD
+    mach(mach) --> applian{{applian}}
+    ject(ject) --> object{{object}}
+    ject --> subject{{subject}}
+    ject --> mech{{mech}}
 ```
 <div style="text-align: right"><sub>Thingy <i>Fringe</i> Types</sub></div><br>
 
 | thingy genera<br>*fringe types* | notes<br>examples<br>`example` | API |
 | --------- | ----- | ----- |
-| `vehicle` | A guided *thingy* transporting `human`/`organic` thingies and/or controlled by a `human`.<br>Examples: car, airplane, <abbr title="uncrewed ground vehicle">ugv</abbr>.<br>`with_vehicle(familyCar)_equip(frontLeftWheel)_metric()_tyrepress();` | [vehicle](./obj/vehicle.md) |
 | `applian`<br>`applicance` | A smart mobot that can safetly be classified as a *household applicance*.<br>Examples: washing machine, dishwasher.<br>`with_applian(dishWasher)_start(normalWash);` | [applian](./obj/applian.md) |
-| `mach`<br>`machine` | A smart mobot using mechanical power and having several parts, each with a definite function and together performing a particular task.<br>Examples: CNC machine, 3D printer, metal laser cutter, etc.<br>`with_mach(metalCutter)_exec()_file(./2d-flower.dxf);` | [mach](./obj/mach.md) |
 | `mech`<br>_[mechanical thing]_ | A non-smart ject using mechanical power and having several parts, each with a definite function and together performing a particular task.<br>Examples: a Rube Goldberg machine, paper shredder<br><sub>`alert_human(joe)_msg(Please shred documents in [])_mach(paperShredder1)_moniker();`</sub> | [mach](./obj/mach.md) |
 
 
 ## Known/Identified Jects
-Using computer vision most robot can identify an object (`object`) and a moving object (`subject`), these identified jects are represented in ***diego*** using the `object` and `subject` *objects*:
+Using visacuity most robot can identify an object (`object`) and a moving object (`subject`), these identified jects are represented in ***diego*** using the `object` and `subject` *objects*.
+
+```mermaid
+    flowchart TD
+    ject(ject) --> object{{object}}
+    ject --> subject{{subject}}
+```
+<div style="text-align: right"><sub>Known/Identified Jects</sub></div>
+
 | known ject | notes<br>examples<br>`example` | metaphysic version | API |
 |--|:--|:-:|--|
 | `object`  | A non-smart immobile ject in the physical *'real'* world.<br>Examples: a rock, a chair, etc.<br>`call_robot(alif)_found()_object(carKeys);` | [stacle](../metaphysic/stacle.md) | [object](object.md) |
 | `subject` | A non-smart mobile ject in the  physical *'real'* world.<br>Examples: a shopping trolley object<br>`with_robot(sha)_follow()_subject(ball_ef42b);` | [hunderan](../metaphysic/hinderan.md)<br>*[ghost](../metaphysic/ghost.md)* | [subject](./obj/subject.md) |
 
 ## Unknown/Unidentified Jects
-Using computer vision most robot can observe a ject (`ob`) and a moving ject (`sub`), these unidentified jects are represented in ***diego*** using the `ob` and `sub` *objects*:
+Using visacuity most robots can observe a ject (`ob`) and a moving ject (`sub`), these unidentified jects are represented in ***diego*** using the `ob` and `sub` *objects*.
+
+```mermaid
+    flowchart TD
+    ob{{ob}} --> ject(ject)
+    sub{{sub}} --> ject
+```
+<div style="text-align: right"><sub>Unknown/Unidentified Jects</sub></div>
+
 | unknown ject | notes<br>examples<br>`example` | metaphysic version | API |
 |--|:--|:-:|--|
 | `ob`  | A civilian[^civilian] immobile ject in the  physical *'real'* world.<br>Examples: unidentified lampost (or thing pointing out of the ground), etc.<br>`call_robot(alif)_found()_ob()_photo()_blob(d3Mtd2l6EAMyCwguEBDIL`*`...`* | [obstacle](../metaphysic/obj/obstacle.md) | [ob](../metaphysic/obj/ob.md) |

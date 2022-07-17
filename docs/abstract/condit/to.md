@@ -1,1 +1,1 @@
-# To (condit)
+# To (condition)

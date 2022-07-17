@@ -3,7 +3,11 @@ site_url: http://diego.dev
 plugins:
     - search
     - mermaid2
-extra_css: [extra.css]
+
+extra_css: 
+  - extra.css
+  - https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0
+
 nav:
   - Diego: intro.md
   - Lexicon: lexicon/lexicon.md
@@ -27,14 +31,18 @@ nav:
   
 theme: readthedocs
 
-features:
-  - header.hide
-
 markdown_extensions:
   - pymdownx.arithmatex:
       generic: true
   - footnotes
+  - fontawesome_markdown
+  - attr_list
+  - admonition
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
 
 extra_javascript:
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+

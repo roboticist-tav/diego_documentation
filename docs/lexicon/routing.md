@@ -16,7 +16,7 @@ Location plus orientation routing involves four *objects* that consider physical
 | `excurs`<br>`excursion` | An *object* *collection* of `course` *object* *collections* | | [excurs](../metaphysic/obj/excurs.md) |
 | `course` | An *object* *collection* of `way` *objects* | [valley](../physic/obj/valley.md) | [course](../metaphysic/obj/course.md) |
 | `way` | A representation of the connections of `pose` *objects* | - | [way](../metaphysic/obj/way.md) |
-| `pose` | A representation of an orientation in the physical world | *[heading](../physic/obj/heading.md)* | [pose](../metaphysic/obj/pose.md) |
+| `pose` | A representation of an orientation in the physical world | *[heading](../metaphysic/funct/heading.md)* | [pose](../metaphysic/obj/pose.md) |
 
 ### Time-Orientation-Location Routing
 Location plus orientation plus time routing involves four *objects* that consider physical locations, their orientation, and their temporal displacement within their spatial and orientational and temporal environment. Time-orientation-location routing *objects* can inherit their physical locations from location routing *objects* and their orientation pose from orientation-location routing *objects*.

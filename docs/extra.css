@@ -20,3 +20,254 @@ div.mermaid { text-align: center; }
 div[aria-label="breadcrumbs navigation"] {
     display: none;
   }
+
+/* coco images (resize small) */
+img[alt=coco] { height: 16px; }
+
+/* colour boxes (used for enumerators) */
+span.enum_box{
+  height:12px;
+  width:20px;
+  border: none;
+  border-radius: 3px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.lowest{ background-color: #00ad54; }
+.low{ background-color: #6bb749; }
+.lowmed{ background-color: #cccf58; }
+.med{ background-color: #ffd143; }
+.medhigh{ background-color: #ff9938; }
+.high{ background-color: #ff6832; }
+.highest{ background-color: #ff2432; }
+.amber { background-color: yellow; }
+
+.tl-spin {
+  -webkit-animation:tl-spin 2s infinite linear;
+  animation:tl-spin 2s infinite linear
+}
+.tl-pulse {
+  -webkit-animation:tl-spin 1s infinite steps(8);
+  animation:tl-spin 1s infinite steps(8)
+}
+@-webkit-keyframes tl-spin {
+  0% {
+      -webkit-transform:rotate(0deg);
+      transform:rotate(0deg)
+  }
+  100% {
+      -webkit-transform:rotate(359deg);
+      transform:rotate(359deg)
+  }
+}
+@keyframes tl-spin {
+  0% {
+      -webkit-transform:rotate(0deg);
+      transform:rotate(0deg)
+  }
+  100% {
+      -webkit-transform:rotate(359deg);
+      transform:rotate(359deg)
+  }
+}
+
+.tl {
+  display:inline-block;
+  font: inherit;
+  font-size:inherit;
+  text-rendering:auto;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale
+}
+.tl-lg {
+  font-size:1.33333333em;
+  line-height:.75em;
+  vertical-align:-15%
+}
+/* ◌ ⊙ ◉ ⦿      ▲ */
+
+
+.tl-ts:before,.tl-tinysqr:before,.tl-tinysquare:before{content:"▪"}
+.tl-ss:before,.tl-smsqr:before,.tl-smallsquare:before{content:"■"}
+.tl-sq:before,.tl-sqr:before,.tl-square:before{content:"◼"}
+.tl-r:before,.tl-rect:before,.tl-rectangle:before{content:"▬▮"}
+.tl-c:before,.tl-circ:before,.tl-circle:before{content:"⬤"}
+.tl-sc:before,.tl-smcirc:before,.tl-smallcircle:before{content:"◯"}
+.tl-dt:before,.tl-dot:before{content:"●"}
+.tl-t:before,.tl-tri:before,.tl-triangle:before{content:"▲"}
+.tl-d:before,.tl-dia:before,.tl-diamond:before{content:"◆"}
+
+.tl-2x { font-size:2em }
+.tl-3x { font-size:3em }
+.tl-4x { font-size:4em }
+.tl-5x { font-size:5em }
+.tl-fw { 
+    width:1.28571429em;
+    text-align:center
+}
+
+.tl-high{ color: #ff6832; }
+.tl-lowest{ color: #00ad54; }
+.tl-low{ color: #6bb749; }
+.tl-lowmed{ color: #cccf58; }
+.tl-med{ color: #ffd143; }
+.tl-medhigh{ color: #ff9938; }
+.tl-high{ color: #ff6832; }
+.tl-highest{ color: #ff2432; }
+
+.tl-amber { color: yellow; }
+
+.tl-black { color: black; }
+.tl-aliceblue { color: aliceblue; }
+.tl-antiquewhite { color: antiquewhite; }
+.tl-aqua { color: aqua; }
+.tl-aquamarine { color: aquamarine; }
+.tl-azure { color: azure; }
+.tl-beige { color: beige; }
+.tl-bisque { color: bisque; }
+.tl-black { color: black; }
+.tl-blanchedalmond { color: blanchedalmond; }
+.tl-blue { color: blue; }
+.tl-blueviolet { color: blueviolet; }
+.tl-brown { color: brown; }
+.tl-burlywood { color: burlywood; }
+.tl-cadetblue { color: cadetblue; }
+.tl-chartreuse { color: chartreuse; }
+.tl-chocolate { color: chocolate; }
+.tl-coral { color: coral; }
+.tl-cornflowerblue { color: cornflowerblue; }
+.tl-cornsilk { color: cornsilk; }
+.tl-crimson { color: crimson; }
+.tl-cyan { color: cyan; }
+.tl-darkblue { color: darkblue; }
+.tl-darkcyan { color: darkcyan; }
+.tl-darkgoldenrod { color: darkgoldenrod; }
+.tl-darkgray { color: darkgray; }
+.tl-darkgreen { color: darkgreen; }
+.tl-darkgrey { color: darkgrey; }
+.tl-darkkhaki { color: darkkhaki; }
+.tl-darkmagenta { color: darkmagenta; }
+.tl-darkolivegreen { color: darkolivegreen; }
+.tl-darkorange { color: darkorange; }
+.tl-darkorchid { color: darkorchid; }
+.tl-darkred { color: darkred; }
+.tl-darksalmon { color: darksalmon; }
+.tl-darkseagreen { color: darkseagreen; }
+.tl-darkslateblue { color: darkslateblue; }
+.tl-darkslategray { color: darkslategray; }
+.tl-darkslategrey { color: darkslategrey; }
+.tl-darkturquoise { color: darkturquoise; }
+.tl-darkviolet { color: darkviolet; }
+.tl-deeppink { color: deeppink; }
+.tl-deepskyblue { color: deepskyblue; }
+.tl-dimgray { color: dimgray; }
+.tl-dimgrey { color: dimgrey; }
+.tl-dodgerblue { color: dodgerblue; }
+.tl-firebrick { color: firebrick; }
+.tl-floralwhite { color: floralwhite; }
+.tl-forestgreen { color: forestgreen; }
+.tl-fuchsia { color: fuchsia; }
+.tl-gainsboro { color: gainsboro; }
+.tl-ghostwhite { color: ghostwhite; }
+.tl-gold { color: gold; }
+.tl-goldenrod { color: goldenrod; }
+.tl-gray { color: gray; }
+.tl-green { color: green; }
+.tl-greenyellow { color: greenyellow; }
+.tl-grey { color: grey; }
+.tl-honeydew { color: honeydew; }
+.tl-hotpink { color: hotpink; }
+.tl-indianred { color: indianred; }
+.tl-indigo { color: indigo; }
+.tl-ivory { color: ivory; }
+.tl-khaki { color: khaki; }
+.tl-lavender { color: lavender; }
+.tl-lavenderblush { color: lavenderblush; }
+.tl-lawngreen { color: lawngreen; }
+.tl-lemonchiffon { color: lemonchiffon; }
+.tl-lightblue { color: lightblue; }
+.tl-lightcoral { color: lightcoral; }
+.tl-lightcyan { color: lightcyan; }
+.tl-lightgoldenrodyellow { color: lightgoldenrodyellow; }
+.tl-lightgray { color: lightgray; }
+.tl-lightgreen { color: lightgreen; }
+.tl-lightgrey { color: lightgrey; }
+.tl-lightpink { color: lightpink; }
+.tl-lightsalmon { color: lightsalmon; }
+.tl-lightseagreen { color: lightseagreen; }
+.tl-lightskyblue { color: lightskyblue; }
+.tl-lightslategray { color: lightslategray; }
+.tl-lightslategrey { color: lightslategrey; }
+.tl-lightsteelblue { color: lightsteelblue; }
+.tl-lightyellow { color: lightyellow; }
+.tl-lime { color: lime; }
+.tl-limegreen { color: limegreen; }
+.tl-linen { color: linen; }
+.tl-magenta { color: magenta; }
+.tl-maroon { color: maroon; }
+.tl-mediumaquamarine { color: mediumaquamarine; }
+.tl-mediumblue { color: mediumblue; }
+.tl-mediumorchid { color: mediumorchid; }
+.tl-mediumpurple { color: mediumpurple; }
+.tl-mediumseagreen { color: mediumseagreen; }
+.tl-mediumslateblue { color: mediumslateblue; }
+.tl-mediumspringgreen { color: mediumspringgreen; }
+.tl-mediumturquoise { color: mediumturquoise; }
+.tl-mediumvioletred { color: mediumvioletred; }
+.tl-midnightblue { color: midnightblue; }
+.tl-mintcream { color: mintcream; }
+.tl-mistyrose { color: mistyrose; }
+.tl-moccasin { color: moccasin; }
+.tl-navajowhite { color: navajowhite; }
+.tl-navy { color: navy; }
+.tl-oldlace { color: oldlace; }
+.tl-olive { color: olive; }
+.tl-olivedrab { color: olivedrab; }
+.tl-orange { color: orange; }
+.tl-orangered { color: orangered; }
+.tl-orchid { color: orchid; }
+.tl-palegoldenrod { color: palegoldenrod; }
+.tl-palegreen { color: palegreen; }
+.tl-paleturquoise { color: paleturquoise; }
+.tl-palevioletred { color: palevioletred; }
+.tl-papayawhip { color: papayawhip; }
+.tl-peachpuff { color: peachpuff; }
+.tl-peru { color: peru; }
+.tl-pink { color: pink; }
+.tl-plum { color: plum; }
+.tl-powderblue { color: powderblue; }
+.tl-purple { color: purple; }
+.tl-red { color: red; }
+.tl-rosybrown { color: rosybrown; }
+.tl-royalblue { color: royalblue; }
+.tl-saddlebrown { color: saddlebrown; }
+.tl-salmon { color: salmon; }
+.tl-sandybrown { color: sandybrown; }
+.tl-seagreen { color: seagreen; }
+.tl-seashell { color: seashell; }
+.tl-sienna { color: sienna; }
+.tl-silver { color: silver; }
+.tl-skyblue { color: skyblue; }
+.tl-slateblue { color: slateblue; }
+.tl-slategray { color: slategray; }
+.tl-slategrey { color: slategrey; }
+.tl-snow { color: snow; }
+.tl-springgreen { color: springgreen; }
+.tl-steelblue { color: steelblue; }
+.tl-tan { color: tan; }
+.tl-teal { color: teal; }
+.tl-thistle { color: thistle; }
+.tl-tomato { color: tomato; }
+.tl-turquoise { color: turquoise; }
+.tl-violet { color: violet; }
+.tl-wheat { color: wheat; }
+.tl-white { color: white; }
+.tl-whitesmoke { color: whitesmoke; }
+.tl-yellow { color: yellow; }
+.tl-yellowgreen { color: yellowgreen; }
+
+
+
+
+/* get :fontawesome (from material) down from ridiculous size */
+.twemoji { height: 0.8em; width: 0.8em; }

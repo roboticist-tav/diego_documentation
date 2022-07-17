@@ -166,7 +166,7 @@ An A to Z index of all physic objects used by **diego** instruction programming 
 |--|:--|--|
 | `sensor` | The thing version of an `apparatus`.<br>See also: [apparat](#apparat) |
 | `side` | | |
-| `sobot` | A stationary `robot`, that although can be self-propelled, does not neccesarily interact physically in the physical world outside its own environment.<br>Exmaple: robot arm<br>`with_sobot(robotarm1)_exec(weld_door_prog_3725255_v2);` | [sobot](sobot.md) |
+| `sobot` | A stationary `robot`, that although can be self-propelled, does not neccesarily interact physically in the physical world outside its own environment.<br>Example: robot arm<br>`with_sobot(robotarm1)_exec(weld_door_prog_3725255_v2);` | [sobot](sobot.md) |
 | `spec`*[ification]* | <br>See also: `attribute` |
 | `stance` |  |
 | `stride` | The human version of `gait` |

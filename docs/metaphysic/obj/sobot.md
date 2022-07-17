@@ -1,1 +1,0 @@
-# Sobot (object)

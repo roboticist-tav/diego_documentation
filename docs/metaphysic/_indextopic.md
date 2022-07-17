@@ -24,7 +24,7 @@
 
 | identification | notes<br>examples | API |
 |--|:--|--|
-| `ident` | | [ident](../metaphysic/obj/ident.md) |
+| `ident` | | [ident](../metaphysic/prop/ident.md) |
 | `manufactur`<br>`manufact`<br>`manufacturer` | | [manufactur](../metaphysic/prop/manufactur.md) |
 | `make` | | [make](../metaphysic/prop/make.md) |
 | `model` | | [model](../metaphysic/prop/model.md) |

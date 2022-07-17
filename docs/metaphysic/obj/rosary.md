@@ -1,8 +1,9 @@
 # Rosary (object)
+A `rosary` *object* is looped chain of *objects* representing a physical ordered array of points to combine into a full route. In terms of orientation all physical coordinate locations follow the right-hand-rule.  A `rosary` is similar to an `ambit`, execpt a rosary cannot have forks and the last locational object must loop back on the first locational object.
 
-Rosary is a diriviative of `path` and `way`
+The term 'linear ring' is often associated with the same principle of the `rosary` object.
 
-
+## Definition & Assignment
 
 ## Operators 
 
@@ -17,19 +18,26 @@ Example
 
 ```diego
     // Set up route
-    add_route(perimeter);
-    add_waypoint(x0)_route(perimeter)_coords(-26.812298, 153.082254);
-    add_waypoint(x1)_route(perimeter)_coords(-26.812298, 153.082254);
-    add_waypoint(x2)_route(perimeter)_coords(-26.812298, 153.082254);
-    add_waypoint(x3)_route(perimeter)_coords(-26.812298, 153.082254);
-    add_waypoint(x4)_route(perimeter)_coords(-26.812298, 153.082254);
-    add_waypoint(x5)_route(perimeter)_coords(-26.812298, 153.082254);
-    add_waypoint(x6)_route(perimeter)_coords(-26.812298, 153.082254);
-    add_waypoint(x7)_route(perimeter)_coords(-26.812298, 153.082254);
-    add_waypoint(x8)_route(perimeter)_coords(-26.812298, 153.082254);
-    add_waypoint(x9)_route(perimeter)_coords(-26.812298, 153.082254);
+    add_route(perimeter)
+        add_waypoint(x0)_coords(-26.812298, 153.082254);
+        add_waypoint(x1)_coords(-26.812298, 153.082254);
+        add_waypoint(x2)_coords(-26.812298, 153.082254);
+        add_waypoint(x3)_coords(-26.812298, 153.082254);
+        add_waypoint(x4)_coords(-26.812298, 153.082254);
+        add_waypoint(x5)_coords(-26.812298, 153.082254);
+        add_waypoint(x6)_coords(-26.812298, 153.082254);
+        add_waypoint(x7)_coords(-26.812298, 153.082254);
+        add_waypoint(x8)_coords(-26.812298, 153.082254);
+        add_waypoint(x9)_coords(-26.812298, 153.082254);
+
+        // Set up paths (using rosary)
+        add_rosary(x0→x1→x2→x3→x4→x5→x6→x7→x8→x9⥀);
+    ;
+
     
-    // Set up path (using rosary)
-    add_rosary(perimeter_cc)_calc(x0→x1→x2→x3→x4→x5→x6→x7→x8→x9⥀x0);
-    with_route(perimeter)_rosary(perimeter_cc);
+    with_route(perimeter)
+        add_rosary(x0→x1→x2→x3→x4→x5→x6→x7→x8→x9⥀);
+    ;
 ```
+
+Rosary is a diriviative of `path` and `way`

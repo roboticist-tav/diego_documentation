@@ -1,20 +1,13 @@
-# Thingys / Thingies
-
-| a | `{object}` | description<br>_examples_ | API |
-|--|:--|---|---|
-| actuator | `{verb}_actuat({moniker\|uuid})_type(button);` | | [actuator](/actuator.md) |
 
 
 | b | `{object}` | description<br>_examples_ | API |
 |--|:--|---|---|
-| button | `{verb}_thing({moniker\|uuid})_type(button);` | Amazon Das Button | [button](/button.md) |
+
 
 
 | c | `{object}`<br>description<br>examples | API |
 |--|:--|---|
-| cellphone, mobile phone | `{verb}_cellphone({moniker|uuid});`<br>`{verb}_mobot({moniker|uuid})_type(cellphone);`<br> | [cellphone](/cellphone.md) | 
-| chair | `{verb}_thing({moniker|uuid})_type(chair);` | [chair](/chair.md) |
-| computer | `{verb}_comput({moniker|uuid});`<br>`{verb}_mobot({moniker|uuid})_type(computer);` | [computer](/computer.md) |
+
 
 | d | `{object}`<br>description<br>examples | API |
 |--|:--|---|

@@ -49,35 +49,24 @@ Then there are `device`s and `peripher`als, which are smart components that are 
 ## See Also
 ----
 
-[Topological Index of Physic Objects](_indextopic.md)
+[Topological Index of Physic Objects]()
 
-[A to Z Index of Phyic Objects](_indexatoz.md)
+[A to Z Index of Phyic Objects]()
 
 ### Thingies
-[thingy](obj/thingy.md)<br>
-[human](obj/human.md)<br>
-[organic](obj/organic.md)<br>
-[robot](obj/robot.md) ([sobot](obj/sobot.md))<br>
-[thing](obj/thing.md)  ([mobot](obj/mobot.md); [ject](/obj/ject.md); ([IoT](../corpus/iot/iot.md))
+[thingy]()<br>
+[human](./obj/human.md)<br>
+[organic](./obj/organic.md)<br>
+[robot](./obj/robot.md) ([sobot](./obj/sobot.md))<br>
+[thing](./obj/thing.md)  ([mobot](./obj/mobot.md); [ject](./obj/ject.md); ([IoT](../corpus/iot/iot.md))
 
 ### Components
-[apparat](obj/apparat.md); [equip](obj/equip.md)<br>
-<!--[jigger](obj/jigger.md)<br>
-[jagger](jagger.md) ([device](device.md); [sensor](sensor.md))-->
+[apparat](./obj/apparat.md); [equip](./obj/equip.md)<br>
+<!--[jigger](./obj/jigger.md)<br>
+[jagger]() ([device](); [sensor]())-->
 
 ## Notes
 [^morethingies]: There are some *fringe* `thingy` types such as `mech`, `applian`, `mach`, and, `vehicle`.
 [^devicesobot]: Smart devices are can also be treated a `sobot`s.
 
-
-
-
-
-
-
-
-[sensor](sensor.md)
-
-
-
-
+[sensor]()

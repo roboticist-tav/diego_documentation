@@ -59,18 +59,18 @@ e   mgoal <--> mvenue
 
 | 2D *`{geometry_type}`* | operator | description | API |
 | --- | --- | --- | --- |
-| *`{circle}`* | ◯ | [circle](./circle.md) |
-| *`{square}`* | ◻ | [square](./square.md) |
-| *`{rect}`* &nbsp; *`{rectangle}`*| ▭ | [rect](./rect.md) |
-| *`{triangle}`* &nbsp; *`{tri}`* | △ | [triangle](./triangle.md) |
+| *`{circle}`* | ◯ | [circle](../../abstract/dt/circle.md) |
+| *`{square}`* | ◻ | [square](../../abstract/dt/square.md) |
+| *`{rect}`* &nbsp; *`{rectangle}`*| ▭ | [rect](../../abstract/dt/rect.md) |
+| *`{triangle}`* &nbsp; *`{tri}`* | △ | [triangle](../../abstract/dt/tri.md) |
 
 
 | 3D *`{geometry}`* | operator | description | API |
 | --- | --- | --- | -- |
-| *`{sphere}`* | 🏀 | | [circle](./circle.md) |
-| *`{cube}`* | :fa-cube: | | [cube](./cube.md) |
-| *`{cuboid}`* | ◳ |  | [cuboid](./cuboid.md) |
-| *`{pyramid}`* | :fa-cubes: | | [pyramid](./pyramid.md) |
+| *`{sphere}`* | 🏀 | | [circle](../../abstract/dt/circle.md) |
+| *`{cube}`* | :fa-cube: | | [cube](../../abstract/dt/cube.md) |
+| *`{cuboid}`* | ◳ |  | [cuboid](../../abstract/dt/cuboid.md) |
+| *`{pyramid}`* | :fa-cubes: | | [pyramid](../../abstract/dt/pyramid.md) |
 
 
 

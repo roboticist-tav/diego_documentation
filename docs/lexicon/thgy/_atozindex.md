@@ -46,7 +46,7 @@
 | `robot`   | A self-propelled *thingy* in the physical *'real'* world.<br>Examples: Boston Dynamics Spot, robot arm, drone<br>See also: `human`; `thing` | [robot](/robot.md)
 | `thing`   | An immobile *thingy* in the physical *'real'* world.<br>Example: fridge, television | [thing](/thing/md) |
 | `vehicle` | A guided *thingy* transporting `human`/`organic` thingies and/or controlled by a `human`.<br>Examples: car, airplane, ugv, radio-controlled toy car | [vehicle](/vehicle.md) |
-| `thingy` | | [thingy](/thingy.md) |
+| `thingy` | | [thingy](../../physic/obj/thingy.md) |
 
 
 _generat({generation});

@@ -33,7 +33,7 @@ flowchart TD
 ## See Also
 ----
 
-[Topological Index of Metaphysic Objects](_indextopic.md)
+[Topological Index of Metaphysic Objects]()
 
 [A to Z Index of Metaphysic Objects]()
 
@@ -47,7 +47,7 @@ flowchart TD
 [gait](../metaphysic/obj/gait.md)
 
 ### Commuincation
-[msg](msg.md)<br>
+[msg]()<br>
 [alert](../metaphysic/verb/alert.md)<br>
 [display](../metaphysic/obj/display.md)
 

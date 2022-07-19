@@ -16,15 +16,15 @@ The unit can be provided with the heading, using the angle brackets (`❬❭`), 
 | `❬unit❭` | description | API |
 | --- | --- | --- |
 | <a name="❬❭"></a> `❬❭` | Use the default units, either from setters or set on the map. This can easier to omit. | [unit](./unit.md) |
-| <a name="❬num❭"></a> `❬num❭` | No unit used, uses only numeric values.<br>Numeric values can be provided as a three digit bearing values, e.g. "015", as 15°. | [num](../unit/none.md#num) |
-| <a name="❬dd❭"></a> `❬dd❭` &nbsp; `❬deg❭` &nbsp; `❬dec_deg❭` | Using decimal degrees, usually to 6 decimal places, or set with `_precision` posit. | [dd](../unit/dd.md) |
-| <a name="❬dm❭"></a> `❬dm❭` | Using degrees and decimal minutes. | [dm](../unit/dm.md) |
-| <a name="❬dms❭"></a> `❬dms❭` | Using degrees, minutes, and, seconds. | [dms](../unit/dms.md) |
-| <a name="❬rad❭"></a> `❬rad❭` | Using radians usually to 6 decimal places, or set with `_precision` posit. | [rad](../unit/rad.md) |
-| <a name="❬si❭"></a> `❬μm❭` &nbsp; `❬mm❭` &nbsp; `❬cm❭` &nbsp; `❬dm❭`<br>`❬m❭`<br>`❬dam❭` &nbsp; `❬hm❭` &nbsp; `❬km❭` *etc...*  | Using SI length units. | [SI](../unit/si.md#length) |
-| <a name="❬imp❭"></a> `❬thou❭` &nbsp; `❬inch❭` &nbsp; `❬"❭` &nbsp; `❬ft❭` &nbsp; `❬foot❭` &nbsp; `❬'❭` &nbsp; `❬yd❭` &nbsp; `❬yard❭` &nbsp; `❬mile❭` &nbsp; `❬league❭` | Using imperial length units. | [Imperial](../unit/imperial.md#length) |
-| <a name="❬marine❭"></a> `❬fathom❭` &nbsp; `❬n_mile❭` | Using marine length units. | [Imperial](../unit/imperial.md#marine_length) |
-| <a name="❬uss❭"></a> `❬chain❭` &nbsp; `❬rod❭` | Using US surveying length units. | [Imperial](../unit/imperial.md#us_survey_length) |
+| <a name="❬num❭"></a> `❬num❭` | No unit used, uses only numeric values.<br>Numeric values can be provided as a three digit bearing values, e.g. "015", as 15°. | [num](../dt/num.md#num) |
+| <a name="❬dd❭"></a> `❬dd❭` &nbsp; `❬deg❭` &nbsp; `❬dec_deg❭` | Using decimal degrees, usually to 6 decimal places, or set with `_precision` posit. | [dd](../dt/dd.md) |
+| <a name="❬dm❭"></a> `❬dm❭` | Using degrees and decimal minutes. | [dm](../dt/dm.md) |
+| <a name="❬dms❭"></a> `❬dms❭` | Using degrees, minutes, and, seconds. | [dms](../dt/dms.md) |
+| <a name="❬rad❭"></a> `❬rad❭` | Using radians usually to 6 decimal places, or set with `_precision` posit. | [rad](../dt/rad.md) |
+| <a name="❬si❭"></a> `❬μm❭` &nbsp; `❬mm❭` &nbsp; `❬cm❭` &nbsp; `❬dm❭`<br>`❬m❭`<br>`❬dam❭` &nbsp; `❬hm❭` &nbsp; `❬km❭` *etc...*  | Using SI length units. | [SI](../dt/si.md#length) |
+| <a name="❬imp❭"></a> `❬thou❭` &nbsp; `❬inch❭` &nbsp; `❬"❭` &nbsp; `❬ft❭` &nbsp; `❬foot❭` &nbsp; `❬'❭` &nbsp; `❬yd❭` &nbsp; `❬yard❭` &nbsp; `❬mile❭` &nbsp; `❬league❭` | Using imperial length units. | [Imperial](../dt/imperial.md#length) |
+| <a name="❬marine❭"></a> `❬fathom❭` &nbsp; `❬n_mile❭` | Using marine length units. | [Imperial](../dt/imperial.md#marine_length) |
+| <a name="❬uss❭"></a> `❬chain❭` &nbsp; `❬rod❭` | Using US surveying length units. | [Imperial](../dt/imperial.md#us_survey_length) |
 
 Other [coordinate units](http://epsg.io/?q=units%20kind%3ALENUNIT), like *[chains](http://epsg.io/?q=chain%20kind%3AUNIT)*, are available.  Also see the [`coords`](../obj/coords.md) *object* and the [`datum`](./datum.md) function.
 
@@ -35,14 +35,14 @@ The *objects* that use the `heading` function are associated with mapping and ro
 | --- | --- | --- |
 | <a name="pose"></a> `pose` |A representation of an orientation at a physical point. | [Pose](#pose) |
 | <a name="way"></a> `way` | A pair of `pose` *objects*, representing their orientational and physical relationship. | [Way](#way) |
-| <a name="❬dd❭"></a> `❬dd❭` &nbsp; `❬deg❭` &nbsp; `❬dec_deg❭` | Using decimal degrees, usually to 6 decimal places, or set with `_precision` posit. | [dd](../unit/dd.md) |
-| <a name="❬dm❭"></a> `❬dm❭` | Using degrees and decimal minutes. | [dm](../unit/dm.md) |
-| <a name="❬dms❭"></a> `❬dms❭` | Using degrees, minutes, and, seconds. | [dms](../unit/dms.md) |
-| <a name="❬rad❭"></a> `❬rad❭` | Using radians usually to 6 decimal places, or set with `_precision` posit. | [rad](../unit/rad.md) |
-| <a name="❬si❭"></a> `❬μm❭` &nbsp; `❬mm❭` &nbsp; `❬cm❭` &nbsp; `❬dm❭`<br>`❬m❭`<br>`❬dam❭` &nbsp; `❬hm❭` &nbsp; `❬km❭` *etc...*  | Using SI length units. | [SI](../unit/si.md#length) |
-| <a name="❬imp❭"></a> `❬thou❭` &nbsp; `❬inch❭` &nbsp; `❬"❭` &nbsp; `❬ft❭` &nbsp; `❬foot❭` &nbsp; `❬'❭` &nbsp; `❬yd❭` &nbsp; `❬yard❭` &nbsp; `❬mile❭` &nbsp; `❬league❭` | Using imperial length units. | [Imperial](../unit/imperial.md#length) |
-| <a name="❬marine❭"></a> `❬fathom❭` &nbsp; `❬n_mile❭` | Using marine length units. | [Imperial](../unit/imperial.md#marine_length) |
-| <a name="❬uss❭"></a> `❬chain❭` &nbsp; `❬rod❭` | Using US surveying length units. | [Imperial](../unit/imperial.md#us_survey_length) |
+| <a name="❬dd❭"></a> `❬dd❭` &nbsp; `❬deg❭` &nbsp; `❬dec_deg❭` | Using decimal degrees, usually to 6 decimal places, or set with `_precision` posit. | [dd](../dt/dd.md) |
+| <a name="❬dm❭"></a> `❬dm❭` | Using degrees and decimal minutes. | [dm](../dt/dm.md) |
+| <a name="❬dms❭"></a> `❬dms❭` | Using degrees, minutes, and, seconds. | [dms](../dt/dms.md) |
+| <a name="❬rad❭"></a> `❬rad❭` | Using radians usually to 6 decimal places, or set with `_precision` posit. | [rad](../dt/rad.md) |
+| <a name="❬si❭"></a> `❬μm❭` &nbsp; `❬mm❭` &nbsp; `❬cm❭` &nbsp; `❬dm❭`<br>`❬m❭`<br>`❬dam❭` &nbsp; `❬hm❭` &nbsp; `❬km❭` *etc...*  | Using SI length units. | [SI](../dt/m.md) |
+| <a name="❬imp❭"></a> `❬thou❭` &nbsp; `❬inch❭` &nbsp; `❬"❭` &nbsp; `❬ft❭` &nbsp; `❬foot❭` &nbsp; `❬'❭` &nbsp; `❬yd❭` &nbsp; `❬yard❭` &nbsp; `❬mile❭` &nbsp; `❬league❭` | Using imperial length units. | [Imperial](../dt/imperial.md#length) |
+| <a name="❬marine❭"></a> `❬fathom❭` &nbsp; `❬n_mile❭` | Using marine length units. | [Imperial](../dt/imperial.md#marine_length) |
+| <a name="❬uss❭"></a> `❬chain❭` &nbsp; `❬rod❭` | Using US surveying length units. | [Imperial](../dt/imperial.md#us_survey_length) |
 
 
 <a name="pose"></a>

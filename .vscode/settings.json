@@ -1,13 +1,41 @@
 {
     "cSpell.words": [
+        "actuat",
+        "adicity",
+        "applain",
         "applian",
+        "apprat",
+        "arity",
+        "condit",
+        "𝐜𝐨𝐬",
+        "Crement",
+        "datatypes",
+        "distan",
+        "durat",
+        "fromzdt",
+        "funct",
         "generalised",
         "ject",
+        "Marack",
+        "mavlink",
         "Mobot",
+        "𝐦𝐨𝐝",
+        "opsys",
         "realised",
         "Sobot",
+        "statcounter",
         "subproperties",
+        "tempor",
+        "temporfrom",
         "tovar",
-        "visacuity"
-    ]
+        "tozdt",
+        "visacuity",
+        "wayfind",
+        "Wayfinding",
+        "Yush"
+    ],
+    "files.watcherExclude": {
+    },
+    "files.exclude": {
+    }
 }

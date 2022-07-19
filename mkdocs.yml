@@ -4,6 +4,8 @@ plugins:
     - search
     - mermaid2
 
+extra_javascript:
+
 extra_css: 
   - extra.css
   - https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0
@@ -13,16 +15,10 @@ nav:
   - Lexicon: lexicon/lexicon.md
   - Physic:
     - Physic: physic/physic.md
-    - Topological Index: physic/_indextopic.md
-    - A to Z Index: physic/_indexatoz.md
   - Metaphysic: 
     - Metaphysic: metaphysic/metaphysic.md
-    - Topological Index: metaphysic/_indextopic.md
-    - A to Z Index: metaphysic/_indexatoz.md
   - Abstract:
     - Abstract: abstract/abstract.md
-    - Topological Index: abstract/_indextopic.md
-    - A to Z Index: abstract/_indexatoz.md
   - Corpus:
     - Corpus: corpus/corpus.md
     - IoT: corpus/iot/iot.md

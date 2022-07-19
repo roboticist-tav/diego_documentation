@@ -1,9 +1,9 @@
 # Distance (object)
 Distance is the scalar quantity of the total length travelled by an *object* from one *point* to another.  In abstract ***Diego*** the *points* will be [`point`](/abstract/obj/point.md), in metaphysical ***Diego*** *points* will be either [`waypoint`](/metaphysic/obj/waypoint.md), [`pose`](/metaphysic/obj/pose.md), or, [`goal`](/metaphysic/obj/goal.md). In physical ***Diego*** *points* will be [`landmark`](/physic/obj/landmark.md) or [`poi`](/physic/obj/poi.md).
 
-Distance can be represented as both an object and a [property](/metaphysic/prop/distan.md).
+Distance can be represented as both an object and a [property]().
 
-For a vector quantity for the distance from one *point* to another, refer to [`displacem`](displacem.md).
+For a vector quantity for the distance from one *point* to another, refer to [`displacem`](./displacem.md).
 
 | ![Distance vs. Displacement](/_img/Distancedisplacement.svg "Distance vs. Displacement") |
 | :---: |
@@ -24,7 +24,7 @@ add_route(a-to-z)_distance(a-to-z-distance);
 log_console()_distan(a-to-z-distance);    // 4.2km
 ```
 
-In addition to a direct declaration, the `distan` *object* can be declared from the *moniker* of another *object*, if that *object* used a [`distan`](/metaphysic/prop/distan.md) *property*. The *object-type* is implied or can be provided (or cast):
+In addition to a direct declaration, the `distan` *object* can be declared from the *moniker* of another *object*, if that *object* used a [`distan`]() *property*. The *object-type* is implied or can be provided (or cast):
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `add_distan(`*`ofmoniker`*`);`<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `add_distance(`*`ofmoniker`*`);`<br/>

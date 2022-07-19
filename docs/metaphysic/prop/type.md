@@ -1,5 +1,5 @@
 # Type (property)
-The `type` property exposes the type or first category of the preceding *object* in physical and metaphysical contexts. In an abstract context, the type becomes the [datatype](../../abstract/prop/datatype.md) of primitives.
+The `type` property exposes the type or first category of the preceding *object* in physical and metaphysical contexts. In an abstract context, the type becomes the [datatype](../../abstract/dt/datatype.md) of primitives.
 
 ## Retrieval
 Retrieval of the `type` *property* requires an empty parameter set of the `_type` posit. This will retrieve the type of the preceding *object*. The default format of the output will be via a type moniker surrounded in curly brackets (`{}`). The use of the `_value` (or shortened `_v`) posit is automatically implied and is not necessary. For the type of a proceeding *object*, use `type`s '*sibling*' property, `_typeof`. 
@@ -45,5 +45,24 @@ The `type` property is a base fundamental property, so there are many associated
 | <a name=""></a> `` |  | [](#type) |
 | <a name=""></a> `` |  | [](#type) |
 
+<a name="computer"></a>
+### Computer
+The *types* of `computer` are the operating system the *computer* uses.
+
+The operating system *types* are selected by using the latest user agent statistics from statcounter GlobalStats using the parameters: `Operating System, Platform=Desktop, Region=Worldwide, Year=2021` (*eliminating 'unknown' and 'other'*)`, as shown:
+
+<div id="desktop-os_combined-ww-monthly-202101-202112" width="100%" height="400" style="width:100%; height: 400px;"></div><sub>Source: <a href="https://gs.statcounter.com/os-market-share/desktop/worldwide/2021">StatCounter Global Stats - OS Market Share</a></sub><script type="text/javascript" src="https://www.statcounter.com/js/fusioncharts.js"></script><script type="text/javascript" src="https://gs.statcounter.com/chart.php?desktop-os_combined-ww-monthly-202101-202112&chartWidth=600"></script>
+
+
+![OS Market Share](/_img/StatCounter-os_combined-ww-monthly-202101-202112.png)
+
+<sub>OS Market Share<br>Source: [StatCounter Global Stats](https://gs.statcounter.com/os-market-share/desktop/worldwide/2021)</sub>
+
+| `{type}` | description | API |
+| --- | --- | --- |
+| <a name="win"></a>  `{win}` | Microsoft&reg; Windows&#8482;. | [win](#type) |
+| <a name="android"></a> `{osx}` &nbsp; `{os_x}` | Apple&reg; OS X&#8482;. | [osx](#type) |
+| <a name="linux"></a> `{linux}` | Linux.  | [linux](#type) |
+| <a name=""></a> `{chrome}` &nbsp; `{chrome}` &nbsp; `{chrome_os}` | Google&reg; Chrome OS&#8482;. | [chrome](#type) |
 
 [^visacuity]: A portmanteau of 'vision' and 'acuity', representing machine-learning of thingies to identify common object in context by graphic depiction.  Formally known as 'computer vision'.

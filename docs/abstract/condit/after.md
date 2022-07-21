@@ -1,7 +1,8 @@
 # After (condition)
-A condit used to determine if the preceding *object* is _after_ the provided *`from`* parameter. `after` functions as a boolean return switch, returning `true` if the condition is met.
+The `after` condit is used to determine if the preceding *object* is _after_ the provided *`from`* parameter. `after` functions as a boolean return switch, returning `true` if the condition is met.
 
 ## Syntax
+The use of the `after` condit needs to provide 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `_after(`*`from`*`)`<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `_after([`*`variable_name`*`])`
 

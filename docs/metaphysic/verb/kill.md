@@ -1,14 +1,31 @@
 # Kill (verb)
+The `kill` instructs the decommission of a thingy by force with specialised killing equipment. Only the four children of `thingy` are available for killing. For a non-living thingies `kill` means immobilisation **and** complete loss of processing power. For living thingies (`human` and `organic`) `kill` means immobilisation **and** complete loss of the capacity to live.
 
+If the thingies commanded to kill have no specialised equipment (i.e. weaponry) then the `kill` command cannot be executed. In this case, the `murder` command should be used.
 
+## Declaration
+To declare `kill`, you will need to provide the *`target(s)`* as monikers. Declaration of the `kill` command can only be executed when the thingies required to kill have weaponry or access to weaponry.
 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `kill_`*`<thingy>`*`(`*`target_moniker`*`);`<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `kill_`*`<thingy>`*`(`*`target_moniker1`*`,`*`target_moniker2`*`,`*`...`*`);`<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `kill_`*`<thingy>`*`([`*`target_variable_name`*`]);`
 
-## keep_killcount
+Declaration of the killer is provided with discirimation posit, for example: `forof`.
 
-## kill_human
-The ```kill_human``` is a command for a robot(s) to end the life of an identified human in the physical world using purpose-build tools (i.e. weaponry).  If a robot(s)/swarm has no weaponry the ```kill_human``` command cannot be executed, and in this case the ```murder_human``` command should be used.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `kill_`*`<thingy>`*`(`*`target_moniker`*`)_forof(`*`killer_moniker`*`);`
 
-The ```kill_human``` command cannot be param-less.
+## Posits
+
+## Objects
+Only the four children of `thingy` are available for killing, both as the killer and the target: `human`; `organic`; `robot`; and `thing`.
+
+### Human (object)
+The `kill_human` is a command for a robot(s) to end the life of an identified human in the physical world using purpose-build tools (i.e. weaponry).  If a robot(s)/swarm has no weaponry the `kill_human` command cannot be executed, and in this case the `murder_human` command should be used.
+The `kill_human` command cannot be param-less.
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `kill_human(`*`target_moniker`*`);`<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `kill_human(`*`target_moniker1`*`,`*`target_moniker2`*`,`*`...`*`);`<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `kill_human([`*`target_variable_name`*`]);`
 
 ### kill_human(*human_moniker*)
 The human identified as *human_moniker* will be killed using the weaponry of the robot(s)/swarm.
@@ -81,3 +98,6 @@ graph TD
 ```
 [^kill_human_eg]: In the ```kill_human``` example, in order for the ```go_route(main route)``` to link its own _hey_diego_ event it must be a loop-able route.
 ## murder_human
+
+
+https://www.youtube.com/watch?v=IykWbUVDWL8

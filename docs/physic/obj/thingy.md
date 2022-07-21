@@ -12,6 +12,9 @@ In the 'Genera of Thingies' the `thingy` *object* is the top most representation
     thing --> mach(mach)
     thing --> mobot(mobot)
     thing --> ject(ject)
+    sobot --> pc{{computer}}
+    mobot --> cellphone{{cellphone}}
+    mobot --> tablet{{tablet}}
     mach --> applian{{applian}}
     ject --> object{{object}}
     ject --> subject{{subject}}
@@ -48,7 +51,7 @@ The [*types*](../../metaphysic/prop/type.md#thingy) of `thingy` are those *objec
 | --- | --- | --- | ---|
 | <a name="_human"></a> `{human}` | :: | A representation of a human being, present and alive in the physical 'real' world.  | [human](./human.md#thingy) |
 | <a name="_organic"></a> `{organic}` &nbsp; `{org}` &nbsp; `{organism}` | :: | Representation of a non-human being, present and alive in the physical 'real' world. | [organic](./organic.md#thingy) |
-| <a name="_robot"></a> `{robot}` | :: | Representation of a self-propelled thingy in the physical 'real' world.. | [robot](./robot.md#thingy) |
+| <a name="_robot"></a> `{robot}` | :: | Representation of a self-propelled thingy in the physical 'real' world. | [robot](./robot.md#thingy) |
 | <a name="_thing"></a> `{thing}` | :: | An immobile thingy in the physical 'real' world, such as a thing in IoT. | [thing](./thing.md#thingy) |
 
 ## Posits

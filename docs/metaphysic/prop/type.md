@@ -47,11 +47,7 @@ The `type` property is a base fundamental property, so there are many associated
 
 <a name="computer"></a>
 ### Computer
-The *types* of `computer` are the operating system the *computer* uses.
 
-The operating system *types* are selected by using the latest user agent statistics from statcounter GlobalStats using the parameters: `Operating System, Platform=Desktop, Region=Worldwide, Year=2021` (*eliminating 'unknown' and 'other'*)`, as shown:
-
-<div id="desktop-os_combined-ww-monthly-202101-202112" width="100%" height="400" style="width:100%; height: 400px;"></div><sub>Source: <a href="https://gs.statcounter.com/os-market-share/desktop/worldwide/2021">StatCounter Global Stats - OS Market Share</a></sub><script type="text/javascript" src="https://www.statcounter.com/js/fusioncharts.js"></script><script type="text/javascript" src="https://gs.statcounter.com/chart.php?desktop-os_combined-ww-monthly-202101-202112&chartWidth=600"></script>
 
 
 ![OS Market Share](/_img/StatCounter-os_combined-ww-monthly-202101-202112.png)

@@ -5,10 +5,10 @@ The lexicon of ***Diego*** is the full syntactical vocabulary of all statement c
 | lexicon | domain | type |description |
 | --- | --- | --- | --- |
 | <a name="?_a"></a> *`<comand>`*`;` | abstract | *statement-operator* | [Termination](../abstract/special/semicolon.md) of preceding *statement* |
-| <a name="?_b"></a> `? `*`<command>`* | abstract | *statement-operator* | Termination of preceding *statement* and the [positive outcome](../abstract/special/elvish.md) beginning of proceeding *statement* |
-| <a name="?_c"></a> `| `*`<command>`* | abstract | *statement-operator* | Termination of preceding *statement* and the [neutral outcome](../abstract/special/elvish.md) beginning of proceeding *statement* |
-| <a name="?_d"></a> `: `*`<command>`* | abstract | *statement-operator* | Termination of preceding *statement* and the [negative outcome](../abstract/special/elvish.md) beginning of proceeding *statement* |
-| <a name="(_a"></a> `(`*`moniker`*`)`<br>`()`<br>`(())` | abstract<br>metaphysic<br>physic | *object* | Refer to *object* monikered *moniker*<br>Refer to last referenced youngest generation *object* or refer to youngest generation nested *object*<br>Refer to last referenced oldest generation *object* or refer to oldest generation nested *object* |
+| <a name="?_b"></a> `?_`*`<command>`* | abstract | *statement-operator* | Termination of preceding *statement* and the [positive outcome](../abstract/special/elvish.md) beginning of proceeding *statement* |
+| <a name="?_c"></a> `|_`*`<command>`* | abstract | *statement-operator* | Termination of preceding *statement* and the [neutral outcome](../abstract/special/elvish.md) beginning of proceeding *statement* |
+| <a name="?_d"></a> `:_`*`<command>`* | abstract | *statement-operator* | Termination of preceding *statement* and the [negative outcome](../abstract/special/elvish.md) beginning of proceeding *statement* |
+| <a name="(_a"></a> `(`*`moniker`*`)`<br>`()`<br>`(())` | abstract<br>metaphysic<br>physic | *object* | Refer to *object* monikered *moniker*<br>Refer to last referenced youngest generation *object* or refer to youngest generation nested *object*<br>Refer to last referenced oldest generation *object* or refer to oldest generation nested *object* | [reference](../abstract/special/reference.md)
 | <a name="(_b"></a> `[`*`variable_moniker`*`]`<br>`[]`<br>`[`*`moniker`*`]`<br>`_`*`<expression_posit>`*`([`*`ordinal`*`])` | abstract<br>metaphysic<br>physic | *object*<br>*variable* | Refer to *variable* *object* *variable_moniker*<br>Refers to last scoped *variable* or 'this' parent scoped *object*<br>Refer to object *moniker*<br>Refer the ordinal *variable* *object* at position *ordinal* from the proceeding *object* |
 | <a name="(_c"></a> `([`*`variable_moniker`*`])`<br>`({datatype},[`*`variable_moniker`*`])` | abstract<br>metaphysic<br>physic | *object* |  Refer to *variable* *object* of value of *variable_moniker*<br>Refers to *variable* *object* of value of *variable_moniker* to datatype *datatype* |
 | <a name="{}"></a> `{`*`datatype`*`}`<br>`{`*`type`*`}`<br>`{}` | abstract<br>metaphysic<br>physic | *statement* | [Datatype](../abstract/dt/datatype.md) declaration or cast of datatype *datatype*<br>[Type](../metaphysic/prop/type.md) declaration or cast of type *type*<br>Declare or cast variant datatype or variant type |
@@ -97,16 +97,16 @@ The lexicon of ***Diego*** is the full syntactical vocabulary of all statement c
 | <a name="gate"></a> `gate(`*`moniker`*`)` | metaphysic | *object* | [gate](../metaphysic/obj/gate.md) |
 | <a name="ghost"></a> `ghost(`*`moniker`*`)` | metaphysic | *object* | [ghost](../metaphysic/obj/ghost.md) |
 | <a name="gimbal"></a> `gimbal(`*`moniker`*`)` | physic | *object* |
-| <a name="go"></a> `go_`*`<object>`* | physic | *verb* | Manouve Proceeding *object* to [go](../metaphysic/verb/go.md) proceeding *action* on *object* |
+| <a name="go"></a> `go_`*`<object>`* | physic | *verb* | Manoeuver Proceeding *object* to [go](../metaphysic/verb/go.md) proceeding *action* on *object* |
 | <a name="goal"></a> `goal(`*`moniker`*`)`<br>`_goal(`*`moniker`*`)` | metaphysic | *posit-object* | *Action* on *[goal](../metaphysic/obj/goal.md)* *moniker*<br>Proceed with *[goal](../metaphysic/obj/goal.md)* *moniker* |
 | <a name="goto"></a> `_goto()` | metaphysic | *verb* |  preceding *object(s)* [goto](../metaphysic/verb/goto.md) to proceeding *object(s)* |
-| <a name="goto"></a> `goto_`*`<object>`* | physic | *verb* | Manouve Proceeding *object* to [goto](../metaphysic/verb/goto.md) proceeding *object* |
+| <a name="goto"></a> `goto_`*`<object>`* | physic | *verb* | Manoeuver Proceeding *object* to [goto](../metaphysic/verb/goto.md) proceeding *object* |
 | <a name="guide"></a> `guide(`*`moniker`*`)` | |
 | <a name="handler"></a> `handler(`*`moniker`*`)` | | |
 | <a name="hash"></a> `hash(`*`moniker`*`)` | abstract | *object* | A two-dimensional [collection](../abstract/obj/hash.md) data storage *object* called *moniker*, with hashed keys |
 | <a name="hold"></a> `hold(`*`moniker`*`)` &nbsp; `household(`*`moniker`*`)` |||
-| <a name="hour"></a> `_hour()` &nbsp; `_hr()`<br>`_hour(`*`hr_numeric`*`)` &nbsp; `_hour(`*`hr_numeric`*`)`<br>`❬hour❭` &nbsp; `❬hr❭` | abstract | property | References the temporal hour of the preceding *object*<br>Sets the temporal hour of *hr_numeric*<br>Hour unit | [hour](../abstract/prop/hr.md) |
-| <a name="human"></a> `human({`*`type`*`},`*`moniker`*`)`<br>`_human()`<br>`_human([`*`variablename`*`])` | physic | *object* | Representation of a human being, present and alive in the physical *'real'* world. |
+| <a name="hour"></a> `_hour()` &nbsp; `_hr()`<br>`_hour(`*`hour_numeric`*`)` &nbsp; `_hour(`*`hour_numeric`*`)`<br>`❬hour❭` &nbsp; `❬hr❭`<br>`{h}` &nbsp; `{hh}` &nbsp; `{H}` &nbsp; `{H}` &nbsp; `{HH}` &nbsp; `{dh}` &nbsp; `{h:m}` &nbsp; `{h:m:s}`<br>`tohour()` &nbsp; `tohr()` | abstract | property | References the temporal [hour](../abstract/prop/hr.md) of the preceding *object*<br>Sets the temporal hour of *hour_numeric*<br>Hour unit<br>Hour type _(format)_ <br>Hour cast | [hour](../abstract/prop/hr.md) |
+| <a name="human"></a> `human({`*`type`*`},`*`moniker`*`)`<br>`_human()`<br>`_human([`*`variable_name`*`])` | physic | *object* | Representation of a human being, present and alive in the physical *'real'* world. |
 | <a name="if"></a> `_if_(`*`expression`*`)` | abstract | *operator* |  |
 | <a name="indent"></a> `indent(`*`moniker`*`)`<br>`indenture(`*`moniker`*`)` | abstract | *object* | A basic one-dimensional [data](../abstract/obj/indent.md) storage *object* called *moniker*, immutable except for *indenture owners* |  [indent](./obj/indent.md) |
 | <a name="instruct"></a> `instruct(`*`moniker`*`)`<br>`instruction(`*`moniker`*`)` | abstract<br>metaphysic | *action* | [instruct](../metaphysic/obj/instruct.md) |

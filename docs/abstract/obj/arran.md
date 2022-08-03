@@ -11,7 +11,7 @@ The default declaration of the `arran`gement object is to at least provide a *mo
 
 ## Posits
 
-| method | description |
+| posit | description |
 | --- | -------- |
 | <a name="arity"></a> `_arity()` | Provides the number of elements in full extend of the arran, both negative and positive |
 | <a name="at"></a> `_at(`*`index`*`)`<br>`_at()` | Provides the element at index *index* |

@@ -9,6 +9,7 @@ The `path` is at the preultimate lowest hierarchical level of the 'Route Matrix'
 
 In the family of 'location' based navigation objects, one `itiner` has many `route`s, one `route` has many `path`s, and, one `path` has a pair of `waypoints`s.
 
+<a name="declare"></a>
 ## Declaration
 The default declaration of the `path` object is to at least provide a *moniker*, however, at declaration it is common to provide two locations using either: a child `waypoint` (or shortened `wp`) assignment; or, using the `_coords` posit.
 

@@ -27,7 +27,7 @@ To reference the `organic`, use, either the `with` verb or the shortened syntax 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `(`*`organic_moniker`*`);`
 
 <a name="types"></a>
-## Types
+## Typing
 The [*types*](../../metaphysic/prop/type.md#organic) of the `organic` *object* are those objects derived from common objects used in machine-learning visacuity.
 
 | `type` &nbsp; `operator` | coco identifier |description | API |

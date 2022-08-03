@@ -31,7 +31,7 @@ Casting an operating system is identical syntax to setting an operating system, 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<object>`*`_opsys([`*`operating_system_to_cast_to_array_moniker`*`]);`
 
 <a name="type"></a>
-## Types
+## Typing
 
 
 

@@ -52,7 +52,7 @@ Arrays have various properties and methods...
 
 
 
-add_check(isBelowThreshold)_arg()_test([]<30);
+add_check(isBelowThreshold)_param()_test([]<30);
 add_check(Are)
 add_ary(array1)_v(1, 30, 39, 29, 10, 13);
 

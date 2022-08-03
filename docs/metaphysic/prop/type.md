@@ -37,7 +37,7 @@ The `type` property is a base fundamental property, so there are many associated
 | <a name="cellphone"></a> `cellphone` | The operating system the `cellphone` is running on, is used as its type. | [cellphone](../../physic/obj/cellphone.md#types) |
 | <a name="thingy"></a> `thingy` | There are four types of thingy: [`human`](../../physic/obj/human.md); [`organic`](../../physic/obj/organic.md); [`robot`](../../physic/obj/robot.md); and, [`thing`](../../physic/obj/thing.md). | [thingy](../../physic/obj/thingy.md#types) |
 | <a name="organic"></a> `organic` | `organic` types are those objects derived from common objects used in machine-learning visacuity[^visacuity]. | [organic](../../physic/obj/organic.md#types) |
-| <a name=""></a> `` |  | [](#type) |
+| <a name="poll"></a> `poll` | There are eight primitive type of `poll`, based on they way they function. | [poll](../obj/poll.md#type) |
 | <a name=""></a> `` |  | [](#type) |
 | <a name=""></a> `` |  | [](#type) |
 | <a name=""></a> `` |  | [](#type) |

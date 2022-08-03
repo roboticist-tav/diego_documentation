@@ -11,23 +11,8 @@ extra_css:
   - extra.css
   - https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0
 
-nav:
-  - Diego: intro.md
-  - Lexicon: lexicon/lexicon.md
-  - Physic:
-    - Physic: physic/physic.md
-  - Metaphysic: 
-    - Metaphysic: metaphysic/metaphysic.md
-  - Abstract:
-    - Abstract: abstract/abstract.md
-  - Corpus:
-    - Corpus: corpus/corpus.md
-    - IoT: corpus/iot/iot.md
-    - MAVLink: corpus/mavlink/mavlink.md
-    - Tasks: corpus/tasks/caterpillar.md
-  
 theme: readthedocs
-
+  
 markdown_extensions:
   - pymdownx.arithmatex:
       generic: true

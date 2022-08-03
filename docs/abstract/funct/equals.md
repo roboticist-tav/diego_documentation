@@ -18,7 +18,7 @@ log_console()_valueof()_equals([bool1]);             // undefined
 
 with_bool(bool1)_v(false);
 
-log_console()_valueof()_equals()_bool(bool1);        // true
-log_console()_valueof()_equals([bool1]);             // true
-log_console()_valueof()_calc(=[bool1]);              // true
+log_console()_valueof()_equals⟦⟧_bool(bool1);        // true
+log_console()_valueof()_equals⟦[bool1]⟧;             // true
+log_console()_valueof()_calc⟦=[bool1]⟧;              // true
 ```

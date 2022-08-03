@@ -9,6 +9,7 @@ The `pose` is at the lowest hierarchical level of the 'Route Matrix', being simi
 
 In the family of 'location-and-orientation' based navigation objects, one `excurs` has many `course`s, one `course` has many `way`s, and, one `way` has many `poses`s. `pose` can be extended to `posepoint`, both terms are syntactically the same and can be used freely and interchangabily. 
 
+<a name="declare"></a>
 ## Declaration
 The default declaration of the `pose` object is to at least provide a *moniker*, however, at declaration it is common to provide a orientation using the `_orientat` posit. The `_orientat` has two signatures, one accepts Euler angles, the other accepts quaternions.  The Euler angles can be provided in radians or decimal degrees, so the thingies need to come to an agreement.  The units can be set at declaration using angle brackets or wider scoped using `set_angles(`*`angleunit`*`)`.  The order of Euler angles and quaternion paramaters can also be set at declartion or with the setters, `set_euler(`*`order`*`)` and `set_quatern(`*`order`*`)`, or directly in the declarations using curly brackets.
 
@@ -33,6 +34,7 @@ A orientation can also be declared using the `euler` or `quaternion` objects.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;` add_pose(`*`moniker`*`)_quatern(`*`moniker`*`);`<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;` add_pose(`*`moniker`*`)_quatern(`*`x`*`,`*`y`*`,`*`z`*`,`*`w`*`);`
 
+<a name="declare_assign"></a>
 ## Declaration & Assignment
 A `pose` is not complete unless it has a `waypoint` child or a declared waypoint child using the `_coords` posit. The parameters of `_coords`, `x_lat`, `y_long`, and, `z_alt`, all numeric.  When datatype of the `_coords` parameter are not specified, they will be implied to be `{double}`. Alternatively a previous waypoint can be appended or cast from.
 

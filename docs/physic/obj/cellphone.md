@@ -26,7 +26,7 @@ To reference `cellphone`, use, either the `with` verb or the shortened syntax us
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `(`*`cellphone_moniker`*`);`
 
 <a name="types"></a>
-## Types
+## Typing
 The [*types*](../../metaphysic/prop/type.md#cellphone) of `cellphone` are realised through the operating system the cell phone runs on. There are only four defined `cellphone` *types*.
 
 | `{type}` | operator | description | API |

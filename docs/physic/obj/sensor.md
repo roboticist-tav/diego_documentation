@@ -44,7 +44,7 @@ with_me()
 | <a name="colo"></a>`{colo}`<br>`_type(colo)`<br>`_colo()` | **Colour Sensor**<br>A type of photoelectric sensor which emits light from a transmitter, and then detects the light reflected back from the detection object with a receiver.<br>See derivative: [colo](./colo.md). See sensors: [photoelect](#photoelect). See modules: [optical](#optical). |
 | <a name="compass"></a>`{compass}`<br>`_type(compass)`<br>`_compass()` | **Compass**<br>a device that shows the cardinal directions used for navigation and geographic orientation. *Usually combined into an [imu](#imu).*<br>See modules: [magnet](#magnet); [ins](#ins); [gnss/ins](#gnss_ins); [imu](#imu); [agm](#agm). |
 | <a name="curren"></a>`{curren}`<br>`_type(curren)` | **Current Sensor**<br>A component that detects and converts current to an easily measurable output voltage, which is proportional to the current through the measured path. |
-| <a name="encode"></a>`{encode}`<br>`_type(encode)` | **Encoder**<br>A one-hot to binary converter. |
+| <a name="encode"></a>`{encode}`<br>`_type(encode)` | **Encoder**<br>A one-hot to binary converter. | [encoder]() |
 | <a name="float"></a>`{float}`<br>`_type(float)` | **Float Sensor**<br>A a type of level sensor, a component used to detect the level of liquid within a tank.<br>See sensors: [level](#level). |
 | <a name="flow"></a>`{flow}`<br>`_type(flow)` | **Flow Sensor**<br>An electronic component that measures or regulates the flow rate of liquids and gasses within pipes and tubes. |
 | <a name="force"></a>`{force}`<br>`_type(force)` | **Force Sensor**<br>A component that converts the magnitude of force into related electrical signals. |

@@ -257,7 +257,10 @@ end_battery(ba1)_temp()_level(max)
 	struct power_supply_resistance_temp_table *resist_table;
 
 | `_cap`, `_capacity` | Capacity in Ah (last full capacity) |
-| `_cap _des()`, `_capacity_design()` | Capacity in Ah (design capacity) |
+| `_capdes()`, `_capacitydesign()` | Capacity in Ah (design capacity) |
+
+
+
 | `_float32 percentage       # Charge percentage on 0 to 1 range  (If unmeasured NaN)
 uint8   power_supply_status     # The charging status as reported. Values defined above
 uint8   power_supply_health     # The battery health metric. Values defined above

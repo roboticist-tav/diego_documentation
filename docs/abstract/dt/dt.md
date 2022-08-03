@@ -37,7 +37,7 @@ For assignment, initialisation, and referencing, adding a datatype will always c
 
 Casts can be achieved inside *expressions*, such as, for example, the `calc` function.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<...>`*`_calc([{`*`datatype`*`},`*`variablemoniker`*`])`<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<...>`*`_calc⟦[{`*`datatype`*`},`*`variablemoniker`*`])`<br>
 
 ---
 ## References

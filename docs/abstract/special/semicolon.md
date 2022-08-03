@@ -22,3 +22,35 @@ go_drone(myDrone)_waypoint(blueFlag)
 * Statement Terminator in [Lexicon](../../lexicon/lexicon.md#;)
 * [Elvish Operators](elvish.md)
 
+
+
+```diego
+with_map(map1)
+    _circ(poi1)_at(4,3)_r(❬m❭,0.332)
+        _square(sq1)_cnr(5,7)_cnr(6,8)
+;
+
+
+log_console()_(map1)_shapes();
+// poi1,poi1.sq1
+
+with_map(map2)
+    _circ(poi2)_at(4,3)_r(❬m❭,0.332)
+    ()_square(sq2)_cnr(5,7)_cnr(6,8);
+;
+
+
+log_console()_(map2)_shapes();
+// poi2,sq2
+
+
+with_map(map3)
+    ()_circ(poi3)_at(4,3)_r(❬m❭,0.332);
+    ()_square(sq3)_cnr(5,7)_cnr(6,8);
+;
+
+
+log_console()_(map3)_shapes();
+// poi3,sq3
+
+

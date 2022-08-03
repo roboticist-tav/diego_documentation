@@ -1,5 +1,5 @@
 # Is (function)
-A logical open gate function for expressions other than boolean or twinned expressions. The `is` function is the sibling functionalty of `equals` function.
+A logical open gate function for expressions other than boolean or twinned expressions. The `is` function is the sibling functionality of `equals` function.
 
 ## Syntax
 `is` can be used as its own expression posit (`_is`) or as an operator inside another expression posit, using either: the exclamation mark (`!`); or, the 'not tilde' symbol (`≁`).

@@ -47,3 +47,8 @@ https://www.creativemotioncontrol.com/types-of-actuators/
 | `jigger`<br>`actuat`<br>`actuator`<br>`mover` <a  name="actuat"></a> | A child *device*  `thingette` that causes its parent `thingy` and/or sibling `thingette` to operate, usually providing motion. A public interface with the _puff_ should be avoided or at least strictly limited. The thing version of a `jagger`.<br>Example: motor controller; gearbox; motor<br>See also: [jigger](#jigger), [jagger](#jagger) | [jigger](/jigger.md) |
 
 | `mover` <a  name="mover"></a> | See: [jigger](#jigger) | |
+
+
+motor driver
+https://core-electronics.com.au/guides/analogue-electronics/motor-drivers-vs-motor-controllers/
+https://odriverobotics.com/shop

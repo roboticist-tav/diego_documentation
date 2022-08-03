@@ -45,3 +45,50 @@ calendar-presumed (usually Georgian), of the thingy caller | [zdt](../funct/zdt.
 
 * [`{tempor}`](../dt/tempor.md);
 * [`tempor`](../obj/tempor.md);
+
+
+
+
+# Temporal (datatype)
+The `{tempor}` datatype is of the primative data object [`tempor`](../obj/tempor.md), representing a calendar date. Depending upon the upbringing of thingies the most often used calendar for all dates is the Gregorian calendar. Setting the calendar can be achieved using the `set_cal(`*`calendarname`*`)` setter. 
+
+## Syntax
+Since the `tempor` object is a deriviative of the basic data storage *objects*, the datatype `{tempor}` can be used, when declaring the data storage object. The commonly used basic data storage *object* is var.
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `add_var({tempor},`*`moniker`*`)`<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `add_var({tempor},`*`moniker`*`)_value(`*`date`*`)`<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `add_var({tempor},`*`moniker`*`)_year(`*`year`*`)_month(`*`month`*`)_dag(`*`dag`*`);`<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `add_var({tempor},`*`moniker`*`)_year(`*`year`*`)_month(`*`month`*`)_dag(`*`dag`*`)_day(`*`day`*`);`
+
+## Gotchas
+The data storage *object* is implied, however, when used, the specific *data storage *object* will applied its own adaptations of the data, for example:
+```diego
+add_var({tempor},independenceDay)_v(04-Jul-1776);
+
+log_console()_var(independenceDay);  // 04-Jul-1776
+log_console()_date(independenceDay);  // 1776-07-04T??:??:??.????Z[?][u-ca=?]4
+```
+
+---
+## See also
+
+
+
+
+<a name="express"></a>
+## Expressions
+There are several syntaxes to express a `tempor`.  All date expressions must conform to the ISO 8601 / RFC 3339 format.
+
+| `expression syntax` | description | `example` |
+| --- | --- | --- |
+| <a name="plainmonthday"></a> `P`*`MM`*`-`*`DD`* | Plain month-day, known as 'PlainMonthDay'. | `P08-05` |
+| <a name="plainyearmonth"></a> `P`*`YYYY`*`-`*`MM`* | Plain year-month, known as 'PlainYearMonth'. | `P2020-08` |
+| <a name="plaindate"></a> `P`*`YYYY`*`-`*`MM`*`-`*`DD`* | Plain date, known as 'PlainDate'. | `P2020-08-05` |
+| <a name="plaintime"></a> `T`*`HH`*`:`*`mm`*`:`*`ss`* | Plain time, known as 'PlainTime'. | `T20:06:13` |
+| <a name="plaindatetime"></a> `P`*`YYYY`*`-`*`MM`*`-`*`DD`*`T`*`HH`*`:`*`mm`*`:`*`ss`* | Plain datetime, known as 'PlainDateTime'. | `P2020-08-05T20:06:13` |
+| <a name="instant"></a> `P`*`YYYY`*`-`*`MM`*`-`*`DD`*`T`*`HH`*`:`*`mm`*`:`*`ss`*`+`*`offset`*<br>`P`*`YYYY`*`-`*`MM`*`-`*`DD`*`T`*`HH`*`:`*`mm`*`:`*`ss`*`Z` | Instant datetime, known just as 'Instant'. | `P2020-08-05T20:06:13+09:00`<br>`P2020-08-05T11:06:13Z` |
+| <a name="zoneddatetime"></a> `P`*`YYYY`*`-`*`MM`*`-`*`DD`*`T`*`HH`*`:`*`mm`*`:`*`ss`*`+`*`offset`*`[`*`time_zone_extension`*`]` | Zoned datetime, known as 'ZonedDateTime'.| `P2020-08-05T20:06:13+09:00[Asia/Tokyo][u-ca-japanese]` |
+| <a name="zoneddatetime_full"></a> `P`*`YYYY`*`-`*`MM`*`-`*`DD`*`T`*`HH`*`:`*`mm`*`:`*`ss`*`+`*`offset`*`[`*`time_zone_extension`*`][`*`calendar_extension`*`]` | Full zoned datetime, known as 'FullZonedDateTime'. | `P2020-08-05T20:06:13+09:00[Asia/Tokyo][u-ca-japanese]` |
+
+![Temporal Expressions](https://tc39.es/proposal-temporal/docs/persistence-model.svg)
+

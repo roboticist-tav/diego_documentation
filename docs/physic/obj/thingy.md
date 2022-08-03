@@ -43,7 +43,7 @@ To reference the `thingy`, use, either the `with` verb or the shortened syntax u
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `(`*`thing_moniker`*`);`
 
 <a name="types"></a>
-## Types
+## Typing
 The [*types*](../../metaphysic/prop/type.md#thingy) of `thingy` are those *objects* `thingy` derives into: `{human}`; `{organic}`; `{robot}`; and, `thing`.
 
 

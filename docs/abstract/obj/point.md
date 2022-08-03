@@ -1,3 +1,3 @@
 # Point (object)
 
-| `point` | <br>See also: `route`; `path` |
+| `point` | <br>See also: `route`; `path` |clear

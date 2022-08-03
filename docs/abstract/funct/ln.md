@@ -11,9 +11,9 @@ To provide a the natural logarithm of a number use the `ln` posit or `㏒` in ex
 ## Example
 The following function returns e:
 ```diego
-add_funct(getNapier)_arg(dp)_ret()_e([dp]);
+add_funct(getNapier)_param(dp)_ret()_e([dp]);
 
-me_msg()_funct(getNapier)_arg(15);
+me_msg()_funct(getNapier)_param(15);
 // 2.718281828459045
 ```
 ---

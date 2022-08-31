@@ -1,0 +1,2462 @@
+<!DOCTYPE html>
+
+<html class="writer-html5" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="http://diego.dev/lexicon/lexicon/" rel="canonical"/>
+<link href="../../img/favicon.ico" rel="shortcut icon"/>
+<title>Lexicon - Diego</title>
+<link href="../../css/theme.css" rel="stylesheet"/>
+<link href="../../css/theme_extra.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" rel="stylesheet"/>
+<link href="../../extra.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet"/>
+<script>
+        // Current page data
+        var mkdocs_page_name = "Lexicon";
+        var mkdocs_page_input_path = "lexicon/lexicon.md";
+        var mkdocs_page_url = "/lexicon/lexicon/";
+      </script>
+<script defer="" src="../../js/jquery-3.6.0.min.js"></script>
+<!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body class="wy-body-for-nav" role="document">
+<div class="wy-grid-for-nav">
+<nav class="wy-nav-side stickynav" data-toggle="wy-nav-shift">
+<div class="wy-side-scroll">
+<div class="wy-side-nav-search">
+<a class="icon icon-home" href="../.."> Diego
+        </a><div role="search">
+<form action="../../search.html" class="wy-form" id="rtd-search-form" method="get">
+<input name="q" placeholder="Search docs" title="Type search term here" type="text"/>
+</form>
+</div>
+</div>
+<div aria-label="Navigation menu" class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../..">Diego</a>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Commands/">Tutorial</a>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Diego%20Introduction/">Diego Introduction</a>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../gettingstarted/">Diego Getting Started</a>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../intro/">Diego Introduction</a>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../syntax/">Language Syntax</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Abstract</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../abstract/abstract/">Abstract</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Condit</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/condit/after/">After (condition)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/condit/at/">At (condition)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/condit/before/">Before (condit)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/condit/during/">During</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/condit/temporat/">Temporal At (condit)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/condit/temporfrom/">Temporal From (condition)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/condit/temporto/">Temporal To (condition)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/condit/to/">To (condition)</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Const</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/const/e/">Euler's Constant (constant)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/const/ln10/">Natural Logarithm of 10 (constant)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/const/ln10e/">Base 10 Logarithm of e (constant)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/const/ln2/">Natural Logarithm of 2 (constant)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/const/pi/">Pi (constant)</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Dt</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/dt/circle/">Circle (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/dt/cube/">Cube (shape)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/dt/cuboid/">Cuboid (shape)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/dt/datatype/">Datatype (datatype)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/dt/dt/">Datatype (statement)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/dt/plicat/">Plication (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/dt/pyramid/">Pyramid (shape)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/dt/rect/">Rectangle (shape)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/dt/square/">Square (shape)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/dt/tri/">Triangle (shape)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/dt/variant/">Variant (datatype)</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Flow</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/flow/for/">For Loop (looper)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/flow/unless/">Unless (flow)</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Funct</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/funct/abs/">Absolute Value (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/funct/acos/">Arc Cosine (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/funct/calc/">Calculation (expression)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/funct/dt/">Datatype (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/funct/equals/">Equals (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/funct/false/">False (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/funct/fix/">Fixed Points (method)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/funct/is/">Is (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/funct/json/">JavaScript Object Notation (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/funct/length/">Length (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/funct/ln/">Natural logarithm (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/funct/ln2/">Natural Logarithm of 2 (constant)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/funct/not/">Not (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/funct/now/">Now (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/funct/parse/">Parse (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/funct/ret/">Return (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/funct/slice/">Slice</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/funct/sql/">Structured Query Language (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/funct/stringify/">stringify (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/funct/true/">True (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/funct/value/">Value</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/funct/xyz/">XYZ (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/funct/zdt/">Zoned Date Time (function)</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Meta</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/meta/verb/">Verb</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Obj</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/obj/arran/">Arrangement (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/obj/ary/">Array (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/obj/blob/">Binary Large Object (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/obj/cal/">Calendar (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/obj/clump/">Clump (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/obj/counter/">Counter (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/obj/datetime/">Datetime (datatype)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/obj/declar/">Declaration (of datatype)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/obj/deed/">Deed (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/obj/dict/">Dictionary (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/obj/enum/">Enumeration (object) / Enumerator (object) / Enumerator (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/obj/err/">Error (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/obj/flag/">Flag (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/obj/float/">Floating Point Number (datatye)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/obj/funct/">Function (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/obj/hash/">Hash (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/obj/indent/">Indenture (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/obj/int/">Integer (datatype)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/obj/lexi/">Lexikon (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/obj/list/">List (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/obj/matrix/">Matrix (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/obj/namespace/">Namespace (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/obj/pkg/">Package (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/obj/point/">Point (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/obj/refuse/">Refuse (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/obj/str/">String (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/obj/tempor/">Temporal (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/obj/tensor/">Tensor (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/obj/time/">Time (datatype)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/obj/val/">Valuable (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/obj/var/">Variable (object) / Variant (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/obj/variant/">Variant (datatype)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/obj/vector/">Vector (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/obj/yush/">Yush (object)</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Op</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/op/arithmetic/">Arithmetic Operators (operator)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/op/exponent/">Exponent Operators (operator)</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Prop</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/prop/">Index (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/prop/adicity/">Adicity (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/prop/arity/">Arity (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/prop/day/">Day (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/prop/fortn/">Fortnight (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/prop/freq/">Temporal Frequency (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/prop/hr/">Hour (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/prop/instant/">Instant (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/prop/keys/">Keys (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/prop/min/">Minute (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/prop/ms/">Millisecond (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/prop/mth/">Month (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/prop/now/">Now</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/prop/s/">Second (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/prop/txt/">Text (expression)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/prop/yr/">Year (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/prop/%CE%BCs/">Microsecond (property)</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Setter</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/setter/decpl/">Fixed Decimal Places (setter)</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Special</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/special/elvish/">Elvish Operator (special)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/special/me/">Me (special)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/special/reference/">Reference (special)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/special/semicolon/">Statement Terminator (special)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/special/you/">You (special)</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Verb</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/verb/add/">Add (verb)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/verb/apt/">Advanced Package Tool (verb)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/verb/kill/">Kill (verb)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/verb/set/">Set (verb)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/verb/with/">With (verb)</a>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Corpus</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../corpus/corpus/">Corpus</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../corpus/iot/">Internet of Things [IoT]</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Iot</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../corpus/iot/iot/">Internet of Things [IoT] (concept)</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Mavlink</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../corpus/mavlink/mavlink/">Translation of MAVLink Commands</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../corpus/mavlink/set_home/">Set home</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Robotis</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../corpus/robotis/burger/">Burger</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Tasks</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../corpus/tasks/caterpillar/">The Caterpillar Chain</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../corpus/tasks/packing_up/">Packing Up (task)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../corpus/tasks/tank_intercept/">Tank intercept</a>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Lexicon</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../brackets/">Brackets</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../crosschain/">Crosschain Technology</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../hash_blockchain/">Demonstrating crosschain in a robot example</a>
+</li>
+<li class="toctree-l1 current"><a class="reference internal current" href="./">Lexicon</a>
+<ul class="current">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../obs_and_subs/">Obs and Subs (object)</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../routing/">Routing</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../thingy/">Thingies</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Condit</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../condit/_indextopic/">Conditions</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Obj</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../obj/discriminat/">`discriminat`</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../obj/fail/">Fail, Failure</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../obj/me/">me</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../obj/navigation_planning/">Navigation Planning</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../obj/ob_and_subs/">`ob`s and `sub`s</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../obj/watchdog/">watchdog</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Thgy</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../thgy/_atozindex/"> atozindex</a>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Metaphysic</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../metaphysic/metaphysic/">Metaphysic</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Condit</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/condit/around/">Around (condit)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/condit/to/">To (condit)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/condit/toward/">Toward / Towards (condit)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/condit/using/">Using (condit)</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Dt</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/dt/dd/">Decimal Degrees (unit)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/dt/dm/">Decimetres (unit)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/dt/dms/">Degrees, Minutes, Seconds (unit)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/dt/ft/">Feet (unit)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/dt/imperial/">Imperial Units (unit)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/dt/inch/">Inch (unit)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/dt/kt/">Knots (unit)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/dt/league/">League (unit)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/dt/lmh/">Low-Medium-High (datatype)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/dt/m/">SI Units of Length (unit)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/dt/num/">Number (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/dt/rad/">Radians (unit)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/dt/si/">International System of Units (unit)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/dt/thou/">Thousandth of an Inch (unit)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/dt/yrd/">Yard (unit)</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Funct</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/funct/bearing/">Bearing (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/funct/datum/">Datum (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/funct/durat/">Duration (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/funct/elev/">Elevation (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/funct/geojson/">GeoJSON (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/funct/heading/">Heading (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/funct/hyster/">Hysteresis (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/funct/kml/">Keyhole Markup Language [kml] (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/funct/latlngalt/">Latitude, Longitude, Altitude (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/funct/loiterat/">Loiter At (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/funct/parse/">Parse (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/funct/percentof/">Percentage Of (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/funct/shape/">Shape (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/funct/shapefile/">Shapefile (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/funct/unit/">Unit (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/funct/waitat/">Wait At (function)</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Obj</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/ambit/">Ambit (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/apparat/">Apparatus (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/arena/">Arena (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/attr/">Attribute (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/behavi/">Behaviour (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/box/">Box (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/channel/">Channel (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/clepe/">Clepe (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/cloud/">Cloud (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/cognomen/">Cognomen (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/consens/">Consens</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/console/">Console (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/coords/">Coordinates (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/corridor/">Corridor (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/course/">Course (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/device/">Device (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/displacem/">Displacement</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/display/">Display (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/distan/">Distance (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/duct/">Duct (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/euler/">Euler (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/excurs/">Excursions (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/floor/">Floor (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/fog/">Fog (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/foreign/">Foreigner (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/funnel/">Funnel</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/gait/">Gait (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/gate/">Gate (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/geofence/">Geofence (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/ghost/">Ghost (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/goal/">Goal (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/instruct/">Instructors</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/itiner/">Itinerary (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/ject/">Ject</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/journ/">Journey (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/lease/">Lease (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/lennuf/">Lennuf (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/liken/">Liken (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/litsan/">Line in the Sand (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/map/">Map</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/marack/">Marack (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/metric/">Metric (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/mission/">Mission (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/mist/">Mist (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/mode/">Mode (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/moniker/">Moniker (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/msg/">Message (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/ob/">Ob (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/obstacle/">Obstacle (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/path/">Path (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/payload/">Payload</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/pipe/">Pipe (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/poll/">Poll (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/pose/">Pose (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/printer/">Printer (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/proc/">Procedure (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/prog/">Programme (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/puff/">Puff</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/roi/">Region of Interest (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/rosary/">Rosary (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/route/">Finders</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/scalar/">Scalar (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/sensor/">Sensor</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/sobriquet/">Sobriquet (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/spec/">Specification (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/spine/">Spine (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/spox/">Spox (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/stacle/">Stacle (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/stance/">Stance (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/sub/">Sub (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/substacle/">Substacle (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/swarm/">Swarm (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/tour/">Tour (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/track/">Track (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/tracker/">Tracker</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/transmiss/">Transmission (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/trip/">Trip (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/valid/">Valid (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/viapoint/">Viapoint (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/way/">Way (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/waypoint/">Waypoint</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/workspace/">Workspace</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/wtf/">Where's The Fire [wtf] (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/zone/">Zone (object)</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Prop</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/prop/distan/">Distance (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/prop/ergcon/">Energy Consumption (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/prop/ident/">Identity (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/prop/impetus/">Impetus (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/prop/ios/">Apple iOs (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/prop/kiwifruit/">Kiwifruit (type)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/prop/make/">Make (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/prop/model/">Model (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/prop/month/">Month (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/prop/msg/">Message (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/prop/opsys/">Operating System (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/prop/risk/">Risk (enumerator)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/prop/serialnum/">Serial Number (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/prop/type/">Type (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/prop/urgency/">Urgency (enumerator)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/prop/vegetable/">Vegetable (type)</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Setter</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/setter/authority/">Authority (setter)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/setter/consens/">Consensus (setter)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/setter/decisiven/">Decisiveness (setter)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/setter/euler/">Euler (setter)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/setter/mapprovider/">Map Provider (setter)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/setter/quatern/">Quaternion (setter)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/setter/ranking/">Ranking (setter)</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Special</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/special/them/">Them (special)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/special/us/">Us (special)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/special/we/">We (special)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/special/you/">You (special)</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Verb</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/verb/alert/">Alert (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/verb/ask/">Inquirers</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/verb/begin/">Begin (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/verb/calc/">Calculate (verb)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/verb/call/">Call</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/verb/envelop/">envelop</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/verb/find/">`find_`</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/verb/follow/">Follow (verb)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/verb/form/">Form (verb)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/verb/go/">Go (verb)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/verb/goto/">Goto (verb)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/verb/kill/">Kill (verb)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/verb/label/">Label (verb)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/verb/lead/">Lead (verb)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/verb/listen/">Listen (verb)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/verb/load/">Payloaders</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/verb/loiter/">Loiter</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/verb/merge/">Merge (verb)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/verb/msg/">Message (verb)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/verb/poll/">Poll (verb)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/verb/see/">see</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/verb/set/">Set (verb)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/verb/study/">Study</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/verb/swarm/">Swarm (verb)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/verb/tail/">Tail Behind (verb)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/verb/unload/">Payloaders</a>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Opendogv3</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../opendogv3/bom/">Bill of Materials</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Physic</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../physic/physic/">Physic</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Obj</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/actuat/">Actuator (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/adsb/">Automatic Dependent Surveillance–Broadcast (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/apparat/">Apparatus (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/applian/">Appliance (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/battery/">Battery</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/border/">Border (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/button/">Button (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/canal/">Canal (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/cat/">Cat (type)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/ceiling/">Ceiling (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/cellphone/">Cell Phone (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/chair/">Chair (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/colo/">Colour Sensor (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/compon/">Component (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/computer/">Computer (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/door/">Door (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/drone/">Drone (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/duct/">Duct (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/equip/">Equipment (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/finline/">Finish Line (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/firma/">Firma (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/ghost/">Ghost (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/guide/">Guide (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/hinderan/">Hinderance (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/human/">Human (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/imu/">Inertial Measurement Unit (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/ject/">Ject (object &gt; thingy &gt; thing)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/joint/">Joint (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/landmark/">Landmark</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/link/">Link (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/locon/">Location Object Context (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/mach/">Machine (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/mech/">Mechanical Thing (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/microcon/">Microcontroller (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/mobot/">Mobot (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/motor/">Motor (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/object/">Object (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/organic/">Organic (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/photoelect/">Photoelectric Sensor (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/poi/">Poi</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/rail/">Rail (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/robot/">Robot (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/roi/">Region of Interest (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/room/">Room (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/sensor/">Sensor (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/shaft/">Shaft (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/side/">Side (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/sobot/">Sobot (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/spec/">Specification (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/stair/">Stairs (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/stride/">Stride (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/switch/">Switch (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/tablet/">Tablet (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/thing/">Thing (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/thingy/">Thingy (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/tri/">Triangle (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/valley/">Valley (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/vehicle/">Vehicle (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/wall/">Wall (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/wayfind/">Wayfind (object)</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Prop</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/prop/air/">Air Speed (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/prop/alt/">Altitude (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/prop/android/">Android Operating System (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/prop/bb/">Blackberry Operating System (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/prop/cap/">Capacity (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/prop/country/">Country (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/prop/imei/">International Mobile Equipment Identity (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/prop/ios/">Apple® iOS™ Operating System (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/prop/opframe/">Operating Framework</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/prop/phonenum/">Telephone Number (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/prop/status/">Status (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/prop/win/">Microsoft® Windows™ Operating System (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/prop/win_mobile/">Microsoft® Windows Mobile (property)</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Special</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/special/world/">World (special)</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Verb</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/verb/alert/">Alert (verb)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/verb/enter/">Enter (verb)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/verb/exit/">Exit (verb)</a>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Tasks</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../tasks/newton_loop/">The Newton Loop</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../tasks/persian_chain/">The Persian Chain</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../tasks/recharge/">Recharge</a>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+<section class="wy-nav-content-wrap" data-toggle="wy-nav-shift">
+<nav aria-label="Mobile navigation menu" class="wy-nav-top" role="navigation">
+<i class="fa fa-bars" data-toggle="wy-nav-top"></i>
+<a href="../..">Diego</a>
+</nav>
+<div class="wy-nav-content">
+<div class="rst-content"><div aria-label="breadcrumbs navigation" role="navigation">
+<ul class="wy-breadcrumbs">
+<li><a alt="Docs" class="icon icon-home" href="../.."></a> »</li>
+<li>Lexicon »</li><li>Lexicon</li>
+<li class="wy-breadcrumbs-aside">
+</li>
+</ul>
+<hr/>
+</div>
+<div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
+<div class="section" itemprop="articleBody">
+<h1 id="lexicon">Lexicon</h1>
+<p>The lexicon of <strong><em>Diego</em></strong> is the full syntactical vocabulary of all statement compositions:</p>
+<table>
+<thead>
+<tr>
+<th>lexicon</th>
+<th>domain</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a name="?_a"></a> <em><code>&lt;comand&gt;</code></em><code>;</code></td>
+<td>abstract</td>
+<td><em>statement-operator</em></td>
+<td><a href="../../abstract/special/semicolon/">Termination</a> of preceding <em>statement</em></td>
+</tr>
+<tr>
+<td><a name="?_b"></a> <code>?_</code><em><code>&lt;command&gt;</code></em></td>
+<td>abstract</td>
+<td><em>statement-operator</em></td>
+<td>Termination of preceding <em>statement</em> and the <a href="../../abstract/special/elvish/">positive outcome</a> beginning of proceeding <em>statement</em></td>
+</tr>
+<tr>
+<td><a name="?_c"></a> <code>|_</code><em><code>&lt;command&gt;</code></em></td>
+<td>abstract</td>
+<td><em>statement-operator</em></td>
+<td>Termination of preceding <em>statement</em> and the <a href="../../abstract/special/elvish/">neutral outcome</a> beginning of proceeding <em>statement</em></td>
+</tr>
+<tr>
+<td><a name="?_d"></a> <code>:_</code><em><code>&lt;command&gt;</code></em></td>
+<td>abstract</td>
+<td><em>statement-operator</em></td>
+<td>Termination of preceding <em>statement</em> and the <a href="../../abstract/special/elvish/">negative outcome</a> beginning of proceeding <em>statement</em></td>
+</tr>
+<tr>
+<td><a name="(_a"></a> <code>(</code><em><code>moniker</code></em><code>)</code><br/><code>()</code><br/><code>(())</code></td>
+<td>abstract<br/>metaphysic<br/>physic</td>
+<td><em>object</em></td>
+<td>Refer to <em>object</em> monikered <em>moniker</em><br/>Refer to last referenced youngest generation <em>object</em> or refer to youngest generation nested <em>object</em><br/>Refer to last referenced oldest generation <em>object</em> or refer to oldest generation nested <em>object</em></td>
+</tr>
+<tr>
+<td><a name="(_b"></a> <code>[</code><em><code>variable_moniker</code></em><code>]</code><br/><code>[]</code><br/><code>[</code><em><code>moniker</code></em><code>]</code><br/><code>_</code><em><code>&lt;expression_posit&gt;</code></em><code>([</code><em><code>ordinal</code></em><code>])</code></td>
+<td>abstract<br/>metaphysic<br/>physic</td>
+<td><em>object</em><br/><em>variable</em></td>
+<td>Refer to <em>variable</em> <em>object</em> <em>variable_moniker</em><br/>Refers to last scoped <em>variable</em> or 'this' parent scoped <em>object</em><br/>Refer to object <em>moniker</em><br/>Refer the ordinal <em>variable</em> <em>object</em> at position <em>ordinal</em> from the proceeding <em>object</em></td>
+</tr>
+<tr>
+<td><a name="(_c"></a> <code>([</code><em><code>variable_moniker</code></em><code>])</code><br/><code>({datatype},[</code><em><code>variable_moniker</code></em><code>])</code></td>
+<td>abstract<br/>metaphysic<br/>physic</td>
+<td><em>object</em></td>
+<td>Refer to <em>variable</em> <em>object</em> of value of <em>variable_moniker</em><br/>Refers to <em>variable</em> <em>object</em> of value of <em>variable_moniker</em> to datatype <em>datatype</em></td>
+</tr>
+<tr>
+<td><a name="{}"></a> <code>{</code><em><code>datatype</code></em><code>}</code><br/><code>{</code><em><code>type</code></em><code>}</code><br/><code>{}</code></td>
+<td>abstract<br/>metaphysic<br/>physic</td>
+<td><em>statement</em></td>
+<td><a href="../../abstract/dt/datatype/">Datatype</a> declaration or cast of datatype <em>datatype</em><br/><a href="../../metaphysic/prop/type/">Type</a> declaration or cast of type <em>type</em><br/>Declare or cast variant datatype or variant type</td>
+</tr>
+<tr>
+<td><a name="❬❭"></a> <code>❬</code><em><code>unit</code></em><code>❭</code><br/><code>❬</code><em><code>unit_system</code></em><code>❭</code><br/><code>❬❭</code></td>
+<td>metaphysic</td>
+<td><em>statement</em></td>
+<td><a href="../../metaphysic/funct/unit/">Unit</a> declaration, or, cast of object <em>object</em><br/>Declare variant, or, cast to variant unit</td>
+</tr>
+<tr>
+<td><a name="+_a"></a> <code>+</code>   <code>-</code>   <code>*</code>   <code>×</code>   <code>/</code>   <code>÷</code>   <code>%</code>   <code>𝐦</code>   <code>𝐦𝐨𝐝</code></td>
+<td>abstract</td>
+<td><em>operator</em></td>
+<td><a href="../../abstract/op/arithmetic/">Arithmetic operators</a></td>
+</tr>
+<tr>
+<td><a name="+_b"></a> <code>²</code>   <code>³</code>   <code>^</code>   <code>**</code>   <code>𝑥<sup>y</sup></code>   <code>√</code>   <code>∛</code>   <code>∜</code></td>
+<td>abstract</td>
+<td><em>operator</em></td>
+<td><a href="../../abstract/op/exponent/">Exponent operators</a></td>
+</tr>
+<tr>
+<td><a name="+_c"></a> <code>++</code>   <code>∆</code>   <code>--</code>   <code>—</code>   <code>∇</code></td>
+<td>abstract</td>
+<td><em>operator</em></td>
+<td>Crement operators</td>
+</tr>
+<tr>
+<td><a name="+_d"></a> <code>=</code>   <code>+=</code>   <code>-=</code>   <code>*=</code>   <code>×=</code>   <code>^=</code>   <code>/=</code>   <code>÷=</code>   <code>%=</code></td>
+<td>abstract</td>
+<td><em>operator</em></td>
+<td>Assignment operators</td>
+</tr>
+<tr>
+<td><a name="+_e"></a> <code>&amp;</code>   <code>+</code>   <code>+=</code>   <code>&amp;=</code></td>
+<td>abstract</td>
+<td><em>operator</em></td>
+<td>String operators</td>
+</tr>
+<tr>
+<td><a name="+_f"></a> <code>==</code>   <code>===</code>   <code>≡</code>   <code>≢</code>   <code>≅</code>   <code>≈</code>   <code>≊</code>   <code>!=</code>   <code>&lt;&gt;</code>   <code>≠</code>   <code>&lt;</code><br/><code>≮</code>   <code>&lt;=</code>   <code>≤</code>   <code>≨</code>   <code>&gt;</code>   <code>≯</code>   <code>&gt;=</code>   <code>≥</code>   <code>≩</code></td>
+<td>abstract</td>
+<td><em>operator</em></td>
+<td>Comparison operators</td>
+</tr>
+<tr>
+<td><a name="+_g"></a> <code>?</code><em><code>...</code></em><code>:</code></td>
+<td>abstract</td>
+<td><em>operator</em></td>
+<td>Tenary Operator</td>
+</tr>
+<tr>
+<td><a name="+_h"></a> <code>&amp;&amp;</code>   <code>∧</code>   <code>||</code>   <code>∨</code>   <code>!</code>   <code>¬</code></td>
+<td>abstract</td>
+<td><em>operator</em></td>
+<td>Logical Operators</td>
+</tr>
+<tr>
+<td><a name="+_i"></a> <code>&amp;</code>   <code>⊼</code>   <code>|</code>   <code>~</code>   <code>≁</code>   <code>^</code>   <code>⊻</code>   <code>&lt;&lt;</code>   <code>␏</code>   <code>&gt;&gt;</code>   <code>␎</code></td>
+<td>abstract</td>
+<td><em>operator</em></td>
+<td>Bitwise Operators</td>
+</tr>
+<tr>
+<td><a name="+_j"></a> <code>∪</code>   <code>∩</code>   <code>⊆</code>   <code>⊄</code>   <code>⊂</code>   <code>⊃</code>   <code>⊇</code>   <code>∅</code>   <code>𝐏</code>   <code>⊅</code>   <code>=</code>   <code>∁</code><br/><code>∆</code>   <code>∉</code>   <code>|</code>   <code>#</code>   <code>×</code>   <code>₀</code>   <code>₁</code>   <code>₂</code>   <code>𝐐</code>   <code>𝐙</code>   <code>𝐑</code></td>
+<td>abstract</td>
+<td><em>operator</em></td>
+<td>Set Theory Operators</td>
+</tr>
+<tr>
+<td><a name="abs"></a> <code>_abs(</code><em><code>numeric</code></em><code>)</code><br/><code>_</code><em><code>&lt;expression_posit&gt;</code></em><code>(|</code><em><code>numeric</code></em><code>|)</code></td>
+<td>abstract</td>
+<td><em>function</em></td>
+<td>Provides the <a href="../../abstract/funct/abs/">absolute value</a> of <em>numeric</em><br/>Provides the <a href="../../abstract/funct/abs/">absolute value</a> of <em>numeric</em> in an <em>expression</em></td>
+</tr>
+<tr>
+<td><a name="acos"></a> <code>_acos(</code><em><code>numeric</code></em><code>)</code><br/><code>_acos([</code><em><code>variable_moniker</code></em><code>])</code><br/><code>_</code><em><code>&lt;expression_posit&gt;</code></em><code>(𝐜𝐨𝐬⁻¹(</code><em><code>numeric</code></em><code>))</code><br/><code>_</code><em><code>&lt;expression_posit&gt;</code></em><code>(𝐜𝐨𝐬⁻¹([</code><em><code>variable_moniker</code></em><code>]))</code></td>
+<td>abstract</td>
+<td><em>function</em></td>
+<td>Provides the <a href="../../abstract/funct/acos/">arccosine</a> of <em>numeric</em></td>
+</tr>
+<tr>
+<td><a name="actuat"></a> <code>actuat(</code><em><code>moniker</code></em><code>)</code><br/><code>actuator(</code><em><code>moniker</code></em><code>)</code></td>
+<td>physic</td>
+<td><em>object</em></td>
+<td><a href="/actuat.md">actuat</a></td>
+</tr>
+<tr>
+<td><a name="add"></a> <code>add_</code><em><code>&lt;object&gt;</code></em></td>
+<td>abstract<br/>metaphysic<br/>physic</td>
+<td><em>verb</em></td>
+<td>Declare <em>object</em></td>
+</tr>
+<tr>
+<td><a name="adicity"></a> <code>_adicity()</code></td>
+<td>abstract</td>
+<td><em>property</em></td>
+<td>Provides the <a href="../../abstract/prop/adicity/">information</a> of <em>elements</em> or <em>members</em> of the preceding <em>object</em></td>
+</tr>
+<tr>
+<td><a name="after"></a> <code>_after(</code><em><code>temporal_expression</code></em><code>)</code></td>
+<td>abstract</td>
+<td><em>condit</em></td>
+<td>preceding <em>object</em> <a href="../../abstract/condit/after/">after</a> <em>temporal_expression</em> for the proceeding <em>object</em>, usually to do the proceeding <em>action</em></td>
+</tr>
+<tr>
+<td><a name="ai"></a> <code>ai</code><br/><code>bot</code></td>
+<td>metaphysic<br/>obj</td>
+<td></td>
+<td>A construct present in the metaphysical world only. (Artificial Intelligence)<br/>Example: <em>cal</em>, <em>ChatBot</em></td>
+</tr>
+<tr>
+<td><a name="alert"></a> <code>alert_</code><em><code>&lt;thingy&gt;</code></em><code>(</code><em><code>moniker</code></em><code>)</code></td>
+<td>physic</td>
+<td><em>verb</em></td>
+<td><a href="../../physic/verb/alert/">alert</a></td>
+</tr>
+<tr>
+<td><a name="applain"></a> <code>applian</code><br/><code>appliance</code></td>
+<td>physic<br/>obj</td>
+<td></td>
+<td>A smart mobot that can safety be classified as a <em>household appliance</em>.<br/>Examples: washing machine, dishwasher.<br/><code>with_applian(dishWasher)_start(normalWash);</code></td>
+</tr>
+<tr>
+<td><a name="apprat"></a> <code>apparat(</code><em><code>moniker</code></em><code>)</code><br/><code>apparatus(</code><em><code>moniker</code></em><code>)</code></td>
+<td>physic</td>
+<td><em>object</em></td>
+<td><a href="../../metaphysic/obj/apparat/">apparat</a></td>
+</tr>
+<tr>
+<td><a name="arena"></a> <code>arena(</code><em><code>moniker</code></em><code>)</code></td>
+<td>metaphysic</td>
+<td><em>object</em></td>
+<td><a href="../../metaphysic/obj/arena/">arena</a></td>
+</tr>
+<tr>
+<td><a name="arity"></a> <code>_arity()</code></td>
+<td>abstract</td>
+<td><em>property</em></td>
+<td>Provides the <a href="../../abstract/prop/arity/">entire count</a> <em>members</em> of the preceding <em>object</em></td>
+</tr>
+<tr>
+<td><a name="array"></a> <code>array(</code><em><code>moniker</code></em><code>)</code><br/><code>ary(</code><em><code>moniker</code></em><code>)</code></td>
+<td>abstract</td>
+<td><em>object</em></td>
+<td>A <a href="../../abstract/obj/ary/">collection</a> of multiple elements under a single <em>object</em> called <em>moniker</em></td>
+</tr>
+<tr>
+<td><a name="ask"></a> <code>ask_</code></td>
+<td>metaphysic</td>
+<td><em>verb</em></td>
+<td>Requests information, to be returned with <code>tell</code> <em>verb</em><br><code>ask_drone(drone1)_stat(avg_altitude);</code><br><code>tell_drone(drone1)_stat(avg_altitude)_value(22.893);</code></br></br></td>
+</tr>
+<tr>
+<td><a name="ask"></a> <code>ask_</code><em><code>&lt;thingy&gt;</code></em></td>
+<td>physic</td>
+<td><em>verb</em></td>
+<td><em><a href="../../metaphysic/verb/ask/">Ask</a></em> proceeding <em>thingy</em></td>
+</tr>
+<tr>
+<td><a name="at"></a> <code>_at(</code><em><code>tempor</code></em><code>)</code></td>
+<td>abstract</td>
+<td><em>condit</em></td>
+<td>preceding <em>object</em> <a href="../../abstract/condit/at/">at</a> <a href="../../abstract/obj/tempor/">tempor</a> for proceeding <em>object</em> to do proceeding <em>action</em></td>
+</tr>
+<tr>
+<td><a name="attr"></a> <code>attr</code><br/><code>attribute</code></td>
+<td>metaphysic</td>
+<td><em>object</em></td>
+<td>Example: <br/>See also: <a href="#spec">spec</a></td>
+</tr>
+<tr>
+<td><a name="before"></a> <code>_before(</code><em><code>tempor</code></em><code>)</code></td>
+<td>abstract</td>
+<td><em>condit</em></td>
+<td>preceding <em>object</em> <a href="../../abstract/condit/before/">before</a> <a href="../../abstract/obj/tempor/">tempor</a> for proceeding <em>object</em> to do proceeding <em>action</em></td>
+</tr>
+<tr>
+<td><a name="begin"></a> <code>begin_</code><em><code>&lt;object\|action&gt;</code></em></td>
+<td>abstract<br/>metaphysic</td>
+<td><em>verb</em></td>
+<td><a href="../../metaphysic/verb/begin/">Begin</a> <em>action</em> on proceeding <em>object</em></td>
+</tr>
+<tr>
+<td><a name="border"></a> <code>border</code></td>
+<td>physic</td>
+<td><em>object</em></td>
+<td>Floor marking showing borders, created using paint, tape, or, decals.<br/>Example:<br/><img alt="wayfind markings" src="/_img/256px-Floor_marking_5S_safety_Scanfil_Sieradz.jpg" style="width:200px;"/><br/><sub>"<a href="https://commons.wikimedia.org/wiki/File:Floor_marking_5S_safety_Scanfil_Sieradz.jpg">Floor marking at the Scanfil Poland factory in Sieradz</a>"<br/>by <a href="https://commons.wikimedia.org/wiki/User:Boston9">Adrian Grycuk</a> is licensed under <a href="https://creativecommons.org/licenses/by-sa/3.0/pl/">CC BY 2.0 Poland</a> </sub></td>
+</tr>
+<tr>
+<td><a name="bot"></a> <code>bot</code><br/><code>ai</code></td>
+<td>metaphysic<br/>obj</td>
+<td></td>
+<td>A construct present in the metaphysical world only. (Artificial Intelligence)<br/>Example: <em>cal</em>, <em>ChatBot</em></td>
+</tr>
+<tr>
+<td><a name="box"></a> <code>box</code></td>
+<td>metaphysic</td>
+<td><em>object</em></td>
+<td>A representation of a meta-physical enclosed space. The thing / meta-physical version of a <code>room</code>.<br/>Example: inside a pit<br/>See also: <a href="#room">room</a></td>
+</tr>
+<tr>
+<td><a name="btree"></a> <code>btree(</code><em><code>moniker</code></em><code>)</code></td>
+<td>metaphysic</td>
+<td><em>object</em></td>
+<td></td>
+</tr>
+<tr>
+<td><a name="calc"></a> <code>_calc(</code><em><code>expression</code></em><code>)</code></td>
+<td>abstract</td>
+<td><em>method</em></td>
+<td>Use <a href="../abstract/meth/calc.md">calculation</a> of <em>expression</em> for preceding <em>object</em>, with proceeding <em>object</em></td>
+</tr>
+<tr>
+<td><a name="calc"></a> <code>calc_</code><em><code>&lt;object&gt;</code></em><code>(</code><em><code>obj_moniker</code></em><code>)</code><br><code>calc_</code><em><code>&lt;object&gt;</code></em><code>(</code><em><code>of_moniker</code></em><code>)</code></br></td>
+<td>abstract<br>metaphysic</br></td>
+<td><em>verb</em></td>
+<td><a href="../../metaphysic/verb/calc/">calc</a></td>
+</tr>
+<tr>
+<td><a name="call"></a> <code>call_</code><em><code>&lt;object&gt;</code></em></td>
+<td>metaphysic</td>
+<td><em>verb</em></td>
+<td><a href="../../metaphysic/verb/call/">call</a></td>
+</tr>
+<tr>
+<td><a name="canal"></a> <code>canal</code></td>
+<td>physic</td>
+<td><em>object</em></td>
+<td><a href="../../physic/obj/canal/">canal</a></td>
+</tr>
+<tr>
+<td><a name="cellphone"></a> <code>cellphone(</code><em><code>moniker</code></em><code>)</code>   <code>mobot({cellphone},</code><em><code>moniker</code></em><code>)</code>   <code>mobot(</code><em><code>moniker</code></em><code>)_type(cellphone);</code></td>
+<td>physic</td>
+<td><em>object</em></td>
+<td><a href="../../physic/obj/cellphone/">cellphone</a></td>
+</tr>
+<tr>
+<td><a name="ceiling"></a> <code>ceiling</code></td>
+<td>physic</td>
+<td><em>object</em></td>
+<td><a name="ceiling"></a></td>
+</tr>
+<tr>
+<td><a name="channel"></a> <code>channel(</code><em><code>moniker</code></em><code>)</code></td>
+<td>physic</td>
+<td><em>object</em></td>
+<td>An exclusive sub-section of a <code>workspace</code>, sometimes referred to as a <em>conversation</em></td>
+</tr>
+<tr>
+<td><a name="cloud"></a> <code>cloud(</code><em><code>moniker</code></em><code>)</code></td>
+<td>physic</td>
+<td><em>object</em></td>
+<td></td>
+</tr>
+<tr>
+<td><a name="clump"></a> <code>clump(</code><em><code>moniker</code></em><code>)</code></td>
+<td>abstract</td>
+<td><em>object</em></td>
+<td>A multi-dimesional  collection of <a href="../../abstract/obj/clump/">data</a> storage <em>object</em> called <em>moniker</em></td>
+</tr>
+<tr>
+<td><a name="computer"></a> <code>computer(</code><em><code>moniker</code></em><code>)</code>   <code>comput(</code><em><code>moniker</code></em><code>)</code>   <code>sobot({computer},</code><em><code>moniker</code></em><code>)</code></td>
+<td>metaphysic</td>
+<td><em>object</em></td>
+<td><em>Action</em> on <em><a href="../metaphysic/obj/computer.md">computer</a></em> <em>moniker</em></td>
+</tr>
+<tr>
+<td><a name="comrelay"></a> <code>commrelay(</code><em><code>moniker</code></em><code>)</code></td>
+<td></td>
+<td></td>
+<td>https://www.autonodyne.com/AUTO_behaviors2.html</td>
+</tr>
+<tr>
+<td><a name="concat"></a> <code>_concat()</code><br/><code>_concatenate()</code><br/><code>_concat(</code><em><code>arymoniker</code></em><code>)</code><br/><code>_concatenate(</code><em><code>arymoniker</code></em><code>)</code><br/><code>_concat(</code><em><code>arymoniker1</code></em><code>,</code><em><code>arymoniker1</code></em><code>,</code><em><code>...</code></em><code>)</code><br/><code>_concatenate(</code><em><code>arymoniker1</code></em><code>,</code><em><code>arymoniker1</code></em><code>,</code><em><code>...</code></em><code>)</code></td>
+<td>abstract</td>
+<td><em>object</em></td>
+<td>Concatenates proceeding <em>objects</em> (<em>arrays</em>) with proceeding <em>objects</em><br/>Concatenates array <em>arymoniker</em> with preceding <em>objects</em><br/>Concatenates arrays <em>arymonikers</em> with preceding <em>objects</em></td>
+</tr>
+<tr>
+<td><a name="concord"></a> <code>concord(</code><em><code>settings</code></em><code>)</code></td>
+<td>abstract<br/>metaphysic</td>
+<td><em>setter</em></td>
+<td></td>
+</tr>
+<tr>
+<td><a name="consens"></a> <code>consens(</code><em><code>settings</code></em><code>)</code><br/><code>consensus(</code><em><code>settings</code></em><code>)</code></td>
+<td>abstract<br/>metaphysic</td>
+<td><em>setter</em></td>
+<td><a href="../../metaphysic/setter/consens/">consens</a></td>
+</tr>
+<tr>
+<td><a name="console"></a> <code>console</code></td>
+<td>metaphysic</td>
+<td><em>object</em></td>
+<td>A metaphysical presence used to only provide an interface to all other <em>thingies</em></td>
+</tr>
+<tr>
+<td><a name="corridor"></a> <code>corridor</code></td>
+<td>metaphysic</td>
+<td><em>object</em></td>
+<td><a name="corridor"></a></td>
+</tr>
+<tr>
+<td><a name="counter"></a> <code>counter(</code><em><code>moniker</code></em><code>)</code><br/><code>(</code><em><code>countermoniker</code></em><code>)</code></td>
+<td>abstract</td>
+<td><em>object</em></td>
+<td><a href="../../abstract/obj/counter/">counter</a></td>
+</tr>
+<tr>
+<td><a name="day"></a> <code>_day()</code><br/><code>_day(</code><em><code>day_numeric</code></em><code>)</code></td>
+<td>abstract</td>
+<td>property</td>
+<td>References the temporal <a href="../../abstract/prop/day/">day</a> of the preceding <em>object</em><br/><br/>Sets the temporal  <a href="../../abstract/prop/day/">day</a> of <em>day_numeric</em></td>
+</tr>
+<tr>
+<td><a name="decisiven"></a> <code>decisiven(</code><em><code>settings</code></em><code>)</code><br/><code>decisiveness(</code><em><code>settings</code></em><code>)</code></td>
+<td>metaphysic</td>
+<td><em>setter</em></td>
+<td></td>
+</tr>
+<tr>
+<td><a name="decpl"></a> <code>_decpl(</code><em><code>numeric</code></em><code>)</code><br/><code>_decplaces(</code><em><code>numeric</code></em><code>)</code></td>
+<td>abstract</td>
+<td><em>setter</em></td>
+<td>Set the default number of decimal place to use in calcluations adn on display (as a setter) <a href="../../abstract/setter/decpl/">decpl</a><br>See also <a href="../abstract/meth/fix.md"><code>fix</code></a> <em>method</em></br></td>
+</tr>
+<tr>
+<td><a name="deed"></a> <code>deed(</code><em><code>moniker</code></em><code>)</code></td>
+<td>abstract</td>
+<td><em>object</em></td>
+<td>A basic one-dimensional <a href="../../abstract/obj/deed/">data</a> data <em>object</em> called <em>moniker</em>, immutable except for <em>deed owner</em></td>
+</tr>
+<tr>
+<td><a name="dict"></a> <code>dict(</code><em><code>moniker</code></em><code>)</code><br/><code>_dict(</code><em><code>moniker</code></em><code>)</code><br/><code>dictionary(</code><em><code>moniker</code></em><code>)</code><br/><code>_dictionary(</code><em><code>moniker</code></em><code>)</code></td>
+<td>abstract</td>
+<td><em>object</em></td>
+<td>A <a href="../../abstract/obj/dict/">keyed collection</a>, with key-value pairs, data storage <em>object</em> called <em>moniker</em></td>
+</tr>
+<tr>
+<td><a name="distan"></a> <code>_distan(</code><em><code>distance_value</code></em><code>)</code><br/><code>_distance(</code><em><code>distance_value</code></em><code>)</code><br/><code>_distan(❬unit❭,</code><em><code>distance_value</code></em><code>)</code><br/><code>_distance(❬unit❭,</code><em><code>distance_value</code></em><code>)</code><br/></td>
+<td>metaphysic</td>
+<td><em>posit</em><br><em>property</em></br></td>
+<td>preceding <em>object</em> of <a href="../../metaphysic/obj/distan/">distance</a> of proceeding <em>object</em></td>
+</tr>
+<tr>
+<td><a name="distan"></a> <code>distan(</code><em><code>object_name</code></em><code>)</code><br><code>distance(</code><em><code>object_name</code></em><code>)</code></br></td>
+<td>metaphysic</td>
+<td><em>object</em></td>
+<td><a href="../../metaphysic/obj/distan/">distan</a></td>
+</tr>
+<tr>
+<td><a name="door"></a> <code>door(</code><em><code>moniker</code></em><code>)</code><br/><code>door({type},</code><em><code>moniker</code></em><code>)</code><br/><code>_door(</code><em><code>moniker</code></em><code>)</code><br/><code>_door({type},</code><em><code>moniker</code></em><code>)</code></td>
+<td>physic</td>
+<td><em>object</em></td>
+<td>A representation of a physical <a href="../../physic/obj/door/">doorway</a> / gate, designed for a human</td>
+</tr>
+<tr>
+<td><a name="durat"></a> <code>_durat(</code><em><code>duration_value</code></em><code>)</code><br/><code>_duration(</code><em><code>duration_value</code></em><code>)</code><br/><code>_durat(❬unit❭,</code><em><code>duration_value</code></em><code>)</code><br/><code>_duration(❬unit❭,</code><em><code>duration_value</code></em><code>)</code><br/></td>
+<td>metaphysic</td>
+<td><em>condit</em></td>
+<td>preceding <em>object</em> of <a href="../../metaphysic/funct/durat/">duration</a> of proceeding <em>object</em></td>
+</tr>
+<tr>
+<td><a name="during"></a> <code>_during(</code><em><code>tempor</code></em><code>)</code></td>
+<td>abstract</td>
+<td><em>condit</em></td>
+<td>preceding <em>object</em> <a href="../../abstract/condit/during/">during</a> <a href="../../abstract/obj/tempor/">tempor</a> for proceeding <em>object</em> to do proceeding <em>action</em></td>
+</tr>
+<tr>
+<td><a name="e"></a> <code>_e()</code><br/><code>_e(</code><em><code>decimal_places</code></em><code>)</code></td>
+<td>abstract</td>
+<td><em>constant</em></td>
+<td>Use <a href="../../abstract/const/e/">Euler's number</a> for preceding <em>object</em>, with proceeding <em>object</em></td>
+</tr>
+<tr>
+<td><a name="equip"></a> <code>equip(</code><em><code>moniker</code></em><code>)</code><br/><code>equipment(</code><em><code>moniker</code></em><code>)</code></td>
+<td>metaphysic</td>
+<td><em>object</em></td>
+<td><br/>See also: <code>apparatus</code>; <code>instru</code><em>[ment]</em>; <code>peripheral</code>;  <code>sensor</code></td>
+</tr>
+<tr>
+<td><a name="ergcon"></a> <code>_ergcon(</code><em><code>ergcon_value</code></em><code>)</code><br/><code>_ergcon(❬unit❭,</code><em><code>ergcon_value</code></em><code>)</code></td>
+<td>metaphysic</td>
+<td><em>property</em></td>
+<td>preceding <em>object</em> of <a href="../../metaphysic/prop/ergcon/">energy consumption</a> of proceeding <em>object</em></td>
+</tr>
+<tr>
+<td><a name="fence"></a> <code>fence(</code><em><code>moniker</code></em><code>)</code><br/><code>geofence(</code><em><code>moniker</code></em><code>)</code></td>
+<td>metaphysic</td>
+<td><em>object</em></td>
+<td><a href="../../metaphysic/obj/geofence/">geofence</a></td>
+</tr>
+<tr>
+<td><a name="firma"></a> <code>firma</code></td>
+<td>metaphysic</td>
+<td><em>object</em></td>
+<td>An identified down <em>side</em> of a representation space in the physical world.</td>
+</tr>
+<tr>
+<td><a name="fix"></a> <code>_fix(</code><em><code>decplaces</code></em><code>)</code><br><code>_tofix(</code><em><code>decplaces</code></em><code>)</code></br></td>
+<td>abstract</td>
+<td><em>method</em></td>
+<td>Converts preceding <em>object-value</em> in to <em>decplaces</em> number of <a href="../abstract/meth/fix.md">fixed decimal places</a></td>
+</tr>
+<tr>
+<td><a name="float"></a> <code>{float}</code></td>
+<td>abstract<br/>datatype</td>
+<td></td>
+<td>Float abstract datatype</td>
+</tr>
+<tr>
+<td><a name="floor"></a> <code>floor</code><br/><code>level</code></td>
+<td></td>
+<td><a href="#floor.md">floor</a><br/><a href="#level">level</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a name="fog"></a> <code>fog(</code><em><code>moniker</code></em><code>)</code></td>
+<td>metaphysic</td>
+<td><em>object</em></td>
+<td>A zone (<code>puff</code>) used for diego communication that relies on UDP <a href="../../metaphysic/obj/fog/">fog</a></td>
+</tr>
+<tr>
+<td><a name="follow"></a> <code>follow_</code><em><code>&lt;object&gt;</code></em></td>
+<td>metaphysic</td>
+<td><em>verb</em></td>
+<td><em><a href="../../metaphysic/verb/follow/">Follow</a></em> proceeding <em>object</em></td>
+</tr>
+<tr>
+<td><a name="for"></a> <code>_for([</code><em><code>loopername</code></em><code>])</code></td>
+<td>abstract</td>
+<td><em>flow</em></td>
+<td><a href="../../abstract/flow/for/">for</a></td>
+</tr>
+<tr>
+<td><a name="for"></a> <code>_for(</code><em><code>startexpression</code></em><code>,</code><em><code>condition</code></em><code>,</code><em><code>repeatexpression</code></em><code>)</code></td>
+<td>abstract</td>
+<td><em>flow</em></td>
+<td><a href="../../abstract/flow/for/">for</a></td>
+</tr>
+<tr>
+<td><a name="foreach"></a> <code>_foreach(</code><em><code>startexpression</code></em><code>,</code><em><code>condition</code></em><code>,</code><em><code>repeatexpression</code></em><code>)</code></td>
+<td>abstract</td>
+<td><em>flow</em></td>
+<td></td>
+</tr>
+<tr>
+<td><a name="foreign"></a> <code>foreign(</code><em><code>moniker</code></em><code>)</code><br/><code>foreigner(</code><em><code>moniker</code></em><code>)</code></td>
+<td><a href="../../metaphysic/obj/foreign/">foreign</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a name="forin"></a> <code>_forin(</code><em><code>startexpression</code></em><code>,</code><em><code>condition</code></em><code>,</code><em><code>repeatexpression</code></em><code>)</code></td>
+<td>abstract</td>
+<td><em>flow</em></td>
+<td></td>
+</tr>
+<tr>
+<td><a name="form"></a> <code>form</code><em>[ation]</em></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a name="forof"></a> <code>_forof(</code><em><code>startexpression</code></em><code>,</code><em><code>condition</code></em><code>,</code><em><code>repeatexpression</code></em><code>)</code></td>
+<td>abstract</td>
+<td><em>flow</em></td>
+<td></td>
+</tr>
+<tr>
+<td><a name="fortnight"></a> <code>_fortnight()</code>   <code>_fortn()</code><br/><code>_fortnight(</code><em><code>fortnnumeric</code></em><code>)</code>   <code>_fortn(</code><em><code>fortnnumeric</code></em><code>)</code></td>
+<td>abstract</td>
+<td>property</td>
+<td>References the temporal fortnight of the preceding <em>object</em><br/><br/>Sets the temporal fortnight of <em>fortnnumeric</em></td>
+</tr>
+<tr>
+<td><a name="fqtr"></a> <code>_fqtr()</code>   <code>_fiscalquarter()</code><br/><code>_fqtr(</code><em><code>fqtr_numeric</code></em><code>)</code>   <code>_fiscalquarter(</code><em><code>fqtr_numeric</code></em><code>)</code></td>
+<td>abstract</td>
+<td>property</td>
+<td>References the fiscal quarter year of the preceding <em>object</em><br/>Sets the fiscal quarter year of <em>qtr_numeric</em></td>
+</tr>
+<tr>
+<td><a name="funct"></a> <code>funct(</code><em><code>moniker</code></em><code>)</code><br/><code>_funct(</code><em><code>moniker</code></em><code>)</code><br/><code>function(</code><em><code>moniker</code></em><code>)</code><br/><code>_function(</code><em><code>moniker</code></em><code>)</code></td>
+<td>abstract</td>
+<td><em>action</em></td>
+<td><a href="../../abstract/obj/funct/">funct</a></td>
+</tr>
+<tr>
+<td><a name="gait"></a> <code>gait(</code><em><code>moniker</code></em><code>)</code></td>
+<td>metaphysic</td>
+<td><em>object</em></td>
+<td>The thing version of <code>stride</code> <a href="../../metaphysic/obj/gait/">gait</a></td>
+</tr>
+<tr>
+<td><a name="gate"></a> <code>gate(</code><em><code>moniker</code></em><code>)</code></td>
+<td>metaphysic</td>
+<td><em>object</em></td>
+<td><a href="../../metaphysic/obj/gate/">gate</a></td>
+</tr>
+<tr>
+<td><a name="ghost"></a> <code>ghost(</code><em><code>moniker</code></em><code>)</code></td>
+<td>metaphysic</td>
+<td><em>object</em></td>
+<td><a href="../../metaphysic/obj/ghost/">ghost</a></td>
+</tr>
+<tr>
+<td><a name="gimbal"></a> <code>gimbal(</code><em><code>moniker</code></em><code>)</code></td>
+<td>physic</td>
+<td><em>object</em></td>
+<td></td>
+</tr>
+<tr>
+<td><a name="go"></a> <code>go_</code><em><code>&lt;object&gt;</code></em></td>
+<td>physic</td>
+<td><em>verb</em></td>
+<td>Manoeuver Proceeding <em>object</em> to <a href="../../metaphysic/verb/go/">go</a> proceeding <em>action</em> on <em>object</em></td>
+</tr>
+<tr>
+<td><a name="goal"></a> <code>goal(</code><em><code>moniker</code></em><code>)</code><br/><code>_goal(</code><em><code>moniker</code></em><code>)</code></td>
+<td>metaphysic</td>
+<td><em>posit-object</em></td>
+<td><em>Action</em> on <em><a href="../../metaphysic/obj/goal/">goal</a></em> <em>moniker</em><br/>Proceed with <em><a href="../../metaphysic/obj/goal/">goal</a></em> <em>moniker</em></td>
+</tr>
+<tr>
+<td><a name="goto"></a> <code>_goto()</code></td>
+<td>metaphysic</td>
+<td><em>verb</em></td>
+<td>preceding <em>object(s)</em> <a href="../../metaphysic/verb/goto/">goto</a> to proceeding <em>object(s)</em></td>
+</tr>
+<tr>
+<td><a name="goto"></a> <code>goto_</code><em><code>&lt;object&gt;</code></em></td>
+<td>physic</td>
+<td><em>verb</em></td>
+<td>Manoeuver Proceeding <em>object</em> to <a href="../../metaphysic/verb/goto/">goto</a> proceeding <em>object</em></td>
+</tr>
+<tr>
+<td><a name="guide"></a> <code>guide(</code><em><code>moniker</code></em><code>)</code></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a name="handler"></a> <code>handler(</code><em><code>moniker</code></em><code>)</code></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a name="hash"></a> <code>hash(</code><em><code>moniker</code></em><code>)</code></td>
+<td>abstract</td>
+<td><em>object</em></td>
+<td>A two-dimensional <a href="../../abstract/obj/hash/">collection</a> data storage <em>object</em> called <em>moniker</em>, with hashed keys</td>
+</tr>
+<tr>
+<td><a name="hold"></a> <code>hold(</code><em><code>moniker</code></em><code>)</code>   <code>household(</code><em><code>moniker</code></em><code>)</code></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a name="hour"></a> <code>_hour()</code>   <code>_hr()</code><br/><code>_hour(</code><em><code>hour_numeric</code></em><code>)</code>   <code>_hour(</code><em><code>hour_numeric</code></em><code>)</code><br/><code>❬hour❭</code>   <code>❬hr❭</code><br/><code>{h}</code>   <code>{hh}</code>   <code>{H}</code>   <code>{H}</code>   <code>{HH}</code>   <code>{dh}</code>   <code>{h:m}</code>   <code>{h:m:s}</code><br/><code>tohour()</code>   <code>tohr()</code></td>
+<td>abstract</td>
+<td>property</td>
+<td>References the temporal <a href="../../abstract/prop/hr/">hour</a> of the preceding <em>object</em><br/>Sets the temporal hour of <em>hour_numeric</em><br/>Hour unit<br/>Hour type <em>(format)</em> <br/>Hour cast</td>
+</tr>
+<tr>
+<td><a name="human"></a> <code>human({</code><em><code>type</code></em><code>},</code><em><code>moniker</code></em><code>)</code><br/><code>_human()</code><br/><code>_human([</code><em><code>variable_name</code></em><code>])</code></td>
+<td>physic</td>
+<td><em>object</em></td>
+<td>Representation of a human being, present and alive in the physical <em>'real'</em> world.</td>
+</tr>
+<tr>
+<td><a name="if"></a> <code>_if_(</code><em><code>expression</code></em><code>)</code></td>
+<td>abstract</td>
+<td><em>operator</em></td>
+<td></td>
+</tr>
+<tr>
+<td><a name="indent"></a> <code>indent(</code><em><code>moniker</code></em><code>)</code><br/><code>indenture(</code><em><code>moniker</code></em><code>)</code></td>
+<td>abstract</td>
+<td><em>object</em></td>
+<td>A basic one-dimensional <a href="../../abstract/obj/indent/">data</a> storage <em>object</em> called <em>moniker</em>, immutable except for <em>indenture owners</em></td>
+</tr>
+<tr>
+<td><a name="instruct"></a> <code>instruct(</code><em><code>moniker</code></em><code>)</code><br/><code>instruction(</code><em><code>moniker</code></em><code>)</code></td>
+<td>abstract<br/>metaphysic</td>
+<td><em>action</em></td>
+<td><a href="../../metaphysic/obj/instruct/">instruct</a></td>
+</tr>
+<tr>
+<td><a name="dt_da"></a> <code>{int}</code>   <code>{int_32}</code>   <code>{int_64}</code><br/><code>{short}</code>   <code>{long}</code></td>
+<td>abstract</td>
+<td><em>primitive</em></td>
+<td>Integer primitive datatypes</td>
+</tr>
+<tr>
+<td><a name="dt_b"></a> <code>{bool}</code>   <code>{onoff}</code>   <code>{hl}</code></td>
+<td>abstract</td>
+<td><em>datatype</em></td>
+<td>Boolean primitive datatypes</td>
+</tr>
+<tr>
+<td><a name="dt_c"></a> <code>{lmh_3}</code>   <code>{+=-}</code>   <code>{}</code>   <code>{}</code></td>
+<td>abstract</td>
+<td><em>datatype</em></td>
+<td>Enumerators (primitive datatypes)</td>
+</tr>
+<tr>
+<td><a name="lmh"></a> <code>{lmh_3}</code>   <code>{lmh_4}</code>   <code>{lmh_5}</code>   <code>{lmh_6}</code></td>
+<td>metaphysic</td>
+<td><em>datatype</em></td>
+<td><a href="../../metaphysic/dt/lmh/">Low-Medium-High</a> Enumerator datatypes</td>
+</tr>
+<tr>
+<td><a name="dt_a"></a> <code>{bit}</code>   <code>{byte}</code>   <code>{octet}</code>   <code>{word}</code></td>
+<td>abstract</td>
+<td><em>datatype</em></td>
+<td>Computer primitive datatypes</td>
+</tr>
+<tr>
+<td><a name="jagger"></a> <code>jagger(</code><em><code>moniker</code></em><code>)</code></td>
+<td>metaphysic</td>
+<td><em>object</em></td>
+<td>jagger](#jagger)</td>
+</tr>
+<tr>
+<td><a name="ject"></a> <code>ject(</code><em><code>moniker</code></em><code>)</code></td>
+<td>metaphysic</td>
+<td><em>object</em></td>
+<td>A dumb physical <a href="../../physic/obj/ject/">ject</a></td>
+</tr>
+<tr>
+<td><a name="jigger"></a> <code>jigger(</code><em><code>moniker</code></em><code>)</code></td>
+<td>metaphysic</td>
+<td><em>object</em></td>
+<td></td>
+</tr>
+<tr>
+<td><a name="jour"></a> <code>_jour()</code><br/><code>_jour(</code><em><code>jour_numeric</code></em><code>)</code><br/><code>_jour(</code><em><code>jour_sring</code></em><code>)</code></td>
+<td>abstract</td>
+<td>property</td>
+<td>References the temporal jourday of the preceding <em>object</em><br/>Sets the temporal jourday of <em>jour_numeric</em> or <em>jour_string</em></td>
+</tr>
+<tr>
+<td><a name="kill"></a> <code>kill_</code><em><code>&lt;human\|organic&gt;</code></em><br/><code>kill_</code><em><code>&lt;object&gt;</code></em></td>
+<td>physic</td>
+<td><em>verb</em></td>
+<td><a href="../../metaphysic/verb/kill/">Kill</a> proceeding <em>human</em>/<em>organic</em><br/><a href="../../metaphysic/verb/kill/">De-commission</a> proceeding <em>object</em></td>
+</tr>
+<tr>
+<td><a name="kill"></a> <code>kill_</code><em><code>&lt;variable&gt;</code></em></td>
+<td>abstract</td>
+<td><em>verb</em></td>
+<td><em><a href="../../abstract/verb/kill/">Kill</a></em> proceeding <em>variable</em></td>
+</tr>
+<tr>
+<td><a name="label"></a> <code>label_</code><em><code>&lt;object&gt;</code></em></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a name="lead"></a> <code>lead_</code><em><code>&lt;object&gt;</code></em></td>
+<td>metaphysic</td>
+<td><em>verb</em></td>
+<td><em><a href="../../metaphysic/verb/lead/">lead</a> proceeding </em>object*</td>
+</tr>
+<tr>
+<td><a name="lexi"></a> <code>lexi(</code><em><code>moniker</code></em><code>)</code><br/><code>lexikon(</code><em><code>moniker</code></em><code>)</code></td>
+<td>abstract</td>
+<td><em>object</em></td>
+<td>A two-dimensional <a href="../../abstract/obj/lexi/">collection</a> data storage <em>object</em> called <em>moniker</em>, with unique keys</td>
+</tr>
+<tr>
+<td><a name="lib"></a> <code>lib(</code><em><code>moniker</code></em><code>)</code>   <code>library(</code><em><code>moniker</code></em><code>)</code></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a name="list"></a> <code>list(</code><em><code>moniker</code></em><code>)</code></td>
+<td>abstract</td>
+<td><em>object</em></td>
+<td>A database-assigned <a href="../../abstract/obj/list/">collection</a> <em>object</em> called <em>moniker</em></td>
+</tr>
+<tr>
+<td><a name="ln"></a> <code>_ln(</code><em><code>numeric</code></em><code>)</code><br/><code>_log(</code><em><code>numeric</code></em><code>)</code><br/><code>_ln([</code><em><code>numeric_variable_moniker</code></em><code>])</code><br/><code>_log([</code><em><code>numeric_variable_moniker</code></em><code>])</code></td>
+<td>abstract</td>
+<td><em>function</em></td>
+<td>Use <a href="../../abstract/funct/ln/">natural logarithm</a> (base <a href="../../abstract/const/e/">e</a>) for preceding <em>object</em>, with proceeding <em>object</em><br/>See also: <a href="../../abstract/const/ln2/">ln2</a>; <a href="../../abstract/const/ln10/">ln10</a></td>
+</tr>
+<tr>
+<td><a name="ln10"></a> <code>_ln10()</code><br/><code>_ln10(</code><em><code>decimal_places</code></em><code>)</code><br/><code>_ln(10)</code><br/><code>_ln(10)_decpl(</code><em><code>decimal_places</code></em><code>)</code></td>
+<td>abstract</td>
+<td><em>constant</em></td>
+<td>Use <a href="../../abstract/const/ln10/">natural logarithm of 10</a> for preceding <em>object</em>, with proceeding <em>object</em><br/>See also: <a href="../../abstract/funct/ln/">ln</a></td>
+</tr>
+<tr>
+<td><a name="ln2"></a> <code>_ln2()</code><br/><code>_ln2(</code><em><code>decimal_places</code></em><code>)</code><br/><code>_ln(2)</code><br/><code>_ln(2)_decpl(</code><em><code>decimal_places</code></em><code>)</code></td>
+<td>abstract</td>
+<td><em>constant</em></td>
+<td>Use <a href="../../abstract/const/ln2/">natural logarithm of 2</a> for preceding <em>expression</em>, with proceeding <em>object</em><br/>See also: <a href="../../abstract/funct/ln/">ln</a></td>
+</tr>
+<tr>
+<td><a name="load"></a> <code>load_</code><em><code>&lt;object&gt;</code></em></td>
+<td>metaphysic</td>
+<td><em>verb</em></td>
+<td><em><a href="../../metaphysic/verb/load/">load</a></em> proceeding <em>object</em></td>
+</tr>
+<tr>
+<td><a name="mach"></a> <code>mach(</code><em><code>moniker</code></em><code>)</code><br/><code>machine(</code><em><code>moniker</code></em><code>)</code></td>
+<td>physic</td>
+<td><em>object</em></td>
+<td><a href="../../physic/obj/mach/">mach</a></td>
+</tr>
+<tr>
+<td><a name="mach"></a> <code>mech(</code><em><code>moniker</code></em><code>)</code><br/></td>
+<td>physic</td>
+<td><em>object</em></td>
+<td></td>
+</tr>
+<tr>
+<td><a name="map"></a> <code>map(</code><em><code>moniker</code></em><code>)</code></td>
+<td>metaphysic</td>
+<td><em>object</em></td>
+<td></td>
+</tr>
+<tr>
+<td><a name="mapprovider"></a> <code>_mapprovider(</code><em><code>mapprovider</code></em><code>)</code></td>
+<td>metaphysic</td>
+<td><em>setter</em></td>
+<td><a href="../../metaphysic/setter/mapprovider/">mapprovider</a></td>
+</tr>
+<tr>
+<td><a name="matrix"></a> <code>matrix(</code><em><code>moniker</code></em>`)``</td>
+<td>abstract</td>
+<td><em>object</em></td>
+<td>A two-dimensional collection <a href="../../abstract/obj/matrix/">data</a> storage <em>object</em> called <em>moniker</em></td>
+</tr>
+<tr>
+<td><a name="me"></a> <code>me_</code><em><code>&lt;object\|action&gt;</code></em></td>
+<td>abstract</td>
+<td><em>special</em></td>
+<td><em><a href="../abstract/special/me/md">Me</a></em> (or this) does <em>action</em> or my <em>object</em>...<br/>Representation of self</td>
+</tr>
+<tr>
+<td><a name="metric"></a> <code>metric(</code><em><code>moniker</code></em><code>)</code><br/><code>metric({</code><em><code>datatype</code></em><code>}</code><em><code>moniker</code></em><code>)</code><br/><code>metric(❬</code><em><code>unit</code></em><code>❭,</code><em><code>moniker</code></em><code>)</code><br/><code>metric({</code><em><code>datatype</code></em><code>},❬</code><em><code>unit</code></em><code>❭,</code><em><code>moniker</code></em><code>)</code></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a name="microsec"></a> <code>_μs()</code>   <code>_microsecond()</code><br/><code>_μs(</code><em><code>μs_numeric</code></em><code>)</code>   <code>_microsecond(</code><em><code>μs_numeric</code></em><code>)</code><br/><code>❬microsec❭</code>   <code>❬microsecond❭</code>   <code>❬μs❭</code></td>
+<td>abstract</td>
+<td>property</td>
+<td>References the temporal <a href="../metaphysic/dt/μs.md">microsecond</a> of the preceding <em>object</em><br/>Sets the temporal <a href="../metaphysic/dt/μs.md">microsecond</a> of <em>μs_numeric</em><br/><a href="../metaphysic/dt/μs.md">Microsecond</a> unit</td>
+</tr>
+<tr>
+<td><a name="millisec"></a> <code>_ms()</code><br/><code>_millisecond()</code><br/><code>_ms(</code><em><code>ms_numeric</code></em><code>)</code><br/><code>_millisecond(</code><em><code>ms_numeric</code></em><code>)</code></td>
+<td>abstract</td>
+<td>property</td>
+<td>References the temporal millisecond of the preceding <em>object</em><br/><br/>Sets the temporal millisecond of <em>ms_numeric</em></td>
+</tr>
+<tr>
+<td><a name="min"></a> <code>_min()</code><br/><code>_minute()</code><br/><code>_min(</code><em><code>min_numeric</code></em><code>)</code><br/><code>_minute(</code><em><code>min_numeric</code></em><code>)</code></td>
+<td>abstract</td>
+<td>property</td>
+<td>References the temporal minute of the preceding <em>object</em><br/><br/>Sets the temporal minute of <em>min_numeric</em></td>
+</tr>
+<tr>
+<td><a name="misson"></a> <code>mission(</code><em><code>moniker</code></em><code>)</code></td>
+<td>metaphysic</td>
+<td><em>object</em></td>
+<td><a href="../../metaphysic/obj/mission/">mission</a></td>
+</tr>
+<tr>
+<td><a name="mist"></a> <code>mist(</code><em><code>moniker</code></em><code>)</code></td>
+<td>metaphysic</td>
+<td><em>object</em></td>
+<td>A connectivity zone (wired or wireless) with the distance range of &lt; 10m.<br/>For example: RFID</td>
+</tr>
+<tr>
+<td><a name="mobot"></a> <code>mobot(</code><em><code>moniker</code></em><code>)</code></td>
+<td>metaphysic</td>
+<td><em>object</em></td>
+<td>A conveyed <em>thingy</em> in the physical <em>'real'</em> world.<br/>Examples: Samasung Galaxy watch, cellphone</td>
+</tr>
+<tr>
+<td><a name="mode"></a> <code>mode</code></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a name="month"></a> <code>_month()</code><br/><code>_mth()</code><br/><code>_month(</code><em><code>mthnumeric</code></em><code>)</code><br/><code>_mth(</code><em><code>mthnumeric</code></em><code>)</code><br/><code>_month(</code><em><code>mth_string</code></em><code>)</code><br/><code>_mth(</code><em><code>mth-string</code></em><code>)</code></td>
+<td>abstract</td>
+<td>property</td>
+<td>References the temporal month of the preceding <em>object</em><br/><br/>Sets the temporal month of <em>mthnumeric</em> or <em>mth_string</em></td>
+</tr>
+<tr>
+<td><a name="mover"></a> <code>mover(</code><em><code>moniker</code></em><code>)</code></td>
+<td>See: <a href="#jigger">jigger</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a name="msg"></a> <code>_msg(</code><em><code>message</code></em><code>)</code><br/><code>_message(</code><em><code>message</code></em><code>)</code></td>
+<td>metaphysic</td>
+<td><em>??</em></td>
+<td>Proceed with <em><a href="../../metaphysic/obj/msg/">message</a></em> <em>moniker</em></td>
+</tr>
+<tr>
+<td><a name="msg"></a> <code>msg_</code><em><code>&lt;object&gt;</code></em></td>
+<td>metaphysic</td>
+<td><em>verb</em></td>
+<td><em><a href="../../metaphysic/verb/msg/">message</a></em> proceeding <em>object</em></td>
+</tr>
+<tr>
+<td><a name="msg"></a> <code>msg(</code><em><code>moniker</code></em><code>)</code><br/><code>message(</code><em><code>moniker</code></em><code>)</code></td>
+<td>metaphysic</td>
+<td><em>object</em></td>
+<td><em>Action</em> on <em><a href="../../metaphysic/obj/msg/">message</a></em> <em>moniker</em></td>
+</tr>
+<tr>
+<td><a name="namespace"></a> <code>namespace(</code><em><code>moniker</code></em><code>)</code><br/><code>ns(</code><em><code>moniker</code></em><code>)</code></td>
+<td>abstract</td>
+<td><em>object</em></td>
+<td><a href="../../abstract/obj/namespace/">namespace</a></td>
+</tr>
+<tr>
+<td><a name="neigh"></a> <code>neigh</code>   <code>neighbour</code></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a name="ob"></a> <code>ob</code></td>
+<td>metaphysic</td>
+<td><em>object</em></td>
+<td>A civilian[^civilian] immobile ject in the  physical <em>'real'</em> world.<br/>Examples: unidentified lampost (or thing pointing out of the ground), etc.<br/><code>call_robot(alif)_found()_ob()_photo()_blob(d3Mtd2l6EAMyCwguEBDIL</code><em><code>...</code></em></td>
+</tr>
+<tr>
+<td><a name="object"></a> <code>object</code></td>
+<td>metaphysic</td>
+<td><em>object</em></td>
+<td>A dumb immobile physical <a href="../../physic/obj/object/">object</a></td>
+</tr>
+<tr>
+<td><a name="obstacle"></a> <code>obstacle</code></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a name="organic"></a> <code>organic</code></td>
+<td>metaphysic</td>
+<td><em>object</em></td>
+<td>Representation of a non-human being, present and alive in the physical <em>'real'</em> world.<br/>Example: cat, dog</td>
+</tr>
+<tr>
+<td><a name="orientat"></a> <code>_orientat(</code><em><code>variable_moniker</code></em><code>)</code><br/><code>_orientation(</code><em><code>variable_moniker</code></em><code>)</code></td>
+<td>metaphysic</td>
+<td><em>posit-variable</em></td>
+<td></td>
+</tr>
+<tr>
+<td><a name="orientat"></a> <code>_orientat(</code><em><code>x</code></em><code>,</code><em><code>y</code></em><code>,</code><em><code>j</code></em><code>,</code><em><code>k</code></em><code>)</code><br/><code>_orientat(</code><em><code>x</code></em><code>,</code><em><code>y</code></em><code>,</code><em><code>z</code></em><code>,</code><em><code>w</code></em><code>)</code><br/><code>_orientation(</code><em><code>x</code></em><code>,</code><em><code>y</code></em><code>,</code><em><code>j</code></em><code>,</code><em><code>k</code></em><code>)</code><br/><code>_orientation(</code><em><code>x</code></em><code>,</code><em><code>y</code></em><code>,</code><em><code>z</code></em><code>,</code><em><code>w</code></em><code>)</code></td>
+<td>metaphysic</td>
+<td><em>posit-action</em></td>
+<td></td>
+</tr>
+<tr>
+<td><a name="orientat"></a> <code>_orientat(</code><em><code>x</code></em><code>,</code><em><code>y</code></em><code>,</code><em><code>z</code></em><code>)</code><br/><code>_orientation(</code><em><code>x</code></em><code>,</code><em><code>y</code></em><code>,</code><em><code>z</code></em><code>)</code></td>
+<td>metaphysic</td>
+<td><em>posit-action</em></td>
+<td></td>
+</tr>
+<tr>
+<td><a name="package"></a> <code>package</code></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a name="path"></a> <code>path(</code><em><code>moniker</code></em><code>)</code></td>
+<td>metaphysic</td>
+<td><em>object</em></td>
+<td><a href="../../metaphysic/obj/path/">path</a></td>
+</tr>
+<tr>
+<td><a name="payload"></a> <code>payload(</code><em><code>moniker</code></em><code>)</code><br/><code>pload(</code><em><code>moniker</code></em><code>)</code></td>
+<td>metaphysic</td>
+<td><em>object</em></td>
+<td><em>Action</em> on <em><a href="../../metaphysic/obj/payload/">payload</a></em> <em>moniker</em></td>
+</tr>
+<tr>
+<td><a name="pi"></a> <code>_pi()</code><br/><code>_pi(</code><em><code>decplaces</code></em><code>)</code></td>
+<td>abstract</td>
+<td><em>constant</em></td>
+<td></td>
+</tr>
+<tr>
+<td><a name="pipe"></a> <code>pipe(</code><em><code>moniker</code></em><code>)</code></td>
+<td>metaphysic</td>
+<td><em>object</em></td>
+<td><a href="../../metaphysic/obj/duct/">duct</a></td>
+</tr>
+<tr>
+<td><a name="plafond"></a> <code>plafond</code></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a name="poi"></a> <code>poi(</code><em><code>moniker</code></em><code>)</code></td>
+<td>metaphysic</td>
+<td><em>object</em></td>
+<td></td>
+</tr>
+<tr>
+<td><a name="point"></a> <code>point(</code><em><code>moniker</code></em><code>)</code></td>
+<td>abstract</td>
+<td><em>object</em></td>
+<td><a href="../../abstract/obj/point/">point</a></td>
+</tr>
+<tr>
+<td><a name="poll"></a> <code>poll_</code><em><code>&lt;object&gt;</code></em><code>(</code><em><code>objmoniker</code></em><code>)</code><br><code>poll_</code><em><code>&lt;object&gt;</code></em><code>(</code><em><code>ofmoniker</code></em><code>)</code></br></td>
+<td>metaphysic</td>
+<td><em>verb</em></td>
+<td><a href="../../metaphysic/verb/poll/">poll</a></td>
+</tr>
+<tr>
+<td><a name="pose"></a> <code>_pose(</code><em><code>moniker</code></em><code>)</code></td>
+<td>metaphysic</td>
+<td><em>posit-object</em></td>
+<td>Proceed with <em><a href="../../metaphysic/obj/pose/">pose</a></em> <em>moniker</em></td>
+</tr>
+<tr>
+<td><a name="printer"></a> <code>printer(</code><em><code>moniker</code></em><code>)</code><br/><code>ptr(</code><em><code>moniker</code></em><code>)</code></td>
+<td>metaphysic</td>
+<td><em>object</em></td>
+<td><em>Action</em> on <em><a href="../../metaphysic/obj/printer/">printer</a></em> <em>moniker</em></td>
+</tr>
+<tr>
+<td><a name="proc"></a> <code>proc</code>   <code>`proced</code>   <code>procedure</code></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a name="process"></a> <code>process(</code><em><code>moniker</code></em><code>)</code><br/><code>process(</code><em><code>moniker</code></em><code>)</code></td>
+<td>metaphysic</td>
+<td><em>object</em></td>
+<td></td>
+</tr>
+<tr>
+<td><a name="prog"></a> <code>prog(</code><em><code>moniker</code></em><code>)</code>   <code>program(</code><em><code>moniker</code></em><code>)</code>   <code>programme(</code><em><code>moniker</code></em><code>)</code></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a name="puff"></a> <code>puff(</code><em><code>moniker</code></em><code>)</code></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a name="qtr"></a> <code>_qtr()</code>   <code>_quarter()</code><br/><code>_qtr(</code><em><code>qtr_numeric</code></em><code>)</code>   <code>_quarter(</code><em><code>qtr_numeric</code></em><code>)</code></td>
+<td>abstract</td>
+<td>property</td>
+<td>References the temporal quarter year of the preceding <em>object</em><br/><br/>Sets the temporal quater year of <em>qtr_numeric</em></td>
+</tr>
+<tr>
+<td><a name="rail"></a> <code>rail(</code><em><code>moniker</code></em><code>)</code></td>
+<td>metaphysic</td>
+<td><em>object</em></td>
+<td><a href="../../physic/obj/rail/">rail</a></td>
+</tr>
+<tr>
+<td><a name="ret"></a> <code>_ret()</code><br/><code>_ret({</code><em><code>datatype</code></em><code>})</code></td>
+<td>abstract</td>
+<td><em>function</em></td>
+<td><a href="../../abstract/funct/ret/">ret</a></td>
+</tr>
+<tr>
+<td><a name="robot"></a> <code>robot(</code><em><code>moniker</code></em><code>)</code><br/><code>_robot(</code><em><code>moniker</code></em><code>)</code></td>
+<td>physic</td>
+<td><em>object</em></td>
+<td><em>Action</em> on <em><a href="../../physic/obj/robot/">robot</a></em> <em>moniker</em></td>
+</tr>
+<tr>
+<td><a name="roi"></a> <code>roi(</code><em><code>moniker</code></em><code>)</code><br/><code>regionofinterest(</code><em><code>moniker</code></em><code>)</code></td>
+<td>metaphysic</td>
+<td><em>object</em></td>
+<td><a href="../../metaphysic/obj/roi/">roi</a></td>
+</tr>
+<tr>
+<td><a name="room"></a> <code>room</code></td>
+<td></td>
+<td></td>
+<td>A representation of a single physical enclosed space for a <code>thingy</code> to move freely around inside.</td>
+</tr>
+<tr>
+<td><a name="route"></a> <code>route(</code><em><code>moniker</code></em><code>)</code><br><code>_route(</code><em><code>moniker</code></em><code>)</code></br></td>
+<td>metaphysic</td>
+<td><em>object</em></td>
+<td><em>Action</em> on <em><a href="../../metaphysic/obj/route/">route</a></em> <em>moniker</em><br>Proceed with <em><a href="../../metaphysic/obj/route/">route</a></em> <em>moniker</em></br></td>
+</tr>
+<tr>
+<td><a name="scalar"></a> <code>scalar(</code><em><code>moniker</code></em><code>)</code><br/><code>_scalar(</code><em><code>moniker</code></em><code>)</code><br/><code>_scalar({dt},</code><em><code>moniker</code></em><code>)</code><br/><code>_scalar([</code><em><code>variable_moniker</code></em><code>])</code></td>
+<td><em>metaphysic</em></td>
+<td><em>object</em></td>
+<td>Proceed with <em><a href="../../metaphysic/obj/scalar/">scalar</a></em> <em>variable_moniker</em> <a href="../../metaphysic/obj/scalar/">scalar</a></td>
+</tr>
+<tr>
+<td><a name="scan"></a> <code>scan</code></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a name="sec"></a> <code>_sec()</code><br/><code>_second()</code><br/><code>_sec(</code><em><code>sec_numeric</code></em><code>)</code><br/><code>_second(</code><em><code>sec_numeric</code></em><code>)</code></td>
+<td>abstract</td>
+<td>property</td>
+<td>References the temporal second of the preceding <em>object</em><br/><br/>Sets the temporal second of <em>sec_numeric</em></td>
+</tr>
+<tr>
+<td><a name="sensor"></a> <code>sensor(</code><em><code>moniker</code></em><code>)</code><br/><code>_sensor(</code><em><code>moniker</code></em><code>)</code></td>
+<td>metaphysic</td>
+<td><em>object</em></td>
+<td><em>Action</em> on <em><a href="../../metaphysic/obj/sensor/">sensor</a></em> <em>moniker</em><br/>Proceed with <em><a href="../../metaphysic/obj/sensor/">sensor</a></em> <em>moniker</em></td>
+</tr>
+<tr>
+<td><a name="set"></a> <code>set_</code><em><code>&lt;object&gt;</code></em><code>(</code><em><code>moniker</code></em><code>,</code><em><code>settings...</code></em><code>)</code><br/><code>_set(</code><em><code>settings...</code></em><code>)</code></td>
+<td>abstract</td>
+<td><em>verb</em><br/><em>posit</em></td>
+<td><a href="../../abstract/verb/set/">Sets</a> the <em>object</em> of <em>moniker</em> with <em>settings...</em> settings</td>
+</tr>
+<tr>
+<td><a name="false"></a> <code>_false(</code><em><code>bool_moniker</code></em><code>)</code></td>
+<td>abstract</td>
+<td><em>function</em></td>
+<td>Sets the <em>Boolean</em> <em>bool_moniker</em> to <a href="../../abstract/funct/false/">false</a></td>
+</tr>
+<tr>
+<td><a name="true"></a> <code>_true(</code><em><code>bool_moniker</code></em><code>)</code></td>
+<td>abstract</td>
+<td><em>function</em></td>
+<td>Sets the <em>Boolean</em> <em>bool_moniker</em> to <a href="../../abstract/funct/true/">true</a></td>
+</tr>
+<tr>
+<td><a name="not"></a> <code>_not(</code><em><code>bool_moniker</code></em><code>)</code></td>
+<td>abstract</td>
+<td><em>function</em></td>
+<td>Sets the <em>Boolean</em> <em>bool_moniker</em> to its opposite value <a href="../../abstract/funct/not/">not</a></td>
+</tr>
+<tr>
+<td><a name="set"></a> <code>set_</code><em><code>&lt;setter&gt;</code></em><code>(</code><em><code>settings</code></em><code>)</code></td>
+<td>abstract<br/>metaphysic</td>
+<td><em>verb</em></td>
+<td><a href="../../metaphysic/verb/set/">Sets</a> the <em>setter</em> to <em>settings</em> settings</td>
+</tr>
+<tr>
+<td><a name="shaft"></a> <code>shaft(</code><em><code>moniker</code></em><code>)</code></td>
+<td>physic</td>
+<td><em>object</em></td>
+<td><a href="../../physic/obj/shaft/">shaft</a></td>
+</tr>
+<tr>
+<td><a name="side"></a> <code>side</code></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a name="sobriquet"></a> <code>sobriquet</code></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a name="spec"></a> <code>spec</code><br/><code>specification</code></td>
+<td><br/>See also: <code>attribute</code></td>
+<td><a href="../../physic/obj/spec/">spec</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a name="spine"></a> <code>spine(</code><em><code>moniker</code></em><code>)</code></td>
+<td>metaphysic</td>
+<td><em>object</em></td>
+<td><a href="../../metaphysic/obj/spine/">spine</a></td>
+</tr>
+<tr>
+<td><a name="sql"></a> <code>_sql(</code><em><code>sqlquery</code></em><code>)</code></td>
+<td>abstract</td>
+<td><em>function</em></td>
+<td>Provides <em>sqlquery</em> <a href="../../abstract/funct/sql/">outcome</a> into preceding <em>object</em></td>
+</tr>
+<tr>
+<td><a name="sqrt2"></a> <code>_sqrt2()</code><br/><code>_sqrt2(</code><em><code>decplaces</code></em><code>)</code></td>
+<td>abstract</td>
+<td><em>constant</em></td>
+<td></td>
+</tr>
+<tr>
+<td><a name="stacle"></a></td>
+<td></td>
+<td></td>
+<td><a href="../../metaphysic/obj/stacle/">stacle</a></td>
+</tr>
+<tr>
+<td><a name="stance"></a> <code>stance(</code><em><code>moniker</code></em><code>)</code></td>
+<td>metaphysic</td>
+<td><em>object</em></td>
+<td></td>
+</tr>
+<tr>
+<td><a name="stealth"></a> <code>stealth(</code><em><code>moniker</code></em><code>)</code></td>
+<td>metaphysic</td>
+<td><em>object</em></td>
+<td></td>
+</tr>
+<tr>
+<td><a name="stride"></a> <code>stride(</code><em><code>moniker</code></em><code>)</code></td>
+<td></td>
+<td></td>
+<td>The human version of <code>gait</code></td>
+</tr>
+<tr>
+<td><a name="study"></a> <code>study_</code><em><code>&lt;object&gt;</code></em></td>
+<td>physic</td>
+<td><em>verb</em></td>
+<td><em><a href="../../metaphysic/verb/study/">Study</a></em> proceeding <em>object</em></td>
+</tr>
+<tr>
+<td><a name="sub"></a> <code>sub(</code><em><code>moniker</code></em><code>)</code></td>
+<td>physic</td>
+<td><em>object</em></td>
+<td>A unidentified mobile physical <a href="../../metaphysic/obj/ject/">ject</a></td>
+</tr>
+<tr>
+<td><a name="subject"></a> <code>subject(</code><em><code>moniker</code></em><code>)</code></td>
+<td>physic</td>
+<td><em>object</em></td>
+<td>A dumb mobile physical <a href="../../metaphysic/obj/ject/">ject</a></td>
+</tr>
+<tr>
+<td><a name="substacle"></a></td>
+<td></td>
+<td></td>
+<td>](../metaphysic/obj/substacle.md)</td>
+</tr>
+<tr>
+<td><a name="swarm"></a> <code>swarm(</code><em><code>moniker</code></em><code>)</code></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a name="tail"></a> <code>tail_</code><em><code>&lt;object&gt;</code></em></td>
+<td>metaphysic</td>
+<td><em>verb</em></td>
+<td><em><a href="../../metaphysic/verb/tail/">Tail</a></em> behind proceeding <em>object</em></td>
+</tr>
+<tr>
+<td><a name="tempor"></a> <code>tempor(</code><em><code>moniker</code></em><code>)</code>   <code>temporal(</code><em><code>moniker</code></em><code>)</code><br/><code>{tempor}</code>   <code>{temporal}</code></td>
+<td>abstract</td>
+<td><em>object</em></td>
+<td>A primitive data object representing a <a href="../../abstract/obj/tempor/">tempor</a> off a calendar monikered <em>moniker</em></td>
+</tr>
+<tr>
+<td><a name="thing"></a> <code>thing</code></td>
+<td>physic<br/>obj</td>
+<td></td>
+<td>An immobile <em>thingy</em> in the physical <em>'real'</em> world.<br/>Example: fridge, television</td>
+</tr>
+<tr>
+<td><a name="thingy"></a> <code>thingy({robot},</code><em><code>moniker</code></em><code>)</code><br/><code>add_thingy(</code><em><code>moniker</code></em><code>)_type(robot)</code></td>
+<td>physic</td>
+<td><em>verb-object</em><br/><em>datatype</em></td>
+<td><em>Action</em> on <em><a href="../../physic/obj/thingy/">thingy</a></em> <em>moniker</em> of datatype <a href="../../physic/obj/robot/">robot</a></td>
+</tr>
+<tr>
+<td><a name="to"></a> <code>_to()</code></td>
+<td>abstract</td>
+<td><em>operator</em></td>
+<td>preceding from <em>object(s)</em> <a href="../../abstract/condit/to/">to</a> proceeding <em>object(s)</em></td>
+</tr>
+<tr>
+<td><a name="to"></a> <code>_to()</code></td>
+<td>metaphysic</td>
+<td><em>operator</em></td>
+<td>preceding <em>object(s)</em> <em>action</em> <a href="../../metaphysic/condit/to/">to</a> proceeding <em>object(s)</em></td>
+</tr>
+<tr>
+<td><a name="to"></a> <code>to</code></td>
+<td>metaphysic<br/>posit</td>
+<td></td>
+<td><a href="../../metaphysic/condit/to/">to</a></td>
+</tr>
+<tr>
+<td><a name="tour"></a> <code>_tour(</code><em><code>moniker</code></em><code>)</code></td>
+<td>metaphysic</td>
+<td><em>posit-object</em></td>
+<td>Proceed with <em><a href="../../metaphysic/obj/tour/">tour</a></em> <em>moniker</em></td>
+</tr>
+<tr>
+<td><a name="toward"></a> <code>toward</code><br/><code>towards</code></td>
+<td>metaphysic<br/>posit</td>
+<td></td>
+<td><a href="../../metaphysic/condit/toward/">toward</a></td>
+</tr>
+<tr>
+<td><a name="track"></a> <code>track(</code><em><code>moniker</code></em><code>)</code></td>
+<td>physic</td>
+<td><em>object</em></td>
+<td>Floor/ground marking the side borders of a lane.<br/>Example:<br/><img alt="track" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/All-weather_running_track.jpg/800px-All-weather_running_track.jpg?20170320005232" style="width:200px;"/><br/><sub>"<a href="https://commons.wikimedia.org/wiki/File:All-weather_running_track.jpg">An all-weather running track (photo taken at the Dalin Sports Park, Chiayi, Taiwan)</a>"<br/>by <a href="https://commons.wikimedia.org/wiki/User:Mk2010">Mk2010</a> is licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY 4.0 International</a> </sub></td>
+</tr>
+<tr>
+<td><a name="tunnel"></a> <code>tunnel(</code><em><code>moniker</code></em><code>)</code></td>
+<td>physic</td>
+<td><em>object</em></td>
+<td>Physical bar or continuous line of bars construction used to physically guide object along a pre-defined route.<br/>Example:<br/><img alt="tunnel" src="" style="width:200px;"/><br/><sub>"<a href=""></a>"<br/>by <a href=""></a> is licensed under <a href="">CC BY </a></sub></td>
+</tr>
+<tr>
+<td><a name="txt"></a> <code>_txt(</code><em><code>text</code></em><code>)</code><br/><code>_text(</code><em><code>text</code></em><code>)</code></td>
+<td>abstract</td>
+<td><em>property</em></td>
+<td>Proceed with <em>test</em> of <em><a href="../../abstract/prop/txt/">text</a></em> <em>moniker</em></td>
+</tr>
+<tr>
+<td><a name="type"></a> <code>type(</code><em><code>moniker</code></em><code>)</code><br/><code>_type(</code><em><code>moniker</code></em><code>)</code><br/><code>{</code><em><code>moniker</code></em><code>}</code></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a name="unit"></a> <code>_unit(</code><em><code>unit</code></em><code>)</code></td>
+<td>metaphysic</td>
+<td><em>posit-datatype</em></td>
+<td></td>
+</tr>
+<tr>
+<td><a name="unload"></a> <code>unload_</code><em><code>&lt;object&gt;</code></em></td>
+<td>metaphysic</td>
+<td><em>verb</em></td>
+<td><em><a href="../../metaphysic/verb/unload/">Unload</a></em> proceeding <em>object</em></td>
+</tr>
+<tr>
+<td><a name="using"></a> <code>_using(</code><em><code>moniker</code></em><code>)</code><br><code>_using([</code><em><code>variable_moniker</code></em><code>])</code></br></td>
+<td>metaphysic</td>
+<td><em>condit</em></td>
+<td><a href="../../metaphysic/condit/using/">using</a></td>
+</tr>
+<tr>
+<td><a name="var"></a> <code>var(</code><em><code>moniker</code></em><code>)</code><br/><code>variable(</code><em><code>moniker</code></em><code>)</code></td>
+<td>abstract</td>
+<td><em>object</em></td>
+<td>A basic one-dimensional mutable <a href="../../abstract/obj/var/">data</a> storage <em>object</em> called <em>moniker</em></td>
+</tr>
+<tr>
+<td><a name="vector"></a> <code>vector(</code><em><code>moniker</code></em><code>)</code><br/><code>_vector(</code><em><code>moniker</code></em><code>)</code></td>
+<td>metaphysic</td>
+<td><em>object</em><br/><em>posit-object</em></td>
+<td><em>Action</em> on <em><a href="../../abstract/obj/vector/">vector</a></em> <em>moniker</em><br/>Proceed with <em><a href="../../metaphysic/obj/way/">way</a></em> <em>moniker</em></td>
+</tr>
+<tr>
+<td><a name="vehicle"></a> <code>vehicle</code></td>
+<td>physic<br/>obj</td>
+<td></td>
+<td>A guided <em>thingy</em> transporting <code>human</code>/<code>organic</code> thingies and/or controlled by a <code>human</code>.<br/>Examples: car, airplane, <abbr title="uncrewed ground vehicle">ugv</abbr>.<br/><code>with_vehicle(familyCar)_equip(frontLeftWheel)_metric()_tyrepress();</code></td>
+</tr>
+<tr>
+<td><a name="verb"></a> <code>verb(</code><em><code>moniker</code></em><code>)</code></td>
+<td>meta-abstract</td>
+<td><em>object</em></td>
+<td><em>Action</em> on <em><a href="../../abstract/meta/verb/">verb</a></em> <em>moniker</em></td>
+</tr>
+<tr>
+<td><a name="wall"></a> <code>wall(</code><em><code>moniker</code></em><code>)</code></td>
+<td>physic</td>
+<td><em>object</em></td>
+<td><a href="../../metaphysic/obj/litsan/">litsan</a></td>
+</tr>
+<tr>
+<td><a name="way"></a> <code>way(</code><em><code>moniker</code></em><code>)</code><br/><code>_way(</code><em><code>moniker</code></em><code>)</code></td>
+<td>metaphysic</td>
+<td><em>object</em><br/><em>posit-object</em></td>
+<td><em>Action</em> on <em><a href="../../metaphysic/obj/way/">way</a></em> <em>moniker</em><br/>Proceed with <em><a href="../../metaphysic/obj/way/">way</a></em> <em>moniker</em></td>
+</tr>
+<tr>
+<td><a name="wayfind"></a> <code>wayfind</code></td>
+<td></td>
+<td></td>
+<td>Wayfinding floor signature, created using paint, tape, or, decals.<br/>Example:<br/><img alt="wayfind markings" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Long-distance_Bus_Navigation_in_Japan.jpg/800px-Long-distance_Bus_Navigation_in_Japan.jpg?20140622041451" style="width:200px;"/><br/><sub>"<a href="https://commons.wikimedia.org/wiki/File:Long-distance_Bus_Navigation_in_Japan.jpg">Tokyo Station</a>" by <a href="https://www.flickr.com/people/36516818@N00">mrhayata</a> is licensed under <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a></sub></td>
+</tr>
+<tr>
+<td><a name="waypoint"></a> <code>waypoint(</code><em><code>moniker</code></em><code>)</code><br/><code>wp(</code><em><code>moniker</code></em><code>)</code><br/><code>_waypoint(</code><em><code>moniker</code></em><code>)</code><br/><code>_wp(</code><em><code>moniker</code></em><code>)</code></td>
+<td>metaphysic</td>
+<td><em>object</em><br/><em>posit-object</em></td>
+<td><em>Action</em> on <em><a href="../../metaphysic/obj/waypoint/">waypoint</a></em> <em>moniker</em><br/>Proceed with <em><a href="../../metaphysic/obj/waypoint/">waypoint</a></em> <em>moniker</em></td>
+</tr>
+<tr>
+<td><a name="week"></a> <code>_week()</code>   <code>_wk()</code><br/><code>_week(</code><em><code>wknumeric</code></em><code>)</code>   <code>_wk(</code><em><code>wknumeric</code></em><code>)</code></td>
+<td>abstract</td>
+<td>property</td>
+<td>References the temporal week of the preceding <em>object</em><br/><br/>Sets the temporal week of <em>wknumeric</em></td>
+</tr>
+<tr>
+<td><a name="with"></a> <code>with_</code><em><code>&lt;object&gt;</code></em><code>(</code><em><code>moniker</code></em><code>)</code></td>
+<td>abstract<br/>metaphysic<br/>physic</td>
+<td><em>verb</em></td>
+<td>Refer to <em>object</em> of <em>moniker</em></td>
+</tr>
+<tr>
+<td><a name="workspace"></a> <code>workspace</code></td>
+<td></td>
+<td></td>
+<td>An exclusive section of a <code>puff</code>, sometimes called a <em>room</em></td>
+</tr>
+<tr>
+<td><a name="world"></a> <code>world(</code><em><code>verbmoniker</code></em><code>)</code></td>
+<td>physic</td>
+<td><em>special</em></td>
+<td><em>Action</em> of <em>verbmoniker</em> on <em><a href="../../physic/special/world/">world</a></em></td>
+</tr>
+<tr>
+<td><a name="year"></a> <code>_year()</code><br/><code>_year(</code><em><code>yearnumeric</code></em><code>)</code></td>
+<td>abstract</td>
+<td>property</td>
+<td>References the temporal year of the preceding <em>object</em><br/>Sets the temporal year of <em>yearnumeric</em></td>
+</tr>
+<tr>
+<td><a name="zdt"></a> <code>_zdt()</code>   <code>_zoneddatetime()</code></td>
+<td>abstract</td>
+<td><em>object</em></td>
+<td>??????</td>
+</tr>
+<tr>
+<td><a name="zone"></a> <code>zone</code></td>
+<td>metaphysic</td>
+<td><em>object</em></td>
+<td>The thing version of an <code>arena</code> <a href="../../metaphysic/obj/zone/">zone</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div><footer>
+<div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
+<a class="btn btn-neutral float-left" href="../hash_blockchain/" title="Demonstrating crosschain in a robot example"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+<a class="btn btn-neutral float-right" href="../obs_and_subs/" title="Obs and Subs (object)">Next <span class="icon icon-circle-arrow-right"></span></a>
+</div>
+<hr/>
+<div role="contentinfo">
+<!-- Copyright etc -->
+</div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+</div>
+</div>
+</section>
+</div>
+<div aria-label="Versions" class="rst-versions" role="note">
+<span class="rst-current-version" data-toggle="rst-current-version">
+<span><a href="../hash_blockchain/" style="color: #fcfcfc">« Previous</a></span>
+<span><a href="../obs_and_subs/" style="color: #fcfcfc">Next »</a></span>
+</span>
+</div>
+<script>var base_url = '../..';</script>
+<script defer="" src="../../js/theme_extra.js"></script>
+<script defer="" src="../../js/theme.js"></script>
+<script defer="" src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script defer="" src="https://unpkg.com/mermaid@8.8.4/dist/mermaid.min.js"></script>
+<script defer="" src="../../search/main.js"></script>
+<script defer="">
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+</body>
+</html>

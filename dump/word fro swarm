@@ -1,0 +1,15 @@
+I am a roboticist, currently working on an instruction language (computer language) for squads of robots.  I have two distinct groups of squad of robots to instruct: one is termed 'swarm' which has become the de facto terminology used in this industry (definition provided below) and another which has a different scope in its definition.
+
+This is what I would consider the most apt definition for a 'swarm' of robots:
+> In most swarm algorithms, individuals perform according to local rules and the overall behaviour emerges organically from the interplay of the individuals of the swarm.
+
+\-  Schranz, Melanie *et al* (2020); 'Swarm Robotic Behaviors and Current Applications'; Frontiers in Robotics and AI, Vol. 7, 2020
+
+The other group of squads of robots I will be working on would be an edited definition as:
+
+> ...individuals perform according to ~~local~~ **global shared** rules and the overall behaviour emerges ~~organically~~ **democratically** from the ~~interplay~~ **intercourse** of the individuals of the swarm.
+
+Although each individuals robot 
+
+
+

@@ -1,0 +1,2 @@
+# Before (condit)
+The `before` condit is used to determine if the preceding *object* is _before_ the provided *`before`* parameter. `before` functions as a boolean return switch, returning `true` if the condition is met.

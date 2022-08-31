@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+
+<html class="writer-html5" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="http://diego.dev/metaphysic/obj/spine/" rel="canonical"/>
+<link href="../../../img/favicon.ico" rel="shortcut icon"/>
+<title>Spine (object) - Diego</title>
+<link href="../../../css/theme.css" rel="stylesheet"/>
+<link href="../../../css/theme_extra.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" rel="stylesheet"/>
+<link href="../../../extra.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet"/>
+<script>
+        // Current page data
+        var mkdocs_page_name = "Spine (object)";
+        var mkdocs_page_input_path = "metaphysic/obj/spine.md";
+        var mkdocs_page_url = "/metaphysic/obj/spine/";
+      </script>
+<script defer="" src="../../../js/jquery-3.6.0.min.js"></script>
+<!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body class="wy-body-for-nav" role="document">
+<div class="wy-grid-for-nav">
+<nav class="wy-nav-side stickynav" data-toggle="wy-nav-shift">
+<div class="wy-side-scroll">
+<div class="wy-side-nav-search">
+<a class="icon icon-home" href="../../.."> Diego
+        </a><div role="search">
+<form action="../../../search.html" class="wy-form" id="rtd-search-form" method="get">
+<input name="q" placeholder="Search docs" title="Type search term here" type="text"/>
+</form>
+</div>
+</div>
+<div aria-label="Navigation menu" class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../..">Diego</a>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../Commands/">Tutorial</a>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../Diego%20Introduction/">Diego Introduction</a>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../gettingstarted/">Diego Getting Started</a>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../intro/">Diego Introduction</a>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../syntax/">Language Syntax</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Abstract</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../abstract/abstract/">Abstract</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Condit</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/condit/after/">After (condition)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/condit/at/">At (condition)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/condit/before/">Before (condit)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/condit/during/">During</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/condit/temporat/">Temporal At (condit)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/condit/temporfrom/">Temporal From (condition)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/condit/temporto/">Temporal To (condition)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/condit/to/">To (condition)</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Const</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/const/e/">Euler's Constant (constant)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/const/ln10/">Natural Logarithm of 10 (constant)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/const/ln10e/">Base 10 Logarithm of e (constant)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/const/ln2/">Natural Logarithm of 2 (constant)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/const/pi/">Pi (constant)</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Dt</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/dt/circle/">Circle (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/dt/cube/">Cube (shape)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/dt/cuboid/">Cuboid (shape)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/dt/datatype/">Datatype (datatype)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/dt/dt/">Datatype (statement)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/dt/plicat/">Plication (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/dt/pyramid/">Pyramid (shape)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/dt/rect/">Rectangle (shape)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/dt/square/">Square (shape)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/dt/tri/">Triangle (shape)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/dt/variant/">Variant (datatype)</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Flow</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/flow/for/">For Loop (looper)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/flow/unless/">Unless (flow)</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Funct</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/funct/abs/">Absolute Value (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/funct/acos/">Arc Cosine (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/funct/calc/">Calculation (expression)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/funct/dt/">Datatype (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/funct/equals/">Equals (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/funct/false/">False (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/funct/fix/">Fixed Points (method)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/funct/is/">Is (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/funct/json/">JavaScript Object Notation (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/funct/length/">Length (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/funct/ln/">Natural logarithm (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/funct/ln2/">Natural Logarithm of 2 (constant)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/funct/not/">Not (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/funct/now/">Now (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/funct/parse/">Parse (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/funct/ret/">Return (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/funct/slice/">Slice</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/funct/sql/">Structured Query Language (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/funct/stringify/">stringify (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/funct/true/">True (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/funct/value/">Value</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/funct/xyz/">XYZ (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/funct/zdt/">Zoned Date Time (function)</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Meta</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/meta/verb/">Verb</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Obj</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/obj/arran/">Arrangement (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/obj/ary/">Array (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/obj/blob/">Binary Large Object (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/obj/cal/">Calendar (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/obj/clump/">Clump (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/obj/counter/">Counter (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/obj/datetime/">Datetime (datatype)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/obj/declar/">Declaration (of datatype)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/obj/deed/">Deed (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/obj/dict/">Dictionary (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/obj/enum/">Enumeration (object) / Enumerator (object) / Enumerator (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/obj/err/">Error (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/obj/flag/">Flag (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/obj/float/">Floating Point Number (datatye)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/obj/funct/">Function (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/obj/hash/">Hash (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/obj/indent/">Indenture (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/obj/int/">Integer (datatype)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/obj/lexi/">Lexikon (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/obj/list/">List (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/obj/matrix/">Matrix (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/obj/namespace/">Namespace (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/obj/pkg/">Package (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/obj/point/">Point (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/obj/refuse/">Refuse (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/obj/str/">String (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/obj/tempor/">Temporal (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/obj/tensor/">Tensor (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/obj/time/">Time (datatype)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/obj/val/">Valuable (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/obj/var/">Variable (object) / Variant (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/obj/variant/">Variant (datatype)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/obj/vector/">Vector (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/obj/yush/">Yush (object)</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Op</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/op/arithmetic/">Arithmetic Operators (operator)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/op/exponent/">Exponent Operators (operator)</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Prop</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/prop/">Index (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/prop/adicity/">Adicity (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/prop/arity/">Arity (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/prop/day/">Day (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/prop/fortn/">Fortnight (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/prop/freq/">Temporal Frequency (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/prop/hr/">Hour (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/prop/instant/">Instant (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/prop/keys/">Keys (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/prop/min/">Minute (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/prop/ms/">Millisecond (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/prop/mth/">Month (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/prop/now/">Now</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/prop/s/">Second (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/prop/txt/">Text (expression)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/prop/yr/">Year (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/prop/%CE%BCs/">Microsecond (property)</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Setter</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/setter/decpl/">Fixed Decimal Places (setter)</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Special</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/special/elvish/">Elvish Operator (special)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/special/me/">Me (special)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/special/reference/">Reference (special)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/special/semicolon/">Statement Terminator (special)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/special/you/">You (special)</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Verb</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/verb/add/">Add (verb)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/verb/apt/">Advanced Package Tool (verb)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/verb/kill/">Kill (verb)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/verb/set/">Set (verb)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/verb/with/">With (verb)</a>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Corpus</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../corpus/corpus/">Corpus</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../corpus/iot/">Internet of Things [IoT]</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Iot</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../corpus/iot/iot/">Internet of Things [IoT] (concept)</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Mavlink</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../corpus/mavlink/mavlink/">Translation of MAVLink Commands</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../corpus/mavlink/set_home/">Set home</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Robotis</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../corpus/robotis/burger/">Burger</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Tasks</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../corpus/tasks/caterpillar/">The Caterpillar Chain</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../corpus/tasks/packing_up/">Packing Up (task)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../corpus/tasks/tank_intercept/">Tank intercept</a>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Lexicon</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../lexicon/brackets/">Brackets</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../lexicon/crosschain/">Crosschain Technology</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../lexicon/hash_blockchain/">Demonstrating crosschain in a robot example</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../lexicon/lexicon/">Lexicon</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../lexicon/obs_and_subs/">Obs and Subs (object)</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../lexicon/routing/">Routing</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../lexicon/thingy/">Thingies</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Condit</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../lexicon/condit/_indextopic/">Conditions</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Obj</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../lexicon/obj/discriminat/">`discriminat`</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../lexicon/obj/fail/">Fail, Failure</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../lexicon/obj/me/">me</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../lexicon/obj/navigation_planning/">Navigation Planning</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../lexicon/obj/ob_and_subs/">`ob`s and `sub`s</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../lexicon/obj/watchdog/">watchdog</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Thgy</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../lexicon/thgy/_atozindex/"> atozindex</a>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Metaphysic</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../metaphysic/">Metaphysic</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Condit</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../condit/around/">Around (condit)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../condit/to/">To (condit)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../condit/toward/">Toward / Towards (condit)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../condit/using/">Using (condit)</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Dt</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../dt/dd/">Decimal Degrees (unit)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../dt/dm/">Decimetres (unit)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../dt/dms/">Degrees, Minutes, Seconds (unit)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../dt/ft/">Feet (unit)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../dt/imperial/">Imperial Units (unit)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../dt/inch/">Inch (unit)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../dt/kt/">Knots (unit)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../dt/league/">League (unit)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../dt/lmh/">Low-Medium-High (datatype)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../dt/m/">SI Units of Length (unit)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../dt/num/">Number (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../dt/rad/">Radians (unit)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../dt/si/">International System of Units (unit)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../dt/thou/">Thousandth of an Inch (unit)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../dt/yrd/">Yard (unit)</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Funct</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../funct/bearing/">Bearing (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../funct/datum/">Datum (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../funct/durat/">Duration (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../funct/elev/">Elevation (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../funct/geojson/">GeoJSON (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../funct/heading/">Heading (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../funct/hyster/">Hysteresis (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../funct/kml/">Keyhole Markup Language [kml] (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../funct/latlngalt/">Latitude, Longitude, Altitude (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../funct/loiterat/">Loiter At (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../funct/parse/">Parse (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../funct/percentof/">Percentage Of (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../funct/shape/">Shape (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../funct/shapefile/">Shapefile (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../funct/unit/">Unit (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../funct/waitat/">Wait At (function)</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal current" href="#">Obj</a>
+<ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../ambit/">Ambit (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../apparat/">Apparatus (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../arena/">Arena (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../attr/">Attribute (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../behavi/">Behaviour (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../box/">Box (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../channel/">Channel (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../clepe/">Clepe (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../cloud/">Cloud (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../cognomen/">Cognomen (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../consens/">Consens</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../console/">Console (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../coords/">Coordinates (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../corridor/">Corridor (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../course/">Course (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../device/">Device (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../displacem/">Displacement</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../display/">Display (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../distan/">Distance (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../duct/">Duct (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../euler/">Euler (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../excurs/">Excursions (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../floor/">Floor (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../fog/">Fog (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../foreign/">Foreigner (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../funnel/">Funnel</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../gait/">Gait (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../gate/">Gate (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../geofence/">Geofence (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ghost/">Ghost (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../goal/">Goal (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../instruct/">Instructors</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../itiner/">Itinerary (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ject/">Ject</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../journ/">Journey (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../lease/">Lease (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../lennuf/">Lennuf (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../liken/">Liken (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../litsan/">Line in the Sand (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../map/">Map</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../marack/">Marack (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../metric/">Metric (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../mission/">Mission (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../mist/">Mist (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../mode/">Mode (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../moniker/">Moniker (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../msg/">Message (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ob/">Ob (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../obstacle/">Obstacle (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../path/">Path (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../payload/">Payload</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../pipe/">Pipe (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../poll/">Poll (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../pose/">Pose (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../printer/">Printer (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../proc/">Procedure (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../prog/">Programme (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../puff/">Puff</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../roi/">Region of Interest (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../rosary/">Rosary (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../route/">Finders</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../scalar/">Scalar (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../sensor/">Sensor</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../sobriquet/">Sobriquet (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../spec/">Specification (object)</a>
+</li>
+<li class="toctree-l2 current"><a class="reference internal current" href="./">Spine (object)</a>
+<ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="#declaration">Declaration</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#declaration-assignment">Declaration &amp; Assignment</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#initialisation">Initialisation</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#assignment">Assignment</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#referencing">Referencing</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#typing">Typing</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#getting">Getting</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#setting">Setting</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#casting">Casting</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#properties">Properties</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#examples">Examples</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../spox/">Spox (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../stacle/">Stacle (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../stance/">Stance (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../sub/">Sub (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../substacle/">Substacle (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../swarm/">Swarm (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../tour/">Tour (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../track/">Track (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../tracker/">Tracker</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../transmiss/">Transmission (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../trip/">Trip (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../valid/">Valid (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../viapoint/">Viapoint (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../way/">Way (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../waypoint/">Waypoint</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../workspace/">Workspace</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../wtf/">Where's The Fire [wtf] (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../zone/">Zone (object)</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Prop</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../prop/distan/">Distance (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../prop/ergcon/">Energy Consumption (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../prop/ident/">Identity (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../prop/impetus/">Impetus (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../prop/ios/">Apple iOs (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../prop/kiwifruit/">Kiwifruit (type)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../prop/make/">Make (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../prop/model/">Model (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../prop/month/">Month (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../prop/msg/">Message (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../prop/opsys/">Operating System (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../prop/risk/">Risk (enumerator)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../prop/serialnum/">Serial Number (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../prop/type/">Type (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../prop/urgency/">Urgency (enumerator)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../prop/vegetable/">Vegetable (type)</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Setter</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../setter/authority/">Authority (setter)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../setter/consens/">Consensus (setter)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../setter/decisiven/">Decisiveness (setter)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../setter/euler/">Euler (setter)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../setter/mapprovider/">Map Provider (setter)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../setter/quatern/">Quaternion (setter)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../setter/ranking/">Ranking (setter)</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Special</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../special/them/">Them (special)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../special/us/">Us (special)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../special/we/">We (special)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../special/you/">You (special)</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Verb</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../verb/alert/">Alert (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../verb/ask/">Inquirers</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../verb/begin/">Begin (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../verb/calc/">Calculate (verb)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../verb/call/">Call</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../verb/envelop/">envelop</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../verb/find/">`find_`</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../verb/follow/">Follow (verb)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../verb/form/">Form (verb)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../verb/go/">Go (verb)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../verb/goto/">Goto (verb)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../verb/kill/">Kill (verb)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../verb/label/">Label (verb)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../verb/lead/">Lead (verb)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../verb/listen/">Listen (verb)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../verb/load/">Payloaders</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../verb/loiter/">Loiter</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../verb/merge/">Merge (verb)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../verb/msg/">Message (verb)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../verb/poll/">Poll (verb)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../verb/see/">see</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../verb/set/">Set (verb)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../verb/study/">Study</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../verb/swarm/">Swarm (verb)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../verb/tail/">Tail Behind (verb)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../verb/unload/">Payloaders</a>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Opendogv3</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../opendogv3/bom/">Bill of Materials</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Physic</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../physic/physic/">Physic</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Obj</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../physic/obj/actuat/">Actuator (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physic/obj/adsb/">Automatic Dependent Surveillance–Broadcast (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physic/obj/apparat/">Apparatus (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physic/obj/applian/">Appliance (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physic/obj/battery/">Battery</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physic/obj/border/">Border (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physic/obj/button/">Button (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physic/obj/canal/">Canal (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physic/obj/cat/">Cat (type)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physic/obj/ceiling/">Ceiling (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physic/obj/cellphone/">Cell Phone (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physic/obj/chair/">Chair (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physic/obj/colo/">Colour Sensor (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physic/obj/compon/">Component (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physic/obj/computer/">Computer (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physic/obj/door/">Door (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physic/obj/drone/">Drone (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physic/obj/duct/">Duct (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physic/obj/equip/">Equipment (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physic/obj/finline/">Finish Line (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physic/obj/firma/">Firma (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physic/obj/ghost/">Ghost (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physic/obj/guide/">Guide (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physic/obj/hinderan/">Hinderance (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physic/obj/human/">Human (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physic/obj/imu/">Inertial Measurement Unit (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physic/obj/ject/">Ject (object &gt; thingy &gt; thing)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physic/obj/joint/">Joint (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physic/obj/landmark/">Landmark</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physic/obj/link/">Link (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physic/obj/locon/">Location Object Context (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physic/obj/mach/">Machine (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physic/obj/mech/">Mechanical Thing (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physic/obj/microcon/">Microcontroller (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physic/obj/mobot/">Mobot (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physic/obj/motor/">Motor (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physic/obj/object/">Object (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physic/obj/organic/">Organic (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physic/obj/photoelect/">Photoelectric Sensor (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physic/obj/poi/">Poi</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physic/obj/rail/">Rail (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physic/obj/robot/">Robot (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physic/obj/roi/">Region of Interest (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physic/obj/room/">Room (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physic/obj/sensor/">Sensor (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physic/obj/shaft/">Shaft (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physic/obj/side/">Side (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physic/obj/sobot/">Sobot (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physic/obj/spec/">Specification (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physic/obj/stair/">Stairs (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physic/obj/stride/">Stride (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physic/obj/switch/">Switch (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physic/obj/tablet/">Tablet (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physic/obj/thing/">Thing (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physic/obj/thingy/">Thingy (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physic/obj/tri/">Triangle (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physic/obj/valley/">Valley (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physic/obj/vehicle/">Vehicle (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physic/obj/wall/">Wall (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physic/obj/wayfind/">Wayfind (object)</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Prop</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../physic/prop/air/">Air Speed (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physic/prop/alt/">Altitude (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physic/prop/android/">Android Operating System (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physic/prop/bb/">Blackberry Operating System (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physic/prop/cap/">Capacity (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physic/prop/country/">Country (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physic/prop/imei/">International Mobile Equipment Identity (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physic/prop/ios/">Apple® iOS™ Operating System (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physic/prop/opframe/">Operating Framework</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physic/prop/phonenum/">Telephone Number (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physic/prop/status/">Status (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physic/prop/win/">Microsoft® Windows™ Operating System (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physic/prop/win_mobile/">Microsoft® Windows Mobile (property)</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Special</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../physic/special/world/">World (special)</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Verb</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../physic/verb/alert/">Alert (verb)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physic/verb/enter/">Enter (verb)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physic/verb/exit/">Exit (verb)</a>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Tasks</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../tasks/newton_loop/">The Newton Loop</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tasks/persian_chain/">The Persian Chain</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tasks/recharge/">Recharge</a>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+<section class="wy-nav-content-wrap" data-toggle="wy-nav-shift">
+<nav aria-label="Mobile navigation menu" class="wy-nav-top" role="navigation">
+<i class="fa fa-bars" data-toggle="wy-nav-top"></i>
+<a href="../../..">Diego</a>
+</nav>
+<div class="wy-nav-content">
+<div class="rst-content"><div aria-label="breadcrumbs navigation" role="navigation">
+<ul class="wy-breadcrumbs">
+<li><a alt="Docs" class="icon icon-home" href="../../.."></a> »</li>
+<li>Metaphysic »</li>
+<li>Obj »</li><li>Spine (object)</li>
+<li class="wy-breadcrumbs-aside">
+</li>
+</ul>
+<hr/>
+</div>
+<div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
+<div class="section" itemprop="articleBody">
+<h1 id="spine-object">Spine (object)</h1>
+<p><a name="declare"></a></p>
+<h2 id="declaration">Declaration</h2>
+<p>       <code>add_(</code><em><code>moniker</code></em><code>);</code><br/></p>
+<p><a name="declare_assign"></a></p>
+<h2 id="declaration-assignment">Declaration &amp; Assignment</h2>
+<p><a name="initial"></a></p>
+<h2 id="initialisation">Initialisation</h2>
+<p>       <code>add_(</code><em><code>moniker</code></em><code>);</code><br/></p>
+<p><a name="assign"></a></p>
+<h2 id="assignment">Assignment</h2>
+<p><a name="reference"></a></p>
+<h2 id="referencing">Referencing</h2>
+<p>Referencing a <code></code> <em>object</em> is achieved with the <code>with</code> verb, or the shortened <code>(</code><em><code></code></em><code>)</code> syntax. </p>
+<p>       <code>with_(</code><em><code>moniker</code></em><code>);</code><br/>
+       <code>&gt;_(</code><em><code>moniker</code></em><code>);</code><br/>
+       <code>with_(</code><em><code>moniker1</code></em><code>,</code><em><code>moniker2</code></em><code>,</code><em><code>...</code></em><code>);</code><br/>
+       <code>(</code><em><code>_moniker</code></em><code>);</code></p>
+<p><a name="type"></a></p>
+<h2 id="typing">Typing</h2>
+<p><a name="get"></a></p>
+<h2 id="getting">Getting</h2>
+<p><a name="set"></a></p>
+<h2 id="setting">Setting</h2>
+<p><a name="cast"></a></p>
+<h2 id="casting">Casting</h2>
+<p><a name="properties"></a></p>
+<h2 id="properties">Properties</h2>
+<p><a name="example"></a></p>
+<h2 id="examples">Examples</h2>
+</div>
+</div><footer>
+<div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
+<a class="btn btn-neutral float-left" href="../spec/" title="Specification (object)"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+<a class="btn btn-neutral float-right" href="../spox/" title="Spox (object)">Next <span class="icon icon-circle-arrow-right"></span></a>
+</div>
+<hr/>
+<div role="contentinfo">
+<!-- Copyright etc -->
+</div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+</div>
+</div>
+</section>
+</div>
+<div aria-label="Versions" class="rst-versions" role="note">
+<span class="rst-current-version" data-toggle="rst-current-version">
+<span><a href="../spec/" style="color: #fcfcfc">« Previous</a></span>
+<span><a href="../spox/" style="color: #fcfcfc">Next »</a></span>
+</span>
+</div>
+<script>var base_url = '../../..';</script>
+<script defer="" src="../../../js/theme_extra.js"></script>
+<script defer="" src="../../../js/theme.js"></script>
+<script defer="" src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script defer="" src="https://unpkg.com/mermaid@8.8.4/dist/mermaid.min.js"></script>
+<script defer="" src="../../../search/main.js"></script>
+<script defer="">
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+</body>
+</html>

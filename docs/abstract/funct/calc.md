@@ -23,11 +23,12 @@ The common declaration of the `calc` object is via posit syntax.
 
 <a name="reference"></a>
 ## Referencing
-Referencing a `calc` *object* is achieved with the `with` verb (or shortened `>_`), or the shortened `(`*`calculation_moniker`*`)` syntax. 
+Referencing a `calc` *object* is achieved with the `with` verb (or shortened `>_`), or the shortened `(`*`calculation_moniker`*`)` syntax. For inside *expressions* use square brackets (`[]`) as in `[`*`stacle_moniker`*`]`.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `with_calc(`*`moniker`*`);`<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `>_calc(`*`moniker`*`);`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `(`*`calculation_moniker`*`);`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `(`*`calculation_moniker`*`);`<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `⟦`*`...`*`[`*`calculation_moniker`*`]`*`...`*`⟧`
 
 <a name="assign"></a>
 ## Assignment

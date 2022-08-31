@@ -1,0 +1,159 @@
+YAML
+
+```Diego
+with_robot()_yaml(
+robots:
+- moniker: alif
+  payload_weight_capacity: 6100
+  fuel_consumption: 12.5
+- moniker: ba
+  payload_weight_capacity: 7200
+  fuel_consumption: 12.1
+- moinker: ta
+  payload_weight_capacity: 7000
+  fuel_consumption: 11.8
+- moniker: tha
+  payload_weight_capacity: 8845
+  fuel_consumption: 13.8
+- moniker: jim
+  payload_weight_capacity: 8300
+  fuel_consumption: 12.5
+- moniker: ha
+  payload_weight_capacity: 6900
+  fuel_consumption: 12.4
+);
+```
+
+
+```Diego
+with_robot(alif)_attribute(payload_weight_capacity)_value(6100, Kg);
+with_robot(alif)_attribute(fuel_consumption)_value(12.5)_unit(L/100km);
+
+```
+
+
+add_rota({moniker|uuid})_startpoint({moniker|uuid|coords})_endpoint({moniker|uuid|coords})
+with_rota({moniker|uuid})_calc(distance)_value();
+
+
+add_course({moniker|uuid})_rota({moniker|uuid})
+_datetime({datetime})_consumpt(12.4)_weather()
+
+### Air Temperature
+with_weather({moniker|uuid})_metric(air_temp, {value});
+with_weather({moniker|uuid})_metric(air_temp)_value({value});
+with_weather({moniker|uuid})_airtemp({value});
+
+### Biometric Pressure
+with_weather({moniker|uuid})_metric(biomet, {value});
+with_weather({moniker|uuid})_metric(biomet)_value({value});
+with_weather({moniker|uuid})_biomet({value});
+
+### Relative Humidity
+with_weather({moniker|uuid})_metric(relhumid, {value});
+with_weather({moniker|uuid})_metric(relhumid)_value({value});
+with_weather({moniker|uuid})_relhumid({value});
+
+### Heat Index
+with_weather({moniker|uuid})_calc(heatindx, {caution|extreme_caution|danger|extreme_danger});
+with_weather({moniker|uuid})_calc(heatindx)_value({caution|extreme_caution|danger|extreme_danger});
+with_weather({moniker|uuid})_heatindx({caution|extreme_caution|danger|extreme_danger});
+
+### Precipitation
+with_weather({moniker|uuid})_metric(precipitat, {value});
+with_weather({moniker|uuid})_metric(heatindx)_value({value});
+with_weather({moniker|uuid})_precipitat({value});
+
+### Solar Radiation
+with_weather({moniker|uuid})_metric(solarrad, {value});
+with_weather({moniker|uuid})_metric(solarrad)_value({value});
+with_weather({moniker|uuid})_solarrad({value});
+
+### Photosynthetically Active Radiation
+with_weather({moniker|uuid})_metric(parad, {value});
+with_weather({moniker|uuid})_metric(parad)_value({value});
+with_weather({moniker|uuid})_parad({value});
+
+### Wind Speed * Direction
+with_weather({moniker|uuid})_metric(windvel, {value});
+with_weather({moniker|uuid})_metric(windvel)_value({value});
+with_weather({moniker|uuid})_windvel({value});
+with_weather({moniker|uuid})_metric(winddir, {value});
+with_weather({moniker|uuid})_metric(winddir)_value({value});
+with_weather({moniker|uuid})_winddir({value});
+
+with_wind({moniker|uuid})_windvel({value})_winddir({value});
+with_wind({moniker|uuid})_metric(windvel, {value})_metric(winddir, {value});
+with_wind({moniker|uuid})_metric(windvel)_value({value});
+with_wind({moniker|uuid})_metric(winddir)_value({value});
+with_weather({moniker|uuid})_wind({moniker|uuid});
+
+with_weather({moniker|uuid})_metric(windvel, {value});
+with_weather({moniker|uuid})_metric(windvel)_value({value});
+with_weather({moniker|uuid})_windvel({value});
+with_weather({moniker|uuid})_metric(winddir, {value});
+with_weather({moniker|uuid})_metric(winddir)_value({value});
+with_weather({moniker|uuid})_winddir({value});
+
+### Wind Direction
+
+## _wind()
+
+
+
+```Diego
+if_weather()_heatindex(danger)
+? msg_human()_msg(The heat is dangerous!);
+
+if_weather()_heatindex(danger) ? msg_human()_msg(The heat is dangerous!);
+
+if_weather()_heatindex(danger)
+    ? msg_human()_msg(The heat is dangerous!);
+```
+
+
+# while
+
+The `while_` verb will run indefinitely until the caller cancels/expires the `while_`, or when the callee deems the instruction invalid.
+
+```Diego
+while_robot(alif)_metric(air_temp)_between(20)_and(30) ?;
+    ?  msg_human(fred)_msg(its still hot);
+```
+
+add_while(keep fred informed when its hot)_for(alif);
+with_while(keep fred informed when its hot)_metric(air_temp)_between(20)_and(30)
+    ?  msg_human(fred)_msg(its still hot);
+
+`while_robot(alif)_metric(air_temp)_cancel();`
+
+# when
+
+The `when_` verb is effectively a 'once-over' while loop that will execute the once when the conditions are met.
+
+when_robot(alif)_metric(air_temp)_between(20)_and(30) ?;
+    ?  msg_human(fred)_msg(its hot) ?:;
+
+
+```
+
+# for
+
+The `for_` verb is 
+
+```Diego
+for_{object}({moniker|uuid})_direct({+|-})_step({step})_from({from_value})_to({to_value})_lessthan({lessthan_value})_greaterthan({greaterthan_value})_c({from_value, {to_value}, {increment})
+
+
+# grep
+
+_grep({reg_exp})
+
+with_robot()_grep(alpha_\d*) ?;             with_robot()_moniker()__grep(alpha_\d*) ?;  
+    label_grep()_label(alphas);
+
+
+
+
+# agrep
+

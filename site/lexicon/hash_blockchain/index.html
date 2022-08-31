@@ -1,0 +1,2430 @@
+<!DOCTYPE html>
+
+<html class="writer-html5" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="http://diego.dev/lexicon/hash_blockchain/" rel="canonical"/>
+<link href="../../img/favicon.ico" rel="shortcut icon"/>
+<title>Demonstrating crosschain in a robot example - Diego</title>
+<link href="../../css/theme.css" rel="stylesheet"/>
+<link href="../../css/theme_extra.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" rel="stylesheet"/>
+<link href="../../extra.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet"/>
+<script>
+        // Current page data
+        var mkdocs_page_name = "Demonstrating crosschain in a robot example";
+        var mkdocs_page_input_path = "lexicon/hash_blockchain.md";
+        var mkdocs_page_url = "/lexicon/hash_blockchain/";
+      </script>
+<script defer="" src="../../js/jquery-3.6.0.min.js"></script>
+<!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body class="wy-body-for-nav" role="document">
+<div class="wy-grid-for-nav">
+<nav class="wy-nav-side stickynav" data-toggle="wy-nav-shift">
+<div class="wy-side-scroll">
+<div class="wy-side-nav-search">
+<a class="icon icon-home" href="../.."> Diego
+        </a><div role="search">
+<form action="../../search.html" class="wy-form" id="rtd-search-form" method="get">
+<input name="q" placeholder="Search docs" title="Type search term here" type="text"/>
+</form>
+</div>
+</div>
+<div aria-label="Navigation menu" class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../..">Diego</a>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Commands/">Tutorial</a>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Diego%20Introduction/">Diego Introduction</a>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../gettingstarted/">Diego Getting Started</a>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../intro/">Diego Introduction</a>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../syntax/">Language Syntax</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Abstract</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../abstract/abstract/">Abstract</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Condit</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/condit/after/">After (condition)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/condit/at/">At (condition)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/condit/before/">Before (condit)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/condit/during/">During</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/condit/temporat/">Temporal At (condit)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/condit/temporfrom/">Temporal From (condition)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/condit/temporto/">Temporal To (condition)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/condit/to/">To (condition)</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Const</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/const/e/">Euler's Constant (constant)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/const/ln10/">Natural Logarithm of 10 (constant)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/const/ln10e/">Base 10 Logarithm of e (constant)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/const/ln2/">Natural Logarithm of 2 (constant)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/const/pi/">Pi (constant)</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Dt</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/dt/circle/">Circle (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/dt/cube/">Cube (shape)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/dt/cuboid/">Cuboid (shape)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/dt/datatype/">Datatype (datatype)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/dt/dt/">Datatype (statement)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/dt/plicat/">Plication (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/dt/pyramid/">Pyramid (shape)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/dt/rect/">Rectangle (shape)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/dt/square/">Square (shape)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/dt/tri/">Triangle (shape)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/dt/variant/">Variant (datatype)</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Flow</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/flow/for/">For Loop (looper)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/flow/unless/">Unless (flow)</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Funct</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/funct/abs/">Absolute Value (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/funct/acos/">Arc Cosine (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/funct/calc/">Calculation (expression)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/funct/dt/">Datatype (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/funct/equals/">Equals (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/funct/false/">False (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/funct/fix/">Fixed Points (method)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/funct/is/">Is (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/funct/json/">JavaScript Object Notation (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/funct/length/">Length (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/funct/ln/">Natural logarithm (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/funct/ln2/">Natural Logarithm of 2 (constant)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/funct/not/">Not (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/funct/now/">Now (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/funct/parse/">Parse (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/funct/ret/">Return (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/funct/slice/">Slice</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/funct/sql/">Structured Query Language (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/funct/stringify/">stringify (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/funct/true/">True (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/funct/value/">Value</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/funct/xyz/">XYZ (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/funct/zdt/">Zoned Date Time (function)</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Meta</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/meta/verb/">Verb</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Obj</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/obj/arran/">Arrangement (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/obj/ary/">Array (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/obj/blob/">Binary Large Object (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/obj/cal/">Calendar (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/obj/clump/">Clump (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/obj/counter/">Counter (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/obj/datetime/">Datetime (datatype)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/obj/declar/">Declaration (of datatype)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/obj/deed/">Deed (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/obj/dict/">Dictionary (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/obj/enum/">Enumeration (object) / Enumerator (object) / Enumerator (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/obj/err/">Error (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/obj/flag/">Flag (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/obj/float/">Floating Point Number (datatye)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/obj/funct/">Function (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/obj/hash/">Hash (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/obj/indent/">Indenture (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/obj/int/">Integer (datatype)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/obj/lexi/">Lexikon (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/obj/list/">List (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/obj/matrix/">Matrix (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/obj/namespace/">Namespace (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/obj/pkg/">Package (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/obj/point/">Point (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/obj/refuse/">Refuse (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/obj/str/">String (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/obj/tempor/">Temporal (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/obj/tensor/">Tensor (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/obj/time/">Time (datatype)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/obj/val/">Valuable (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/obj/var/">Variable (object) / Variant (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/obj/variant/">Variant (datatype)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/obj/vector/">Vector (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/obj/yush/">Yush (object)</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Op</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/op/arithmetic/">Arithmetic Operators (operator)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/op/exponent/">Exponent Operators (operator)</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Prop</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/prop/">Index (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/prop/adicity/">Adicity (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/prop/arity/">Arity (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/prop/day/">Day (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/prop/fortn/">Fortnight (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/prop/freq/">Temporal Frequency (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/prop/hr/">Hour (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/prop/instant/">Instant (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/prop/keys/">Keys (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/prop/min/">Minute (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/prop/ms/">Millisecond (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/prop/mth/">Month (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/prop/now/">Now</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/prop/s/">Second (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/prop/txt/">Text (expression)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/prop/yr/">Year (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/prop/%CE%BCs/">Microsecond (property)</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Setter</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/setter/decpl/">Fixed Decimal Places (setter)</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Special</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/special/elvish/">Elvish Operator (special)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/special/me/">Me (special)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/special/reference/">Reference (special)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/special/semicolon/">Statement Terminator (special)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/special/you/">You (special)</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Verb</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/verb/add/">Add (verb)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/verb/apt/">Advanced Package Tool (verb)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/verb/kill/">Kill (verb)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/verb/set/">Set (verb)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../abstract/verb/with/">With (verb)</a>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Corpus</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../corpus/corpus/">Corpus</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../corpus/iot/">Internet of Things [IoT]</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Iot</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../corpus/iot/iot/">Internet of Things [IoT] (concept)</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Mavlink</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../corpus/mavlink/mavlink/">Translation of MAVLink Commands</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../corpus/mavlink/set_home/">Set home</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Robotis</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../corpus/robotis/burger/">Burger</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Tasks</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../corpus/tasks/caterpillar/">The Caterpillar Chain</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../corpus/tasks/packing_up/">Packing Up (task)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../corpus/tasks/tank_intercept/">Tank intercept</a>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Lexicon</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../brackets/">Brackets</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../crosschain/">Crosschain Technology</a>
+</li>
+<li class="toctree-l1 current"><a class="reference internal current" href="./">Demonstrating crosschain in a robot example</a>
+<ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="#step-1-write-the-instruction">Step 1: Write the instruction...</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#step-2-fred-and-alif-start-talking">Step 2: Fred and alif start talking...</a>
+<ul>
+<li class="toctree-l3"><a class="reference internal" href="#human-fred">Human Fred</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#robot-alif">Robot alif</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#human-bob">Human Bob</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#step-3-lets-go">Step 3: Let's go...</a>
+<ul>
+<li class="toctree-l3"><a class="reference internal" href="#human-fred_1">Human Fred</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#robot-alif_1">Robot alif</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#robot-alif_2">Robot alif</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#robot-alif_3">Robot alif</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#step-4-into-the-mist">Step 4: Into the mist...</a>
+<ul>
+<li class="toctree-l3"><a class="reference internal" href="#robot-alif_4">Robot alif</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#step-4a-pssh-i-have-the-secret-code">Step 4a: Pssh, I have the secret code...</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#robot-bahh">Robot  bahh</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#robot-tahh">Robot  tahh</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#robot-thah">Robot  thah</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#fridge-daisy">Fridge daisy</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#step-4b-attention-please">Step 4b: Attention please</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#robot-alif_5">Robot alif</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#robot-bahh_1">Robot  bahh</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#robot-tahh_1">Robot  tahh</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#robot-thah_1">Robot  thah</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#robot-alif_6">Robot alif</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#look-into-my-eyes">Look into my eyes...</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#robot-alif_7">Robot alif</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#robot-alif_8">Robot alif</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#robot-bahh_2">Robot  bahh</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#robot-tahh_2">Robot  tahh</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#robot-thah_2">Robot  thah</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#human-fred_2">Human Fred</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#robot-alif_9">Robot alif</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#robot-bahh_3">Robot  bahh</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#robot-tahh_3">Robot  tahh</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#robot-thah_3">Robot  thah</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../lexicon/">Lexicon</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../obs_and_subs/">Obs and Subs (object)</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../routing/">Routing</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../thingy/">Thingies</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Condit</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../condit/_indextopic/">Conditions</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Obj</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../obj/discriminat/">`discriminat`</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../obj/fail/">Fail, Failure</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../obj/me/">me</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../obj/navigation_planning/">Navigation Planning</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../obj/ob_and_subs/">`ob`s and `sub`s</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../obj/watchdog/">watchdog</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Thgy</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../thgy/_atozindex/"> atozindex</a>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Metaphysic</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../metaphysic/metaphysic/">Metaphysic</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Condit</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/condit/around/">Around (condit)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/condit/to/">To (condit)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/condit/toward/">Toward / Towards (condit)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/condit/using/">Using (condit)</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Dt</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/dt/dd/">Decimal Degrees (unit)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/dt/dm/">Decimetres (unit)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/dt/dms/">Degrees, Minutes, Seconds (unit)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/dt/ft/">Feet (unit)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/dt/imperial/">Imperial Units (unit)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/dt/inch/">Inch (unit)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/dt/kt/">Knots (unit)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/dt/league/">League (unit)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/dt/lmh/">Low-Medium-High (datatype)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/dt/m/">SI Units of Length (unit)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/dt/num/">Number (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/dt/rad/">Radians (unit)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/dt/si/">International System of Units (unit)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/dt/thou/">Thousandth of an Inch (unit)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/dt/yrd/">Yard (unit)</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Funct</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/funct/bearing/">Bearing (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/funct/datum/">Datum (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/funct/durat/">Duration (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/funct/elev/">Elevation (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/funct/geojson/">GeoJSON (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/funct/heading/">Heading (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/funct/hyster/">Hysteresis (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/funct/kml/">Keyhole Markup Language [kml] (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/funct/latlngalt/">Latitude, Longitude, Altitude (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/funct/loiterat/">Loiter At (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/funct/parse/">Parse (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/funct/percentof/">Percentage Of (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/funct/shape/">Shape (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/funct/shapefile/">Shapefile (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/funct/unit/">Unit (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/funct/waitat/">Wait At (function)</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Obj</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/ambit/">Ambit (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/apparat/">Apparatus (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/arena/">Arena (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/attr/">Attribute (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/behavi/">Behaviour (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/box/">Box (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/channel/">Channel (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/clepe/">Clepe (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/cloud/">Cloud (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/cognomen/">Cognomen (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/consens/">Consens</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/console/">Console (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/coords/">Coordinates (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/corridor/">Corridor (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/course/">Course (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/device/">Device (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/displacem/">Displacement</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/display/">Display (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/distan/">Distance (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/duct/">Duct (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/euler/">Euler (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/excurs/">Excursions (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/floor/">Floor (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/fog/">Fog (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/foreign/">Foreigner (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/funnel/">Funnel</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/gait/">Gait (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/gate/">Gate (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/geofence/">Geofence (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/ghost/">Ghost (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/goal/">Goal (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/instruct/">Instructors</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/itiner/">Itinerary (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/ject/">Ject</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/journ/">Journey (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/lease/">Lease (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/lennuf/">Lennuf (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/liken/">Liken (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/litsan/">Line in the Sand (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/map/">Map</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/marack/">Marack (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/metric/">Metric (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/mission/">Mission (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/mist/">Mist (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/mode/">Mode (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/moniker/">Moniker (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/msg/">Message (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/ob/">Ob (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/obstacle/">Obstacle (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/path/">Path (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/payload/">Payload</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/pipe/">Pipe (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/poll/">Poll (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/pose/">Pose (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/printer/">Printer (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/proc/">Procedure (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/prog/">Programme (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/puff/">Puff</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/roi/">Region of Interest (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/rosary/">Rosary (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/route/">Finders</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/scalar/">Scalar (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/sensor/">Sensor</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/sobriquet/">Sobriquet (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/spec/">Specification (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/spine/">Spine (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/spox/">Spox (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/stacle/">Stacle (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/stance/">Stance (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/sub/">Sub (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/substacle/">Substacle (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/swarm/">Swarm (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/tour/">Tour (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/track/">Track (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/tracker/">Tracker</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/transmiss/">Transmission (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/trip/">Trip (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/valid/">Valid (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/viapoint/">Viapoint (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/way/">Way (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/waypoint/">Waypoint</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/workspace/">Workspace</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/wtf/">Where's The Fire [wtf] (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/obj/zone/">Zone (object)</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Prop</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/prop/distan/">Distance (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/prop/ergcon/">Energy Consumption (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/prop/ident/">Identity (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/prop/impetus/">Impetus (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/prop/ios/">Apple iOs (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/prop/kiwifruit/">Kiwifruit (type)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/prop/make/">Make (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/prop/model/">Model (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/prop/month/">Month (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/prop/msg/">Message (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/prop/opsys/">Operating System (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/prop/risk/">Risk (enumerator)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/prop/serialnum/">Serial Number (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/prop/type/">Type (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/prop/urgency/">Urgency (enumerator)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/prop/vegetable/">Vegetable (type)</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Setter</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/setter/authority/">Authority (setter)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/setter/consens/">Consensus (setter)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/setter/decisiven/">Decisiveness (setter)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/setter/euler/">Euler (setter)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/setter/mapprovider/">Map Provider (setter)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/setter/quatern/">Quaternion (setter)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/setter/ranking/">Ranking (setter)</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Special</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/special/them/">Them (special)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/special/us/">Us (special)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/special/we/">We (special)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/special/you/">You (special)</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Verb</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/verb/alert/">Alert (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/verb/ask/">Inquirers</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/verb/begin/">Begin (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/verb/calc/">Calculate (verb)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/verb/call/">Call</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/verb/envelop/">envelop</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/verb/find/">`find_`</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/verb/follow/">Follow (verb)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/verb/form/">Form (verb)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/verb/go/">Go (verb)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/verb/goto/">Goto (verb)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/verb/kill/">Kill (verb)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/verb/label/">Label (verb)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/verb/lead/">Lead (verb)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/verb/listen/">Listen (verb)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/verb/load/">Payloaders</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/verb/loiter/">Loiter</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/verb/merge/">Merge (verb)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/verb/msg/">Message (verb)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/verb/poll/">Poll (verb)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/verb/see/">see</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/verb/set/">Set (verb)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/verb/study/">Study</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/verb/swarm/">Swarm (verb)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/verb/tail/">Tail Behind (verb)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../metaphysic/verb/unload/">Payloaders</a>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Opendogv3</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../opendogv3/bom/">Bill of Materials</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Physic</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../physic/physic/">Physic</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Obj</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/actuat/">Actuator (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/adsb/">Automatic Dependent Surveillance–Broadcast (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/apparat/">Apparatus (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/applian/">Appliance (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/battery/">Battery</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/border/">Border (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/button/">Button (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/canal/">Canal (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/cat/">Cat (type)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/ceiling/">Ceiling (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/cellphone/">Cell Phone (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/chair/">Chair (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/colo/">Colour Sensor (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/compon/">Component (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/computer/">Computer (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/door/">Door (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/drone/">Drone (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/duct/">Duct (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/equip/">Equipment (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/finline/">Finish Line (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/firma/">Firma (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/ghost/">Ghost (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/guide/">Guide (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/hinderan/">Hinderance (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/human/">Human (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/imu/">Inertial Measurement Unit (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/ject/">Ject (object &gt; thingy &gt; thing)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/joint/">Joint (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/landmark/">Landmark</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/link/">Link (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/locon/">Location Object Context (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/mach/">Machine (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/mech/">Mechanical Thing (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/microcon/">Microcontroller (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/mobot/">Mobot (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/motor/">Motor (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/object/">Object (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/organic/">Organic (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/photoelect/">Photoelectric Sensor (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/poi/">Poi</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/rail/">Rail (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/robot/">Robot (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/roi/">Region of Interest (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/room/">Room (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/sensor/">Sensor (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/shaft/">Shaft (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/side/">Side (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/sobot/">Sobot (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/spec/">Specification (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/stair/">Stairs (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/stride/">Stride (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/switch/">Switch (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/tablet/">Tablet (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/thing/">Thing (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/thingy/">Thingy (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/tri/">Triangle (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/valley/">Valley (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/vehicle/">Vehicle (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/wall/">Wall (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/obj/wayfind/">Wayfind (object)</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Prop</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/prop/air/">Air Speed (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/prop/alt/">Altitude (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/prop/android/">Android Operating System (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/prop/bb/">Blackberry Operating System (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/prop/cap/">Capacity (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/prop/country/">Country (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/prop/imei/">International Mobile Equipment Identity (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/prop/ios/">Apple® iOS™ Operating System (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/prop/opframe/">Operating Framework</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/prop/phonenum/">Telephone Number (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/prop/status/">Status (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/prop/win/">Microsoft® Windows™ Operating System (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/prop/win_mobile/">Microsoft® Windows Mobile (property)</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Special</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/special/world/">World (special)</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Verb</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/verb/alert/">Alert (verb)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/verb/enter/">Enter (verb)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../physic/verb/exit/">Exit (verb)</a>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Tasks</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../tasks/newton_loop/">The Newton Loop</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../tasks/persian_chain/">The Persian Chain</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../tasks/recharge/">Recharge</a>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+<section class="wy-nav-content-wrap" data-toggle="wy-nav-shift">
+<nav aria-label="Mobile navigation menu" class="wy-nav-top" role="navigation">
+<i class="fa fa-bars" data-toggle="wy-nav-top"></i>
+<a href="../..">Diego</a>
+</nav>
+<div class="wy-nav-content">
+<div class="rst-content"><div aria-label="breadcrumbs navigation" role="navigation">
+<ul class="wy-breadcrumbs">
+<li><a alt="Docs" class="icon icon-home" href="../.."></a> »</li>
+<li>Lexicon »</li><li>Demonstrating crosschain in a robot example</li>
+<li class="wy-breadcrumbs-aside">
+</li>
+</ul>
+<hr/>
+</div>
+<div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
+<div class="section" itemprop="articleBody">
+<h1 id="demonstrating-crosschain-in-a-robot-example">Demonstrating crosschain in a robot example</h1>
+<p>In this example we will be demonstrating hashtables and crosschain processes.</p>
+<p>The elements and players in this scenario are <code>the base</code>, a geographic area (a <code>roi</code>) where human <code>Fred</code> and robot <code>alif</code> reside, initially.  There is a geographic area and communication zone ('mist') called <code>the mist</code>, a distance way from <code>the base</code>, enough that the robot <code>alif</code> will have to travel there before it can communicate with the other robots in <code>the mist</code>.  The other robots in <code>the mist</code> are: robot <code>bahh</code>, robot <code>tahh</code> and robot <code>thah</code>.  Within <code>the mist</code> communication is mostly reliable but infrequently becomes a bit sketchy.  All the robots and human know each other.</p>
+<p>A human known a <code>Bob</code>, a a thingy called <code>daisy</code> make cameo appearances.</p>
+<p>The goal is for 'Fred' to pass on a secret code to robots <code>bahh</code>, <code>tahh</code> and <code>thah</code>, and collect stat(istic)s, eye colour and colour of their socks. Then return back to base.</p>
+<blockquote>
+<h2 id="step-1-write-the-instruction">Step 1: Write the instruction...</h2>
+</blockquote>
+<p>So, Fred gets to work, opens his IDE and writes the following Diego code:</p>
+<pre><code class="language-Diego">begin_instuct(get_stats_from_bahh_tahh_and_thah)_forof(alif);
+    goto_mist(the_mist)_you()?:;
+        ? proclaim_var(secret_code)_value(1234)_forof(bahh,tahh,thah);
+        : exec_instruct(report_back_to_base)_you();
+    call_robot()_them()_unanimous()?|;
+        ? ask_stat(eye_colour):;
+            : report_err()_you();
+        | ask_stat(sock_colour)_them():;
+            : report_err()_you();
+    ask_var(secret_code)__them();
+    exec_instruct(report_back_to_base)_you();
+end_instruct(get_stats_from_bahh_tahh_and_thah);
+</code></pre>
+<p>The command <code>exec_instruct(report_back_to_base)</code> executes (starts off) a previous instruction given and known to <code>alif</code> in this example.  Human interpretations of the commands in this instruction are shown, as well as, the crosschain hashtables which will be explained as we go along...</p>
+<blockquote>
+<h2 id="step-2-fred-and-alif-start-talking">Step 2: <code>Fred</code> and <code>alif</code> start talking...</h2>
+</blockquote>
+<p>Now we will observe the communication between <code>Fred</code> and <code>alif</code>, both from their perspectives...</p>
+<p>Fred sends out the Diego commands by ececuting the <em>.dgo</em> file.  During this process <code>Fred</code> (the thingy side of 'Fred') records them for prosperity into memory (<code>Fred</code>s hastable)...</p>
+<h3 id="human-fred">Human <code>Fred</code></h3>
+<table>
+<thead>
+<tr>
+<th align="center">caller</th>
+<th align="center">*hash</th>
+<th align="center">←hash</th>
+<th align="center">↓hash</th>
+<th align="center">↑hash</th>
+<th>Diego commands<br/><em>Human talk</em></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>Fred</code>^♠^</td>
+<td align="center">adc3^♠^</td>
+<td align="center">62e7</td>
+<td align="center"></td>
+<td align="center"></td>
+<td><code>begin_instuct(get_stats_from_bahh_tahh_and_thah)_forof(alif);</code><br/><br/><em>Okay <code>alif</code>, so here is what I want you to do...</em></td>
+</tr>
+</tbody>
+</table>
+<p>♠: The caller is actually a uuid, so are the hashes.  They are referred to as hashes for historical reasons.  The hashes have been shorted to 16bit for clarity.
+♡: The use of <code>?</code> at <code>? ask_stat(eye_colour)</code> indicates this command is a <em>hey_diego</em> command of the preceding <em>go_diego</em> command, in this case: <code>call_robot()_forof(bahh,tahh,thah)_unanimous()?|;</code>.  We will see later an example of a sucess and a failure of the <code>call_robot</code> command...</p>
+<p>The <code>begin_instuct</code> command has the <code>_forof(alif)</code> postposit to signify that this <code>instruct</code> is for the benefit of <code>alif</code> only. This is not strictly necessary as the execution of the <code>instruct</code> can be better handled by the <code>exec_instruct</code> command (we will see later...). If, for some reason, <code>alif</code> is not available to execute the command, the <code>with_instruct</code> command will be required to reassign the <code>instruct</code> to something else, <em>for example:</em> <code>with_instuct(get_stats_from_bahh_tahh_and_thah)_forof(jeeem)_notforof(alif)</code>.</p>
+<p><code>Fred</code> continues...</p>
+<table>
+<thead>
+<tr>
+<th align="center">caller</th>
+<th align="center">*hash</th>
+<th align="center">←hash</th>
+<th align="center">↓hash</th>
+<th align="center">↑hash</th>
+<th>Diego commands<br/><em>Human talk</em></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>Fred</code></td>
+<td align="center">c682</td>
+<td align="center">adc3</td>
+<td align="center"></td>
+<td align="center"></td>
+<td>    <code>goto_mist(the_mist)_you()?:;</code><br/><br/><em>Go to the place where robots <code>bahh</code>, <code>tahh</code> and <code>thah</code> hang out (<code>the_mist</code>).</em></td>
+</tr>
+<tr>
+<td align="center"><code>Fred</code></td>
+<td align="center">53d2</td>
+<td align="center">c682</td>
+<td align="center"></td>
+<td align="center"></td>
+<td>        <code>? proclaim_var(secret_code)_value(1234)_forof(bahh,tahh,thah);</code><br/><br/><em>When you get there proclaim them (<code>bahh</code>, <code>tahh</code> and <code>thah</code>) of the secret code.</em></td>
+</tr>
+</tbody>
+</table>
+<p>| <code>Fred</code> | 438d | 53d2 | | |         <code>: exec_instruct(report_back_to_base)_you();</code><br/><br/><em>If there are any problems report back to base.</em> |
+| <code>Fred</code> | a261 | 438d | | |     <code>call_robot()_forof(bahh,tahh,thah)_unanimous()?!;</code><br/><br/><em>Perform a roll-call for robots <code>bahh</code>, <code>tahh</code> and <code>thah</code>.</em> |
+| <code>Fred</code> | 7da0 | a261 | | |         <code>? ask_stat(eye_colour):;</code>^♡^<br/><br/><em>As soon as you get an unanimous response to the roll-call, ask anyone^♢^ their eye colour.</em> |
+| <code>Fred</code> | f496 | 7da0 | | |             <code>: report_err()_you();</code><br/><br/><em>Report anything wrong when you ask their (anyone's) eye colour.</em> |
+| <code>Fred</code> | fa7e | f496 | | |         <code>| ask_stat(sock_colour)_them():;</code><br/><br/><em>As soon as you get an unanimous response to the roll-call, also ask the colour of their (anyone's^♢^) socks.</em> |
+| <code>Fred</code> | cb67 | fa7e | | |         <code>: report_err();</code><br/><br/><em>Report anything wrong when you ask their sock colour.</em> |
+| <code>Fred</code> | 5e31 | cb67 | | |    <code>exec_instruct(report_back_to_base);</code><br/><br/><em>If there are any problems report back to base.</em> |
+| <code>Fred</code> | 600b | 5e31 | | | <code>end_instruct(get_stats_from_bahh_tahh_and_thah);</code><br/><br/><em>That's it.</em> |</p>
+<p>♢: There is no explicit discrimination given for both the <code>ask_stat(eye_colour)</code> and <code>ask_stat(sock_colour)</code> commands, so the diego engine will defer to any global discrimination setting (in the caller), if no such settings exist their will be no discrimination and <strong>anyone</strong> in the mist, <code>the mist</code> will respond to these <code>ask</code> commands.  Examples of possible discrimination settings include:</p>
+<ul>
+<li><code>ask_stat(eye_colour)_forof(bahh,tahh,thah);</code> <em>- explicit discrimination</em></li>
+<li><code>ask_stat(eye_colour)_inherit();</code><em>- inherited discrimination</em></li>
+<li><code>set_discimination(menage)_givento(call)_value(true);</code> <em>- discrimination through menage of all <code>call</code>s for this <em>thingy</em></em></li>
+<li><code>set_discrimat(menage)_givento(call)_appliedto(robot)_value(true);</code> <em>- discrimination through menage of <code>call</code>s to <code>robot</code> kind</em> </li>
+<li><code>set_discriminat(progeny)_givento(call)_value(true);</code> <em>- implied discrimination through progeny of all <code>call</code>s for this <em>thingy</em></em></li>
+<li><code>set_discrimat(progeny)_givento(call)_appliedto(robot)_value(true);</code> <em>- discrimination through progeny of <code>call</code>s to <code>robot</code> kind</em> </li>
+</ul>
+<p>While <code>Fred</code> is talking (to himself), robot <code>alif</code> is listening and taking it all in...</p>
+<h3 id="robot-alif">Robot <code>alif</code></h3>
+<table>
+<thead>
+<tr>
+<th align="center">caller</th>
+<th align="center">*hash</th>
+<th align="center">←hash</th>
+<th align="center">↓hash</th>
+<th align="center">↑hash</th>
+<th>Diego commands<br/><em>Human talk</em></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>Fred</code></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">adc3</td>
+<td align="center">62e7</td>
+<td><code>begin_instuct(get_stats_from_bahh_tahh_and_thah)_forof(alif);</code><br/><br/><em>Okay <code>Fred</code>, I'm talking notes...</em></td>
+</tr>
+<tr>
+<td align="center"><code>Fred</code></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">c682</td>
+<td align="center">adc3</td>
+<td>    <code>goto_mist(the_mist)_you()?:;</code><br/><br/><em>Right, so I go to <code>the_mist</code>.</em></td>
+</tr>
+<tr>
+<td align="center"><code>Fred</code></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">53d2</td>
+<td align="center">c682</td>
+<td>        <code>? proclaim_var(secret_code)_value(1234)_forof(bahh,tahh,thah);</code><br/><br/><em>So, when I get there (<code>the_mist</code>) I proclaim <code>bahh</code>, <code>tahh</code> and <code>thah</code> of the secret code, <code>1234</code>.</em></td>
+</tr>
+<tr>
+<td align="center"><code>Fred</code></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">438d</td>
+<td align="center">53d2</td>
+<td>        <code>: exec_instruct(report_back_to_base);</code><br/><br/><em>If there are any problems I will report back to base.</em></td>
+</tr>
+<tr>
+<td align="center"><code>Fred</code></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">a261</td>
+<td align="center">438d</td>
+<td>    <code>call_robot()_forof(bahh,tahh,thah)_unanimous()?!;</code><br/><br/><em>Perform a roll-call for robots <code>bahh</code>, <code>tahh</code> and <code>thah</code>.</em></td>
+</tr>
+<tr>
+<td align="center"><code>Fred</code></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">7da0</td>
+<td align="center">a261</td>
+<td>        <code>? ask_stat(eye_colour):;</code>^♡^<br/><br/><em>As soon as I get an unanimous response to the roll-call, I will ask anyone^♢^ their eye colour.</em></td>
+</tr>
+<tr>
+<td align="center"><code>Fred</code></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">f496</td>
+<td align="center">7da0</td>
+<td>            <code>: report_err();</code><br/><br/><em>I will report anything wrong when I ask anyone's eye colour.</em></td>
+</tr>
+<tr>
+<td align="center"><code>Fred</code></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">fa7e^♥^</td>
+<td align="center">f496</td>
+<td>        <code>| ask_stat(sock_colour):;</code><br/><br/><em>As soon as I get an unanimous response to the roll-call, I will also ask the colour of anyone's socks.</em></td>
+</tr>
+<tr>
+<td align="center"><code>Bob</code>^♣^</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">7f49</td>
+<td align="center">5598^♣^</td>
+<td><code>find_tool(5mm_spanner)_appliedto(robot);</code><br/><br/><em>Ummm, human <code>Bob</code> is asking all robots if they know where the <code>5mm_spanner</code> is!</em></td>
+</tr>
+<tr>
+<td align="center"><code>alif</code></td>
+<td align="center">a651</td>
+<td align="center">910a</td>
+<td align="center"></td>
+<td align="center">7f49</td>
+<td><code>found_tool(5mm spanner)_forof(Bob)_value(false);</code><br/><br/><em>Sorry <code>Bob</code>, I do not know where the <code>5mm_spanner</code> is.</em></td>
+</tr>
+<tr>
+<td align="center"><code>Fred</code></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">cb67</td>
+<td align="center">fa7e^♥^</td>
+<td>        <code>: report_err();</code><br/><br/><em>...back to Fred's <code>instruct</code>... I will then report anything wrong when I ask their sock colour.</em></td>
+</tr>
+<tr>
+<td align="center"><code>Fred</code></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">5e31</td>
+<td align="center">cb67</td>
+<td>   <code>exec_instruct(report_back_to_base);</code><br/><br/><em>Right oh, if there are any problems I will report back to base.</em></td>
+</tr>
+<tr>
+<td align="center"><code>Fred</code></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">600b</td>
+<td align="center">5e31</td>
+<td><code>end_instruct(get_stats_from_bahh_tahh_and_thah);</code><br/><br/><em>Okay, got it.</em></td>
+</tr>
+</tbody>
+</table>
+<p>♣:  While <code>alif</code> is <em>transribing</em> <code>Fred</code>s instruction, human <code>Bob</code> interrupts the conversation asking all the robots if they know where the <code>5mm_spanner</code> is. Note that the ↑hash <code>5598</code> of message <code>910a</code> <strong>does not</strong> match the ↓hash of the previous message, this indicates to <code>alif</code> that this message is not part of the conversation with <code>Fred</code> and therefore also not part of the <code>instruct</code>.</p>
+<p>♥: By matching the ↑hash <code>fa7e</code> of message <code>f3d0</code> with the ↓hash <code>fa7e</code> of message <code>9cf1</code>, <code>alif</code> can get back to its conversation with <code>Fred</code>.</p>
+<p>Let's have a quick peep at <code>Bob</code>'s crosschain hashtable...</p>
+<h3 id="human-bob">Human <code>Bob</code></h3>
+<table>
+<thead>
+<tr>
+<th align="center">caller</th>
+<th align="center">*hash</th>
+<th align="center">←hash</th>
+<th align="center">↓hash</th>
+<th align="center">↑hash</th>
+<th>Diego commands<br/><em>Human talk</em></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>Bob</code></td>
+<td align="center">7f49^ʃ^</td>
+<td align="center">5598</td>
+<td align="center"></td>
+<td align="center"></td>
+<td><code>find_tool(5mm_spanner)_appliedto(robot);</code><br/><br/><em>Do any of you robots kno where the <code>5mm_spanner</code> is?</em></td>
+</tr>
+<tr>
+<td align="center"><code>alif</code></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">a651</td>
+<td align="center">7f49^ʃ^</td>
+<td><code>found_tool(5mm spanner)_forof(Bob)_value(false);</code>^Ꜭ^<br/><br/><em>Sorry <code>Bob</code>, I do not know where the <code>5mm_spanner</code> is.</em></td>
+</tr>
+<tr>
+<td align="center"><code>droid1</code></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">e0bd</td>
+<td align="center">7f49^ʃ^</td>
+<td><code>found_tool(5mm spanner)_forof(Bob)_insub(toolbox_red);</code>^ⱷ^ ^Ꜭ^<br/><br/><em>Yeah, the <code>5mm_spanner</code> is in the <code>toolbox_red</code>.</em></td>
+</tr>
+</tbody>
+</table>
+<p>ʃꜬ: Since <code>Bob</code>'s <em>hash matches the ↑hashes from <code>alif</code> and <code>droid1</code>, <code>Bob</code> knows these are responses to his <code>find_</code> verb.  If <code>Bob</code> wants to respond back he will use the ↓hashes.  The use of <code>_forof(Bob)_</code> isn't strickly neccessary as the ↑hash (<code>7f49</code>) in <code>alif</code>'s and <code>droid1</code>'s ledger will be referrenced to <code>Bob</code>'s </em>hash (<code>7f49</code>) , it can be omitted.</p>
+<p>ⱷ: The <code>_insub</code> postposit means <em>..the preceding part of this command is...</em> in <code>sub</code>ject <code>toolbox_red</code>. See <a href="../obs_and_subs/">obs_and_subs.md</a>.</p>
+<blockquote>
+<h2 id="step-3-lets-go">Step 3: Let's go...</h2>
+</blockquote>
+<p>Fred, after running the above code (Step #2), <code>Fred</code> checks everything is ready and runs the following command:</p>
+<pre><code class="language-Diego">exec_instuct(get_stats_from_bahh_tahh_and_thah)_you(alif)_them(bahh, tahh, thah);
+</code></pre>
+<h3 id="human-fred_1">Human <code>Fred</code></h3>
+<table>
+<thead>
+<tr>
+<th align="center">caller</th>
+<th align="center">*hash</th>
+<th align="center">←hash</th>
+<th align="center">↓hash</th>
+<th align="center">↑hash</th>
+<th>Diego commands<br/><em>Human talk</em></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>Fred</code></td>
+<td align="center">9be9</td>
+<td align="center">600b</td>
+<td align="center"></td>
+<td align="center"></td>
+<td><code>exec_instuct(get_stats_from_bahh_tahh_and_thah)</code><br/>     <code>_you(alif)_them(bahh, tahh, thah);</code><br/><br/><em>Okay <code>alif</code>, off you go...</em></td>
+</tr>
+</tbody>
+</table>
+<h3 id="robot-alif_1">Robot <code>alif</code></h3>
+<table>
+<thead>
+<tr>
+<th align="center">caller</th>
+<th align="center">*hash</th>
+<th align="center">←hash</th>
+<th align="center">↓hash</th>
+<th align="center">↑hash</th>
+<th>Diego commands<br/><em>Human talk</em></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>Fred</code></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">9be9</td>
+<td align="center">600b</td>
+<td><code>exec_instuct(get_stats_from_bahh_tahh_and_thah)</code><br/>     <code>_you(alif)_them(bahh, tahh, thah);</code><br/><br/><em>Right, here I go...</em></td>
+</tr>
+</tbody>
+</table>
+<p>At this point <code>alif</code> will check its memory for the <code>begin_</code> and <code>end_</code> of the <code>get_stats_from_bahh_tahh_and_thah</code> <code>instruct</code>, knowing it has most likely come from <code>Fred</code>. Another robot, called <code>Driod1</code>, is also in ear-shot of <code>Fred</code>, but since <code>Fred</code> has used <code>_forof(alif)</code> and there isn't implication of relaying messages, <code>Droid1</code> will ignore this message in its ledger (if it wants to <em>i.e. has been setup to ignore messages that have nothing to do with it</em>).</p>
+<p>So once <code>alif</code> has remembered  <code>get_stats_from_bahh_tahh_and_thah</code> it starts to loop through the <code>instuct</code>...</p>
+<h3 id="robot-alif_2">Robot <code>alif</code></h3>
+<table>
+<thead>
+<tr>
+<th align="center">caller</th>
+<th align="center">*hash</th>
+<th align="center">←hash</th>
+<th align="center">↓hash</th>
+<th align="center">↑hash</th>
+<th>Diego commands<br/><em>Human talk</em></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>Fred</code></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">aaf9</td>
+<td align="center">4816</td>
+<td><code>begin_instuct(get_stats_from_bahh_tahh_and_thah);</code><br/><br/><em>Okay, let's get the <code>instruct</code>ions to follow...</em></td>
+</tr>
+<tr>
+<td align="center"><code>alif</code></td>
+<td align="center">44de</td>
+<td align="center">a651</td>
+<td align="center">9778</td>
+<td align="center">aaf9</td>
+<td><code>goto_mist(the_mist)_me()?:;</code><br/><br/>Perform the previously defined action <code>goto_mist(the_mist)</code>...</td>
+</tr>
+</tbody>
+</table>
+<p>The <code>begin_</code> verb and its command is located in memory, then to signify following the instructions (<em>any commands after the <code>begin_</code> verb</em>), alif will call the instruction to command itself from the instruction, as can bee seen witht he first command  <code>goto_mist(the_mist)</code>.  Since <code>alif</code> knows this command is only for itself, it appends <code>_me()</code> to the end on the instruction to signify to others this is command <code>alif</code> only must follow and this command is not being _re-_commanded by <code>alif</code>.</p>
+<p>In the physical <em>real</em> world <code>alif</code> manoeuvres itself along a predefined route (called <code>base_to_mist</code>) to get <code>the mist</code> where <code>bahh</code>, <code>tahh</code>, and <code>thah</code> are hanging out.</p>
+<p>For this example, <code>alif</code> is very chatty (has a setting to be chatty from itself, or others), so its going to chat about its achievement and issues...</p>
+<h3 id="robot-alif_3">Robot <code>alif</code></h3>
+<table>
+<thead>
+<tr>
+<th align="center">caller</th>
+<th align="center">*hash</th>
+<th align="center">←hash</th>
+<th align="center">↓hash</th>
+<th align="center">↑hash</th>
+<th>Diego commands<br/><em>Human talk</em></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>alif</code></td>
+<td align="center">2e11</td>
+<td align="center">44de</td>
+<td align="center"></td>
+<td align="center">9778</td>
+<td><code>goto_mist(the_mist)_me()_success(+103, successful goto);</code><br/><br/><em>Hey (anyone who is interested), I have arrived safely at <code>the_mist</code>!</em></td>
+</tr>
+<tr>
+<td align="center"><code>alif</code></td>
+<td align="center">a5ca</td>
+<td align="center">2e11</td>
+<td align="center"></td>
+<td align="center">9778</td>
+<td><code>add_valid(+103, arrival at location)_givento(goto)_appliedto(mist)_specificto(the_mist);</code><br/><br/><em>Note to self, successfully arrived at <code>the mist</code>.</em></td>
+</tr>
+</tbody>
+</table>
+<p>Two examples are given for robot <code>alif</code> to records its own actions, in its own ledger.  The rules of crosschain are that other thingies should have a chain of messages and any broken chain rectified.  So, anyone else in ear-shot of <code>alif</code> will record <code>alif</code> chatting away to itself. (which we will see later !!!!!!!!!!!!!!!!!!!!!!)</p>
+<blockquote>
+<h2 id="step-4-into-the-mist">Step 4: Into the mist...</h2>
+</blockquote>
+<p>So <code>alif</code> has entered <code>the mist</code> and will continue following the instructions set by human <code>Fred</code> when it was back at <code>the base</code>.  Now within <code>the mist</code> the robots (and others) can hear <code>alif</code> talking and take notice...</p>
+<p><code>alif</code> is quick to get into action and gets straight into it, proclaiming <code>bahh</code>, <code>tahh</code>, and <code>thah</code> of the secret code...</p>
+<h3 id="robot-alif_4">Robot <code>alif</code></h3>
+<table>
+<thead>
+<tr>
+<th align="center">caller</th>
+<th align="center">*hash</th>
+<th align="center">←hash</th>
+<th align="center">↓hash</th>
+<th align="center">↑hash</th>
+<th>Diego commands<br/><em>Human talk</em></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>alif</code></td>
+<td align="center">b707</td>
+<td align="center">a5ca</td>
+<td align="center">4743</td>
+<td align="center">9778</td>
+<td><code>? proclaim_var(secret_code)_value(1234)_for(bahh,tahh,thah);</code><br/><br/><em>Proclaim <code>bahh</code>, <code>tahh</code>, and <code>thah</code> of the secret code.</em></td>
+</tr>
+<tr>
+<td align="center"><code>alif</code></td>
+<td align="center">ad70</td>
+<td align="center">b707</td>
+<td align="center"></td>
+<td align="center"></td>
+<td><code>proclaim_var(secret_code)_value(1234)_forof(bahh,tahh,thah)</code><br/>         <code>_success(+103, successful proclaim)_me();</code><br/><br/><em>I have proclaimed <code>secret_code</code> <code>1234</code> to <code>bahh</code>, <code>tahh</code>, and, <code>thah</code>.</em></td>
+</tr>
+<tr>
+<td align="center"><code>alif</code></td>
+<td align="center">32a2</td>
+<td align="center">ad70</td>
+<td align="center"></td>
+<td align="center"></td>
+<td><code>add_valid(+101,proclaim complete)</code><br/>         <code>_givento(proclaim)_appliedto(var)_specificto(secret_code)_me();</code><br/><br/>✅ <em>Proclaimed <code>secret_code</code> <code>1234</code> to <code>bahh</code>, <code>tahh</code>, and, <code>thah</code>.</em></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<h3 id="step-4a-pssh-i-have-the-secret-code">Step 4a: Pssh, I have the secret code...</h3>
+</blockquote>
+<p><strong>Everyone</strong> listens, even a fridge (called <code>daisy</code>) that is sitting in the corner in <code>the mist</code>!  Let's follow each conversation, one command at a time...</p>
+<h3 id="robot-bahh">Robot  <code>bahh</code></h3>
+<table>
+<thead>
+<tr>
+<th align="center">caller</th>
+<th align="center">*hash</th>
+<th align="center">←hash</th>
+<th align="center">↓hash</th>
+<th align="center">↑hash</th>
+<th>Diego commands<br/><em>Human talk</em></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"> </td>
+<td align="center"> </td>
+<td align="center"> </td>
+<td align="center"> </td>
+<td align="center"> </td>
+<td>                                                                                                                                                       </td>
+</tr>
+</tbody>
+</table>
+<p>...it seems robot <code>bahh</code> is not listening...</p>
+<h3 id="robot-tahh">Robot  <code>tahh</code></h3>
+<table>
+<thead>
+<tr>
+<th align="center">caller</th>
+<th align="center">*hash</th>
+<th align="center">←hash</th>
+<th align="center">↓hash</th>
+<th align="center">↑hash</th>
+<th>Diego commands<br/><em>Human talk</em></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>alif</code></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">b707</td>
+<td align="center">a5ca</td>
+<td><code>proclaim_var(secret_code)_value(1234)_for(bahh,tahh,thah);</code><br/><br/><em>The <code>secret_code</code> is <code>1234</code>, thanks <code>alif</code>.</em></td>
+</tr>
+<tr>
+<td align="center"><code>tahh</code></td>
+<td align="center">5c52</td>
+<td align="center">127d</td>
+<td align="center">910a</td>
+<td align="center">b707</td>
+<td><code>request_gossip()_last(910a)_recent(b707)_forof(alif);</code></td>
+</tr>
+<tr>
+<td align="center"><code>alif</code></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">a651</td>
+<td align="center">910a</td>
+<td><code>found_tool(5mm spanner)_forof(Bob)_value(false);</code></td>
+</tr>
+<tr>
+<td align="center"><code>alif</code></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">44de</td>
+<td align="center">a651</td>
+<td><code>goto_mist(the_mist)_me()?:;</code></td>
+</tr>
+<tr>
+<td align="center"><code>alif</code></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">2e11</td>
+<td align="center">44de</td>
+<td><code>goto_mist(the_mist)_me()_success(+103, successful goto);</code></td>
+</tr>
+<tr>
+<td align="center"><code>alif</code></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">a5ca</td>
+<td align="center">2e11</td>
+<td><code>add_valid(+103, arrival at location)</code><br/>      <code>_givento(goto)_appliedto(mist)_specificto(the_mist);</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="robot-thah">Robot  <code>thah</code></h3>
+<table>
+<thead>
+<tr>
+<th align="center">caller</th>
+<th align="center">*hash</th>
+<th align="center">←hash</th>
+<th align="center">↓hash</th>
+<th align="center">↑hash</th>
+<th>Diego commands<br/><em>Human talk</em></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>alif</code></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">b707</td>
+<td align="center">a5ca</td>
+<td><code>proclaim_var(secret_code)_value(1234)_for(bahh,tahh,thah);</code><br/><br/><em>So the secret code is <code>1234</code>, and <code>bahh</code> &amp; <code>tahh</code> know this <code>secret_code</code> also, hey</em></td>
+</tr>
+<tr>
+<td align="center"><code>thah</code></td>
+<td align="center">107a</td>
+<td align="center">8b74</td>
+<td align="center">910a</td>
+<td align="center">b707</td>
+<td><code>request_gossip()_last(910a)_recent(b707)_forof(alif);</code></td>
+</tr>
+<tr>
+<td align="center"><code>alif</code></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">a651</td>
+<td align="center">910a</td>
+<td><code>found_tool(5mm spanner)_forof(Bob)_value(false);</code></td>
+</tr>
+<tr>
+<td align="center"><code>alif</code></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">44de</td>
+<td align="center">a651</td>
+<td><code>goto_mist(the_mist)_me()?:;</code></td>
+</tr>
+<tr>
+<td align="center"><code>alif</code></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">2e11</td>
+<td align="center">44de</td>
+<td><code>goto_mist(the_mist)_me()_success(+103, successful goto);</code></td>
+</tr>
+<tr>
+<td align="center"><code>alif</code></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">a5ca</td>
+<td align="center">2e11</td>
+<td><code>add_valid(+103, arrival at location)</code><br/>      <code>_givento(goto)_appliedto(mist)_specificto(the_mist);</code></td>
+</tr>
+</tbody>
+</table>
+<p>Robots <code>tahh</code> and <code>thah</code> know robot <code>alif</code> very well and both these robots haven't heard whats been going on when <code>alif</code> has been away so both of them catch up on gossip.</p>
+<p>Out of the three robots, everyone but <code>bahh</code> has heard the proclamation. This is because the communication connection for <code>bahh</code>, in this case, is a little sketchy.  Since, by default, <code>proclaim_</code> does not expect neither a delivery receipt nor a received receipt, <code>alif</code> is unaware and will never to know that <code>bahh</code> didn't get the proclamation. Also robot 'bahh' would be oblivious to the proclamation.  Furthermore, a 'proclaim_' with no specified delivery or receive receipt will return as a success, the <em>oh_diego</em> command, <code>exec_instruct(report_back_to_base);</code> will not be executed by <code>alif</code>.</p>
+<p>Now a twist in this ~~tale~~ example! A fridge called <code>daisy</code> is 'diego-compatible' and its part of <code>the mist</code> like all the robots there (including <strong>now</strong> <code>alif</code>), so, by design, daisy can hear <code>alif</code> and also takes notes:</p>
+<h3 id="fridge-daisy">Fridge <code>daisy</code></h3>
+<table>
+<thead>
+<tr>
+<th align="center">caller</th>
+<th align="center">*hash</th>
+<th align="center">←hash</th>
+<th align="center">↓hash</th>
+<th align="center">↑hash</th>
+<th>Diego commands<br/><em>Human talk</em></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>alif</code></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">b707</td>
+<td align="center">a5ca</td>
+<td><code>proclaim_var(secret_code)_value(1234)_forof(bahh,tahh,thah);</code><br/><br/><em>The variable <code>secret_code</code> is <code>1234</code>!</em></td>
+</tr>
+</tbody>
+</table>
+<p>Even though <code>alif</code> followed its instructions and proclaimed the variable <code>secret_code</code> as <code>1234</code> for <code>bahh</code>, <code>tahh</code>, and <code>thah</code>, the <code>_forof</code> postposit is meant to differentiate those who should act upon the command, not those who should receive it.  So although <code>daisy</code> the fridge knows the <code>secret_code</code>, it will not act upon it.  Technically <code>daisy</code> will not tell anyone of the secret code, unless  <code>bahh</code>, <code>tahh</code>, and <code>thah</code> or a higher ranking thingy asks for it.</p>
+<p><code>daisy</code> has not gossipy like <code>tahh</code> and <code>thah</code>, since it has changed its default setting for get gossip (<code>set_gossip()</code>) from true to false (<code>set_gossip(false)</code>) so will keep its blockchain in tact, but has its crosschains broken. Unless it caves into gossip and want to get all the gossip is has missed since it set its <em>'catch-up-on-gossip'</em> setting to false.  Note a thingy can set its gossip to particular thingies, group of thingies, genera of thingy, <em>etc.</em>.</p>
+<blockquote>
+<h3 id="step-4b-attention-please">Step 4b: Attention please</h3>
+</blockquote>
+<p><code>alif</code> continues...</p>
+<h3 id="robot-alif_5">Robot <code>alif</code></h3>
+<table>
+<thead>
+<tr>
+<th align="center">caller</th>
+<th align="center">*hash</th>
+<th align="center">←hash</th>
+<th align="center">↓hash</th>
+<th align="center">↑hash</th>
+<th>Diego commands<br/><em>Human talk</em></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>alif</code></td>
+<td align="center">1169</td>
+<td align="center">a5ca</td>
+<td align="center">bab3</td>
+<td align="center">9778</td>
+<td>    <code>call_robot()_forof(bahh,tahh,thah)_unanimous()?!;</code><br/><br/><em>Roll Call! This is a roll call for robots <code>bahh</code>, <code>tahh</code>, and, <code>thah</code>!</em></td>
+</tr>
+</tbody>
+</table>
+<p>The <code>call_</code> verb demands a reply, and in this actual case a <code>_unanimous</code> reply. So the others respond...</p>
+<h3 id="robot-bahh_1">Robot  <code>bahh</code></h3>
+<table>
+<thead>
+<tr>
+<th align="center">caller</th>
+<th align="center">*hash</th>
+<th align="center">←hash</th>
+<th align="center">↓hash</th>
+<th align="center">↑hash</th>
+<th>Diego commands<br/><em>Human talk</em></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>alif</code></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">1169</td>
+<td align="center">a5ca</td>
+<td><code>call_robot()_forof(bahh,tahh,thah)_unanimous()?!;</code><br/><br/><em>Roll Call! This is a roll call for robots <code>bahh</code>, <code>tahh</code>, and, <code>thah</code>!</em></td>
+</tr>
+<tr>
+<td align="center"><code>bahh</code></td>
+<td align="center">a14b</td>
+<td align="center">53ce</td>
+<td align="center">910a</td>
+<td align="center">1169</td>
+<td><code>request_gossip()_last(910a)_recent(1169)_forof(alif);</code><br/><br/><em>Hey, <code>alif</code>, I'm confused, am I missing something you said earlier?</em></td>
+</tr>
+<tr>
+<td align="center"><code>alif</code></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">a651</td>
+<td align="center">910a</td>
+<td><code>found_tool(5mm spanner)_forof(Bob)_value(false);</code></td>
+</tr>
+<tr>
+<td align="center"><code>alif</code></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">44de</td>
+<td align="center">a651</td>
+<td><code>goto_mist(the_mist)_me()?:;</code></td>
+</tr>
+<tr>
+<td align="center"><code>alif</code></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">2e11</td>
+<td align="center">44de</td>
+<td><code>goto_mist(the_mist)_me()_success(+103, successful goto);</code></td>
+</tr>
+<tr>
+<td align="center"><code>alif</code></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">a5ca</td>
+<td align="center">2e11</td>
+<td><code>add_valid(+103, arrival at location)</code><br/>      <code>_givento(goto)_appliedto(mist)_specificto(the_mist);</code></td>
+</tr>
+<tr>
+<td align="center"><code>alif</code></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">b707</td>
+<td align="center">a5ca</td>
+<td><code>proclaim_var(secret_code)_value(1234)_forof(bahh,tahh,thah);</code><br/><br/><em>The <code>secret_code</code> is <code>1234</code>, got it!</em></td>
+</tr>
+<tr>
+<td align="center"><code>bahh</code></td>
+<td align="center">40c2</td>
+<td align="center">a14b</td>
+<td align="center"></td>
+<td align="center">1169</td>
+<td><code>here_me();</code><br/><br/><em>Here!</em></td>
+</tr>
+<tr>
+<td align="center"><code>tahh</code></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">4eae</td>
+<td align="center">1169</td>
+<td><code>here_me();</code></td>
+</tr>
+<tr>
+<td align="center"><code>thah</code></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">b28f</td>
+<td align="center">1169</td>
+<td><code>here_me();</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="robot-tahh_1">Robot  <code>tahh</code></h3>
+<table>
+<thead>
+<tr>
+<th align="center">caller</th>
+<th align="center">*hash</th>
+<th align="center">←hash</th>
+<th align="center">↓hash</th>
+<th align="center">↑hash</th>
+<th>Diego commands<br/><em>Human talk</em></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>alif</code></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">1169</td>
+<td align="center">32a2</td>
+<td><code>call_robot()_forof(bahh,tahh,thah)_unanimous()?!;</code><br/><br/><em>Roll Call for <code>bahh</code>, <code>tahh</code>, and, <code>thah</code>!</em></td>
+</tr>
+<tr>
+<td align="center"><code>tahh</code></td>
+<td align="center">4eae</td>
+<td align="center">5c52</td>
+<td align="center"></td>
+<td align="center">1169</td>
+<td><code>here_me();</code><br/><br/><em>I'm here <code>alif</code>!</em></td>
+</tr>
+<tr>
+<td align="center"><code>bahh</code></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">40c2</td>
+<td align="center">1169</td>
+<td><code>here_me();</code></td>
+</tr>
+<tr>
+<td align="center"><code>thah</code></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">b28f</td>
+<td align="center">1169</td>
+<td><code>here_me();</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="robot-thah_1">Robot  <code>thah</code></h3>
+<table>
+<thead>
+<tr>
+<th align="center">caller</th>
+<th align="center">*hash</th>
+<th align="center">←hash</th>
+<th align="center">↓hash</th>
+<th align="center">↑hash</th>
+<th>Diego commands<br/><em>Human talk</em></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>alif</code></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">1169</td>
+<td align="center">32a2</td>
+<td><code>call_robot()_forof(bahh,tahh,thah)_unanimous()?!;</code><br/><br/><em>Roll Call!</em></td>
+</tr>
+<tr>
+<td align="center"><code>thah</code></td>
+<td align="center">b28f</td>
+<td align="center">107a</td>
+<td align="center"></td>
+<td align="center">1169</td>
+<td><code>here_me();</code><br/><br/><em>Present and correct!</em></td>
+</tr>
+<tr>
+<td align="center"><code>bahh</code></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">40c2</td>
+<td align="center">1169</td>
+<td><code>here_me();</code></td>
+</tr>
+<tr>
+<td align="center"><code>tahh</code></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">4eae</td>
+<td align="center">1169</td>
+<td><code>here_me();</code></td>
+</tr>
+</tbody>
+</table>
+<p>Robots <code>tahh</code> and <code>thah</code> have a straightforward conversation to the roll call.  As for robot <code>bahh</code> we can see one side of its conversation with <code>alif</code>, so let's look at <code>alif</code>'s crosschain hashtable first...</p>
+<h3 id="robot-alif_6">Robot <code>alif</code></h3>
+<table>
+<thead>
+<tr>
+<th align="center">caller</th>
+<th align="center">*hash</th>
+<th align="center">←hash</th>
+<th align="center">↓hash</th>
+<th align="center">↑hash</th>
+<th>Diego commands<br/><em>Human talk</em></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>bahh</code></td>
+<td align="center">da16</td>
+<td align="center">1169</td>
+<td align="center">a14b</td>
+<td align="center">53ce</td>
+<td><code>request_cmd(32a2)_forof(alif);</code><br/><br/><em>Roll Call! This is a roll call for robots <code>bahh</code>, <code>tahh</code>, and, <code>thah</code>!</em></td>
+</tr>
+</tbody>
+</table>
+<p><code>bahh</code> | 32a2<br/><br/><em>Hey, <code>alif</code>, I'm confused, am I missing something you said earlier?</em></p>
+<hr/>
+<p>e028----886481fbf8af</p>
+<p>e15d3907-477d-44af-bf5f-e67758423484</p>
+<p>newbi</p>
+<blockquote>
+<h3 id="look-into-my-eyes">Look into my eyes...</h3>
+</blockquote>
+<p><code>alif</code> continues...</p>
+<h3 id="robot-alif_7">Robot <code>alif</code></h3>
+<table>
+<thead>
+<tr>
+<th align="center">caller</th>
+<th align="center">*hash</th>
+<th align="center">←hash</th>
+<th align="center">↓hash</th>
+<th align="center">↑hash</th>
+<th>Diego commands<br/><em>Human talk</em></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>alif</code></td>
+<td align="center">32a2</td>
+<td align="center">b707</td>
+<td align="center"><code>ask_stat(eye_colour);</code><br/>What colour eyes do you have?</td>
+<td align="center">4904</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="robot-alif_8">Robot <code>alif</code></h3>
+<table>
+<thead>
+<tr>
+<th align="center">caller</th>
+<th>cmd.</th>
+<th align="center">*hash</th>
+<th align="center">←hash</th>
+<th align="center">↓hash</th>
+<th align="center">↑hash</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>alif</code></td>
+<td><code>ask_stat(eye_colour);</code><br/>What colour eyes do you have?</td>
+<td align="center">4904</td>
+<td align="center">b707</td>
+<td align="center"></td>
+<td align="center">32a2</td>
+</tr>
+<tr>
+<td align="center"><code>alif</code></td>
+<td><code>ask_stat(sock_colour);</code><br/>What colour socks do you have?</td>
+<td align="center"></td>
+<td align="center">4904</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+<p>, and then asking everyone in <code>the mist</code> their eye colours and colours of their socks. </p>
+<p>Everyone in the mist hears <code>alif</code> ask for the colour of their eyes...</p>
+<h3 id="robot-bahh_2">Robot  <code>bahh</code></h3>
+<table>
+<thead>
+<tr>
+<th align="center">caller</th>
+<th>cmd.</th>
+<th align="center">*hash</th>
+<th align="center">←hash</th>
+<th align="center">↓hash</th>
+<th align="center">↑hash</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>alif</code></td>
+<td><code>ask_stat(eye_colour);</code><br/>What colour eyes do you have?</td>
+<td align="center">b707</td>
+<td align="center">0f57</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><code>bahh</code></td>
+<td><code>tell_stat(eye_colour)_value(#4a83b6);</code><br/>Blue</td>
+<td align="center">b9f2</td>
+<td align="center">9599</td>
+<td align="center">8a85</td>
+<td align="center">b707</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<p>----90bbe3eb</p>
+<h3 id="robot-tahh_2">Robot  <code>tahh</code></h3>
+<table>
+<thead>
+<tr>
+<th align="center">caller</th>
+<th>cmd.</th>
+<th align="center">*hash</th>
+<th align="center">←hash</th>
+<th align="center">↓hash</th>
+<th align="center">↑hash</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>alif</code></td>
+<td><code>ask_stat(sock_colour);</code><br/>What colour socks do you have?</td>
+<td align="center">7b72</td>
+<td align="center">8771</td>
+<td align="center">4904</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><code>tahh</code></td>
+<td>Blue</td>
+<td align="center">c269</td>
+<td align="center">7b72</td>
+<td align="center"></td>
+<td align="center">4904</td>
+</tr>
+<tr>
+<td align="center"><code>bahh</code></td>
+<td>Brown</td>
+<td align="center">bdfc</td>
+<td align="center">c269</td>
+<td align="center">eab7</td>
+<td align="center">4904</td>
+</tr>
+</tbody>
+</table>
+<p>| <code>alif</code> | <code>ask_stat(eye_colour);</code><br/>What colour eyes do you have? | 2b38 | b577 |b707 |
+| <code>alif</code> | <code>ask_stat(sock_colour);</code><br/>What colour socks do you have? | 274b | 2b38 | 4904 |
+| <code>bahh</code> | <code>tell_stat(eye_colour)_value(#4a83b6);</code><br/>Well, <code>alif</code> I have blue eyes. | 8a85 | 274b | | b707 |
+| <code>tahh</code> | Blue | 5fd2 | 4f09 | c269 | 4904 |
+| <code>bahh</code> | Brown | eab7 | 5fd2 | | 4904 |</p>
+<h3 id="robot-thah_2">Robot  <code>thah</code></h3>
+<table>
+<thead>
+<tr>
+<th align="center">caller</th>
+<th>cmd.</th>
+<th align="center">*hash</th>
+<th align="center">←hash</th>
+<th align="center">↓hash</th>
+<th align="center">↑hash</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>alif</code></td>
+<td><code>ask_stat(eye_colour);</code><br/>What colour eyes do you have?</td>
+<td align="center">f0d4</td>
+<td align="center">5d16</td>
+<td align="center">b707</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><code>alif</code></td>
+<td><code>ask_stat(sock_colour);</code><br/>What colour socks do you have?</td>
+<td align="center">532a</td>
+<td align="center">f0d4</td>
+<td align="center">4904</td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+<p>| <code>bahh</code> | <code>tell_stat(eye_colour)_value(#4a83b6);</code><br/>Blue | 4714 | 4904 | 8a85 | b707 |
+| <code>tahh</code> | Blue | 05fb | cec8 | c269 | 4904 |
+| <code>bahh</code> | Brown | 4bee | 05fb | eab7 | 4904 |</p>
+<pre><code class="language-Diego">begin_action(goto_the_mist)_givento(goto)_appliedto(mist)_specificto(the_mist)_forwhat(robot);
+    goto_point(base) ? : ;
+    go_route(base_to_mist) ? with_point(mist_centre)_report() : report_err();
+    with_action(goto_the_mist)_msg(⚙️me⚙️ @ the mist);
+end_action(goto_the_mist);
+</code></pre>
+<p>_givento({verb})
+_appliedto({object})
+_specificto({postpos})
+_forwhat(object_moniker)
+_forwho()</p>
+<hr/>
+<p><code>grant_shell()_allowfor({moniker1|uuid1}[, ... {moniker_n|uuid_n}])_for({moniker1|uuid1}[, ... {moniker_n|uuid_n}]);</code>
+<code>grant_shell()_allowforme()_for({moniker1|uuid1}[, ... {moniker_n|uuid_n}]);</code></p>
+<pre><code class="language-Diego">? add_valid({code},{description})       : add_error({code},{description})
+
+
+set_discriminat(progeny)_givento(call)_value(true);
+
+progeny
+inherit
+initial
+menage
+
+
+
+set_discrimat(progeny)_givento(begin)_appliedto(instruct)_value(true);
+
+set_discriminat({disciminat_type})_givento({verb})_appliedto_({object})_value({value});
+
+
+</code></pre>
+<h3 id="human-fred_2">Human <code>Fred</code></h3>
+<table>
+<thead>
+<tr>
+<th align="center">caller</th>
+<th>cmd.</th>
+<th align="center">*hash</th>
+<th align="center">←hash</th>
+<th align="center">↓hash</th>
+<th align="center">↑hash</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="robot-alif_9">Robot <code>alif</code></h3>
+<table>
+<thead>
+<tr>
+<th align="center">caller</th>
+<th>cmd.</th>
+<th align="center">*hash</th>
+<th align="center">←hash</th>
+<th align="center">↓hash</th>
+<th align="center">↑hash</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>alif</code></td>
+<td><code>proclaim_var(secret_code)_value(1234);</code><br/>The secret code is 1234</td>
+<td align="center">0f57</td>
+<td align="center">9c1c</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><code>alif</code></td>
+<td><code>ask_stat(eye_colour);</code><br/>What colour eyes do you have?</td>
+<td align="center">b707</td>
+<td align="center">0f57</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><code>alif</code></td>
+<td><code>ask_stat(sock_colour);</code><br/>What colour socks do you have?</td>
+<td align="center">4904</td>
+<td align="center">b707</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><code>bahh</code></td>
+<td><code>tell_stat(eye_colour)_value(#4a83b6);</code><br/>Blue</td>
+<td align="center">4714</td>
+<td align="center">4904</td>
+<td align="center">8a85</td>
+<td align="center">b707</td>
+</tr>
+<tr>
+<td align="center"><code>tahh</code></td>
+<td>Blue</td>
+<td align="center">05fb</td>
+<td align="center">cec8</td>
+<td align="center">c269</td>
+<td align="center">4904</td>
+</tr>
+<tr>
+<td align="center"><code>bahh</code></td>
+<td>Brown</td>
+<td align="center">4bee</td>
+<td align="center">05fb</td>
+<td align="center">eab7</td>
+<td align="center">4904</td>
+</tr>
+</tbody>
+</table>
+<h3 id="robot-bahh_3">Robot  <code>bahh</code></h3>
+<table>
+<thead>
+<tr>
+<th align="center">caller</th>
+<th>cmd.</th>
+<th align="center">*hash</th>
+<th align="center">←hash</th>
+<th align="center">↓hash</th>
+<th align="center">↑hash</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>alif</code></td>
+<td><code>proclaim_var(secret_code)_value(1234);</code><br/>The secret code is 1234</td>
+<td align="center">b577</td>
+<td align="center">b041</td>
+<td align="center">0f57</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><code>alif</code></td>
+<td><code>ask_stat(eye_colour);</code><br/>What colour eyes do you have?</td>
+<td align="center">2b38</td>
+<td align="center">b577</td>
+<td align="center">b707</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><code>alif</code></td>
+<td><code>ask_stat(sock_colour);</code><br/>What colour socks do you have?</td>
+<td align="center">274b</td>
+<td align="center">2b38</td>
+<td align="center">4904</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><code>bahh</code></td>
+<td><code>tell_stat(eye_colour)_value(#4a83b6);</code><br/>Blue</td>
+<td align="center">8a85</td>
+<td align="center">274b</td>
+<td align="center"></td>
+<td align="center">b707</td>
+</tr>
+<tr>
+<td align="center"><code>tahh</code></td>
+<td>Blue</td>
+<td align="center">5fd2</td>
+<td align="center">4f09</td>
+<td align="center">c269</td>
+<td align="center">4904</td>
+</tr>
+<tr>
+<td align="center"><code>bahh</code></td>
+<td>Brown</td>
+<td align="center">eab7</td>
+<td align="center">5fd2</td>
+<td align="center"></td>
+<td align="center">4904</td>
+</tr>
+</tbody>
+</table>
+<h3 id="robot-tahh_3">Robot  <code>tahh</code></h3>
+<table>
+<thead>
+<tr>
+<th align="center">caller</th>
+<th>cmd.</th>
+<th align="center">*hash</th>
+<th align="center">←hash</th>
+<th align="center">↓hash</th>
+<th align="center">↑hash</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>alif</code></td>
+<td><code>proclaim_var(secret_code)_value(1234);</code><br/>The secret code is 1234</td>
+<td align="center">8771</td>
+<td align="center">aae6</td>
+<td align="center">0f57</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><code>alif</code></td>
+<td><code>ask_stat(sock_colour);</code><br/>What colour socks do you have?</td>
+<td align="center">7b72</td>
+<td align="center">8771</td>
+<td align="center">4904</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><code>tahh</code></td>
+<td>Blue</td>
+<td align="center">c269</td>
+<td align="center">7b72</td>
+<td align="center"></td>
+<td align="center">4904</td>
+</tr>
+<tr>
+<td align="center"><code>bahh</code></td>
+<td>Brown</td>
+<td align="center">bdfc</td>
+<td align="center">c269</td>
+<td align="center">eab7</td>
+<td align="center">4904</td>
+</tr>
+<tr>
+<td align="center"><code>bahh</code></td>
+<td><code>tell_stat(eye_colour)_value(#4a83b6);</code><br/>Blue</td>
+<td align="center">69da</td>
+<td align="center">bdfc</td>
+<td align="center">8a85</td>
+<td align="center">b707</td>
+</tr>
+</tbody>
+</table>
+<h3 id="robot-thah_3">Robot  <code>thah</code></h3>
+<table>
+<thead>
+<tr>
+<th align="center">caller</th>
+<th>cmd.</th>
+<th align="center">*hash</th>
+<th align="center">←hash</th>
+<th align="center">↓hash</th>
+<th align="center">↑hash</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>alif</code></td>
+<td><code>ask_stat(eye_colour);</code><br/>What colour eyes do you have?</td>
+<td align="center">f0d4</td>
+<td align="center">5d16</td>
+<td align="center">b707</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><code>alif</code></td>
+<td><code>ask_stat(sock_colour);</code><br/>What colour socks do you have?</td>
+<td align="center">532a</td>
+<td align="center">f0d4</td>
+<td align="center">4904</td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+<pre><code>  e13d 81b7
+</code></pre>
+<p><code>tahh</code> : <code>ask_cmd(b707,8a85)_for(bahh);</code>
+<code>bahh</code> : <code>ask_stat(eyes_colour)_from(alif)_for(tahh);</code></p>
+</div>
+</div><footer>
+<div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
+<a class="btn btn-neutral float-left" href="../crosschain/" title="Crosschain Technology"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+<a class="btn btn-neutral float-right" href="../lexicon/" title="Lexicon">Next <span class="icon icon-circle-arrow-right"></span></a>
+</div>
+<hr/>
+<div role="contentinfo">
+<!-- Copyright etc -->
+</div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+</div>
+</div>
+</section>
+</div>
+<div aria-label="Versions" class="rst-versions" role="note">
+<span class="rst-current-version" data-toggle="rst-current-version">
+<span><a href="../crosschain/" style="color: #fcfcfc">« Previous</a></span>
+<span><a href="../lexicon/" style="color: #fcfcfc">Next »</a></span>
+</span>
+</div>
+<script>var base_url = '../..';</script>
+<script defer="" src="../../js/theme_extra.js"></script>
+<script defer="" src="../../js/theme.js"></script>
+<script defer="" src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script defer="" src="https://unpkg.com/mermaid@8.8.4/dist/mermaid.min.js"></script>
+<script defer="" src="../../search/main.js"></script>
+<script defer="">
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,2052 @@
+<!DOCTYPE html>
+
+<html class="writer-html5" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="http://diego.dev/physic/obj/battery/" rel="canonical"/>
+<link href="../../../img/favicon.ico" rel="shortcut icon"/>
+<title>Battery - Diego</title>
+<link href="../../../css/theme.css" rel="stylesheet"/>
+<link href="../../../css/theme_extra.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" rel="stylesheet"/>
+<link href="../../../extra.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet"/>
+<script>
+        // Current page data
+        var mkdocs_page_name = "Battery";
+        var mkdocs_page_input_path = "physic/obj/battery.md";
+        var mkdocs_page_url = "/physic/obj/battery/";
+      </script>
+<script defer="" src="../../../js/jquery-3.6.0.min.js"></script>
+<!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body class="wy-body-for-nav" role="document">
+<div class="wy-grid-for-nav">
+<nav class="wy-nav-side stickynav" data-toggle="wy-nav-shift">
+<div class="wy-side-scroll">
+<div class="wy-side-nav-search">
+<a class="icon icon-home" href="../../.."> Diego
+        </a><div role="search">
+<form action="../../../search.html" class="wy-form" id="rtd-search-form" method="get">
+<input name="q" placeholder="Search docs" title="Type search term here" type="text"/>
+</form>
+</div>
+</div>
+<div aria-label="Navigation menu" class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../..">Diego</a>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../Commands/">Tutorial</a>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../Diego%20Introduction/">Diego Introduction</a>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../gettingstarted/">Diego Getting Started</a>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../intro/">Diego Introduction</a>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../syntax/">Language Syntax</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Abstract</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../abstract/abstract/">Abstract</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Condit</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/condit/after/">After (condition)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/condit/at/">At (condition)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/condit/before/">Before (condit)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/condit/during/">During</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/condit/temporat/">Temporal At (condit)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/condit/temporfrom/">Temporal From (condition)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/condit/temporto/">Temporal To (condition)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/condit/to/">To (condition)</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Const</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/const/e/">Euler's Constant (constant)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/const/ln10/">Natural Logarithm of 10 (constant)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/const/ln10e/">Base 10 Logarithm of e (constant)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/const/ln2/">Natural Logarithm of 2 (constant)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/const/pi/">Pi (constant)</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Dt</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/dt/circle/">Circle (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/dt/cube/">Cube (shape)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/dt/cuboid/">Cuboid (shape)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/dt/datatype/">Datatype (datatype)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/dt/dt/">Datatype (statement)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/dt/plicat/">Plication (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/dt/pyramid/">Pyramid (shape)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/dt/rect/">Rectangle (shape)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/dt/square/">Square (shape)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/dt/tri/">Triangle (shape)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/dt/variant/">Variant (datatype)</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Flow</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/flow/for/">For Loop (looper)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/flow/unless/">Unless (flow)</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Funct</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/funct/abs/">Absolute Value (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/funct/acos/">Arc Cosine (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/funct/calc/">Calculation (expression)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/funct/dt/">Datatype (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/funct/equals/">Equals (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/funct/false/">False (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/funct/fix/">Fixed Points (method)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/funct/is/">Is (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/funct/json/">JavaScript Object Notation (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/funct/length/">Length (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/funct/ln/">Natural logarithm (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/funct/ln2/">Natural Logarithm of 2 (constant)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/funct/not/">Not (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/funct/now/">Now (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/funct/parse/">Parse (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/funct/ret/">Return (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/funct/slice/">Slice</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/funct/sql/">Structured Query Language (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/funct/stringify/">stringify (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/funct/true/">True (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/funct/value/">Value</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/funct/xyz/">XYZ (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/funct/zdt/">Zoned Date Time (function)</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Meta</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/meta/verb/">Verb</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Obj</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/obj/arran/">Arrangement (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/obj/ary/">Array (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/obj/blob/">Binary Large Object (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/obj/cal/">Calendar (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/obj/clump/">Clump (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/obj/counter/">Counter (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/obj/datetime/">Datetime (datatype)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/obj/declar/">Declaration (of datatype)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/obj/deed/">Deed (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/obj/dict/">Dictionary (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/obj/enum/">Enumeration (object) / Enumerator (object) / Enumerator (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/obj/err/">Error (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/obj/flag/">Flag (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/obj/float/">Floating Point Number (datatye)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/obj/funct/">Function (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/obj/hash/">Hash (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/obj/indent/">Indenture (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/obj/int/">Integer (datatype)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/obj/lexi/">Lexikon (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/obj/list/">List (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/obj/matrix/">Matrix (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/obj/namespace/">Namespace (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/obj/pkg/">Package (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/obj/point/">Point (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/obj/refuse/">Refuse (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/obj/str/">String (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/obj/tempor/">Temporal (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/obj/tensor/">Tensor (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/obj/time/">Time (datatype)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/obj/val/">Valuable (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/obj/var/">Variable (object) / Variant (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/obj/variant/">Variant (datatype)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/obj/vector/">Vector (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/obj/yush/">Yush (object)</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Op</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/op/arithmetic/">Arithmetic Operators (operator)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/op/exponent/">Exponent Operators (operator)</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Prop</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/prop/">Index (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/prop/adicity/">Adicity (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/prop/arity/">Arity (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/prop/day/">Day (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/prop/fortn/">Fortnight (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/prop/freq/">Temporal Frequency (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/prop/hr/">Hour (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/prop/instant/">Instant (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/prop/keys/">Keys (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/prop/min/">Minute (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/prop/ms/">Millisecond (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/prop/mth/">Month (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/prop/now/">Now</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/prop/s/">Second (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/prop/txt/">Text (expression)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/prop/yr/">Year (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/prop/%CE%BCs/">Microsecond (property)</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Setter</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/setter/decpl/">Fixed Decimal Places (setter)</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Special</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/special/elvish/">Elvish Operator (special)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/special/me/">Me (special)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/special/reference/">Reference (special)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/special/semicolon/">Statement Terminator (special)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/special/you/">You (special)</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Verb</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/verb/add/">Add (verb)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/verb/apt/">Advanced Package Tool (verb)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/verb/kill/">Kill (verb)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/verb/set/">Set (verb)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../abstract/verb/with/">With (verb)</a>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Corpus</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../corpus/corpus/">Corpus</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../corpus/iot/">Internet of Things [IoT]</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Iot</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../corpus/iot/iot/">Internet of Things [IoT] (concept)</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Mavlink</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../corpus/mavlink/mavlink/">Translation of MAVLink Commands</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../corpus/mavlink/set_home/">Set home</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Robotis</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../corpus/robotis/burger/">Burger</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Tasks</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../corpus/tasks/caterpillar/">The Caterpillar Chain</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../corpus/tasks/packing_up/">Packing Up (task)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../corpus/tasks/tank_intercept/">Tank intercept</a>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Lexicon</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../lexicon/brackets/">Brackets</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../lexicon/crosschain/">Crosschain Technology</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../lexicon/hash_blockchain/">Demonstrating crosschain in a robot example</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../lexicon/lexicon/">Lexicon</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../lexicon/obs_and_subs/">Obs and Subs (object)</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../lexicon/routing/">Routing</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../lexicon/thingy/">Thingies</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Condit</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../lexicon/condit/_indextopic/">Conditions</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Obj</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../lexicon/obj/discriminat/">`discriminat`</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../lexicon/obj/fail/">Fail, Failure</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../lexicon/obj/me/">me</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../lexicon/obj/navigation_planning/">Navigation Planning</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../lexicon/obj/ob_and_subs/">`ob`s and `sub`s</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../lexicon/obj/watchdog/">watchdog</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Thgy</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../lexicon/thgy/_atozindex/"> atozindex</a>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Metaphysic</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../metaphysic/metaphysic/">Metaphysic</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Condit</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/condit/around/">Around (condit)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/condit/to/">To (condit)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/condit/toward/">Toward / Towards (condit)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/condit/using/">Using (condit)</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Dt</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/dt/dd/">Decimal Degrees (unit)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/dt/dm/">Decimetres (unit)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/dt/dms/">Degrees, Minutes, Seconds (unit)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/dt/ft/">Feet (unit)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/dt/imperial/">Imperial Units (unit)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/dt/inch/">Inch (unit)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/dt/kt/">Knots (unit)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/dt/league/">League (unit)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/dt/lmh/">Low-Medium-High (datatype)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/dt/m/">SI Units of Length (unit)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/dt/num/">Number (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/dt/rad/">Radians (unit)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/dt/si/">International System of Units (unit)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/dt/thou/">Thousandth of an Inch (unit)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/dt/yrd/">Yard (unit)</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Funct</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/funct/bearing/">Bearing (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/funct/datum/">Datum (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/funct/durat/">Duration (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/funct/elev/">Elevation (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/funct/geojson/">GeoJSON (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/funct/heading/">Heading (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/funct/hyster/">Hysteresis (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/funct/kml/">Keyhole Markup Language [kml] (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/funct/latlngalt/">Latitude, Longitude, Altitude (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/funct/loiterat/">Loiter At (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/funct/parse/">Parse (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/funct/percentof/">Percentage Of (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/funct/shape/">Shape (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/funct/shapefile/">Shapefile (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/funct/unit/">Unit (function)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/funct/waitat/">Wait At (function)</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Obj</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/obj/ambit/">Ambit (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/obj/apparat/">Apparatus (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/obj/arena/">Arena (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/obj/attr/">Attribute (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/obj/behavi/">Behaviour (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/obj/box/">Box (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/obj/channel/">Channel (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/obj/clepe/">Clepe (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/obj/cloud/">Cloud (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/obj/cognomen/">Cognomen (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/obj/consens/">Consens</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/obj/console/">Console (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/obj/coords/">Coordinates (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/obj/corridor/">Corridor (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/obj/course/">Course (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/obj/device/">Device (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/obj/displacem/">Displacement</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/obj/display/">Display (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/obj/distan/">Distance (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/obj/duct/">Duct (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/obj/euler/">Euler (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/obj/excurs/">Excursions (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/obj/floor/">Floor (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/obj/fog/">Fog (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/obj/foreign/">Foreigner (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/obj/funnel/">Funnel</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/obj/gait/">Gait (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/obj/gate/">Gate (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/obj/geofence/">Geofence (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/obj/ghost/">Ghost (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/obj/goal/">Goal (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/obj/instruct/">Instructors</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/obj/itiner/">Itinerary (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/obj/ject/">Ject</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/obj/journ/">Journey (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/obj/lease/">Lease (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/obj/lennuf/">Lennuf (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/obj/liken/">Liken (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/obj/litsan/">Line in the Sand (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/obj/map/">Map</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/obj/marack/">Marack (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/obj/metric/">Metric (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/obj/mission/">Mission (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/obj/mist/">Mist (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/obj/mode/">Mode (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/obj/moniker/">Moniker (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/obj/msg/">Message (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/obj/ob/">Ob (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/obj/obstacle/">Obstacle (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/obj/path/">Path (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/obj/payload/">Payload</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/obj/pipe/">Pipe (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/obj/poll/">Poll (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/obj/pose/">Pose (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/obj/printer/">Printer (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/obj/proc/">Procedure (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/obj/prog/">Programme (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/obj/puff/">Puff</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/obj/roi/">Region of Interest (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/obj/rosary/">Rosary (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/obj/route/">Finders</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/obj/scalar/">Scalar (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/obj/sensor/">Sensor</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/obj/sobriquet/">Sobriquet (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/obj/spec/">Specification (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/obj/spine/">Spine (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/obj/spox/">Spox (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/obj/stacle/">Stacle (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/obj/stance/">Stance (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/obj/sub/">Sub (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/obj/substacle/">Substacle (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/obj/swarm/">Swarm (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/obj/tour/">Tour (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/obj/track/">Track (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/obj/tracker/">Tracker</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/obj/transmiss/">Transmission (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/obj/trip/">Trip (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/obj/valid/">Valid (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/obj/viapoint/">Viapoint (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/obj/way/">Way (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/obj/waypoint/">Waypoint</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/obj/workspace/">Workspace</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/obj/wtf/">Where's The Fire [wtf] (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/obj/zone/">Zone (object)</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Prop</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/prop/distan/">Distance (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/prop/ergcon/">Energy Consumption (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/prop/ident/">Identity (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/prop/impetus/">Impetus (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/prop/ios/">Apple iOs (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/prop/kiwifruit/">Kiwifruit (type)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/prop/make/">Make (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/prop/model/">Model (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/prop/month/">Month (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/prop/msg/">Message (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/prop/opsys/">Operating System (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/prop/risk/">Risk (enumerator)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/prop/serialnum/">Serial Number (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/prop/type/">Type (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/prop/urgency/">Urgency (enumerator)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/prop/vegetable/">Vegetable (type)</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Setter</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/setter/authority/">Authority (setter)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/setter/consens/">Consensus (setter)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/setter/decisiven/">Decisiveness (setter)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/setter/euler/">Euler (setter)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/setter/mapprovider/">Map Provider (setter)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/setter/quatern/">Quaternion (setter)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/setter/ranking/">Ranking (setter)</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Special</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/special/them/">Them (special)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/special/us/">Us (special)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/special/we/">We (special)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/special/you/">You (special)</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Verb</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/verb/alert/">Alert (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/verb/ask/">Inquirers</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/verb/begin/">Begin (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/verb/calc/">Calculate (verb)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/verb/call/">Call</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/verb/envelop/">envelop</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/verb/find/">`find_`</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/verb/follow/">Follow (verb)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/verb/form/">Form (verb)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/verb/go/">Go (verb)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/verb/goto/">Goto (verb)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/verb/kill/">Kill (verb)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/verb/label/">Label (verb)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/verb/lead/">Lead (verb)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/verb/listen/">Listen (verb)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/verb/load/">Payloaders</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/verb/loiter/">Loiter</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/verb/merge/">Merge (verb)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/verb/msg/">Message (verb)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/verb/poll/">Poll (verb)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/verb/see/">see</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/verb/set/">Set (verb)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/verb/study/">Study</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/verb/swarm/">Swarm (verb)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/verb/tail/">Tail Behind (verb)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metaphysic/verb/unload/">Payloaders</a>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Opendogv3</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../opendogv3/bom/">Bill of Materials</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Physic</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../physic/">Physic</a>
+</li>
+<li class="toctree-l1 current"><a class="reference internal current" href="#">Obj</a>
+<ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../actuat/">Actuator (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../adsb/">Automatic Dependent Surveillance–Broadcast (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../apparat/">Apparatus (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../applian/">Appliance (object)</a>
+</li>
+<li class="toctree-l2 current"><a class="reference internal current" href="./">Battery</a>
+<ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="#syntax">Syntax</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#properties">Properties</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#algorithm-values">Algorithm Values</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#fettle-values">Fettle Values</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#health-values">Health Values</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#status-values">Status Values</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#technology-values">Technology Values</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#metrics">Metrics</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#limits">Limits</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#alerts">Alerts</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../border/">Border (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../button/">Button (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../canal/">Canal (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../cat/">Cat (type)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ceiling/">Ceiling (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../cellphone/">Cell Phone (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../chair/">Chair (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../colo/">Colour Sensor (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../compon/">Component (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../computer/">Computer (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../door/">Door (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../drone/">Drone (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../duct/">Duct (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../equip/">Equipment (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../finline/">Finish Line (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../firma/">Firma (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ghost/">Ghost (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../guide/">Guide (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../hinderan/">Hinderance (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../human/">Human (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../imu/">Inertial Measurement Unit (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ject/">Ject (object &gt; thingy &gt; thing)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../joint/">Joint (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../landmark/">Landmark</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../link/">Link (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../locon/">Location Object Context (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../mach/">Machine (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../mech/">Mechanical Thing (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../microcon/">Microcontroller (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../mobot/">Mobot (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../motor/">Motor (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../object/">Object (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../organic/">Organic (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../photoelect/">Photoelectric Sensor (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../poi/">Poi</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../rail/">Rail (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../robot/">Robot (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../roi/">Region of Interest (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../room/">Room (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../sensor/">Sensor (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../shaft/">Shaft (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../side/">Side (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../sobot/">Sobot (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../spec/">Specification (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../stair/">Stairs (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../stride/">Stride (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../switch/">Switch (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../tablet/">Tablet (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../thing/">Thing (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../thingy/">Thingy (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../tri/">Triangle (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../valley/">Valley (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../vehicle/">Vehicle (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../wall/">Wall (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../wayfind/">Wayfind (object)</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Prop</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../prop/air/">Air Speed (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../prop/alt/">Altitude (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../prop/android/">Android Operating System (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../prop/bb/">Blackberry Operating System (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../prop/cap/">Capacity (object)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../prop/country/">Country (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../prop/imei/">International Mobile Equipment Identity (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../prop/ios/">Apple® iOS™ Operating System (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../prop/opframe/">Operating Framework</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../prop/phonenum/">Telephone Number (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../prop/status/">Status (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../prop/win/">Microsoft® Windows™ Operating System (property)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../prop/win_mobile/">Microsoft® Windows Mobile (property)</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Special</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../special/world/">World (special)</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#">Verb</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../verb/alert/">Alert (verb)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../verb/enter/">Enter (verb)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../verb/exit/">Exit (verb)</a>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Tasks</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../tasks/newton_loop/">The Newton Loop</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tasks/persian_chain/">The Persian Chain</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tasks/recharge/">Recharge</a>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+<section class="wy-nav-content-wrap" data-toggle="wy-nav-shift">
+<nav aria-label="Mobile navigation menu" class="wy-nav-top" role="navigation">
+<i class="fa fa-bars" data-toggle="wy-nav-top"></i>
+<a href="../../..">Diego</a>
+</nav>
+<div class="wy-nav-content">
+<div class="rst-content"><div aria-label="breadcrumbs navigation" role="navigation">
+<ul class="wy-breadcrumbs">
+<li><a alt="Docs" class="icon icon-home" href="../../.."></a> »</li>
+<li>Physic »</li>
+<li>Obj »</li><li>Battery</li>
+<li class="wy-breadcrumbs-aside">
+</li>
+</ul>
+<hr/>
+</div>
+<div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
+<div class="section" itemprop="articleBody">
+<h1 id="battery">Battery</h1>
+<p>The <code>battery</code> object represents any controllable battery contained within and/or managed by a thingy. Posits of a <code>battery</code> are inherited to the <code>powersupply</code> object, most usually when a <code>battery</code> becomes a/the power supply (temporary ot otherwise) of a thingy.</p>
+<h2 id="syntax">Syntax</h2>
+<p>The default declaration syntax is to provide at least the battery name. The shortened version is <code>batt</code>. The <code>_type</code> can be added at declaration or after declaration:</p>
+<p>       <code>add_battery(</code><em><code>moniker</code></em><code>);</code><br/>
+       <code>add_batt(</code><em><code>moniker</code></em><code>);</code><br/>
+       <code>add_batt(</code><em><code>moniker</code></em><code>)_type(</code><em><code>type</code></em><code>);</code><br/>
+       <code>add_batt({</code><em><code>type</code></em><code>},</code><em><code>moniker</code></em><code>);</code></p>
+<p>Multiple batteries can be added as batteries or as part of a <code>bank</code> of batteries (treated like a farm or array). Battery banks can be indexed:</p>
+<p>       <code>add_battery(</code><em><code>moniker1</code></em><code>,</code><em><code>moniker2,...</code></em><code>);</code><br/>
+       <code>add_bank(</code><em><code>moniker</code></em><code>)_battery(</code><em><code>moniker1</code></em><code>,</code><em><code>moniker2,...</code></em><code>)_index(</code><em><code>index-form</code></em><code>,</code><em><code>base</code></em><code>);</code><br/>
+       <code>add_bank(</code><em><code>moniker</code></em><code>)_batt_({</code><em><code>type</code></em><code>},</code><em><code>moniker1</code></em><code>,</code><em><code>moniker2,...</code></em><code>)</code></p>
+<p>Each battery is implied to have one default associated charge (one charger per battery), it is, therefore, not neccessary to declare or named, by can be:</p>
+<p>       <code>add_battery(</code><em><code>moniker</code></em><code>)_charger();</code><br/>
+       <code>add_batt(</code><em><code>moniker</code></em><code>)_charger(</code><em><code>moniker</code></em><code>);</code><br/></p>
+<p>Any declaration/creation/serialisation on <code>battery</code>(s) can be undertaken by thingies themselves (<em>i.e.</em> using <code>me()</code>), by another authority on to the target thingy, or, as depiction of another thingy.</p>
+<h2 id="properties">Properties</h2>
+<table>
+<thead>
+<tr>
+<th>property</th>
+<th>access</th>
+<th>notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a name="algor"></a><code>_charger()_algorithm(algorithm)</code><br/><code>_charger()_algor(algorithm)</code><br/><code>_charger()_algo(algorithm)</code></td>
+<td>read (write by me)</td>
+<td><strong>Charging Algorithm</strong><br/>The charging algorithm, if known, that the charger using.  The <code>charger</code> postposit is implied with every battery.  The <code>_algorithm</code>/<code>algor</code>/<code>algo</code> postposit is implied to be a child of <code>charger</code>.<br/>See <a href="#algor_">Algorithm Values</a></td>
+</tr>
+<tr>
+<td><a name="fettle"></a><code>_fettle()</code><br/><code>_fettle()_enum()</code></td>
+<td>read (write by human)</td>
+<td><strong>Battery Fettle</strong><br/>A human observation of the state of appearance of the battery.<br/>See <a href="#fettle_">Fettle Values</a></td>
+</tr>
+<tr>
+<td><a name="health"></a><code>_health()</code><br/><code>_health()_enum()</code></td>
+<td>read only</td>
+<td><strong>Battery Health</strong><br/>The battery health, as defined within the battery logic.  It will display a string as default, unless the <code>_enum()</code> postposit is provided then it will provide a integer enumerator.<br/>See <a href="#health_">Health Values</a></td>
+</tr>
+<tr>
+<td><a name="status"></a><code>_stat()</code><br/><code>_status()</code><br/><code>_stat()_enum()</code><br/><code>_status()_enum()</code></td>
+<td>read only</td>
+<td><strong>Battery Status</strong><br/>The battery status, as defined within the battery logic.  It will display a string as default, unless the <code>_enum()</code> postposit is provided then it will provide a integer enumerator.<br/>See <a href="#stat_">Status Values</a></td>
+</tr>
+<tr>
+<td><a name="tech"></a><code>_tech(</code><em><code>technology</code></em><code>)</code><br/><code>_technology(</code><em><code>technology</code></em><code>)</code><br/><code>_chem(</code><em><code>technology</code></em><code>)</code><br/><code>_chemistry(</code><em><code>technology</code></em><code>)</code><br/><em><code>...</code></em><code>_enum()</code></td>
+<td>read (write by me)</td>
+<td><strong>Battery Technology</strong><br/>The technology (or chemistry) composition of the battery.  This is usually defined at declaration. It will display a string as default, unless the <code>_enum()</code> postposit is provided then it will provide a integer enumerator. This can only be set/changed by <code>me</code>.<br/>See <a href="#tech_">Technology Values</a></td>
+</tr>
+</tbody>
+</table>
+<p><a name="algor_"></a></p>
+<h3 id="algorithm-values">Algorithm Values</h3>
+<table>
+<thead>
+<tr>
+<th><code>algorithm</code></th>
+<th><code>enum</code></th>
+<th>notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>unknown</code>, <code>error</code></td>
+<td><code>-1</code></td>
+<td>unknown</td>
+</tr>
+<tr>
+<td><em><code>null</code></em></td>
+<td><code>0</code></td>
+<td>no charge/unknown</td>
+</tr>
+<tr>
+<td><code>none</code>, <code>no-charge</code></td>
+<td><code>1</code></td>
+<td>no charge</td>
+</tr>
+<tr>
+<td><code>trickle</code>, <code>slow</code></td>
+<td><code>2</code></td>
+<td>Trickle charge, slow speed</td>
+</tr>
+<tr>
+<td><code>fast</code></td>
+<td><code>3</code></td>
+<td>fast charge</td>
+</tr>
+<tr>
+<td><code>norm</code>, <code>normal</code>, <code>standard</code></td>
+<td><code>4</code></td>
+<td>normal speed charge</td>
+</tr>
+<tr>
+<td><code>adaptive</code>, <code>adpt</code></td>
+<td><code>5</code></td>
+<td>adaptive charge, dynamically adjusted speed</td>
+</tr>
+<tr>
+<td><code>custom</code></td>
+<td><code>6</code></td>
+<td>custom charge algorithm</td>
+</tr>
+<tr>
+<td><code>long</code>, <code>longlife</code>, <code>long-life</code></td>
+<td><code>7</code></td>
+<td>slow speed, longer life charge algorithm</td>
+</tr>
+</tbody>
+</table>
+<p><a name="fettle_"></a></p>
+<h3 id="fettle-values">Fettle Values</h3>
+<table>
+<thead>
+<tr>
+<th><code>fettle</code></th>
+<th><code>enum</code></th>
+<th>notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>unknown</code>, <code>error</code></td>
+<td><code>-1</code></td>
+<td></td>
+</tr>
+<tr>
+<td><em><code>null</code></em>, <code>not checked</code></td>
+<td><code>0</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>good</code></td>
+<td><code>1</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>ok</code></td>
+<td><code>2</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>bad-condition</code></td>
+<td><code>3</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>deteriorated</code></td>
+<td><code>4</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><a name="health_"></a></p>
+<h3 id="health-values">Health Values</h3>
+<table>
+<thead>
+<tr>
+<th><code>health</code></th>
+<th><code>enum</code></th>
+<th>notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>unknown</code>, <code>error</code></td>
+<td><code>-1</code></td>
+<td>unknown</td>
+</tr>
+<tr>
+<td><em><code>null</code></em></td>
+<td><code>0</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>good</code></td>
+<td><code>1</code></td>
+<td>good</td>
+</tr>
+<tr>
+<td><code>overheat</code></td>
+<td><code>2</code></td>
+<td>overheat</td>
+</tr>
+<tr>
+<td><code>dead</code></td>
+<td><code>3</code></td>
+<td>dead</td>
+</tr>
+<tr>
+<td><code>overvoltage</code>, <code>overvolt</code></td>
+<td><code>4</code></td>
+<td>unknown</td>
+</tr>
+<tr>
+<td><code>unspec</code>, <code>unspec-failure</code></td>
+<td><code>5</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>cold</code></td>
+<td><code>6</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>watchdog</code>, <code>watchdog-expire</code>, <code>watchdog-timer</code></td>
+<td><code>7</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>safety</code>, <code>safety-expire</code>, <code>safety-timer</code></td>
+<td><code>8</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><a name="stat_"></a></p>
+<h3 id="status-values">Status Values</h3>
+<table>
+<thead>
+<tr>
+<th><code>stat</code>, <code>status</code></th>
+<th><code>enum</code></th>
+<th>notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>unknown</code>, <code>error</code></td>
+<td><code>-1</code></td>
+<td>unknown</td>
+</tr>
+<tr>
+<td><em><code>null</code></em>, <code>no</code>, <code>none</code></td>
+<td><code>0</code></td>
+<td>null state</td>
+</tr>
+<tr>
+<td><code>charging</code></td>
+<td><code>1</code></td>
+<td>charging</td>
+</tr>
+<tr>
+<td><code>discharging</code></td>
+<td><code>2</code></td>
+<td>discharging</td>
+</tr>
+<tr>
+<td><code>not charging</code>, <code>no</code>, <code>none</code></td>
+<td><code>0</code></td>
+<td>not charging</td>
+</tr>
+<tr>
+<td><code>full</code></td>
+<td><code>4</code></td>
+<td>full</td>
+</tr>
+</tbody>
+</table>
+<p><a name="tech_"></a></p>
+<h3 id="technology-values">Technology Values</h3>
+<table>
+<thead>
+<tr>
+<th><code>technology</code></th>
+<th><code>enum</code></th>
+<th>notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>unknown</code></td>
+<td><code>-1</code></td>
+<td>Unknown or not specified battery technology. Question target thingy with <code>ask_</code>.</td>
+</tr>
+<tr>
+<td><code>null</code></td>
+<td><code>0</code></td>
+<td>No available property for battery technology.  Check to see if battery exists (use <code>_exists()</code>).</td>
+</tr>
+<tr>
+<td><code>NiMH</code>, <code>Ni–MH</code>, <code>nimh</code></td>
+<td><code>1</code></td>
+<td>Nickel metal hydride battery.</td>
+</tr>
+<tr>
+<td><code>Li-ion</code>, <code>lion</code></td>
+<td><code>2</code></td>
+<td>Lithium cobaltate (lithium-ion cobalt) battery.</td>
+</tr>
+<tr>
+<td><code>LiPo</code>, <code>lipo</code></td>
+<td><code>3</code></td>
+<td>Lithium polymer battery (lithium-ion polymer) battery.</td>
+</tr>
+<tr>
+<td><code>LiFE</code>, <code>LiFEPO</code>, <code>life</code></td>
+<td><code>4</code></td>
+<td>Lithium iron phosphate battery.</td>
+</tr>
+<tr>
+<td><code>NiCad</code>, <code>Ni-Cd</code>, <code>nicd</code></td>
+<td><code>5</code></td>
+<td>Nickel–cadmium battery.</td>
+</tr>
+<tr>
+<td><code>LMO</code>, <code>LiMO</code>, <code>limo</code></td>
+<td><code>6</code></td>
+<td>Lithium ion manganese oxide battery.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="metrics">Metrics</h2>
+<table>
+<thead>
+<tr>
+<th>metric</th>
+<th>notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>_volt(</code><em><code>voltage</code></em><code>)</code>, <code>_voltage(</code><em><code>voltage</code></em><code>)</code><br> <code>_volt()_value(</code><em><code>voltage</code></em><code>)</code>, <code>_voltage()_value(</code><em><code>voltage</code></em><code>)</code></br></td>
+<td>The  voltage of the battery charge in volts (V).  If the thingy is intent on using another measurement then <code>_unit</code> must be supplied with intra-thingy communication.<br>Variable assignment is available, using posits such as <code>_tovar</code> etc.<br>See also <a href="#voltstate">voltage limits</a>.</br></br></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>metric</th>
+<th>notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>_volt(</code><em><code>voltage-state</code></em><code>)</code>, <code>_voltage(</code><em><code>voltage-state</code></em><code>)</code></td>
+<td>Voltage state</td>
+</tr>
+<tr>
+<td><code>_volt(</code><em><code>voltage-state</code></em><code>)_value(</code><em><code>voltage</code></em><code>)</code>, <code>_voltage(</code><em><code>voltage-state</code></em><code>)_value(</code><em><code>voltage</code></em><code>)</code><br><code>_volt(</code><em><code>voltage</code></em><code>)_limit(</code><em><code>voltage-state</code></em><code>)</code>, <code>_voltage(</code><em><code>voltage</code></em><code>)_limit(</code><em><code>voltage-state</code></em><code>)</code><br><code>_volt()_limit(max)_value(</code><em><code>voltage</code></em><code>)</code>, <code>_voltage()_limit(max)_value(</code><em><code>voltage</code></em><code>)</code></br></br></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>| <code>_volt(</code><em><code>[voltage-state]</code></em><code>)_value(</code><em><code>voltage</code></em><code>)</code>, <code>_voltage(</code><em><code>[voltage-state]</code></em><code>)_value(</code><em><code>voltage</code></em><code>)</code> | Voltage status with value (in volts) |
+| <code>_volt(</code><em><code>[voltage-state]</code></em><code>)_value(</code><em><code>voltage</code></em><code>)</code>, <code>_voltage(</code><em><code>[voltage-state]</code></em><code>)</code> | Voltage value (in volts) |</p>
+<p>Examples:
+ robot <code>alpha</code>, <code>beta</code></p>
+<pre><code class="language-Deigo">
+// Robot `alpha` asks robot `beta` for its battery temperature
+ask_robot(beta)_battery(b1)_temp();
+tell_robot(alpha)_battery(b1)_temp(23.3);
+
+// Robot `alpha` asks robot `beta` for its max battery temperature in the last 30 minutes
+ask_robot(beta)_battery(b1)_temp()_limit(max)_inlast(30, min);
+tell_robot(alpha)_battery(b1)_temp(23.3)_limit(max)_inlast(30, min)_datetime(2021-10-09 13:06:21.402);
+</code></pre>
+<pre><code class="language-Diego">
+add_bank(bat-array)_battery(b1, b2, b3, b4)_index(0)_chem(nimh);
+with_robot(beta)_bank(bat-array);
+
+with_robot(beta)_battery(b2)_volt()_limit(maxdesign)_value(5.00);
+
+
+
+
+</code></pre>
+<p>_</p>
+<h2 id="limits">Limits</h2>
+<h2 id="alerts">Alerts</h2>
+<h1 id="voltage-vbat">Voltage (VBAT)</h1>
+<table>
+<thead>
+<tr>
+<th>syntax</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>_volt(</code><em><code>voltage-state</code></em><code>)</code>, <code>_voltage(</code><em><code>voltage-state</code></em><code>)</code></td>
+<td>Voltage state request.</td>
+</tr>
+<tr>
+<td><code>_volt(</code><em><code>voltage-state</code></em><code>)_value(</code><em><code>voltage</code></em><code>)</code>, <code>_voltage(</code><em><code>voltage-state</code></em><code>)_value(</code><em><code>voltage</code></em><code>)</code><br><code>_volt(</code><em><code>voltage</code></em><code>)_limit(</code><em><code>voltage-state</code></em><code>)</code>, <code>_voltage(</code><em><code>voltage</code></em><code>)_limit(</code><em><code>voltage-state</code></em><code>)</code><br><code>_volt()_limit(max)_value(</code><em><code>voltage</code></em><code>)</code>, <code>_voltage()_limit(max)_value(</code><em><code>voltage</code></em><code>)</code></br></br></td>
+<td>Voltage state response.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><code>voltage-state</code></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>max</code></td>
+<td>Reports the maximum VBAT voltage permitted for the battery, during charging.</td>
+</tr>
+<tr>
+<td><code>min</code></td>
+<td>Reports the minimum VBAT voltage permitted for the battery, during discharging.</td>
+</tr>
+<tr>
+<td><code>maxdes</code>, <code>maxdesign</code></td>
+<td>Reports the designed maximum safe VBAT voltage permitted for the battery, during charging.</td>
+</tr>
+<tr>
+<td><code>mindes</code>, <code>mindesign</code></td>
+<td>Reports the designed minimum safe VBAT voltage permitted for the battery, during discharging.</td>
+</tr>
+<tr>
+<td><code>now</code></td>
+<td>Reports an instant, single VBAT voltage reading for the battery. This value is not averaged/smoothed.</td>
+</tr>
+<tr>
+<td><code>ocv</code></td>
+<td>The 'Open Circuit Voltage' of the battery.</td>
+</tr>
+</tbody>
+</table>
+<p>fettle</p>
+<p>health()
+// Stats:
+| posit | |
+| --- | --- |</p>
+<p>This property can be used for platform shutdown policies and
+can be useful for initial capacity estimations. |
+| <code>max</code> | maximum voltage |</p>
+<pre><code>POWER_SUPPLY_PROP_VOLTAGE_MAX,
+POWER_SUPPLY_PROP_VOLTAGE_MIN,
+POWER_SUPPLY_PROP_VOLTAGE_MAX_DESIGN,
+POWER_SUPPLY_PROP_VOLTAGE_MIN_DESIGN,
+POWER_SUPPLY_PROP_VOLTAGE_NOW,
+POWER_SUPPLY_PROP_VOLTAGE_AVG,
+POWER_SUPPLY_PROP_VOLTAGE_OCV,
+POWER_SUPPLY_PROP_VOLTAGE_BOOT,
+</code></pre>
+<p>| <code>_temp(</code><em><code>temperature</code></em><code>)</code>, <code>_temperature(</code><em><code>temperature</code></em><code>)</code> | Temperature in Degrees Celsius or <code>_unit()</code> |
+| <code>_current</code> | Negative when discharging in Amps (A) or <code>_unit()</code> |
+| <code>_charge _ah()</code> | Current charge in Ah |</p>
+<pre><code>int ocv_temp[POWER_SUPPLY_OCV_TEMP_MAX];/* celsius */
+int temp_ambient_alert_min;             /* celsius */
+int temp_ambient_alert_max;             /* celsius */
+int temp_alert_min;                     /* celsius */
+int temp_alert_max;                     /* celsius */
+int temp_min;                           /* celsius */
+int temp_max;                           /* celsius */
+
+struct power_supply_resistance_temp_table {
+int temp;   /* celsius */
+int resistance; /* internal resistance percent */
+
+    `_temp(`*`)_level(`-`temperature-level`*`)_value(`*`temperature-value`*`)`
+    _temp()
+
+| `temperature-level` | |
+| `max` | maximum
+</code></pre>
+<p>_temp()_level(max)</p>
+<p>with_battery(ba1)_temp()_level(max)</p>
+<p>begin_battery(ba1)_temp()_level(max)</p>
+<pre><code>// Do something when the temperature of the battery gets to max
+</code></pre>
+<p>end_battery(ba1)_temp()_level(max)</p>
+<pre><code>POWER_SUPPLY_PROP_TEMP,
+POWER_SUPPLY_PROP_TEMP_MAX,
+POWER_SUPPLY_PROP_TEMP_MIN,
+POWER_SUPPLY_PROP_TEMP_ALERT_MIN,
+POWER_SUPPLY_PROP_TEMP_ALERT_MAX,
+POWER_SUPPLY_PROP_TEMP_AMBIENT,
+POWER_SUPPLY_PROP_TEMP_AMBIENT_ALERT_MIN,
+POWER_SUPPLY_PROP_TEMP_AMBIENT_ALERT_MAX,
+</code></pre>
+<p>};</p>
+<h1 id="define-power_supply_ocv_temp_max-20">define POWER_SUPPLY_OCV_TEMP_MAX 20</h1>
+<pre><code>struct power_supply_battery_ocv_table *ocv_table[POWER_SUPPLY_OCV_TEMP_MAX];
+int ocv_table_size[POWER_SUPPLY_OCV_TEMP_MAX];
+struct power_supply_resistance_temp_table *resist_table;
+</code></pre>
+<p>| <code>_cap</code>, <code>_capacity</code> | Capacity in Ah (last full capacity) |
+| <code>_capdes()</code>, <code>_capacitydesign()</code> | Capacity in Ah (design capacity) |</p>
+<p>| `_float32 percentage       # Charge percentage on 0 to 1 range  (If unmeasured NaN)
+uint8   power_supply_status     # The charging status as reported. Values defined above
+uint8   power_supply_health     # The battery health metric. Values defined above
+uint8   power_supply_technology # The battery chemistry. Values defined above
+bool    present          # True if the battery is present</p>
+<p>)_voltage()_temp()</p>
+<h1 id="constants-are-chosen-to-match-the-enums-in-the-linux-kernel">Constants are chosen to match the enums in the linux kernel</h1>
+<h1 id="defined-in-includelinuxpower_supplyh-as-of-version-37">defined in include/linux/power_supply.h as of version 3.7</h1>
+<h1 id="the-one-difference-is-for-style-reasons-the-constants-are">The one difference is for style reasons the constants are</h1>
+<h1 id="all-uppercase-not-mixed-case">all uppercase not mixed case.</h1>
+<p>std_msgs/Header  header
+float32 voltage          # Voltage in Volts (Mandatory)
+float32 temperature      # Temperature in Degrees Celsius (If unmeasured NaN)
+float32 current          # Negative when discharging (A)  (If unmeasured NaN)
+float32 charge           # Current charge in Ah  (If unmeasured NaN)
+float32 capacity         # Capacity in Ah (last full capacity)  (If unmeasured NaN)
+float32 design_capacity  # Capacity in Ah (design capacity)  (If unmeasured NaN)
+float32 percentage       # Charge percentage on 0 to 1 range  (If unmeasured NaN)
+uint8   power_supply_status     # The charging status as reported. Values defined above
+uint8   power_supply_health     # . Values defined above
+uint8   power_supply_technology # The battery chemistry. Values defined above
+bool    present          # True if the battery is present</p>
+<p>float32[] cell_voltage   # An array of individual cell voltages for each cell in the pack
+                         # If individual voltages unknown but number of cells known set each to NaN
+float32[] cell_temperature # An array of individual cell temperatures for each cell in the pack
+                           # If individual temperatures unknown but number of cells known set each to NaN
+string location          # The location into which the battery is inserted. (slot number or plug)
+string serial_number     # The best approximation of the battery serial number</p>
+<p>/<em> SPDX-License-Identifier: GPL-2.0-only </em>/
+/<em>
+ *  Universal power supply monitor class
+ *
+ *  Copyright © 2007  Anton Vorontsov <a href="mailto:cbou@mail.ru">cbou@mail.ru</a>
+ *  Copyright © 2004  Szabolcs Gyurko
+ *  Copyright © 2003  Ian Molton <a href="mailto:spyro@f2s.com">spyro@f2s.com</a>
+ *
+ *  Modified: 2004, Oct     Szabolcs Gyurko
+ </em>/</p>
+<h1 id="ifndef-linux_power_supply_h">ifndef <strong>LINUX_POWER_SUPPLY_H</strong></h1>
+<h1 id="define-linux_power_supply_h">define <strong>LINUX_POWER_SUPPLY_H</strong></h1>
+<h1 id="include">include <linux device.h=""></linux></h1>
+<h1 id="include_1">include <linux workqueue.h=""></linux></h1>
+<h1 id="include_2">include <linux leds.h=""></linux></h1>
+<h1 id="include_3">include <linux spinlock.h=""></linux></h1>
+<h1 id="include_4">include <linux notifier.h=""></linux></h1>
+<p>/<em>
+ * All voltages, currents, charges, energies, time and temperatures in uV,
+ * µA, µAh, µWh, seconds and tenths of degree Celsius unless otherwise
+ * stated. It's driver's job to convert its raw values to units in which
+ * this class operates.
+ </em>/</p>
+<p>enum {
+    POWER_SUPPLY_HEALTH_UNKNOWN = 0,
+    POWER_SUPPLY_HEALTH_GOOD,
+    POWER_SUPPLY_HEALTH_OVERHEAT,
+    POWER_SUPPLY_HEALTH_DEAD,
+    POWER_SUPPLY_HEALTH_OVERVOLTAGE,
+    POWER_SUPPLY_HEALTH_UNSPEC_FAILURE,
+    POWER_SUPPLY_HEALTH_COLD,
+    POWER_SUPPLY_HEALTH_WATCHDOG_TIMER_EXPIRE,
+    POWER_SUPPLY_HEALTH_SAFETY_TIMER_EXPIRE,
+    POWER_SUPPLY_HEALTH_OVERCURRENT,
+    POWER_SUPPLY_HEALTH_CALIBRATION_REQUIRED,
+    POWER_SUPPLY_HEALTH_WARM,
+    POWER_SUPPLY_HEALTH_COOL,
+    POWER_SUPPLY_HEALTH_HOT,
+};</p>
+<p>enum {
+    POWER_SUPPLY_TECHNOLOGY_UNKNOWN = 0,
+    POWER_SUPPLY_TECHNOLOGY_NiMH,
+    POWER_SUPPLY_TECHNOLOGY_LION,
+    POWER_SUPPLY_TECHNOLOGY_LIPO,
+    POWER_SUPPLY_TECHNOLOGY_LiFe,
+    POWER_SUPPLY_TECHNOLOGY_NiCd,
+    POWER_SUPPLY_TECHNOLOGY_LiMn,
+};</p>
+<p>_cap()_level()
+enum {
+    POWER_SUPPLY_CAPACITY_LEVEL_UNKNOWN = 0,
+    POWER_SUPPLY_CAPACITY_LEVEL_CRITICAL,
+    POWER_SUPPLY_CAPACITY_LEVEL_LOW,
+    POWER_SUPPLY_CAPACITY_LEVEL_NORMAL,
+    POWER_SUPPLY_CAPACITY_LEVEL_HIGH,
+    POWER_SUPPLY_CAPACITY_LEVEL_FULL,
+};</p>
+<p>enum {
+    POWER_SUPPLY_SCOPE_UNKNOWN = 0,
+    POWER_SUPPLY_SCOPE_SYSTEM,
+    POWER_SUPPLY_SCOPE_DEVICE,
+};</p>
+<p>enum power_supply_property {
+    /<em> Properties of type `int' </em>/
+    POWER_SUPPLY_PROP_STATUS = 0,
+    POWER_SUPPLY_PROP_CHARGE_TYPE,
+    POWER_SUPPLY_PROP_HEALTH,
+    POWER_SUPPLY_PROP_PRESENT,
+    POWER_SUPPLY_PROP_ONLINE,
+    POWER_SUPPLY_PROP_AUTHENTIC,
+    POWER_SUPPLY_PROP_TECHNOLOGY,
+    POWER_SUPPLY_PROP_CYCLE_COUNT,</p>
+<pre><code>POWER_SUPPLY_PROP_CURRENT_MAX,
+POWER_SUPPLY_PROP_CURRENT_NOW,
+POWER_SUPPLY_PROP_CURRENT_AVG,
+POWER_SUPPLY_PROP_CURRENT_BOOT,
+POWER_SUPPLY_PROP_POWER_NOW,
+POWER_SUPPLY_PROP_POWER_AVG,
+POWER_SUPPLY_PROP_CHARGE_FULL_DESIGN,
+POWER_SUPPLY_PROP_CHARGE_EMPTY_DESIGN,
+POWER_SUPPLY_PROP_CHARGE_FULL,
+POWER_SUPPLY_PROP_CHARGE_EMPTY,
+POWER_SUPPLY_PROP_CHARGE_NOW,
+POWER_SUPPLY_PROP_CHARGE_AVG,
+POWER_SUPPLY_PROP_CHARGE_COUNTER,
+POWER_SUPPLY_PROP_CONSTANT_CHARGE_CURRENT,
+POWER_SUPPLY_PROP_CONSTANT_CHARGE_CURRENT_MAX,
+POWER_SUPPLY_PROP_CONSTANT_CHARGE_VOLTAGE,
+POWER_SUPPLY_PROP_CONSTANT_CHARGE_VOLTAGE_MAX,
+POWER_SUPPLY_PROP_CHARGE_CONTROL_LIMIT,
+POWER_SUPPLY_PROP_CHARGE_CONTROL_LIMIT_MAX,
+POWER_SUPPLY_PROP_CHARGE_CONTROL_START_THRESHOLD, /* in percents! */
+POWER_SUPPLY_PROP_CHARGE_CONTROL_END_THRESHOLD, /* in percents! */
+POWER_SUPPLY_PROP_INPUT_CURRENT_LIMIT,
+POWER_SUPPLY_PROP_INPUT_VOLTAGE_LIMIT,
+POWER_SUPPLY_PROP_INPUT_POWER_LIMIT,
+POWER_SUPPLY_PROP_ENERGY_FULL_DESIGN,
+POWER_SUPPLY_PROP_ENERGY_EMPTY_DESIGN,
+POWER_SUPPLY_PROP_ENERGY_FULL,
+POWER_SUPPLY_PROP_ENERGY_EMPTY,
+POWER_SUPPLY_PROP_ENERGY_NOW,
+POWER_SUPPLY_PROP_ENERGY_AVG,
+POWER_SUPPLY_PROP_CAPACITY, /* in percents! */
+POWER_SUPPLY_PROP_CAPACITY_ALERT_MIN, /* in percents! */
+POWER_SUPPLY_PROP_CAPACITY_ALERT_MAX, /* in percents! */
+POWER_SUPPLY_PROP_CAPACITY_ERROR_MARGIN, /* in percents! */
+POWER_SUPPLY_PROP_CAPACITY_LEVEL,
+
+
+
+
+POWER_SUPPLY_PROP_TIME_TO_EMPTY_NOW,
+POWER_SUPPLY_PROP_TIME_TO_EMPTY_AVG,
+POWER_SUPPLY_PROP_TIME_TO_FULL_NOW,
+POWER_SUPPLY_PROP_TIME_TO_FULL_AVG,
+POWER_SUPPLY_PROP_TYPE, /* use power_supply.type instead */
+POWER_SUPPLY_PROP_USB_TYPE,
+POWER_SUPPLY_PROP_SCOPE,
+POWER_SUPPLY_PROP_PRECHARGE_CURRENT,
+POWER_SUPPLY_PROP_CHARGE_TERM_CURRENT,
+POWER_SUPPLY_PROP_CALIBRATE,
+POWER_SUPPLY_PROP_MANUFACTURE_YEAR,
+POWER_SUPPLY_PROP_MANUFACTURE_MONTH,
+POWER_SUPPLY_PROP_MANUFACTURE_DAY,
+/* Properties of type `const char *' */
+POWER_SUPPLY_PROP_MODEL_NAME,
+POWER_SUPPLY_PROP_MANUFACTURER,
+POWER_SUPPLY_PROP_SERIAL_NUMBER,
+</code></pre>
+<p>};</p>
+<p>enum power_supply_type {
+    POWER_SUPPLY_TYPE_UNKNOWN = 0,
+    POWER_SUPPLY_TYPE_BATTERY,
+    POWER_SUPPLY_TYPE_UPS,
+    POWER_SUPPLY_TYPE_MAINS,
+    POWER_SUPPLY_TYPE_USB,          /<em> Standard Downstream Port </em>/
+    POWER_SUPPLY_TYPE_USB_DCP,      /<em> Dedicated Charging Port </em>/
+    POWER_SUPPLY_TYPE_USB_CDP,      /<em> Charging Downstream Port </em>/
+    POWER_SUPPLY_TYPE_USB_ACA,      /<em> Accessory Charger Adapters </em>/
+    POWER_SUPPLY_TYPE_USB_TYPE_C,       /<em> Type C Port </em>/
+    POWER_SUPPLY_TYPE_USB_PD,       /<em> Power Delivery Port </em>/
+    POWER_SUPPLY_TYPE_USB_PD_DRP,       /<em> PD Dual Role Port </em>/
+    POWER_SUPPLY_TYPE_APPLE_BRICK_ID,   /<em> Apple Charging Method </em>/
+    POWER_SUPPLY_TYPE_WIRELESS,     /<em> Wireless </em>/
+};</p>
+<p>enum power_supply_usb_type {
+    POWER_SUPPLY_USB_TYPE_UNKNOWN = 0,
+    POWER_SUPPLY_USB_TYPE_SDP,      /<em> Standard Downstream Port </em>/
+    POWER_SUPPLY_USB_TYPE_DCP,      /<em> Dedicated Charging Port </em>/
+    POWER_SUPPLY_USB_TYPE_CDP,      /<em> Charging Downstream Port </em>/
+    POWER_SUPPLY_USB_TYPE_ACA,      /<em> Accessory Charger Adapters </em>/
+    POWER_SUPPLY_USB_TYPE_C,        /<em> Type C Port </em>/
+    POWER_SUPPLY_USB_TYPE_PD,       /<em> Power Delivery Port </em>/
+    POWER_SUPPLY_USB_TYPE_PD_DRP,       /<em> PD Dual Role Port </em>/
+    POWER_SUPPLY_USB_TYPE_PD_PPS,       /<em> PD Programmable Power Supply </em>/
+    POWER_SUPPLY_USB_TYPE_APPLE_BRICK_ID,   /<em> Apple Charging Method </em>/
+};</p>
+<p>enum power_supply_notifier_events {
+    PSY_EVENT_PROP_CHANGED,
+};</p>
+<p>union power_supply_propval {
+    int intval;
+    const char *strval;
+};</p>
+<p>struct device_node;
+struct power_supply;</p>
+<p>/<em> Run-time specific power supply configuration </em>/
+struct power_supply_config {
+    struct device_node <em>of_node;
+    struct fwnode_handle </em>fwnode;</p>
+<pre><code>/* Driver private data */
+void *drv_data;
+
+/* Device specific sysfs attributes */
+const struct attribute_group **attr_grp;
+
+char **supplied_to;
+size_t num_supplicants;
+</code></pre>
+<p>};</p>
+<p>/<em> Description of power supply </em>/
+struct power_supply_desc {
+    const char <em>name;
+    enum power_supply_type type;
+    const enum power_supply_usb_type </em>usb_types;
+    size_t num_usb_types;
+    const enum power_supply_property *properties;
+    size_t num_properties;</p>
+<pre><code>/*
+ * Functions for drivers implementing power supply class.
+ * These shouldn't be called directly by other drivers for accessing
+ * this power supply. Instead use power_supply_*() functions (for
+ * example power_supply_get_property()).
+ */
+int (*get_property)(struct power_supply *psy,
+            enum power_supply_property psp,
+            union power_supply_propval *val);
+int (*set_property)(struct power_supply *psy,
+            enum power_supply_property psp,
+            const union power_supply_propval *val);
+/*
+ * property_is_writeable() will be called during registration
+ * of power supply. If this happens during device probe then it must
+ * not access internal data of device (because probe did not end).
+ */
+int (*property_is_writeable)(struct power_supply *psy,
+                 enum power_supply_property psp);
+void (*external_power_changed)(struct power_supply *psy);
+void (*set_charged)(struct power_supply *psy);
+
+/*
+ * Set if thermal zone should not be created for this power supply.
+ * For example for virtual supplies forwarding calls to actual
+ * sensors or other supplies.
+ */
+bool no_thermal;
+/* For APM emulation, think legacy userspace. */
+int use_for_apm;
+</code></pre>
+<p>};</p>
+<p>struct power_supply {
+    const struct power_supply_desc *desc;</p>
+<pre><code>char **supplied_to;
+size_t num_supplicants;
+
+char **supplied_from;
+size_t num_supplies;
+struct device_node *of_node;
+
+/* Driver private data */
+void *drv_data;
+
+/* private */
+struct device dev;
+struct work_struct changed_work;
+struct delayed_work deferred_register_work;
+spinlock_t changed_lock;
+bool changed;
+bool initialized;
+bool removing;
+atomic_t use_cnt;
+</code></pre>
+<h1 id="ifdef-config_thermal">ifdef CONFIG_THERMAL</h1>
+<pre><code>struct thermal_zone_device *tzd;
+struct thermal_cooling_device *tcd;
+</code></pre>
+<h1 id="endif">endif</h1>
+<h1 id="ifdef-config_leds_triggers">ifdef CONFIG_LEDS_TRIGGERS</h1>
+<pre><code>struct led_trigger *charging_full_trig;
+char *charging_full_trig_name;
+struct led_trigger *charging_trig;
+char *charging_trig_name;
+struct led_trigger *full_trig;
+char *full_trig_name;
+struct led_trigger *online_trig;
+char *online_trig_name;
+struct led_trigger *charging_blink_full_solid_trig;
+char *charging_blink_full_solid_trig_name;
+</code></pre>
+<h1 id="endif_1">endif</h1>
+<p>};</p>
+<p>/<em>
+ * This is recommended structure to specify static power supply parameters.
+ * Generic one, parametrizable for different power supplies. Power supply
+ * class itself does not use it, but that's what implementing most platform
+ * drivers, should try reuse for consistency.
+ </em>/</p>
+<p>struct power_supply_info {
+    const char *name;
+    int technology;
+    int voltage_max_design;
+    int voltage_min_design;
+    int charge_full_design;
+    int charge_empty_design;
+    int energy_full_design;
+    int energy_empty_design;
+    int use_for_apm;
+};</p>
+<p>struct power_supply_battery_ocv_table {
+    int ocv;    /<em> microVolts </em>/
+    int capacity;   /<em> percent </em>/
+};</p>
+<p>/<em>
+ * This is the recommended struct to manage static battery parameters,
+ * populated by power_supply_get_battery_info(). Most platform drivers should
+ * use these for consistency.
+ * Its field names must correspond to elements in enum power_supply_property.
+ * The default field value is -EINVAL.
+ * Power supply class itself doesn't use this.
+ </em>/</p>
+<p>struct power_supply_battery_info {
+    int energy_full_design_uwh;     /<em> microWatt-hours </em>/
+    int charge_full_design_uah;     /<em> microAmp-hours </em>/
+    int voltage_min_design_uv;      /<em> microVolts </em>/
+    int voltage_max_design_uv;      /<em> microVolts </em>/
+    int tricklecharge_current_ua;       /<em> microAmps </em>/
+    int precharge_current_ua;       /<em> microAmps </em>/
+    int precharge_voltage_max_uv;       /<em> microVolts </em>/
+    int charge_term_current_ua;     /<em> microAmps </em>/
+    int charge_restart_voltage_uv;      /<em> microVolts </em>/
+    int overvoltage_limit_uv;       /<em> microVolts </em>/
+    int constant_charge_current_max_ua; /<em> microAmps </em>/
+    int constant_charge_voltage_max_uv; /<em> microVolts </em>/
+    int factory_internal_resistance_uohm;   /<em> microOhms </em>/</p>
+<pre><code>int resist_table_size;
+</code></pre>
+<p>};</p>
+<p>extern struct atomic_notifier_head power_supply_notifier;
+extern int power_supply_reg_notifier(struct notifier_block <em>nb);
+extern void power_supply_unreg_notifier(struct notifier_block </em>nb);</p>
+<h1 id="if-is_enabledconfig_power_supply">if IS_ENABLED(CONFIG_POWER_SUPPLY)</h1>
+<p>extern struct power_supply <em>power_supply_get_by_name(const char </em>name);
+extern void power_supply_put(struct power_supply *psy);</p>
+<h1 id="else">else</h1>
+<p null_="NULL;" return="return">static inline void power_supply_put(struct power_supply <em>psy) {}
+static inline struct power_supply </em>power_supply_get_by_name(const char *name)</p>
+<h1 id="endif_2">endif</h1>
+<h1 id="ifdef-config_of">ifdef CONFIG_OF</h1>
+<p>extern struct power_supply <em>power_supply_get_by_phandle(struct device_node </em>np,
+                            const char <em>property);
+extern struct power_supply </em>devm_power_supply_get_by_phandle(
+                    struct device <em>dev, const char </em>property);</p>
+<h1 id="else-config_of">else /<em> !CONFIG_OF </em>/</h1>
+<p null_="NULL;" return="return">static inline struct power_supply *
+power_supply_get_by_phandle(struct device_node <em>np, const char </em>property)
+{ return NULL; }
+static inline struct power_supply *
+devm_power_supply_get_by_phandle(struct device <em>dev, const char </em>property)</p>
+<h1 id="endif-config_of">endif /<em> CONFIG_OF </em>/</h1>
+<p>extern int power_supply_get_battery_info(struct power_supply <em>psy,
+                     struct power_supply_battery_info </em>info);
+extern void power_supply_put_battery_info(struct power_supply <em>psy,
+                      struct power_supply_battery_info </em>info);
+extern int power_supply_ocv2cap_simple(struct power_supply_battery_ocv_table <em>table,
+                       int table_len, int ocv);
+extern struct power_supply_battery_ocv_table *
+power_supply_find_ocv2cap_table(struct power_supply_battery_info </em>info,
+                int temp, int <em>table_len);
+extern int power_supply_batinfo_ocv2cap(struct power_supply_battery_info </em>info,
+                    int ocv, int temp);
+extern int
+power_supply_temp2resist_simple(struct power_supply_resistance_temp_table <em>table,
+                int table_len, int temp);
+extern void power_supply_changed(struct power_supply </em>psy);
+extern int power_supply_am_i_supplied(struct power_supply <em>psy);
+extern int power_supply_set_input_current_limit_from_supplier(
+                     struct power_supply </em>psy);
+extern int power_supply_set_battery_charged(struct power_supply *psy);</p>
+<h1 id="ifdef-config_power_supply">ifdef CONFIG_POWER_SUPPLY</h1>
+<p>extern int power_supply_is_system_supplied(void);</p>
+<h1 id="else_1">else</h1>
+<p>static inline int power_supply_is_system_supplied(void) { return -ENOSYS; }</p>
+<h1 id="endif_3">endif</h1>
+<p>extern int power_supply_get_property(struct power_supply <em>psy,
+                enum power_supply_property psp,
+                union power_supply_propval </em>val);</p>
+<h1 id="if-is_enabledconfig_power_supply_1">if IS_ENABLED(CONFIG_POWER_SUPPLY)</h1>
+<p>extern int power_supply_set_property(struct power_supply <em>psy,
+                enum power_supply_property psp,
+                const union power_supply_propval </em>val);</p>
+<h1 id="else_2">else</h1>
+<p 0_="0;" return="return">static inline int power_supply_set_property(struct power_supply <em>psy,
+                enum power_supply_property psp,
+                const union power_supply_propval </em>val)</p>
+<h1 id="endif_4">endif</h1>
+<p>extern int power_supply_property_is_writeable(struct power_supply <em>psy,
+                    enum power_supply_property psp);
+extern void power_supply_external_power_changed(struct power_supply </em>psy);</p>
+<p>extern struct power_supply <em>__must_check
+power_supply_register(struct device </em>parent,
+                 const struct power_supply_desc <em>desc,
+                 const struct power_supply_config </em>cfg);
+extern struct power_supply <em>__must_check
+power_supply_register_no_ws(struct device </em>parent,
+                 const struct power_supply_desc <em>desc,
+                 const struct power_supply_config </em>cfg);
+extern struct power_supply <em>__must_check
+devm_power_supply_register(struct device </em>parent,
+                 const struct power_supply_desc <em>desc,
+                 const struct power_supply_config </em>cfg);
+extern struct power_supply <em>__must_check
+devm_power_supply_register_no_ws(struct device </em>parent,
+                 const struct power_supply_desc <em>desc,
+                 const struct power_supply_config </em>cfg);
+extern void power_supply_unregister(struct power_supply <em>psy);
+extern int power_supply_powers(struct power_supply </em>psy, struct device *dev);</p>
+<h1 id="define-to_power_supplydevice-container_ofdevice-struct-power_supply-dev">define to_power_supply(device) container_of(device, struct power_supply, dev)</h1>
+<p>extern void <em>power_supply_get_drvdata(struct power_supply </em>psy);
+/<em> For APM emulation, think legacy userspace. </em>/
+extern struct class *power_supply_class;</p>
+<p>static inline bool power_supply_is_amp_property(enum power_supply_property psp)
+{
+    switch (psp) {
+    case POWER_SUPPLY_PROP_CHARGE_FULL_DESIGN:
+    case POWER_SUPPLY_PROP_CHARGE_EMPTY_DESIGN:
+    case POWER_SUPPLY_PROP_CHARGE_FULL:
+    case POWER_SUPPLY_PROP_CHARGE_EMPTY:
+    case POWER_SUPPLY_PROP_CHARGE_NOW:
+    case POWER_SUPPLY_PROP_CHARGE_AVG:
+    case POWER_SUPPLY_PROP_CHARGE_COUNTER:
+    case POWER_SUPPLY_PROP_PRECHARGE_CURRENT:
+    case POWER_SUPPLY_PROP_CHARGE_TERM_CURRENT:
+    case POWER_SUPPLY_PROP_CONSTANT_CHARGE_CURRENT:
+    case POWER_SUPPLY_PROP_CONSTANT_CHARGE_CURRENT_MAX:
+    case POWER_SUPPLY_PROP_CURRENT_MAX:
+    case POWER_SUPPLY_PROP_CURRENT_NOW:
+    case POWER_SUPPLY_PROP_CURRENT_AVG:
+    case POWER_SUPPLY_PROP_CURRENT_BOOT:
+        return true;
+    default:
+        break;
+    }</p>
+<pre><code>return false;
+</code></pre>
+<p>}</p>
+<p>static inline bool power_supply_is_watt_property(enum power_supply_property psp)
+{
+    switch (psp) {
+    case POWER_SUPPLY_PROP_ENERGY_FULL_DESIGN:
+    case POWER_SUPPLY_PROP_ENERGY_EMPTY_DESIGN:
+    case POWER_SUPPLY_PROP_ENERGY_FULL:
+    case POWER_SUPPLY_PROP_ENERGY_EMPTY:
+    case POWER_SUPPLY_PROP_ENERGY_NOW:
+    case POWER_SUPPLY_PROP_ENERGY_AVG:
+    case POWER_SUPPLY_PROP_VOLTAGE_MAX:
+    case POWER_SUPPLY_PROP_VOLTAGE_MIN:
+    case POWER_SUPPLY_PROP_VOLTAGE_MAX_DESIGN:
+    case POWER_SUPPLY_PROP_VOLTAGE_MIN_DESIGN:
+    case POWER_SUPPLY_PROP_VOLTAGE_NOW:
+    case POWER_SUPPLY_PROP_VOLTAGE_AVG:
+    case POWER_SUPPLY_PROP_VOLTAGE_OCV:
+    case POWER_SUPPLY_PROP_VOLTAGE_BOOT:
+    case POWER_SUPPLY_PROP_CONSTANT_CHARGE_VOLTAGE:
+    case POWER_SUPPLY_PROP_CONSTANT_CHARGE_VOLTAGE_MAX:
+    case POWER_SUPPLY_PROP_POWER_NOW:
+        return true;
+    default:
+        break;
+    }</p>
+<pre><code>return false;
+</code></pre>
+<p>}</p>
+<h1 id="ifdef-config_power_supply_hwmon">ifdef CONFIG_POWER_SUPPLY_HWMON</h1>
+<p>int power_supply_add_hwmon_sysfs(struct power_supply <em>psy);
+void power_supply_remove_hwmon_sysfs(struct power_supply </em>psy);</p>
+<h1 id="else_3">else</h1>
+<p>static inline int power_supply_add_hwmon_sysfs(struct power_supply *psy)
+{
+    return 0;
+}</p>
+<p>static inline
+void power_supply_remove_hwmon_sysfs(struct power_supply *psy) {}</p>
+<h1 id="endif_5">endif</h1>
+<h1 id="endif-linux_power_supply_h">endif /<em> <strong>LINUX_POWER_SUPPLY_H</strong> </em>/</h1>
+<p>/<em>
+ * For systems where the charger determines the maximum battery capacity
+ * the min and max fields should be used to present these values to user
+ * space. Unused/unknown fields will not appear in sysfs.
+ </em>/</p>
+</div>
+</div><footer>
+<div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
+<a class="btn btn-neutral float-left" href="../applian/" title="Appliance (object)"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+<a class="btn btn-neutral float-right" href="../border/" title="Border (object)">Next <span class="icon icon-circle-arrow-right"></span></a>
+</div>
+<hr/>
+<div role="contentinfo">
+<!-- Copyright etc -->
+</div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+</div>
+</div>
+</section>
+</div>
+<div aria-label="Versions" class="rst-versions" role="note">
+<span class="rst-current-version" data-toggle="rst-current-version">
+<span><a href="../applian/" style="color: #fcfcfc">« Previous</a></span>
+<span><a href="../border/" style="color: #fcfcfc">Next »</a></span>
+</span>
+</div>
+<script>var base_url = '../../..';</script>
+<script defer="" src="../../../js/theme_extra.js"></script>
+<script defer="" src="../../../js/theme.js"></script>
+<script defer="" src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script defer="" src="https://unpkg.com/mermaid@8.8.4/dist/mermaid.min.js"></script>
+<script defer="" src="../../../search/main.js"></script>
+<script defer="">
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+</body>
+</html>

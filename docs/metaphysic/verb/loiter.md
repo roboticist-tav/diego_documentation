@@ -4,7 +4,7 @@ To loiter is for an animate thingy (e.g. `robot`, `human`, `organic`) to perform
 
 ## Basic Call
 
-The basic command for a thingy (such as a drone) to loiter is to use the `loiter_` verb, for example...
+The basic command for a thingy (such as a drone) to loiter is to use the `loiter_` verb, for example…
 
 ```Diego
 loiter_robot()_me();

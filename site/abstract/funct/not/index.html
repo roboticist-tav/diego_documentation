@@ -1026,12 +1026,12 @@
 <p>A logical NOT gate function for boolean or twinned expressions. <code>not</code> is the transverse of <code>equals</code> function.</p>
 <h2 id="syntax">Syntax</h2>
 <p><code>not</code> can be used as its own expression posit (<code>_not</code>) or as an operator inside another expression posit, using either: the exclamation mark (<code>!</code>); or, the 'not tilde' symbol (<code>≁</code>).</p>
-<p>       <em><code>&lt;...&gt;</code></em><code>_not(</code><em><code>expression</code></em><code>);</code><br/>
-       <em><code>&lt;...&gt;</code></em><code>_</code><em><code>&lt;expression_posit&gt;</code></em><code>(</code><em><code>...</code></em><code>!</code><em><code>...</code></em><code>);</code><br/>
-       <em><code>&lt;...&gt;</code></em><code>_</code><em><code>&lt;expression_posit&gt;</code></em><code>(</code><em><code>...</code></em><code>≁</code><em><code>...</code></em><code>);</code></p>
+<p>       <em><code>&lt;…&gt;</code></em><code>_not(</code><em><code>expression</code></em><code>);</code><br/>
+       <em><code>&lt;…&gt;</code></em><code>_</code><em><code>&lt;expression_posit&gt;</code></em><code>(</code><em><code>…</code></em><code>!</code><em><code>…</code></em><code>);</code><br/>
+       <em><code>&lt;…&gt;</code></em><code>_</code><em><code>&lt;expression_posit&gt;</code></em><code>(</code><em><code>…</code></em><code>≁</code><em><code>…</code></em><code>);</code></p>
 <p>The not operator (<code>!</code> or <code>≁</code>), can be used inside its posit <code>not</code>, but this counter-productive to the function of the logical NOT gate, however, it can be achieved.</p>
-<p>       <em><code>&lt;...&gt;</code></em><code>_not(</code><em><code>...</code></em><code>!</code><em><code>...</code></em><code>);</code><br/>
-       <em><code>&lt;...&gt;</code></em><code>_not(</code><em><code>...</code></em><code>≁</code><em><code>...</code></em><code>);</code></p>
+<p>       <em><code>&lt;…&gt;</code></em><code>_not(</code><em><code>…</code></em><code>!</code><em><code>…</code></em><code>);</code><br/>
+       <em><code>&lt;…&gt;</code></em><code>_not(</code><em><code>…</code></em><code>≁</code><em><code>…</code></em><code>);</code></p>
 <h2 id="example">Example</h2>
 <pre><code class="language-diego">add_bool(bool1);
 log_console()_valueof()_not([bool1]);             // undefined

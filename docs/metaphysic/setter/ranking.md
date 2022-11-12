@@ -13,4 +13,4 @@ Sets the ranking calculation to use when analysing results of polls and statisti
 | ```ordinal``` | Uses *ordinal ranking*, also known as "1234" ranking. |
 | ```fract``` | Uses *fractional ranking*, also known as "1 2.5 2.5 4" ranking. |
 ^See^ ^https://en.wikipedia.org/wiki/Ranking^ ^for^ ^more^ ^information.^
-#### set_ranking(*rank_type*)_to(*moniker1*, *n...*)
+#### set_ranking(*rank_type*)_to(*moniker1*, *n…*)

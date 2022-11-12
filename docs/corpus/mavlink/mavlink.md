@@ -9,7 +9,7 @@ So, this article will provide a best-approach translation of the common MAVLink 
 
 The `MAV_CMD_NAV_WAYPOINT` command will command a drone to _"navigate to waypoint"_. In Diego, this command can be achieved using the construction of the `go_` verb, the `drone` object, and, the `waypoint` child object.
 
-***Diego*** syntax allows either: the drone[^drone] (a `robot` of type `drone` or the shorthand `drone` object) _"...to travel to the waypoint"_; or, the waypoint[^wp] _"..for the drone to travel to"_. However, throughout these translations we will stick to the _moving-object-to-the-stationary-object_  approach. These commands **must**, however, include a `waypoint` child object.  There are various posits that can be used.
+***Diego*** syntax allows either: the drone[^drone] (a `robot` of type `drone` or the shorthand `drone` object) _"…to travel to the waypoint"_; or, the waypoint[^wp] _"..for the drone to travel to"_. However, throughout these translations we will stick to the _moving-object-to-the-stationary-object_  approach. These commands **must**, however, include a `waypoint` child object.  There are various posits that can be used.
 
 ### Syntax
 
@@ -53,11 +53,11 @@ See: [go](../../metaphysic/verb/go.md); [drone](../../physic/obj/drone.md); [way
 
 ## MAV_CMD_NAV_LOITER_UNLIM ([17](https://mavlink.io/en/messages/common.html#MAV_CMD_NAV_LOITER_UNLIM))
 
-The `MAV_CMD_NAV_LOITER_UNLIM` command will command a drone to, _"loiter around this waypoint an unlimited amount of time"_.  In ***Diego***, the `loiter_` verb is the direct translation. The object can be either the drone _"...to loiter around the waypoint"_, or the waypoint _"...for the drone to loiter around to"_ using the `_loiterat` postposition. The `_hold` posit (with empty parameters) is used to maintain an _"unlimited amount of time"_. There are various other postpositions that can be used.
+The `MAV_CMD_NAV_LOITER_UNLIM` command will command a drone to, _"loiter around this waypoint an unlimited amount of time"_.  In ***Diego***, the `loiter_` verb is the direct translation. The object can be either the drone _"…to loiter around the waypoint"_, or the waypoint _"…for the drone to loiter around to"_ using the `_loiterat` postposition. The `_hold` posit (with empty parameters) is used to maintain an _"unlimited amount of time"_. There are various other postpositions that can be used.
 
-Nevertheless, the use of a command to _"loiter ... [for] unlimited amount of time"_ is considered foolish.  If a drone is instructed to loiter for a unlimited time at a waypoint, when it has limited resources, it can't be expected to loiter for a *unlimited* amount of time. For instance, with no access to energy (fuel) it will surely run out of fuel and die; or, under threatening environment pressures it may suffer and die. Drones with common sense will realise the folly of this instruction and refuse to comply when it's nearing death.  The refusal is handled by the `refuse` object, and if the situation gets desperate the `wtf` object will be used.
+Nevertheless, the use of a command to _"loiter … [for] unlimited amount of time"_ is considered foolish.  If a drone is instructed to loiter for a unlimited time at a waypoint, when it has limited resources, it can't be expected to loiter for a *unlimited* amount of time. For instance, with no access to energy (fuel) it will surely run out of fuel and die; or, under threatening environment pressures it may suffer and die. Drones with common sense will realise the folly of this instruction and refuse to comply when it's nearing death.  The refusal is handled by the `refuse` object, and if the situation gets desperate the `wtf` object will be used.
 
-The foolishness of loitering forever can be seen in the human translations of the following **Diego** instructioning...
+The foolishness of loitering forever can be seen in the human translations of the following **Diego** instructioning…
 
 > Diego: `loiter_robot(myDrone)_waypoint(greenFlag)_hold()?:;`<br>
 > Human: *"`myDrone`, go to `greenFlag` and loiter there forever!"*
@@ -75,7 +75,7 @@ with_robot(myDrone)_waypoint(greenFlag)_loiterat()_hold()_refuse(x101, low on en
 ```
 .., and return to base (perhaps).
 
-To resolve this foolishness (before the drone calls `refuse`), an exit strategy should be deployed (at least)...
+To resolve this foolishness (before the drone calls `refuse`), an exit strategy should be deployed (at least)…
 
 Diego:
 ```diego
@@ -122,7 +122,7 @@ The `MAV_CMD_NAV_LOITER_UNLIM` command has seven paramaters, however, the first 
 
 ## MAV_CMD_NAV_LOITER_TURNS ([18](https://mavlink.io/en/messages/common.html#MAV_CMD_NAV_LOITER_TURNS))
 
-MAVLink defines the `MAV_CMD_NAV_LOITER_TURNS` command as, _"[to instruct a drone to] ...loiter around this waypoint for X turns."_. The unexplicit behaviour is to circle around a given waypoint at a set radius (from the waypoint as centre) using the sign (of the radius) for clockwise/counter-clockwise direction.  The 'circle' is intended to be on the *XY-Plane*.  The optional extra functionality, known as the `Xtrack Location`, provides specifications for the object to converge to an exit location and/or path of the next waypoint.
+MAVLink defines the `MAV_CMD_NAV_LOITER_TURNS` command as, _"[to instruct a drone to] …loiter around this waypoint for X turns."_. The unexplicit behaviour is to circle around a given waypoint at a set radius (from the waypoint as centre) using the sign (of the radius) for clockwise/counter-clockwise direction.  The 'circle' is intended to be on the *XY-Plane*.  The optional extra functionality, known as the `Xtrack Location`, provides specifications for the object to converge to an exit location and/or path of the next waypoint.
 
 MAVLink provides an excellent condensed parameter array for a multifaceted function, so translating this behaviour in ***Diego*** is going to be more *'wordy'* than ***Diego*** normally is.
 
@@ -176,7 +176,7 @@ Parameters 5, 6, and 7 (`Latitude`, `Longitude`, and, `Altitude`, respectively) 
 
 ## MAV_CMD_NAV_LOITER_TIME ([19](https://mavlink.io/en/messages/common.html#MAV_CMD_NAV_LOITER_TIME))
 
-The `MAV_CMD_NAV_LOITER_TIME` command will instruct the object to, _"...loiter ar the specified latitude, longitude and altitude for a certain amount of time"_. In ***Diego*** the same interface used for the `MAV_CMD_NAV_LOITER_TURNS` command (translated above) can be used here.
+The `MAV_CMD_NAV_LOITER_TIME` command will instruct the object to, _"…loiter ar the specified latitude, longitude and altitude for a certain amount of time"_. In ***Diego*** the same interface used for the `MAV_CMD_NAV_LOITER_TURNS` command (translated above) can be used here.
 
 The same 'circle as loiter' behaviour can be commanded using the `motion(circle)` object-parameter, and the `_xtrack` postposit is used as the direct translation of the Xtrack Location parameter (parameter number 4) in the `MAV_CMD_NAV_LOITER_TIME` command.  The only difference in the `MAV_CMD_NAV_LOITER_TIME` command is the `_forcounter({counter})` postposit is replace with `_fortime({time})` posposit.  For example:
 
@@ -198,36 +198,36 @@ The unit for the 'amount of time' to loiter can be set in the usual manner: defa
 
 ## MAV_CMD_NAV_RETURN_TO_LAUNCH ([20](https://mavlink.io/en/messages/common.html#MAV_CMD_NAV_RETURN_TO_LAUNCH))
 
-Often used as a _failsafe_ mechanism, the `MAV_CMD_NAV_RETURN_TO_LAUNCH` command will instruction the object to, _"...return to the 'home' location or the nearest 'rally point', if closer"_[^1]. 
+Often used as a _failsafe_ mechanism, the `MAV_CMD_NAV_RETURN_TO_LAUNCH` command will instruction the object to, _"…return to the 'home' location or the nearest 'rally point', if closer"_[^1]. 
 
 ```Deigo
 // Return to base
-with_drone(myDrone)_rtb();  // or...
+with_drone(myDrone)_rtb();  // or…
 rtb_drone(myDrone);
 (myDrone)_rtb();        
 rtb(myDrone);
 
 
 // Return to secified location
-with_drone(myDrone)_rtb()_waypoint(homeBase);   // or...
+with_drone(myDrone)_rtb()_waypoint(homeBase);   // or…
 rtb_drone(myDrone)_waypoint(homeBase);
 (myDrone)_rtb()_wp(homeBase);
 rtb(myDrone)_(homeBase);
 
 // Return to nearest suitable location
-with_drone(myDrone)_waypoint()_type(rally_point)_forwhere(nearest); // or...
+with_drone(myDrone)_waypoint()_type(rally_point)_forwhere(nearest); // or…
 rtb_drone(myDrone)_waypoint({rally_point})_forwhere(nearest);
 (myDrone)_rtb()_wp({rally_point}{nearest});
 (myDrone)_({wp},{rally_point}{nearest});
 
 // Return all drones to a specified location:
-with_drone()_rtb()_waypoint(westRallyPoint);    // or...
+with_drone()_rtb()_waypoint(westRallyPoint);    // or…
 with_waypoint(westRallyPoint)_rtb()_drone();
 (westRallyPoint)_rtb()_drone();
 rtb(westRallyPoint)_drone();
 
 // Return all drones (in flight) to the nearest rally point
-with_drone()_status(in_flight)_rtb()_waypoint()_type(rally_point)_forwhere(nearest);    // or...
+with_drone()_status(in_flight)_rtb()_waypoint()_type(rally_point)_forwhere(nearest);    // or…
 rtb_drone()_status(in_flight)_waypoint()_type(rally_point)_forwhere(nearest);
 ({drone})_stat(if)_rtb({wp},{rally_point},{nearest});           ---???
 rtb({drone})_stat(1)_wp({rally_point},{nearest});           ---???
@@ -262,9 +262,9 @@ ___
 
 ### MAV_CMD_NAV_LOITER_UNLIM ([17](https://mavlink.io/en/messages/common.html#MAV_CMD_NAV_LOITER_UNLIM))
 
-The `MAV_CMD_NAV_LOITER_UNLIM` command will command a drone to _"loiter around this waypoint an unlimited amount of time"_  In Diego the `loiter_` verb is the direct translation. The object can be either the drone _"...to loiter around the waypoint_ or the waypoint _"..for the drone to loiter around to"_ using the `_loiterat` postposition. The `_hold` (with empty parameters) is used for maintain an _"unlimited amount of time"_. There are various other postpositions that can be used.
+The `MAV_CMD_NAV_LOITER_UNLIM` command will command a drone to _"loiter around this waypoint an unlimited amount of time"_  In Diego the `loiter_` verb is the direct translation. The object can be either the drone _"…to loiter around the waypoint_ or the waypoint _"..for the drone to loiter around to"_ using the `_loiterat` postposition. The `_hold` (with empty parameters) is used for maintain an _"unlimited amount of time"_. There are various other postpositions that can be used.
 
-Examples for a translation to match the `MAV_CMD_NAV_WAYPOINT` command...
+Examples for a translation to match the `MAV_CMD_NAV_WAYPOINT` command…
 
 ```Diego
 loiter_robot({moniker|uuid})_waypoint({moniker|uuid})_hold() ? : ;
@@ -273,7 +273,7 @@ with_robot({moniker|uuid})_loiterat({waypoint_moniker|waypoint_uuid})_hold() ? :
 
 **Nevertheless, the use of the above command structures are considered foolish, since if a drone is instructed to loiter for a unlimited time at a waypoint, when itself is finite with finite resources. For instance, with no access to energy (fuel) it will surely run out of fuel and die; or, under threatening environment pressures it may suffer and die. Drones with common sense will realise the folly of this instruction and refuse to comply when it's nearing death.  The refusal is handled by the `refuse` object, and if the situation gets desperate the `wtf` object will be used.**
 
-The foolishness of loitering forever can be seen in the human translations of the **Diego** instructioning...
+The foolishness of loitering forever can be seen in the human translations of the **Diego** instructioning…
 
 > Diego: `loiter_robot(myDrone)_waypoint(greenFlag)_hold() ? : ;`
 >> Human: *"`myDrone`, go to `greenFlag` and loiter there forever!"*
@@ -285,7 +285,7 @@ The foolishness of loitering forever can be seen in the human translations of th
 > `with_waypoint(greenFlag)_loiterat()_hold()_for(myDrone) ? : ;`
 >> *"At `greenFlag`, `myDrone`, you will loiter there forever!"*
 
-To resolve this foolishness (before the drone calls `refuse`), an exit strategy should at lease be deployed...
+To resolve this foolishness (before the drone calls `refuse`), an exit strategy should at lease be deployed…
 
 ```Diego
 with_robot(myDrone)_waypoint(greenFlag)_loiterat()_hold()
@@ -300,7 +300,7 @@ ___
 
 ## MAV_CMD_NAV_LOITER_TURNS ([18](https://mavlink.io/en/messages/common.html#MAV_CMD_NAV_LOITER_TURNS))
 
-MAVLink defines the `MAV_CMD_NAV_LOITER_TURNS` command as, _"[to instruct a drone to] ...loiter around this waypoint for X turns.
+MAVLink defines the `MAV_CMD_NAV_LOITER_TURNS` command as, _"[to instruct a drone to] …loiter around this waypoint for X turns.
 
 
 
@@ -336,7 +336,7 @@ _tosphere({x_lat},{y_long},{z_alt},{r})
 _yawto({yaw}[, {unit}])
 
 _me()
-_for({moniker_1|uuid_1}[, ... {moniker_n|uuid_n}])
+_for({moniker_1|uuid_1}[, … {moniker_n|uuid_n}])
 ```
 loiter_
 navigat_waypoint(nav_to_x1)_waypoint(x1)_hold({hold_time})_insphere({aradius},{bradius})
@@ -373,7 +373,7 @@ _tosphere({x_lat},{y_long},{z_alt},{r})
 _yawto({yaw}[, {unit}])
 
 _me()
-_for({moniker_1|uuid_1}[, ... {moniker_n|uuid_n}])
+_for({moniker_1|uuid_1}[, … {moniker_n|uuid_n}])
 
 
 <!-- http://wiki.ros.org/mavros#mavcmd -->

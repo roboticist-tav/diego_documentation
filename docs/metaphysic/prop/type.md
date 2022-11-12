@@ -18,7 +18,7 @@ The `type` *properties* can be passed to an abstract storage *object* using the 
 ## Operator
 The *of*`type` and `typeof` properties also have the associated `⊖` operator for use in expressions. The `⊖` operator should be used in expressions. The `⊖` operator should not used for 'symmetric difference in set theory, which should only use delta (`Δ`).
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<expression_posit>(`*`...⊖...`*`);`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<expression_posit>(`*`…⊖…`*`);`
 
 ## Declaration
 Declaration requires either, the use of: the `_type` posit; or, direct declaration (usually in the declaration of the *object*) using curly brackets (`{}`).

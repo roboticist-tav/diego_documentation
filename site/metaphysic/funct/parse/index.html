@@ -1021,10 +1021,10 @@
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
 <h1 id="parse-function">Parse (function)</h1>
-<p>      <code>add_waypoint(</code><em><code>[moniker]</code></em><code>)_format(</code><em><code>format</code></em><code>)_json([{</code><em><code>x_lat</code></em><code>,</code><em><code>y_long</code></em><code>)}, {</code><em><code>x_lat</code></em><code>,</code><em><code>y_long</code></em><code>)}, ...])</code></p>
-<p><strong><em>Diego</em></strong> allows for other apporaches for creating/loading mutilple <code>waypoint</code>s, such as...</p>
-<p>      <code>add_waypoint(</code><em><code>[moniker]</code></em><code>)_format(</code><em><code>format</code></em><code>)_json([{</code><em><code>x_lat</code></em><code>,</code><em><code>y_long</code></em><code>)}, {</code><em><code>x_lat</code></em><code>,</code><em><code>y_long</code></em><code>)}, ...])</code></p>
-<p>...creates miltilple <code>waypoints</code> from a literal json string.  The waypoint monikers are created in seqence using a combination of a <em>(base)-</em><em><code>moniker</code></em> and a specified <code>format</code>.  To load <code>waypoints</code>, either from a file...</p>
+<p>      <code>add_waypoint(</code><em><code>[moniker]</code></em><code>)_format(</code><em><code>format</code></em><code>)_json([{</code><em><code>x_lat</code></em><code>,</code><em><code>y_long</code></em><code>)}, {</code><em><code>x_lat</code></em><code>,</code><em><code>y_long</code></em><code>)}, …])</code></p>
+<p><strong><em>Diego</em></strong> allows for other apporaches for creating/loading mutilple <code>waypoint</code>s, such as…</p>
+<p>      <code>add_waypoint(</code><em><code>[moniker]</code></em><code>)_format(</code><em><code>format</code></em><code>)_json([{</code><em><code>x_lat</code></em><code>,</code><em><code>y_long</code></em><code>)}, {</code><em><code>x_lat</code></em><code>,</code><em><code>y_long</code></em><code>)}, …])</code></p>
+<p>…creates miltilple <code>waypoints</code> from a literal json string.  The waypoint monikers are created in seqence using a combination of a <em>(base)-</em><em><code>moniker</code></em> and a specified <code>format</code>.  To load <code>waypoints</code>, either from a file…</p>
 <p>      <code>add_waypoint()_load(</code><em><code>file_url</code></em><code>,</code><em><code>file_format</code></em><code>,</code><em><code>protocol</code></em><code>)</code></p>
 <p><br/><code>_parse({json},</code><em><code>string</code></em><code>)</code> Parses json <em>jsonstring</em></p>
 <h2 id="posits">Posits</h2>
@@ -1045,9 +1045,9 @@
 </tbody>
 </table>
 <p>| <a name="at"></a> <code>_at(</code><em><code>index</code></em><code>)</code><br/><code>_at()</code> | Provides the element at index <em>index</em> |</p>
-<p>...or using programming logic from an array (for instance)...</p>
+<p>…or using programming logic from an array (for instance)…</p>
 <p>      <code>add_waypoint()_load()_array(</code><em><code>moniker</code></em><code>);</code></p>
-<p>...or from a json string...</p>
+<p>…or from a json string…</p>
 <p>      <code>add_waypoint()_load()_json(</code><em><code>moniker</code></em><code>);</code></p>
 </div>
 </div><footer>

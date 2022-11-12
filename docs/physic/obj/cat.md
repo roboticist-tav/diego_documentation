@@ -18,7 +18,7 @@ To reference the `cat` *type*, use, either `with_organic` or shortened referenci
 ## Expressions
 The operator (`🐈`) can be used in expressions.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<expression_posit>(`*`...🐈...`*`);`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<expression_posit>(`*`…🐈…`*`);`
 
 ## Visacuity
 A thingy can learn to detect a `cat` after learning. For visacuity, several datasets of images are available, such as Coco Explorer.

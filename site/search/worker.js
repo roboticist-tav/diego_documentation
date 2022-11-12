@@ -57,7 +57,7 @@ function onJSONLoaded () {
 }
 
 function onScriptsLoaded () {
-  console.log('All search scripts loaded, building Lunr index...');
+  console.log('All search scripts loaded, building Lunr index…');
   if (data.config && data.config.separator && data.config.separator.length) {
     lunr.tokenizer.separator = new RegExp(data.config.separator);
   }

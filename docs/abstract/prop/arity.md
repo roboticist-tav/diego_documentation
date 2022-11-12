@@ -22,7 +22,7 @@ Due to the simularities of the `array` with the `arran` *object*, the `arity` pr
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<array>`*`_arity()`
 
-...is identical to...
+…is identical to…
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<array>`*`_length()`<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<array>`*`_len()`

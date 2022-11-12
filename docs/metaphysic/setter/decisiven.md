@@ -18,9 +18,9 @@ The ```set_decisiveness``` command does **not** set consensus on elections, only
 
 #### set_decisiveness(*time_period*)
 Sets the decisiveness is a *time_period* (*in milliseconds*) given to robot(s) when making decisions.  When a robot polls other robots the decisiveness timer will start.  While collecting results the decisiveness timer will trigger when the *time_period* (*in milliseconds*) has expired.  For decisions with  ```decisive```  consensus the majority result will be chosen upon the decisiveness timer triggered.
-#### set_decisiveness(*time_period*)_for(*moniker1*, *n...*)
-Decisiveness of *time_period* will apply only to the whitelist of (*moniker1*, *n...*) of monikers (robots, swarms, labels of).
-#### set_decisiveness(*time_period*)_not((*moniker1*, *n...*)
-Decisiveness of *time_period* will **not** apply to the blacklist of (*moniker1*, *n...*) of monikers (robots, swarms, labels of).  The defaulted or last known consensus will apply to those blacklist monikers.
-#### set_decisiveness(*time_period*)_for(*moniker1*, *n...*)_not(*moniker1*, *n...*)
+#### set_decisiveness(*time_period*)_for(*moniker1*, *n…*)
+Decisiveness of *time_period* will apply only to the whitelist of (*moniker1*, *n…*) of monikers (robots, swarms, labels of).
+#### set_decisiveness(*time_period*)_not((*moniker1*, *n…*)
+Decisiveness of *time_period* will **not** apply to the blacklist of (*moniker1*, *n…*) of monikers (robots, swarms, labels of).  The defaulted or last known consensus will apply to those blacklist monikers.
+#### set_decisiveness(*time_period*)_for(*moniker1*, *n…*)_not(*moniker1*, *n…*)
 An apply-list with a no-apply-list of monikers (robots, swarms, labels of) for decisiveness of *time_period*.

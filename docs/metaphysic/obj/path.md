@@ -14,7 +14,7 @@ In the family of 'location' based navigation objects, one `itiner` has many `rou
 The default declaration of the `path` object is to at least provide a *moniker*, however, at declaration it is common to provide two locations using either: a child `waypoint` (or shortened `wp`) assignment; or, using the `_coords` posit.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;` add_path(`*`moniker`*`);`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;` add_path(`*`moniker1`*`, `*`moniker2`*`,...);`<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;` add_path(`*`moniker1`*`, `*`moniker2`*`,…);`<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;` add_path(`*`moniker`*`)_wp(`*`moniker`*`)_wp(`*`moniker`*`);`<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;` add_waypoint(`*`moniker`*`)_coords(`*`x_lat`*`, `*`y_long`*`, `*`z_alt`*`)_coords(`*`x_lat`*`, `*`y_long`*`, `*`z_alt`*`);`
 

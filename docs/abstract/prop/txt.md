@@ -6,20 +6,20 @@ The `txt` (or lengthened `text`) *expressive object* provides a _portion_ of wri
 Although the most common use of the `txt` expression is via a posit, it can be declared using the `add_` verb (or shortened `+_`). Since the `txt` *object* is expressive the be expression brackets (`⟦⟧`) or double square brackets (`[[]]`) can be used directly, i.e. in place of the brackets (`()`). Multiple `txt`s are declared using a coma-separated list of *`moniker`* s.  If a moniker is used with an expression, the expression must be enclosed in expression brackets (`⟦⟧`) or double square brackets (`[[]]`).
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `add_text(`*`moniker`*`);`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `add_txt(`*`moniker1`*`,`*`moniker2`*`,`*`...`*`);`<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `add_txt(`*`moniker1`*`,`*`moniker2`*`,`*`…`*`);`<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `+_txt⟦`*`expression`*`⟧;`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `+_txt(⟦`*`expression1`*`⟧,⟦`*`expression2`*`⟧,⟦`*`...`*`⟧);`<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `+_txt(⟦`*`expression1`*`⟧,⟦`*`expression2`*`⟧,⟦`*`…`*`⟧);`<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `+_txt(`*`moniker`*`,⟦`*`expression`*`⟧);`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `+_txt(`*`moniker1`*`,⟦`*`expression1`*`⟧,`*`moniker2`*`,⟦`*`expression2`*`⟧,`*`moniker...`*`,⟦`*`expression...`*`⟧);`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `+_txt(`*`moniker1`*`,⟦`*`expression1`*`⟧,`*`moniker2`*`,⟦`*`expression2`*`⟧,`*`moniker…`*`,⟦`*`expression…`*`⟧);`
 
 The common declaration of the `txt` object is via posit syntax.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<object>`*`_text(`*`moniker`*`);`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<object>`*`_txt(`*`moniker1`*`,`*`moniker2`*`,`*`...`*`);`<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<object>`*`_txt(`*`moniker1`*`,`*`moniker2`*`,`*`…`*`);`<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<object>`*`_txt⟦`*`expression`*`⟧;`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<object>`*`_txt(⟦`*`expression1`*`⟧,⟦`*`expression2`*`⟧,⟦`*`...`*`⟧);`<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<object>`*`_txt(⟦`*`expression1`*`⟧,⟦`*`expression2`*`⟧,⟦`*`…`*`⟧);`<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<object>`*`_txt(`*`moniker`*`,⟦`*`expression`*`⟧);`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<object>`*`_txt(`*`moniker1`*`,⟦`*`expression1`*`⟧,`*`moniker2`*`,⟦`*`expression2`*`⟧,`*`moniker...`*`,⟦`*`expression...`*`⟧);`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<object>`*`_txt(`*`moniker1`*`,⟦`*`expression1`*`⟧,`*`moniker2`*`,⟦`*`expression2`*`⟧,`*`moniker…`*`,⟦`*`expression…`*`⟧);`
 
 <a name="reference"></a>
 ## Referencing
@@ -42,15 +42,15 @@ _unit()
 
 | `operator` | description | API |
 | --- | --- | --- |
-| <a name="[]"></a> *`...`*`[`*`variable_moniker`*`]`*`...`* | Variable call. | [variable](../special/var.md) |
-| <a name="{}"></a> *`...`*`{`*`object_moniker`*`}`*`...`* &nbsp; *`...`*`{`*`object_moniker`*`.`*`child_object_moniker`*`}`*`...`* &nbsp; *`...`*`{`*`object_moniker`*`.`*`child_object_moniker`*`.`*`property_moniker`*`}`*`...`*  | Object call. | [object](./obj/object.md) |
-| <a name="_r"></a> *`...`*`\n`*`...`*  | New line. | [](/md) |
-| <a name="_n"></a> *`...`*`\r`*`...`* | Carriage return. | [](/md) |
-| <a name="emoji"></a> *`...`*`:`*`emoji_moniker`*`:`*`...`* | Emoji. | [emoji](../special/emoji.md) |
-| <a name=""></a> *`...`*`$`*`math_sub-expression`*`$`*`...`* | Maths. | [math](../funct/math.md) |
-| <a name=""></a> *`...`*` `*`...`* | . | [](/md) |
-| <a name=""></a> *`...`*` `*`...`* | . | [](/md) |
-| <a name=""></a> *`...`*` `*`...`* | . | [](/md) |
+| <a name="[]"></a> *`…`*`[`*`variable_moniker`*`]`*`…`* | Variable call. | [variable](../special/var.md) |
+| <a name="{}"></a> *`…`*`{`*`object_moniker`*`}`*`…`* &nbsp; *`…`*`{`*`object_moniker`*`.`*`child_object_moniker`*`}`*`…`* &nbsp; *`…`*`{`*`object_moniker`*`.`*`child_object_moniker`*`.`*`property_moniker`*`}`*`…`*  | Object call. | [object](./obj/object.md) |
+| <a name="_r"></a> *`…`*`\n`*`…`*  | New line. | [](/md) |
+| <a name="_n"></a> *`…`*`\r`*`…`* | Carriage return. | [](/md) |
+| <a name="emoji"></a> *`…`*`:`*`emoji_moniker`*`:`*`…`* | Emoji. | [emoji](../special/emoji.md) |
+| <a name=""></a> *`…`*`$`*`math_sub-expression`*`$`*`…`* | Maths. | [math](../funct/math.md) |
+| <a name=""></a> *`…`*` `*`…`* | . | [](/md) |
+| <a name=""></a> *`…`*` `*`…`* | . | [](/md) |
+| <a name=""></a> *`…`*` `*`…`* | . | [](/md) |
 
 
 

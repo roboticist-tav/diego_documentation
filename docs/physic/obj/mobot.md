@@ -6,9 +6,9 @@ The `mobot` is derived from a `thing`, and a `thing` is derived from `thingy`. T
     flowchart LR
     thingy([thingy]) --> thing([thing])
     thing --> mobot
-    mobot --> cellphone(cellphone)
-    mobot --> watch(smartwatch)
-    mobot --> laptop(laptop)
+    mobot --> cellphone{{cellphone}}
+    mobot --> watch{{smartwatch}}
+    mobot --> laptop{{laptop}}
 ```
 <div style="text-align: right"><sub>Mobot Hierarchy</sub></div>
 

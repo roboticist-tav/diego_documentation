@@ -1138,7 +1138,7 @@ with_puff({moniker|uuid})_cloud({moniker|uuid});
 </tr>
 <tr>
 <td><code>lte-m</code></td>
-<td><code>r</code>...</td>
+<td><code>r</code>…</td>
 <td></td>
 </tr>
 <tr>
@@ -1156,11 +1156,11 @@ with_puff({moniker|uuid})_cloud({moniker|uuid});
 <h2 id="hijacking-google-chat">Hijacking Google Chat</h2>
 <p>Google Chat can be hijacked to provide a communication <code>cloud</code> to allow <code>thingy</code>s to communicate.  Just as a human, each <code>thingy</code> will require a Google account, an email address, and access to the Google Chat API.</p>
 <p>As a demonstration/example we have two robots, <code>alif</code> and <code>bahh</code>.  Each robot knows the credentials (<em>i.e. where to meet</em>) of the Google chat room and each others email address.  They are best of friends, <em>i.e. they know each other</em>. <code>alif</code> will create the <code>channel</code> (called <em>rooms</em> in Google Chat) and send an invite to <code>bahh</code>.</p>
-<p>We will start with <code>alif</code>, just going over (for the sake of this demonstration) some <em>setting-up</em> it did as a child...</p>
+<p>We will start with <code>alif</code>, just going over (for the sake of this demonstration) some <em>setting-up</em> it did as a child…</p>
 <h5 id="alif"><code>alif</code></h5>
 <pre><code class="language-Diego">add_email(alif@diegolang.org)_linkto(google)_me();
 </code></pre>
-<p>...and <code>bahh</code>...</p>
+<p>…and <code>bahh</code>…</p>
 <h5 id="bahh"><code>bahh</code></h5>
 <pre><code class="language-Diego">add_email(bahh@diegolang.org)_linkto(google)_me();
 add_cloud(google_chat)_solut(google_chat)_me();
@@ -1172,7 +1172,7 @@ end_instruct(listen_on_google_chat);
 
 exec_instruct(listen_on_google)_chat)_me();
 </code></pre>
-<p>Now <code>alif</code> (and <code>bahh</code>) have to set-up their Google Chat connectivity as a <code>cloud</code>...</p>
+<p>Now <code>alif</code> (and <code>bahh</code>) have to set-up their Google Chat connectivity as a <code>cloud</code>…</p>
 <h5 id="alif_1"><code>alif</code></h5>
 <pre><code class="language-Diego">add_cloud(google_chat)_solut(google_chat)_me();
 add_channel(diego_test_room_001)_me();
@@ -1182,7 +1182,7 @@ with_channel(diego_text_room_001)_invite(bahh);
 ping_thingy()_cloud(google_chat)_thingy();
 pong_robot(alif)_for(bah);
 </code></pre>
-<p>...and <code>bahh</code>...</p>
+<p>…and <code>bahh</code>…</p>
 <h5 id="bahh_1"><code>bahh</code></h5>
 <pre><code class="language-Diego">ping_thingy()_cloud(google_chat)_thingy()_for(alif);
 pong_robot(alif)_for(bah);

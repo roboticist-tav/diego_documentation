@@ -13,7 +13,7 @@ In the family of 'location-and-orientation-and-time' based navigation objects, o
 The default declaration of the `goal` object is to at least provide a *moniker*, however, at declaration it is common to provide a temporal coordingate using the `_boutat` posit. The `_boutat` posits accepts a `bout` object, and so uses the same `bout` child posits.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;` add_goal(`*`moniker`*`);`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;` add_goal(`*`moniker1`*`, `*`moniker2`*`,...);`<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;` add_goal(`*`moniker1`*`, `*`moniker2`*`,…);`<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;` add_goal(`*`moniker`*`)_orientat(`*`x`*`,`*`y`*`,`*`z`*`);`<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;` add_pose(`*`moniker`*`)_orientat(`*`x`*`,`*`y`*`,`*`z`*`,`*`w`*`);`<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;` add_pose(`*`moniker`*`)_orientat({`*`order`*`},`*`x`*`,`*`y`*`,`*`z`*`,`*`w`*`);`<br>

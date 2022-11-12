@@ -1035,9 +1035,9 @@
        <code>+_enum(⟦{</code><em><code>value_datatype</code></em><code>}⟧,</code><em><code>moniker</code></em><code>);</code><br/></p>
 <p><a name="declare_assign"></a></p>
 <h2 id="declaration-assignment">Declaration &amp; Assignment</h2>
-<p>       <code>+_calc(⟦</code><em><code>expression1</code></em><code>⟧,⟦</code><em><code>expression2</code></em><code>⟧,⟦</code><em><code>...</code></em><code>⟧);</code><br/>
+<p>       <code>+_calc(⟦</code><em><code>expression1</code></em><code>⟧,⟦</code><em><code>expression2</code></em><code>⟧,⟦</code><em><code>…</code></em><code>⟧);</code><br/>
        <code>+_calc(</code><em><code>moniker</code></em><code>,⟦</code><em><code>expression</code></em><code>⟧);</code><br/>
-       <code>+_calc(</code><em><code>moniker1</code></em><code>,⟦</code><em><code>expression1</code></em><code>⟧,</code><em><code>moniker2</code></em><code>,⟦</code><em><code>expression2</code></em><code>⟧,</code><em><code>moniker...</code></em><code>,⟦</code><em><code>expression...</code></em><code>⟧);</code></p>
+       <code>+_calc(</code><em><code>moniker1</code></em><code>,⟦</code><em><code>expression1</code></em><code>⟧,</code><em><code>moniker2</code></em><code>,⟦</code><em><code>expression2</code></em><code>⟧,</code><em><code>moniker…</code></em><code>,⟦</code><em><code>expression…</code></em><code>⟧);</code></p>
 <p>If a moniker is used with an expression, the expression must be enclosed in expression brackets (<code>⟦⟧</code>) or double square brackets (<code>[[]]</code>).</p>
 <pre><code class="language-diego">add_enum(⟪{int}⟫,⟦{str}⟧,urgency)
     ()_enum(⟪4⟫,⟦emergent⟧)_static(URGENCY_EMERGENT)_colour(red)_color({hex},#ca0031)_desc(The most urgent (critical) state, severe risk.);

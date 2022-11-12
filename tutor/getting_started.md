@@ -73,18 +73,18 @@ To find out more of `turtle1` we enter the following command in the command wind
 ```diego
 with_thing()_for(turtle1);
 ```
-, or...
+, or…
 | Command | Result |
 |:--|:--|
 | `with_thing();` | Returns all known 'self-information' from all `thing`s in the _puff_. |
-| `with_thing()_for(turtle1, turtle2, `*`n...`*`);` | Returns all known 'self-information' from `turtle1`, `turtle2`, *`n...`* only if they are `thing`s. |
-| `with_thing()_notfor(turtle2, `*`n...`*`);` | Returns all known 'self-information' from all `thing`s in the _puff_ except for  `turtle2`, *`n...`* `thing`s. |
-| `with_thing()_of(simulat, `*`n...`*`);` |  Returns all known 'self-information' from all `thing`s in the _puff_ of type `simlat`, *`n...`*. | |
-| `with_thing()_notof(mach, `*`n...`*`);` | Returns all known 'self-information' from all `thing`s in the _puff_ except for '`thing`s of type `mach`, *`n...`*. |
+| `with_thing()_for(turtle1, turtle2, `*`n…`*`);` | Returns all known 'self-information' from `turtle1`, `turtle2`, *`n…`* only if they are `thing`s. |
+| `with_thing()_notfor(turtle2, `*`n…`*`);` | Returns all known 'self-information' from all `thing`s in the _puff_ except for  `turtle2`, *`n…`* `thing`s. |
+| `with_thing()_of(simulat, `*`n…`*`);` |  Returns all known 'self-information' from all `thing`s in the _puff_ of type `simlat`, *`n…`*. | |
+| `with_thing()_notof(mach, `*`n…`*`);` | Returns all known 'self-information' from all `thing`s in the _puff_ except for '`thing`s of type `mach`, *`n…`*. |
 | `with_simulat(turtle1);` | Returns all known 'self-information' from `turtle1` only if `turtle1` is a `simulat`. |
 | `with_simulat();` | Returns all known 'self-information' from all `simulat`s in the _puff_. |
-| `with_simulat()_for(turtle1, turtle2, `*`n...`*`);` | Returns all known 'self-information' from `turtle1`, `turtle2`, *`n...`* only if they are `simulat`s. |
-| `with_simulat()_notfor(turtle2, `*`n...`*`);` | Returns all known 'self-information' from all `simulat`s in the _puff_ except for  `turtle2`, *`n...`* `simulat`s. |
+| `with_simulat()_for(turtle1, turtle2, `*`n…`*`);` | Returns all known 'self-information' from `turtle1`, `turtle2`, *`n…`* only if they are `simulat`s. |
+| `with_simulat()_notfor(turtle2, `*`n…`*`);` | Returns all known 'self-information' from all `simulat`s in the _puff_ except for  `turtle2`, *`n…`* `simulat`s. |
 
 
 A reply will be similar to:
@@ -102,7 +102,7 @@ At this point there are two `thing`s and one every`thing`.  The two `things` are
 ```diego
 ask_simlat(turtle1)_for(map1);
 ```
-, or...
+, or…
 | Command Cookbook | Result |
 |:--|:--|
 | `ask_thing(turtle1)_for(map1);` | Returns all known 'community-information' of `thing` `turtle1` from `map`. |
@@ -119,7 +119,7 @@ map1: of_simulat(turtle1, bdc09e2f-5a26-4e55-9ca2-ab6ea297a0b8);
       of_simlate(turtle1)_at(map1, 5.544445, 5.544445, 0.000000);
 ```
 ## Give birth to a human
-With the _diego_ application in our hands we have the power to add 'any`thing`' (or anyone) to this world, even ourselves (i.e. a human)!  So let's do that...
+With the _diego_ application in our hands we have the power to add 'any`thing`' (or anyone) to this world, even ourselves (i.e. a human)!  So let's do that…
 
 Add the command window type the following:
 ```diego
@@ -145,7 +145,7 @@ Any `human` and `thing` can have attributes
 ```diego
 with_human(fred)_attr(favourite_colour, blue);
 ```
-, or...
+, or…
 | Command | Result |
 |:--|:--|
 | `with_human(fred)_attr()_config(json, "{"favourite_colour":"blue"}");` | Adds attribute '*favourite_colour*' as '*blue*' to `human` `fred` using JSON string. |
@@ -201,7 +201,7 @@ listen_event(whistle);
 [move_to_colour_zone_on_whistle]: listen_event(whistle);
 [blue_zone]: listen_event(whistle);
 [red_zone]: listen_event(whistle);
-...
+…
 ```
 Straight away the test view shows that all `thing`s are listening for *`whistle`* `event`, yet for this case we only need `thing`s (actually `simulat`*[tion]*s) to listen for the *`whistle`* `event`.
 ```deigo
@@ -274,8 +274,8 @@ move_to_colour_zone: go_zone(red_zone);
 blue_zone: go_zone(red_zone);
 red_zone: go_zone(red_zone);
 ```
-The command `go_zone(red_zone)` is indiscriminate so it will can change the world indiscriminately.  This effect is not what is intended, then ...
-... however all instructs by default have `set_go(false)`, so they will not react to the `go_` verb.  Other `things`, such as `zone`s are defaulted to `set_go(false)`, however, you may wish a zone to move to a new location on the map, so to 	`set_go` pm all `zones` use any of the following:
+The command `go_zone(red_zone)` is indiscriminate so it will can change the world indiscriminately.  This effect is not what is intended, then …
+… however all instructs by default have `set_go(false)`, so they will not react to the `go_` verb.  Other `things`, such as `zone`s are defaulted to `set_go(false)`, however, you may wish a zone to move to a new location on the map, so to 	`set_go` pm all `zones` use any of the following:
 
 ```diego
 [diego]: set_go(true)_to(zone);
@@ -372,14 +372,14 @@ favourite_color: blue
 turtle1: 2020-11-28-18:59.374534 [deigo]: rollcall();
            2020-11-28-18:59.548992 turtle1: with_me(turtle1, bdc09e2f-5a26-4e55-9ca2-ab6ea297a0b8)_thing(meta)_type(sim);
            2020-11-28-18:59.558992 map1: with_me(map1, 4d20e7d3-1c89-44c6-bd31-0f353090d6e4)_thing(meta)_type(map);
-...
+…
 ```
 `with_simulat(turtle1)_journal();`
 ```diego
 [diego]: with_simulat(turtle1)_transcript();
 turtle1: 2020-11-28-18:59.374534 [deigo]: rollcall();
            2020-11-28-18:59.548992 turtle1: with_me(turtle1, bdc09e2f-5a26-4e55-9ca2-ab6ea297a0b8)_thing(meta)_type(sim);
-...
+…
 ```
 Journal - only diego messages that relate to the thing
 Transcript - all diego messages
@@ -389,8 +389,8 @@ Transcript - all diego messages
 | `ask_transcript()` | Requests the transcript (for `get_transcript` time period) for all in the _puff_. |
 | `ask_transcript()_me()` | Requests the transcript (for `get_transcript` time period) for the `thing`. |
 | `get_transcript(`*`hours`*`)`<br>`get_transcript(`*`hours`*`, `*`mins`*`)`<br>`get_transcript(`*`hours`*`, `*`mins`*`, `*`secs`*`)` | Returns transcript recall time period (in hours) when `ask_transcript` command is executed. |
-| `ask_transcript()_for(`*`thing_moniker1`*`, `*`thing_moniker2`*`, `*`n...`*`)` | Returns the transcript (for `get_transcript` time period) of *`thing_moniker1`*, *`thing_moniker2`*, *`n...`*. |
-| `ask_transcript()_to(`*`thingy1`*`, `*`thingy2`*`, `*`n...`*`)` | Returns the transcript (for `get_transcript` time period) of `thing`s of type (_thingy_) *`thingy1`*, *`thingy2`*, *`n...`*. |
+| `ask_transcript()_for(`*`thing_moniker1`*`, `*`thing_moniker2`*`, `*`n…`*`)` | Returns the transcript (for `get_transcript` time period) of *`thing_moniker1`*, *`thing_moniker2`*, *`n…`*. |
+| `ask_transcript()_to(`*`thingy1`*`, `*`thingy2`*`, `*`n…`*`)` | Returns the transcript (for `get_transcript` time period) of `thing`s of type (_thingy_) *`thingy1`*, *`thingy2`*, *`n…`*. |
 | `ask_transcript(`*`datetime_from`*`, `*`datetime_to`*`)` | Returns transcript of  |
 
 recall_journal()

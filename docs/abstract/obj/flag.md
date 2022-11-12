@@ -13,20 +13,20 @@ Flag enumerators can be declared using the `add_` verb (or shortened `+_`), with
 For quick assignment at declaration, the key values can be omitted, and they will be dynaically created.  Otherwise, provide the key-value pairs using angled brackets for keys (`⟪⟫`), and expression brackets (`⟦⟧`) for values. Two patterns can be applied: key-value pairs; or, key-value groups. The key must follow the power of two ($2^n$), starting from one (`1`).
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `+_flag(`*`moniker`*`,⟦`*`value`*`⟧);`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `+_flag(`*`moniker`*`,⟦`*`value1`*`,`*`value2`*`,`*`value...`*`⟧);`<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `+_flag(`*`moniker`*`,⟦`*`value1`*`,`*`value2`*`,`*`value…`*`⟧);`<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `+_flag(`*`moniker`*`,⟪1⟫,⟦`*`value`*`⟧);`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `+_flag(`*`moniker`*`,⟪1,2,4`*`...`*`⟫,⟦`*`value1`*`,`*`value2`*`,`*`value...`*`⟧);`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `+_flag(`*`moniker`*`,⟪1⟫,⟦`*`value1`*`⟧,⟪2⟫,⟦`*`value2`*`⟧,⟪4⟫,⟦`*`value`*`⟧,`*`...`*`);`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `+_flag(`*`moniker`*`,⟪1,2,4`*`…`*`⟫,⟦`*`value1`*`,`*`value2`*`,`*`value…`*`⟧);`<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `+_flag(`*`moniker`*`,⟪1⟫,⟦`*`value1`*`⟧,⟪2⟫,⟦`*`value2`*`⟧,⟪4⟫,⟦`*`value`*`⟧,`*`…`*`);`
 
 <a name="assign"></a>
 ## Assignment
 Assignment after declaration is achieved using the `with_` verb (or shortened `>_`).
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `with_flag(`*`moniker`*`,⟦`*`value`*`⟧);`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `>_flag(`*`moniker`*`,⟦`*`value1`*`,`*`value2`*`,`*`value...`*`⟧);`<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `>_flag(`*`moniker`*`,⟦`*`value1`*`,`*`value2`*`,`*`value…`*`⟧);`<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `>_flag(`*`moniker`*`,⟪1⟫,⟦`*`value`*`⟧);`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `>_flag(`*`moniker`*`,⟪1,2,4`*`...`*`⟫,⟦`*`value1`*`,`*`value2`*`,`*`value...`*`⟧);`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `>_flag(`*`moniker`*`,⟪1⟫,⟦`*`value1`*`⟧,⟪2⟫,⟦`*`value2`*`⟧,⟪4⟫,⟦`*`value`*`⟧,`*`...`*`);`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `>_flag(`*`moniker`*`,⟪1,2,4`*`…`*`⟫,⟦`*`value1`*`,`*`value2`*`,`*`value…`*`⟧);`<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `>_flag(`*`moniker`*`,⟪1⟫,⟦`*`value1`*`⟧,⟪2⟫,⟦`*`value2`*`⟧,⟪4⟫,⟦`*`value`*`⟧,`*`…`*`);`
 
 <a name="cast"></a>
 ## Casting

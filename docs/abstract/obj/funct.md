@@ -1,5 +1,5 @@
 # Function (object)
-The `funct` object...
+The `funct` object…
 
 
 
@@ -33,7 +33,7 @@ Referencing a ` ` *object* is achieved with the `with` verb, or the shortened `(
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `with_(`*`moniker`*`);`<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `>_(`*`moniker`*`);`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `with_(`*`moniker1`*`,`*`moniker2`*`,`*`...`*`);`<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `with_(`*`moniker1`*`,`*`moniker2`*`,`*`…`*`);`<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `(`*`_moniker`*`);`
 
 <a name="type"></a>

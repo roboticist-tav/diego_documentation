@@ -1136,21 +1136,21 @@ start_instruct(border patrol)_forof(droid1)_you(droid1)?:;
 <h4 id="end_instructinstruct_moniker">end_instruct(<em>instruct_moniker</em>)</h4>
 <p>The finisher of an <code>instruct</code> ends with  <code>end_instruct(</code><em><code>instruct_moniker</code></em><code>)</code>, with no sub command the<code>instruct</code> will end  for <em>all</em> monikers (robots, swarms, labels of).</p>
 <h3 id="privileges">Privileges</h3>
-<h4 id="end_instructinstruct_moniker_formoniker1-n">end_instruct(<em>instruct_moniker</em>)<em>[...]</em>_for(<em>moniker1</em>, <em>n...</em>)</h4>
-<p>A whitelist (<em>moniker1</em>, <em>n...</em>) of monikers (robots, swarms, labels of) that should only be allowed to finish the <em>instruct_moniker</em> <code>instruct</code>.</p>
-<h4 id="end_instructinstruct_moniker_notmoniker1-n">end_instruct(<em>instruct_moniker</em>)<em>[...]</em>_not((<em>moniker1</em>, <em>n...</em>)</h4>
-<p>A blacklist (<em>moniker1</em>, <em>n...</em>) of monikers (robots, swarms, labels of) that are denied to finish the <em>instruct_moniker</em> <code>instruct</code>.</p>
-<h4 id="end_instructinstruct_moniker_formoniker1-n_notmoniker1-n">end_instruct(<em>instruct_moniker</em>)<em>[...]</em>_for(<em>moniker1</em>, <em>n...</em>)_not(<em>moniker1</em>, <em>n...</em>)</h4>
+<h4 id="end_instructinstruct_moniker_formoniker1-n">end_instruct(<em>instruct_moniker</em>)<em>[…]</em>_for(<em>moniker1</em>, <em>n…</em>)</h4>
+<p>A whitelist (<em>moniker1</em>, <em>n…</em>) of monikers (robots, swarms, labels of) that should only be allowed to finish the <em>instruct_moniker</em> <code>instruct</code>.</p>
+<h4 id="end_instructinstruct_moniker_notmoniker1-n">end_instruct(<em>instruct_moniker</em>)<em>[…]</em>_not((<em>moniker1</em>, <em>n…</em>)</h4>
+<p>A blacklist (<em>moniker1</em>, <em>n…</em>) of monikers (robots, swarms, labels of) that are denied to finish the <em>instruct_moniker</em> <code>instruct</code>.</p>
+<h4 id="end_instructinstruct_moniker_formoniker1-n_notmoniker1-n">end_instruct(<em>instruct_moniker</em>)<em>[…]</em>_for(<em>moniker1</em>, <em>n…</em>)_not(<em>moniker1</em>, <em>n…</em>)</h4>
 <p>A whitelist with blacklist of monikers (robots, swarms, labels of) that allowed/denied to finish the <em>instruct_moniker</em> <code>instruct</code>.</p>
 <h2 id="start_instruct"><a name="start_instruct"></a>start_instruct</h2>
 <p>Where a duplicate <code>start_instruct</code> (with the same signature) exists the first <code>start_instruct</code> command in the diego flow will be executed and later duplicates will restart the <code>instruct</code> at <code>begin_instuct</code> with <strong>no</strong> <em>hey_diego__ nor _oh_diego</em> events triggered.</p>
 <h4 id="start_instructinstruct_moniker">start_instruct(<em>instruct_moniker</em>)</h4>
 <p>The initiation of an <code>instruct</code> starts with  <code>start_instruct(</code><em><code>instruct_moniker</code></em><code>)</code>, with no sub command the<code>instruct</code> will start for <em>all</em> monikers (robots, swarms, labels of).</p>
 <h3 id="sub-commands">Sub Commands</h3>
-<h4 id="start_instructinstruct_moniker_formoniker1-n">start_instruct(<em>instruct_moniker</em>)_for(<em>moniker1</em>, <em>n...</em>)</h4>
-<p>An whitelist (<em>moniker1</em>, <em>n...</em>) of monikers (robots, swarms, labels of) that should only be allowed to initiate the <em>instruct_moniker</em> <code>instruct</code>.</p>
-<h4 id="start_instructinstruct_moniker_notmoniker1-n">start_instruct(<em>instruct_moniker</em>)_not((<em>moniker1</em>, <em>n...</em>)</h4>
-<p>A blacklist (<em>moniker1</em>, <em>n...</em>) of monikers (robots, swarms, labels of) that are denied to initiate the <em>instruct_moniker</em> <code>instruct</code>.</p>
+<h4 id="start_instructinstruct_moniker_formoniker1-n">start_instruct(<em>instruct_moniker</em>)_for(<em>moniker1</em>, <em>n…</em>)</h4>
+<p>An whitelist (<em>moniker1</em>, <em>n…</em>) of monikers (robots, swarms, labels of) that should only be allowed to initiate the <em>instruct_moniker</em> <code>instruct</code>.</p>
+<h4 id="start_instructinstruct_moniker_notmoniker1-n">start_instruct(<em>instruct_moniker</em>)_not((<em>moniker1</em>, <em>n…</em>)</h4>
+<p>A blacklist (<em>moniker1</em>, <em>n…</em>) of monikers (robots, swarms, labels of) that are denied to initiate the <em>instruct_moniker</em> <code>instruct</code>.</p>
 <h2 id="procedural-structuring"><a name="proce"></a> Procedural Structuring</h2>
 <table>
 <thead>

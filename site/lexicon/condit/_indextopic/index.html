@@ -1073,10 +1073,10 @@ go_robot(teh)_to(waypoint1)_at(11:00)_concomit(dailyRoutine);
 stop_concomit(dailyRoutine);
 start_concomit(dailyRoutine);
 pause_concomit(dailyRoutine);
-resume_concomit(dailyRoutine);  // (or start_...)
+resume_concomit(dailyRoutine);  // (or start_…)
 end_concomit(dailyRoutine);
 </code></pre>
-<p>...for more information on concomits see <a href="/concomit.md">concomit</a>.</p>
+<p>…for more information on concomits see <a href="/concomit.md">concomit</a>.</p>
 <h3 id="_after"><code>_after</code></h3>
 <p>The <code>_after</code> condit<em>ion</em> determines that the preceeding command(s) are executed after (and including) the date|datetime|time matching the given date|datetime|time or date_var|datetime_var|time_var` of the callee.</p>
 <p>The default syntax is <code>_after(</code><em><code>date|datetime|time</code></em><code>)</code>, for example:</p>
@@ -1101,10 +1101,10 @@ go_robot(teh)_to(waypoint1)_after(11:00)_concomit(dailyRoutine);
 stop_concomit(dailyRoutine);
 start_concomit(dailyRoutine);
 pause_concomit(dailyRoutine);
-resume_concomit(dailyRoutine);  // (or start_...)
+resume_concomit(dailyRoutine);  // (or start_…)
 end_concomit(dailyRoutine);
 </code></pre>
-<p>...for more information on concomits see <a href="/concomit.md">concomit</a>.</p>
+<p>…for more information on concomits see <a href="/concomit.md">concomit</a>.</p>
 <h3 id="_during"><code>_during</code></h3>
 <h3 id="_before"><code>_before</code></h3>
 <p>The <code>_before</code> condit<em>ion</em> determines that the preceeding command(s) are executed only before (and including) the date|datetime|time matching the given date|datetime|time or date_var|datetime_var|time_var` of the callee.</p>
@@ -1138,10 +1138,10 @@ go_robot(teh)_to(waypoint1)_before(11:00)_concomit(dailyRoutine);
 stop_concomit(dailyRoutine);
 start_concomit(dailyRoutine);
 pause_concomit(dailyRoutine);
-resume_concomit(dailyRoutine);  // (or start_...)
+resume_concomit(dailyRoutine);  // (or start_…)
 end_concomit(dailyRoutine);
 </code></pre>
-<p>...for more information on concomits see <a href="/concomit.md">concomit</a>.</p>
+<p>…for more information on concomits see <a href="/concomit.md">concomit</a>.</p>
 <table>
 <thead>
 <tr>
@@ -1167,7 +1167,7 @@ end_concomit(dailyRoutine);
 <td></td>
 </tr>
 <tr>
-<td><code>_ago(</code><em><code>value</code></em><code>,</code><em><code>unit</code></em><code>)</code>   or...<br><code>_ago(</code><em><code>value</code></em><code>)_unit(</code><em><code>unit</code></em><code>)</code></br></td>
+<td><code>_ago(</code><em><code>value</code></em><code>,</code><em><code>unit</code></em><code>)</code>   or…<br><code>_ago(</code><em><code>value</code></em><code>)_unit(</code><em><code>unit</code></em><code>)</code></br></td>
 <td></td>
 </tr>
 </tbody>
@@ -1222,8 +1222,8 @@ end_concomit(dailyRoutine);
 <td></td>
 </tr>
 <tr>
-<td><code>_for({parameter_1}[,... {parameter_n}])</code></td>
-<td>Provides focus on <code>{parameter_1}</code> ... <code>{parameter_n)</code></td>
+<td><code>_for({parameter_1}[,… {parameter_n}])</code></td>
+<td>Provides focus on <code>{parameter_1}</code> … <code>{parameter_n)</code></td>
 </tr>
 <tr>
 <td><code>_fps({fps})</code></td>
@@ -1351,14 +1351,14 @@ with_geometric({name/uuid})
 </tr>
 </tbody>
 </table>
-<pre><code class="language-Diego">_for({parameter_1},... {parameter_n})                   Provides focus on {parameter_1} ... {parameter_n)
+<pre><code class="language-Diego">_for({parameter_1},… {parameter_n})                   Provides focus on {parameter_1} … {parameter_n)
 _between({parameter_1})_and({parameter_2})              Provides focus from {parameter_1} to {parameter_2} inclusive
 _between({parameter_1})_and({parameter_2})_exclusive()  Provides focus from {parameter_1} to {parameter_2} exclusive
 
 
 label({label});                 Caller assigns label {label} to the callee
 label({label})
-    _for({uuid/name}, ...);     Assigns a label {label} to {uuid/name_1} ... {uuid/name_n}
+    _for({uuid/name}, …);     Assigns a label {label} to {uuid/name_1} … {uuid/name_n}
 ping({uuid/name});              Tests of reachability between caller and {uuid/name} callee
 pong({uuid/name}):              Return/result of a ping from caller
 pong({uuid/name})
@@ -1401,7 +1401,7 @@ tell_energy({energy_value})_unit({unit_of_measure});
 ask_energy({uuid/name});
 
 ask()
-    _for()                      _for({uuid/name}, ...); 
+    _for()                      _for({uuid/name}, …); 
 
 
 

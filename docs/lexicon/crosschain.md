@@ -8,7 +8,7 @@ The idiom 'trust is earned not gained' is never practised with blockchain.  Trus
 
 So what is the alternative to blockchain?  Well lets first simplify matters with an example.
 
-Simply put, blockchain works with a digital ledger shared by everyone. Validation of a chain is agreed upon and added to the blockchain.  In simplified terms the blockchain for three nodes (as a simplified example) can be depicted as follows (_fig. 1_)...
+Simply put, blockchain works with a digital ledger shared by everyone. Validation of a chain is agreed upon and added to the blockchain.  In simplified terms the blockchain for three nodes (as a simplified example) can be depicted as follows (_fig. 1_)…
 
 | ![Blockchain Example](https://raw.githubusercontent.com/tavman7/diego.github.io/main/_img/blockchain.jpg "Blockchain Example") |
 | :---: |
@@ -22,7 +22,7 @@ In blockchain redundancy is beneficial since the _proof of work_ takes more _'wo
 
 The mission of **Diego**, as a system, is for thingies (robots, IoT, mobots, etc.) to learn accumulatively as humans have being doing throughout their lives _ _i.e._ learn from a baby → learn through childhood → learn through adolescence → learn through adulthood. So the redundancy that stifles blockchain is something desirable for **Diego**. However, humans do not learn **everything** _in the world_ as they grow up, they learn from their environment, their peers, and their superiors. So we need to change the paradigm of blockchain where validation of transactions (albeit conversations) is not the responsibility of every node.  Adiitionally we should not rely on a digital ledger for every transaction.  This change is what I have termed, 'crosschain', because chains are crossed as they grow.
 
-Firstly in crosschain, transactions are better termed as 'conversations', since we are working with 'communication'. In crosschain every node keeps their own digital ledger, of all the conversations they have made. A conversation is a **Diego** command executed and/or reply to a command from another node.  The depiction used in _fig. 1_ can therefore be modified as in _fig. 2_...
+Firstly in crosschain, transactions are better termed as 'conversations', since we are working with 'communication'. In crosschain every node keeps their own digital ledger, of all the conversations they have made. A conversation is a **Diego** command executed and/or reply to a command from another node.  The depiction used in _fig. 1_ can therefore be modified as in _fig. 2_…
 
 | ![Crosschain Example](https://raw.githubusercontent.com/tavman7/diego.github.io/main/_img/crosschain.jpg "Crosschain Example") |
 | :---: |
@@ -32,13 +32,13 @@ In _fig. 2_ each of the three nodes has their own ledger of their conversations,
 
 For the other two nodes in _fig. 2_ (mustard and green) have a dialogue between each other. In this case each node still keeps their own ledger but for every conversation between each node they keep a crossed chain of each others conversations. Mustard node keeps records of  its conversations and all conversations of green node (that it hears) as a chain on another chain, and _visa versa_.
 
-All dialogues are possible, for instance, _fig. 3_ depicts the purple node having a one way conversation with the mustard node and the green node...
+All dialogues are possible, for instance, _fig. 3_ depicts the purple node having a one way conversation with the mustard node and the green node…
 
 | ![Dual One-way Dialogue](https://raw.githubusercontent.com/tavman7/diego.github.io/main/_img/dual_oneway_dialogue.jpg "Dual One-way Dialogue") |
 | :---: |
 | *fig. 2: Dual One-way Dialogue* |
 
-Then _fig. 4_ shows a conversation relayed from mustard node to green node through purple node...
+Then _fig. 4_ shows a conversation relayed from mustard node to green node through purple node…
 
 | ![Relayed Dialogue](https://raw.githubusercontent.com/tavman7/diego.github.io/main/_img/realyed_dialogue.jpg "Relayed Dialogue") |
 | :---: |

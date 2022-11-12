@@ -22,7 +22,7 @@ As the `second` posit with a *`second_value`* parameter to set the temporal seco
 
 Some *objects* allow for an array of seconds. To set an array of seconds, use multiple `second` posits. Alternatively an array can be used to set seconds in one `second` posit.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<object>`*`_second(`*`{second_value1}`*`)_sec(`*`{second_value2}`*`)_`*`...`*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<object>`*`_second(`*`{second_value1}`*`)_sec(`*`{second_value2}`*`)_`*`…`*<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<object>`*`_second([`*`second_array_moniker`*`]);`<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<object>`*`_sec([`*`second_array_moniker`*`]);`
 
@@ -46,15 +46,15 @@ Numeric Output:
 ## Uniting
 In a similar way to typing, the `second` *property* can also be cast or formatted as a unit.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<object>`*`_`*`<posit>`*`(❬second❭,`*`...`*`);`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<object>`*`_`*`<posit>`*`(❬sec❭,`*`...`*`);`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<object>`*`_`*`<posit>`*`(❬second❭,`*`…`*`);`<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<object>`*`_`*`<posit>`*`(❬sec❭,`*`…`*`);`
 
 <a name="cast"></a>
 ## Casting
 Casting an `second` *property*  requires the `tosecond` posit (or shortened `tosec`), both a single second and an array of seconds.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<object>`*`_tosecond(`*`second_value`*`);`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<object>`*`_tosecond(`*`{second_value_cast_to1}`*`)_tosec(`*`{second_value_cast_to2}`*`)_`*`...`*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<object>`*`_tosecond(`*`{second_value_cast_to1}`*`)_tosec(`*`{second_value_cast_to2}`*`)_`*`…`*<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<object>`*`_tosecond([`*`second_array__cast_to_moniker`*`]);`<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<object>`*`_tosec([`*`second_array__cast_to_moniker`*`]);`
 

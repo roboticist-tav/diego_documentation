@@ -2,7 +2,7 @@
 The `ident` property exposes the identity interface for most all objects, giving identity information in response to any requests such as `_ask`.
 
 ## Retrieval
-Retrieval of all `ident` properties require an empty parameter set of the `_ident` posit. The `_id` posit is syntactically identical to `_ident` and can be used freely and interchangeably. The use of the `_value` (or shortened `_v`) posit is automatically implied and is not necessary. The default format of the output will be via a comma-separated list of key-value pairs, such as "*`key1=value1,key2=value2,...`*", alphabetical order. Formatting of the output can be achieved either by: using the `_format` posit; or, using the format as a type with curly brackets (`{}`).
+Retrieval of all `ident` properties require an empty parameter set of the `_ident` posit. The `_id` posit is syntactically identical to `_ident` and can be used freely and interchangeably. The use of the `_value` (or shortened `_v`) posit is automatically implied and is not necessary. The default format of the output will be via a comma-separated list of key-value pairs, such as "*`key1=value1,key2=value2,…`*", alphabetical order. Formatting of the output can be achieved either by: using the `_format` posit; or, using the format as a type with curly brackets (`{}`).
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<object>`*`_ident();`<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<object>`*`_id();`<br>

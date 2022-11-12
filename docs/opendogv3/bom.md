@@ -70,7 +70,7 @@ with_robot(opendogv3)
 
 # Absolute
 
-`_abs(`*`numeric`*`);` &nbsp; *`...`*`|`*`sub-expression`*`|`*`...`*
+`_abs(`*`numeric`*`);` &nbsp; *`…`*`|`*`sub-expression`*`|`*`…`*
 
 
 

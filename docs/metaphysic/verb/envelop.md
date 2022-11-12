@@ -6,7 +6,7 @@ The envelop verb is a
 //
 
 
-// Perspective human(Jack)... 
+// Perspective human(Jack)… 
 
 // Define scope
 use namespace(behaviour_learning.training_exercise.envelop);
@@ -15,7 +15,7 @@ use_map(valley_range);
 
 // Define participants
 add_poi(target)_at(3.44773632, -12.84847632, 0.124);
-group_drone(sunya, eka, dvi)_group(assets);   // Sanskrit numerals tri, catur, pancan...
+group_drone(sunya, eka, dvi)_group(assets);   // Sanskrit numerals tri, catur, pancan…
 assign_rank(O4)_to(sunya);
 assign_rank(E4)_to(eka, dvi);
 
@@ -27,7 +27,7 @@ with_group(assets)_goto(target)_form(arrowhead)?;
         ? document_poi(target);
 
 ```
-human(Jack)... [ 3748aa71-1b16-4dc5-8666-9625bbbd70ac ]
+human(Jack)… [ 3748aa71-1b16-4dc5-8666-9625bbbd70ac ]
 
 drone(sunya) [ 62b9ec58-b556-498f-ba9b-b735a194c9c0 ]
 

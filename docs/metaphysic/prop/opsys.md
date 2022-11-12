@@ -19,7 +19,7 @@ When adding the operating system as a child of the preceding *object*, by using 
 
 Some *objects* allow for multiple operating systems. To set more than one operating system, multiple `opsys` posit are required. Alternatively an array can be used to set operating systems in one `opsys` posit.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<object>`*`_opsys(`*`{operating_system1}`*`)_opsys(`*`{operating_system2}`*`)_`*`...`*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<object>`*`_opsys(`*`{operating_system1}`*`)_opsys(`*`{operating_system2}`*`)_`*`…`*<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<object>`*`_opsys([`*`operating_system_array_moniker`*`]);`
 
 <a name="cast"></a>

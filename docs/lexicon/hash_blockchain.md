@@ -8,7 +8,7 @@ A human known a `Bob`, a a thingy called `daisy` make cameo appearances.
 
 The goal is for 'Fred' to pass on a secret code to robots `bahh`, `tahh` and `thah`, and collect stat(istic)s, eye colour and colour of their socks. Then return back to base.
 
-> ## Step 1: Write the instruction...
+> ## Step 1: Write the instruction…
 
  So, Fred gets to work, opens his IDE and writes the following Diego code:
 
@@ -27,26 +27,26 @@ begin_instuct(get_stats_from_bahh_tahh_and_thah)_forof(alif);
 end_instruct(get_stats_from_bahh_tahh_and_thah);
 ```
 
-The command `exec_instruct(report_back_to_base)` executes (starts off) a previous instruction given and known to `alif` in this example.  Human interpretations of the commands in this instruction are shown, as well as, the crosschain hashtables which will be explained as we go along...
+The command `exec_instruct(report_back_to_base)` executes (starts off) a previous instruction given and known to `alif` in this example.  Human interpretations of the commands in this instruction are shown, as well as, the crosschain hashtables which will be explained as we go along…
 
-> ## Step 2: `Fred` and `alif` start talking...
+> ## Step 2: `Fred` and `alif` start talking…
 
-Now we will observe the communication between `Fred` and `alif`, both from their perspectives...
+Now we will observe the communication between `Fred` and `alif`, both from their perspectives…
 
-Fred sends out the Diego commands by ececuting the _.dgo_ file.  During this process `Fred` (the thingy side of 'Fred') records them for prosperity into memory (`Fred`s hastable)...
+Fred sends out the Diego commands by ececuting the _.dgo_ file.  During this process `Fred` (the thingy side of 'Fred') records them for prosperity into memory (`Fred`s hastable)…
 
 ### Human `Fred`
 
 | caller  | *hash | ←hash | ↓hash | ↑hash | Diego commands<br />_Human talk_ |
 | :-----: | :---: | :---: | :---: | :---: | ---- |
-| `Fred`^♠^ | adc3^♠^ | 62e7 | | | `begin_instuct(get_stats_from_bahh_tahh_and_thah)_forof(alif);`<br /><br />_Okay `alif`, so here is what I want you to do..._ |
+| `Fred`^♠^ | adc3^♠^ | 62e7 | | | `begin_instuct(get_stats_from_bahh_tahh_and_thah)_forof(alif);`<br /><br />_Okay `alif`, so here is what I want you to do…_ |
 
 ♠: The caller is actually a uuid, so are the hashes.  They are referred to as hashes for historical reasons.  The hashes have been shorted to 16bit for clarity.
-♡: The use of `?` at `? ask_stat(eye_colour)` indicates this command is a *hey_diego* command of the preceding *go_diego* command, in this case: `call_robot()_forof(bahh,tahh,thah)_unanimous()?|;`.  We will see later an example of a sucess and a failure of the `call_robot` command...
+♡: The use of `?` at `? ask_stat(eye_colour)` indicates this command is a *hey_diego* command of the preceding *go_diego* command, in this case: `call_robot()_forof(bahh,tahh,thah)_unanimous()?|;`.  We will see later an example of a sucess and a failure of the `call_robot` command…
 
-The `begin_instuct` command has the `_forof(alif)` postposit to signify that this `instruct` is for the benefit of `alif` only. This is not strictly necessary as the execution of the `instruct` can be better handled by the `exec_instruct` command (we will see later...). If, for some reason, `alif` is not available to execute the command, the `with_instruct` command will be required to reassign the `instruct` to something else, _for example:_ `with_instuct(get_stats_from_bahh_tahh_and_thah)_forof(jeeem)_notforof(alif)`.
+The `begin_instuct` command has the `_forof(alif)` postposit to signify that this `instruct` is for the benefit of `alif` only. This is not strictly necessary as the execution of the `instruct` can be better handled by the `exec_instruct` command (we will see later…). If, for some reason, `alif` is not available to execute the command, the `with_instruct` command will be required to reassign the `instruct` to something else, _for example:_ `with_instuct(get_stats_from_bahh_tahh_and_thah)_forof(jeeem)_notforof(alif)`.
 
-`Fred` continues...
+`Fred` continues…
 
 | caller  | *hash | ←hash | ↓hash | ↑hash | Diego commands<br />_Human talk_ |
 | :-----: | :---: | :---: | :---: | :---: | ---- |
@@ -75,13 +75,13 @@ The `begin_instuct` command has the `_forof(alif)` postposit to signify that thi
 + `set_discriminat(progeny)_givento(call)_value(true);` *- implied discrimination through progeny of all `call`s for this _thingy_*
 + `set_discrimat(progeny)_givento(call)_appliedto(robot)_value(true);` *- discrimination through progeny of `call`s to `robot` kind* 
 
-While `Fred` is talking (to himself), robot `alif` is listening and taking it all in...
+While `Fred` is talking (to himself), robot `alif` is listening and taking it all in…
 
 ### Robot `alif`
 
 | caller  | *hash | ←hash | ↓hash | ↑hash | Diego commands<br />_Human talk_ |
 | :-----: | :---: | :---: | :---: | :---: | ---- |
-| `Fred` |  |  | adc3 | 62e7 | `begin_instuct(get_stats_from_bahh_tahh_and_thah)_forof(alif);`<br /><br />_Okay `Fred`, I'm talking notes..._ |
+| `Fred` |  |  | adc3 | 62e7 | `begin_instuct(get_stats_from_bahh_tahh_and_thah)_forof(alif);`<br /><br />_Okay `Fred`, I'm talking notes…_ |
 | `Fred` |  |  | c682 | adc3 | &nbsp;&nbsp;&nbsp;&nbsp;`goto_mist(the_mist)_you()?:;`<br /><br />_Right, so I go to `the_mist`._ |
 | `Fred` |  |  | 53d2 | c682 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`? proclaim_var(secret_code)_value(1234)_forof(bahh,tahh,thah);`<br /><br />_So, when I get there (`the_mist`) I proclaim `bahh`, `tahh` and `thah` of the secret code, `1234`._ |
 | `Fred` |  |  | 438d | 53d2 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`: exec_instruct(report_back_to_base);`<br /><br />_If there are any problems I will report back to base._ |
@@ -91,7 +91,7 @@ While `Fred` is talking (to himself), robot `alif` is listening and taking it al
 | `Fred` |  |  | fa7e^♥^ | f496 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`| ask_stat(sock_colour):;`<br /><br />_As soon as I get an unanimous response to the roll-call, I will also ask the colour of anyone's socks._ |
 | `Bob`^♣^ |  |  | 7f49 | 5598^♣^ | `find_tool(5mm_spanner)_appliedto(robot);`<br /><br />_Ummm, human `Bob` is asking all robots if they know where the `5mm_spanner` is!_ |
 | `alif` | a651 | 910a |  | 7f49 | `found_tool(5mm spanner)_forof(Bob)_value(false);`<br /><br />_Sorry `Bob`, I do not know where the `5mm_spanner` is._ |
-| `Fred` |  |  | cb67 | fa7e^♥^ | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`: report_err();`<br /><br />_...back to Fred's `instruct`... I will then report anything wrong when I ask their sock colour._ |
+| `Fred` |  |  | cb67 | fa7e^♥^ | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`: report_err();`<br /><br />_…back to Fred's `instruct`… I will then report anything wrong when I ask their sock colour._ |
 | `Fred` |  |  | 5e31 | cb67 | &nbsp;&nbsp;&nbsp;`exec_instruct(report_back_to_base);`<br /><br />_Right oh, if there are any problems I will report back to base._ |
 | `Fred` |  |  | 600b | 5e31 |`end_instruct(get_stats_from_bahh_tahh_and_thah);`<br /><br />_Okay, got it._ |
 
@@ -99,7 +99,7 @@ While `Fred` is talking (to himself), robot `alif` is listening and taking it al
 
 ♥: By matching the ↑hash `fa7e` of message `f3d0` with the ↓hash `fa7e` of message `9cf1`, `alif` can get back to its conversation with `Fred`.
 
-Let's have a quick peep at `Bob`'s crosschain hashtable...
+Let's have a quick peep at `Bob`'s crosschain hashtable…
 
 ### Human `Bob`
 
@@ -111,9 +111,9 @@ Let's have a quick peep at `Bob`'s crosschain hashtable...
 
 ʃꜬ: Since `Bob`'s *hash matches the ↑hashes from `alif` and `droid1`, `Bob` knows these are responses to his `find_` verb.  If `Bob` wants to respond back he will use the ↓hashes.  The use of `_forof(Bob)_` isn't strickly neccessary as the ↑hash (`7f49`) in `alif`'s and `droid1`'s ledger will be referrenced to `Bob`'s *hash (`7f49`) , it can be omitted.
 
-ⱷ: The `_insub` postposit means _..the preceding part of this command is..._ in `sub`ject `toolbox_red`. See [obs_and_subs.md](obs_and_subs.md).
+ⱷ: The `_insub` postposit means _..the preceding part of this command is…_ in `sub`ject `toolbox_red`. See [obs_and_subs.md](obs_and_subs.md).
 
-> ## Step 3: Let's go...
+> ## Step 3: Let's go…
 
 Fred, after running the above code (Step #2), `Fred` checks everything is ready and runs the following command:
 
@@ -125,30 +125,30 @@ exec_instuct(get_stats_from_bahh_tahh_and_thah)_you(alif)_them(bahh, tahh, thah)
 
 | caller  | *hash | ←hash | ↓hash | ↑hash | Diego commands<br />_Human talk_ |
 | :-----: | :---: | :---: | :---: | :---: | ---- |
-| `Fred` | 9be9 | 600b | | | `exec_instuct(get_stats_from_bahh_tahh_and_thah)`<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`_you(alif)_them(bahh, tahh, thah);`<br /><br />_Okay `alif`, off you go..._ |
+| `Fred` | 9be9 | 600b | | | `exec_instuct(get_stats_from_bahh_tahh_and_thah)`<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`_you(alif)_them(bahh, tahh, thah);`<br /><br />_Okay `alif`, off you go…_ |
 
 ### Robot `alif`
 
 | caller  | *hash | ←hash | ↓hash | ↑hash | Diego commands<br />_Human talk_ |
 | :-----: | :---: | :---: | :---: | :---: | ---- |
-| `Fred` |  |  | 9be9 | 600b | `exec_instuct(get_stats_from_bahh_tahh_and_thah)`<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`_you(alif)_them(bahh, tahh, thah);`<br /><br />_Right, here I go..._ |
+| `Fred` |  |  | 9be9 | 600b | `exec_instuct(get_stats_from_bahh_tahh_and_thah)`<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`_you(alif)_them(bahh, tahh, thah);`<br /><br />_Right, here I go…_ |
 
 At this point `alif` will check its memory for the `begin_` and `end_` of the `get_stats_from_bahh_tahh_and_thah` `instruct`, knowing it has most likely come from `Fred`. Another robot, called `Driod1`, is also in ear-shot of `Fred`, but since `Fred` has used `_forof(alif)` and there isn't implication of relaying messages, `Droid1` will ignore this message in its ledger (if it wants to _i.e. has been setup to ignore messages that have nothing to do with it_).
 
-So once `alif` has remembered  `get_stats_from_bahh_tahh_and_thah` it starts to loop through the `instuct`...
+So once `alif` has remembered  `get_stats_from_bahh_tahh_and_thah` it starts to loop through the `instuct`…
 
 ### Robot `alif`
 
 | caller  | *hash | ←hash | ↓hash | ↑hash | Diego commands<br />_Human talk_ |
 | :-----: | :---: | :---: | :---: | :---: | ---- |
-| `Fred` |  |  | aaf9 | 4816 |`begin_instuct(get_stats_from_bahh_tahh_and_thah);`<br /><br />_Okay, let's get the `instruct`ions to follow..._ |
-| `alif` | 44de | a651 | 9778 | aaf9 | `goto_mist(the_mist)_me()?:;`<br /><br />Perform the previously defined action `goto_mist(the_mist)`... |
+| `Fred` |  |  | aaf9 | 4816 |`begin_instuct(get_stats_from_bahh_tahh_and_thah);`<br /><br />_Okay, let's get the `instruct`ions to follow…_ |
+| `alif` | 44de | a651 | 9778 | aaf9 | `goto_mist(the_mist)_me()?:;`<br /><br />Perform the previously defined action `goto_mist(the_mist)`… |
 
 The `begin_` verb and its command is located in memory, then to signify following the instructions (_any commands after the `begin_` verb_), alif will call the instruction to command itself from the instruction, as can bee seen witht he first command  `goto_mist(the_mist)`.  Since `alif` knows this command is only for itself, it appends `_me()` to the end on the instruction to signify to others this is command `alif` only must follow and this command is not being _re-_commanded by `alif`.
 
 In the physical *real* world `alif` manoeuvres itself along a predefined route (called `base_to_mist`) to get `the mist` where `bahh`, `tahh`, and `thah` are hanging out.
 
-For this example, `alif` is very chatty (has a setting to be chatty from itself, or others), so its going to chat about its achievement and issues...
+For this example, `alif` is very chatty (has a setting to be chatty from itself, or others), so its going to chat about its achievement and issues…
 
 ### Robot `alif`
 
@@ -159,11 +159,11 @@ For this example, `alif` is very chatty (has a setting to be chatty from itself,
 
 Two examples are given for robot `alif` to records its own actions, in its own ledger.  The rules of crosschain are that other thingies should have a chain of messages and any broken chain rectified.  So, anyone else in ear-shot of `alif` will record `alif` chatting away to itself. (which we will see later !!!!!!!!!!!!!!!!!!!!!!)
 
-> ## Step 4: Into the mist...
+> ## Step 4: Into the mist…
 
-So `alif` has entered `the mist` and will continue following the instructions set by human `Fred` when it was back at `the base`.  Now within `the mist` the robots (and others) can hear `alif` talking and take notice...
+So `alif` has entered `the mist` and will continue following the instructions set by human `Fred` when it was back at `the base`.  Now within `the mist` the robots (and others) can hear `alif` talking and take notice…
 
-`alif` is quick to get into action and gets straight into it, proclaiming `bahh`, `tahh`, and `thah` of the secret code...
+`alif` is quick to get into action and gets straight into it, proclaiming `bahh`, `tahh`, and `thah` of the secret code…
 
 ### Robot `alif`
 
@@ -173,9 +173,9 @@ So `alif` has entered `the mist` and will continue following the instructions se
 | `alif` | ad70 | b707 | | | `proclaim_var(secret_code)_value(1234)_forof(bahh,tahh,thah)`<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`_success(+103, successful proclaim)_me();`<br /><br />_I have proclaimed `secret_code` `1234` to `bahh`, `tahh`, and, `thah`._ |
 | `alif` | 32a2 | ad70 | | | `add_valid(+101,proclaim complete)`<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`_givento(proclaim)_appliedto(var)_specificto(secret_code)_me();`<br /><br />✅ _Proclaimed `secret_code` `1234` to `bahh`, `tahh`, and, `thah`._ |
 
-> ### Step 4a: Pssh, I have the secret code...
+> ### Step 4a: Pssh, I have the secret code…
 
-**Everyone** listens, even a fridge (called `daisy`) that is sitting in the corner in `the mist`!  Let's follow each conversation, one command at a time...
+**Everyone** listens, even a fridge (called `daisy`) that is sitting in the corner in `the mist`!  Let's follow each conversation, one command at a time…
 
 
 ### Robot  `bahh`
@@ -184,7 +184,7 @@ So `alif` has entered `the mist` and will continue following the instructions se
 | :-----: | :---: | :---: | :---: | :---: | ---- |
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
 
-...it seems robot `bahh` is not listening...
+…it seems robot `bahh` is not listening…
 
 ### Robot  `tahh`
 
@@ -227,7 +227,7 @@ Even though `alif` followed its instructions and proclaimed the variable `secret
 
 > ### Step 4b: Attention please
 
-`alif` continues...
+`alif` continues…
 
 ### Robot `alif`
 
@@ -235,7 +235,7 @@ Even though `alif` followed its instructions and proclaimed the variable `secret
 | :-----: | :---: | :---: | :---: | :---: | ---- |
 | `alif` | 1169 | a5ca | bab3 | 9778 | &nbsp;&nbsp;&nbsp;&nbsp;`call_robot()_forof(bahh,tahh,thah)_unanimous()?!;`<br /><br />_Roll Call! This is a roll call for robots `bahh`, `tahh`, and, `thah`!_ |
 
-The `call_` verb demands a reply, and in this actual case a `_unanimous` reply. So the others respond...
+The `call_` verb demands a reply, and in this actual case a `_unanimous` reply. So the others respond…
 
 ### Robot  `bahh`
 
@@ -271,7 +271,7 @@ The `call_` verb demands a reply, and in this actual case a `_unanimous` reply. 
 | `bahh` |  |  | 40c2 | 1169 | `here_me();` |
 | `tahh` |  |  | 4eae | 1169 | `here_me();` |
 
-Robots `tahh` and `thah` have a straightforward conversation to the roll call.  As for robot `bahh` we can see one side of its conversation with `alif`, so let's look at `alif`'s crosschain hashtable first...
+Robots `tahh` and `thah` have a straightforward conversation to the roll call.  As for robot `bahh` we can see one side of its conversation with `alif`, so let's look at `alif`'s crosschain hashtable first…
 
 ### Robot `alif`
 
@@ -291,9 +291,9 @@ e15d3907-477d-44af-bf5f-e67758423484
 
 newbi
 
-> ### Look into my eyes...
+> ### Look into my eyes…
 
-`alif` continues...
+`alif` continues…
 
 ### Robot `alif`
 
@@ -320,7 +320,7 @@ newbi
 
 , and then asking everyone in `the mist` their eye colours and colours of their socks. 
 
-Everyone in the mist hears `alif` ask for the colour of their eyes...
+Everyone in the mist hears `alif` ask for the colour of their eyes…
 
 ### Robot  `bahh`
 
@@ -386,8 +386,8 @@ _forwho()
 
 ----
 
-`grant_shell()_allowfor({moniker1|uuid1}[, ... {moniker_n|uuid_n}])_for({moniker1|uuid1}[, ... {moniker_n|uuid_n}]);`
-`grant_shell()_allowforme()_for({moniker1|uuid1}[, ... {moniker_n|uuid_n}]);`
+`grant_shell()_allowfor({moniker1|uuid1}[, … {moniker_n|uuid_n}])_for({moniker1|uuid1}[, … {moniker_n|uuid_n}]);`
+`grant_shell()_allowforme()_for({moniker1|uuid1}[, … {moniker_n|uuid_n}]);`
 
 
 

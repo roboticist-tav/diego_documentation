@@ -71,9 +71,9 @@ with_me()
 
 | sensor type | definition |
 | --- | --- |
-| <a name="imu"></a>`{imu}`<br>`_type(imu)`<br>`_imu()` | **Inertial Measurement Unit**<br>IMUs can carry: [accelerometer](#accelero); [gyroscopes](#gyro);... [thermometer](#temp); [linear position sensor](#linear); [tachometer](#tacho)  |
+| <a name="imu"></a>`{imu}`<br>`_type(imu)`<br>`_imu()` | **Inertial Measurement Unit**<br>IMUs can carry: [accelerometer](#accelero); [gyroscopes](#gyro);… [thermometer](#temp); [linear position sensor](#linear); [tachometer](#tacho)  |
 | <a name="magnet"></a>`{magnet}`<br>`_type(magnet)` | **Magnetic Module**<br>Magnetic modules can carry: [compass](#compass); [magnetic field sensor](#mems); [thermometer](#temp); [linear position sensor](#linear); [tachometer](#tacho)  |
-| <a name="motion"></a>`{motion}`<br>`_type(motion)` | **Motion Sensors**<br>Motion modules can carry: [accelerometer](#accelero); [gyroscopes](#gyro);... [thermometer](#temp); [linear position sensor](#linear); [tachometer](#tacho)  |
+| <a name="motion"></a>`{motion}`<br>`_type(motion)` | **Motion Sensors**<br>Motion modules can carry: [accelerometer](#accelero); [gyroscopes](#gyro);… [thermometer](#temp); [linear position sensor](#linear); [tachometer](#tacho)  |
 | <a name="oplight"></a>`{oplight}`<br>`_type(oplight)`<br>`_oplight()` | **Optical Light Module**<br>Motion modules can carry: [ambient light sensor](#amblight); [infra-red light sensor](#irlight); [ultra-violet light sensor](#uvlight). |
 | <a name="pth"></a>`{pth}`<br>`_type(pth)` | **Pressure / Temperature/ Humidity Module**<br>Motion modules can carry: [pressure sensor](#press); [thermometer](#temp); [hygrometer](#hygro). |
 

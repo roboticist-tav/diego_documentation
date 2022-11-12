@@ -388,9 +388,9 @@
 </li>
 <li class="toctree-l1 current"><a class="reference internal current" href="./">Demonstrating crosschain in a robot example</a>
 <ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="#step-1-write-the-instruction">Step 1: Write the instruction...</a>
+<li class="toctree-l2"><a class="reference internal" href="#step-1-write-the-instruction">Step 1: Write the instruction…</a>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#step-2-fred-and-alif-start-talking">Step 2: Fred and alif start talking...</a>
+<li class="toctree-l2"><a class="reference internal" href="#step-2-fred-and-alif-start-talking">Step 2: Fred and alif start talking…</a>
 <ul>
 <li class="toctree-l3"><a class="reference internal" href="#human-fred">Human Fred</a>
 </li>
@@ -400,7 +400,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#step-3-lets-go">Step 3: Let's go...</a>
+<li class="toctree-l2"><a class="reference internal" href="#step-3-lets-go">Step 3: Let's go…</a>
 <ul>
 <li class="toctree-l3"><a class="reference internal" href="#human-fred_1">Human Fred</a>
 </li>
@@ -412,11 +412,11 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#step-4-into-the-mist">Step 4: Into the mist...</a>
+<li class="toctree-l2"><a class="reference internal" href="#step-4-into-the-mist">Step 4: Into the mist…</a>
 <ul>
 <li class="toctree-l3"><a class="reference internal" href="#robot-alif_4">Robot alif</a>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#step-4a-pssh-i-have-the-secret-code">Step 4a: Pssh, I have the secret code...</a>
+<li class="toctree-l3"><a class="reference internal" href="#step-4a-pssh-i-have-the-secret-code">Step 4a: Pssh, I have the secret code…</a>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#robot-bahh">Robot  bahh</a>
 </li>
@@ -438,7 +438,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#robot-alif_6">Robot alif</a>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#look-into-my-eyes">Look into my eyes...</a>
+<li class="toctree-l3"><a class="reference internal" href="#look-into-my-eyes">Look into my eyes…</a>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#robot-alif_7">Robot alif</a>
 </li>
@@ -1097,7 +1097,7 @@
 <p>A human known a <code>Bob</code>, a a thingy called <code>daisy</code> make cameo appearances.</p>
 <p>The goal is for 'Fred' to pass on a secret code to robots <code>bahh</code>, <code>tahh</code> and <code>thah</code>, and collect stat(istic)s, eye colour and colour of their socks. Then return back to base.</p>
 <blockquote>
-<h2 id="step-1-write-the-instruction">Step 1: Write the instruction...</h2>
+<h2 id="step-1-write-the-instruction">Step 1: Write the instruction…</h2>
 </blockquote>
 <p>So, Fred gets to work, opens his IDE and writes the following Diego code:</p>
 <pre><code class="language-Diego">begin_instuct(get_stats_from_bahh_tahh_and_thah)_forof(alif);
@@ -1113,12 +1113,12 @@
     exec_instruct(report_back_to_base)_you();
 end_instruct(get_stats_from_bahh_tahh_and_thah);
 </code></pre>
-<p>The command <code>exec_instruct(report_back_to_base)</code> executes (starts off) a previous instruction given and known to <code>alif</code> in this example.  Human interpretations of the commands in this instruction are shown, as well as, the crosschain hashtables which will be explained as we go along...</p>
+<p>The command <code>exec_instruct(report_back_to_base)</code> executes (starts off) a previous instruction given and known to <code>alif</code> in this example.  Human interpretations of the commands in this instruction are shown, as well as, the crosschain hashtables which will be explained as we go along…</p>
 <blockquote>
-<h2 id="step-2-fred-and-alif-start-talking">Step 2: <code>Fred</code> and <code>alif</code> start talking...</h2>
+<h2 id="step-2-fred-and-alif-start-talking">Step 2: <code>Fred</code> and <code>alif</code> start talking…</h2>
 </blockquote>
-<p>Now we will observe the communication between <code>Fred</code> and <code>alif</code>, both from their perspectives...</p>
-<p>Fred sends out the Diego commands by ececuting the <em>.dgo</em> file.  During this process <code>Fred</code> (the thingy side of 'Fred') records them for prosperity into memory (<code>Fred</code>s hastable)...</p>
+<p>Now we will observe the communication between <code>Fred</code> and <code>alif</code>, both from their perspectives…</p>
+<p>Fred sends out the Diego commands by ececuting the <em>.dgo</em> file.  During this process <code>Fred</code> (the thingy side of 'Fred') records them for prosperity into memory (<code>Fred</code>s hastable)…</p>
 <h3 id="human-fred">Human <code>Fred</code></h3>
 <table>
 <thead>
@@ -1138,14 +1138,14 @@ end_instruct(get_stats_from_bahh_tahh_and_thah);
 <td align="center">62e7</td>
 <td align="center"></td>
 <td align="center"></td>
-<td><code>begin_instuct(get_stats_from_bahh_tahh_and_thah)_forof(alif);</code><br/><br/><em>Okay <code>alif</code>, so here is what I want you to do...</em></td>
+<td><code>begin_instuct(get_stats_from_bahh_tahh_and_thah)_forof(alif);</code><br/><br/><em>Okay <code>alif</code>, so here is what I want you to do…</em></td>
 </tr>
 </tbody>
 </table>
 <p>♠: The caller is actually a uuid, so are the hashes.  They are referred to as hashes for historical reasons.  The hashes have been shorted to 16bit for clarity.
-♡: The use of <code>?</code> at <code>? ask_stat(eye_colour)</code> indicates this command is a <em>hey_diego</em> command of the preceding <em>go_diego</em> command, in this case: <code>call_robot()_forof(bahh,tahh,thah)_unanimous()?|;</code>.  We will see later an example of a sucess and a failure of the <code>call_robot</code> command...</p>
-<p>The <code>begin_instuct</code> command has the <code>_forof(alif)</code> postposit to signify that this <code>instruct</code> is for the benefit of <code>alif</code> only. This is not strictly necessary as the execution of the <code>instruct</code> can be better handled by the <code>exec_instruct</code> command (we will see later...). If, for some reason, <code>alif</code> is not available to execute the command, the <code>with_instruct</code> command will be required to reassign the <code>instruct</code> to something else, <em>for example:</em> <code>with_instuct(get_stats_from_bahh_tahh_and_thah)_forof(jeeem)_notforof(alif)</code>.</p>
-<p><code>Fred</code> continues...</p>
+♡: The use of <code>?</code> at <code>? ask_stat(eye_colour)</code> indicates this command is a <em>hey_diego</em> command of the preceding <em>go_diego</em> command, in this case: <code>call_robot()_forof(bahh,tahh,thah)_unanimous()?|;</code>.  We will see later an example of a sucess and a failure of the <code>call_robot</code> command…</p>
+<p>The <code>begin_instuct</code> command has the <code>_forof(alif)</code> postposit to signify that this <code>instruct</code> is for the benefit of <code>alif</code> only. This is not strictly necessary as the execution of the <code>instruct</code> can be better handled by the <code>exec_instruct</code> command (we will see later…). If, for some reason, <code>alif</code> is not available to execute the command, the <code>with_instruct</code> command will be required to reassign the <code>instruct</code> to something else, <em>for example:</em> <code>with_instuct(get_stats_from_bahh_tahh_and_thah)_forof(jeeem)_notforof(alif)</code>.</p>
+<p><code>Fred</code> continues…</p>
 <table>
 <thead>
 <tr>
@@ -1193,7 +1193,7 @@ end_instruct(get_stats_from_bahh_tahh_and_thah);
 <li><code>set_discriminat(progeny)_givento(call)_value(true);</code> <em>- implied discrimination through progeny of all <code>call</code>s for this <em>thingy</em></em></li>
 <li><code>set_discrimat(progeny)_givento(call)_appliedto(robot)_value(true);</code> <em>- discrimination through progeny of <code>call</code>s to <code>robot</code> kind</em> </li>
 </ul>
-<p>While <code>Fred</code> is talking (to himself), robot <code>alif</code> is listening and taking it all in...</p>
+<p>While <code>Fred</code> is talking (to himself), robot <code>alif</code> is listening and taking it all in…</p>
 <h3 id="robot-alif">Robot <code>alif</code></h3>
 <table>
 <thead>
@@ -1213,7 +1213,7 @@ end_instruct(get_stats_from_bahh_tahh_and_thah);
 <td align="center"></td>
 <td align="center">adc3</td>
 <td align="center">62e7</td>
-<td><code>begin_instuct(get_stats_from_bahh_tahh_and_thah)_forof(alif);</code><br/><br/><em>Okay <code>Fred</code>, I'm talking notes...</em></td>
+<td><code>begin_instuct(get_stats_from_bahh_tahh_and_thah)_forof(alif);</code><br/><br/><em>Okay <code>Fred</code>, I'm talking notes…</em></td>
 </tr>
 <tr>
 <td align="center"><code>Fred</code></td>
@@ -1293,7 +1293,7 @@ end_instruct(get_stats_from_bahh_tahh_and_thah);
 <td align="center"></td>
 <td align="center">cb67</td>
 <td align="center">fa7e^♥^</td>
-<td>        <code>: report_err();</code><br/><br/><em>...back to Fred's <code>instruct</code>... I will then report anything wrong when I ask their sock colour.</em></td>
+<td>        <code>: report_err();</code><br/><br/><em>…back to Fred's <code>instruct</code>… I will then report anything wrong when I ask their sock colour.</em></td>
 </tr>
 <tr>
 <td align="center"><code>Fred</code></td>
@@ -1315,7 +1315,7 @@ end_instruct(get_stats_from_bahh_tahh_and_thah);
 </table>
 <p>♣:  While <code>alif</code> is <em>transribing</em> <code>Fred</code>s instruction, human <code>Bob</code> interrupts the conversation asking all the robots if they know where the <code>5mm_spanner</code> is. Note that the ↑hash <code>5598</code> of message <code>910a</code> <strong>does not</strong> match the ↓hash of the previous message, this indicates to <code>alif</code> that this message is not part of the conversation with <code>Fred</code> and therefore also not part of the <code>instruct</code>.</p>
 <p>♥: By matching the ↑hash <code>fa7e</code> of message <code>f3d0</code> with the ↓hash <code>fa7e</code> of message <code>9cf1</code>, <code>alif</code> can get back to its conversation with <code>Fred</code>.</p>
-<p>Let's have a quick peep at <code>Bob</code>'s crosschain hashtable...</p>
+<p>Let's have a quick peep at <code>Bob</code>'s crosschain hashtable…</p>
 <h3 id="human-bob">Human <code>Bob</code></h3>
 <table>
 <thead>
@@ -1356,9 +1356,9 @@ end_instruct(get_stats_from_bahh_tahh_and_thah);
 </tbody>
 </table>
 <p>ʃꜬ: Since <code>Bob</code>'s <em>hash matches the ↑hashes from <code>alif</code> and <code>droid1</code>, <code>Bob</code> knows these are responses to his <code>find_</code> verb.  If <code>Bob</code> wants to respond back he will use the ↓hashes.  The use of <code>_forof(Bob)_</code> isn't strickly neccessary as the ↑hash (<code>7f49</code>) in <code>alif</code>'s and <code>droid1</code>'s ledger will be referrenced to <code>Bob</code>'s </em>hash (<code>7f49</code>) , it can be omitted.</p>
-<p>ⱷ: The <code>_insub</code> postposit means <em>..the preceding part of this command is...</em> in <code>sub</code>ject <code>toolbox_red</code>. See <a href="../obs_and_subs/">obs_and_subs.md</a>.</p>
+<p>ⱷ: The <code>_insub</code> postposit means <em>..the preceding part of this command is…</em> in <code>sub</code>ject <code>toolbox_red</code>. See <a href="../obs_and_subs/">obs_and_subs.md</a>.</p>
 <blockquote>
-<h2 id="step-3-lets-go">Step 3: Let's go...</h2>
+<h2 id="step-3-lets-go">Step 3: Let's go…</h2>
 </blockquote>
 <p>Fred, after running the above code (Step #2), <code>Fred</code> checks everything is ready and runs the following command:</p>
 <pre><code class="language-Diego">exec_instuct(get_stats_from_bahh_tahh_and_thah)_you(alif)_them(bahh, tahh, thah);
@@ -1382,7 +1382,7 @@ end_instruct(get_stats_from_bahh_tahh_and_thah);
 <td align="center">600b</td>
 <td align="center"></td>
 <td align="center"></td>
-<td><code>exec_instuct(get_stats_from_bahh_tahh_and_thah)</code><br/>     <code>_you(alif)_them(bahh, tahh, thah);</code><br/><br/><em>Okay <code>alif</code>, off you go...</em></td>
+<td><code>exec_instuct(get_stats_from_bahh_tahh_and_thah)</code><br/>     <code>_you(alif)_them(bahh, tahh, thah);</code><br/><br/><em>Okay <code>alif</code>, off you go…</em></td>
 </tr>
 </tbody>
 </table>
@@ -1405,12 +1405,12 @@ end_instruct(get_stats_from_bahh_tahh_and_thah);
 <td align="center"></td>
 <td align="center">9be9</td>
 <td align="center">600b</td>
-<td><code>exec_instuct(get_stats_from_bahh_tahh_and_thah)</code><br/>     <code>_you(alif)_them(bahh, tahh, thah);</code><br/><br/><em>Right, here I go...</em></td>
+<td><code>exec_instuct(get_stats_from_bahh_tahh_and_thah)</code><br/>     <code>_you(alif)_them(bahh, tahh, thah);</code><br/><br/><em>Right, here I go…</em></td>
 </tr>
 </tbody>
 </table>
 <p>At this point <code>alif</code> will check its memory for the <code>begin_</code> and <code>end_</code> of the <code>get_stats_from_bahh_tahh_and_thah</code> <code>instruct</code>, knowing it has most likely come from <code>Fred</code>. Another robot, called <code>Driod1</code>, is also in ear-shot of <code>Fred</code>, but since <code>Fred</code> has used <code>_forof(alif)</code> and there isn't implication of relaying messages, <code>Droid1</code> will ignore this message in its ledger (if it wants to <em>i.e. has been setup to ignore messages that have nothing to do with it</em>).</p>
-<p>So once <code>alif</code> has remembered  <code>get_stats_from_bahh_tahh_and_thah</code> it starts to loop through the <code>instuct</code>...</p>
+<p>So once <code>alif</code> has remembered  <code>get_stats_from_bahh_tahh_and_thah</code> it starts to loop through the <code>instuct</code>…</p>
 <h3 id="robot-alif_2">Robot <code>alif</code></h3>
 <table>
 <thead>
@@ -1430,7 +1430,7 @@ end_instruct(get_stats_from_bahh_tahh_and_thah);
 <td align="center"></td>
 <td align="center">aaf9</td>
 <td align="center">4816</td>
-<td><code>begin_instuct(get_stats_from_bahh_tahh_and_thah);</code><br/><br/><em>Okay, let's get the <code>instruct</code>ions to follow...</em></td>
+<td><code>begin_instuct(get_stats_from_bahh_tahh_and_thah);</code><br/><br/><em>Okay, let's get the <code>instruct</code>ions to follow…</em></td>
 </tr>
 <tr>
 <td align="center"><code>alif</code></td>
@@ -1438,13 +1438,13 @@ end_instruct(get_stats_from_bahh_tahh_and_thah);
 <td align="center">a651</td>
 <td align="center">9778</td>
 <td align="center">aaf9</td>
-<td><code>goto_mist(the_mist)_me()?:;</code><br/><br/>Perform the previously defined action <code>goto_mist(the_mist)</code>...</td>
+<td><code>goto_mist(the_mist)_me()?:;</code><br/><br/>Perform the previously defined action <code>goto_mist(the_mist)</code>…</td>
 </tr>
 </tbody>
 </table>
 <p>The <code>begin_</code> verb and its command is located in memory, then to signify following the instructions (<em>any commands after the <code>begin_</code> verb</em>), alif will call the instruction to command itself from the instruction, as can bee seen witht he first command  <code>goto_mist(the_mist)</code>.  Since <code>alif</code> knows this command is only for itself, it appends <code>_me()</code> to the end on the instruction to signify to others this is command <code>alif</code> only must follow and this command is not being _re-_commanded by <code>alif</code>.</p>
 <p>In the physical <em>real</em> world <code>alif</code> manoeuvres itself along a predefined route (called <code>base_to_mist</code>) to get <code>the mist</code> where <code>bahh</code>, <code>tahh</code>, and <code>thah</code> are hanging out.</p>
-<p>For this example, <code>alif</code> is very chatty (has a setting to be chatty from itself, or others), so its going to chat about its achievement and issues...</p>
+<p>For this example, <code>alif</code> is very chatty (has a setting to be chatty from itself, or others), so its going to chat about its achievement and issues…</p>
 <h3 id="robot-alif_3">Robot <code>alif</code></h3>
 <table>
 <thead>
@@ -1478,10 +1478,10 @@ end_instruct(get_stats_from_bahh_tahh_and_thah);
 </table>
 <p>Two examples are given for robot <code>alif</code> to records its own actions, in its own ledger.  The rules of crosschain are that other thingies should have a chain of messages and any broken chain rectified.  So, anyone else in ear-shot of <code>alif</code> will record <code>alif</code> chatting away to itself. (which we will see later !!!!!!!!!!!!!!!!!!!!!!)</p>
 <blockquote>
-<h2 id="step-4-into-the-mist">Step 4: Into the mist...</h2>
+<h2 id="step-4-into-the-mist">Step 4: Into the mist…</h2>
 </blockquote>
-<p>So <code>alif</code> has entered <code>the mist</code> and will continue following the instructions set by human <code>Fred</code> when it was back at <code>the base</code>.  Now within <code>the mist</code> the robots (and others) can hear <code>alif</code> talking and take notice...</p>
-<p><code>alif</code> is quick to get into action and gets straight into it, proclaiming <code>bahh</code>, <code>tahh</code>, and <code>thah</code> of the secret code...</p>
+<p>So <code>alif</code> has entered <code>the mist</code> and will continue following the instructions set by human <code>Fred</code> when it was back at <code>the base</code>.  Now within <code>the mist</code> the robots (and others) can hear <code>alif</code> talking and take notice…</p>
+<p><code>alif</code> is quick to get into action and gets straight into it, proclaiming <code>bahh</code>, <code>tahh</code>, and <code>thah</code> of the secret code…</p>
 <h3 id="robot-alif_4">Robot <code>alif</code></h3>
 <table>
 <thead>
@@ -1522,9 +1522,9 @@ end_instruct(get_stats_from_bahh_tahh_and_thah);
 </tbody>
 </table>
 <blockquote>
-<h3 id="step-4a-pssh-i-have-the-secret-code">Step 4a: Pssh, I have the secret code...</h3>
+<h3 id="step-4a-pssh-i-have-the-secret-code">Step 4a: Pssh, I have the secret code…</h3>
 </blockquote>
-<p><strong>Everyone</strong> listens, even a fridge (called <code>daisy</code>) that is sitting in the corner in <code>the mist</code>!  Let's follow each conversation, one command at a time...</p>
+<p><strong>Everyone</strong> listens, even a fridge (called <code>daisy</code>) that is sitting in the corner in <code>the mist</code>!  Let's follow each conversation, one command at a time…</p>
 <h3 id="robot-bahh">Robot  <code>bahh</code></h3>
 <table>
 <thead>
@@ -1548,7 +1548,7 @@ end_instruct(get_stats_from_bahh_tahh_and_thah);
 </tr>
 </tbody>
 </table>
-<p>...it seems robot <code>bahh</code> is not listening...</p>
+<p>…it seems robot <code>bahh</code> is not listening…</p>
 <h3 id="robot-tahh">Robot  <code>tahh</code></h3>
 <table>
 <thead>
@@ -1706,7 +1706,7 @@ end_instruct(get_stats_from_bahh_tahh_and_thah);
 <blockquote>
 <h3 id="step-4b-attention-please">Step 4b: Attention please</h3>
 </blockquote>
-<p><code>alif</code> continues...</p>
+<p><code>alif</code> continues…</p>
 <h3 id="robot-alif_5">Robot <code>alif</code></h3>
 <table>
 <thead>
@@ -1730,7 +1730,7 @@ end_instruct(get_stats_from_bahh_tahh_and_thah);
 </tr>
 </tbody>
 </table>
-<p>The <code>call_</code> verb demands a reply, and in this actual case a <code>_unanimous</code> reply. So the others respond...</p>
+<p>The <code>call_</code> verb demands a reply, and in this actual case a <code>_unanimous</code> reply. So the others respond…</p>
 <h3 id="robot-bahh_1">Robot  <code>bahh</code></h3>
 <table>
 <thead>
@@ -1920,7 +1920,7 @@ end_instruct(get_stats_from_bahh_tahh_and_thah);
 </tr>
 </tbody>
 </table>
-<p>Robots <code>tahh</code> and <code>thah</code> have a straightforward conversation to the roll call.  As for robot <code>bahh</code> we can see one side of its conversation with <code>alif</code>, so let's look at <code>alif</code>'s crosschain hashtable first...</p>
+<p>Robots <code>tahh</code> and <code>thah</code> have a straightforward conversation to the roll call.  As for robot <code>bahh</code> we can see one side of its conversation with <code>alif</code>, so let's look at <code>alif</code>'s crosschain hashtable first…</p>
 <h3 id="robot-alif_6">Robot <code>alif</code></h3>
 <table>
 <thead>
@@ -1950,9 +1950,9 @@ end_instruct(get_stats_from_bahh_tahh_and_thah);
 <p>e15d3907-477d-44af-bf5f-e67758423484</p>
 <p>newbi</p>
 <blockquote>
-<h3 id="look-into-my-eyes">Look into my eyes...</h3>
+<h3 id="look-into-my-eyes">Look into my eyes…</h3>
 </blockquote>
-<p><code>alif</code> continues...</p>
+<p><code>alif</code> continues…</p>
 <h3 id="robot-alif_7">Robot <code>alif</code></h3>
 <table>
 <thead>
@@ -2008,7 +2008,7 @@ end_instruct(get_stats_from_bahh_tahh_and_thah);
 </tbody>
 </table>
 <p>, and then asking everyone in <code>the mist</code> their eye colours and colours of their socks. </p>
-<p>Everyone in the mist hears <code>alif</code> ask for the colour of their eyes...</p>
+<p>Everyone in the mist hears <code>alif</code> ask for the colour of their eyes…</p>
 <h3 id="robot-bahh_2">Robot  <code>bahh</code></h3>
 <table>
 <thead>
@@ -2132,8 +2132,8 @@ _specificto({postpos})
 _forwhat(object_moniker)
 _forwho()</p>
 <hr/>
-<p><code>grant_shell()_allowfor({moniker1|uuid1}[, ... {moniker_n|uuid_n}])_for({moniker1|uuid1}[, ... {moniker_n|uuid_n}]);</code>
-<code>grant_shell()_allowforme()_for({moniker1|uuid1}[, ... {moniker_n|uuid_n}]);</code></p>
+<p><code>grant_shell()_allowfor({moniker1|uuid1}[, … {moniker_n|uuid_n}])_for({moniker1|uuid1}[, … {moniker_n|uuid_n}]);</code>
+<code>grant_shell()_allowforme()_for({moniker1|uuid1}[, … {moniker_n|uuid_n}]);</code></p>
 <pre><code class="language-Diego">? add_valid({code},{description})       : add_error({code},{description})
 
 

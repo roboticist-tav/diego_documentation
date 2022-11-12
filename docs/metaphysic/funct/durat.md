@@ -13,19 +13,19 @@ The capital letters P, Y, M, W, D, T, H, M, and S are designators for each of th
 
 | *`period`* | description |
 | --- | --- |
-| *`P...`* | `P` is the duration designator (for period) placed at the start of the duration representation |
-| *`P...<year>Y...`* | `Y` i is the year designator that follows the value for the number of calendar years |
-| *`P...<quarter>Q...`* | `Q` i is the year designator that follows the value for the number of quarter years |
-| *`P...<fiscal_quarter>$...`* | `$` i is the year designator that follows the value for the number of fiscal quarter years |
-| *`P...<month>M...`* | `M` is the month designator that follows the value for the number of calendar months |
-| *`P...<week>W...`* | `W` is the week designator that follows the value for the number of weeks |
-| *`P...<fortnight>F...`* | `F` is the fortnight designator that follows the value for the number of fortnights |
-| *`P...<day>D...`* | `D` is the day designator that follows the value for the number of calendar days |
-| *`P...<jour>J...`* | `J` is the day designator that follows the value for the number of jour days |
-| *`PT...`* | `T` is the time designator that precedes the time components of the representation |
-| *`PT...<hour>H...`* | `H` is the hour designator that follows the value for the number of hours |
-*`PT...<minute>M...`* | `M` is the minute designator that follows the value for the number of minutes |
-*`PT...<second.millisecondsmicroseconds>S...`* | `S` is the second designator that follows the value for the number of seconds |
+| *`P…`* | `P` is the duration designator (for period) placed at the start of the duration representation |
+| *`P…<year>Y…`* | `Y` i is the year designator that follows the value for the number of calendar years |
+| *`P…<quarter>Q…`* | `Q` i is the year designator that follows the value for the number of quarter years |
+| *`P…<fiscal_quarter>$…`* | `$` i is the year designator that follows the value for the number of fiscal quarter years |
+| *`P…<month>M…`* | `M` is the month designator that follows the value for the number of calendar months |
+| *`P…<week>W…`* | `W` is the week designator that follows the value for the number of weeks |
+| *`P…<fortnight>F…`* | `F` is the fortnight designator that follows the value for the number of fortnights |
+| *`P…<day>D…`* | `D` is the day designator that follows the value for the number of calendar days |
+| *`P…<jour>J…`* | `J` is the day designator that follows the value for the number of jour days |
+| *`PT…`* | `T` is the time designator that precedes the time components of the representation |
+| *`PT…<hour>H…`* | `H` is the hour designator that follows the value for the number of hours |
+*`PT…<minute>M…`* | `M` is the minute designator that follows the value for the number of minutes |
+*`PT…<second.millisecondsmicroseconds>S…`* | `S` is the second designator that follows the value for the number of seconds |
 
 https://en.wikipedia.org/wiki/Battle_of_Hastings#:~:text=The%20only%20undisputed%20facts%20are,the%20battle%20lasted%20until%20dusk.
 
@@ -79,7 +79,7 @@ Referencing a ` ` *object* is achieved with the `with` verb, or the shortened `(
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `with_(`*`moniker`*`);`<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `>_(`*`moniker`*`);`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `with_(`*`moniker1`*`,`*`moniker2`*`,`*`...`*`);`<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `with_(`*`moniker1`*`,`*`moniker2`*`,`*`…`*`);`<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `(`*`_moniker`*`);`
 
 <a name="type"></a>

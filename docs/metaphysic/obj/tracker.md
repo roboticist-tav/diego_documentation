@@ -16,10 +16,10 @@ The tracker object is used to track a moving position of a thingy in space using
 ```Diego
 add_tracker({moniker|uuid});
 with_tracker({moniker|uuid});
-begin_tracker({moniker|uuid}); ... end_tracker...
+begin_tracker({moniker|uuid}); … end_tracker…
 ```
 
-To create and develop the tracker object use `add_`, however, using `with_` the first time will initiate construction.  Similarly using `begin_ ..._end_` for the first time will also initiate construction, but this approach is not recommended.
+To create and develop the tracker object use `add_`, however, using `with_` the first time will initiate construction.  Similarly using `begin_ …_end_` for the first time will also initiate construction, but this approach is not recommended.
 
 The `tracker` does not automatically run/start upon construction, you need to explicitly start the `tracker` with `run_`, `start_`, or, `exec_`.
 
@@ -62,14 +62,14 @@ The `tracker` object can be event trapped with `begin_` and `end_`.
 
 ```Diego
 begin_tracker({moniker|uuid});
-	...
+	…
 end_tracker({moniker|uuid});
 ```
 ## Options
 
 ### Discriminatory Options
 
-The `tracker` object has the standard discrimnatory options: `_for`; `_between ... _to`; `_not`.
+The `tracker` object has the standard discrimnatory options: `_for`; `_between … _to`; `_not`.
 
 ### Tracker Specific
 
@@ -79,7 +79,7 @@ There are various option available for the `tracker` object:
 | ------------------------------------------------- | ------------------------------------------------------------ |
 | `_freq({frequency}[, {unit}])`                    | Reporting frequency of `trackpoint`s.  The `{unit}` can only be of distance.<br />The frequency and unit can be made default with `set_tracker()_freq({default_freuency});` and  `set_tracker()_unit({default_unit)});` respectively. |
 | `_lapat()` <br /> `_lapat({lap_value}[, {unit}])` |                                                              |
-| `_clepe({clepe_convention})`                      | The clepe (naming) convention used for children (`trackpoint`s).   Clepe conventions available: `cognomen` e.g. `{tracker_moniker}_1`, `{tracker_moniker}_2`...; `dtstamp` datetime stamp e.g. 2021-07-30T12:22:32Z (ISO 8601); `utstamp` unix time stamp; `latin`; `greek`; `roman`; `hex`.<br />Can be set with `set_tracker()_clepe({default_clepe_convention});` |
+| `_clepe({clepe_convention})`                      | The clepe (naming) convention used for children (`trackpoint`s).   Clepe conventions available: `cognomen` e.g. `{tracker_moniker}_1`, `{tracker_moniker}_2`…; `dtstamp` datetime stamp e.g. 2021-07-30T12:22:32Z (ISO 8601); `utstamp` unix time stamp; `latin`; `greek`; `roman`; `hex`.<br />Can be set with `set_tracker()_clepe({default_clepe_convention});` |
 | `_trackwidth({width})`                            | Width of track used to depict track on human display. Using css syntax:<br /> `medium` I `thin` I *`length`* I `initial` I `inherit` |
 | `_trackstyle({style})`                            | Style of track used to depict track on human display. Uses css cyntax, with an additions `breadcrumb` value:<br /> `none` I `hidden` I `dotted` I `dashed` I `solid` I `double` I `groove` I `ridge` I `breadcrumb` I `inset` I `outset` I `initial` I `inherit` |
 | `_trackcolour({colour})`                          | *`color`* I `transparent` I `initial` I `inherit`            |
@@ -115,7 +115,7 @@ The 'tracker` object can be funnelled and channelled.  Commonly used funnels and
 | event                                                        | notes                                                    |
 | ------------------------------------------------------------ | -------------------------------------------------------- |
 | `yield_tracker({moniker|uuid})_trackpoint({moniker|uuid})_value({value}[, {unit{])` | The yield from the `tracker` to report the `trackpoint`. |
-| `begin_tracker({moniker|uuid})   ...   end_tracker({moniker|uuid})` | A `tracker` has a definable event trap                   |
+| `begin_tracker({moniker|uuid})   …   end_tracker({moniker|uuid})` | A `tracker` has a definable event trap                   |
 |                                                              |                                                          |
 
 
@@ -182,14 +182,14 @@ add_stat({name/uuid})
 	_array({array}[, {unit}])
 	_type({type}[, {unit}])
 	_unit({unit})
-	_for({name/uuid_1}[, ...{name/uuid_n}])
+	_for({name/uuid_1}[, …{name/uuid_n}])
 	_pulse()
 	_tracker()
 	
 add_metric({name/uuid})
 	_scalar({scalar}[, {unit}])
 	_unit({unit})
-	_for({name/uuid_1}[, ...{name/uuid_n}])
+	_for({name/uuid_1}[, …{name/uuid_n}])
 	_pulse()
 	_tracker()
 
@@ -247,7 +247,7 @@ marker
 ### Postpositions
 
 ```Diego
-_for({name/uuid_1}[, ...{name/uuid_n}])
+_for({name/uuid_1}[, …{name/uuid_n}])
 _on({map}, {coordinates}[, unit}])
 _at({datetime})
 _au({point_coordinates})
@@ -291,7 +291,7 @@ add_metric({name/uuid}[, {unit}])
 	_scalar({name/uuid}[, {unit}])
 	_tracker({name/uuid});
 	_to({name/uuid})
-	_for({name/uuid_1}[, ...{name/uuid_n}])
+	_for({name/uuid_1}[, …{name/uuid_n}])
 	_between({name/uuid_1})_and({name/uuid})
 
 ```
@@ -335,7 +335,7 @@ add_metric({name/uuid}[, {unit}])
 
 ### Example:
 
-In this example two things (`df88accd-dd43-4ff1-820e-82f75be13013`, shortened 64-bit: `df88accd`; and, `344d4c22-546c-4940-bdc4-c2a4371a29ac`, `344d4c22`) are in the same universe, both things know each other, and are up-to-date with each other. Thing `df88accd` has a GPS sensor called `df_gps`, thing `344d4c22` has a heartbeat monitor attached to a human called `bert` (`73e4f567-952c-463a-a3d7-bc26c8053e54`). `Bert` is accessing the `mist` using a console (not shown in this example)...
+In this example two things (`df88accd-dd43-4ff1-820e-82f75be13013`, shortened 64-bit: `df88accd`; and, `344d4c22-546c-4940-bdc4-c2a4371a29ac`, `344d4c22`) are in the same universe, both things know each other, and are up-to-date with each other. Thing `df88accd` has a GPS sensor called `df_gps`, thing `344d4c22` has a heartbeat monitor attached to a human called `bert` (`73e4f567-952c-463a-a3d7-bc26c8053e54`). `Bert` is accessing the `mist` using a console (not shown in this example)…
 
 In this example `bert` is going to set up a tracker to be shared by `df88accd` and `344d4c22`, `df88accd` will provide GPS coordinates & elevation and `344d4c22` will provide `bert`s heartbeat.
 ```mermaid
@@ -345,29 +345,29 @@ sequenceDiagram
 	participant bert
 	participant df88accd
 	participant 344d4c22
-	Note over bert,344d4c22: ...create tracker...
+	Note over bert,344d4c22: …create tracker…
 	bert->344d4c22: add_tracker(walk to park)_for(df88accd,344d4c22)#59;
 	bert->344d4c22: with_tracker(walk to park)_freq(2,sec)_lapat()#59;
-	Note over bert,df88accd: ...add metrics, append to tracker, append to provider (df88accd)... 
+	Note over bert,df88accd: …add metrics, append to tracker, append to provider (df88accd)… 
 	bert->>bert: add_gps(gps)_scalar(DD);
 	bert->>df88accd: with_gps(gps)_tracker(walk to park)_for(df88accd)#59;
 	bert->>bert: add_metric(elev)_scalar(elevation,m)#59;
 	bert->>df88accd: with_metric(elev)_tracker(walk to park)_for(df88accd)#59;
-	Note over bert,344d4c22: ...add metric, append to tracker, append to provider (344d4c22)... 
+	Note over bert,344d4c22: …add metric, append to tracker, append to provider (344d4c22)… 
 	bert->>344d4c22: add_metric(heartbeat)_scalar(heartbeat,bpm)_for(344d4c22)#59;
 	bert->>344d4c22: with_metric(heartbeat)_tracker(walk to park)#59;
-	Note over bert,344d4c22: ...initiate tracker (now)...
+	Note over bert,344d4c22: …initiate tracker (now)…
 	bert->344d4c22: run_tracker(walk to park)#59;
-	Note over bert,df88accd: ...df88accd provides trackpoint and appends metrics... 
+	Note over bert,df88accd: …df88accd provides trackpoint and appends metrics… 
 	df88accd->>df88accd: add_trackpoint(d244)_tracker(walk to park)_datetime(2021-07-15T07:06:30Z)_hash(094f)#59;
 	df88accd->>bert: with_trackpoint(d244)_gps(gps)_value(-26.8025640,153.1338770)#59;
 	df88accd->>bert: with_trackpoint(d244)_metric(elev)_value(14.6)#59;
-	Note over bert,344d4c22: ...344d4c22 appends metric to trackpoint... 
+	Note over bert,344d4c22: …344d4c22 appends metric to trackpoint… 
 	344d4c22->>bert: with_trackpoint(d244)_metric(heartbeat)_value(90)#59;
-	Note over bert,344d4c22: ...344d4c22 provides trackpoint and appends metric... 
+	Note over bert,344d4c22: …344d4c22 provides trackpoint and appends metric… 
 	344d4c22->>344d4c22: add_trackpoint(4b2b)_tracker(walk to park)_datetime(2021-07-15T07:06:32Z)_hash(93f0)#59;
 	344d4c22->>bert: with_trackpoint(4b2b)_gps(gps)_metric(heartbeat)_value(92)#59;
-	Note over bert,df88accd: ...df88accd appends metrics to trackpoint... 
+	Note over bert,df88accd: …df88accd appends metrics to trackpoint… 
 	df88accd->>bert: with_trackpoint(4b2b)_gps(gps)_value(-26.8025640,153.1338770)#59;
 	df88accd->>bert: with_trackpoint(4b2b)_metric(elev)_value(14.6)#59;
 ```
@@ -384,18 +384,18 @@ Another metric, elevation, is created &#9316;, measured in metres (`m`).  The el
 . 
 	bert->>344d4c22: add_metric(heartbeat)_scalar(heartbeat,bpm)_for(344d4c22)#59;
 	bert->>344d4c22: with_metric(heartbeat)_tracker(walk to park)#59;
-	Note over bert,344d4c22: ...add metric, append to tracker, append to provider (344d4c22)... 
+	Note over bert,344d4c22: …add metric, append to tracker, append to provider (344d4c22)… 
 	bert->344d4c22: run_tracker(walk to park)#59;
-	Note over bert,df88accd: ...df88accd provides trackpoint and appends metrics... 
+	Note over bert,df88accd: …df88accd provides trackpoint and appends metrics… 
 	df88accd->>df88accd: add_trackpoint(d244)_tracker(walk to park)_hash(094f)#59;
 	df88accd->>bert: with_trackpoint(d244)_gps(gps)_value(-26.7937,153.0848)#59;
 	df88accd->>bert: with_trackpoint(d244)_metric(elev)_value(10.1)#59;
-	Note over bert,344d4c22: ...344d4c22 appends metric to trackpoint... 
+	Note over bert,344d4c22: …344d4c22 appends metric to trackpoint… 
 	344d4c22->>bert: with_trackpoint(d244)_metric(heartbeat)_value(90)#59;
-	Note over bert,344d4c22: ...344d4c22 provides trackpoint and appends metric... 
+	Note over bert,344d4c22: …344d4c22 provides trackpoint and appends metric… 
 	344d4c22->>344d4c22: add_trackpoint(4b2b)_tracker(walk to park)_hash(93f0)#59;
 	344d4c22->>bert: with_trackpoint(4b2b)_gps(gps)_metric(heartbeat)_value(92)#59;
-	Note over bert,df88accd: ...df88accd appends metrics to trackpoint... 
+	Note over bert,df88accd: …df88accd appends metrics to trackpoint… 
 	df88accd->>bert: with_trackpoint(4b2b)_gps(gps)_value(-26.7937,153.0848)#59;
 	df88accd->>bert: with_trackpoint(4b2b)_metric(elev)_value(10.1)#59;
 
@@ -503,12 +503,12 @@ call()_as({label})
 Syntax:
 
 ```Diego
-call()_in({uuid1/moniker1},{uuid2/moniker2},...);
-call_human()_in({human_uuid1/human_moniker1},{human_uuid2/human_moniker2},...);
-call_ai()_in({ai_uuid1/ai_moniker1},{ai_uuid2/ai_moniker2},...);
-call_robot()_in({robot_uuid1/robot_moniker1},{robot_uuid2/robot_moniker2},...);
-call_thing()_in({thing_uuid1/thing_moniker1},{thing_uuid2/thing_moniker2},...);
-call_console()_in({console_uuid1/console_moniker1},{console_uuid2/console_moniker2},...);
+call()_in({uuid1/moniker1},{uuid2/moniker2},…);
+call_human()_in({human_uuid1/human_moniker1},{human_uuid2/human_moniker2},…);
+call_ai()_in({ai_uuid1/ai_moniker1},{ai_uuid2/ai_moniker2},…);
+call_robot()_in({robot_uuid1/robot_moniker1},{robot_uuid2/robot_moniker2},…);
+call_thing()_in({thing_uuid1/thing_moniker1},{thing_uuid2/thing_moniker2},…);
+call_console()_in({console_uuid1/console_moniker1},{console_uuid2/console_moniker2},…);
 
 call()_asin({label1},{label2});
 ```

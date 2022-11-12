@@ -4,7 +4,7 @@ Navigation planning involves the declaration and execution of various components
 
 ## Navigation Planning Objects
 
-There are various objects available for navigation planning in **_Diego_**, which can conveniently be depicted in the 'route matrix'...
+There are various objects available for navigation planning in **_Diego_**, which can conveniently be depicted in the 'route matrix'…
 
 | ![Route Matrix](https://raw.githubusercontent.com/tavman7/diego.github.io/main/_img/route_matrix.jpeg "Route Matrix") |
 | :---: |
@@ -26,7 +26,7 @@ The location is Aura Business Park, QLD, Australia, along Strong Road, an indust
 | :---: |
 | *fig. 2: Strong Road, Aura Business Park - Waypoints* |
 
-***Diego*** is a multi-discourse language, meaning there a many ways command can be structure/built.  Therfore the example code shows multi approaches to adding waypoints to an itinerary...
+***Diego*** is a multi-discourse language, meaning there a many ways command can be structure/built.  Therfore the example code shows multi approaches to adding waypoints to an itinerary…
 
 ```Diego
 use_namespace(aura_business_park);
@@ -54,7 +54,7 @@ begin_itinerary(strong_road);
     add_array(w6)_value(-26.804711, 153.069783);
     add_waypoint(w6)_lat()_valof(w6[0])_long()_valof(w6[1]);
 
-    ...
+    …
 ```
 To start, a namespace called `aura_business_park` is used to segregate object names from other experiences. Then to develop all the location-only navigation planning object (blue objects) they are encapsulated into an `itinerary` called `strong_road`.
 

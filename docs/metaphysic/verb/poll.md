@@ -3,7 +3,7 @@
 # Pollsters
 ## poll_distance(*moniker*)
 #### poll_distance(*point_moniker*)
-#### poll_distance(*point_moniker*)*[...]*_by(*distance_metric*)
+#### poll_distance(*point_moniker*)*[…]*_by(*distance_metric*)
 A robot will poll all robots for their distance to *point_moniker* from their current position.  The additional *distance_metric* sub command determines the calculation used in the return poll. *distance_metric* is a enumerator:
 |```distance_metric```| Description |
 |--|--|
@@ -49,7 +49,7 @@ freqent_poll({poll_name})_freq({frequency_millisecs})_until({milliseconds/dateti
 
 ### Example:
 
-In this example three things (`df88accd-dd43-4ff1-820e-82f75be13013`, shortened 64-bit: `df88accd`; `344d4c22-546c-4940-bdc4-c2a4371a29ac`, `344d4c22`; and, `c9477eb6-1328-4c10-8755-913d41a6e0e1`, `c9477eb6` ) are in the same universe; they have all been introduced to each other (i.e. they believe in each others existence and therefore presume each other is listening); they presume they are the only ones left in this universe...
+In this example three things (`df88accd-dd43-4ff1-820e-82f75be13013`, shortened 64-bit: `df88accd`; `344d4c22-546c-4940-bdc4-c2a4371a29ac`, `344d4c22`; and, `c9477eb6-1328-4c10-8755-913d41a6e0e1`, `c9477eb6` ) are in the same universe; they have all been introduced to each other (i.e. they believe in each others existence and therefore presume each other is listening); they presume they are the only ones left in this universe…
 
 ```mermaid
 sequenceDiagram
@@ -129,12 +129,12 @@ call()_as({label})
 Syntax:
 
 ```Diego
-call()_in({uuid1/moniker1},{uuid2/moniker2},...);
-call_human()_in({human_uuid1/human_moniker1},{human_uuid2/human_moniker2},...);
-call_ai()_in({ai_uuid1/ai_moniker1},{ai_uuid2/ai_moniker2},...);
-call_robot()_in({robot_uuid1/robot_moniker1},{robot_uuid2/robot_moniker2},...);
-call_thing()_in({thing_uuid1/thing_moniker1},{thing_uuid2/thing_moniker2},...);
-call_console()_in({console_uuid1/console_moniker1},{console_uuid2/console_moniker2},...);
+call()_in({uuid1/moniker1},{uuid2/moniker2},…);
+call_human()_in({human_uuid1/human_moniker1},{human_uuid2/human_moniker2},…);
+call_ai()_in({ai_uuid1/ai_moniker1},{ai_uuid2/ai_moniker2},…);
+call_robot()_in({robot_uuid1/robot_moniker1},{robot_uuid2/robot_moniker2},…);
+call_thing()_in({thing_uuid1/thing_moniker1},{thing_uuid2/thing_moniker2},…);
+call_console()_in({console_uuid1/console_moniker1},{console_uuid2/console_moniker2},…);
 
 call()_asin({label1},{label2});
 ```

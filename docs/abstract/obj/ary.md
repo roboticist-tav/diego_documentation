@@ -19,15 +19,15 @@ Arrays tend to be based from zero, however, this all depends upon the thingy's u
 Assignment of array is allowed at declaration, initialisation, and post-declaration. The `_value`, and, `_set` posits are used for assignment, their equivalent syntax, `_values`, `_v` are identical and can be used freely and interchangeably. The `set_` verb can also be used to the same effect as the `_set` posit.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `add_ary(`*`moniker`*`)_value(`*`val`*`)`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `with_array(`*`moniker`*`)_values(`*`val1`*`,`*`val2`*`,`*`...`*`)`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `(`*`arraymoniker`*`)_set(`*`val1`*`,`*`val2`*`,`*`...`*`)`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `set_ary(`*`moniker`*`,`*`val1`*`,`*`val2`*`,`*`...`*`)`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `with_array(`*`moniker`*`)_values(`*`val1`*`,`*`val2`*`,`*`…`*`)`<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `(`*`arraymoniker`*`)_set(`*`val1`*`,`*`val2`*`,`*`…`*`)`<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `set_ary(`*`moniker`*`,`*`val1`*`,`*`val2`*`,`*`…`*`)`
 
 Values can be assigned at different indexes using the `_at` posit.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `with_ary(`*`moniker`*`)_at(`*`index`*`)_v(`*`val`*`)`
 
-Arrays have various properties and methods...
+Arrays have various properties and methods…
 
 ## Posits
 
@@ -37,12 +37,12 @@ Arrays have various properties and methods...
 | <a name="at"></a> `_at(`*`index`*`)`<br>`_at()` | Provides the element at index *index* |
 | <a name="concat_a"></a> `_concat()`<br>`_concatenate()` | Merges proceeding *objects* (*arrays*) with proceeding *objects* (*arrays*) |
 | <a name="concat_b"></a> `_concat(`*`arymoniker`*`)`<br>`_concatenate(`*`arymoniker`*`)` | Merges array *arymoniker* with preceeding *objects* (*arrays*) |
-| <a name="concat_c"></a> `_concat(`*`arymoniker1`*`,`*`arymoniker1`*`,`*`...`*`)`<br>`_concatenate(`*`arymoniker1`*`,`*`arymoniker1`*`,`*`...`*`)` | Merges arrays *arymonikers* with preceeding *objects* (*arrays*) |
+| <a name="concat_c"></a> `_concat(`*`arymoniker1`*`,`*`arymoniker1`*`,`*`…`*`)`<br>`_concatenate(`*`arymoniker1`*`,`*`arymoniker1`*`,`*`…`*`)` | Merges arrays *arymonikers* with preceeding *objects* (*arrays*) |
 | <a name="copyin_a"></a> `_copyin(`*`targetindex`*`)` |  Shallow copies all elements of the preceeding array into the same array from index without modifying its length  |
 | <a name="copyin_b"></a> `_copyin(`*`targetindex`*`,`*`startindex`*`)` |  Shallow copies part of the preceeding array to another location in the same array without modifying its length  |
 | <a name="copyin_c"></a> `_copyin(`*`targetindex`*`)`<br>`_copyin(`*`targetindex`*`,`*`startindex`*`)`<br>`_copyin(`*`targetindex`*`,`*`startindex`*`,`*`endindex`*`)` |  Shallow copies part of the preceeding array to another location in the same array without modifying its length  |
 | <a name="dt"></a> `_dt({`*`datatype`*`)` | Cast / convert proceeding *objects* (*arrays*)  |
-| <a name="len_a"></a> `add`*`<...>`*`_len(`*`length`*`)`<br>`add`*`<...>`*`_length(`*`length`*`)` | Sets the number of elements in the array at declaration |
+| <a name="len_a"></a> `add`*`<…>`*`_len(`*`length`*`)`<br>`add`*`<…>`*`_length(`*`length`*`)` | Sets the number of elements in the array at declaration |
 | <a name="len_b"></a> `_len(`*`length`*`)`<br>`_length(`*`length`*`)` | Destructively resizes the array |
 | <a name="lens"></a> `_lens(`*`arymoniker`*`)` | Declares a sub-view block of array called *moniker* |
 | <a name="oflens_a"></a> `_oflens(`*`length`*`)` | Sets a specifc sub-view block of the array to *length*  |
@@ -75,7 +75,7 @@ add_ary(myStringArray)_value(Item1,Item2);   // '_array' can be shortened to '_a
 with_ary(myChangeArray)_at(2)_v(5);    // '_value' can be shortened to '_v'
  
 // Add a member to an array with the push function (defaulted at end), length increased by one
-[myExpandedArray]_push()_v(9);    // 'with_ary(...)' can be shortened to '[...]'
+[myExpandedArray]_push()_v(9);    // 'with_ary(…)' can be shortened to '[…]'
 [myExpandedArray]_append()_v(9);
 
 // Add a member to an array with the push function (at a location), length increased by one
@@ -143,13 +143,13 @@ add_matrix(myMatrix)_rows(5)_columns(4)_subs(6)_subs(8);
 add_mat(myMatrix)_subs(5, 4, 6, 8);  // check or set major order first, '_matrix' can be shortened to 'mat'
 
 // Create a 4 x 4 identiy matrix:
-add_mat(myIdentityMatrix)_subs(4, 4)_identity();    // ...or...
+add_mat(myIdentityMatrix)_subs(4, 4)_identity();    // …or…
 
 add_mat(myMorphedMatrix)_subs(4, 4)
 with_mat(myMorphedMatrix)_trans(morph)_identity();   // More transformations available
  
 // Assign a value to member [2,4]
-with_mat(myMatrix)_row(2)_col(4)_value(5);    // ...or...
+with_mat(myMatrix)_row(2)_col(4)_value(5);    // …or…
 with_mat(myMatrix)_at(2, 4)_v(5);    // check or set major order first
  
 // Add a member(s) to a matrix using push functions is available
@@ -157,9 +157,9 @@ with_mat(myMatrix)_at(2, 4)_v(5);    // check or set major order first
 // Swap a member(s) in a matrix with the swap functions is available
 
 // Rectiline a single member in a three-dimensional matrix
-[MyWobbleMatrix]_rectilat()_row(3)_col(3)_sub(3)_rectilto()_row(-1)_col(1)_sub(0);    // ...or...
-[MyWobbleMatrix]_rectilat(3, 3, 3)_rectilto(-1, 1, 0);    // check or set major order first, ...or...
-[MyWobbleMatrix]_rectilat(3, 3, 3)_rectilleft(1)_rectilup(1);    / check or set hand-rule, ...or...
+[MyWobbleMatrix]_rectilat()_row(3)_col(3)_sub(3)_rectilto()_row(-1)_col(1)_sub(0);    // …or…
+[MyWobbleMatrix]_rectilat(3, 3, 3)_rectilto(-1, 1, 0);    // check or set major order first, …or…
+[MyWobbleMatrix]_rectilat(3, 3, 3)_rectilleft(1)_rectilup(1);    / check or set hand-rule, …or…
 
 // Also 'crab', 'elevate', 'slide' and 'pump' movements are available
 // Also 'row', 'pitch', and 'yaw' movements are available

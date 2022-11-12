@@ -45,7 +45,7 @@ ff'';';ff fjfjfjjfjfffffwwww
 
 4] Make a cup of tea, then play 'Piano Sonata No. 1 in C major' on the piano. `_decision(order/priority/authority)`
 
-5] Play 10% of piano playing then 10% of making a cup of tea, then 10% piano playing... `_decision(simultaneous)`
+5] Play 10% of piano playing then 10% of making a cup of tea, then 10% piano playing… `_decision(simultaneous)`
 
 6] Go to the kitchen put the kettle on, go to the piano and play, when kettle has boiled go to the kitchen and make the tea, go back to the piano and finish playing. `_decision(coeval)`
 
@@ -58,7 +58,7 @@ ff'';';ff fjfjfjjfjfffffwwww
 10] An asteroid is going to hit the earth in two minutes, you decide to play the piano for the last time and forget about making the tea (not enough time) `_decision(inability)`
 
 What is my motive(s) / agenda?
-Perhaps I would like a cup of tea, so I make a cup of tea for the caller and myself ... or I make the cup of tea and tell the caller to piss off.
+Perhaps I would like a cup of tea, so I make a cup of tea for the caller and myself … or I make the cup of tea and tell the caller to piss off.
 
 
 

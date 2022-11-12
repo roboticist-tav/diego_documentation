@@ -18,7 +18,7 @@ add_robot({drone},be);
 add_drone(pe);
 ```
 ## A Brave New World
-So first we are going to start setting up the physical world...
+So first we are going to start setting up the physical world…
 ```diego
 
 // Set up physical world ready for the caterpillar chain movement:
@@ -72,7 +72,7 @@ Finally the table, `table` has been placed on the map.
 We execute the instruction immediately.
 
 ## There is a Beginning to Everything
-To start the Caterpillar Chain we need one active agent and two loitering agents. We also have starting positions. `alif` will be the first active agent starting at waypoint `x9` to go along rosary `perimeter_cc` (on route `perimeter`), `be` and `pe` be will be the loitering agents, and they will loiter around waypoints `x8` and `x7` respectively...
+To start the Caterpillar Chain we need one active agent and two loitering agents. We also have starting positions. `alif` will be the first active agent starting at waypoint `x9` to go along rosary `perimeter_cc` (on route `perimeter`), `be` and `pe` be will be the loitering agents, and they will loiter around waypoints `x8` and `x7` respectively…
 
 ```diego
 begin_instruct(caterpillar_chain_starting_positions)_for(alif, be, pe)_onceonly();
@@ -103,7 +103,7 @@ Note that we declare the rosary as a child of each drone, and all the waypoints 
 We do not want to execute instruction `caterpillar_chain_starting_positions` yet as the guys (`alif`, `be`, and, `pe`) don't yet know about instructions `activate_agent` and `loiterise_agent`. They will only complain that they haven't learnt that functionality if we execute `caterpillar_chain_starting_positions` now!
 
 ## Active Agent
-In the Caterpillar Chain Movement the active agent scouts around the route from a starting position to an ending position. When it arrives penultimate to its ending position, it has to inform the others...
+In the Caterpillar Chain Movement the active agent scouts around the route from a starting position to an ending position. When it arrives penultimate to its ending position, it has to inform the others…
 
 ```Diego
 // Activate the active_agent to go on route `perimeter`
@@ -132,12 +132,12 @@ end_instruct(activate_agent);
 > `with_robot(active_agent)_sobriquet(loiterer) ? : ;`
 >> When all has been done `active_agent` becomes a `loiterer`.
 
-> ...`wtf()`
+> …`wtf()`
 >> Throughout this code black when the fickle finger of fate is at work, the *'where's the fire'* `_wtf()` is called to handle anything that's flung its way.  We will try and handle any known-knowns that could come our way later.
 
 ## Loiter Agent
 
-So, above, we provided the 'activate_agent' instruction, now we need to build the instruction for `loiterise_agent`...
+So, above, we provided the 'activate_agent' instruction, now we need to build the instruction for `loiterise_agent`…
 
 ```Diego
 begin_instruct(loiterise_agent)_for(loiterer);
@@ -153,7 +153,7 @@ The default loitering parameters have been previously _drilled into_ these drone
 
 ## Chain Reactions
 
-Now the cornerstone of the Persian Chain Movement is to chain reaction, which occurs just before the `active_agent` arrives at it's endpoint on rosary `perimeter_cc`.  The chain reaction is tiggered by the `active_agent` drone executing the `start_persian_chain` instruct...
+Now the cornerstone of the Persian Chain Movement is to chain reaction, which occurs just before the `active_agent` arrives at it's endpoint on rosary `perimeter_cc`.  The chain reaction is tiggered by the `active_agent` drone executing the `start_persian_chain` instruct…
 
 ```Diego
 begin_instruct(start_persian_chain)_for(loiterer);

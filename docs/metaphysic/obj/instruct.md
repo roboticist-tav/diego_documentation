@@ -70,21 +70,21 @@ graph TD
 #### end_instruct(*instruct_moniker*)
 The finisher of an ```instruct``` ends with  ```end_instruct(```*```instruct_moniker```*```)```, with no sub command the```instruct``` will end  for _all_ monikers (robots, swarms, labels of).
 ### Privileges
-#### end_instruct(*instruct_moniker*)*[...]*_for(*moniker1*, *n...*)
-A whitelist (*moniker1*, *n...*) of monikers (robots, swarms, labels of) that should only be allowed to finish the *instruct_moniker* ```instruct```.
-#### end_instruct(*instruct_moniker*)*[...]*_not((*moniker1*, *n...*)
-A blacklist (*moniker1*, *n...*) of monikers (robots, swarms, labels of) that are denied to finish the *instruct_moniker* ```instruct```.
-#### end_instruct(*instruct_moniker*)*[...]*_for(*moniker1*, *n...*)_not(*moniker1*, *n...*)
+#### end_instruct(*instruct_moniker*)*[…]*_for(*moniker1*, *n…*)
+A whitelist (*moniker1*, *n…*) of monikers (robots, swarms, labels of) that should only be allowed to finish the *instruct_moniker* ```instruct```.
+#### end_instruct(*instruct_moniker*)*[…]*_not((*moniker1*, *n…*)
+A blacklist (*moniker1*, *n…*) of monikers (robots, swarms, labels of) that are denied to finish the *instruct_moniker* ```instruct```.
+#### end_instruct(*instruct_moniker*)*[…]*_for(*moniker1*, *n…*)_not(*moniker1*, *n…*)
 A whitelist with blacklist of monikers (robots, swarms, labels of) that allowed/denied to finish the *instruct_moniker* ```instruct```.
 ## <a name="start_instruct"></a>start_instruct
 Where a duplicate ```start_instruct``` (with the same signature) exists the first ```start_instruct``` command in the diego flow will be executed and later duplicates will restart the ```instruct``` at ```begin_instuct``` with **no** _hey_diego__ nor _oh_diego_ events triggered.
 #### start_instruct(*instruct_moniker*)
 The initiation of an ```instruct``` starts with  ```start_instruct(```*```instruct_moniker```*```)```, with no sub command the```instruct``` will start for _all_ monikers (robots, swarms, labels of).
 ### Sub Commands
-#### start_instruct(*instruct_moniker*)_for(*moniker1*, *n...*)
-An whitelist (*moniker1*, *n...*) of monikers (robots, swarms, labels of) that should only be allowed to initiate the *instruct_moniker* ```instruct```.
-#### start_instruct(*instruct_moniker*)_not((*moniker1*, *n...*)
-A blacklist (*moniker1*, *n...*) of monikers (robots, swarms, labels of) that are denied to initiate the *instruct_moniker* ```instruct```.
+#### start_instruct(*instruct_moniker*)_for(*moniker1*, *n…*)
+An whitelist (*moniker1*, *n…*) of monikers (robots, swarms, labels of) that should only be allowed to initiate the *instruct_moniker* ```instruct```.
+#### start_instruct(*instruct_moniker*)_not((*moniker1*, *n…*)
+A blacklist (*moniker1*, *n…*) of monikers (robots, swarms, labels of) that are denied to initiate the *instruct_moniker* ```instruct```.
 
 
 

@@ -1053,23 +1053,23 @@
 <h2 id="declaration-assignment">Declaration &amp; Assignment</h2>
 <p>The default declaration of the <code>waypoint</code> object is to at least provide a <em>moniker</em>, however, at declaration it is common to provide a location using the <code>_coords</code> posit. The parameters of <code>_coords</code> are numeric, when not specified they will be implied to be <code>{double}</code>. Providing <code>x_lat</code> and <code>y_long</code> only implies a two-dimensional waypoint, and adding the <code>z_alt</code> parameter implies a three-dimensional waypoint. <code>waypoint</code> can be shortened to <code>wp</code>, both terms are syntactically the same and can be used freely and interchangabily. </p>
 <p>      <code>add_waypoint(</code><em><code>moniker</code></em><code>);</code><br/>
-      <code>add_waypoint(</code><em><code>moniker1</code></em><code>,</code><em><code>moniker2</code></em><code>,...);</code><br/>
+      <code>add_waypoint(</code><em><code>moniker1</code></em><code>,</code><em><code>moniker2</code></em><code>,…);</code><br/>
       <code>add_wp(</code><em><code>moniker</code></em><code>)_coords(</code><em><code>x_lat</code></em><code>,</code><em><code>y_long</code></em><code>);</code><br/>
       <code>add_waypoint(</code><em><code>moniker</code></em><code>)_coords(</code><em><code>x_lat</code></em><code>,</code><em><code>y_long</code></em><code>,</code><em><code>z_alt</code></em><code>);</code></p>
 <h2 id="referencing-assignment">Referencing &amp; Assignment</h2>
 <p>Referencing a <code>waypoint</code> is achieved with the <code>with</code> verb, or the shortened <code>(</code><em><code>moniker</code></em><code>)</code> syntax. The <code>with_waypoint</code> (or shortened <code>with_wp</code>) command can be expanded to create multiple <code>waypoint</code>s using a coma-spearated list of <em><code>moniker</code></em> s and mutliple <code>_coords</code> posits. The position in the <em><code>moniker</code></em> list corresponds to the same order of appended <code>_coords</code> posits. </p>
 <p>      <code>add_waypoint(</code><em><code>moniker</code></em><code>);</code><br/>
-      <code>with_wp(</code><em><code>moniker1</code></em><code>,</code><em><code>moniker2</code></em><code>,...)_coords(</code><em><code>x_lat1</code></em><code>,</code><em><code>y_long1</code></em><code>)_coords(</code><em><code>x_lat2</code></em><code>,</code><em><code>y_long2</code></em><code>)...</code></p>
-<p>For easy of reading for humans, either a <code>beginwith ... endwith</code> syntax, or a nested statement approach can be taken.</p>
-<p>       <code>beginwith_waypoint(</code><em><code>moniker1</code></em><code>,</code><em><code>moniker2</code></em><code>,...);</code><br/>
+      <code>with_wp(</code><em><code>moniker1</code></em><code>,</code><em><code>moniker2</code></em><code>,…)_coords(</code><em><code>x_lat1</code></em><code>,</code><em><code>y_long1</code></em><code>)_coords(</code><em><code>x_lat2</code></em><code>,</code><em><code>y_long2</code></em><code>)…</code></p>
+<p>For easy of reading for humans, either a <code>beginwith … endwith</code> syntax, or a nested statement approach can be taken.</p>
+<p>       <code>beginwith_waypoint(</code><em><code>moniker1</code></em><code>,</code><em><code>moniker2</code></em><code>,…);</code><br/>
              <code>(</code><em><code>moniker1</code></em><code>)_coords(</code><em><code>x_lat1</code></em><code>,</code><em><code>y_long1</code></em><code>);</code><br/>
              <code>(</code><em><code>moniker2</code></em><code>)_coords(</code><em><code>x_lat1</code></em><code>,</code><em><code>y_long1</code></em><code>);</code><br/>
-             <em><code>...</code></em><br/>
+             <em><code>…</code></em><br/>
        <code>endwith_wp();</code></p>
-<p>       <code>with_wp(</code><em><code>moniker1</code></em><code>,</code><em><code>moniker2</code></em><code>,...)</code><br/>
+<p>       <code>with_wp(</code><em><code>moniker1</code></em><code>,</code><em><code>moniker2</code></em><code>,…)</code><br/>
              <code>(</code><em><code>moniker1</code></em><code>)_coords(</code><em><code>x_lat1</code></em><code>,</code><em><code>y_long1</code></em><code>);</code><br/>
              <code>(</code><em><code>moniker2</code></em><code>)_coords(</code><em><code>x_lat1</code></em><code>,</code><em><code>y_long1</code></em><code>);</code><br/>
-             <em><code>...</code></em><br/>
+             <em><code>…</code></em><br/>
        <code>;</code></p>
 <h2 id="casting">Casting</h2>
 <p>Casting to <code>waypoint</code>s sibling, <code>pose</code> and <code>goal</code>, is the safest and most commonly used cast of <code>waypoint</code>, as they are related.  There are also two cousins of <code>waypoint</code>, <code>landmark</code> and <code>poi</code>, which can be safely cast into. Casting can be achieved by specifing the datatype using curly brackets (<code>{}</code>), or with the <code>with</code> verb.</p>
@@ -1091,8 +1091,8 @@ log_console([]: [])_nameof()_typeof(point1)_wp();   // : {waypoint}
 </code></pre>
 <h2 id="referencing">Referencing</h2>
 <p>Referencing the <code>waypoint</code> obejct can be achieved in the usual way with the <code>with_</code> verb.</p>
-<p>      <code>with_waypoint(</code><em><code>moniker</code></em><code>)_...</code><br/>
-      <code>with_wp(</code><em><code>moniker</code></em><code>)_...</code></p>
+<p>      <code>with_waypoint(</code><em><code>moniker</code></em><code>)_…</code><br/>
+      <code>with_wp(</code><em><code>moniker</code></em><code>)_…</code></p>
 <h2 id="similar-objects">Similar Objects</h2>
 <p>The objects <code>pose</code> and <code>goal</code> are sibling objects in the route matrix, and behave in a similar way to the <code>waypoint</code>.  The only difference is <code>pose</code> also includes orientation, whereas <code>waypoint</code> does not, and <code>goal</code> includes orientetion and time which <code>waypoint</code> does not.</p>
 <p>Two other objects, <code>landmark</code> and <code>poi</code> are use in the same manner as <code>waypoint</code> but are used in a specific way.</p>

@@ -13,9 +13,9 @@ The default declaration syntax is to provide at least the battery name. The shor
 
 Multiple batteries can be added as batteries or as part of a `bank` of batteries (treated like a farm or array). Battery banks can be indexed:
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `add_battery(`*`moniker1`*`, `*`moniker2,...`*`);`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `add_bank(`*`moniker`*`)_battery(`*`moniker1`*`, `*`moniker2,...`*`)_index(`*`index-form`*`, `*`base`*`);`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `add_bank(`*`moniker`*`)_batt_({`*`type`*`},`*`moniker1`*`,`*`moniker2,...`*`)`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `add_battery(`*`moniker1`*`, `*`moniker2,…`*`);`<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `add_bank(`*`moniker`*`)_battery(`*`moniker1`*`, `*`moniker2,…`*`)_index(`*`index-form`*`, `*`base`*`);`<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `add_bank(`*`moniker`*`)_batt_({`*`type`*`},`*`moniker1`*`,`*`moniker2,…`*`)`
 
 Each battery is implied to have one default associated charge (one charger per battery), it is, therefore, not neccessary to declare or named, by can be:
 
@@ -32,7 +32,7 @@ Any declaration/creation/serialisation on `battery`(s) can be undertaken by thin
 | <a name="fettle"></a>`_fettle()`<br>`_fettle()_enum()` | read (write by human) | **Battery Fettle**<br>A human observation of the state of appearance of the battery.<br>See [Fettle Values](#fettle_) |
 | <a name="health"></a>`_health()`<br>`_health()_enum()` | read only | **Battery Health**<br>The battery health, as defined within the battery logic.  It will display a string as default, unless the `_enum()` postposit is provided then it will provide a integer enumerator.<br>See [Health Values](#health_) |
 | <a name="status"></a>`_stat()`<br>`_status()`<br>`_stat()_enum()`<br>`_status()_enum()` | read only | **Battery Status**<br>The battery status, as defined within the battery logic.  It will display a string as default, unless the `_enum()` postposit is provided then it will provide a integer enumerator.<br>See [Status Values](#stat_) |
-| <a name="tech"></a>`_tech(`*`technology`*`)`<br>`_technology(`*`technology`*`)`<br>`_chem(`*`technology`*`)`<br>`_chemistry(`*`technology`*`)`<br>*`...`*`_enum()` | read (write by me) | **Battery Technology**<br>The technology (or chemistry) composition of the battery.  This is usually defined at declaration. It will display a string as default, unless the `_enum()` postposit is provided then it will provide a integer enumerator. This can only be set/changed by `me`.<br>See [Technology Values](#tech_) |
+| <a name="tech"></a>`_tech(`*`technology`*`)`<br>`_technology(`*`technology`*`)`<br>`_chem(`*`technology`*`)`<br>`_chemistry(`*`technology`*`)`<br>*`…`*`_enum()` | read (write by me) | **Battery Technology**<br>The technology (or chemistry) composition of the battery.  This is usually defined at declaration. It will display a string as default, unless the `_enum()` postposit is provided then it will provide a integer enumerator. This can only be set/changed by `me`.<br>See [Technology Values](#tech_) |
 
 <a name="algor_"></a>
 ### Algorithm Values

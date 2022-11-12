@@ -1064,7 +1064,7 @@
 </tbody>
 </table>
 <p>      <code>add_posepoint(</code><em><code>moniker</code></em><code>);</code><br/>
-      <code>add_pose(</code><em><code>moniker1</code></em><code>,</code><em><code>moniker2</code></em><code>,...);</code><br/>
+      <code>add_pose(</code><em><code>moniker1</code></em><code>,</code><em><code>moniker2</code></em><code>,…);</code><br/>
       <code>add_pose(</code><em><code>moniker</code></em><code>)_orientat(</code><em><code>x</code></em><code>,</code><em><code>y</code></em><code>,</code><em><code>z</code></em><code>);</code><br/>
       <code>add_pose(</code><em><code>moniker</code></em><code>)_orientat(</code><em><code>x</code></em><code>,</code><em><code>y</code></em><code>,</code><em><code>z</code></em><code>,</code><em><code>w</code></em><code>);</code><br/>
       <code>add_pose(</code><em><code>moniker</code></em><code>)_orientat({</code><em><code>order</code></em><code>},</code><em><code>x</code></em><code>,</code><em><code>y</code></em><code>,</code><em><code>z</code></em><code>,</code><em><code>w</code></em><code>);</code><br/>
@@ -1086,17 +1086,17 @@
       <code>with_pose(</code><em><code>moniker</code></em><code>)_wp([</code><em><code>variablename</code></em><code>);</code></p>
 <h2 id="referencing-assignment">Referencing &amp; Assignment</h2>
 <p>Referencing a <code>pose</code> is achieved with the <code>with</code> verb, or the shortened <code>(</code><em><code>moniker</code></em><code>)</code> syntax. The <code>with_pose</code> (or expanded <code>with_posepoint</code>) command can be expanded to create multiple <code>poses</code>s using a coma-spearated list of <em><code>moniker</code></em> s and mutliple <code>_orientat</code> posits. The position in the <em><code>moniker</code></em> list corresponds to the same order of appended <code>_orientat</code> posits. </p>
-<p>      <code>with_pose(</code><em><code>moniker1</code></em><code>,</code><em><code>moniker2</code></em><code>,...)_orientat(</code><em><code>x</code></em><code>,</code><em><code>y</code></em><code>,</code><em><code>z</code></em><code>,</code><em><code>w</code></em><code>)_orientat(</code><em><code>x</code></em><code>,</code><em><code>y</code></em><code>,</code><em><code>z</code></em><code>,</code><em><code>w</code></em><code>)...</code></p>
-<p>For easy of reading for humans, either a <code>beginwith ... endwith</code> syntax, or a nested statement approach can be taken.</p>
-<p>       <code>beginwith_pose(</code><em><code>moniker1</code></em><code>,</code><em><code>moniker2</code></em><code>,...);</code><br/>
+<p>      <code>with_pose(</code><em><code>moniker1</code></em><code>,</code><em><code>moniker2</code></em><code>,…)_orientat(</code><em><code>x</code></em><code>,</code><em><code>y</code></em><code>,</code><em><code>z</code></em><code>,</code><em><code>w</code></em><code>)_orientat(</code><em><code>x</code></em><code>,</code><em><code>y</code></em><code>,</code><em><code>z</code></em><code>,</code><em><code>w</code></em><code>)…</code></p>
+<p>For easy of reading for humans, either a <code>beginwith … endwith</code> syntax, or a nested statement approach can be taken.</p>
+<p>       <code>beginwith_pose(</code><em><code>moniker1</code></em><code>,</code><em><code>moniker2</code></em><code>,…);</code><br/>
              <code>(</code><em><code>moniker1</code></em><code>)_orientat(</code><em><code>x</code></em><code>,</code><em><code>y</code></em><code>,</code><em><code>z</code></em><code>);</code><br/>
              <code>(</code><em><code>moniker2</code></em><code>)_orientat(</code><em><code>x</code></em><code>,</code><em><code>y</code></em><code>,</code><em><code>z</code></em><code>,</code><em><code>w</code></em><code>);</code><br/>
-             <em><code>...</code></em><br/>
+             <em><code>…</code></em><br/>
        <code>endwith_wp();</code></p>
-<p>       <code>with_pose(</code><em><code>moniker1</code></em><code>,</code><em><code>moniker2</code></em><code>,...)</code><br/>
+<p>       <code>with_pose(</code><em><code>moniker1</code></em><code>,</code><em><code>moniker2</code></em><code>,…)</code><br/>
              <code>(</code><em><code>moniker1</code></em><code>)_orientat(</code><em><code>x</code></em><code>,</code><em><code>y</code></em><code>,</code><em><code>z</code></em><code>);</code><br/>
              <code>(</code><em><code>moniker2</code></em><code>)_orientat(</code><em><code>x</code></em><code>,</code><em><code>y</code></em><code>,</code><em><code>z</code></em><code>,</code><em><code>w</code></em><code>);</code><br/>
-             <em><code>...</code></em><br/>
+             <em><code>…</code></em><br/>
        <code>;</code></p>
 <h2 id="casting">Casting</h2>
 <p>Casting to <code>pose</code>s sibling, <code>waypoint</code> and <code>goal</code>, is the safest and most commonly used cast of <code>pose</code>, as they are related. Casting can be achieved by specifing the datatype using curly brackets (<code>{}</code>), or with the <code>with</code> verb.</p>

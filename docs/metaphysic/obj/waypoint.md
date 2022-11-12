@@ -13,7 +13,7 @@ In the family of 'location-only' based navigation objects, one `itinerary` has m
 The default declaration of the `waypoint` object is to at least provide a *moniker*, however, at declaration it is common to provide a location using the `_coords` posit. The parameters of `_coords` are numeric, when not specified they will be implied to be `{double}`. Providing `x_lat` and `y_long` only implies a two-dimensional waypoint, and adding the `z_alt` parameter implies a three-dimensional waypoint. `waypoint` can be shortened to `wp`, both terms are syntactically the same and can be used freely and interchangabily. 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;` add_waypoint(`*`moniker`*`);`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;` add_waypoint(`*`moniker1`*`, `*`moniker2`*`,...);`<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;` add_waypoint(`*`moniker1`*`, `*`moniker2`*`,…);`<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;` add_wp(`*`moniker`*`)_coords(`*`x_lat`*`, `*`y_long`*`);`<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;` add_waypoint(`*`moniker`*`)_coords(`*`x_lat`*`, `*`y_long`*`, `*`z_alt`*`);`
 
@@ -21,20 +21,20 @@ The default declaration of the `waypoint` object is to at least provide a *monik
 Referencing a `waypoint` is achieved with the `with` verb, or the shortened `(`*`moniker`*`)` syntax. The `with_waypoint` (or shortened `with_wp`) command can be expanded to create multiple `waypoint`s using a coma-spearated list of *`moniker`* s and mutliple `_coords` posits. The position in the *`moniker`* list corresponds to the same order of appended `_coords` posits. 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;` add_waypoint(`*`moniker`*`);`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;` with_wp(`*`moniker1`*`, `*`moniker2`*`,...)_coords(`*`x_lat1`*`, `*`y_long1`*`)_coords(`*`x_lat2`*`, `*`y_long2`*`)...`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;` with_wp(`*`moniker1`*`, `*`moniker2`*`,…)_coords(`*`x_lat1`*`, `*`y_long1`*`)_coords(`*`x_lat2`*`, `*`y_long2`*`)…`
 
-For easy of reading for humans, either a `beginwith ... endwith` syntax, or a nested statement approach can be taken.
+For easy of reading for humans, either a `beginwith … endwith` syntax, or a nested statement approach can be taken.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `beginwith_waypoint(`*`moniker1`*`, `*`moniker2`*`,...);`<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `beginwith_waypoint(`*`moniker1`*`, `*`moniker2`*`,…);`<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `(`*`moniker1`*`)_coords(`*`x_lat1`*`, `*`y_long1`*`);`<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `(`*`moniker2`*`)_coords(`*`x_lat1`*`, `*`y_long1`*`);`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`...`*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`…`*<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `endwith_wp();`
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `with_wp(`*`moniker1`*`, `*`moniker2`*`,...)`<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `with_wp(`*`moniker1`*`, `*`moniker2`*`,…)`<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `(`*`moniker1`*`)_coords(`*`x_lat1`*`, `*`y_long1`*`);`<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `(`*`moniker2`*`)_coords(`*`x_lat1`*`, `*`y_long1`*`);`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`...`*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`…`*<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `;`
 
 ## Casting
@@ -65,8 +65,8 @@ log_console([]: [])_nameof()_typeof(point1)_wp();   // : {waypoint}
 ## Referencing
 Referencing the `waypoint` obejct can be achieved in the usual way with the `with_` verb.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`with_waypoint(`*`moniker`*`)_...`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`with_wp(`*`moniker`*`)_...`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`with_waypoint(`*`moniker`*`)_…`<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`with_wp(`*`moniker`*`)_…`
 
 ## Similar Objects
 

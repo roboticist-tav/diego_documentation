@@ -1049,7 +1049,7 @@ add_robot({drone},be);
 add_drone(pe);
 </code></pre>
 <h2 id="a-brave-new-world">A Brave New World</h2>
-<p>So first we are going to start setting up the physical world...</p>
+<p>So first we are going to start setting up the physical world…</p>
 <pre><code class="language-diego">
 // Set up physical world ready for the caterpillar chain movement:
 begin_instruct(caterpillar_chain_physicals)_for(alif, be, pe);
@@ -1097,7 +1097,7 @@ exec_instruct(persian_chain_physicals)_for(alif, be, pe);
 <p>Finally the table, <code>table</code> has been placed on the map.</p>
 <p>We execute the instruction immediately.</p>
 <h2 id="there-is-a-beginning-to-everything">There is a Beginning to Everything</h2>
-<p>To start the Caterpillar Chain we need one active agent and two loitering agents. We also have starting positions. <code>alif</code> will be the first active agent starting at waypoint <code>x9</code> to go along rosary <code>perimeter_cc</code> (on route <code>perimeter</code>), <code>be</code> and <code>pe</code> be will be the loitering agents, and they will loiter around waypoints <code>x8</code> and <code>x7</code> respectively...</p>
+<p>To start the Caterpillar Chain we need one active agent and two loitering agents. We also have starting positions. <code>alif</code> will be the first active agent starting at waypoint <code>x9</code> to go along rosary <code>perimeter_cc</code> (on route <code>perimeter</code>), <code>be</code> and <code>pe</code> be will be the loitering agents, and they will loiter around waypoints <code>x8</code> and <code>x7</code> respectively…</p>
 <pre><code class="language-diego">begin_instruct(caterpillar_chain_starting_positions)_for(alif, be, pe)_onceonly();
 
     with_drone(alif)_sobriquet(active_agent)
@@ -1124,7 +1124,7 @@ end_instruct(persian_chain_starting_positions);
 <p>Note that we declare the rosary as a child of each drone, and all the waypoints as children of the rosary. This is intentional, as omitting the rosary, will instruct the drone to go straight to the waypoint and miss the route of the rosary entirely.</p>
 <p>We do not want to execute instruction <code>caterpillar_chain_starting_positions</code> yet as the guys (<code>alif</code>, <code>be</code>, and, <code>pe</code>) don't yet know about instructions <code>activate_agent</code> and <code>loiterise_agent</code>. They will only complain that they haven't learnt that functionality if we execute <code>caterpillar_chain_starting_positions</code> now!</p>
 <h2 id="active-agent">Active Agent</h2>
-<p>In the Caterpillar Chain Movement the active agent scouts around the route from a starting position to an ending position. When it arrives penultimate to its ending position, it has to inform the others...</p>
+<p>In the Caterpillar Chain Movement the active agent scouts around the route from a starting position to an ending position. When it arrives penultimate to its ending position, it has to inform the others…</p>
 <pre><code class="language-Diego">// Activate the active_agent to go on route `perimeter`
 begin_instruct(activate_agent)_for(active_agent);
 
@@ -1156,13 +1156,13 @@ end_instruct(activate_agent);
 <blockquote>
 <p>When all has been done <code>active_agent</code> becomes a <code>loiterer</code>.</p>
 </blockquote>
-<p>...<code>wtf()</code></p>
+<p>…<code>wtf()</code></p>
 <blockquote>
 <p>Throughout this code black when the fickle finger of fate is at work, the <em>'where's the fire'</em> <code>_wtf()</code> is called to handle anything that's flung its way.  We will try and handle any known-knowns that could come our way later.</p>
 </blockquote>
 </blockquote>
 <h2 id="loiter-agent">Loiter Agent</h2>
-<p>So, above, we provided the 'activate_agent' instruction, now we need to build the instruction for <code>loiterise_agent</code>...</p>
+<p>So, above, we provided the 'activate_agent' instruction, now we need to build the instruction for <code>loiterise_agent</code>…</p>
 <pre><code class="language-Diego">begin_instruct(loiterise_agent)_for(loiterer);
 
     with_robot(loiterer)_loiterat()_placeat(perimeter_cc);
@@ -1177,7 +1177,7 @@ end_instruct(loiterise_agent);
 </blockquote>
 <p>The default loitering parameters have been previously <em>drilled into</em> these drones when they were young, so there is no need to repeat them, just instruct the drones to <code>_loiterat</code> and they will know what to do.  If they don't, there are many available packaging tools, which they can upgrade with: <code>apt_me()_forwhat(loiter);</code></p>
 <h2 id="chain-reactions">Chain Reactions</h2>
-<p>Now the cornerstone of the Persian Chain Movement is to chain reaction, which occurs just before the <code>active_agent</code> arrives at it's endpoint on rosary <code>perimeter_cc</code>.  The chain reaction is tiggered by the <code>active_agent</code> drone executing the <code>start_persian_chain</code> instruct...</p>
+<p>Now the cornerstone of the Persian Chain Movement is to chain reaction, which occurs just before the <code>active_agent</code> arrives at it's endpoint on rosary <code>perimeter_cc</code>.  The chain reaction is tiggered by the <code>active_agent</code> drone executing the <code>start_persian_chain</code> instruct…</p>
 <pre><code class="language-Diego">begin_instruct(start_persian_chain)_for(loiterer);
 
     with_sobriquet(loiterer)_cardinatat()_placeat(perimeter_cc)_orderat(highest, 1);

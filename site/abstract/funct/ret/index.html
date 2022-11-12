@@ -1025,8 +1025,8 @@
 <h2 id="syntax">Syntax</h2>
 <p>The <code>ret</code> function comes in two forms: an expression, returning the result of the expression (and any porceeding <em>object</em> output) and returning the result to the preceding <em>object</em>. The other form is as a gate passing the result of the proceeding <em>objects</em> to the preceding <em>objects</em>, with no interfering expression.</p>
 <p>       <em><code>&lt;object&gt;</code></em><code>_ret(</code><em><code>expression</code></em><code>);</code><br/>
-       <em><code>&lt;object&gt;</code></em><code>_ret(</code><em><code>expression</code></em><code>)_</code><em><code>....</code></em><code>;</code><br/>
-       <em><code>&lt;object&gt;</code></em><code>_ret()_</code><em><code>....</code></em><code>;</code></p>
+       <em><code>&lt;object&gt;</code></em><code>_ret(</code><em><code>expression</code></em><code>)_</code><em><code>….</code></em><code>;</code><br/>
+       <em><code>&lt;object&gt;</code></em><code>_ret()_</code><em><code>….</code></em><code>;</code></p>
 <h1 id="example">Example</h1>
 <p>The <code>ret</code> function is an expression function.  When left parameter-less the <code>ret</code> function will act as gate passing the result of the proceeding <em>objects</em> to the preceding <em>objects</em>.</p>
 <pre><code class="language-diego">add_funct({int},addplus)_param({int},a,b)_ret()_param(a)_plus(b);

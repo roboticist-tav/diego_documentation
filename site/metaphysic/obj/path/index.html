@@ -1042,7 +1042,7 @@
 <h2 id="declaration">Declaration</h2>
 <p>The default declaration of the <code>path</code> object is to at least provide a <em>moniker</em>, however, at declaration it is common to provide two locations using either: a child <code>waypoint</code> (or shortened <code>wp</code>) assignment; or, using the <code>_coords</code> posit.</p>
 <p>      <code>add_path(</code><em><code>moniker</code></em><code>);</code><br/>
-      <code>add_path(</code><em><code>moniker1</code></em><code>,</code><em><code>moniker2</code></em><code>,...);</code><br/>
+      <code>add_path(</code><em><code>moniker1</code></em><code>,</code><em><code>moniker2</code></em><code>,…);</code><br/>
       <code>add_path(</code><em><code>moniker</code></em><code>)_wp(</code><em><code>moniker</code></em><code>)_wp(</code><em><code>moniker</code></em><code>);</code><br/>
       <code>add_waypoint(</code><em><code>moniker</code></em><code>)_coords(</code><em><code>x_lat</code></em><code>,</code><em><code>y_long</code></em><code>,</code><em><code>z_alt</code></em><code>)_coords(</code><em><code>x_lat</code></em><code>,</code><em><code>y_long</code></em><code>,</code><em><code>z_alt</code></em><code>);</code></p>
 <p>The parameters of <code>_coords</code> are numeric, when not specified they will be implied to be <code>{double}</code>. Providing <code>x_lat</code> and <code>y_long</code> only implies a two-dimensional waypoint, and adding the <code>z_alt</code> parameter implies a three-dimensional waypoint.</p>

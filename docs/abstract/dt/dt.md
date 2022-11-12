@@ -15,7 +15,7 @@ All primative objects have their datatype counterpart.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `add_var({real},`*`moniker`*`)`<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `add_var({bool},`*`moniker`*`)`<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `add_var({tempor},`*`moniker`*`)`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; etc...
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; etc…
 
 In declarations, omitting the datatype will imply the [`{variant}`](../dt/variant.md) datatype is used.
 
@@ -37,7 +37,7 @@ For assignment, initialisation, and referencing, adding a datatype will always c
 
 Casts can be achieved inside *expressions*, such as, for example, the `calc` function.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<...>`*`_calc⟦[{`*`datatype`*`},`*`variablemoniker`*`])`<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<…>`*`_calc⟦[{`*`datatype`*`},`*`variablemoniker`*`])`<br>
 
 ---
 ## References

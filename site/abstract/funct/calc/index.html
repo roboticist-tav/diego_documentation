@@ -1034,25 +1034,25 @@
 <h2 id="declaration">Declaration</h2>
 <p>Although the most common use of the <code>calc</code> <em>expressive object</em> is via a posit, it can be declared using the <code>add_</code> verb (or shortened <code>+_</code>). Since the <code>calc</code> <em>object</em> is expressive the expression brackets (<code>⟦⟧</code>) or double square brackets (<code>[[]]</code>) can be used directly, i.e. in place of the brackets (<code>()</code>). Multiple <code>calc</code>s are declared using a coma-separated list of <em><code>moniker</code></em> s.  If a moniker is used with an expression, the expression must be enclosed in expression brackets (<code>⟦⟧</code>) or double square brackets (<code>[[]]</code>).</p>
 <p>       <code>add_calc(</code><em><code>moniker</code></em><code>);</code><br/>
-       <code>+_calc(</code><em><code>moniker1</code></em><code>,</code><em><code>moniker2</code></em><code>,</code><em><code>...</code></em><code>);</code><br/>
+       <code>+_calc(</code><em><code>moniker1</code></em><code>,</code><em><code>moniker2</code></em><code>,</code><em><code>…</code></em><code>);</code><br/>
        <code>+_calc⟦</code><em><code>expression</code></em><code>⟧;</code><br/>
-       <code>+_calc(⟦</code><em><code>expression1</code></em><code>⟧,⟦</code><em><code>expression2</code></em><code>⟧,⟦</code><em><code>...</code></em><code>⟧);</code><br/>
+       <code>+_calc(⟦</code><em><code>expression1</code></em><code>⟧,⟦</code><em><code>expression2</code></em><code>⟧,⟦</code><em><code>…</code></em><code>⟧);</code><br/>
        <code>+_calc(</code><em><code>moniker</code></em><code>,⟦</code><em><code>expression</code></em><code>⟧);</code><br/>
-       <code>+_calc(</code><em><code>moniker1</code></em><code>,⟦</code><em><code>expression1</code></em><code>⟧,</code><em><code>moniker2</code></em><code>,⟦</code><em><code>expression2</code></em><code>⟧,</code><em><code>moniker...</code></em><code>,⟦</code><em><code>expression...</code></em><code>⟧);</code></p>
+       <code>+_calc(</code><em><code>moniker1</code></em><code>,⟦</code><em><code>expression1</code></em><code>⟧,</code><em><code>moniker2</code></em><code>,⟦</code><em><code>expression2</code></em><code>⟧,</code><em><code>moniker…</code></em><code>,⟦</code><em><code>expression…</code></em><code>⟧);</code></p>
 <p>The common declaration of the <code>calc</code> object is via posit syntax.</p>
 <p>       <em><code>&lt;object&gt;</code></em><code>_calc(</code><em><code>moniker</code></em><code>);</code><br/>
-       <em><code>&lt;object&gt;</code></em><code>_calc(</code><em><code>moniker1</code></em><code>,</code><em><code>moniker2</code></em><code>,</code><em><code>...</code></em><code>);</code><br/>
+       <em><code>&lt;object&gt;</code></em><code>_calc(</code><em><code>moniker1</code></em><code>,</code><em><code>moniker2</code></em><code>,</code><em><code>…</code></em><code>);</code><br/>
        <em><code>&lt;object&gt;</code></em><code>_calc⟦</code><em><code>expression</code></em><code>⟧;</code><br/>
-       <em><code>&lt;object&gt;</code></em><code>_calc(⟦</code><em><code>expression1</code></em><code>⟧,⟦</code><em><code>expression2</code></em><code>⟧,⟦</code><em><code>...</code></em><code>⟧);</code><br/>
+       <em><code>&lt;object&gt;</code></em><code>_calc(⟦</code><em><code>expression1</code></em><code>⟧,⟦</code><em><code>expression2</code></em><code>⟧,⟦</code><em><code>…</code></em><code>⟧);</code><br/>
        <em><code>&lt;object&gt;</code></em><code>_calc(</code><em><code>moniker</code></em><code>,⟦</code><em><code>expression</code></em><code>⟧);</code><br/>
-       <em><code>&lt;object&gt;</code></em><code>_calc(</code><em><code>moniker1</code></em><code>,⟦</code><em><code>expression1</code></em><code>⟧,</code><em><code>moniker2</code></em><code>,⟦</code><em><code>expression2</code></em><code>⟧,</code><em><code>moniker...</code></em><code>,⟦</code><em><code>expression...</code></em><code>⟧);</code></p>
+       <em><code>&lt;object&gt;</code></em><code>_calc(</code><em><code>moniker1</code></em><code>,⟦</code><em><code>expression1</code></em><code>⟧,</code><em><code>moniker2</code></em><code>,⟦</code><em><code>expression2</code></em><code>⟧,</code><em><code>moniker…</code></em><code>,⟦</code><em><code>expression…</code></em><code>⟧);</code></p>
 <p><a name="reference"></a></p>
 <h2 id="referencing">Referencing</h2>
 <p>Referencing a <code>calc</code> <em>object</em> is achieved with the <code>with</code> verb (or shortened <code>&gt;_</code>), or the shortened <code>(</code><em><code>calculation_moniker</code></em><code>)</code> syntax. For inside <em>expressions</em> use square brackets (<code>[]</code>) as in <code>[</code><em><code>stacle_moniker</code></em><code>]</code>.</p>
 <p>       <code>with_calc(</code><em><code>moniker</code></em><code>);</code><br/>
        <code>&gt;_calc(</code><em><code>moniker</code></em><code>);</code><br/>
        <code>(</code><em><code>calculation_moniker</code></em><code>);</code><br/>
-       <code>⟦</code><em><code>...</code></em><code>[</code><em><code>calculation_moniker</code></em><code>]</code><em><code>...</code></em><code>⟧</code></p>
+       <code>⟦</code><em><code>…</code></em><code>[</code><em><code>calculation_moniker</code></em><code>]</code><em><code>…</code></em><code>⟧</code></p>
 <p><a name="assign"></a></p>
 <h2 id="assignment">Assignment</h2>
 <p>Only other expressions can be assigned to the <code>calc</code> <em>object</em>.</p>
@@ -1070,16 +1070,16 @@ _unit()</p>
 <h1 id="operators">Operators</h1>
 <p><a name="arithmetic"><a></a></a></p>
 <h2 id="arithmetic-operators">Arithmetic Operators</h2>
-<p>       <code>_calc⟦</code><em><code>...</code></em><code>+</code><em><code>...</code></em><code>⟧;</code><br/>
-       <code>_calc⟦</code><em><code>...</code></em><code>-</code><em><code>...</code></em><code>⟧;</code><br/>
-       <code>_calc⟦</code><em><code>...</code></em><code>*</code><em><code>...</code></em><code>⟧;</code><br/>
-       <code>_calc⟦</code><em><code>...</code></em><code>×</code><em><code>...</code></em><code>⟧;</code><br/>
-       <code>_calc⟦</code><em><code>...</code></em><code>/</code><em><code>...</code></em><code>⟧;</code><br/>
-       <code>_calc⟦</code><em><code>...</code></em><code>÷</code><em><code>...</code></em><code>⟧;</code><br/>
-       <code>_calc⟦</code><em><code>...</code></em><code>%</code><em><code>...</code></em><code>⟧;</code><br/>
-       <code>_calc⟦</code><em><code>...</code></em><code>𝐦</code><em><code>...</code></em><code>⟧;</code><br/>
-       <code>_calc⟦</code><em><code>...</code></em><code>𝐦(</code><em><code>sub_expression</code></em><code>)</code><em><code>...</code></em><code>⟧;</code><br/>
-       <code>_calc⟦</code><em><code>...</code></em><code>𝐦𝐨𝐝(</code><em><code>sub_expression</code></em><code>)</code><em><code>...</code></em><code>⟧;</code></p>
+<p>       <code>_calc⟦</code><em><code>…</code></em><code>+</code><em><code>…</code></em><code>⟧;</code><br/>
+       <code>_calc⟦</code><em><code>…</code></em><code>-</code><em><code>…</code></em><code>⟧;</code><br/>
+       <code>_calc⟦</code><em><code>…</code></em><code>*</code><em><code>…</code></em><code>⟧;</code><br/>
+       <code>_calc⟦</code><em><code>…</code></em><code>×</code><em><code>…</code></em><code>⟧;</code><br/>
+       <code>_calc⟦</code><em><code>…</code></em><code>/</code><em><code>…</code></em><code>⟧;</code><br/>
+       <code>_calc⟦</code><em><code>…</code></em><code>÷</code><em><code>…</code></em><code>⟧;</code><br/>
+       <code>_calc⟦</code><em><code>…</code></em><code>%</code><em><code>…</code></em><code>⟧;</code><br/>
+       <code>_calc⟦</code><em><code>…</code></em><code>𝐦</code><em><code>…</code></em><code>⟧;</code><br/>
+       <code>_calc⟦</code><em><code>…</code></em><code>𝐦(</code><em><code>sub_expression</code></em><code>)</code><em><code>…</code></em><code>⟧;</code><br/>
+       <code>_calc⟦</code><em><code>…</code></em><code>𝐦𝐨𝐝(</code><em><code>sub_expression</code></em><code>)</code><em><code>…</code></em><code>⟧;</code></p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">

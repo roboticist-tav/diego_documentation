@@ -1049,9 +1049,9 @@
        <code>add_batt(</code><em><code>moniker</code></em><code>)_type(</code><em><code>type</code></em><code>);</code><br/>
        <code>add_batt({</code><em><code>type</code></em><code>},</code><em><code>moniker</code></em><code>);</code></p>
 <p>Multiple batteries can be added as batteries or as part of a <code>bank</code> of batteries (treated like a farm or array). Battery banks can be indexed:</p>
-<p>       <code>add_battery(</code><em><code>moniker1</code></em><code>,</code><em><code>moniker2,...</code></em><code>);</code><br/>
-       <code>add_bank(</code><em><code>moniker</code></em><code>)_battery(</code><em><code>moniker1</code></em><code>,</code><em><code>moniker2,...</code></em><code>)_index(</code><em><code>index-form</code></em><code>,</code><em><code>base</code></em><code>);</code><br/>
-       <code>add_bank(</code><em><code>moniker</code></em><code>)_batt_({</code><em><code>type</code></em><code>},</code><em><code>moniker1</code></em><code>,</code><em><code>moniker2,...</code></em><code>)</code></p>
+<p>       <code>add_battery(</code><em><code>moniker1</code></em><code>,</code><em><code>moniker2,…</code></em><code>);</code><br/>
+       <code>add_bank(</code><em><code>moniker</code></em><code>)_battery(</code><em><code>moniker1</code></em><code>,</code><em><code>moniker2,…</code></em><code>)_index(</code><em><code>index-form</code></em><code>,</code><em><code>base</code></em><code>);</code><br/>
+       <code>add_bank(</code><em><code>moniker</code></em><code>)_batt_({</code><em><code>type</code></em><code>},</code><em><code>moniker1</code></em><code>,</code><em><code>moniker2,…</code></em><code>)</code></p>
 <p>Each battery is implied to have one default associated charge (one charger per battery), it is, therefore, not neccessary to declare or named, by can be:</p>
 <p>       <code>add_battery(</code><em><code>moniker</code></em><code>)_charger();</code><br/>
        <code>add_batt(</code><em><code>moniker</code></em><code>)_charger(</code><em><code>moniker</code></em><code>);</code><br/></p>
@@ -1087,7 +1087,7 @@
 <td><strong>Battery Status</strong><br/>The battery status, as defined within the battery logic.  It will display a string as default, unless the <code>_enum()</code> postposit is provided then it will provide a integer enumerator.<br/>See <a href="#stat_">Status Values</a></td>
 </tr>
 <tr>
-<td><a name="tech"></a><code>_tech(</code><em><code>technology</code></em><code>)</code><br/><code>_technology(</code><em><code>technology</code></em><code>)</code><br/><code>_chem(</code><em><code>technology</code></em><code>)</code><br/><code>_chemistry(</code><em><code>technology</code></em><code>)</code><br/><em><code>...</code></em><code>_enum()</code></td>
+<td><a name="tech"></a><code>_tech(</code><em><code>technology</code></em><code>)</code><br/><code>_technology(</code><em><code>technology</code></em><code>)</code><br/><code>_chem(</code><em><code>technology</code></em><code>)</code><br/><code>_chemistry(</code><em><code>technology</code></em><code>)</code><br/><em><code>…</code></em><code>_enum()</code></td>
 <td>read (write by me)</td>
 <td><strong>Battery Technology</strong><br/>The technology (or chemistry) composition of the battery.  This is usually defined at declaration. It will display a string as default, unless the <code>_enum()</code> postposit is provided then it will provide a integer enumerator. This can only be set/changed by <code>me</code>.<br/>See <a href="#tech_">Technology Values</a></td>
 </tr>

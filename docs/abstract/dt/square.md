@@ -13,7 +13,7 @@ The default declaration of the `circ` (or lengthened `circle`) *object* is to us
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `add_circ(`*`moniker`*`);`<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `add_circle(`*`moniker`*`);`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `add_circ(`*`moniker1`*`,`*`moniker2`*`,`*`...`*`);`<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `add_circ(`*`moniker1`*`,`*`moniker2`*`,`*`…`*`);`<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `add_shape({circ},`*`moniker`*`);`
 
 It is common with the `circ` *object* to provide a *`radius`* at declaration. When providing a radius inside the declaration of a `circ`, providing the unit is optional. If the unit declaration is omitted, the caller and callee will revert to their friendship (mutual understanding) with each other. A radius can also be assigned by appending with a proceeding `_radius` posit.

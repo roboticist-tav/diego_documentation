@@ -7,7 +7,7 @@ If the thingies commanded to kill have no specialised equipment (i.e. weaponry) 
 To declare `kill`, you will need to provide the *`target(s)`* as monikers. Declaration of the `kill` command can only be executed when the thingies required to kill have weaponry or access to weaponry.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `kill_`*`<thingy>`*`(`*`target_moniker`*`);`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `kill_`*`<thingy>`*`(`*`target_moniker1`*`,`*`target_moniker2`*`,`*`...`*`);`<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `kill_`*`<thingy>`*`(`*`target_moniker1`*`,`*`target_moniker2`*`,`*`…`*`);`<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `kill_`*`<thingy>`*`([`*`target_variable_name`*`]);`
 
 Declaration of the killer is provided with discirimation posit, for example: `forof`.
@@ -24,7 +24,7 @@ The `kill_human` is a command for a robot(s) to end the life of an identified hu
 The `kill_human` command cannot be param-less.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `kill_human(`*`target_moniker`*`);`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `kill_human(`*`target_moniker1`*`,`*`target_moniker2`*`,`*`...`*`);`<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `kill_human(`*`target_moniker1`*`,`*`target_moniker2`*`,`*`…`*`);`<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `kill_human([`*`target_variable_name`*`]);`
 
 ### kill_human(*human_moniker*)

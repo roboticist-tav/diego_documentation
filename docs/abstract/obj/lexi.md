@@ -11,14 +11,14 @@ The default declaration of the `lexikon` object is to at least provide a *monike
 Assignment of values is allowed at both declaration, initialisation, and post-declaration. The `_value` posits are used for assignment, their equivalent syntax, `_values`, `_v` are identical and can be used freely and interchangeably.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `add_lexi(`*`moniker`*`)_value(`*`key`*`)`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `with_lexikon(`*`moniker`*`)_values(`*`val1`*`,`*`val2`*`,`*`...`*`)`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `with_lexikon(`*`moniker`*`)_values(`*`val1`*`,`*`val2`*`,`*`…`*`)`
 
 To reference a `lecikon` is, effectively, the reverse of a `dict` object, by using the `_ofval` posit. Without the `_ofval` posit, the complete `lexikon` is returned. The `_ofval` posit can accept variables using the `[]` square brackets to escape variables.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `with_lexi(`*`moniker`*`)`<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `_lexi(`*`moniker`*`)_ofval(`*`val`*`)`<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `(`*`leximoniker`*`)_ofval(`*`val`*`)`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `with_lexikon(`*`moniker`*`)_ofval(`*`val`*`,`*`key`*`,`*`...`*`)`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `with_lexikon(`*`moniker`*`)_ofval(`*`val`*`,`*`key`*`,`*`…`*`)`
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `_lexi(`*`moniker`*`)_ofval([`*`variablename`*`])`<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `with_lexikon(`*`moniker`*`)_ofval([`*`variablename`*`],[`*`variablename`*`],[`*`variablename`*`])`<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `(`*`leximoniker`*`)_ofval([`*`arrayname`*`])`

@@ -32,13 +32,13 @@ Ranks and rank monikers available are shown below:
 | e2 | | roborporal | Bombardier / Leading Seaman / Corporal / Constable / Special Agent |
 | e1 | | roboagent | Private / Seaman / Airman / Recruit / Trainee |
 [^human_ranks]: Australian military and a mix of state and federal Australian and US FBI police force ranks were used for equivalence.
-#### label_authority(*rank*)_to(*moniker1*, *n...*) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; label_authority(*rank_moniker*)_to(*moniker1*, *n...*) 
+#### label_authority(*rank*)_to(*moniker1*, *n…*) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; label_authority(*rank_moniker*)_to(*moniker1*, *n…*) 
 Sets monikers (robots, swarms, labels of) in the whitelist under the scope of ```instruct``` then ``go_diego``` with authorization rank '*rank*'.
 #### label_authority(++)
 
-#### label_authority(*rank*)_to(*moniker1*, *n...*)
+#### label_authority(*rank*)_to(*moniker1*, *n…*)
 
-####  label_authority(++)_to(*moniker1*, *n...*) &nbsp; &nbsp;authority_promote(*moniker1*, *n...*)
+####  label_authority(++)_to(*moniker1*, *n…*) &nbsp; &nbsp;authority_promote(*moniker1*, *n…*)
 
-#### set_authority(*rank*)_to(*moniker1*, *n...*)
-#### set_authority(*rank*)_not(*moniker1*, *n...*)
+#### set_authority(*rank*)_to(*moniker1*, *n…*)
+#### set_authority(*rank*)_not(*moniker1*, *n…*)

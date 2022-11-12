@@ -22,7 +22,7 @@ As the `hour` posit with a *`hour_value`* paramter to set the temporal hour as a
 
 Some *objects* allow for an array of hours. To set an array of hours, use multiple `hour` posits. Alternatively an array can be used to set hours in one `hour` posit.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<object>`*`_hour(`*`{hour_value1}`*`)_hr(`*`{hour_value2}`*`)_`*`...`*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<object>`*`_hour(`*`{hour_value1}`*`)_hr(`*`{hour_value2}`*`)_`*`…`*<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<object>`*`_hour([`*`hour_array_moniker`*`]);`<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<object>`*`_hr([`*`hour_array_moniker`*`]);`
 

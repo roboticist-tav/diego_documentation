@@ -20,6 +20,6 @@ The default declaration of the `dict`ionary object is to at least provide a *mon
 Assignment of keys or keys-values is allowed at both declaration, initialisation, and post-declaration. The `_key` and `_value` posits are used for assignment, their equivalent syntax, `_keys`, `_k`, `_values`, `_v` are identical and can be used freely and interchangeably. Any key given with no value will return as `undefined` when referenced.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `add_dict(`*`moniker`*`)_key(`*`key`*`)`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `with_dict(`*`moniker`*`)_keys(`*`key1`*`,`*`key2`*`,`*`...`*`)`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `add_dictionary(`*`moniker`*`)_keys(`*`key1`*`,`*`key2`*`,`*`...`*`)_values(`*`val1`*`,`*`val2`*`,`*`...`*`)`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `with_dict(`*`moniker`*`)_k(`*`key1`*`,`*`key2`*`,`*`...`*`)_v(`*`val1`*`,`*`val2`*`,`*`...`*`)`<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `with_dict(`*`moniker`*`)_keys(`*`key1`*`,`*`key2`*`,`*`…`*`)`<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `add_dictionary(`*`moniker`*`)_keys(`*`key1`*`,`*`key2`*`,`*`…`*`)_values(`*`val1`*`,`*`val2`*`,`*`…`*`)`<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `with_dict(`*`moniker`*`)_k(`*`key1`*`,`*`key2`*`,`*`…`*`)_v(`*`val1`*`,`*`val2`*`,`*`…`*`)`<br>

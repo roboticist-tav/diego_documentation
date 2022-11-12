@@ -25,9 +25,9 @@ Sets the consensus of *consensus_type*:
 | ```majority``` | Decisions are made on a majority (>=50%) basis of the results over the number of robot members. |
 | ```decisive``` | Decisions are made on the majority results when the decisiveness limit (defaulted to 5 secs or the value set with the ```set_decisiveness``` command) has expired. |
 | ```first``` | Decisions are made on the first result. |
-#### set_consensus(*consensus_type*)_for(*moniker1*, *n...*)
-Consensus of *consensus_type* will apply only to the whitelist of (*moniker1*, *n...*) of monikers (robots, swarms, labels of).
-#### set_consensus(*consensus_type*)_not((*moniker1*, *n...*)
-Consensus of *consensus_type* will **not** apply to the blacklist of (*moniker1*, *n...*) of monikers (robots, swarms, labels of).  The defaulted or last known consensus will apply to those blacklist monikers.
-#### set_consensus(*consensus_type*)_for(*moniker1*, *n...*)_not(*moniker1*, *n...*)
+#### set_consensus(*consensus_type*)_for(*moniker1*, *n…*)
+Consensus of *consensus_type* will apply only to the whitelist of (*moniker1*, *n…*) of monikers (robots, swarms, labels of).
+#### set_consensus(*consensus_type*)_not((*moniker1*, *n…*)
+Consensus of *consensus_type* will **not** apply to the blacklist of (*moniker1*, *n…*) of monikers (robots, swarms, labels of).  The defaulted or last known consensus will apply to those blacklist monikers.
+#### set_consensus(*consensus_type*)_for(*moniker1*, *n…*)_not(*moniker1*, *n…*)
 An apply-list with a no-apply-list of monikers (robots, swarms, labels of) for consensus of *consensus_type*.

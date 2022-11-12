@@ -20,7 +20,7 @@ call();
 
 ### Example:
 
-In this example two things (`df88accd-dd43-4ff1-820e-82f75be13013`, shortened 64-bit: `df88accd`; and, `344d4c22-546c-4940-bdc4-c2a4371a29ac`, `344d4c22`) are in the same universe and have never met each other before. Both parties are shy and appear to be primitive...
+In this example two things (`df88accd-dd43-4ff1-820e-82f75be13013`, shortened 64-bit: `df88accd`; and, `344d4c22-546c-4940-bdc4-c2a4371a29ac`, `344d4c22`) are in the same universe and have never met each other before. Both parties are shy and appear to be primitive…
 ```mermaid
 sequenceDiagram
 
@@ -86,12 +86,12 @@ call()_as({label})
 ### Syntax:
 
 ```Diego
-call()_in({uuid1/moniker1},{uuid2/moniker2},...);
-call_human()_in({human_uuid1/human_moniker1},{human_uuid2/human_moniker2},...);
-call_ai()_in({ai_uuid1/ai_moniker1},{ai_uuid2/ai_moniker2},...);
-call_robot()_in({robot_uuid1/robot_moniker1},{robot_uuid2/robot_moniker2},...);
-call_thing()_in({thing_uuid1/thing_moniker1},{thing_uuid2/thing_moniker2},...);
-call_console()_in({console_uuid1/console_moniker1},{console_uuid2/console_moniker2},...);
+call()_in({uuid1/moniker1},{uuid2/moniker2},…);
+call_human()_in({human_uuid1/human_moniker1},{human_uuid2/human_moniker2},…);
+call_ai()_in({ai_uuid1/ai_moniker1},{ai_uuid2/ai_moniker2},…);
+call_robot()_in({robot_uuid1/robot_moniker1},{robot_uuid2/robot_moniker2},…);
+call_thing()_in({thing_uuid1/thing_moniker1},{thing_uuid2/thing_moniker2},…);
+call_console()_in({console_uuid1/console_moniker1},{console_uuid2/console_moniker2},…);
 
 call()_asin({label1},{label2});
 ```
@@ -179,7 +179,7 @@ The basic [roll]call is an indiscriminate and implicit request for existence of 
 
 > `call();` *"Who is here?"*
 >
->> ...responses may be for example: `here_robot(thah);` *"robot thah here, we haven't met before*"
+>> …responses may be for example: `here_robot(thah);` *"robot thah here, we haven't met before*"
 >> `ping_vehicle(trevor_tesla_m3);` *"vehicle trevor_telsa_m3 here, we have met before"*
 >>
 
@@ -189,12 +189,12 @@ The common use of `call_` is to find all thingies of a certain genera, for examp
 
 > `call_human();` will find all humans in memory / its world. *"where are all the humans?"*
 >
->> ...responses may be, for example: `found_human(James)_me();` *"I am James, a human.*"
->> ... `found_human(Sally);` *"I'm here, I'm Sally, I'm human."*
->> ... *and so on...*
+>> …responses may be, for example: `found_human(James)_me();` *"I am James, a human.*"
+>> … `found_human(Sally);` *"I'm here, I'm Sally, I'm human."*
+>> … *and so on…*
 
 
-... with variations for all the [thingy genera](/obj/_topicindex.md#genera):  `find_{thingy}();`, including...
+… with variations for all the [thingy genera](/obj/_topicindex.md#genera):  `find_{thingy}();`, including…
 
 > `find_genera();` *"is anyone here?"*
 
@@ -206,15 +206,15 @@ The `call_` verb can be used to roll call the puff(s) the caller is in, and roll
 
 > `call_puff()_me();` *"Where am I?"*
 >
->> ...example response: `here_puff()_mist(mist_f4ee)_me();` *"I am in the mist called 'mist_f4ee'"*
+>> …example response: `here_puff()_mist(mist_f4ee)_me();` *"I am in the mist called 'mist_f4ee'"*
 
 > `call_puff()_robot();` or `call_robot()_puff();` *"Where are all the robots?*"
 > 
->> ... `here_puff()_mist(mist_f4ee)_mist(mist_a345)_fog(fog_1234)_robot(thah);` *"
+>> … `here_puff()_mist(mist_f4ee)_mist(mist_a345)_fog(fog_1234)_robot(thah);` *"
 
 ### Example:
 
-In this example two things (`df88accd-dd43-4ff1-820e-82f75be13013`, shortened 64-bit: `df88accd`; and, `344d4c22-546c-4940-bdc4-c2a4371a29ac`, `344d4c22`) are in the same universe and have never met each other before. Both parties are shy and appear to be primitive...
+In this example two things (`df88accd-dd43-4ff1-820e-82f75be13013`, shortened 64-bit: `df88accd`; and, `344d4c22-546c-4940-bdc4-c2a4371a29ac`, `344d4c22`) are in the same universe and have never met each other before. Both parties are shy and appear to be primitive…
 ```mermaid
 sequenceDiagram
 
@@ -280,12 +280,12 @@ call()_as({label})
 Syntax:
 
 ```Diego
-call()_in({uuid1/moniker1},{uuid2/moniker2},...);
-call_human()_in({human_uuid1/human_moniker1},{human_uuid2/human_moniker2},...);
-call_ai()_in({ai_uuid1/ai_moniker1},{ai_uuid2/ai_moniker2},...);
-call_robot()_in({robot_uuid1/robot_moniker1},{robot_uuid2/robot_moniker2},...);
-call_thing()_in({thing_uuid1/thing_moniker1},{thing_uuid2/thing_moniker2},...);
-call_console()_in({console_uuid1/console_moniker1},{console_uuid2/console_moniker2},...);
+call()_in({uuid1/moniker1},{uuid2/moniker2},…);
+call_human()_in({human_uuid1/human_moniker1},{human_uuid2/human_moniker2},…);
+call_ai()_in({ai_uuid1/ai_moniker1},{ai_uuid2/ai_moniker2},…);
+call_robot()_in({robot_uuid1/robot_moniker1},{robot_uuid2/robot_moniker2},…);
+call_thing()_in({thing_uuid1/thing_moniker1},{thing_uuid2/thing_moniker2},…);
+call_console()_in({console_uuid1/console_moniker1},{console_uuid2/console_moniker2},…);
 
 call()_asin({label1},{label2});
 ```
@@ -404,12 +404,12 @@ call()_as({label})
 Syntax:
 
 ```Diego
-call()_in({uuid1/moniker1},{uuid2/moniker2},...);
-call_human()_in({human_uuid1/human_moniker1},{human_uuid2/human_moniker2},...);
-call_ai()_in({ai_uuid1/ai_moniker1},{ai_uuid2/ai_moniker2},...);
-call_robot()_in({robot_uuid1/robot_moniker1},{robot_uuid2/robot_moniker2},...);
-call_thing()_in({thing_uuid1/thing_moniker1},{thing_uuid2/thing_moniker2},...);
-call_console()_in({console_uuid1/console_moniker1},{console_uuid2/console_moniker2},...);
+call()_in({uuid1/moniker1},{uuid2/moniker2},…);
+call_human()_in({human_uuid1/human_moniker1},{human_uuid2/human_moniker2},…);
+call_ai()_in({ai_uuid1/ai_moniker1},{ai_uuid2/ai_moniker2},…);
+call_robot()_in({robot_uuid1/robot_moniker1},{robot_uuid2/robot_moniker2},…);
+call_thing()_in({thing_uuid1/thing_moniker1},{thing_uuid2/thing_moniker2},…);
+call_console()_in({console_uuid1/console_moniker1},{console_uuid2/console_moniker2},…);
 
 call()_asin({label1},{label2});
 ```

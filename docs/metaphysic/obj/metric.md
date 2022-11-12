@@ -5,14 +5,14 @@
 add_metric({name/uuid})
 	_scalar({scalar}[, {unit}])
 	_unit({unit})
-	_for({name/uuid_1}[, ...{name/uuid_n}])
+	_for({name/uuid_1}[, …{name/uuid_n}])
 	_pulse()
 	_tracker()
 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `add_metric(`*`moniker`*`)`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `add_metric(`*`moniker`*`)_set(...)`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `set_metric(`*`moniker`*`,settings...)`<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `add_metric(`*`moniker`*`)_set(…)`<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `set_metric(`*`moniker`*`,settings…)`<br>
 
 ## Properties
 

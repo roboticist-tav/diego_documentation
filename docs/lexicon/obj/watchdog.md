@@ -276,4 +276,4 @@ y = (3*0)+(5*1)+(2*0.2) = 5.4
 z = (3*0)+(5*0)+(2*1) = 2
 4,5.4,2
 
-robot ... _config(humanoid|quad)
+robot … _config(humanoid|quad)

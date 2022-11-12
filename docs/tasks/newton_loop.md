@@ -5,7 +5,7 @@ The persian chain is a baton movement of three agents on an infinite repeating l
 
 ## Namespace
 
-We are going to use common names, so we need to set up a namespace...
+We are going to use common names, so we need to set up a namespace…
 
 ```Diego
 use_namespace(persian_chain_demo);
@@ -23,7 +23,7 @@ add_robot(pe)_type(drone);
 
 ## A Brave New World
 
-So first we are going to start setting up the physical world...
+So first we are going to start setting up the physical world…
 
 ```Deigo
 
@@ -74,7 +74,7 @@ We execute the instruction immediately.
 
 ## There is a Beginning to Everything
 
-To start the Persian Chain we need one active agent and two loitering agents. We also have starting positions. `alif` will be the first active agent starting at waypoint `x9` to go along rosary `perimeter_cc` (on route `perimeter`), `be` and `pe` be will be the loitering agents, and they will loiter around waypoints `x5` and `x6` respectively...
+To start the Persian Chain we need one active agent and two loitering agents. We also have starting positions. `alif` will be the first active agent starting at waypoint `x9` to go along rosary `perimeter_cc` (on route `perimeter`), `be` and `pe` be will be the loitering agents, and they will loiter around waypoints `x5` and `x6` respectively…
 
 ```Diego
 
@@ -98,7 +98,7 @@ We do not want to execute instruction `persian_chain_starting_positions` yet as 
 
 ## Active Agent
 
-In the Persian Chain Movement the active agent scouts around the route from a starting position to an ending position. When it arrives penultimate to its ending position, it has to inform the others...
+In the Persian Chain Movement the active agent scouts around the route from a starting position to an ending position. When it arrives penultimate to its ending position, it has to inform the others…
 
 ```Diego
 // Activate the active_agent to go on route `perimeter`
@@ -127,12 +127,12 @@ end_instruct(activate_agent);
 > `with_robot(active_agent)_sobriquet(loiterer) ? : ;`
 >> When all has been done `active_agent` becomes a `loiterer`.
 
-> ...`wtf()`
+> …`wtf()`
 >> Throughout this code black when the fickle finger of fate is at work, the *'where's the fire'* `_wtf()` is called to handle anything that's flung its way.  We will try and handle any known-knowns that could come our way later.
 
 ## Loiter Agent
 
-So, above, we provided the 'activate_agent' instruction, now we need to build the instruction for `loiterise_agent`...
+So, above, we provided the 'activate_agent' instruction, now we need to build the instruction for `loiterise_agent`…
 
 ```Diego
 begin_instruct(loiterise_agent)_for(loiterer);
@@ -148,7 +148,7 @@ The default loitering parameters have been previously _drilled into_ these drone
 
 ## Chain Reactions
 
-Now the cornerstone of the Persian Chain Movement is to chain reaction, which occurs just before the `active_agent` arrives at it's endpoint on rosary `perimeter_cc`.  The chain reaction is tiggered by the `active_agent` drone executing the `start_persian_chain` instruct...
+Now the cornerstone of the Persian Chain Movement is to chain reaction, which occurs just before the `active_agent` arrives at it's endpoint on rosary `perimeter_cc`.  The chain reaction is tiggered by the `active_agent` drone executing the `start_persian_chain` instruct…
 
 ```Diego
 begin_instruct(start_persian_chain)_for(loiterer);

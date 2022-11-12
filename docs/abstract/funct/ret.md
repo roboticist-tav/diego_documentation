@@ -5,8 +5,8 @@ The return function (`return`, or shortened as `ret`) returns the output of the 
 The `ret` function comes in two forms: an expression, returning the result of the expression (and any porceeding *object* output) and returning the result to the preceding *object*. The other form is as a gate passing the result of the proceeding *objects* to the preceding *objects*, with no interfering expression.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<object>`*`_ret(`*`expression`*`);`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<object>`*`_ret(`*`expression`*`)_`*`....`*`;`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<object>`*`_ret()_`*`....`*`;`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<object>`*`_ret(`*`expression`*`)_`*`….`*`;`<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<object>`*`_ret()_`*`….`*`;`
 
 
 # Example

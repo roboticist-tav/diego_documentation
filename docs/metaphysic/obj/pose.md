@@ -18,7 +18,7 @@ The default declaration of the `pose` object is to at least provide a *moniker*,
 | *Orientation* |
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;` add_posepoint(`*`moniker`*`);`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;` add_pose(`*`moniker1`*`, `*`moniker2`*`,...);`<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;` add_pose(`*`moniker1`*`, `*`moniker2`*`,…);`<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;` add_pose(`*`moniker`*`)_orientat(`*`x`*`,`*`y`*`,`*`z`*`);`<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;` add_pose(`*`moniker`*`)_orientat(`*`x`*`,`*`y`*`,`*`z`*`,`*`w`*`);`<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;` add_pose(`*`moniker`*`)_orientat({`*`order`*`},`*`x`*`,`*`y`*`,`*`z`*`,`*`w`*`);`<br>
@@ -46,20 +46,20 @@ A `pose` is not complete unless it has a `waypoint` child or a declared waypoint
 ## Referencing & Assignment
 Referencing a `pose` is achieved with the `with` verb, or the shortened `(`*`moniker`*`)` syntax. The `with_pose` (or expanded `with_posepoint`) command can be expanded to create multiple `poses`s using a coma-spearated list of *`moniker`* s and mutliple `_orientat` posits. The position in the *`moniker`* list corresponds to the same order of appended `_orientat` posits. 
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;` with_pose(`*`moniker1`*`, `*`moniker2`*`,...)_orientat(`*`x`*`,`*`y`*`,`*`z`*`,`*`w`*`)_orientat(`*`x`*`,`*`y`*`,`*`z`*`,`*`w`*`)...`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;` with_pose(`*`moniker1`*`, `*`moniker2`*`,…)_orientat(`*`x`*`,`*`y`*`,`*`z`*`,`*`w`*`)_orientat(`*`x`*`,`*`y`*`,`*`z`*`,`*`w`*`)…`
 
-For easy of reading for humans, either a `beginwith ... endwith` syntax, or a nested statement approach can be taken.
+For easy of reading for humans, either a `beginwith … endwith` syntax, or a nested statement approach can be taken.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `beginwith_pose(`*`moniker1`*`, `*`moniker2`*`,...);`<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `beginwith_pose(`*`moniker1`*`, `*`moniker2`*`,…);`<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `(`*`moniker1`*`)_orientat(`*`x`*`,`*`y`*`,`*`z`*`);`<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `(`*`moniker2`*`)_orientat(`*`x`*`,`*`y`*`,`*`z`*`,`*`w`*`);`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`...`*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`…`*<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `endwith_wp();`
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `with_pose(`*`moniker1`*`, `*`moniker2`*`,...)`<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `with_pose(`*`moniker1`*`, `*`moniker2`*`,…)`<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `(`*`moniker1`*`)_orientat(`*`x`*`,`*`y`*`,`*`z`*`);`<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `(`*`moniker2`*`)_orientat(`*`x`*`,`*`y`*`,`*`z`*`,`*`w`*`);`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`...`*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`…`*<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `;`
 
 ## Casting

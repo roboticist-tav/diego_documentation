@@ -1,0 +1,2 @@
+# Internet Protocol Address (property) | Ingress Protection (property)
+The `{ip}` property represents two different properties, only differentiated by context. The IP [Internet Protocol] address is a property of the `id` *object* and uses `{ip}` property definition.  The Ingress Protection rating is a type property of the `spec`ification *object*.

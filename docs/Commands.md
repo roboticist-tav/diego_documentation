@@ -120,11 +120,11 @@ We create a simple ```instruct``` using ```begin_instruct(out of the box allocat
 
 The ```keep_listening()``` command will keep each robot waiting for a _point call_, and prevent the ```end_instruct``` command from executing and finishing the '*out of the box allocation*' ```instruct``` prematurely.
 
-Meanwhile, in the real physical world, Bob has a tablet computer connected to the swarm network and through his GUI calls each robot by name using the ```call_point``` command, first for ```alif``` robot...
+Meanwhile, in the real physical world, Bob has a tablet computer connected to the swarm network and through his GUI calls each robot by name using the ```call_point``` command, first for ```alif``` robot…
 ```diego
 call_point(factory 1)_for(alif)
 ``` 
-... and then for the other robots...
+… and then for the other robots…
 
 If at this point Bob had sent ```call_point(factory 1)``` with no ````_for```` sub command, all the robots would execute the  '*out of the box allocation*' ```instruct``` at the same time.  This would not cause a problem as each robot has good manners and will and give way to each other, or at least inform the human(s) (that's ```bob```) of their predicament.
 
@@ -171,7 +171,7 @@ end_instruct(supply to factory 2)
 start_instruct(out of the box allocation)_asvirgin();
 ```
 ddd
-...
+…
 ```call_point(factory 1)_for(alif)```
 
 

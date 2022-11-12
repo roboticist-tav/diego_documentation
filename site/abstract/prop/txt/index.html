@@ -1030,18 +1030,18 @@
 <h2 id="declaration">Declaration</h2>
 <p>Although the most common use of the <code>txt</code> expression is via a posit, it can be declared using the <code>add_</code> verb (or shortened <code>+_</code>). Since the <code>txt</code> <em>object</em> is expressive the be expression brackets (<code>⟦⟧</code>) or double square brackets (<code>[[]]</code>) can be used directly, i.e. in place of the brackets (<code>()</code>). Multiple <code>txt</code>s are declared using a coma-separated list of <em><code>moniker</code></em> s.  If a moniker is used with an expression, the expression must be enclosed in expression brackets (<code>⟦⟧</code>) or double square brackets (<code>[[]]</code>).</p>
 <p>       <code>add_text(</code><em><code>moniker</code></em><code>);</code><br/>
-       <code>add_txt(</code><em><code>moniker1</code></em><code>,</code><em><code>moniker2</code></em><code>,</code><em><code>...</code></em><code>);</code><br/>
+       <code>add_txt(</code><em><code>moniker1</code></em><code>,</code><em><code>moniker2</code></em><code>,</code><em><code>…</code></em><code>);</code><br/>
        <code>+_txt⟦</code><em><code>expression</code></em><code>⟧;</code><br/>
-       <code>+_txt(⟦</code><em><code>expression1</code></em><code>⟧,⟦</code><em><code>expression2</code></em><code>⟧,⟦</code><em><code>...</code></em><code>⟧);</code><br/>
+       <code>+_txt(⟦</code><em><code>expression1</code></em><code>⟧,⟦</code><em><code>expression2</code></em><code>⟧,⟦</code><em><code>…</code></em><code>⟧);</code><br/>
        <code>+_txt(</code><em><code>moniker</code></em><code>,⟦</code><em><code>expression</code></em><code>⟧);</code><br/>
-       <code>+_txt(</code><em><code>moniker1</code></em><code>,⟦</code><em><code>expression1</code></em><code>⟧,</code><em><code>moniker2</code></em><code>,⟦</code><em><code>expression2</code></em><code>⟧,</code><em><code>moniker...</code></em><code>,⟦</code><em><code>expression...</code></em><code>⟧);</code></p>
+       <code>+_txt(</code><em><code>moniker1</code></em><code>,⟦</code><em><code>expression1</code></em><code>⟧,</code><em><code>moniker2</code></em><code>,⟦</code><em><code>expression2</code></em><code>⟧,</code><em><code>moniker…</code></em><code>,⟦</code><em><code>expression…</code></em><code>⟧);</code></p>
 <p>The common declaration of the <code>txt</code> object is via posit syntax.</p>
 <p>       <em><code>&lt;object&gt;</code></em><code>_text(</code><em><code>moniker</code></em><code>);</code><br/>
-       <em><code>&lt;object&gt;</code></em><code>_txt(</code><em><code>moniker1</code></em><code>,</code><em><code>moniker2</code></em><code>,</code><em><code>...</code></em><code>);</code><br/>
+       <em><code>&lt;object&gt;</code></em><code>_txt(</code><em><code>moniker1</code></em><code>,</code><em><code>moniker2</code></em><code>,</code><em><code>…</code></em><code>);</code><br/>
        <em><code>&lt;object&gt;</code></em><code>_txt⟦</code><em><code>expression</code></em><code>⟧;</code><br/>
-       <em><code>&lt;object&gt;</code></em><code>_txt(⟦</code><em><code>expression1</code></em><code>⟧,⟦</code><em><code>expression2</code></em><code>⟧,⟦</code><em><code>...</code></em><code>⟧);</code><br/>
+       <em><code>&lt;object&gt;</code></em><code>_txt(⟦</code><em><code>expression1</code></em><code>⟧,⟦</code><em><code>expression2</code></em><code>⟧,⟦</code><em><code>…</code></em><code>⟧);</code><br/>
        <em><code>&lt;object&gt;</code></em><code>_txt(</code><em><code>moniker</code></em><code>,⟦</code><em><code>expression</code></em><code>⟧);</code><br/>
-       <em><code>&lt;object&gt;</code></em><code>_txt(</code><em><code>moniker1</code></em><code>,⟦</code><em><code>expression1</code></em><code>⟧,</code><em><code>moniker2</code></em><code>,⟦</code><em><code>expression2</code></em><code>⟧,</code><em><code>moniker...</code></em><code>,⟦</code><em><code>expression...</code></em><code>⟧);</code></p>
+       <em><code>&lt;object&gt;</code></em><code>_txt(</code><em><code>moniker1</code></em><code>,⟦</code><em><code>expression1</code></em><code>⟧,</code><em><code>moniker2</code></em><code>,⟦</code><em><code>expression2</code></em><code>⟧,</code><em><code>moniker…</code></em><code>,⟦</code><em><code>expression…</code></em><code>⟧);</code></p>
 <p><a name="reference"></a></p>
 <h2 id="referencing">Referencing</h2>
 <p>Referencing a <code>txt</code> <em>object</em> is achieved with the <code>with</code> verb (or shortened <code>&gt;_</code>), or the shortened <code>(</code><em><code>text_moniker</code></em><code>)</code> syntax. </p>
@@ -1066,47 +1066,47 @@ _unit()</p>
 </thead>
 <tbody>
 <tr>
-<td><a name="[]"></a> <em><code>...</code></em><code>[</code><em><code>variable_moniker</code></em><code>]</code><em><code>...</code></em></td>
+<td><a name="[]"></a> <em><code>…</code></em><code>[</code><em><code>variable_moniker</code></em><code>]</code><em><code>…</code></em></td>
 <td>Variable call.</td>
 <td><a href="../special/var.md">variable</a></td>
 </tr>
 <tr>
-<td><a name="{}"></a> <em><code>...</code></em><code>{</code><em><code>object_moniker</code></em><code>}</code><em><code>...</code></em>   <em><code>...</code></em><code>{</code><em><code>object_moniker</code></em><code>.</code><em><code>child_object_moniker</code></em><code>}</code><em><code>...</code></em>   <em><code>...</code></em><code>{</code><em><code>object_moniker</code></em><code>.</code><em><code>child_object_moniker</code></em><code>.</code><em><code>property_moniker</code></em><code>}</code><em><code>...</code></em></td>
+<td><a name="{}"></a> <em><code>…</code></em><code>{</code><em><code>object_moniker</code></em><code>}</code><em><code>…</code></em>   <em><code>…</code></em><code>{</code><em><code>object_moniker</code></em><code>.</code><em><code>child_object_moniker</code></em><code>}</code><em><code>…</code></em>   <em><code>…</code></em><code>{</code><em><code>object_moniker</code></em><code>.</code><em><code>child_object_moniker</code></em><code>.</code><em><code>property_moniker</code></em><code>}</code><em><code>…</code></em></td>
 <td>Object call.</td>
 <td><a href="./obj/object.md">object</a></td>
 </tr>
 <tr>
-<td><a name="_r"></a> <em><code>...</code></em><code>\n</code><em><code>...</code></em></td>
+<td><a name="_r"></a> <em><code>…</code></em><code>\n</code><em><code>…</code></em></td>
 <td>New line.</td>
 <td><a href="/md"></a></td>
 </tr>
 <tr>
-<td><a name="_n"></a> <em><code>...</code></em><code>\r</code><em><code>...</code></em></td>
+<td><a name="_n"></a> <em><code>…</code></em><code>\r</code><em><code>…</code></em></td>
 <td>Carriage return.</td>
 <td><a href="/md"></a></td>
 </tr>
 <tr>
-<td><a name="emoji"></a> <em><code>...</code></em><code>:</code><em><code>emoji_moniker</code></em><code>:</code><em><code>...</code></em></td>
+<td><a name="emoji"></a> <em><code>…</code></em><code>:</code><em><code>emoji_moniker</code></em><code>:</code><em><code>…</code></em></td>
 <td>Emoji.</td>
 <td><a href="../special/emoji.md">emoji</a></td>
 </tr>
 <tr>
-<td><a name=""></a> <em><code>...</code></em><code>$</code><em><code>math_sub-expression</code></em><code>$</code><em><code>...</code></em></td>
+<td><a name=""></a> <em><code>…</code></em><code>$</code><em><code>math_sub-expression</code></em><code>$</code><em><code>…</code></em></td>
 <td>Maths.</td>
 <td><a href="../funct/math.md">math</a></td>
 </tr>
 <tr>
-<td><a name=""></a> <em><code>...</code></em><code></code><em><code>...</code></em></td>
+<td><a name=""></a> <em><code>…</code></em><code></code><em><code>…</code></em></td>
 <td>.</td>
 <td><a href="/md"></a></td>
 </tr>
 <tr>
-<td><a name=""></a> <em><code>...</code></em><code></code><em><code>...</code></em></td>
+<td><a name=""></a> <em><code>…</code></em><code></code><em><code>…</code></em></td>
 <td>.</td>
 <td><a href="/md"></a></td>
 </tr>
 <tr>
-<td><a name=""></a> <em><code>...</code></em><code></code><em><code>...</code></em></td>
+<td><a name=""></a> <em><code>…</code></em><code></code><em><code>…</code></em></td>
 <td>.</td>
 <td><a href="/md"></a></td>
 </tr>

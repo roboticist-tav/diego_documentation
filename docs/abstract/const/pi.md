@@ -6,7 +6,7 @@ To provide a pi, use the `pi()` posit or (`π` or `𝛑` or `𝜋` or `𝝅` or 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `_pi()`<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `_pi(`*`decimal_places`*`)`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<expression_posit>`*`(`*`...`*`π`*`...`*`);`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<expression_posit>`*`(`*`…`*`π`*`…`*`);`
 
 ## Example
 The following function returns e:

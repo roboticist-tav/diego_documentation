@@ -16,9 +16,9 @@ Enumerators can be declared using the `add_` verb (or shortened `+_`), with or w
 
 
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `+_calc(⟦`*`expression1`*`⟧,⟦`*`expression2`*`⟧,⟦`*`...`*`⟧);`<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `+_calc(⟦`*`expression1`*`⟧,⟦`*`expression2`*`⟧,⟦`*`…`*`⟧);`<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `+_calc(`*`moniker`*`,⟦`*`expression`*`⟧);`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `+_calc(`*`moniker1`*`,⟦`*`expression1`*`⟧,`*`moniker2`*`,⟦`*`expression2`*`⟧,`*`moniker...`*`,⟦`*`expression...`*`⟧);`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `+_calc(`*`moniker1`*`,⟦`*`expression1`*`⟧,`*`moniker2`*`,⟦`*`expression2`*`⟧,`*`moniker…`*`,⟦`*`expression…`*`⟧);`
 
   If a moniker is used with an expression, the expression must be enclosed in expression brackets (`⟦⟧`) or double square brackets (`[[]]`).
 

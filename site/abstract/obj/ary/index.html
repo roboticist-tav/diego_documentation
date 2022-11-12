@@ -1035,12 +1035,12 @@
 <p>       <code>add_ary(</code><em><code>moniker</code></em><code>)_base(</code><em><code>numbase</code></em><code>);</code></p>
 <p>Assignment of array is allowed at declaration, initialisation, and post-declaration. The <code>_value</code>, and, <code>_set</code> posits are used for assignment, their equivalent syntax, <code>_values</code>, <code>_v</code> are identical and can be used freely and interchangeably. The <code>set_</code> verb can also be used to the same effect as the <code>_set</code> posit.</p>
 <p>       <code>add_ary(</code><em><code>moniker</code></em><code>)_value(</code><em><code>val</code></em><code>)</code><br/>
-       <code>with_array(</code><em><code>moniker</code></em><code>)_values(</code><em><code>val1</code></em><code>,</code><em><code>val2</code></em><code>,</code><em><code>...</code></em><code>)</code><br/>
-       <code>(</code><em><code>arraymoniker</code></em><code>)_set(</code><em><code>val1</code></em><code>,</code><em><code>val2</code></em><code>,</code><em><code>...</code></em><code>)</code><br/>
-       <code>set_ary(</code><em><code>moniker</code></em><code>,</code><em><code>val1</code></em><code>,</code><em><code>val2</code></em><code>,</code><em><code>...</code></em><code>)</code></p>
+       <code>with_array(</code><em><code>moniker</code></em><code>)_values(</code><em><code>val1</code></em><code>,</code><em><code>val2</code></em><code>,</code><em><code>…</code></em><code>)</code><br/>
+       <code>(</code><em><code>arraymoniker</code></em><code>)_set(</code><em><code>val1</code></em><code>,</code><em><code>val2</code></em><code>,</code><em><code>…</code></em><code>)</code><br/>
+       <code>set_ary(</code><em><code>moniker</code></em><code>,</code><em><code>val1</code></em><code>,</code><em><code>val2</code></em><code>,</code><em><code>…</code></em><code>)</code></p>
 <p>Values can be assigned at different indexes using the <code>_at</code> posit.</p>
 <p>       <code>with_ary(</code><em><code>moniker</code></em><code>)_at(</code><em><code>index</code></em><code>)_v(</code><em><code>val</code></em><code>)</code></p>
-<p>Arrays have various properties and methods...</p>
+<p>Arrays have various properties and methods…</p>
 <h2 id="posits">Posits</h2>
 <table>
 <thead>
@@ -1067,7 +1067,7 @@
 <td>Merges array <em>arymoniker</em> with preceeding <em>objects</em> (<em>arrays</em>)</td>
 </tr>
 <tr>
-<td><a name="concat_c"></a> <code>_concat(</code><em><code>arymoniker1</code></em><code>,</code><em><code>arymoniker1</code></em><code>,</code><em><code>...</code></em><code>)</code><br/><code>_concatenate(</code><em><code>arymoniker1</code></em><code>,</code><em><code>arymoniker1</code></em><code>,</code><em><code>...</code></em><code>)</code></td>
+<td><a name="concat_c"></a> <code>_concat(</code><em><code>arymoniker1</code></em><code>,</code><em><code>arymoniker1</code></em><code>,</code><em><code>…</code></em><code>)</code><br/><code>_concatenate(</code><em><code>arymoniker1</code></em><code>,</code><em><code>arymoniker1</code></em><code>,</code><em><code>…</code></em><code>)</code></td>
 <td>Merges arrays <em>arymonikers</em> with preceeding <em>objects</em> (<em>arrays</em>)</td>
 </tr>
 <tr>
@@ -1087,7 +1087,7 @@
 <td>Cast / convert proceeding <em>objects</em> (<em>arrays</em>)</td>
 </tr>
 <tr>
-<td><a name="len_a"></a> <code>add</code><em><code>&lt;...&gt;</code></em><code>_len(</code><em><code>length</code></em><code>)</code><br/><code>add</code><em><code>&lt;...&gt;</code></em><code>_length(</code><em><code>length</code></em><code>)</code></td>
+<td><a name="len_a"></a> <code>add</code><em><code>&lt;…&gt;</code></em><code>_len(</code><em><code>length</code></em><code>)</code><br/><code>add</code><em><code>&lt;…&gt;</code></em><code>_length(</code><em><code>length</code></em><code>)</code></td>
 <td>Sets the number of elements in the array at declaration</td>
 </tr>
 <tr>
@@ -1131,7 +1131,7 @@ add_ary(myStringArray)_value(Item1,Item2);   // '_array' can be shortened to '_a
 <p>// Assign a value to member [2]
 with_ary(myChangeArray)_at(2)_v(5);    // '_value' can be shortened to '_v'</p>
 <p>// Add a member to an array with the push function (defaulted at end), length increased by one
-[myExpandedArray]_push()_v(9);    // 'with_ary(...)' can be shortened to '[...]'
+[myExpandedArray]_push()_v(9);    // 'with_ary(…)' can be shortened to '[…]'
 [myExpandedArray]_append()_v(9);</p>
 <p>// Add a member to an array with the push function (at a location), length increased by one
 [myExpandedArray]_pushat(3)_v(8);</p>
@@ -1176,19 +1176,19 @@ add_matirx(myMatrix)_subs(5, 4);  // check or set major order first</p>
 add_matrix(myMatrix)_rows(5)_columns(4)_subs(6)_subs(8);
 add_mat(myMatrix)_subs(5, 4, 6, 8);  // check or set major order first, '_matrix' can be shortened to 'mat'</p>
 <p>// Create a 4 x 4 identiy matrix:
-add_mat(myIdentityMatrix)_subs(4, 4)_identity();    // ...or...</p>
+add_mat(myIdentityMatrix)_subs(4, 4)_identity();    // …or…</p>
 <p>add_mat(myMorphedMatrix)_subs(4, 4)
 with_mat(myMorphedMatrix)_trans(morph)_identity();   // More transformations available</p>
 <p>// Assign a value to member [2,4]
-with_mat(myMatrix)_row(2)_col(4)_value(5);    // ...or...
+with_mat(myMatrix)_row(2)_col(4)_value(5);    // …or…
 with_mat(myMatrix)_at(2, 4)_v(5);    // check or set major order first</p>
 <p>// Add a member(s) to a matrix using push functions is available
 // Remove a member(s) from a matrix with the pop functions is available
 // Swap a member(s) in a matrix with the swap functions is available</p>
 <p>// Rectiline a single member in a three-dimensional matrix
-[MyWobbleMatrix]_rectilat()_row(3)_col(3)_sub(3)_rectilto()_row(-1)_col(1)_sub(0);    // ...or...
-[MyWobbleMatrix]_rectilat(3, 3, 3)_rectilto(-1, 1, 0);    // check or set major order first, ...or...
-[MyWobbleMatrix]_rectilat(3, 3, 3)_rectilleft(1)_rectilup(1);    / check or set hand-rule, ...or...</p>
+[MyWobbleMatrix]_rectilat()_row(3)_col(3)_sub(3)_rectilto()_row(-1)_col(1)_sub(0);    // …or…
+[MyWobbleMatrix]_rectilat(3, 3, 3)_rectilto(-1, 1, 0);    // check or set major order first, …or…
+[MyWobbleMatrix]_rectilat(3, 3, 3)_rectilleft(1)_rectilup(1);    / check or set hand-rule, …or…</p>
 <p>// Also 'crab', 'elevate', 'slide' and 'pump' movements are available
 // Also 'row', 'pitch', and 'yaw' movements are available
 // Also, quaternions calculations are available

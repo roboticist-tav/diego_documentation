@@ -20,7 +20,7 @@ In the 'Genera of Thingies' the `thingy` *object* is the top most representation
     ject --> subject{{subject}}
     ject --> mech{{mech}}
 ```
-<div style="text-align: right"><sub>Genera of Thingy Sub-Types | Organic Types</sub></div>
+<div style="text-align: right"><sub>Genera of Thingy Sub-Types</sub></div>
 
 ## Declaration
 The default declaration of the `thingy` *object* is to at least provide a *moniker*. A type can be provided at declaration using curly brackets (`{}`).  The four derived *objects* can be declared by name.
@@ -51,7 +51,7 @@ The [*types*](../../metaphysic/prop/type.md#thingy) of `thingy` are those *objec
 | --- | --- | --- | ---|
 | <a name="_human"></a> `{human}` | :: | A representation of a human being, present and alive in the physical 'real' world.  | [human](./human.md#thingy) |
 | <a name="_organic"></a> `{organic}` &nbsp; `{org}` &nbsp; `{organism}` | :: | Representation of a non-human being, present and alive in the physical 'real' world. | [organic](./organic.md#thingy) |
-| <a name="_robot"></a> `{robot}` | :: | Representation of a self-propelled thingy in the physical 'real' world. | [robot](./robot.md#thingy) |
+| <a name="_robot"></a> `{robot}` | 🤖 | Representation of a self-propelled thingy in the physical 'real' world. | [robot](./robot.md#thingy) |
 | <a name="_thing"></a> `{thing}` | :: | An immobile thingy in the physical 'real' world, such as a thing in IoT. | [thing](./thing.md#thingy) |
 
 ## Posits

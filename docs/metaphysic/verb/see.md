@@ -16,7 +16,7 @@ see_oranig
 
 ### Example:
 
-In this example two things (`df88accd-dd43-4ff1-820e-82f75be13013`, shortened 64-bit: `df88accd`; and, `344d4c22-546c-4940-bdc4-c2a4371a29ac`, `344d4c22`) are in the same universe and have never met each other before. Both parties are shy and appear to be primitive...
+In this example two things (`df88accd-dd43-4ff1-820e-82f75be13013`, shortened 64-bit: `df88accd`; and, `344d4c22-546c-4940-bdc4-c2a4371a29ac`, `344d4c22`) are in the same universe and have never met each other before. Both parties are shy and appear to be primitive…
 ```mermaid
 sequenceDiagram
 
@@ -82,12 +82,12 @@ call()_as({label})
 Syntax:
 
 ```Diego
-call()_in({uuid1/moniker1},{uuid2/moniker2},...);
-call_human()_in({human_uuid1/human_moniker1},{human_uuid2/human_moniker2},...);
-call_ai()_in({ai_uuid1/ai_moniker1},{ai_uuid2/ai_moniker2},...);
-call_robot()_in({robot_uuid1/robot_moniker1},{robot_uuid2/robot_moniker2},...);
-call_thing()_in({thing_uuid1/thing_moniker1},{thing_uuid2/thing_moniker2},...);
-call_console()_in({console_uuid1/console_moniker1},{console_uuid2/console_moniker2},...);
+call()_in({uuid1/moniker1},{uuid2/moniker2},…);
+call_human()_in({human_uuid1/human_moniker1},{human_uuid2/human_moniker2},…);
+call_ai()_in({ai_uuid1/ai_moniker1},{ai_uuid2/ai_moniker2},…);
+call_robot()_in({robot_uuid1/robot_moniker1},{robot_uuid2/robot_moniker2},…);
+call_thing()_in({thing_uuid1/thing_moniker1},{thing_uuid2/thing_moniker2},…);
+call_console()_in({console_uuid1/console_moniker1},{console_uuid2/console_moniker2},…);
 
 call()_asin({label1},{label2});
 ```

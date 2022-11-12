@@ -24,18 +24,18 @@ Referencing a `kiwifruit` organic *object* is achieved with the `with` verb (or 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `with_organic(`*`kiwifruit_moniker`*`);`<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `>_organic(`*`kiwifruit_moniker`*`);`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `with_organic(`*`kiwifruit_moniker1`*`,`*`kiwifruit_moniker2`*`,`*`...`*`);`<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `with_organic(`*`kiwifruit_moniker1`*`,`*`kiwifruit_moniker2`*`,`*`…`*`);`<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `(`*`kiwifruit_moniker`*`);`
 
 <a name="DDS"></a>
 ## Discernment, Discrimination, and, Swarming
 For discernment of `{kiwifruit}`s, use `🥝` in expressions.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`...`*`⟦`*`...`*`🥝`*`...`*`⟧;`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`…`*`⟦`*`…`*`🥝`*`…`*`⟧;`
 
 Discrimination of `{kiwifruit}`s is possible using the `_oftype` function posit.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`...`*`_oftype{kiwifruit};`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`...`*`_oftype({kiwifruit});`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`…`*`_oftype{kiwifruit};`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`…`*`_oftype({kiwifruit});`
 
 Only collective swarming is available for `{kiwifruit}`.
 
@@ -43,7 +43,7 @@ Only collective swarming is available for `{kiwifruit}`.
 ## Expressions
 The unicode `1F95D` character (`🥝`) is used for `kiwifruit` in expressions.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`...`*`⟦`*`...`*`🥝`*`...`*`⟧;`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`…`*`⟦`*`…`*`🥝`*`…`*`⟧;`
 
 <a name="example"></a>
 ## Examples

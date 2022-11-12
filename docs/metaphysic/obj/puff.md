@@ -105,7 +105,7 @@ Where:
 |---|---|---|
 | `rfid`  | RFID  |
 | `wi_fi` | `4`<br>`5`<br>`6`<br>`7`<br>`halow` | |
-| `lte-m` | `r`... | |
+| `lte-m` | `r`… | |
 | `mythings`
 |  
 
@@ -116,12 +116,12 @@ Google Chat can be hijacked to provide a communication `cloud` to allow `thingy`
 
 As a demonstration/example we have two robots, `alif` and `bahh`.  Each robot knows the credentials (*i.e. where to meet*) of the Google chat room and each others email address.  They are best of friends, _i.e. they know each other_. `alif` will create the `channel` (called _rooms_ in Google Chat) and send an invite to `bahh`.
 
-We will start with `alif`, just going over (for the sake of this demonstration) some _setting-up_ it did as a child...
+We will start with `alif`, just going over (for the sake of this demonstration) some _setting-up_ it did as a child…
 ##### `alif`
 ```Diego
 add_email(alif@diegolang.org)_linkto(google)_me();
 ```
-...and `bahh`...
+…and `bahh`…
 
 ##### `bahh`
 ```Diego
@@ -136,7 +136,7 @@ end_instruct(listen_on_google_chat);
 exec_instruct(listen_on_google)_chat)_me();
 ```
 
-Now `alif` (and `bahh`) have to set-up their Google Chat connectivity as a `cloud`...
+Now `alif` (and `bahh`) have to set-up their Google Chat connectivity as a `cloud`…
 ##### `alif`
 ```Diego
 add_cloud(google_chat)_solut(google_chat)_me();
@@ -147,7 +147,7 @@ with_channel(diego_text_room_001)_invite(bahh);
 ping_thingy()_cloud(google_chat)_thingy();
 pong_robot(alif)_for(bah);
 ```
-...and `bahh`...
+…and `bahh`…
 
 ##### `bahh`
 ```Diego

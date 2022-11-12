@@ -6,7 +6,7 @@ To provide a Euler's constant, use the `e()` posit or `ℇ` in expressions. Opti
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `_e()`<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `_e(`*`decimal_places`*`)`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<expression_posit>`*`(`*`...`*`ℇ`*`...`*`);`<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<expression_posit>`*`(`*`…`*`ℇ`*`…`*`);`<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `_e([`*`variable_name`*`])`<br>
 
 ## Example

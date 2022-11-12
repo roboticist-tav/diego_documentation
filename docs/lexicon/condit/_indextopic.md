@@ -37,10 +37,10 @@ go_robot(teh)_to(waypoint1)_at(11:00)_concomit(dailyRoutine);
 stop_concomit(dailyRoutine);
 start_concomit(dailyRoutine);
 pause_concomit(dailyRoutine);
-resume_concomit(dailyRoutine);  // (or start_...)
+resume_concomit(dailyRoutine);  // (or start_…)
 end_concomit(dailyRoutine);
 ```
-...for more information on concomits see [concomit](/concomit.md).
+…for more information on concomits see [concomit](/concomit.md).
 
 ### `_after`
 The `_after` condit*ion* determines that the preceeding command(s) are executed after (and including) the date|datetime|time matching the given date|datetime|time or date_var|datetime_var|time_var` of the callee.
@@ -71,10 +71,10 @@ go_robot(teh)_to(waypoint1)_after(11:00)_concomit(dailyRoutine);
 stop_concomit(dailyRoutine);
 start_concomit(dailyRoutine);
 pause_concomit(dailyRoutine);
-resume_concomit(dailyRoutine);  // (or start_...)
+resume_concomit(dailyRoutine);  // (or start_…)
 end_concomit(dailyRoutine);
 ```
-...for more information on concomits see [concomit](/concomit.md).
+…for more information on concomits see [concomit](/concomit.md).
 ### `_during`
 ### `_before`
 The `_before` condit*ion* determines that the preceeding command(s) are executed only before (and including) the date|datetime|time matching the given date|datetime|time or date_var|datetime_var|time_var` of the callee.
@@ -115,10 +115,10 @@ go_robot(teh)_to(waypoint1)_before(11:00)_concomit(dailyRoutine);
 stop_concomit(dailyRoutine);
 start_concomit(dailyRoutine);
 pause_concomit(dailyRoutine);
-resume_concomit(dailyRoutine);  // (or start_...)
+resume_concomit(dailyRoutine);  // (or start_…)
 end_concomit(dailyRoutine);
 ```
-...for more information on concomits see [concomit](/concomit.md).
+…for more information on concomits see [concomit](/concomit.md).
 
 
 
@@ -133,7 +133,7 @@ end_concomit(dailyRoutine);
 | `_from(`*`date|datetime|time`*`)_to(`*`date|datetime|time`*`)` | |
 | `_after(`*`date|datetime|time`*`)` | |
 | `_before(`*`date|datetime|time`*`)` | |
-| `_ago(`*`value`*`, `*`unit`*`)` &nbsp; or...<br />`_ago(`*`value`*`)_unit(`*`unit`*`)` | |
+| `_ago(`*`value`*`, `*`unit`*`)` &nbsp; or…<br />`_ago(`*`value`*`)_unit(`*`unit`*`)` | |
 
 
 
@@ -161,7 +161,7 @@ There are sevaral spatial/geo-spatal postposits available.
 or _range({parameter_1})_and({parameter_2}) |                                                       |
 | `_between({parameter_1})_and({parameter_2})`             |                                                       |
 | `_blob({blob_uuid})`                                     |                                                       |
-| `_for({parameter_1}[,... {parameter_n}])`                | Provides focus on `{parameter_1}` ... `{parameter_n)` |
+| `_for({parameter_1}[,… {parameter_n}])`                | Provides focus on `{parameter_1}` … `{parameter_n)` |
 | `_fps({fps})`                                            |                                                       |
 | `_from({date|datetime|time})_to({date|datetime|time})`   |                                                       |
 | `_from({date|datetime|time})`
@@ -205,14 +205,14 @@ Geometric Types
 
 
 ```Diego
-_for({parameter_1},... {parameter_n})					Provides focus on {parameter_1} ... {parameter_n)
+_for({parameter_1},… {parameter_n})					Provides focus on {parameter_1} … {parameter_n)
 _between({parameter_1})_and({parameter_2})				Provides focus from {parameter_1} to {parameter_2} inclusive
 _between({parameter_1})_and({parameter_2})_exclusive()	Provides focus from {parameter_1} to {parameter_2} exclusive
 
 
 label({label});					Caller assigns label {label} to the callee
 label({label})
-	_for({uuid/name}, ...);		Assigns a label {label} to {uuid/name_1} ... {uuid/name_n}
+	_for({uuid/name}, …);		Assigns a label {label} to {uuid/name_1} … {uuid/name_n}
 ping({uuid/name});				Tests of reachability between caller and {uuid/name} callee
 pong({uuid/name}):				Return/result of a ping from caller
 pong({uuid/name})
@@ -255,7 +255,7 @@ tell_energy({energy_value})_unit({unit_of_measure});
 ask_energy({uuid/name});
 
 ask()
-	_for()						_for({uuid/name}, ...);	
+	_for()						_for({uuid/name}, …);	
 
 
 

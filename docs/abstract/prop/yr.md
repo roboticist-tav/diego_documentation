@@ -22,7 +22,7 @@ As the `year` posit with a *`year_value`* parameter to set the temporal year as 
 
 Some *objects* allow for an array of years. To set an array of years, use multiple `year` posits. Alternatively an array can be used to set years in one `year` posit.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<object>`*`_year(`*`{year_value1}`*`)_yr(`*`{year_value2}`*`)_`*`...`*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<object>`*`_year(`*`{year_value1}`*`)_yr(`*`{year_value2}`*`)_`*`…`*<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<object>`*`_year([`*`year_array_moniker`*`]);`<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<object>`*`_yr([`*`year_array_moniker`*`]);`
 
@@ -46,15 +46,15 @@ Numeric Output:
 ## Uniting
 In a similar way to typing, the `year` *property* can also be cast or formatted as a unit.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<object>`*`_`*`<posit>`*`(❬year❭,`*`...`*`);`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<object>`*`_`*`<posit>`*`(❬yr❭,`*`...`*`);`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<object>`*`_`*`<posit>`*`(❬year❭,`*`…`*`);`<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<object>`*`_`*`<posit>`*`(❬yr❭,`*`…`*`);`
 
 <a name="cast"></a>
 ## Casting
 Casting an `year` *property*  requires the `toyear` posit (or shortened `toyr`), both a single year and an array of years.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<object>`*`_toyear(`*`year_value`*`);`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<object>`*`_toyear(`*`{year_value_cast_to1}`*`)_toyr(`*`{year_value_cast_to2}`*`)_`*`...`*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<object>`*`_toyear(`*`{year_value_cast_to1}`*`)_toyr(`*`{year_value_cast_to2}`*`)_`*`…`*<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<object>`*`_toyear([`*`year_array__cast_to_moniker`*`]);`<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<object>`*`_toyr([`*`year_array__cast_to_moniker`*`]);`
 

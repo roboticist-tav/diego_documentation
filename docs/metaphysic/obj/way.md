@@ -13,7 +13,7 @@ The default declaration of the `way` object is to at least provide a *moniker*, 
 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `add_way(`*`moniker`*`);`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `+_way(`*`moniker1`*`, `*`moniker2`*`,...);`<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `+_way(`*`moniker1`*`, `*`moniker2`*`,…);`<br>
 `add_way(`*`way_moniker`*`, `*`way_uuid`*`)`
 `add_way(`*`way_moniker`*`, `*`way_uuid`*`, `*`way_type`*`)`
 human way

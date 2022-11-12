@@ -9,7 +9,7 @@ add_int(integerA)_v(0);
 with_int(integerA)_inc(1);
 // 1
 
-// is identical to...
+// is identical to…
 // with reference with whitespace
 with_int(integerA)
     _inc(1)

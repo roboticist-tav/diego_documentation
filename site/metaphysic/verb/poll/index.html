@@ -1022,7 +1022,7 @@
 <h1 id="pollsters">Pollsters</h1>
 <h2 id="poll_distancemoniker">poll_distance(<em>moniker</em>)</h2>
 <h4 id="poll_distancepoint_moniker">poll_distance(<em>point_moniker</em>)</h4>
-<h4 id="poll_distancepoint_moniker_bydistance_metric">poll_distance(<em>point_moniker</em>)<em>[...]</em>_by(<em>distance_metric</em>)</h4>
+<h4 id="poll_distancepoint_moniker_bydistance_metric">poll_distance(<em>point_moniker</em>)<em>[…]</em>_by(<em>distance_metric</em>)</h4>
 <p>A robot will poll all robots for their distance to <em>point_moniker</em> from their current position.  The additional <em>distance_metric</em> sub command determines the calculation used in the return poll. <em>distance_metric</em> is a enumerator:
 |<code>distance_metric</code>| Description |
 |--|--|
@@ -1050,7 +1050,7 @@ run_poll({poll_name});
 freqent_poll({poll_name})_freq({frequency_millisecs})_until({milliseconds/datetime});
 </code></pre>
 <h3 id="example">Example:</h3>
-<p>In this example three things (<code>df88accd-dd43-4ff1-820e-82f75be13013</code>, shortened 64-bit: <code>df88accd</code>; <code>344d4c22-546c-4940-bdc4-c2a4371a29ac</code>, <code>344d4c22</code>; and, <code>c9477eb6-1328-4c10-8755-913d41a6e0e1</code>, <code>c9477eb6</code> ) are in the same universe; they have all been introduced to each other (i.e. they believe in each others existence and therefore presume each other is listening); they presume they are the only ones left in this universe...</p>
+<p>In this example three things (<code>df88accd-dd43-4ff1-820e-82f75be13013</code>, shortened 64-bit: <code>df88accd</code>; <code>344d4c22-546c-4940-bdc4-c2a4371a29ac</code>, <code>344d4c22</code>; and, <code>c9477eb6-1328-4c10-8755-913d41a6e0e1</code>, <code>c9477eb6</code> ) are in the same universe; they have all been introduced to each other (i.e. they believe in each others existence and therefore presume each other is listening); they presume they are the only ones left in this universe…</p>
 <div class="mermaid">sequenceDiagram
 
     autonumber
@@ -1110,12 +1110,12 @@ call()_as({label})
 </code></pre>
 <h2 id="collection-call">Collection Call</h2>
 <p>Syntax:</p>
-<pre><code class="language-Diego">call()_in({uuid1/moniker1},{uuid2/moniker2},...);
-call_human()_in({human_uuid1/human_moniker1},{human_uuid2/human_moniker2},...);
-call_ai()_in({ai_uuid1/ai_moniker1},{ai_uuid2/ai_moniker2},...);
-call_robot()_in({robot_uuid1/robot_moniker1},{robot_uuid2/robot_moniker2},...);
-call_thing()_in({thing_uuid1/thing_moniker1},{thing_uuid2/thing_moniker2},...);
-call_console()_in({console_uuid1/console_moniker1},{console_uuid2/console_moniker2},...);
+<pre><code class="language-Diego">call()_in({uuid1/moniker1},{uuid2/moniker2},…);
+call_human()_in({human_uuid1/human_moniker1},{human_uuid2/human_moniker2},…);
+call_ai()_in({ai_uuid1/ai_moniker1},{ai_uuid2/ai_moniker2},…);
+call_robot()_in({robot_uuid1/robot_moniker1},{robot_uuid2/robot_moniker2},…);
+call_thing()_in({thing_uuid1/thing_moniker1},{thing_uuid2/thing_moniker2},…);
+call_console()_in({console_uuid1/console_moniker1},{console_uuid2/console_moniker2},…);
 
 call()_asin({label1},{label2});
 </code></pre>

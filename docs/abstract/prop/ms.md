@@ -22,6 +22,6 @@ As the `millisecond` posit with a *`millisecond_value`* parameter to set the tem
 
 Some *objects* allow for an array of milliseconds. To set an array of milliseconds, use multiple `millisecond` posits. Alternatively an array can be used to set seconds in one `millisecond` posit.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<object>`*`_millisecond(`*`{millisecond_value1}`*`)_ms(`*`{millisecond_value2}`*`)_`*`...`*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<object>`*`_millisecond(`*`{millisecond_value1}`*`)_ms(`*`{millisecond_value2}`*`)_`*`…`*<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<object>`*`_millisecond([`*`millisecond_array_moniker`*`]);`<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<object>`*`_ms([`*`millisecond_array_moniker`*`]);`

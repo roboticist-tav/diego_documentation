@@ -20,7 +20,7 @@ Referencing a `vegetable` organic *object* is achieved with the `with` verb (or 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `with_organic(`*`vegetable_moniker`*`);`<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `>_organic(`*`vegetable_moniker`*`);`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `with_organic(`*`vegetable_moniker1`*`,`*`vegetable_moniker2`*`,`*`...`*`);`<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `with_organic(`*`vegetable_moniker1`*`,`*`vegetable_moniker2`*`,`*`…`*`);`<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `(`*`vegetable_moniker`*`);`
 
 <a name="DDS"></a>
@@ -30,7 +30,7 @@ Referencing a `vegetable` organic *object* is achieved with the `with` verb (or 
 ## Expressions
 The unicode `1F372` character (`🍲`) is used for `vegetable` in expressions.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `⟦`*`...`*`🍲`*`...`*`⟧`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `⟦`*`…`*`🍲`*`…`*`⟧`
 
 <a name="example"></a>
 ## Examples

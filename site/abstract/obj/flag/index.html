@@ -1043,18 +1043,18 @@
 <h2 id="declaration-assignment">Declaration &amp; Assignment</h2>
 <p>For quick assignment at declaration, the key values can be omitted, and they will be dynaically created.  Otherwise, provide the key-value pairs using angled brackets for keys (<code>⟪⟫</code>), and expression brackets (<code>⟦⟧</code>) for values. Two patterns can be applied: key-value pairs; or, key-value groups. The key must follow the power of two (<span class="arithmatex">\(2^n\)</span>), starting from one (<code>1</code>).</p>
 <p>       <code>+_flag(</code><em><code>moniker</code></em><code>,⟦</code><em><code>value</code></em><code>⟧);</code><br/>
-       <code>+_flag(</code><em><code>moniker</code></em><code>,⟦</code><em><code>value1</code></em><code>,</code><em><code>value2</code></em><code>,</code><em><code>value...</code></em><code>⟧);</code><br/>
+       <code>+_flag(</code><em><code>moniker</code></em><code>,⟦</code><em><code>value1</code></em><code>,</code><em><code>value2</code></em><code>,</code><em><code>value…</code></em><code>⟧);</code><br/>
        <code>+_flag(</code><em><code>moniker</code></em><code>,⟪1⟫,⟦</code><em><code>value</code></em><code>⟧);</code><br/>
-       <code>+_flag(</code><em><code>moniker</code></em><code>,⟪1,2,4</code><em><code>...</code></em><code>⟫,⟦</code><em><code>value1</code></em><code>,</code><em><code>value2</code></em><code>,</code><em><code>value...</code></em><code>⟧);</code><br/>
-       <code>+_flag(</code><em><code>moniker</code></em><code>,⟪1⟫,⟦</code><em><code>value1</code></em><code>⟧,⟪2⟫,⟦</code><em><code>value2</code></em><code>⟧,⟪4⟫,⟦</code><em><code>value</code></em><code>⟧,</code><em><code>...</code></em><code>);</code></p>
+       <code>+_flag(</code><em><code>moniker</code></em><code>,⟪1,2,4</code><em><code>…</code></em><code>⟫,⟦</code><em><code>value1</code></em><code>,</code><em><code>value2</code></em><code>,</code><em><code>value…</code></em><code>⟧);</code><br/>
+       <code>+_flag(</code><em><code>moniker</code></em><code>,⟪1⟫,⟦</code><em><code>value1</code></em><code>⟧,⟪2⟫,⟦</code><em><code>value2</code></em><code>⟧,⟪4⟫,⟦</code><em><code>value</code></em><code>⟧,</code><em><code>…</code></em><code>);</code></p>
 <p><a name="assign"></a></p>
 <h2 id="assignment">Assignment</h2>
 <p>Assignment after declaration is achieved using the <code>with_</code> verb (or shortened <code>&gt;_</code>).</p>
 <p>       <code>with_flag(</code><em><code>moniker</code></em><code>,⟦</code><em><code>value</code></em><code>⟧);</code><br/>
-       <code>&gt;_flag(</code><em><code>moniker</code></em><code>,⟦</code><em><code>value1</code></em><code>,</code><em><code>value2</code></em><code>,</code><em><code>value...</code></em><code>⟧);</code><br/>
+       <code>&gt;_flag(</code><em><code>moniker</code></em><code>,⟦</code><em><code>value1</code></em><code>,</code><em><code>value2</code></em><code>,</code><em><code>value…</code></em><code>⟧);</code><br/>
        <code>&gt;_flag(</code><em><code>moniker</code></em><code>,⟪1⟫,⟦</code><em><code>value</code></em><code>⟧);</code><br/>
-       <code>&gt;_flag(</code><em><code>moniker</code></em><code>,⟪1,2,4</code><em><code>...</code></em><code>⟫,⟦</code><em><code>value1</code></em><code>,</code><em><code>value2</code></em><code>,</code><em><code>value...</code></em><code>⟧);</code><br/>
-       <code>&gt;_flag(</code><em><code>moniker</code></em><code>,⟪1⟫,⟦</code><em><code>value1</code></em><code>⟧,⟪2⟫,⟦</code><em><code>value2</code></em><code>⟧,⟪4⟫,⟦</code><em><code>value</code></em><code>⟧,</code><em><code>...</code></em><code>);</code></p>
+       <code>&gt;_flag(</code><em><code>moniker</code></em><code>,⟪1,2,4</code><em><code>…</code></em><code>⟫,⟦</code><em><code>value1</code></em><code>,</code><em><code>value2</code></em><code>,</code><em><code>value…</code></em><code>⟧);</code><br/>
+       <code>&gt;_flag(</code><em><code>moniker</code></em><code>,⟪1⟫,⟦</code><em><code>value1</code></em><code>⟧,⟪2⟫,⟦</code><em><code>value2</code></em><code>⟧,⟪4⟫,⟦</code><em><code>value</code></em><code>⟧,</code><em><code>…</code></em><code>);</code></p>
 <p><a name="cast"></a></p>
 <h2 id="casting">Casting</h2>
 <p>The <code>flag</code> <em>object</em> can be safely cast to a <code>enum</code> object. Casting from an <code>enum</code> object to <code>flag</code> object, will re-index the keys, if the key from the <code>enum</code> do not follow power of 2 datatype (<code>⟪{2ⁿ}⟫</code>).</p>

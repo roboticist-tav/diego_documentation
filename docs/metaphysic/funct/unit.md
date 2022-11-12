@@ -36,15 +36,15 @@ Angle brackets (`❬❭`) and the [`_unit`](./unit.md) posit can be used with sh
 
 Casts can be achieved inside *expressions*.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<...>`*`_calc([❬`*`unit`*`❭,`*`variablemoniker`*`])`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<...>`*`_calc(❬`*`unit`*`❭)`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<...>`*`_msg([❬`*`unit`*`❭,`*`variablemoniker`*`])`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<...>`*`_msg(❬`*`unit`*`❭)`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<...>`*`_txt([❬`*`unit`*`❭,`*`variablemoniker`*`])`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<...>`*`_txt(❬`*`unit`*`❭)`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<...>`*`_if([❬`*`unit`*`❭,`*`variablemoniker`*`])`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<...>`*`_if(❬`*`unit`*`❭)`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *etc...*
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<…>`*`_calc([❬`*`unit`*`❭,`*`variablemoniker`*`])`<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<…>`*`_calc(❬`*`unit`*`❭)`<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<…>`*`_msg([❬`*`unit`*`❭,`*`variablemoniker`*`])`<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<…>`*`_msg(❬`*`unit`*`❭)`<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<…>`*`_txt([❬`*`unit`*`❭,`*`variablemoniker`*`])`<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<…>`*`_txt(❬`*`unit`*`❭)`<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<…>`*`_if([❬`*`unit`*`❭,`*`variablemoniker`*`])`<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<…>`*`_if(❬`*`unit`*`❭)`<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *etc…*
 
 ---
 ## References

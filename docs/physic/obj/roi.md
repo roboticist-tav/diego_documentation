@@ -7,11 +7,11 @@ The default declaration of `roi` is to at least provide a *moniker*. However, th
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `add_roi(`*`moniker`*`);`<br><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `add_roi(`*`moniker`*`)_shape(`*`moniker`*`);`<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `add_roi(`*`moniker`*`)_shape({`*`shape`*`},`*`moniker`*`);`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `add_roi(`*`moniker`*`)_shape({`*`shape`*`},`*`x_lat1`*`,`*`y_lng1`*`,`*`x_lat2`*`,`*`y_lng2`*`,`*`...`*`);`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `add_roi(`*`moniker`*`)_shape({`*`shape`*`},`*`[object1]`*`,`*`[object2]`*`,`*`...`*`);`<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `add_roi(`*`moniker`*`)_shape({`*`shape`*`},`*`x_lat1`*`,`*`y_lng1`*`,`*`x_lat2`*`,`*`y_lng2`*`,`*`…`*`);`<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `add_roi(`*`moniker`*`)_shape({`*`shape`*`},`*`[object1]`*`,`*`[object2]`*`,`*`…`*`);`<br><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `add_roi(`*`moniker`*`)_ambit(`*`moniker`*`);`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `add_roi(`*`moniker`*`)_ambit(`*`x_lat1`*`,`*`y_lng1`*`,`*`x_lat2`*`,`*`y_lng2`*`,`*`...`*`);`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `add_roi(`*`moniker`*`)_ambit(`*`[object1]`*`,`*`[object2]`*`,`*`...`*`);`<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `add_roi(`*`moniker`*`)_ambit(`*`x_lat1`*`,`*`y_lng1`*`,`*`x_lat2`*`,`*`y_lng2`*`,`*`…`*`);`<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `add_roi(`*`moniker`*`)_ambit(`*`[object1]`*`,`*`[object2]`*`,`*`…`*`);`<br>
 
 ## Referencing
 Referencing the `roi` *object* is achieved using the verb `with` or  implied with the use of brackets (`()`).

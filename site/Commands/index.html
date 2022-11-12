@@ -1139,10 +1139,10 @@ end_instruct(out of the box allocation);
 <p>The <code>start_instruct(out of the box allocation)_asvirgin()</code> command can be placed in this location (below <code>go_diego</code>), however, it is common practice to place the first <code>start_instruct</code> command at the bottom of the program.  It is really up to the developers preference. The <code>_asvirgin()</code> parameter-less sub command tells the robot to execute the <code>instruct</code> once-only (even if the robot is switched off).<sup id="fnref:switch_off_robot_equals_murder"><a class="footnote-ref" href="#fn:switch_off_robot_equals_murder">1</a></sup></p>
 <p>We create a simple <code>instruct</code> using <code>begin_instruct(out of the box allocation)</code>. The <code>instruct</code> only creates a <em>point listener</em> on <em>factory 1</em> point moniker, using <code>listen_point(factory 1)</code> command.   The <code>listen_point</code> command has a <em>hey_diego</em> command, but no <em>oh_diego</em> command.</p>
 <p>The <code>keep_listening()</code> command will keep each robot waiting for a <em>point call</em>, and prevent the <code>end_instruct</code> command from executing and finishing the '<em>out of the box allocation</em>' <code>instruct</code> prematurely.</p>
-<p>Meanwhile, in the real physical world, Bob has a tablet computer connected to the swarm network and through his GUI calls each robot by name using the <code>call_point</code> command, first for <code>alif</code> robot...</p>
+<p>Meanwhile, in the real physical world, Bob has a tablet computer connected to the swarm network and through his GUI calls each robot by name using the <code>call_point</code> command, first for <code>alif</code> robot…</p>
 <pre><code class="language-diego">call_point(factory 1)_for(alif)
 </code></pre>
-<p>... and then for the other robots...</p>
+<p>… and then for the other robots…</p>
 <p>If at this point Bob had sent <code>call_point(factory 1)</code> with no <code>_for</code> sub command, all the robots would execute the  '<em>out of the box allocation</em>' <code>instruct</code> at the same time.  This would not cause a problem as each robot has good manners and will and give way to each other, or at least inform the human(s) (that's <code>bob</code>) of their predicament.</p>
 <p>When Bob sends the <code>calll_point</code> to <code>alif</code>, <code>alif</code>, the robot, will pick this up at command <code>listen_point(factory 1)</code> and its <em>hey_diego</em> event will be triggered.  Then the <em>program cursor</em> will execute  <code>start_instruct(load at factory 1)</code> .  This will break in the '<em>out of the box allocation</em>' <code>instruct</code> to go on to the '<em>load at factory 1</em>' <code>instruct</code>, marking the <code>instruct</code>s end, which would call the <em>hey_diego</em> event of <code>end_instruct(load at factory 1)</code> (if there was one).</p>
 <blockquote>
@@ -1179,7 +1179,7 @@ end_instruct(supply to factory 2)
 start_instruct(out of the box allocation)_asvirgin();
 </code></pre>
 <p>ddd
-...
+…
 <code>call_point(factory 1)_for(alif)</code></p>
 <blockquote>
 <p>Written with <a href="https://stackedit.io/">StackEdit</a>.</p>

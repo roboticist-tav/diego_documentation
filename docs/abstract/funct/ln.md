@@ -5,7 +5,7 @@ Provides the natural logarithm (in base [e](../const/e.md)) of a number.
 To provide a the natural logarithm of a number use the `ln` posit or `㏒` in expressions.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `_ln(`*`numeric`*`)`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<expression_posit>`*`(`*`...`*`㏒(`*`numeric`*`)`*`...`*`);`<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<expression_posit>`*`(`*`…`*`㏒(`*`numeric`*`)`*`…`*`);`<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `_ln([`*`variable_name`*`])`
 
 ## Example

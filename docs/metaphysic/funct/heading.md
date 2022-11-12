@@ -1,7 +1,7 @@
 # Heading (function)
 The `heading` function provides orientation in the frame of the `map` *object* being referenced.  It is irrespective of the momentum (i.e. 'line of travel') of the moving thingy, and only includes the 'right-hand-rule' pointing to the north pole on the referenced `map` from the centrepoint of the thingy, regardless of the orientation of the thingy to it momentum.
 
-Only measurable values are provided for the `heading` function, for string values (e.g. Norht-West, SW, *etc...*) use [`bearing`](./bearing.md) function.
+Only measurable values are provided for the `heading` function, for string values (e.g. Norht-West, SW, *etc…*) use [`bearing`](./bearing.md) function.
 
 ## Syntax
 Declaration and assignment of *heading* is supplied using only one parameter, show here as *`heading`*. The function will use the provided *heading* for the preceeding object for all its applicable *objects*. The unit can be provided with the heading, using the angle brackets (`❬❭`), however, the units are usally declared with the `map` object. 
@@ -21,7 +21,7 @@ The unit can be provided with the heading, using the angle brackets (`❬❭`), 
 | <a name="❬dm❭"></a> `❬dm❭` | Using degrees and decimal minutes. | [dm](../dt/dm.md) |
 | <a name="❬dms❭"></a> `❬dms❭` | Using degrees, minutes, and, seconds. | [dms](../dt/dms.md) |
 | <a name="❬rad❭"></a> `❬rad❭` | Using radians usually to 6 decimal places, or set with `_precision` posit. | [rad](../dt/rad.md) |
-| <a name="❬si❭"></a> `❬μm❭` &nbsp; `❬mm❭` &nbsp; `❬cm❭` &nbsp; `❬dm❭`<br>`❬m❭`<br>`❬dam❭` &nbsp; `❬hm❭` &nbsp; `❬km❭` *etc...*  | Using SI length units. | [SI](../dt/si.md#length) |
+| <a name="❬si❭"></a> `❬μm❭` &nbsp; `❬mm❭` &nbsp; `❬cm❭` &nbsp; `❬dm❭`<br>`❬m❭`<br>`❬dam❭` &nbsp; `❬hm❭` &nbsp; `❬km❭` *etc…*  | Using SI length units. | [SI](../dt/si.md#length) |
 | <a name="❬imp❭"></a> `❬thou❭` &nbsp; `❬inch❭` &nbsp; `❬"❭` &nbsp; `❬ft❭` &nbsp; `❬foot❭` &nbsp; `❬'❭` &nbsp; `❬yd❭` &nbsp; `❬yard❭` &nbsp; `❬mile❭` &nbsp; `❬league❭` | Using imperial length units. | [Imperial](../dt/imperial.md#length) |
 | <a name="❬marine❭"></a> `❬fathom❭` &nbsp; `❬n_mile❭` | Using marine length units. | [Imperial](../dt/imperial.md#marine_length) |
 | <a name="❬uss❭"></a> `❬chain❭` &nbsp; `❬rod❭` | Using US surveying length units. | [Imperial](../dt/imperial.md#us_survey_length) |
@@ -39,7 +39,7 @@ The *objects* that use the `heading` function are associated with mapping and ro
 | <a name="❬dm❭"></a> `❬dm❭` | Using degrees and decimal minutes. | [dm](../dt/dm.md) |
 | <a name="❬dms❭"></a> `❬dms❭` | Using degrees, minutes, and, seconds. | [dms](../dt/dms.md) |
 | <a name="❬rad❭"></a> `❬rad❭` | Using radians usually to 6 decimal places, or set with `_precision` posit. | [rad](../dt/rad.md) |
-| <a name="❬si❭"></a> `❬μm❭` &nbsp; `❬mm❭` &nbsp; `❬cm❭` &nbsp; `❬dm❭`<br>`❬m❭`<br>`❬dam❭` &nbsp; `❬hm❭` &nbsp; `❬km❭` *etc...*  | Using SI length units. | [SI](../dt/m.md) |
+| <a name="❬si❭"></a> `❬μm❭` &nbsp; `❬mm❭` &nbsp; `❬cm❭` &nbsp; `❬dm❭`<br>`❬m❭`<br>`❬dam❭` &nbsp; `❬hm❭` &nbsp; `❬km❭` *etc…*  | Using SI length units. | [SI](../dt/m.md) |
 | <a name="❬imp❭"></a> `❬thou❭` &nbsp; `❬inch❭` &nbsp; `❬"❭` &nbsp; `❬ft❭` &nbsp; `❬foot❭` &nbsp; `❬'❭` &nbsp; `❬yd❭` &nbsp; `❬yard❭` &nbsp; `❬mile❭` &nbsp; `❬league❭` | Using imperial length units. | [Imperial](../dt/imperial.md#length) |
 | <a name="❬marine❭"></a> `❬fathom❭` &nbsp; `❬n_mile❭` | Using marine length units. | [Imperial](../dt/imperial.md#marine_length) |
 | <a name="❬uss❭"></a> `❬chain❭` &nbsp; `❬rod❭` | Using US surveying length units. | [Imperial](../dt/imperial.md#us_survey_length) |
@@ -111,7 +111,7 @@ Referencing a ` ` *object* is achieved with the `with` verb, or the shortened `(
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `with_(`*`moniker`*`);`<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `>_(`*`moniker`*`);`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `with_(`*`moniker1`*`,`*`moniker2`*`,`*`...`*`);`<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `with_(`*`moniker1`*`,`*`moniker2`*`,`*`…`*`);`<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `(`*`_moniker`*`);`
 
 <a name="type"></a>

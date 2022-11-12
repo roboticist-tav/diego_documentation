@@ -19,7 +19,7 @@ The lexicon of ***Diego*** is the full syntactical vocabulary of all statement c
 | <a name="+_d"></a> `=` &nbsp; `+=` &nbsp; `-=` &nbsp; `*=` &nbsp; `×=` &nbsp; `^=` &nbsp; `/=` &nbsp; `÷=` &nbsp; `%=`  | abstract | *operator* | Assignment operators |
 | <a name="+_e"></a> `&` &nbsp; `+` &nbsp; `+=` &nbsp; `&=`  | abstract | *operator* | String operators |
 | <a name="+_f"></a> `==` &nbsp; `===` &nbsp; `≡` &nbsp; `≢` &nbsp; `≅` &nbsp; `≈` &nbsp; `≊` &nbsp; `!=` &nbsp; `<>` &nbsp; `≠` &nbsp; `<`<br>`≮` &nbsp; `<=` &nbsp; `≤` &nbsp; `≨` &nbsp; `>` &nbsp; `≯` &nbsp; `>=` &nbsp; `≥` &nbsp; `≩` | abstract | *operator* | Comparison operators |
-| <a name="+_g"></a>  `?`*`...`*`:` | abstract | *operator* | Tenary Operator |
+| <a name="+_g"></a>  `?`*`…`*`:` | abstract | *operator* | Tenary Operator |
 | <a name="+_h"></a>  `&&` &nbsp; `∧` &nbsp; `||` &nbsp; `∨` &nbsp; `!` &nbsp; `¬`  | abstract | *operator* | Logical Operators |
 | <a name="+_i"></a>  `&` &nbsp; `⊼` &nbsp; `|` &nbsp; `~` &nbsp; `≁` &nbsp; `^` &nbsp; `⊻` &nbsp; `<<` &nbsp; `␏` &nbsp; `>>` &nbsp; `␎`  | abstract | *operator* | Bitwise Operators |
 | <a name="+_j"></a>  `∪` &nbsp; `∩` &nbsp; `⊆` &nbsp; `⊄` &nbsp; `⊂` &nbsp; `⊃` &nbsp; `⊇` &nbsp; `∅` &nbsp; `𝐏` &nbsp; `⊅` &nbsp; `=` &nbsp; `∁`<br>`∆` &nbsp; `∉` &nbsp; `|` &nbsp; `#` &nbsp; `×` &nbsp; `₀` &nbsp; `₁` &nbsp; `₂` &nbsp; `𝐐` &nbsp; `𝐙` &nbsp; `𝐑`  | abstract | *operator* | Set Theory Operators |
@@ -57,7 +57,7 @@ The lexicon of ***Diego*** is the full syntactical vocabulary of all statement c
 | <a name="clump"></a> `clump(`*`moniker`*`)` | abstract | *object* | A multi-dimesional  collection of [data](../abstract/obj/clump.md) storage *object* called *moniker* |
 | <a name="computer"></a> `computer(`*`moniker`*`)` &nbsp; `comput(`*`moniker`*`)` &nbsp; `sobot({computer},`*`moniker`*`)` | metaphysic | *object* | *Action* on *[computer](../metaphysic/obj/computer.md)* *moniker* |
 | <a name="comrelay"></a> `commrelay(`*`moniker`*`)` | | | https://www.autonodyne.com/AUTO_behaviors2.html | [comrelay](#comrelay) |
-| <a name="concat"></a> `_concat()`<br>`_concatenate()`<br>`_concat(`*`arymoniker`*`)`<br>`_concatenate(`*`arymoniker`*`)`<br>`_concat(`*`arymoniker1`*`,`*`arymoniker1`*`,`*`...`*`)`<br>`_concatenate(`*`arymoniker1`*`,`*`arymoniker1`*`,`*`...`*`)` | abstract | *object* | Concatenates proceeding *objects* (*arrays*) with proceeding *objects*<br>Concatenates array *arymoniker* with preceding *objects*<br>Concatenates arrays *arymonikers* with preceding *objects* |
+| <a name="concat"></a> `_concat()`<br>`_concatenate()`<br>`_concat(`*`arymoniker`*`)`<br>`_concatenate(`*`arymoniker`*`)`<br>`_concat(`*`arymoniker1`*`,`*`arymoniker1`*`,`*`…`*`)`<br>`_concatenate(`*`arymoniker1`*`,`*`arymoniker1`*`,`*`…`*`)` | abstract | *object* | Concatenates proceeding *objects* (*arrays*) with proceeding *objects*<br>Concatenates array *arymoniker* with preceding *objects*<br>Concatenates arrays *arymonikers* with preceding *objects* |
 | <a name="concord"></a> `concord(`*`settings`*`)` | abstract<br>metaphysic | *setter* |  |
 | <a name="consens"></a> `consens(`*`settings`*`)`<br>`consensus(`*`settings`*`)` | abstract<br>metaphysic | *setter* | [consens](../metaphysic/setter/consens.md) |
 | <a name="console"></a> `console` | metaphysic | *object* | A metaphysical presence used to only provide an interface to all other *thingies* | [console](../metaphysic/obj/console.md) |
@@ -135,7 +135,7 @@ The lexicon of ***Diego*** is the full syntactical vocabulary of all statement c
 | <a name="map"></a> `map(`*`moniker`*`)` | metaphysic | *object* | |
 | <a name="mapprovider"></a> `_mapprovider(`*`mapprovider`*`)` | metaphysic | *setter* | [mapprovider](../metaphysic/setter/mapprovider.md) |
 | <a name="matrix"></a> `matrix(`*`moniker`*`)`` | abstract | *object* | A two-dimensional collection [data](../abstract/obj/matrix.md) storage *object* called *moniker* |
-| <a name="me"></a> `me_`*`<object\|action>`* | abstract | *special* | *[Me](../abstract/special/me/md)* (or this) does *action* or my *object*...<br>Representation of self |
+| <a name="me"></a> `me_`*`<object\|action>`* | abstract | *special* | *[Me](../abstract/special/me/md)* (or this) does *action* or my *object*…<br>Representation of self |
 | <a name="metric"></a> `metric(`*`moniker`*`)`<br>`metric({`*`datatype`*`}`*`moniker`*`)`<br>`metric(❬`*`unit`*`❭,`*`moniker`*`)`<br>`metric({`*`datatype`*`},❬`*`unit`*`❭,`*`moniker`*`)` | |
 | <a name="microsec"></a> `_μs()` &nbsp; `_microsecond()`<br>`_μs(`*`μs_numeric`*`)` &nbsp; `_microsecond(`*`μs_numeric`*`)`<br>`❬microsec❭` &nbsp; `❬microsecond❭` &nbsp; `❬μs❭` | abstract | property | References the temporal [microsecond](../metaphysic/dt/μs.md) of the preceding *object*<br>Sets the temporal [microsecond](../metaphysic/dt/μs.md) of *μs_numeric*<br>[Microsecond](../metaphysic/dt/μs.md) unit |
 | <a name="millisec"></a> `_ms()`<br>`_millisecond()`<br>`_ms(`*`ms_numeric`*`)`<br>`_millisecond(`*`ms_numeric`*`)` | abstract | property | References the temporal millisecond of the preceding *object*<br><br>Sets the temporal millisecond of *ms_numeric* | [millisecond](../metaphysic/dt/ms.md) |
@@ -151,7 +151,7 @@ The lexicon of ***Diego*** is the full syntactical vocabulary of all statement c
 | <a name="msg"></a> `msg(`*`moniker`*`)`<br>`message(`*`moniker`*`)` | metaphysic | *object* | *Action* on *[message](../metaphysic/obj/msg.md)* *moniker* |
 | <a name="namespace"></a> `namespace(`*`moniker`*`)`<br>`ns(`*`moniker`*`)` | abstract | *object* | [namespace](../abstract/obj/namespace.md) |
 | <a name="neigh"></a> `neigh` &nbsp; `neighbour` |||
-| <a name="ob"></a> `ob`  | metaphysic | *object* | A civilian[^civilian] immobile ject in the  physical *'real'* world.<br>Examples: unidentified lampost (or thing pointing out of the ground), etc.<br>`call_robot(alif)_found()_ob()_photo()_blob(d3Mtd2l6EAMyCwguEBDIL`*`...`* | [obstacle](../metaphysic/obj/obstacle.md) | [ob](../metaphysic/obj/ob.md) |
+| <a name="ob"></a> `ob`  | metaphysic | *object* | A civilian[^civilian] immobile ject in the  physical *'real'* world.<br>Examples: unidentified lampost (or thing pointing out of the ground), etc.<br>`call_robot(alif)_found()_ob()_photo()_blob(d3Mtd2l6EAMyCwguEBDIL`*`…`* | [obstacle](../metaphysic/obj/obstacle.md) | [ob](../metaphysic/obj/ob.md) |
 | <a name="object"></a> `object`  | metaphysic | *object* | A dumb immobile physical [object](../physic/obj/object.md) |
 | <a name="obstacle"></a> `obstacle` | |
 | <a name="organic"></a> `organic` | metaphysic | *object* | Representation of a non-human being, present and alive in the physical *'real'* world.<br>Example: cat, dog | [organic](/organic.md) |
@@ -184,7 +184,7 @@ The lexicon of ***Diego*** is the full syntactical vocabulary of all statement c
 | <a name="scan"></a> `scan` | |
 | <a name="sec"></a> `_sec()`<br>`_second()`<br>`_sec(`*`sec_numeric`*`)`<br>`_second(`*`sec_numeric`*`)` | abstract | property | References the temporal second of the preceding *object*<br><br>Sets the temporal second of *sec_numeric* | [sec](../abstract/prop/sec.md) |
 | <a name="sensor"></a> `sensor(`*`moniker`*`)`<br>`_sensor(`*`moniker`*`)` | metaphysic | *object* | *Action* on *[sensor](../metaphysic/obj/sensor.md)* *moniker*<br>Proceed with *[sensor](../metaphysic/obj/sensor.md)* *moniker* |
-| <a name="set"></a> `set_`*`<object>`*`(`*`moniker`*`,`*`settings...`*`)`<br>`_set(`*`settings...`*`)` | abstract | *verb*<br>*posit* | [Sets](../abstract/verb/set.md) the *object* of *moniker* with *settings...* settings |
+| <a name="set"></a> `set_`*`<object>`*`(`*`moniker`*`,`*`settings…`*`)`<br>`_set(`*`settings…`*`)` | abstract | *verb*<br>*posit* | [Sets](../abstract/verb/set.md) the *object* of *moniker* with *settings…* settings |
 | <a name="false"></a> `_false(`*`bool_moniker`*`)` | abstract | *function* | Sets the *Boolean* *bool_moniker* to [false](../abstract/funct/false.md) |
 | <a name="true"></a> `_true(`*`bool_moniker`*`)` | abstract | *function* | Sets the *Boolean* *bool_moniker* to [true](../abstract/funct/true.md) |
 | <a name="not"></a> `_not(`*`bool_moniker`*`)` | abstract | *function* | Sets the *Boolean* *bool_moniker* to its opposite value [not](../abstract/funct/not.md) |

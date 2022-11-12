@@ -22,7 +22,7 @@ As the `hour` posit with a *`hour_value`* paramter to set the temporal hour as a
 
 Some *objects* allow for an array of hours. To set an array of hours, use multiple `hour` posits. Alternatively an array can be used to set hours in one `hour` posit.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<object>`*`_hour(`*`{hour_value1}`*`)_hr(`*`{hour_value2}`*`)_`*`...`*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<object>`*`_hour(`*`{hour_value1}`*`)_hr(`*`{hour_value2}`*`)_`*`…`*<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<object>`*`_hour([`*`hour_array_moniker`*`]);`<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<object>`*`_hr([`*`hour_array_moniker`*`]);`
 
@@ -34,10 +34,10 @@ Format Output:
 
 | `{type}` | Output Range | Description |
 | --- | --- | --- |
-| <a name="h"></a> `{h}` | `0,1,...12,1...11` | Hour integer without leading zero. |
-| <a name="hh"></a> `{hh}` | `00,01,...12,01...11` | Hour integer with leading zero. |
-| <a name="H"></a> `{H}` | `0,1,...12,13...23` | 24-Hour integer without leading zero. |
-| <a name="HH"></a> `{HH}` | `00,01,...12,13...23` | 24-Hour integer with leading zero. |
+| <a name="h"></a> `{h}` | `0,1,…12,1…11` | Hour integer without leading zero. |
+| <a name="hh"></a> `{hh}` | `00,01,…12,01…11` | Hour integer with leading zero. |
+| <a name="H"></a> `{H}` | `0,1,…12,13…23` | 24-Hour integer without leading zero. |
+| <a name="HH"></a> `{HH}` | `00,01,…12,13…23` | 24-Hour integer with leading zero. |
 
 Numeric Output:
 
@@ -51,15 +51,15 @@ Numeric Output:
 ## Uniting
 In a similar way to typing, the `hour` *property* can also be cast or formatted as a unit.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<object>`*`_`*`<posit>`*`(❬hour❭,`*`...`*`);`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<object>`*`_`*`<posit>`*`(❬hr❭,`*`...`*`);`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<object>`*`_`*`<posit>`*`(❬hour❭,`*`…`*`);`<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<object>`*`_`*`<posit>`*`(❬hr❭,`*`…`*`);`
 
 <a name="cast"></a>
 ## Casting
 Casting an `hour` *property*  requires the `tohour` posit (or shortened `tohr`), both a single hour and an array of hours.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<object>`*`_tohour(`*`hour_value`*`);`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<object>`*`_tohour(`*`{hour_value_cast_to1}`*`)_tohr(`*`{hour_value_cast_to2}`*`)_`*`...`*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<object>`*`_tohour(`*`{hour_value_cast_to1}`*`)_tohr(`*`{hour_value_cast_to2}`*`)_`*`…`*<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<object>`*`_tohour([`*`hour_array__cast_to_moniker`*`]);`<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *`<object>`*`_tohr([`*`hour_array__cast_to_moniker`*`]);`
 

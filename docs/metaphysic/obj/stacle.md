@@ -34,7 +34,7 @@ Referencing a `stacle` *object* is achieved with the `with` verb (or shortened `
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `with_stacle(`*`moniker`*`);`<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `>_stacle(`*`moniker`*`);`<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `(`*`stacle_moniker`*`);`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `⟦`*`...`*`[`*`stacle_moniker`*`]`*`...`*`⟧`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `⟦`*`…`*`[`*`stacle_moniker`*`]`*`…`*`⟧`
 
 <a name="type"></a>
 ## Typing

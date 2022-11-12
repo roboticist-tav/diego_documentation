@@ -1045,7 +1045,7 @@
 <p>The default declaration of the <code>circ</code> (or lengthened <code>circle</code>) <em>object</em> is to use the <code>add_</code> verb and provide a <em>moniker</em>. Multiple <code>circle</code>s are declared using a coma-separated list of <em><code>moniker</code></em> s. The <code>circ</code> object can also be declared by casting <code>shape</code> with <code>{circ}</code> (or <code>{circle}</code> <em>type</em>).</p>
 <p>       <code>add_circ(</code><em><code>moniker</code></em><code>);</code><br/>
        <code>add_circle(</code><em><code>moniker</code></em><code>);</code><br/>
-       <code>add_circ(</code><em><code>moniker1</code></em><code>,</code><em><code>moniker2</code></em><code>,</code><em><code>...</code></em><code>);</code><br/>
+       <code>add_circ(</code><em><code>moniker1</code></em><code>,</code><em><code>moniker2</code></em><code>,</code><em><code>…</code></em><code>);</code><br/>
        <code>add_shape({circ},</code><em><code>moniker</code></em><code>);</code></p>
 <p>It is common with the <code>circ</code> <em>object</em> to provide a <em><code>radius</code></em> at declaration. When providing a radius inside the declaration of a <code>circ</code>, providing the unit is optional. If the unit declaration is omitted, the caller and callee will revert to their friendship (mutual understanding) with each other. A radius can also be assigned by appending with a proceeding <code>_radius</code> posit.</p>
 <p>       <code>add_circ(</code><em><code>moniker</code></em><code>,</code><em><code>radius</code></em><code>);</code><br/>
@@ -1057,13 +1057,13 @@
 <p>Referencing a <code>circ</code> <em>object</em> is achieved with the <code>with</code> verb, or the shortened <code>(</code><em><code>circle_moniker</code></em><code>)</code> syntax. </p>
 <p>       <code>with_circ(</code><em><code>moniker</code></em><code>);</code><br/>
        <code>with_circle(</code><em><code>moniker</code></em><code>);</code><br/>
-       <code>with_circ(</code><em><code>moniker1</code></em><code>,</code><em><code>moniker2</code></em><code>,</code><em><code>...</code></em><code>);</code><br/>
+       <code>with_circ(</code><em><code>moniker1</code></em><code>,</code><em><code>moniker2</code></em><code>,</code><em><code>…</code></em><code>);</code><br/>
        <code>(</code><em><code>circle_moniker</code></em><code>);</code><br/></p>
 <p><a name="assign"></a></p>
 <h2 id="assignment">Assignment</h2>
 <p>Assignments to the <code>circ</code> <em>object</em> are achieved by using proceeding posits.</p>
-<p>       <code>with_circle(</code><em><code>moniker</code></em><code>)_</code><em><code>&lt;posit&gt;</code></em><code>(</code><em><code>...</code></em><code>);</code><br/>
-       <code>(</code><em><code>circle_moniker</code></em><code>)_</code><em><code>&lt;posit&gt;</code></em><code>(</code><em><code>...</code></em><code>);</code></p>
+<p>       <code>with_circle(</code><em><code>moniker</code></em><code>)_</code><em><code>&lt;posit&gt;</code></em><code>(</code><em><code>…</code></em><code>);</code><br/>
+       <code>(</code><em><code>circle_moniker</code></em><code>)_</code><em><code>&lt;posit&gt;</code></em><code>(</code><em><code>…</code></em><code>);</code></p>
 <p><a name="posit"></a></p>
 <h2 id="posits">Posits</h2>
 <h3 id="location">Location</h3>
@@ -1133,7 +1133,7 @@
 <p>       <em><code>&lt;object&gt;</code></em><code>_second(</code><em><code>second_value</code></em><code>);</code><br/>
        <em><code>&lt;object&gt;</code></em><code>_sec(</code><em><code>second_value</code></em><code>);</code></p>
 <p>Some <em>objects</em> allow for an array of seconds. To set an array of seconds, use multiple <code>second</code> posits. Alternatively an array can be used to set seconds in one <code>second</code> posit.</p>
-<p>       <em><code>&lt;object&gt;</code></em><code>_second(</code><em><code>{second_value1}</code></em><code>)_sec(</code><em><code>{second_value2}</code></em><code>)_</code><em><code>...</code></em><br/>
+<p>       <em><code>&lt;object&gt;</code></em><code>_second(</code><em><code>{second_value1}</code></em><code>)_sec(</code><em><code>{second_value2}</code></em><code>)_</code><em><code>…</code></em><br/>
        <em><code>&lt;object&gt;</code></em><code>_second([</code><em><code>second_array_moniker</code></em><code>]);</code><br/>
        <em><code>&lt;object&gt;</code></em><code>_sec([</code><em><code>second_array_moniker</code></em><code>]);</code></p>
 <p><a name="get"></a></p>

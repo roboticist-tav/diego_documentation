@@ -7,7 +7,7 @@
 ```Diego
 me();
 ```
-The simplest and recommended approach to starting the genesis event for a *thingy* is to just command `me();`.  However, there are several other anthropomorphic approaches to initiate the genesis event, if `me();` has not already been commanded...
+The simplest and recommended approach to starting the genesis event for a *thingy* is to just command `me();`.  However, there are several other anthropomorphic approaches to initiate the genesis event, if `me();` has not already been commanded…
 ```Diego
 me({moniker});
 with_me({moniker});
@@ -38,7 +38,7 @@ me_id()_type({id_type})_value({id_value});
 with_me()_id()_type({id_type})_value({id_value});
 ```
 
-The `id_type`s available for the `me_id()_type({id_type})...` and `with_me()_id()_type({ide_type})` are as follows:
+The `id_type`s available for the `me_id()_type({id_type})…` and `with_me()_id()_type({ide_type})` are as follows:
 
 | `id_type`   | syntax                                     | notes                                                        |
 | ----------- | ------------------------------------------ | ------------------------------------------------------------ |
